@@ -1,0 +1,21 @@
+@include oColorsSetUseCase(o-header, background, 'pink');
+@include oColorsSetUseCase(o-header, text, 'grey-tint5');
+@include oColorsSetUseCase(o-header, border, 'pink-tint3');
+
+
+@include oColorsSetUseCase(o-header-nav-container, border, 'pink-tint2');
+
+@include oColorsSetUseCase(o-header-nav-toggle, text, 'pink-tint4');
+@include oColorsSetUseCase(o-header-nav-toggle-hover, text, 'pink-tint5');
+
+@include oColorsSetUseCase(o-header-nav, background, 'pink-tint1');
+@include oColorsSetUseCase(o-header-nav, border, 'pink-tint3');
+@include oColorsSetUseCase(o-header-nav-item, border, 'pink-tint2');
+@include oColorsSetUseCase(o-header-nav-link, text, 'pink-tint5');
+
+
+@include oColorsSetUseCase(o-footer, background, 'pink-tint1');
+@include oColorsSetUseCase(o-footer, text, 'grey-tint5');
+@include oColorsSetUseCase(o-footer__brand, background, 'pink-tint4');
+@include oColorsSetUseCase(o-footer-item, text, 'grey-tint5');
+@include oColorsSetUseCase(o-footer__copyright, text, 'grey-tint3');

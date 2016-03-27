@@ -1,0 +1,58 @@
+@mixin lazy-load-outer($height: 56.25%) {
+	position: relative;
+	height: 0;
+	padding-top: $height;	
+}
+@mixin lazy-load-inner {
+    position: absolute;
+    top: 0;
+    left: 0;	
+}
+@mixin video-wrapper($outer: '.video-outer', $inner: '.video-inner') {
+	#{$outer} {
+		@include lazy-load-outer;
+		#{$inner} {
+			@include lazy-load-inner;
+			width: 100%;
+			height: 100%;
+		} 		
+	}
+}
+@mixin background-setting($attachment: scroll, $size: cover) {
+	background: {
+		repeat: no-repeat;
+		attachment: $attachment;
+		position: center center;
+		size: $size;
+	}
+}
+
+@mixin absolute-full-width {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin background-overlay {
+	content: "";
+    background-color: $overlay;
+    @include absolute-full-width;
+}
+
+@mixin quote-dash($where, $margin) {
+	content: "";
+	display: block;
+	width: 40%;
+	height: 1px;
+	background-color: #000;
+	margin: 0 auto;
+	margin-#{$where}: $margin;
+}
+
+@mixin clearfix{
+  clear: both;
+  content: "";
+  display: table;
+}

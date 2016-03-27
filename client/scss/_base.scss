@@ -1,0 +1,84 @@
+body {
+  font-family: "Hiragino Sans GB", "微软雅黑", "Microsoft JhengHei", SimSun, sans-serif;
+  font-size: 18px;
+  line-height: 1.618;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.17em;
+}
+h5 {
+  font-size: .83em;
+}
+h6 {
+  font-size: .75em;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  color: $linkColor;
+  text-decoration: none;
+  &:hover {
+    color: $linkHover;
+  }
+}
+.container {
+  margin: 0 auto;
+  text-align: left;
+  overflow: hidden;
+  *zoom: 1;
+}
+p {
+  margin: 1em 0;
+}
+img {
+  width: 100%
+}
+.hidden {
+  display: none;
+}
+/* Global include */
+@include video-wrapper;
+
+/* blockquotes and images */
+.quote-block {
+  padding: 1px 0px;
+  margin: 50px 0px;
+  text-align: center;
+  blockquote {
+    color: $quote-color;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8em;
+  }
+  footer {
+    color: $cite-color;
+  }
+  &::before {
+    @include quote-dash(bottom, 30px);
+  }
+  &::after {
+    @include quote-dash(top, 30px);
+  }
+}
+figure {
+  text-align: center;
+  margin: 10% 0;
+  img {
+    width: 100%;
+  }
+}
+figcaption{
+   color:$cite-color;
+   text-align:left;
+}
+
+body {
+  background-color: $bodyBackColor;
+}

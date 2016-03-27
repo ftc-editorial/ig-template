@@ -1,0 +1,30 @@
+$o-header-height: 45px;
+
+$o-footer-spacing-unit: 20px;
+/* color */
+/* $headerBackColor: #00609C; */
+$headerBackColor: rgb(51, 51, 51);
+$bodyBackColor: #FFF1E0;
+$textColor: #191916;
+$linkColor: #2e6e9e;
+$linkHover: #666;
+$containerBackColor: #f8ecdd;
+$black: #000;
+$overlay: rgba(0, 0, 0, 0.5);
+$ftpink: #FFCC99;
+
+//For story header text
+$textShadow-1: 0px 2px 0px rgba(0, 0, 0, 0.5);
+
+$quote-color: #00609C;
+$cite-color: #74736C;
+
+/* Should be divided by 3 */
+$headerHeight: 60px;
+/* How much should the separator bar be higher than ajacent box*/
+$barRaisedBy: 4px;
+/* 60 / 3 = 20px */
+$titleHeight: $headerHeight / 3;
+/* (60 - 20) / 2 - 4 = 16px */
+$titleMargin: ($headerHeight - $titleHeight) / 2 - $barRaisedBy;
+

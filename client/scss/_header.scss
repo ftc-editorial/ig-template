@@ -1,0 +1,96 @@
+.o-header {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: red;
+
+	&.o-header--nav-sticky:after {
+		content: '';
+		display: block;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		height: $o-header-height;
+		background-color: transparent;
+		//background-color: red;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.o-header__primary {
+	box-sizing: border-box;
+	@include oColorsFor(o-header, text background);
+	border-bottom: 1px solid oColorsGetColorFor(o-header, border);
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	height: $o-header-height;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.o-header__primary__left,
+.o-header__primary__center,
+.o-header__primary__right {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.o-header__primary__left {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.o-header__primary__center {
+	text-align: center;
+}
+
+.o-header__primary__right {
+	//position: relative;
+	height: $o-header-height;
+}
+
+.o-header__logo-square,
+.o-header__title,
+.o-header__edition {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 40px;
+	white-space: nowrap;
+	vertical-align: middle;
+
+	@include oGridRespondTo(M) {
+		font-size: 24px;
+	}
+}
+
+.o-header__masthead {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.o-header__article-title {
+	background-color: orange;
+	font-weight: normal;
+	margin: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 16px;
+	line-height: $o-header-height;
+	text-align: center;
+	display: none;
+}
+

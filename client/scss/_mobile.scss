@@ -1,0 +1,81 @@
+@media only screen and (max-width: 768px) {
+    .quote-block blockquote {
+        color: #00609C;
+        margin: 1em 0;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.5em;
+    }
+	.o-share {
+		display: none;
+	}
+	.small-menu {
+		display: block;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		width: 30px;
+		height: 30px;
+		background: sassvg(hamburger, $fillcolor: oColorsGetPaletteColor('white'));
+        background-position: center center;
+        background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.nav__toc {
+		position: fixed;
+		top: $headerHeight;
+		left: auto;
+		right: 0;
+		width: 30%;
+		transform: none;	
+		background-color: $headerBackColor;
+		box-shadow: inset 0 1px 0 rgba(0,0,0,0.2);
+		padding: 10 0;
+		a {
+			display: block;
+			padding: 0 15px;
+			color: #fff;
+			line-height: 60px;
+			border-top: 1px solid rgba(255, 255, 255, .4);
+			&::before {
+				content: '第';
+			}
+			&::after {
+				content: '部分';
+			}
+		}
+	}
+	.hide-on-small {
+		display: none;
+	}
+/* end of header */
+
+    .text-over-media {
+        h1 {
+            font-size: 80px;
+        }
+        h2 {
+            font-size: 60px
+        }
+        p {
+            font-size: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 736px) {
+	.series-title {
+		display: none;
+	}
+    .text-over-media {
+        h1 {
+            font-size: 45px;
+        }
+        h2 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 30px;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+/* General */
+.text-over-media {
+  position: relative;
+  background-color: black;
+  color: oColorsGetPaletteColor('white');
+  height: 100vh;
+  box-sizing: border-box;
+  * {
+    position: relative;
+  }
+  .section-head {
+      font-size: 200%;
+      text-align: center;
+      transform: translate(-50%, 0);
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      right: auto;
+      padding: 0;
+      line-height: 1.1;
+      font-weight: normal;
+      &:after {
+        content: '';
+        display: block;
+        margin: 12px auto 0;
+        height: 1px;
+        background-color: white;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 120%;
+      }
+  }
+  .section-lead {
+      text-align: center;
+      font-size: 46.2px;
+      margin: 0 auto;
+      padding: 5%;
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%,0);
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 80%;
+      @media only screen and (max-width: 768px) {
+        font-size: 19.25px;
+      }
+  }
+  @include background-setting/*(fixed)*/;
+/*   &::before {
+    @include background-overlay;
+  } */
+}
+
+.credits.text-over-media {
+  padding: 1em;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.content-column  {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 17px;
+  p {
+    margin: .75em auto;
+    line-height: 2em;
+  }
+  aside {
+    text-align: center;
+  }
+}
+
+
+/* Story header */
+.cover-image {
+  display: none;
+}
+.story-cover {
+  box-sizing: border-box;
+  .text-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5%;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    p {
+      font-size: 48px;
+      @media only screen and (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+  }
+  h1 {
+    margin: 0;
+    font-size: 100px;
+    @media only screen and (max-width: 768px) {
+      font-size: 50px;
+    }
+  }
+  .article__time-byline {
+
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    width: 100%;
+    text-align: center;
+    time, p {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+  }
+}
+
+.related-reading {
+  h4 {
+    margin: 1em 0 0 0;
+  }
+}
+
+
+
+/* story footer */
+.story-footer {
+    @include background-setting(fixed);
+    p {
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 5em;
+    }
+}

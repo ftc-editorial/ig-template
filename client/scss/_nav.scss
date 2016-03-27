@@ -1,0 +1,72 @@
+.o-header__nav-toggle {
+	box-sizing: border-box;
+	position: absolute;
+	right: 0px;
+	top:0;
+	bottom: 0;
+
+	border: 0;
+	padding: 0 8px;
+	margin: 0;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	background: none;
+	height: $o-header-height;
+	line-height: $o-header-height;
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 8px;
+	}
+	&:after {
+		content: '';
+		@include oIconsSvgSassIcon(hamburger, #000, 20);
+		vertical-align: middle
+	}
+	@include oColorsFor(o-header-nav-toggle, text);
+
+	&:hover {
+		@include oColorsFor(o-header-nav-link, text);
+	}
+}
+.o-header__nav {
+	padding: 0 6px;
+	margin: 0;
+	list-style-type: none;
+	position: absolute;
+	right: 0;
+	top: $o-header-height;
+	@include oColorsFor(o-header-nav, background);
+	border-top: 1px solid oColorsGetColorFor(o-header-nav, border);
+	border-bottom: 1px solid oColorsGetColorFor(o-header-nav, border);
+	@include oColorsFor(o-header-nav-link, text);
+	width: 100%;
+
+	@include oGridRespondTo(M) {
+		width: 210px;
+	}
+}
+
+.o-header__nav-item {
+	line-height: 34px;
+	border-bottom: 1px solid oColorsGetColorFor(o-header-nav-item, border);
+	margin-bottom: 4px;
+	&:last-child {
+		border-bottom: 0;
+	}
+	margin-left: 50%;
+	@include oGridRespondTo(M) {
+		margin-left: 0;
+	}
+}
+.o-header__nav-link {
+	color: inherit;
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	padding-left: 4px;
+	border-left: 5px solid orange;
+}
+
