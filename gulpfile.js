@@ -1,3 +1,4 @@
+const fs = require('fs');
 var path = require('path');
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
@@ -17,9 +18,9 @@ var projectName = path.basename(__dirname);
 gulp.task(function mustache() {
   const DEST = '.tmp';
 
-  var options = {
-    analytics: false,
-  };
+  const options = JSON.parse(fs.readFileSync('model/data.json'));
+
+  options.analytics = false;
 
   if (process.argv[2] === 'build' || process.argv[2] === 'deploy') {
     options.analytics = true;    
@@ -178,8 +179,8 @@ gulp.task('html', function() {
   return gulp.src('.tmp/index.html')
 /*    .pipe($.useref({searchPath: ['.', '.tmp']}))
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano()))
-    .pipe($.if('*.html', $.htmlReplace(config.static)))*/
+    .pipe($.if('*.css', $.cssnano()))*/
+    .pipe($.if('*.html', $.htmlReplace(config.static)))
     .pipe($.smoosher())
     .pipe(gulp.dest('dist'));
 });

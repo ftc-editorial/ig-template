@@ -36,3 +36,4 @@ node_modules
 vendor
 .tmp
 dist
+bower_components
