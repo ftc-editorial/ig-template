@@ -1,4 +1,135 @@
 {
-	"publishedDate?": {"date": "2016年3月25日"},
-	"byline?": {"byline": "英国《金融时报》报道"}
+	"articleHeadline": "缅甸失地农民",
+	"articleLead": "被打乱的生活",
+	"publishedDate?": {
+		"date": "2016年3月25日"
+	},
+	"byline?": {
+		"byline": "英国《金融时报》报道"
+	},
+	"sections": [
+		{
+			"sectionId": 1,
+			"sectionTitle": "1. 失去的土地",
+			"sectionLead": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
+			"primaryCol": [
+				{
+					"paragraph": "在缅甸西部城镇皎漂(Kyaukphyu)附近，如今建起了一座天然气终端。走在经过那些弯弯曲曲的白色管道的那条路上时，拉翁梅(Hla Ohn May)仍会落泪。这位46岁的农妇有5个孩子，在这片面向孟加拉湾蓝色海水的绿地上，她曾经拥有一块自己的田地。",
+					"figure?": {
+						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/3carlsberg-mr_voued4u.jpg",
+
+						"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+					},
+					"blockQuote?": {
+						"quote": "‘选择标准不应基于表现，而应基于个性。在中国，谦逊才能成事，粗鲁只会碰壁’",
+						"footer": "中欧国际工商学院(Ceibs)副教授金台烈(Tae-Yeol Kim)"
+					},
+					"video?": {
+						"src": "http://p.bokecc.com/player?vid=402E9E7943F29BFD9C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
+					}
+				},
+				{
+					"paragraph": "后来她和其他村民的土地被一家财团买下，财团成员包括中国国有企业——中国石油天然气集团公司(China National Petroleum Corporation)和韩国大宇(Daewoo)。皎漂现在是中国政府投资的两条巨大跨境能源管道的起点，这让这些荒野海滨成为某些人口中“中国的西海岸”。"
+				}
+			],
+			"secondaryCol?": {
+				"figure": [
+					{
+						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myan_num_36c.png",
+						"caption": ""
+					},
+					{
+						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmarnumbers2.png",
+						"caption": ""
+					}
+				]
+			},
+			"adBanner?": {
+				"adId": "storyview1",
+				"adSrc": "ttp://www.ftchinese.com/m/marketing/ad-mobile.html#adtype=ad300x250-story&adid=storyview2"
+			}
+		},
+		{
+			"sectionId": 2,
+			"sectionTitle": "2. 抱负",
+			"sectionLead": "",
+			"primaryCol": [
+				{
+					"paragraph": "去年的选举标志着缅甸在近半个世纪军政府统治之后对外开放迈出的关键一步。该国经济增长率超过8%，而且处于亚洲战略要冲，自2011年军政府倒台以来，这个国家吸引了国际投资者的浓厚兴趣。"
+				},
+				{
+					"paragraph": "咨询公司麦肯锡(McKinsey)预计，到2030年，缅甸经济规模可能增长至2010年的4倍以上，达到2000亿美元的峰值。包括联合利华(Unilever)、可口可乐(Coca-Cola)以及啤酒制造商喜力(Heineken)和嘉士伯(Carlsberg)在内的消费品企业已纷纷进入缅甸。",
+
+					"figure?": {
+						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/3carlsberg-mr_voued4u.jpg",
+
+						"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+					}
+				}, 
+				{
+					"paragraph": "缅甸还拥有丰富的自然资源。自绝对军事统治结束以来的油田拍卖吸引了众多买家的兴趣，从美国雪佛龙(Chevron)、英荷石油公司——荷兰皇家壳牌(Royal Dutch Shell)、印度信实工业(Reliance Industries)，到哈萨克斯坦天然气巨头以及形形色色的当地大亨。"
+				}
+			],
+			"adBanner?": {
+				"adId": "storyview1",
+				"adSrc": "ttp://www.ftchinese.com/m/marketing/ad-mobile.html#adtype=ad300x250-story&adid=storyview2"
+			}
+		}
+	],
+	"credits": [
+		{
+			"title": "制作团队",
+			"items": [
+				"项目经理：Christine Spolar",
+				"文字報道：Michael Peel",
+				"设计暨制作：Kari-Ruth Pedersen",
+				"编辑：Christine Spolar, Sue Matthias, Orla Ryan and Chinny Li",
+				"地图：Steve Bernard",
+				"摄影图像：Steve Sapienza, Reuters, EPA",
+				"视频：Steve Sapienza of the Pulitzer Center on Crisis Reporting",
+				"翻译：何黎",
+				"中文网制作：史书华、倪卫国"
+			]
+		}
+	],
+	"suggestedReads": [
+		{
+			"title": "FT系列：全球土地调查",
+			"articleList": [
+				{
+					"articleUrl": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
+					"articleTitle": "埃塞俄比亚：百万富豪的农地"
+				},
+				{
+					"articleUrl": "https://ig.ft.com/sites/land-rush-investment/indonesia/",
+					"articleTitle": "印尼：拯救地球"
+				},
+				{
+					"articleUrl": "http://www.ftchinese.com/story/001066631",
+					"articleTitle": "中国：企业掀起海外置地热潮"
+				}
+			]
+		},
+		{
+			"title": "缅甸相关阅读",
+			"articleList": [
+				{
+					"articleUrl": "http://www.ftchinese.com/story/001065924#adchannelID=2000",
+					"articleTitle": "投资缅甸经济特区风险莫测"
+				},
+				{
+					"articleUrl": "http://www.ftchinese.com/story/001066441#adchannelID=2000",
+					"articleTitle": "许知远：缅甸“帝国”的风格"
+				},
+				{
+					"articleUrl": "http://www.ftchinese.com/story/001062457#adchannelID=2000",
+					"articleTitle": "走向务实政治的昂山素季"
+				},
+				{
+					"articleUrl": "http://www.ftchinese.com/story/001061286",
+					"articleTitle": "中缅果敢困境是个治理问题"
+				}
+			]
+		}
+	]
 }

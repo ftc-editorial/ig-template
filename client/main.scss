@@ -6,9 +6,7 @@
 @import "ftc-share/main";
 @include oShareBase;	
 @include oShareActionLink;
-.o-share {
 
-}
 .o-share {
 	position: absolute;
 	right: 10px;
@@ -39,7 +37,7 @@
 @import "scss/base";
 @import "scss/header";
 @import "scss/nav";
-@import "scss/main";
+@import "scss/sections";
 @import "scss/footer";
 @import "scss/ad";
 

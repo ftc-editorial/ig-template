@@ -1,4 +1,11 @@
-/* General */
+.article__header, .section__header {
+  padding-top: $o-header-height;
+  box-sizing: border-box;
+  height: 100vh;
+  border: 1px solid red;
+  background-color: orange;
+}
+
 .text-over-media {
   position: relative;
   background-color: black;
@@ -51,6 +58,85 @@
     @include background-overlay;
   } */
 }
+
+.section__container {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: $o-grid-min-width;
+  max-width: $_o-grid-max-width;
+  border: 1px solid blue;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include oGridRespondTo(M) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  clear: both;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+
+/*   &:before,
+  &:after {
+    content: '';
+    display: table;
+    display: flex;
+  }
+
+  &:after {
+    clear: both;
+  } */
+}
+
+.section__primary-col,
+.section__secondary-col {
+  position: relative;
+//  float: left;
+  box-sizing: border-box;
+  flex: 1 1 0%;
+}
+
+.section__primary-col {
+  width: 100%;
+
+  @include oGridRespondTo(M) {
+    display: block;
+    min-width:60%;
+    max-width: 60%;
+    width: 60%;
+    padding-left: auto;
+    padding-right: auto;
+  }
+}
+
+.section__secondary-col {
+  display: none;
+  padding-left: 10px;
+  @include oGridRespondTo(M) {
+    padding-left: 20px;
+    display: block;
+    min-width: 40%;
+    max-width: 40%;
+    width: 40%;    
+  }
+}
+
+.primary-col__figure,
+.secondary-col__figure {
+  margin: 0;
+  padding: 0;
+
+  .figure-image {
+    width: 100%;
+  }
+}
+
+
 
 .credits.text-over-media {
   padding: 1em;

@@ -21,14 +21,13 @@
       <button class="o-header__nav-toggle"><span>目录</span></button>
       <ul class="o-header__nav">
         <li class="o-header__nav-item">
-          <a class="o-header__nav-link" href="#">Section 1</a>
+          <a class="o-header__nav-link" href="#nav-section-0">序</a>
         </li>
+        {{# sections}}
         <li class="o-header__nav-item">
-          <a class="o-header__nav-link" href="#">Section 1</a>
+          <a class="o-header__nav-link" href="#nav-section-{{sectionId}}">{{sectionTitle}}</a>
         </li>
-        <li class="o-header__nav-item">
-          <a class="o-header__nav-link" href="#">Section 1</a>
-        </li>
+        {{/ sections}}
       </ul>
     </nav>   
   </div>

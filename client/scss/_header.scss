@@ -6,17 +6,6 @@
 	box-sizing: border-box;
 	background-color: red;
 
-	&.o-header--nav-sticky:after {
-		content: '';
-		display: block;
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-		height: $o-header-height;
-		background-color: transparent;
-		//background-color: red;
-	}
-
 	a {
 		text-decoration: none;
 	}

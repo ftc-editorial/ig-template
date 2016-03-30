@@ -3,43 +3,43 @@ var oShare = require('ftc-share');
 
 oShare.init();
 
-$(function() {
+// $(function() {
 
-/* variables*/
-var $w = $(window);
-var pageName = window.location.pathname;
-var headerHeight = $('.header').height();
-var viewportHeight = $(window).height() - headerHeight;
-var $tocNav = $('.nav__toc').eq(0);
+// /* variables*/
+// var $w = $(window);
+// var pageName = window.location.pathname;
+// var headerHeight = $('.header').height();
+// var viewportHeight = $(window).height() - headerHeight;
+// var $tocNav = $('.nav__toc').eq(0);
 
-/* Show/Hide Navigation */
-showHideNav($('.small-menu'), $('.nav__toc'));
+// /* Show/Hide Navigation */
+// showHideNav($('.small-menu'), $('.nav__toc'));
 
-backToTop($('.to-top'));
+// backToTop($('.to-top'));
 
-/* Generate navigation and deal with scrolled pagination */
-var navLinks = generateNav($('.nav__toc'), $('.nav-target'));
+// /* Generate navigation and deal with scrolled pagination */
+// var navLinks = generateNav($('.nav__toc'), $('.nav-target'));
 
-var navTargetTops = getOffsetTop($('.nav-target')).toArray();
+// var navTargetTops = getOffsetTop($('.nav-target')).toArray();
 
-var wScrolledTop = $w.scrollTop();
-var currentPage = onWhichPage(wScrolledTop, navTargetTops);
-var previousPage = currentPage;
-activeNavLink(currentPage, navLinks);
-logPages(pageName, currentPage);
+// var wScrolledTop = $w.scrollTop();
+// var currentPage = onWhichPage(wScrolledTop, navTargetTops);
+// var previousPage = currentPage;
+// activeNavLink(currentPage, navLinks);
+// logPages(pageName, currentPage);
 
-$w.on('scroll', function() {
-	var wScrolledTop = $w.scrollTop();
-	var currentPage = onWhichPage(wScrolledTop, navTargetTops);
-	if (previousPage !== currentPage) {		
-		previousPage = currentPage;
-		activeNavLink(currentPage, navLinks);
-		logPages(pageName, currentPage);
-	}
-});
+// $w.on('scroll', function() {
+// 	var wScrolledTop = $w.scrollTop();
+// 	var currentPage = onWhichPage(wScrolledTop, navTargetTops);
+// 	if (previousPage !== currentPage) {		
+// 		previousPage = currentPage;
+// 		activeNavLink(currentPage, navLinks);
+// 		logPages(pageName, currentPage);
+// 	}
+// });
 
 
-});
+// });
 
 function activeNavLink(currentPage, navLinks) {
 	var currentNavLink = navLinks[currentPage - 1];

@@ -1,0 +1,14 @@
+<div class="suggested-reads">
+  <div class="suggested-reads__container">
+  {{# suggestedReads}}
+    <div data-o-grid-colspan>
+      <h4 class="suggested-reads__title">{{title}}</h4>
+      <ul class="suggested-reads__items">
+        {{# articleList}}
+          <li class="suggested-reads__item"><a href="{{{articleUrl}}}">{{articleTitle}}</a></li>
+        {{/ articleList}}
+      </ul>          
+    </div>
+    {{/ suggestedReads}}    
+  </div>
+</div>
