@@ -75,28 +75,14 @@
     padding-right: 20px;
   }
 
-  clear: both;
-
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-
-/*   &:before,
-  &:after {
-    content: '';
-    display: table;
-    display: flex;
-  }
-
-  &:after {
-    clear: both;
-  } */
+  justify-content: center;
 }
 
 .section__primary-col,
 .section__secondary-col {
   position: relative;
-//  float: left;
   box-sizing: border-box;
   flex: 1 1 0%;
 }
@@ -109,8 +95,6 @@
     min-width:60%;
     max-width: 60%;
     width: 60%;
-    padding-left: auto;
-    padding-right: auto;
   }
 }
 
@@ -125,6 +109,8 @@
     width: 40%;    
   }
 }
+
+
 
 .primary-col__figure,
 .secondary-col__figure {
