@@ -1,0 +1,18 @@
+<header class="article__header article__section" id="nav-section-0">
+  <div class="article__header-primary">
+      <h1 class="article__headline">{{articleHeadline}}</h1>
+
+      <p class="article__lead">{{articleLead}}</p>  
+  </div>
+  
+  <div class="article__time-byline">
+
+  {{# publishedDate?}}
+    <time class="article__timestamp o-date" data-o-component="o-date" datetime="" title="">{{date}}</time>
+  {{/ publishedDate?}}
+
+  {{# byline?}}
+    <p class="article__byline">{{byline}}</p>
+  {{/ byline?}}
+  </div> 
+</header>
