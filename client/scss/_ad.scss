@@ -1,15 +1,14 @@
-.ad-wrapper {
-	color: #212121;
-	background-color: #E9DECF;
-	.ad-section {
-		max-width: 970px;
-		margin: 0px auto;
-		padding: 10px;	
-	}
-	.caption {
+.ad-placeholder {
+	@include oColorsFor(box, background);
+	
+	.ad-caption {
 	    margin: 0px 0px 6px;
 	    font-size: 11px;
-	    color: #616161;
+	    @include oColorsFor(ig-ad, text);
 		text-align: center;
+	}
+
+	.ad-content {
+		width: 100%;
 	}
 }

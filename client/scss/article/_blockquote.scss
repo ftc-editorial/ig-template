@@ -1,0 +1,22 @@
+.primary-col__blockquote {
+  padding: 1px 0px;
+  margin: 50px 0px;
+  text-align: center;
+  blockquote {
+    @include oColorsFor(ig-blockquote, text);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8em;
+  }
+
+  footer {
+    @include oColorsFor(ig-cite, text);
+  }
+  
+  &::before {
+    @include quote-dash(bottom, 30px);
+  }
+  &::after {
+    @include quote-dash(top, 30px);
+  }
+}

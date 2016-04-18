@@ -3,36 +3,113 @@ body {
   @include oColorsFor(page);
 }
 
+.article__header, .section__header {
+  padding-top: $o-header-height;
+  box-sizing: border-box;
+  height: 100vh;
+  border: 1px solid red;
+  background-color: orange;
+}
 
-/* blockquotes and images */
-// .quote-block {
-//   padding: 1px 0px;
-//   margin: 50px 0px;
-//   text-align: center;
-//   blockquote {
-//     color: $quote-color;
-//     font-weight: 400;
-//     font-style: normal;
-//     font-size: 1.8em;
-//   }
-//   footer {
-//     color: $cite-color;
-//   }
-//   &::before {
-//     @include quote-dash(bottom, 30px);
-//   }
-//   &::after {
-//     @include quote-dash(top, 30px);
-//   }
-// }
-// figure {
-//   text-align: center;
-//   margin: 10% 0;
-//   img {
-//     width: 100%;
-//   }
-// }
-// figcaption{
-//    color:$cite-color;
-//    text-align:left;
-// }
+.section__container, .ad-container {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: $o-grid-min-width;
+  max-width: $_o-grid-max-width;
+  border: 1px solid blue;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include oGridRespondTo(M) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+.credits.text-over-media {
+  padding: 1em;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.content-column  {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 17px;
+  p {
+    margin: .75em auto;
+    line-height: 2em;
+  }
+  aside {
+    text-align: center;
+  }
+}
+
+
+/* Story header */
+.cover-image {
+  display: none;
+}
+.story-cover {
+  box-sizing: border-box;
+  .text-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5%;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    p {
+      font-size: 48px;
+      @media only screen and (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+  }
+  h1 {
+    margin: 0;
+    font-size: 100px;
+    @media only screen and (max-width: 768px) {
+      font-size: 50px;
+    }
+  }
+  .article__time-byline {
+
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    width: 100%;
+    text-align: center;
+    time, p {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+  }
+}
+
+.related-reading {
+  h4 {
+    margin: 1em 0 0 0;
+  }
+}
+
+
+
+/* story footer */
+.story-footer {
+    @include background-setting(fixed);
+    p {
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 5em;
+    }
+}

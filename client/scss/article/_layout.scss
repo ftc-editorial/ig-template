@@ -1,0 +1,47 @@
+.section__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section__primary-col,
+.section__secondary-col {
+  position: relative;
+  box-sizing: border-box;
+  flex: 1 1 0%;
+}
+
+.section__primary-col {
+  width: 100%;
+
+  @include oGridRespondTo(M) {
+    display: block;
+    min-width:60%;
+    max-width: 60%;
+    width: 60%;
+  }
+}
+
+.section__secondary-col {
+  display: none;
+  padding-left: 10px;
+  @include oGridRespondTo(M) {
+    padding-left: 20px;
+    display: block;
+    min-width: 40%;
+    max-width: 40%;
+    width: 40%;    
+  }
+}
+
+
+
+.primary-col__figure,
+.secondary-col__figure {
+  margin: 0;
+  padding: 0;
+
+  .figure-image {
+    width: 100%;
+  }
+}

@@ -157,7 +157,7 @@ gulp.task('serve',
     });
 
     gulp.watch('client/**/*.{csv,svg,png,jpg}', browserSync.reload);
-    gulp.watch('client/**/*.scss', gulp.parallel('styles'));
+    gulp.watch('client/**/**/*.scss', gulp.parallel('styles'));
     gulp.watch(['views/**/*.mustache', 'model/*.json'], gulp.parallel('mustache'));
     //gulp.watch('client/**/*.js', gulp.parallel('lint'));
   })

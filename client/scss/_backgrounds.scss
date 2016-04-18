@@ -1,0 +1,78 @@
+.text-over-media {
+  position: relative;
+  background-color: black;
+  color: oColorsGetPaletteColor('white');
+  height: 100vh;
+  box-sizing: border-box;
+  * {
+    position: relative;
+  }
+  .section-head {
+      font-size: 200%;
+      text-align: center;
+      transform: translate(-50%, 0);
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      right: auto;
+      padding: 0;
+      line-height: 1.1;
+      font-weight: normal;
+      &:after {
+        content: '';
+        display: block;
+        margin: 12px auto 0;
+        height: 1px;
+        background-color: white;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 120%;
+      }
+  }
+  .section-lead {
+      text-align: center;
+      font-size: 46.2px;
+      margin: 0 auto;
+      padding: 5%;
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%,0);
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 80%;
+      @media only screen and (max-width: 768px) {
+        font-size: 19.25px;
+      }
+  }
+  @include background-setting/*(fixed)*/;
+/*   &::before {
+    @include background-overlay;
+  } */
+}
+
+.story-cover {
+		background-image: url("../images/hla_own_min_2560-lr_mnsuz50.jpg");
+	}
+
+.section-1 {
+	.section-cover {
+		background-image: url("../images/2560_flowers_blinkie-mr.jpg");
+	}
+}
+.section-2 
+	.section-cover {
+		background-image: url("../images/2560_flowers_blinkie-mr.jpg");
+	}
+
+.section-3 
+	.section-cover {
+		background-image: url("../images/2560_flowers_blinkie-mr.jpg");}
+
+
+.story-footer {
+	background-image: url("../images/2560_flowers_blinkie-mr.jpg");
+}
+.credits {
+		background-image: url("../images/2560_flowers_blinkie-mr.jpg");
+	}

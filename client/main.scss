@@ -4,32 +4,8 @@
 
 @import "ftc-icons/main";
 @import "ftc-share/main";
-@include oShareBase;	
-@include oShareActionLink;
 
-.o-share {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-	a {
-		border: 2px solid white;
-		border-radius: 50%;
-		&:hover {
-			box-shadow: 0 0 3px 1px white;
-		}
-	}
-	.o-share__action--url {
-		display: none;
-	}
-}
-@each $icon in $o-share-icons {
-	.o-share__action--#{$icon} {
-		i {
-			$iconname: "social-" + $icon;
-			background-image: sassvg($iconname, $fillcolor: white);
-		}
-	}
-}
+
 
 @import "scss/colors";
 @import "scss/variables";
@@ -37,10 +13,8 @@
 @import "scss/base";
 @import "scss/header";
 @import "scss/nav";
-@import "scss/sections";
+@import "scss/article";
 @import "scss/footer";
 @import "scss/ad";
-
-@import "scss/backgrounds";
 
 

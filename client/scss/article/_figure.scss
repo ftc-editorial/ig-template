@@ -1,0 +1,11 @@
+.primary-col__figure {
+  text-align: center;
+  margin: 10% 0;
+  
+  .figure-image {
+    width: 100%;
+  }
+}
+.figure-caption{
+   @include oColorsFor(ig-cite, text);
+}
