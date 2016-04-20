@@ -1,0 +1,24 @@
+$o-header-height: 45px;
+$o-footer-spacing-unit: 20px;
+
+@mixin igBackgroundOverlay {
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
+
+@mixin quote-dash($where, $margin) {
+	content: "";
+	display: block;
+	width: 40%;
+	height: 1px;
+	background-color: #000;
+	margin: 0 auto;
+	margin-#{$where}: $margin;
+}

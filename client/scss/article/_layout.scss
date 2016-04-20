@@ -1,17 +1,17 @@
-.section__container {
+.section__body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.section__primary-col,
-.section__secondary-col {
+.section__col-primary,
+.section__col-secondary {
   position: relative;
   box-sizing: border-box;
   flex: 1 1 0%;
 }
 
-.section__primary-col {
+.section__col-primary {
   width: 100%;
 
   @include oGridRespondTo(M) {
@@ -22,7 +22,7 @@
   }
 }
 
-.section__secondary-col {
+.section__col-secondary {
   display: none;
   padding-left: 10px;
   @include oGridRespondTo(M) {
@@ -34,14 +34,11 @@
   }
 }
 
-
-
-.primary-col__figure,
-.secondary-col__figure {
+.section__figure {
   margin: 0;
   padding: 0;
 
-  .figure-image {
+  .section__figure-image {
     width: 100%;
   }
 }

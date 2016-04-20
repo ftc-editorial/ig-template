@@ -1,18 +1,23 @@
 <header class="article__header article__section" id="nav-section-0">
-  <div class="article__header-primary">
-      <h1 class="article__headline">{{articleHeadline}}</h1>
+  <div class="article__header-container" data-o-grid-row>
 
-      <p class="article__lead">{{articleLead}}</p>  
+    <div class="article__header-wrapper">
+        <h1 class="article__header-primary">{{articleHeadline}}</h1>
+
+        <p class="article__header-secondary">{{articleSubhead}}</p>  
+    </div>
+    
+    <div class="article__time-byline">
+
+    {{# publishedDate?}}
+      <time class="article__timestamp o-date" data-o-component="o-date" datetime="" title="">{{date}}</time>
+    {{/ publishedDate?}}
+
+    {{# byline?}}
+      <p class="article__byline">{{byline}}</p>
+    {{/ byline?}}
+
+    </div>
+
   </div>
-  
-  <div class="article__time-byline">
-
-  {{# publishedDate?}}
-    <time class="article__timestamp o-date" data-o-component="o-date" datetime="" title="">{{date}}</time>
-  {{/ publishedDate?}}
-
-  {{# byline?}}
-    <p class="article__byline">{{byline}}</p>
-  {{/ byline?}}
-  </div> 
 </header>

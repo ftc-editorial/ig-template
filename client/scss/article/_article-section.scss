@@ -1,0 +1,45 @@
+.section__header {
+	background: url('../images/MontyPSwallow_ZH-CN8057492718_1920x1080.jpg') center center no-repeat;
+	background-size: cover;
+
+	@include oColorsFor(ig-text-over-media);
+	text-align: center;
+}
+
+.section__header-container {
+	position: relative;
+	height: 100%;
+}
+
+.section__header-primary {
+	box-sizing: border-box;
+
+	margin: 1em auto;
+	padding: 5% 0 12px 0;
+	border-bottom: 1px solid white;
+
+	font-size: 120%;
+	font-weight: normal;
+	line-height: 1.1;
+	display: inline-block;
+
+	@include oGridRespondTo(M) {
+		font-size: 200%;
+	}
+}
+
+.section__header-secondary {
+	box-sizing: border-box;
+	font-size: 20px;
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	
+	padding: 5%;
+	margin: 0;
+
+	@include oGridRespondTo(M) {
+		font-size: 46px;
+	}
+}

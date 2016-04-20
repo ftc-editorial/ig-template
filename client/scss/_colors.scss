@@ -20,6 +20,11 @@
 @include oColorsSetUseCase(o-footer-item, text, 'grey-tint5');
 @include oColorsSetUseCase(o-footer__copyright, text, 'grey-tint3');
 
+
 @include oColorsSetUseCase(ig-blockquote, text, 'teal-1');
 @include oColorsSetUseCase(ig-cite, text, 'grey-tint4');
+
+@include oColorsSetUseCase(ig-ad, background, 'pink-tint1');
 @include oColorsSetUseCase(ig-ad, text, 'grey-tint5');
+
+@include oColorsSetUseCase(ig-text-over-media, text, 'white');

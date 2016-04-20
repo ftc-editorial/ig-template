@@ -1,6 +1,6 @@
 {
 	"articleHeadline": "缅甸失地农民",
-	"articleLead": "被打乱的生活",
+	"articleSubhead": "被打乱的生活",
 	"publishedDate?": {
 		"date": "2016年3月25日"
 	},
@@ -11,7 +11,7 @@
 		{
 			"sectionId": 1,
 			"sectionTitle": "1. 失去的土地",
-			"sectionLead": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
+			"sectionSubTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 			"primaryCol": [
 				{
 					"paragraph": "在缅甸西部城镇皎漂(Kyaukphyu)附近，如今建起了一座天然气终端。走在经过那些弯弯曲曲的白色管道的那条路上时，拉翁梅(Hla Ohn May)仍会落泪。这位46岁的农妇有5个孩子，在这片面向孟加拉湾蓝色海水的绿地上，她曾经拥有一块自己的田地。",
@@ -76,40 +76,38 @@
 			}
 		}
 	],
-	"credits": [
-		{
-			"title": "制作团队",
-			"items": [
-				"项目经理：Christine Spolar",
-				"文字報道：Michael Peel",
-				"设计暨制作：Kari-Ruth Pedersen",
-				"编辑：Christine Spolar, Sue Matthias, Orla Ryan and Chinny Li",
-				"地图：Steve Bernard",
-				"摄影图像：Steve Sapienza, Reuters, EPA",
-				"视频：Steve Sapienza of the Pulitzer Center on Crisis Reporting",
-				"翻译：何黎",
-				"中文网制作：史书华、倪卫国"
-			]
-		}
-	],
-	"suggestedReads": [
-		{
-			"title": "FT系列：全球土地调查",
-			"articleList": [
-				{
-					"articleUrl": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
-					"articleTitle": "埃塞俄比亚：百万富豪的农地"
-				},
-				{
-					"articleUrl": "https://ig.ft.com/sites/land-rush-investment/indonesia/",
-					"articleTitle": "印尼：拯救地球"
-				},
-				{
-					"articleUrl": "http://www.ftchinese.com/story/001066631",
-					"articleTitle": "中国：企业掀起海外置地热潮"
-				}
-			]
-		},
+	"credits": {
+		"title": "制作团队",
+		"items": [
+			"项目经理：Christine Spolar",
+			"文字報道：Michael Peel",
+			"设计暨制作：Kari-Ruth Pedersen",
+			"编辑：Christine Spolar, Sue Matthias, Orla Ryan and Chinny Li",
+			"地图：Steve Bernard",
+			"摄影图像：Steve Sapienza, Reuters, EPA",
+			"视频：Steve Sapienza of the Pulitzer Center on Crisis Reporting",
+			"翻译：何黎",
+			"中文网制作：史书华、倪卫国"
+		]
+	},
+	"suggestedReads": {
+		"title": "FT系列：全球土地调查",
+		"articleList": [
+			{
+				"articleUrl": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
+				"articleTitle": "埃塞俄比亚：百万富豪的农地"
+			},
+			{
+				"articleUrl": "https://ig.ft.com/sites/land-rush-investment/indonesia/",
+				"articleTitle": "印尼：拯救地球"
+			},
+			{
+				"articleUrl": "http://www.ftchinese.com/story/001066631",
+				"articleTitle": "中国：企业掀起海外置地热潮"
+			}
+		]
+	},
+	"moreOn": [
 		{
 			"title": "缅甸相关阅读",
 			"articleList": [

@@ -31,6 +31,10 @@
 		@include oColorsFor(o-header-nav-link, text);
 	}
 }
+
+#menu-toggler {
+	display: none;
+}
 .o-header__nav {
 	padding: 0 6px;
 	margin: 0;
@@ -38,6 +42,7 @@
 	position: absolute;
 	right: 0;
 	top: $o-header-height;
+
 	@include oColorsFor(o-header-nav, background);
 	border-top: 1px solid oColorsGetColorFor(o-header-nav, border);
 	border-bottom: 1px solid oColorsGetColorFor(o-header-nav, border);
@@ -46,6 +51,11 @@
 
 	@include oGridRespondTo(M) {
 		width: 210px;
+	}
+
+	display: none;
+	#menu-toggler:checked ~ & {
+		display: block;
 	}
 }
 

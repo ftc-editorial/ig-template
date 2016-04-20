@@ -1,14 +1,27 @@
 <div class="suggested-reads">
-  <div class="suggested-reads__container">
+  <div class="suggested-reads__container" data-o-grid-row>
   {{# suggestedReads}}
-    <div data-o-grid-colspan>
-      <h4 class="suggested-reads__title">{{title}}</h4>
-      <ul class="suggested-reads__items">
-        {{# articleList}}
-          <li class="suggested-reads__item"><a href="{{{articleUrl}}}">{{articleTitle}}</a></li>
-        {{/ articleList}}
-      </ul>          
-    </div>
+    
+    <ul class="suggested-reads__items">
+      <li class="suggested-reads__item">
+        <h3 class="suggested-reads__heading">{{title}}</h3>
+        <figure>
+          <a href="https://ig.ft.com/sites/land-rush-investment/"><img src="https://ig.ft.com/sites/land-rush-investment/myanmar/media/landrush_xrefpanel.png"></a>
+          <figcaption>Across continents, big investors are pouring in billions into one of the world's most precious resources – land. They promise progress. But their arrival can upend livelihoods and spark life-and-death struggles.</figcaption>
+        </figure>
+        <a href="https://ig.ft.com/sites/land-rush-investment/">阅读更多</a>
+      </li>
+
+      {{# articleList}}
+      <li class="suggested-reads__item">
+        <a class="suggested-reads__title" href="{{{articleUrl}}}">{{articleTitle}}</a>
+        <figure>
+          <a href="https://ig.ft.com/sites/land-rush-investment/ethiopia"><img src="https://ig.ft.com/sites/land-rush-investment/myanmar/media/xref_ethiopia-mr_qoad6xx.jpg"></a>
+          <figcaption>Mohammed al-Amoudi has spent $200m planting a rice farm the size of 20,000 soccer pitches. But old grievances linger in this fertile corner of a land stalked by hunger.</figcaption>
+        </figure>
+      </li>
+      {{/ articleList}}
+    </ul>
     {{/ suggestedReads}}    
   </div>
 </div>

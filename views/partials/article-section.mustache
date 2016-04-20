@@ -2,25 +2,27 @@
   <section class="article__section" id="nav-section-{{sectionId}}">
 
     <div class="section__header">
-      <h2 class="section__title">{{sectionTitle}}</h2>
-      <p class="section__lead">{{sectionLead}}</p>
+      <div class="section__header-container" data-o-grid-row>
+        <h2 class="section__header-primary">{{sectionTitle}}</h2>
+        <p class="section__header-secondary">{{sectionSubTitle}}</p>        
+      </div>
     </div>
 
-    <div class="section__container" data-o-grid-row>
-      <div class="section__primary-col" data-o-grid-colspan>
+    <div class="section__body" data-o-grid-row>
+      <div class="section__col-primary" data-o-grid-colspan>
 
       {{# primaryCol}}
         <p>{{paragraph}}</p>
 
         {{# figure?}}
-        <figure class="primary-col__figure">
-          <img src="{{{src}}}" class="figure-image">
-          <figcaption class="figure-caption">{{caption}}</figcaption>
+        <figure class="section__figure">
+          <img src="{{{src}}}" class="section__figure-image">
+          <figcaption class="section__figure-caption">{{caption}}</figcaption>
         </figure>
         {{/ figure?}}
 
         {{# blockQuote?}}
-        <figure class="primary-col__blockquote">
+        <figure class="section__blockquote">
           <blockquote>
           {{quote}} 
           </blockquote>
@@ -29,8 +31,8 @@
         {{/ blockQuote?}}
 
         {{# video?}}
-        <div class="video__container">
-          <div class="video__inner">
+        <div class="section__video-outer">
+          <div class="section__video-inner">
             <script src="{{{src}}}" type="text/javascript"></script>
           </div>
         </div>
@@ -40,27 +42,21 @@
       </div>
 
       {{# secondaryCol?}}
-      <aside class="section__secondary-col" data-o-grid-colspan>
+      <aside class="section__col-secondary" data-o-grid-colspan>
         {{# figure}}
-        <figure class="secondary-col__figure">
-          <img src="{{{src}}}" class="figure-image">
-          <figcaption class="figure-caption">{{caption}}</figcaption>
+        <figure class="section__figure">
+          <img src="{{{src}}}" class="section__figure-image">
+          <figcaption class="section__figure-caption">{{caption}}</figcaption>
         </figure>
         {{/ figure}}
       </aside>
       {{/ secondaryCol?}}
+
     </div>
   </section>
   
   {{# adBanner?}}
-  <div class="ad-placeholder">
-    <div class="ad-container">
-      <p class="ad-caption">广告之后 精彩继续</p>
-      <div class="ad-content">
-        <iframe id="{{adId}}" src="{{{adSrc}}}"></iframe>
-      </div>
-    </div>
-  </div>
+    {{> ad}}
   {{/ adBanner?}}
 
 {{/ sections}}

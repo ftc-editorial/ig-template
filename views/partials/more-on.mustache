@@ -1,0 +1,12 @@
+<div class="more-on">
+  <div class="more-on__container" data-o-grid-row>
+  {{# moreOn}}
+    <h3 class="more-on__heading">{{title}}</h3>
+    <ul class="more-on__items">
+      {{# articleList}}
+        <li><a href="{{{articleUrl}}}">{{articleTitle}}</a></li>
+      {{/ articleList}}
+    </ul>
+    {{/ moreOn}}    
+  </div>
+</div>

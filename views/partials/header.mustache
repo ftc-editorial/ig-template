@@ -18,11 +18,16 @@
     </div>
 
     <nav class="o-header__primary__right">
-      <button class="o-header__nav-toggle"><span>目录</span></button>
+      {{!-- <button class="o-header__nav-toggle"><span>目录</span></button> --}}
+      
+      <label class="o-header__nav-toggle" for="menu-toggler"><span>目录</span></label>
+      <input id="menu-toggler" type="checkbox"></input>
+
       <ul class="o-header__nav">
         <li class="o-header__nav-item">
           <a class="o-header__nav-link" href="#nav-section-0">序</a>
         </li>
+
         {{# sections}}
         <li class="o-header__nav-item">
           <a class="o-header__nav-link" href="#nav-section-{{sectionId}}">{{sectionTitle}}</a>
