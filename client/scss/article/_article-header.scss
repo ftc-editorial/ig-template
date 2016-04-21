@@ -1,15 +1,3 @@
-.article__header {
-	background: url('../images/SichuanTerracefield_ZH-CN10274952912_1920x1080.jpg') center center no-repeat;
-	background-size: cover;
-
-	@include igBackgroundOverlay;
-}
-
-.article__header-container {
-	position: relative;
-	height: 100%;
-}
-
 .article__header-wrapper {
 	box-sizing: border-box;
     width: 100%;

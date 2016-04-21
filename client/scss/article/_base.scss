@@ -1,0 +1,41 @@
+.article__header,
+.section__header {
+  padding-top: $o-header-height;
+  box-sizing: border-box;
+  position: relative;
+  height: 100vh;
+
+  @include oColorsFor(ig-text-over-media, text);
+  text-align: center;
+}
+
+.section__header-container,
+.article__header-container {
+  position: relative;
+  height: 100%;
+}
+
+// Fix chrome bug. Chrome does not respect the height when set object-fit:cover on video element.
+.background__media-container {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  @include oColorsFor(ig-text-over-media, background);
+}
+.background__media-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.background__media {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

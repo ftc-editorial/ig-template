@@ -2,57 +2,92 @@
   <section class="article__section" id="nav-section-{{sectionId}}">
 
     <div class="section__header">
-      <div class="section__header-container" data-o-grid-row>
+      <div class="section__header-container" data-o-grid-container>
         <h2 class="section__header-primary">{{sectionTitle}}</h2>
-        <p class="section__header-secondary">{{sectionSubTitle}}</p>        
+        <p class="section__header-secondary">{{sectionSubTitle}}</p>
+      </div><!-- data-o-grid-container -->
+
+      <div class="background__media-container">
+
+        {{# sectionHeaderVideo?}}
+        <video class="background__media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
+          {{# source}}
+          <source src="{{{src}}}" type="{{{type}}}/mp4">
+          {{/ source}}
+        </video>
+        {{/ sectionHeaderVideo?}}
+
+        {{# sectionHeaderPic?}}
+        <picture class="background__media-wrapper">
+          <source srcset="{{{srcset}}}">
+
+          <img class="background__media" src="{{{image}}}">
+        </picture>
+        {{/ sectionHeaderPic?}}
+
       </div>
-    </div>
+    </div><!-- section__header -->
 
-    <div class="section__body" data-o-grid-row>
-      <div class="section__col-primary" data-o-grid-colspan>
+    <div class="section__body" data-o-grid-container>
+      <div data-o-grid-row>
 
-      {{# primaryCol}}
-        <p>{{paragraph}}</p>
+        <div class="section__col-primary" data-o-grid-colspan>
+        {{# primaryCol}}
+          <p>{{paragraph}}</p>
 
-        {{# figure?}}
-        <figure class="section__figure">
-          <img src="{{{src}}}" class="section__figure-image">
-          <figcaption class="section__figure-caption">{{caption}}</figcaption>
-        </figure>
-        {{/ figure?}}
+          {{# figure?}}
+          <figure class="section__figure">
+            <img src="{{{src}}}" class="section__figure-image">
+            <figcaption class="section__figure-caption">{{caption}}</figcaption>
+          </figure>
+          {{/ figure?}}
 
-        {{# blockQuote?}}
-        <figure class="section__blockquote">
-          <blockquote>
-          {{quote}} 
-          </blockquote>
-          <footer>{{footer}}</footer>
-        </figure>
-        {{/ blockQuote?}}
+          {{# blockQuote?}}
+          <figure class="section__blockquote">
+            <blockquote>
+            {{quote}} 
+            </blockquote>
+            <footer>{{footer}}</footer>
+          </figure>
+          {{/ blockQuote?}}
 
-        {{# video?}}
-        <div class="section__video-outer">
-          <div class="section__video-inner">
-            <script src="{{{src}}}" type="text/javascript"></script>
+          {{# video?}}
+          <div class="section__video-container">
+            <div class="section__video-wrapper">
+              {{# cc?}}
+              <script src="{{{src}}}" type="text/javascript"></script>
+              {{/ cc?}}
+
+              {{# ft?}}
+              <video class="section__video" preload="metadata" controls poster="{{{poster}}}">
+                {{# source}}
+                <source src="{{{src}}}" type="{{{type}}}">
+                {{/ source}}
+              </video>
+              {{/ ft?}}
+
+            </div>
           </div>
-        </div>
-        {{/ video?}}
+          {{/ video?}}
 
-      {{/ primaryCol}}
-      </div>
+        {{/ primaryCol}}
+        </div><!-- col-primary -->
 
-      {{# secondaryCol?}}
-      <aside class="section__col-secondary" data-o-grid-colspan>
-        {{# figure}}
-        <figure class="section__figure">
-          <img src="{{{src}}}" class="section__figure-image">
-          <figcaption class="section__figure-caption">{{caption}}</figcaption>
-        </figure>
-        {{/ figure}}
-      </aside>
-      {{/ secondaryCol?}}
+        {{# secondaryCol?}}
+        <aside class="section__col-secondary" data-o-grid-colspan>
+          {{# figure}}
+          <figure class="section__figure">
+            <img src="{{{src}}}" class="section__figure-image">
+            <figcaption class="section__figure-caption">{{caption}}</figcaption>
+          </figure>
+          {{/ figure}}
+          <div>{{test}}</div>
+        </aside>
+        {{/ secondaryCol?}}   
 
-    </div>
+      </div><!-- data-o-grid-row -->
+    </div><!-- data-o-grid-container -->
+
   </section>
   
   {{# adBanner?}}

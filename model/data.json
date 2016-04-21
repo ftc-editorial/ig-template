@@ -7,16 +7,43 @@
 	"byline?": {
 		"byline": "英国《金融时报》报道"
 	},
+	"articleHeadBg?": {
+		"source": [
+			{
+				"srcset": "./images/sapienza_new-lr_cycwhld.jpg 1100w, ./images/sapienza_new-mr_osvv1bn.jpg 1500w, ./images/sapienza_new-hr_f0hbatq.jpg",
+				"orientation": "landscape"
+			},
+			{
+				"srcset": "./images/sapienza_new_upright-lr_52x9hcu.jpg 1100w, ./images/sapienza_new_upright-mr_ekp7ldm.jpg 1500w, ./images/sapienza_new_upright-hr_jepwvb9.jpg",
+				"orientation": "portrait"
+			}
+		],
+		"image": "./images/sapienza_new-mr_osvv1bn.jpg"
+	},
 	"sections": [
 		{
 			"sectionId": 1,
 			"sectionTitle": "1. 失去的土地",
 			"sectionSubTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
+			"sectionHeaderPic?": false,
+			"sectionHeaderVideo?": {
+				"poster": "./images/mpv-shot0001.jpg",
+				"source": [
+					{
+						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
+						"type": "video/mp4"
+					},
+					{
+						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
+						"type": "video/webm"
+					}
+				]
+			},
 			"primaryCol": [
 				{
 					"paragraph": "在缅甸西部城镇皎漂(Kyaukphyu)附近，如今建起了一座天然气终端。走在经过那些弯弯曲曲的白色管道的那条路上时，拉翁梅(Hla Ohn May)仍会落泪。这位46岁的农妇有5个孩子，在这片面向孟加拉湾蓝色海水的绿地上，她曾经拥有一块自己的田地。",
 					"figure?": {
-						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/3carlsberg-mr_voued4u.jpg",
+						"src": "./images/3carlsberg-mr_voued4u.jpg",
 
 						"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
 					},
@@ -25,7 +52,19 @@
 						"footer": "中欧国际工商学院(Ceibs)副教授金台烈(Tae-Yeol Kim)"
 					},
 					"video?": {
-						"src": "http://p.bokecc.com/player?vid=402E9E7943F29BFD9C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
+						"ft?": {
+							"poster": "./images/mpv-shot0002.jpg",
+							"source": [
+								{
+									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_pjiqzqp.mp4",
+									"type": "video/mp4"
+								},
+								{
+									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_fposetk.webm",
+									"type": "video/webm"
+								}
+							]
+						}
 					}
 				},
 				{
@@ -35,11 +74,11 @@
 			"secondaryCol?": {
 				"figure": [
 					{
-						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myan_num_36c.png",
+						"src": "./images/myanmarnumbers.png",
 						"caption": ""
 					},
 					{
-						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmarnumbers2.png",
+						"src": "./images/myan_num_36c.png",
 						"caption": ""
 					}
 				]
@@ -53,9 +92,19 @@
 			"sectionId": 2,
 			"sectionTitle": "2. 抱负",
 			"sectionLead": "",
+			"sectionHeaderPic?": {
+				"srcset": "./images/2560_getty_-factory-in-yangon-lr.jpg 1100w, ./images/2560_getty_-factory-in-yangon-mr.jpg 1500w, ./images/2560_getty_-factory-in-yangon-hr.jpg",
+						"orientation": "landscape",
+				"image": "./images/2560_getty_-factory-in-yangon-mr.jpg"
+			},
 			"primaryCol": [
 				{
-					"paragraph": "去年的选举标志着缅甸在近半个世纪军政府统治之后对外开放迈出的关键一步。该国经济增长率超过8%，而且处于亚洲战略要冲，自2011年军政府倒台以来，这个国家吸引了国际投资者的浓厚兴趣。"
+					"paragraph": "去年的选举标志着缅甸在近半个世纪军政府统治之后对外开放迈出的关键一步。该国经济增长率超过8%，而且处于亚洲战略要冲，自2011年军政府倒台以来，这个国家吸引了国际投资者的浓厚兴趣。",
+					"video?": {
+						"cc?": {
+							"src": "http://p.bokecc.com/player?vid=402E9E7943F29BFD9C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
+						}
+					}
 				},
 				{
 					"paragraph": "咨询公司麦肯锡(McKinsey)预计，到2030年，缅甸经济规模可能增长至2010年的4倍以上，达到2000亿美元的峰值。包括联合利华(Unilever)、可口可乐(Coca-Cola)以及啤酒制造商喜力(Heineken)和嘉士伯(Carlsberg)在内的消费品企业已纷纷进入缅甸。",

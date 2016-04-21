@@ -1,3 +1,38 @@
-.suggested-reads__items {
-	display: flex;
+.suggested-reads__items,
+.more-on__items {	
+	padding: 15px 0 20px;
+
+	@include oGridRespondTo(L) {
+		padding: 20px 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+.suggested-reads__item {
+	box-sizing: border-box;
+	width: 100%;
+	border-bottom: 1px dotted oColorsGetPaletteColor('pink-tint3');
+	padding-top: 1em;
+	margin-bottom: 1em;
+
+	@include oGridRespondTo(L) {
+		width: 45%;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.suggested-reads__title {
+	line-height: 1.2;
+	font-size: 150%;
+	margin: 20px 0;
+
+	@include oGridRespondTo(L) {
+		font-size: 180%;
+		margin: 30px 0;
+	}
+
 }

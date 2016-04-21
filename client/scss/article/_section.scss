@@ -1,0 +1,65 @@
+.section__col-primary,
+.section__col-secondary {
+  position: relative;
+  box-sizing: border-box;
+  flex: 1 1 0%;
+}
+
+.section__col-primary {
+  width: 100%;
+
+  @include oGridRespondTo(M) {
+    display: block;
+    min-width:60%;
+    max-width: 60%;
+    width: 60%;
+  }
+}
+
+.section__col-secondary {
+  display: none;
+  padding-left: 10px;
+  @include oGridRespondTo(M) {
+    padding-left: 20px;
+    display: block;
+    min-width: 40%;
+    max-width: 40%;
+    width: 40%;    
+  }
+}
+
+/* ************** */
+.section__header-primary {
+	box-sizing: border-box;
+
+	margin: 1em auto;
+	padding: 5% 0 12px 0;
+	border-bottom: 1px solid white;
+
+	font-weight: normal;
+	line-height: 1.1;
+	display: inline-block;
+
+	@include oGridRespondTo(M) {
+		font-size: 200%;
+	}
+}
+
+.section__header-secondary {
+	box-sizing: border-box;
+	font-size: 20px;
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	
+	padding: 5%;
+	margin: 0;
+
+	@include oGridRespondTo(M) {
+		font-size: 46px;
+		min-width: 80%;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
