@@ -18,17 +18,22 @@ var projectName = path.basename(__dirname);
 gulp.task(function mustache() {
   const DEST = '.tmp';
 
-  const options = JSON.parse(fs.readFileSync('model/data.json'));
+  const article = JSON.parse(fs.readFileSync('model/data.json'));
+  const footer = JSON.parse(fs.readFileSync('model/footer.json'));
 
-  options.analytics = false;
+  var analytics = false;
 
   if (process.argv[2] === 'build' || process.argv[2] === 'deploy') {
-    options.analytics = true;    
+    analytics = true;    
   }
 
   return gulp.src('views/index.mustache')
     .pipe($.changed(DEST))
-    .pipe($.mustache(options, {
+    .pipe($.mustache({
+      analytics: analytics,
+      article: article,
+      footer: footer
+    }, {
       extension: '.html'
     }))
     .pipe(gulp.dest(DEST))

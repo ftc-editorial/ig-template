@@ -1,20 +1,32 @@
-<footer class="o-footer" data-o-component="o-footer">
-  <div class="o-footer__container">
-    <nav class="o-footer__row o-footer__nav">
-       <ul class="o-footer__section-list">
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/">首页</a></li>
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/channel/china.html">中国</a></li>
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/channel/world.html">全球</a></li>
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/channel/economy.html">经济</a></li>
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/channel/markets.html">金融市场</a></li>
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/channel/business.html">商业</a></li>
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/channel/opinion.html">观点</a></li>
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/channel/management.html">管理</a></li>
-          <li class="o-footer__link"><a href="http://www.ftchinese.com/channel/lifestyle.html">生活时尚</a></li>
+<footer class="o-footer{{#theme}} {{theme}}{{/theme}}" data-o-component="o-footer">
+  <div class="o-footer__container" data-o-grid-container>
+
+    <nav class="o-footer__nav">
+      <h3 class="o-footer__title">频道</h3>
+       <ul class="o-footer__row o-footer__section-list" data-o-grid-row>
+        {{# sections}}
+          <li class="o-footer__col o-footer__link" data-o-grid-col><a href="{{{href}}}">{{text}}</a></li>
+        {{/ sections}}
         </ul>
     </nav>
+
+    <div class="o-footer__row o-footer__link-lists" data-o-grid-row>
+      {{# link_sections}}
+      <nav class="o-footer__col o-footer__link-list" data-o-grid-col>
+        {{# title}}<h3 class="o-footer__title">{{title}}</h3>{{/ title}}
+        <ul>
+          {{# items}}
+          <li class="o-footer__link">
+            <a href="{{{href}}}">{{text}}</a>
+          </li>
+          {{/ items}}
+        </ul>
+      </nav>
+      {{/ link_sections}}
+    </div>
+
     <div class="o-footer__row o-footer__copyright">
-        <span>&#xA9; FT中文网 2016.</span>
+        <span>&#xA9; FT中文网 {{copyrightYear}}.</span>
         <span><abbr title="Financial Times">FT</abbr> and &#x2018;Financial Times&#x2019; are trademarks of The Financial Times Ltd.</span>
     </div> 
   </div>      

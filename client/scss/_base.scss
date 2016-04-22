@@ -1,27 +1,60 @@
 body {
-  font-family: "Hiragino Sans GB", "微软雅黑", "Microsoft JhengHei", SimSun, sans-serif;
+  font-family: "Helvetica Neue", "Lucida Grande", Verdana, "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Heiti SC", "Heiti TC", "WenQuanYi Micro Hei", "Microsoft YaHei", "Microsoft JhengHei", STHeiti, sans-serif;
   @include oColorsFor(page);
 }
 
+// Simplified version of `o-grid` layout.
 [data-o-grid-container] {
+  position: relative;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   min-width: $o-grid-min-width;
   max-width: $_o-grid-max-width;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: oGridGutter();
+  padding-right: oGridGutter();
 
   @include oGridRespondTo(M) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: oGridGutter(M);
+    padding-right: oGridGutter(M);
+  }
+
+  @include oGridTargetIE8 {
+    padding-left: oGridGutter($o-grid-fixed-layout);
+    padding-right: oGridGutter($o-grid-fixed-layout);
+    width: oGridGetMaxWidthForLayout($o-grid-fixed-layout, $grid-mode: 'fixed');
   }
 }
 
 [data-o-grid-row] {
+  //display: table;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+
+  margin-left: -1 * oGridGutter();
+
+  @include oGridRespondTo(M) {
+    margin-left: -1 * oGridGutter(M);
+  }
+
+  @include oGridTargetIE8 {
+    margin-left: -1 * oGridGutter($o-grid-fixed-layout);
+  }
+}
+
+[data-o-grid-col] {
+  position: relative;
+  box-sizing: border-box;
+  flex: 1 1 0%;
+  padding-left: oGridGutter();
+
+  @include oGridRespondTo(M) {
+    padding-left: oGridGutter(M);
+  }
+
+  @include oGridTargetIE8 {
+    padding-left: oGridGutter($o-grid-fixed-layout);
+  }
 }
 
 figure {

@@ -36,16 +36,20 @@
 </head>
 
 <body>
-{{> partials/header}}
+{{# article}}
+  {{> partials/header}}
 
-{{> partials/article}}
+  {{> partials/article}}
 
-{{> partials/credits}}
+  {{> partials/credits}}
 
-{{> partials/suggested-reads}}
-{{> partials/more-on}}
-{{> partials/footer}}
+  {{> partials/suggested-reads}}
+  {{> partials/more-on}}
+{{/ article}}
 
+{{# footer}}
+  {{> partials/footer}}
+{{/ footer}}
 
 <!-- smoosh -->
 <script src="scripts/bundle.js"></script>

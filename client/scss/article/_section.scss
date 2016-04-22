@@ -1,30 +1,18 @@
-.section__col-primary,
-.section__col-secondary {
-  position: relative;
-  box-sizing: border-box;
-  flex: 1 1 0%;
+.section__body {
+	[data-o-grid-row] {
+		justify-content: center;
+	}
 }
-
 .section__col-primary {
-  width: 100%;
-
   @include oGridRespondTo(M) {
-    display: block;
-    min-width:60%;
-    max-width: 60%;
-    width: 60%;
+    @include igGridColWidth($ig-primary-col-width);
   }
 }
 
 .section__col-secondary {
   display: none;
-  padding-left: 10px;
   @include oGridRespondTo(M) {
-    padding-left: 20px;
-    display: block;
-    min-width: 40%;
-    max-width: 40%;
-    width: 40%;    
+    @include igGridColWidth((12 - $ig-primary-col-width));
   }
 }
 
