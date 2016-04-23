@@ -1,5 +1,7 @@
 body {
   font-family: "Helvetica Neue", "Lucida Grande", Verdana, "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Heiti SC", "Heiti TC", "WenQuanYi Micro Hei", "Microsoft YaHei", "Microsoft JhengHei", STHeiti, sans-serif;
+  margin: 0;
+  padding: 0;
   @include oColorsFor(page);
 }
 

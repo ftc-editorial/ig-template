@@ -1,27 +1,34 @@
-.suggested-reads__items,
-.more-on__items {	
-	padding: 15px 0 20px;
-
-	@include oGridRespondTo(L) {
-		padding: 20px 30px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-	}
+.suggested-reads__container {
+	margin-top: 1em;
 }
+
 .suggested-reads__item {
-	box-sizing: border-box;
-	width: 100%;
-	border-bottom: 1px dotted oColorsGetPaletteColor('pink-tint3');
 	padding-top: 1em;
 	margin-bottom: 1em;
 
-	@include oGridRespondTo(L) {
-		width: 45%;
+	@include igGridColWidth(12);
+
+	@include oGridRespondTo(M) {
+		@include igGridColWidth(6);
 	}
 
-	img {
-		width: 100%;
+	@include oGridRespondTo(L) {
+		@include igGridColWidth(4);
+	}
+
+	@include oGridRespondTo(XL) {
+		@include igGridColWidth(3);
+	}
+	&:after {
+		content: '';
+		position:absolute;
+		bottom: 0;
+		right: 0;
+		left: oGridGutter();
+		@include oGridRespondTo(M) {
+			left: oGridGutter(M);
+		}
+		border-bottom: 1px dotted oColorsGetPaletteColor('grey-tint3');
 	}
 }
 

@@ -1,2 +1,28 @@
+$o-header-top-height: 50px;
+$o-header-bottom-height: 50px;
+
+$o-header-height: 45px;
+
+@include oColorsSetUseCase(o-header, background, 'grey-tint5');
+@include oColorsSetUseCase(o-header, text, 'white');
+
+@include oColorsSetUseCase(o-header-divider, border, 'grey-tint3');
+
+@include oColorsSetUseCase(o-header-nav, background, 'cold-3');
+
+@include oColorsSetUseCase(o-header-item, text, 'white');
+
+
+@include oColorsSetUseCase(o-header--light, background, 'pink-tint1');
+@include oColorsSetUseCase(o-header--light, text, 'grey-tint5');
+
+@include oColorsSetUseCase(o-header-divider--light, border, 'pink-tint3');
+
+@include oColorsSetUseCase(o-header-nav--light, background, 'pink-tint2');
+
+@include oColorsSetUseCase(o-header-item--light, text, 'grey-tint5');
+
+
+
 @import "header";
 @import "nav";

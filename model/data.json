@@ -1,11 +1,14 @@
 {
+	"englishEdition?": {
+		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
+	},
 	"articleHeadline": "缅甸失地农民",
 	"articleSubhead": "被打乱的生活",
 	"publishedDate?": {
 		"date": "2016年3月25日"
 	},
 	"byline?": {
-		"byline": "英国《金融时报》报道"
+		"text": "英国《金融时报》报道"
 	},
 	"articleHeadBg?": {
 		"source": [
@@ -140,43 +143,56 @@
 		]
 	},
 	"suggestedReads": {
-		"title": "FT系列：全球土地调查",
-		"articleList": [
+		"title": "",
+		"items": [
 			{
-				"articleUrl": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
-				"articleTitle": "埃塞俄比亚：百万富豪的农地"
+				"href": "https://ig.ft.com/sites/land-rush-investment/",
+				"imgSrc": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/landrush_xrefpanel.png",
+				"title": "FT系列：全球土地调查",
+				"text": "Across continents, big investors are pouring in billions into one of the world's most precious resources – land. They promise progress. But their arrival can upend livelihoods and spark life-and-death struggles. <a href=\"https://ig.ft.com/sites/land-rush-investment/\">阅读更多</a>"
 			},
 			{
-				"articleUrl": "https://ig.ft.com/sites/land-rush-investment/indonesia/",
-				"articleTitle": "印尼：拯救地球"
+				"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
+				"imgSrc": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/xref_ethiopia-mr_qoad6xx.jpg",
+				"title": "埃塞俄比亚：百万富豪的农地",
+				"text": "Mohammed al-Amoudi has spent $200m planting a rice farm the size of 20,000 soccer pitches. But old grievances linger in this fertile corner of a land stalked by hunger."
 			},
 			{
-				"articleUrl": "http://www.ftchinese.com/story/001066631",
-				"articleTitle": "中国：企业掀起海外置地热潮"
+				"href": "https://ig.ft.com/sites/land-rush-investment/indonesia",
+				"imgSrc": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/xref_indo-mr_8njq2rv.jpg",
+				"title": "印尼：拯救地球",
+				"text": "Norway’s government has offered Indonesia a billion dollars to save its rainforests. Now its ministers are heading to the Borneo jungle to see if there is any chance of success."
+			},
+			{
+				"href": "http://www.ftchinese.com/story/001066631",
+				"imgSrc": "http://i.ftimg.net/picture/7/000059567_piclink.jpg",
+				"title": "中国：企业掀起海外置地热潮"
 			}
 		]
 	},
-	"moreOn": [
-		{
-			"title": "缅甸相关阅读",
-			"articleList": [
-				{
-					"articleUrl": "http://www.ftchinese.com/story/001065924#adchannelID=2000",
-					"articleTitle": "投资缅甸经济特区风险莫测"
-				},
-				{
-					"articleUrl": "http://www.ftchinese.com/story/001066441#adchannelID=2000",
-					"articleTitle": "许知远：缅甸“帝国”的风格"
-				},
-				{
-					"articleUrl": "http://www.ftchinese.com/story/001062457#adchannelID=2000",
-					"articleTitle": "走向务实政治的昂山素季"
-				},
-				{
-					"articleUrl": "http://www.ftchinese.com/story/001061286",
-					"articleTitle": "中缅果敢困境是个治理问题"
-				}
-			]
-		}
-	]
+	"moreOn": {
+		"sections":[
+			{
+				"title": "缅甸相关阅读",
+				"items": [
+					{
+						"href": "http://www.ftchinese.com/story/001065924#adchannelID=2000",
+						"name": "投资缅甸经济特区风险莫测"
+					},
+					{
+						"href": "http://www.ftchinese.com/story/001066441#adchannelID=2000",
+						"name": "许知远：缅甸“帝国”的风格"
+					},
+					{
+						"href": "http://www.ftchinese.com/story/001062457#adchannelID=2000",
+						"name": "走向务实政治的昂山素季"
+					},
+					{
+						"href": "http://www.ftchinese.com/story/001061286",
+						"name": "中缅果敢困境是个治理问题"
+					}
+				]
+			}
+		]
+	}
 }

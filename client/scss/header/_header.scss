@@ -1,87 +1,97 @@
 .o-header {
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 100;
 	padding: 0;
 	margin: 0;
 	border: 0;
 	width: 100%;
-	height: $o-header-height;
-
-	box-sizing: border-box;
-	z-index: 100;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+		
 	a {
 		text-decoration: none;
 	}
+
+	height: $o-header-bottom-height;
 }
 
-.o-header__primary {
+.o-header__bottom {
 	box-sizing: border-box;
-	@include oColorsFor(o-header, text background);
-	border-bottom: 1px solid oColorsGetColorFor(o-header, border);
+	position: relative;
+
 	width: 100%;
 	height: 100%;
-	display: table;
-	table-layout: fixed;
+	
+	@include oColorsFor(o-header, text background);
 
-
+	.o-header--light & {
+		@include oColorsFor(o-header--light, text background);
+		border-bottom: 1px solid oColorsGetColorFor(o-header-divider--light, border);
+	}
 }
 
-.o-header__primary__left,
-.o-header__primary__center,
-.o-header__primary__right {
-	display: table-cell;
-	vertical-align: middle;
+.o-header__container {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 
-.o-header__primary__left {
+.o-header__left {
+	box-sizing: border-box;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	line-height: $o-header-bottom-height;
+	padding-left: 15px;
 }
 
-.o-header__primary__center {
-	text-align: center;
-}
-
-.o-header__primary__right {
-	//position: relative;
-	height: $o-header-height;
-}
-
-.o-header__logo-square,
-.o-header__title,
-.o-header__edition {
+.o-header__logo,
+.o-header__series-title {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	font-weight: normal;
 	font-size: 20px;
-	line-height: 40px;
 	white-space: nowrap;
-	vertical-align: middle;
 
 	@include oGridRespondTo(M) {
 		font-size: 24px;
 	}
 }
 
-.o-header__masthead {
-	display: inline-block;
+.o-header__center {
+	box-sizing: border-box;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	line-height: $o-header-bottom-height;
+}
+
+.o-header__headline,
+.o-header__edition {
+	box-sizing: border-box;
+	white-space: nowrap;
+	font-size: 20px;
+	font-weight: 600;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.o-header__edition {
+	font-weight: normal;
+	font-size: 14px;
+	margin-left: 10px;
 	vertical-align: middle;
 }
 
-.o-header__article-title {
-	background-color: orange;
-	font-weight: normal;
-	margin: 0;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	font-size: 16px;
-	line-height: $o-header-height;
-	text-align: center;
-	display: none;
+.o-header__right {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
 }
 

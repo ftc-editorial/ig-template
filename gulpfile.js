@@ -19,6 +19,8 @@ gulp.task(function mustache() {
   const DEST = '.tmp';
 
   const article = JSON.parse(fs.readFileSync('model/data.json'));
+  const theme = article.lightTheme;
+
   const footer = JSON.parse(fs.readFileSync('model/footer.json'));
 
   var analytics = false;
@@ -30,11 +32,16 @@ gulp.task(function mustache() {
   return gulp.src('views/index.mustache')
     .pipe($.changed(DEST))
     .pipe($.mustache({
+      theme: theme,
       analytics: analytics,
       article: article,
       footer: footer
     }, {
       extension: '.html'
+    }))
+    .pipe($.size({
+      gzip: true,
+      showFiles: true
     }))
     .pipe(gulp.dest(DEST))
     .pipe(browserSync.stream({once: true}));
@@ -59,6 +66,10 @@ gulp.task('styles', function styles() {
         }
       })
     ]))
+    .pipe($.size({
+      gzip: true,
+      showFiles: true
+    }))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(DEST))
     .pipe(browserSync.stream());

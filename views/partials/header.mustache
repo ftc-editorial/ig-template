@@ -1,39 +1,56 @@
-<header class="o-header o-header--nav-sticky" data-o-component="o-header">
-  <div class="o-header__primary">
-    <div class="o-header__primary__left">
-
-      <a class="o-header__logo-square" href="http://www.ftchinese.com" title="前往FT中文网首页"><span>FT中文网</span></a>
-
-      <h1 class="o-header__title">调查报道</h1>
-
-      <a class="o-header__edition" href="">英文版</a>
+<header class="o-header{{#theme}} o-header--light{{/theme}}" data-o-component="o-header">
+  <!--div class="o-header__top">
+    <div class="o-header__container" >
+      <div class="o-header__inner">
+        
+        <div class="o-header__masthead">
+          <a href="http://www.ftchinese.com" title="前往FT中文网首页"><span>FT中文网</span></a>
+        </div>
+      {{# article.englishEdition?}}
+        <div class="o-header__edition-switch">
+          <a class="o-header__edition" href="{{{href}}}">英文版</a>
+        </div>
+      {{/ article.englishEdition?}}  
+      </div>
     </div>
+  </div-->
 
-    <div class="o-header__primary__center">
-      <div class="o-header__masthead">
-        <a href="http://www.ftchinese.com" title="前往FT中文网首页"><span>FT中文网</span>
-        </a>
-      </div>   
-      <h2 class="o-header__article-title">Title of This Article</h2>
-    </div>
+  <div class="o-header__bottom">
+    <div class="o-header__container">
+      <div class="o-header__left">
 
-    <nav class="o-header__primary__right">
-      {{!-- <button class="o-header__nav-toggle"><span>目录</span></button> --}}
-      
-      <label class="o-header__nav-toggle" for="menu-toggler"><span>目录</span></label>
-      <input id="menu-toggler" type="checkbox"></input>
+        <a class="o-header__logo" href="http://www.ftchinese.com" title="前往FT中文网首页"><span>FT中文网</span></a>
 
-      <ul class="o-header__nav">
-        <li class="o-header__nav-item">
-          <a class="o-header__nav-link" href="#nav-section-0">序</a>
-        </li>
+        <span class="o-header__series-title">调查报道</span>
 
-        {{# sections}}
-        <li class="o-header__nav-item">
-          <a class="o-header__nav-link" href="#nav-section-{{sectionId}}">{{sectionTitle}}</a>
-        </li>
-        {{/ sections}}
-      </ul>
-    </nav>   
-  </div>
+      </div>
+
+      <div class="o-header__center">
+        <span class="o-header__headline">{{article.articleHeadline}}</span>
+
+        {{# article.englishEdition?}}
+          <a class="o-header__edition" href="{{{href}}}">英文版</a>
+        {{/ article.englishEdition?}}
+      </div>
+
+      <nav class="o-header__right">
+        <input id="menu-toggler" type="checkbox"></input>
+
+        <label class="o-header__nav-toggle" for="menu-toggler"><span>目录</span></label>
+        
+        <ol class="o-header__nav">
+          <li class="o-header__nav-item">
+            <a class="o-header__nav-link" href="#nav-section-0">序</a>
+          </li>
+
+          {{# article.sections}}
+          <li class="o-header__nav-item">
+            <a class="o-header__nav-link" href="#nav-section-{{sectionId}}">{{sectionTitle}}</a>
+          </li>
+          {{/ article.sections}}
+        </ol>           
+      </nav>         
+    </div><!-- o-header__container -->    
+  </div><!-- o-header__bottom -->
+
 </header>
