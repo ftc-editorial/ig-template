@@ -253,3 +253,76 @@ gulp.task('deploy:html', function() {
 
 
 gulp.task('deploy', gulp.series('build', gulp.parallel('deploy:assets', 'deploy:html')));
+
+/* demos */
+gulp.task("mustache:demos", function() {
+  const DEST = '.tmp';
+
+  const article = JSON.parse(fs.readFileSync('model/data.json'));
+
+  const footer = JSON.parse(fs.readFileSync('model/footer.json'));
+
+  return gulp.src('demos/*.mustache')
+    .pipe($.changed(DEST))
+    .pipe($.if('light-theme.mustache',
+      $.mustache({
+        theme: true,
+        article: article,
+        footer: footer
+      }, {
+        extension: '.html'
+      }),
+      $.mustache({
+        theme: false,
+        article: article,
+        footer: footer
+      }, {
+        extension: '.html'
+      })
+    ))
+    .pipe(gulp.dest(DEST))
+    .pipe(browserSync.stream({once: true}));
+});
+
+gulp.task('copy:demos', function() {
+  return gulp.src('demos/index.html')
+    .pipe(gulp.dest('.tmp'))
+    .pipe(browserSync.stream({once: true}));
+});
+
+gulp.task('images:demos', function() {
+  return gulp.src('client/images/*.{svg,png,jpg,jpeg,gif}')
+    .pipe($.imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [{cleanupIDs: false}]
+    }))
+    .pipe(gulp.dest('.tmp/images'));
+});
+
+gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'images:demos'));
+
+gulp.task('watch:demos', 
+  gulp.parallel('copy:demos', 'mustache:demos', 'styles',
+    function serve() {
+    browserSync.init({
+      server: {
+        baseDir: ['demos', '.tmp', 'client'],
+        routes: {
+          '/bower_components': 'bower_components'
+        }
+      }
+    });
+
+    gulp.watch('client/**/*.{csv,svg,png,jpg}', browserSync.reload);
+    gulp.watch('client/**/**/*.scss', gulp.parallel('styles'));
+    gulp.watch('demos/*.html', gulp.parallel('copy:demos'));
+    gulp.watch(['views/**/*.mustache', 'model/*.json', 'demos/*.mustache'], gulp.parallel('mustache:demos'));
+    //gulp.watch('client/**/*.js', gulp.parallel('lint'));
+  })
+);
+
+gulp.task('demos', gulp.series('clean', 'build:demos', function(){
+  return gulp.src('.tmp/**/**')
+    .pipe(gulp.dest(config.deploy.assets + projectName));
+}));

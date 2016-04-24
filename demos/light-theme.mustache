@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
-<head> 
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="" />
-    <meta name="format-detection" content="telephone=no">
-
-   <meta name="copyright" content="FT中文网">
-   <meta name="robots" content="index,follow">
-   <meta name="author" content="FT Interactive Graphics">
-   <meta property="og:site_name" content="Isis Syria oil map"/>
-   <meta property="og:type" content="article"/>
-   <meta property="og:title" content=""/>
-   <meta property="og:description" content="" />
-   <meta property="og:image:url" content=""/>
-    
+    <meta name="copyright" content="FT中文网">
+   	<meta name="robots" content="index,follow">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" /> 
     <link rel="apple-touch-icon" sizes="180x180" href="/bower_components/favicons/apple-touch-icon-180x180.png">
@@ -24,37 +14,18 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/bower_components/favicons/apple-touch-icon-76x76.png">
 
     <link href="/bower_components/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-    <title>{{article.articleHeadline}}: {{article.articleSubhead}} - FT中文网</title>
-    
-    <!-- smoosh-->
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <!-- endsmoosh -->
-{{#analytics}}
-{{> partials/analytics}}
-{{/analytics}}
-
+	<title>Interactive Graphics Demos - Light Theme</title>
 </head>
-
 <body>
-
-{{> header/main}}
+{{> ../views/header/main}}
 
 {{# article}}
-  {{> article/main}}
+	{{> ../views/article/main}}
 {{/ article}}
 
 {{# footer}}
-  {{> footer/main}}
+	{{> ../views/footer/main}}
 {{/ footer}}
-
-<!-- smoosh -->
-<script src="scripts/bundle.js"></script>
-<!-- endsmoosh -->
-
-<!-- build:log -->
-<script src=""></script>
-<!-- endbuild -->
 </body>
-
-
 </html>
