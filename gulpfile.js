@@ -14,7 +14,7 @@ const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
 
 const config = require('./config.json');
-const projectName = path.basename(__dirname);
+//const projectName = path.basename(__dirname);
 
 const knownOptions = {
   string: 'input',
@@ -26,6 +26,7 @@ const argv = minimist(process.argv.slice(2), knownOptions);
 
 const taskName = argv._[0];
 const dataFile = argv.i;
+const projectName = dataFile.slice(0, -5);
 
 gulp.task(function mustache() {
   const DEST = '.tmp';
