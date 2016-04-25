@@ -46,12 +46,12 @@
 	left: 0;
 	bottom: 0;
 	line-height: $o-header-bottom-height;
-	padding-left: 15px;
 }
 
 .o-header__logo,
 .o-header__series-title {
 	display: inline-block;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -63,10 +63,25 @@
 	}
 }
 
+.o-header__logo {
+	box-sizing: border-box;
+	padding: 5px;
+	width: $o-header-bottom-height;
+	span {
+		display: none;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
 .o-header__series-title {
 	display: none;
 	@include oGridRespondTo(M) {
 		display: inline-block;
+		float: right;
+		padding-left: 10px;
 	}
 }
 
