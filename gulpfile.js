@@ -1,31 +1,50 @@
 const fs = require('fs');
-var path = require('path');
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var del = require('del');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var browserify = require('browserify');
-var watchify = require('watchify');
-var debowerify = require('debowerify');
-var babelify = require('babelify');
-var cssnext = require('postcss-cssnext');
-var $ = require('gulp-load-plugins')();
+const path = require('path');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const del = require('del');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const browserify = require('browserify');
+const watchify = require('watchify');
+const debowerify = require('debowerify');
+const babelify = require('babelify');
+const cssnext = require('postcss-cssnext');
+const $ = require('gulp-load-plugins')();
+const minimist = require('minimist');
 
-var config = require('./config.json');
-var projectName = path.basename(__dirname);
+const config = require('./config.json');
+const projectName = path.basename(__dirname);
+
+const knownOptions = {
+  string: 'input',
+  default: {input: 'example.json'},
+  alias: {i: 'input'}
+};
+
+const argv = minimist(process.argv.slice(2), knownOptions);
+
+const taskName = argv._[0];
+const dataFile = argv.i;
 
 gulp.task(function mustache() {
   const DEST = '.tmp';
 
-  const article = JSON.parse(fs.readFileSync('model/data.json'));
+  try {
+    const article = JSON.parse(fs.readFileSync('model/' + dataFile));
+  } catch (e) {
+    console.log(`Cannot read your data file: models/${dataFile}`);
+    console.log(e);
+    return;
+  }
+  
   const theme = article.lightTheme;
 
   const footer = JSON.parse(fs.readFileSync('model/footer.json'));
 
-  var analytics = false;
+  const analytics = false;
 
-  if (process.argv[2] === 'build' || process.argv[2] === 'deploy') {
+  if (taskName === 'build' || taskName === 'deploy') {
     analytics = true;    
   }
 
@@ -76,7 +95,7 @@ gulp.task('styles', function styles() {
 });
 
 gulp.task('scripts', function() {
-  var b = browserify({
+  const b = browserify({
     entries: 'client/main.js',
     debug: true,
     cache: {},
@@ -113,7 +132,7 @@ gulp.task('scripts', function() {
 gulp.task('js', function() {
   const DEST = '.tmp/scripts/';
 
-  var b = browserify({
+  const b = browserify({
     entries: 'client/main.js',
     debug: true,
     cache: {},
