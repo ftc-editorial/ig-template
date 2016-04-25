@@ -1,6 +1,22 @@
 
 $ig-primary-col-width: 6;
 
+/* $ratio: percentage(height / width) */
+@mixin lazyloadMedia($ratio:percentage(9/16)) {
+	position: relative;
+	display: block;
+	height: 0;
+	padding-top: $ratio;
+
+	&__inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
 @mixin igGridColWidth($span) {
 	@if type-of($span) == number {
 		display: block;
@@ -17,7 +33,7 @@ $ig-primary-col-width: 6;
 }
 
 @mixin igBackgroundOverlay {
-	&:before {
+	&:after {
 		content: '';
 		position: absolute;
 		left: 0;
@@ -28,12 +44,17 @@ $ig-primary-col-width: 6;
 	}
 }
 
-@mixin quote-dash($where, $margin) {
+/* $margin-position: margin-top or margin-bottom to separate the divider from quote content.
+	$margin-distance: gap between divider and quote content.
+	To have a divider at top, you should use margin-bottom, vice versus.
+	
+ */
+@mixin igQuoteDivider($margin-position, $margin-distance) {
 	content: "";
 	display: block;
 	width: 40%;
 	height: 1px;
 	background-color: #000;
 	margin: 0 auto;
-	margin-#{$where}: $margin;
+	margin-#{$margin-position}: $margin-distance + 0px;
 }

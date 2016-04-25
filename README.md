@@ -1,23 +1,14 @@
-#Usage
-
-`git clone https://github.com/FTChinese/interactive-report.git`
+## Usage
 
 Run `gulp serve` for development.
 
-Run `gulp build` to build the final files for distribution.
+## Data
 
-Run `gulp deploy` for production.
+Data saved in `json` format in `model/your-project-name.json` folder.
 
-# Custom css and js
+**DO NOT** touch `model/footer.json`.
 
-Custom css should be put into `app/styles/custom.css` and  and js into `app/scripts/visual.js`.
+To use the 'light' theme, set `theme:true` in you json file.
 
-# Change backgrounds
-
-`app/styles/backgrounds.scss` is left for you to add/alter custom background images. Run `gulp serve` to preview before making changes.
-
-## Cover Image
-
-Do not add cover image via `background.css`. To add a cover image, find `<img class="story-cover" src="" />` following the `body` tag and replace `src` with your cover image path.
 
 

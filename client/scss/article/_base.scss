@@ -1,3 +1,9 @@
+.article__section {
+  a:hover {
+    border: 1px solid;
+  }
+}
+
 .article__header,
 .section__header {
   padding-top: $o-header-height;
@@ -26,11 +32,16 @@
   overflow: hidden;
   z-index: -1;
   @include oColorsFor(ig-text-over-media, background);
+  @include igBackgroundOverlay;
 }
+
 .background__media-wrapper {
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .background__media {
@@ -38,4 +49,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Replaced Media placeholder */
+.lazyload-image {
+  @include lazyloadMedia(71.42%);
+  background-color: oColorsGetPaletteColor('pink-tint2');
+}
+
+.lazyload-video {
+  @include lazyloadMedia;
+  background-color: #000;
 }

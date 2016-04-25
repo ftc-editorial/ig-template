@@ -1,0 +1,22 @@
+<div class="background__media-container">
+
+  {{# backgroundVideo?}}
+  <div class="background__media-wrapper">
+    <video class="background__media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
+      {{# source}}
+      <source src="{{{src}}}" type="{{{type}}}">
+      {{/ source}}
+    </video>          
+  </div>
+
+  {{/ backgroundVideo?}}
+
+  {{# backgroundPic?}}
+  <picture class="background__media-wrapper">
+    <source srcset="{{{srcset}}}">
+
+    <img class="background__media" src="{{{image}}}">
+  </picture>
+  {{/ backgroundPic?}}
+
+</div>

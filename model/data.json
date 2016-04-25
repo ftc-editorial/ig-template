@@ -29,7 +29,7 @@
 			"sectionTitle": "1. 失去的土地",
 			"sectionSubTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 			"sectionHeaderPic?": false,
-			"sectionHeaderVideo?": {
+			"backgroundVideo?": {
 				"poster": "./images/mpv-shot0001.jpg",
 				"source": [
 					{
@@ -95,7 +95,7 @@
 			"sectionId": 2,
 			"sectionTitle": "2. 抱负",
 			"sectionLead": "",
-			"sectionHeaderPic?": {
+			"backgroundPic?": {
 				"srcset": "./images/2560_getty_-factory-in-yangon-lr.jpg 1100w, ./images/2560_getty_-factory-in-yangon-mr.jpg 1500w, ./images/2560_getty_-factory-in-yangon-hr.jpg",
 						"orientation": "landscape",
 				"image": "./images/2560_getty_-factory-in-yangon-mr.jpg"
@@ -140,7 +140,20 @@
 			"视频：Steve Sapienza of the Pulitzer Center on Crisis Reporting",
 			"翻译：何黎",
 			"中文网制作：史书华、倪卫国"
-		]
+		],
+		"backgroundVideo?": {
+			"poster": "./images/boat-blinkie-backup-mr.jpg",
+			"source": [
+				{
+					"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.mp4",
+					"type": "video/mp4"
+				},
+				{
+					"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.webmhd.webm",
+					"type": "video/webm"
+				}
+			]
+		}
 	},
 	"suggestedReads": {
 		"title": "",

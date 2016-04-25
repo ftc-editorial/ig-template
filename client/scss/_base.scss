@@ -72,14 +72,11 @@ ol {
 }
 
 a {
-  color: #0f8a99;
+  @include oColorsFor(ig-link, text);
   text-decoration: none;
 }
 
 p {
   font-size: 18px;
   line-height: 1.7;
-}
-img {
-  width: 100%;
 }

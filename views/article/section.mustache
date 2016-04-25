@@ -7,25 +7,8 @@
         <p class="section__header-secondary">{{sectionSubTitle}}</p>
       </div><!-- data-o-grid-container -->
 
-      <div class="background__media-container">
+      {{> background-media}}
 
-        {{# sectionHeaderVideo?}}
-        <video class="background__media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
-          {{# source}}
-          <source src="{{{src}}}" type="{{{type}}}/mp4">
-          {{/ source}}
-        </video>
-        {{/ sectionHeaderVideo?}}
-
-        {{# sectionHeaderPic?}}
-        <picture class="background__media-wrapper">
-          <source srcset="{{{srcset}}}">
-
-          <img class="background__media" src="{{{image}}}">
-        </picture>
-        {{/ sectionHeaderPic?}}
-
-      </div>
     </div><!-- section__header -->
 
     <div class="section__body" data-o-grid-container>
@@ -33,27 +16,31 @@
 
         <div class="section__col-primary" data-o-grid-col>
         {{# primaryCol}}
-          <p>{{paragraph}}</p>
+          <p>{{{paragraph}}}</p>
 
           {{# figure?}}
           <figure class="section__figure">
-            <img src="{{{src}}}" class="section__figure-image">
+            <div class="lazyload-image">
+              <img src="{{{src}}}" class="section__figure-image lazyload-image__inner">
+            </div>
+            
             <figcaption class="section__figure-caption">{{caption}}</figcaption>
-          </figure>
+          </figure>            
+
           {{/ figure?}}
 
           {{# blockQuote?}}
           <figure class="section__blockquote">
-            <blockquote>
+            <blockquote class="section__blockquote-text">
             {{quote}} 
             </blockquote>
-            <footer>{{footer}}</footer>
+            <footer class="section__blockquote-caption">{{footer}}</footer>
           </figure>
           {{/ blockQuote?}}
 
           {{# video?}}
-          <div class="section__video-container">
-            <div class="section__video-wrapper">
+          <div class="lazyload-video">
+            <div class="lazyload-video__inner">
               {{# cc?}}
               <script src="{{{src}}}" type="text/javascript"></script>
               {{/ cc?}}

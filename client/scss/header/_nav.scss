@@ -5,6 +5,7 @@
 .o-header__nav-toggle {
 	box-sizing: border-box;
 	display: inline-block;
+	position: relative;
 
 	border: 0;
 	padding: 0;
@@ -16,7 +17,7 @@
 	text-align: center;
 	height: $o-header-bottom-height;
 	width: $o-header-bottom-height;
-	line-height: $o-header-bottom-height;
+	//line-height: $o-header-bottom-height;
 
 	span {
 		display: none;
@@ -24,6 +25,11 @@
 	&:after {
 		content: '';
 		@include oIconsSvgSassIcon(hamburger, #fff, 20);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -10px;
+		margin-left: -10px;
 	}
 
 	.o-header--light &:after {
@@ -75,6 +81,9 @@
 
 	@include oGridRespondTo(M) {
 		margin-left: 0;
+		&.mobile {
+			display: none;
+		}
 	}
 
 	.o-header--light & {

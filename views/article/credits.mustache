@@ -1,12 +1,15 @@
+{{# credits}}
 <section class="ig__credits">
   <div class="ig__credits-wrapper">
-    {{# credits}}
-        <h3 class="ig__credits-title">{{title}}</h3>
-        <ul class="ig__credits-items">
-          {{# items}}
-            <li>{{.}}</li>
-          {{/ items}}
-        </ul>
-    {{/ credits}}    
+    <h3 class="ig__credits-title">{{title}}</h3>
+    <ul class="ig__credits-items">
+      {{# items}}
+        <li>{{.}}</li>
+      {{/ items}}
+    </ul>
   </div>
+  
+  {{> background-media}}
+
 </section>
+{{/ credits}} 

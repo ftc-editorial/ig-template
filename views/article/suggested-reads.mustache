@@ -1,12 +1,11 @@
+{{# suggestedReads}}
 <div class="suggested-reads">
   <div class="suggested-reads__container" data-o-grid-container>
-  {{# suggestedReads}}
-    
     <ul class="suggested-reads__items" data-o-grid-row>
 
       {{# items}}
       <li class="suggested-reads__item" data-o-grid-col>
-        <a href="{{{href}}}"><img src="{{{imgSrc}}}"></a>
+        <a class="lazyload-image" href="{{{href}}}"><img class="lazyload-image__inner" src="{{{imgSrc}}}"></a>
 
         <h3 class="suggested-reads__title"><a href="{{{href}}}">{{title}}</a></h3>
         <p>{{{text}}}</p>
@@ -14,6 +13,6 @@
       {{/ items}}
 
     </ul>
-    {{/ suggestedReads}}    
   </div>
 </div>
+{{/ suggestedReads}}

@@ -2,16 +2,7 @@
   box-sizing: border-box;
   position: relative;
   height: 100vh;
-  border: 1px solid red;
-}
-
-.ig__credits {
-	background: url('../images/BaliTemple_ShutterstockRF_6930133_768_HD_ZH-CN1553525665.jpg') center center no-repeat;
-	background-size: cover;
-
-	color: white;
-
-	@include igBackgroundOverlay;
+  color: white;
 }
 
 .ig__credits-wrapper {

@@ -1,11 +1,10 @@
-.primary-col__figure {
+.section__figure {
   text-align: center;
   margin: 10% 0;
-  
-  .figure-image {
-    width: 100%;
-  }
 }
-.figure-caption{
-   @include oColorsFor(ig-cite, text);
+.section__figure-image {
+	object-fit: cover;
+}
+.section__figure-caption{
+   @include oColorsFor(ig-caption, text);
 }

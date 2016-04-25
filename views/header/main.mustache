@@ -48,6 +48,11 @@
             <a class="o-header__nav-link" href="#nav-section-{{sectionId}}">{{sectionTitle}}</a>
           </li>
           {{/ article.sections}}
+          {{# article.englishEdition?}}
+          <li class="o-header__nav-item mobile">
+            <a class="o-header__edition" href="{{{href}}}">阅读英文版</a>
+          {{/ article.englishEdition?}}
+          </li>
         </ol>           
       </nav>         
     </div><!-- o-header__container -->    

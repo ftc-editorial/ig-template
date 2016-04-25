@@ -3,7 +3,6 @@
     width: 100%;
     padding: 5%;
     text-align: center;
-    @include oColorsFor(ig-text-over-media);
 }
 
 .article__header-primary {
@@ -24,8 +23,6 @@
 }
 
 .article__time-byline {
-	@include oColorsFor(ig-text-over-media);
-
 	border-sizing: border-box;
 	position: absolute;
 	left: 0;

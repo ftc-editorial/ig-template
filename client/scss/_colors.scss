@@ -1,8 +1,13 @@
+@include oColorsSetColor('teal-3', #0f8a99);
+
+@include oColorsSetUseCase(ig-link, text, 'teal-3');
+
+@include oColorsSetUseCase(ig-caption, text, 'grey-tint3');
+
 @include oColorsSetUseCase(ig-blockquote, text, 'teal-1');
-@include oColorsSetUseCase(ig-cite, text, 'grey-tint4');
 
 @include oColorsSetUseCase(ig-ad, background, 'pink-tint1');
 @include oColorsSetUseCase(ig-ad, text, 'grey-tint5');
 
 @include oColorsSetUseCase(ig-text-over-media, text, 'white');
-@include oColorsSetUseCase(ig-text-over-medai, background, 'pink-tint4');
+@include oColorsSetUseCase(ig-text-over-media, background, 'pink-tint4');
