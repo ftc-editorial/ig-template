@@ -14,7 +14,6 @@ const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
 
 const config = require('./config.json');
-//const projectName = path.basename(__dirname);
 
 const knownOptions = {
   string: 'input',
@@ -173,14 +172,9 @@ gulp.task('lint', function() {
     .pipe($.eslint.failAfterError());  
 });
 
-gulp.task('copyjs', function() {
-  return gulp.src('client/scripts/**.js')
-    .pipe(gulp.dest('.tmp/scripts'));
-});
-
 gulp.task('serve', 
   gulp.parallel(
-    'mustache', 'styles', 'scripts', 'copyjs',
+    'mustache', 'styles', 'scripts', 
 
     function serve() {
     browserSync.init({
