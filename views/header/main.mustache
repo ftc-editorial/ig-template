@@ -1,3 +1,11 @@
+<svg style="display:none;">
+<symbol id="cross" viewBox="0 0 77 77">
+<path d="M77 61.62L53.886 38.495l23.1-23.1L61.6.014 38.486 23.102 15.374 0 0 15.394l23.096 23.1L0 61.62 15.374 77l23.113-23.1L61.6 77z"/>
+</symbol>
+<symbol id="hamburger" viewBox="0 0 100 100">
+<path d="M1.5 20.14v-4.93c0-1.35.478-2.503 1.433-3.458S5.04 10.32 6.39 10.32h88.22c1.324 0 2.47.477 3.438 1.432S99.5 13.86 99.5 15.21v4.93c0 1.323-.484 2.47-1.452 3.437s-2.114 1.45-3.438 1.45H6.39c-1.35 0-2.502-.482-3.457-1.45C1.978 22.61 1.5 21.463 1.5 20.14zm0 31.824v-4.89c0-1.376.478-2.547 1.433-3.502.955-.95 2.108-1.426 3.458-1.426h88.22c1.324 0 2.47.478 3.438 1.426.968.955 1.452 2.126 1.452 3.502v4.89c0 1.324-.484 2.47-1.452 3.438-.968.97-2.114 1.452-3.438 1.452H6.39c-1.35 0-2.502-.483-3.457-1.452-.955-.967-1.433-2.114-1.433-3.438zm0 26.936c0-1.35.478-2.51 1.433-3.465S5.04 74.01 6.39 74.01h88.22c1.324 0 2.47.47 3.438 1.425S99.5 77.55 99.5 78.9v4.89c0 1.376-.484 2.534-1.452 3.477-.968.943-2.114 1.415-3.438 1.415H6.39c-1.35 0-2.502-.472-3.457-1.415-.955-.943-1.433-2.1-1.433-3.476V78.9z"/>
+</symbol>
+</svg>
 <header class="o-header{{#theme}} o-header--light{{/theme}}" data-o-component="o-header">
   <!--div class="o-header__top">
     <div class="o-header__container" >
@@ -36,7 +44,14 @@
       <nav class="o-header__right">
         <input id="menu-toggler" type="checkbox"></input>
 
-        <label class="o-header__nav-toggle" for="menu-toggler"><span>目录</span></label>
+        <label class="o-header__nav-toggle" for="menu-toggler"><!--span>目录</span-->
+          <svg class="icon-hamburger">
+            <use xlink:href="#hamburger"></use>
+          </svg>
+          <svg class="icon-cross">
+            <use xlink:href="#cross"></use>
+          </svg>
+        </label>
         
         <ol class="o-header__nav">
           <li class="o-header__nav-item">

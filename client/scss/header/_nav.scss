@@ -17,32 +17,40 @@
 	text-align: center;
 	height: $o-header-bottom-height;
 	width: $o-header-bottom-height;
-	//line-height: $o-header-bottom-height;
+	line-height: $o-header-bottom-height;
 
 	span {
 		display: none;
 	}
-	&:after {
-		content: '';
-		@include oIconsSvgSassIcon(hamburger, #fff, 20);
+	svg {
+		width: 20px;
+		height: 20px;
+		fill: oColorsGetColorFor(o-header, text);
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		margin-top: -10px;
-		margin-left: -10px;
+		margin-left: -10px;		
 	}
-
-	.o-header--light &:after {
-		@include oIconsSvgSassIcon(hamburger, oColorsGetColorFor(o-header-item--light, text), 20);
+	.o-header--light & {
+		svg {
+			fill: oColorsGetColorFor(o-header--light, background);
+		}
 	}
-
-
-	#menu-toggler:checked ~ &:after {
-		@include oIconsSvgSassIcon(cross, #fff, 20);
+	.icon-hamburger {
+		display: inline-block;
 	}
-
-	.o-header--light #menu-toggler:checked ~ &:after {
-		@include oIconsSvgSassIcon(cross, oColorsGetColorFor(o-header-item--light, text), 20);
+	.icon-cross {
+		display: none;
+	}
+	
+	#menu-toggler:checked ~ & {
+		.icon-hamburger {
+			display: none;
+		}
+		.icon-cross {
+			display: inline-block;
+		}
 	}
 }
 

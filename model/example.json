@@ -88,7 +88,7 @@
 			},
 			"adBanner?": {
 				"adId": "storyview1",
-				"adSrc": "http://www.ftchinese.com/m/marketing/ad-mobile.html#adtype=ad300x250-story&adid=storyview2"
+				"adSrc": ""
 			}
 		},
 		{
@@ -124,7 +124,7 @@
 			],
 			"adBanner?": {
 				"adId": "storyview1",
-				"adSrc": "ttp://www.ftchinese.com/m/marketing/ad-mobile.html#adtype=ad300x250-story&adid=storyview2"
+				"adSrc": ""
 			}
 		}
 	],
