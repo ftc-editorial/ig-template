@@ -272,7 +272,7 @@ gulp.task('deploy', gulp.series('build', gulp.parallel('deploy:assets', 'deploy:
 gulp.task("mustache:demos", function() {
   const DEST = '.tmp';
 
-  const article = JSON.parse(fs.readFileSync('model/data.json'));
+  const article = JSON.parse(fs.readFileSync('model/' + dataFile));
 
   const footer = JSON.parse(fs.readFileSync('model/footer.json'));
 
