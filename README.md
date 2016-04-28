@@ -26,5 +26,9 @@ Data saved in `json` format in `model/your-project-name.json` folder.
 
 To use the 'light' theme, add `theme:true,` as the first entry in you json file.
 
+## Polyfills needed
 
+- `object-fit`
+- `<picture>`
+- `vh`
 
