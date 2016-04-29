@@ -2,11 +2,24 @@
 	display: none;
 }
 
+.o-share {
+	display: none;	
+	@include oGridRespondTo(L) {		
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.o-share--dark {
+	@include oShareCustomBase {
+		background-color: transparent;
+		border: 1px solid #ffffff;
+	}
+}
+
 .o-header__nav-toggle {
 	box-sizing: border-box;
-	display: inline-block;
 	position: relative;
-
 	border: 0;
 	padding: 0;
 	margin: 0;
@@ -17,7 +30,8 @@
 	text-align: center;
 	height: $o-header-bottom-height;
 	width: $o-header-bottom-height;
-	line-height: $o-header-bottom-height;
+	display: table-cell;
+	vertical-align: middle;
 
 	span {
 		display: none;
@@ -26,15 +40,10 @@
 		width: 20px;
 		height: 20px;
 		fill: oColorsGetColorFor(o-header, text);
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		margin-top: -10px;
-		margin-left: -10px;		
 	}
 	.o-header--light & {
 		svg {
-			fill: oColorsGetColorFor(o-header--light, background);
+			fill: oColorsGetColorFor(o-header--light, text);
 		}
 	}
 	.icon-hamburger {

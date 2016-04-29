@@ -16,17 +16,18 @@
 
         <div class="section__col-primary" data-o-grid-col>
         {{# primaryCol}}
-          <p>{{{paragraph}}}</p>
+          {{# text?}}
+          <p>{{{.}}}</p>
+          {{/ text?}}
 
           {{# figure?}}
-          <figure class="section__figure">
+          <figure class="section__figure{{#mobileOnly?}} section__figure--mobile{{/mobileOnly?}}">
             <div class="lazyload-image">
               <img src="{{{src}}}" class="section__figure-image lazyload-image__inner">
             </div>
             
             <figcaption class="section__figure-caption">{{caption}}</figcaption>
-          </figure>            
-
+          </figure>
           {{/ figure?}}
 
           {{# blockQuote?}}
@@ -64,11 +65,13 @@
         <aside class="section__col-secondary" data-o-grid-col>
           {{# figure}}
           <figure class="section__figure">
-            <img src="{{{src}}}" class="section__figure-image">
+            <div class="lazyload-image">
+              <img src="{{{src}}}" class="section__figure-image lazyload-image__inner">
+            </div>
+            
             <figcaption class="section__figure-caption">{{caption}}</figcaption>
           </figure>
           {{/ figure}}
-          <div>{{test}}</div>
         </aside>
         {{/ secondaryCol?}}   
 

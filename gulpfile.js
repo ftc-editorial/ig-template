@@ -280,14 +280,14 @@ gulp.task("mustache:demos", function() {
     .pipe($.changed(DEST))
     .pipe($.if('light-theme.mustache',
       $.mustache({
-        theme: true,
+        lightTheme: true,
         article: article,
         footer: footer
       }, {
         extension: '.html'
       }),
       $.mustache({
-        theme: false,
+        lightTheme: false,
         article: article,
         footer: footer
       }, {
@@ -314,10 +314,10 @@ gulp.task('images:demos', function() {
     .pipe(gulp.dest('.tmp/images'));
 });
 
-gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'images:demos'));
+gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'scripts', 'images:demos'));
 
 gulp.task('watch:demos', 
-  gulp.parallel('copy:demos', 'mustache:demos', 'styles',
+  gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'scripts',
     function serve() {
     browserSync.init({
       server: {
