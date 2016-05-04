@@ -1,32 +1,37 @@
 {{# sections}}
-  <section class="article__section" id="nav-section-{{sectionId}}">
+  <section class="article__section"{{# sectionHeader?}} id="nav-index-{{sectionId}}{{/ sectionHeader?}}">
 
+    {{# sectionHeader?}}
     <div class="section__header">
+
+      {{# headerTitle?}}
       <div class="section__header-container" data-o-grid-container>
-        <h2 class="section__header-primary">{{sectionTitle}}</h2>
-        <p class="section__header-secondary">{{sectionSubTitle}}</p>
+        <h2 class="section__header-primary">{{title}}</h2>
+        <p class="section__header-secondary">{{subTitle}}</p>
       </div><!-- data-o-grid-container -->
+      {{/ headerTitle?}}
 
       {{> background-media}}
 
     </div><!-- section__header -->
+    {{/ sectionHeader?}}
 
     <div class="section__body" data-o-grid-container>
       <div data-o-grid-row>
 
         <div class="section__col-primary" data-o-grid-col>
-        {{# primaryCol}}
+        {{# colPrimary}}
           {{# text?}}
           <p>{{{.}}}</p>
           {{/ text?}}
 
           {{# figure?}}
           <figure class="section__figure{{#mobileOnly?}} section__figure--mobile{{/mobileOnly?}}">
-            <div class="lazyload-image">
-              <img src="{{{src}}}" class="section__figure-image lazyload-image__inner">
+            <div class="lazyload__outer" data-media-ratio="3/4">
+              <img src="{{{src}}}" class="section__figure-image lazyload__inner">
             </div>
             
-            <figcaption class="section__figure-caption">{{caption}}</figcaption>
+            <figcaption class="section__figure-caption">{{caption?}}</figcaption>
           </figure>
           {{/ figure?}}
 
@@ -40,8 +45,8 @@
           {{/ blockQuote?}}
 
           {{# video?}}
-          <div class="lazyload-video">
-            <div class="lazyload-video__inner">
+          <div class="lazyload__outer section__video-container" data-media-ratio="6/19">
+            <div class="lazyload__inner">
               {{# cc?}}
               <script src="{{{src}}}" type="text/javascript"></script>
               {{/ cc?}}
@@ -58,22 +63,37 @@
           </div>
           {{/ video?}}
 
-        {{/ primaryCol}}
+          {{# readMore?}}
+          <div class="section__read-more">
+            <a class="lazyload__outer" data-media-ratio="6/19" href="{{{href}}}">
+              <img class="lazyload__inner" src="{{{src}}}">
+            </a>
+
+            <h3 class="section__read-more-title">{{title}}</h3>
+            <ul class="section__read-more-items">
+              {{# items}}
+                <li><a href="{{{href}}}">{{name}}</a></li>
+              {{/ items}}
+            </ul>        
+          </div>
+          {{/ readMore?}}
+
+        {{/ colPrimary}}
         </div><!-- col-primary -->
 
-        {{# secondaryCol?}}
+        {{# colSecondary?}}
         <aside class="section__col-secondary" data-o-grid-col>
           {{# figure}}
           <figure class="section__figure">
-            <div class="lazyload-image">
-              <img src="{{{src}}}" class="section__figure-image lazyload-image__inner">
+            <div class="lazyload__outer" data-media-ratio="3/4">
+              <img src="{{{src}}}" class="section__figure-image lazyload__inner">
             </div>
             
             <figcaption class="section__figure-caption">{{caption}}</figcaption>
           </figure>
           {{/ figure}}
         </aside>
-        {{/ secondaryCol?}}   
+        {{/ colSecondary?}}   
 
       </div><!-- data-o-grid-row -->
     </div><!-- data-o-grid-container -->

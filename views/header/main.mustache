@@ -60,10 +60,13 @@
           </li>
 
           {{# article.sections}}
+          {{# sectionHeader?}}
           <li class="o-header__nav-item">
-            <a class="o-header__nav-link" href="#nav-section-{{sectionId}}">{{sectionTitle}}</a>
+            <a class="o-header__nav-link" href="#nav-index-{{sectionId}}">{{# headerTitle?}}{{title}}{{/ headerTitle}}</a>
           </li>
+          {{/ sectionHeader?}}
           {{/ article.sections}}
+
           {{# article.englishEdition?}}
           <li class="o-header__nav-item mobile">
             <a class="o-header__edition" href="{{{href}}}" target="_blank">阅读英文版</a>

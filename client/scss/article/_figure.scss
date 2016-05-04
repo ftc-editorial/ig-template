@@ -1,9 +1,13 @@
 .section__figure {
   text-align: center;
   margin: 10% 0;
+  background-color: oColorsGetPaletteColor('pink-tint2');
+  .lazyload__outer[data-media-ratio="3/4"] {
+  	@include lazyloadSetMediaRatio(71.42%);
+  }
 }
 .section__figure-image {
-	object-fit: cover;
+	object-fit: cover;	
 }
 .section__figure-caption{
    @include oColorsFor(ig-caption, text);
