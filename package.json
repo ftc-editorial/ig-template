@@ -41,6 +41,8 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "consolidate": "^0.14.1",
+    "express": "^4.13.4",
     "nedb": "^1.8.0"
   }
 }

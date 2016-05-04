@@ -1,5 +1,16 @@
-const Datastore = require('nedb');
+const express = require('express');
+const engines = require('consolidate');
 
-const db = new Datastore();
+const app = express();
 
-console.log(db);
+app.engine('mustache', engines.mustache);
+app.set('view engine', 'mustache');
+app.set('views', './views')
+
+app.get('/', function(req, res) {
+	res.render('main', {title: 'Test', body: 'hello world'});
+});
+
+app.listen(3010, function () {
+  console.log('Example app listening on port 3010!');
+});
