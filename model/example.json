@@ -25,14 +25,9 @@
 	},
 	"sections": [
 		{
-			"sectionId?": {
-				"id": "1"
-			},
-			"sectionTitle?": {
-				"title": "1. 失去的土地",
-				"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。"
-			},
-			"sectionHeaderPic?": false,
+			"sectionId":"1",
+			"title": "1. 失去的土地",
+			"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 			"backgroundVideo?": {
 				"poster": "./images/mpv-shot0001.jpg",
 				"source": [
@@ -129,13 +124,9 @@
 			}
 		},
 		{
-			"sectionId?": {
-				"id": "2"
-			},
-			"sectionTitle?": {
-				"title": "2. 抱负",
-				"subTitle": ""
-			},
+			"sectionId": "2",
+			"title": "2. 抱负",
+			"subTitle": "",
 			"backgroundPic?": {
 				"srcset": "./images/2560_getty_-factory-in-yangon-lr.jpg 1100w, ./images/2560_getty_-factory-in-yangon-mr.jpg 1500w, ./images/2560_getty_-factory-in-yangon-hr.jpg",
 						"orientation": "landscape",

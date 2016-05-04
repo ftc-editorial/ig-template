@@ -60,11 +60,9 @@
           </li>
 
           {{# article.sections}}
-          {{# sectionHeader?}}
           <li class="o-header__nav-item">
-            <a class="o-header__nav-link" href="#nav-index-{{sectionId}}">{{# headerTitle?}}{{title}}{{/ headerTitle}}</a>
+            <a class="o-header__nav-link" href="#nav-index-{{sectionId}}">{{title}}</a>
           </li>
-          {{/ sectionHeader?}}
           {{/ article.sections}}
 
           {{# article.englishEdition?}}
