@@ -1,6 +1,6 @@
 <div class="background__media-container">
 
-  {{# backgroundVideo?}}
+  {{# video?}}
   <div class="background__media-wrapper">
     <video class="background__media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
       {{# source}}
@@ -9,14 +9,14 @@
     </video>          
   </div>
 
-  {{/ backgroundVideo?}}
+  {{/ video?}}
 
-  {{# backgroundPic?}}
+  {{# picture?}}
   <picture class="background__media-wrapper">
     <source srcset="{{{srcset}}}">
 
     <img class="background__media" src="{{{image}}}">
   </picture>
-  {{/ backgroundPic?}}
+  {{/ picture?}}
 
 </div>

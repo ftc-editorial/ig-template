@@ -7,16 +7,21 @@
         <h2 class="section__header-primary">{{title}}</h2>
         <p class="section__header-secondary">{{subTitle}}</p>
       </div><!-- data-o-grid-container -->
-
-      {{> background-media}}
-
+      {{# headerMedia}}
+        {{> background-media}}
+      {{/ headerMedia}}
     </div><!-- section__header -->
-
+    
+    {{# sectionBlock}}
     <div class="section__body">
       <div class="section__body-wrapper">
-        <div class="section__body-media">
-          
-        </div>
+      
+      <div>
+        <video preload="metadata" loop="true" muted="true" autoplay="true"  poster="./images/mpv-shot0002.jpg">
+          <source src="https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_pjiqzqp.mp4" type="video/mp4">
+          <source src="https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_fposetk.webm" type="video/webm">
+        </video>        
+      </div>
 
         <div class="section__content" data-o-grid-container>
           <div data-o-grid-row>
@@ -28,13 +33,7 @@
               {{/ text?}}
 
               {{# figure?}}
-              <figure class="section__figure{{#mobileOnly?}} section__figure--mobile{{/mobileOnly?}}">
-                <div class="lazyload__outer" data-media-ratio="3/4">
-                  <img src="{{{src}}}" class="section__figure-image lazyload__inner">
-                </div>
-                
-                <figcaption class="section__figure-caption">{{caption?}}</figcaption>
-              </figure>
+                {{> figure}}
               {{/ figure?}}
 
               {{# blockQuote?}}
@@ -85,15 +84,11 @@
 
             {{# colSecondary?}}
             <aside class="section__col-secondary" data-o-grid-col>
+
               {{# figure}}
-              <figure class="section__figure">
-                <div class="lazyload__outer" data-media-ratio="3/4">
-                  <img src="{{{src}}}" class="section__figure-image lazyload__inner">
-                </div>
-                
-                <figcaption class="section__figure-caption">{{caption}}</figcaption>
-              </figure>
+                {{> figure}}
               {{/ figure}}
+
             </aside>
             {{/ colSecondary?}}   
 
@@ -101,10 +96,8 @@
         </div><!-- data-o-grid-container-->        
       </div><!-- .section__body-wrapper-->
 
-
-
     </div><!-- .section__body -->
-
+    {{/ sectionBlock}}
   </section>
   
   {{# adBanner?}}

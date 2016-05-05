@@ -28,96 +28,90 @@
 			"sectionId":"1",
 			"title": "1. 失去的土地",
 			"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
-			"backgroundVideo?": {
-				"poster": "./images/mpv-shot0001.jpg",
-				"source": [
-					{
-						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
-						"type": "video/mp4"
-					},
-					{
-						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
-						"type": "video/webm"
-					}
-				]
+			"headerMedia": {
+				"video?": {
+					"poster": "./images/mpv-shot0001.jpg",
+					"source": [
+						{
+							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
+							"type": "video/mp4"
+						},
+						{
+							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
+							"type": "video/webm"
+						}
+					]
+				}				
 			},
-			"colPrimary": [
+			"sectionBlock": [
 				{
-					"text?": [
-						"在缅甸西部城镇皎漂(Kyaukphyu)附近，如今建起了一座天然气终端。走在经过那些弯弯曲曲的白色管道的那条路上时，拉翁梅(Hla Ohn May)仍会落泪。这位46岁的农妇有5个孩子，在这片面向孟加拉湾蓝色海水的绿地上，她曾经拥有一块自己的田地。"
-					]
-				},
-				{
-					"figure?": {
-						"mobileOnly?": true,
-						"href": "https://www.ft.com/land",
-						"src": "./images/new_logo.png"
-					}
-				},
-				{
-					"text?":[
-						"后来她和其他村民的土地被一家财团买下，财团成员包括中国国有企业——<a href=\"http://www.ftchinese.com/tag/中石油\" target=\"_blank\">中国石油天然气集团公司</a>(China National Petroleum Corporation)和韩国大宇(Daewoo)。皎漂现在是中国政府投资的两条巨大跨境能源管道的起点，这让这些荒野海滨成为某些人口中“中国的西海岸”。",
-						"快速开放中的缅甸正努力利用其所处的亚洲战略要冲位置，上述事态是这种努力的很大一部分。拉翁梅和其他农民曾经用来种植大米和豆类的肥沃土地，现在只不过是工业园里的景观，被篱笆围起来，由身着橘黄色连体裤的公司员工精心修剪。拉翁梅拿到了278万缅元（按当前汇率计算合2250美元），但她觉得自己被便宜打发了，因为她放弃的是自己拥有过的唯一生产性资产。",
-						"说到那个天然气终端的影响时，她说：“因为我们不再拥有那些土地，我们成了不得不为其他人打工的穷人。我每天看到那些建筑物都会哭。”"
-					]
-				},
-				{
-					"video?": {
-						"ft?": {
-							"poster": "./images/mpv-shot0002.jpg",
-							"source": [
-								{
-									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_pjiqzqp.mp4",
-									"type": "video/mp4"
-								},
-								{
-									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_fposetk.webm",
-									"type": "video/webm"
+					"colPrimary": [
+						{
+							"text?": [
+								"在缅甸西部城镇皎漂(Kyaukphyu)附近，如今建起了一座天然气终端。走在经过那些弯弯曲曲的白色管道的那条路上时，拉翁梅(Hla Ohn May)仍会落泪。这位46岁的农妇有5个孩子，在这片面向孟加拉湾蓝色海水的绿地上，她曾经拥有一块自己的田地。"
+							]
+						},
+						{
+							"figure?": {
+								"mobileOnly?": true,
+								"imgWithLink?": {
+									"href": "https://www.ft.com/land",
+									"src": "./images/new_logo.png"	
 								}
+							}
+						},
+						{
+							"text?":[
+								"后来她和其他村民的土地被一家财团买下，财团成员包括中国国有企业——<a href=\"http://www.ftchinese.com/tag/中石油\" target=\"_blank\">中国石油天然气集团公司</a>(China National Petroleum Corporation)和韩国大宇(Daewoo)。皎漂现在是中国政府投资的两条巨大跨境能源管道的起点，这让这些荒野海滨成为某些人口中“中国的西海岸”。",
+								"快速开放中的缅甸正努力利用其所处的亚洲战略要冲位置，上述事态是这种努力的很大一部分。拉翁梅和其他农民曾经用来种植大米和豆类的肥沃土地，现在只不过是工业园里的景观，被篱笆围起来，由身着橘黄色连体裤的公司员工精心修剪。拉翁梅拿到了278万缅元（按当前汇率计算合2250美元），但她觉得自己被便宜打发了，因为她放弃的是自己拥有过的唯一生产性资产。",
+								"说到那个天然气终端的影响时，她说：“因为我们不再拥有那些土地，我们成了不得不为其他人打工的穷人。我每天看到那些建筑物都会哭。”"
 							]
 						}
-					}
-				},
-				{
-					"text?": [
-						"对那些潜在投资者和缅甸新政府的真正改革家来说，土地纠纷是一个巨大的阴影，笼罩着他们的计划。2012年，缅甸议会成立了一个委员会调查自1988年以来所谓的强占土地问题。该委员会在去年11月表示，它接到了大约1.7万宗投诉。活动人士表示，这只是实际纠纷数量的一小部分。在据估计有三分之二的人口直接或者间接依赖农业的缅甸，据称被强占土地的受害者大多是农民。",
-						"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。"
-					]
-				},
-				{
-					"readMore?": {
-						"href": "https://www.ft.com/land",
-						"src": "./images/landrush_xref.png",
-						"title": "阅读更多",
-						"items": [
+					],
+					"colSecondary?": {
+						"figure": [
 							{
-								"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia",
-								"name": "Ethiopia: The billionaire’s farm"
-							},
-							{
-								"href": "https://ig.ft.com/sites/land-rush-investment/indonesia",
-								"name": "Indonesia: Saving the earth"
-							},
-							{
-								"href": "http://podcast.ft.com/2016/03/01/global-land-disputes/",
-								"name": "Listen to the podcast"
+								"mobileOnly?": true,
+								"imgWithLink?": {
+									"href": "https://www.ft.com/land",
+									"src": "./images/new_logo.png"	
+								}
 							}
 						]
-					}
+					}					
+				},
+				{
+					"colPrimary": [
+						{
+							"text?": [
+								"对那些潜在投资者和缅甸新政府的真正改革家来说，土地纠纷是一个巨大的阴影，笼罩着他们的计划。2012年，缅甸议会成立了一个委员会调查自1988年以来所谓的强占土地问题。该委员会在去年11月表示，它接到了大约1.7万宗投诉。活动人士表示，这只是实际纠纷数量的一小部分。在据估计有三分之二的人口直接或者间接依赖农业的缅甸，据称被强占土地的受害者大多是农民。",
+								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。"
+							]
+						},
+						{
+							"readMore?": {
+								"href": "https://www.ft.com/land",
+								"src": "./images/landrush_xref.png",
+								"title": "阅读更多",
+								"items": [
+									{
+										"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia",
+										"name": "Ethiopia: The billionaire’s farm"
+									},
+									{
+										"href": "https://ig.ft.com/sites/land-rush-investment/indonesia",
+										"name": "Indonesia: Saving the earth"
+									},
+									{
+										"href": "http://podcast.ft.com/2016/03/01/global-land-disputes/",
+										"name": "Listen to the podcast"
+									}
+								]
+							}
+						}
+					]
 				}
 			],
-			"colSecondary?": {
-				"figure": [
-					{
-						"src": "./images/myanmarnumbers.png",
-						"caption": ""
-					},
-					{
-						"src": "./images/myan_num_36c.png",
-						"caption": ""
-					}
-				]
-			},
 			"adBanner?": {
 				"adId": "storyview1",
 				"adSrc": ""
@@ -127,10 +121,12 @@
 			"sectionId": "2",
 			"title": "2. 抱负",
 			"subTitle": "",
-			"backgroundPic?": {
-				"srcset": "./images/2560_getty_-factory-in-yangon-lr.jpg 1100w, ./images/2560_getty_-factory-in-yangon-mr.jpg 1500w, ./images/2560_getty_-factory-in-yangon-hr.jpg",
-						"orientation": "landscape",
-				"image": "./images/2560_getty_-factory-in-yangon-mr.jpg"
+			"headerMedia": {
+				"picture?": {
+					"srcset": "./images/2560_getty_-factory-in-yangon-lr.jpg 1100w, ./images/2560_getty_-factory-in-yangon-mr.jpg 1500w, ./images/2560_getty_-factory-in-yangon-hr.jpg",
+							"orientation": "landscape",
+					"image": "./images/2560_getty_-factory-in-yangon-mr.jpg"
+				}				
 			},
 			"colPrimary": [
 				{
@@ -147,8 +143,9 @@
 					],
 
 					"figure?": {
-						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/3carlsberg-mr_voued4u.jpg",
-
+						"imgNoLink": {
+							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/3carlsberg-mr_voued4u.jpg"
+						},
 						"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
 					}
 				}, 
