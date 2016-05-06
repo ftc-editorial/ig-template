@@ -314,7 +314,7 @@ gulp.task('images:demos', function() {
     .pipe(gulp.dest('.tmp/images'));
 });
 
-gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'scripts', 'images:demos'));
+gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'js', 'images:demos'));
 
 gulp.task('watch:demos', 
   gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'scripts',
@@ -338,5 +338,5 @@ gulp.task('watch:demos',
 
 gulp.task('demos', gulp.series('clean', 'build:demos', function(){
   return gulp.src('.tmp/**/**')
-    .pipe(gulp.dest(config.deploy.assets + projectName));
+    .pipe(gulp.dest('../ft-interact/ig-template'));
 }));
