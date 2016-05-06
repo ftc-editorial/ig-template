@@ -1,9 +1,8 @@
 .section__figure {
   text-align: center;
   margin: 10% 0;
-  background-color: oColorsGetPaletteColor('pink-tint2');
-  .lazyload__outer[data-media-ratio="3/4"] {
-  	@include lazyloadSetMediaRatio(71.42%);
+  a, a:hover {
+  	border-bottom: 0;
   }
 }
 .section__figure-image {

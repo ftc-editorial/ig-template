@@ -1,20 +1,17 @@
-.ig__credits {
-  box-sizing: border-box;
-  position: relative;
-  height: 100vh;
-  color: white;
+.article__credits {
+	text-align: left;
 }
 
-.ig__credits-wrapper {
+.article__credits-container {
 	position: relative;
 	padding: 0 5%;
 }
-.ig__credits-title {
+.article__credits-title {
 	margin: 0;
 	padding: 1em 0;
 	font-size: 30px;
 }
-.ig__credits-items {
+.article__credits-items {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;

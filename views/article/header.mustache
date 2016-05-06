@@ -20,17 +20,8 @@
     </div>
 
   </div><!-- data-o-grid-container -->
-
-  <div class="background__media-container">
-    {{# articleHeadBg?}}
-    <picture class="background__media-wrapper">
-      {{# source}}
-      <source media="(min-aspect-ratio: 1/1)" srcset="{{{srcset}}}" data-{{orientation}}>
-      {{/ source}}
-
-      <img class="background__media" src="{{{image}}}">
-    </picture>
-    {{/ articleHeadBg?}}   
-  </div>
-
+  
+  {{# articleCover?}}
+      {{> partials/fullspan-media}}
+  {{/ articleCover?}}
 </header>

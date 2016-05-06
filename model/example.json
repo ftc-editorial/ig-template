@@ -10,17 +10,19 @@
 	"byline?": {
 		"text": "英国《金融时报》报道"
 	},
-	"articleHeadBg?": {
-		"source": [
-			{
-				"srcset": "./images/sapienza_new-lr_cycwhld.jpg 1100w, ./images/sapienza_new-mr_osvv1bn.jpg 1500w, ./images/sapienza_new-hr_f0hbatq.jpg",
-				"orientation": "landscape"
-			},
-			{
-				"srcset": "./images/sapienza_new_upright-lr_52x9hcu.jpg 1100w, ./images/sapienza_new_upright-mr_ekp7ldm.jpg 1500w, ./images/sapienza_new_upright-hr_jepwvb9.jpg",
-				"orientation": "portrait"
-			}
-		],
+	"articleCover?": {
+		"picture?": {
+			"source": [
+				{
+					"srcset": "./images/sapienza_new-lr_cycwhld.jpg 1100w, ./images/sapienza_new-mr_osvv1bn.jpg 1500w, ./images/sapienza_new-hr_f0hbatq.jpg",
+					"mediaQuery": "media=\"(min-aspect-ratio: 1/1)\" data-landscape"
+				},
+				{
+					"srcset": "./images/sapienza_new_upright-lr_52x9hcu.jpg 1100w, ./images/sapienza_new_upright-mr_ekp7ldm.jpg 1500w, ./images/sapienza_new_upright-hr_jepwvb9.jpg",
+					"mediaQuery": "media=\"(max-aspect-ratio: 1/1)\" data-portrait"
+				}
+			]	
+		},
 		"image": "./images/sapienza_new-mr_osvv1bn.jpg"
 	},
 	"sections": [
@@ -28,7 +30,7 @@
 			"sectionId":"1",
 			"title": "1. 失去的土地",
 			"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
-			"headerMedia": {
+			"sectionCover": {
 				"video?": {
 					"poster": "./images/mpv-shot0001.jpg",
 					"source": [
@@ -69,29 +71,47 @@
 						}
 					],
 					"colSecondary?": {
-						"figure": [
-							{
-								"mobileOnly?": true,
-								"imgWithLink?": {
+						"figure?": {
+							"imgWithLink?": [
+								{
 									"href": "https://www.ft.com/land",
 									"src": "./images/new_logo.png"	
 								}
-							}
-						]
+							]
+						}
 					}					
 				},
 				{
+					"blockMedia?": {
+						"video?": {
+							"poster": "./images/mpv-shot0002.jpg",
+							"source": [
+								{
+									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_pjiqzqp.mp4",
+									"type": "video/mp4"
+								},
+								{
+									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_fposetk.webm",
+									"type": "video/webm"
+								}
+							]
+						}
+					},
 					"colPrimary": [
 						{
 							"text?": [
 								"对那些潜在投资者和缅甸新政府的真正改革家来说，土地纠纷是一个巨大的阴影，笼罩着他们的计划。2012年，缅甸议会成立了一个委员会调查自1988年以来所谓的强占土地问题。该委员会在去年11月表示，它接到了大约1.7万宗投诉。活动人士表示，这只是实际纠纷数量的一小部分。在据估计有三分之二的人口直接或者间接依赖农业的缅甸，据称被强占土地的受害者大多是农民。",
-								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。"
+								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。",
+								"缅甸的土地纠纷也让投资踌躇不前，而缅甸恰恰需要更多的投资。土地纠纷成为前来投资的企业确认的最明显风险之一。这包括了过去政府强占土地的遗留纠纷。投资者担心所有权争议带来的麻烦，以及由此而来的法律影响、罚款以及可能的负面舆论。"
 							]
 						},
 						{
 							"readMore?": {
-								"href": "https://www.ft.com/land",
-								"src": "./images/landrush_xref.png",
+								"imgWithLink?": {
+									"mediaRatio": "9/16",
+									"href": "https://www.ft.com/land",
+									"src": "./images/landrush_xref.png"
+								},
 								"title": "阅读更多",
 								"items": [
 									{
@@ -108,6 +128,13 @@
 									}
 								]
 							}
+						},
+						{
+							"text?": [
+								"土地纠纷也是在缅甸之外可引起广泛共鸣的话题。缅甸的困难可能比较极端，但困扰它的问题——投机、大公司和当地社区之间的紧张关系、祖祖辈辈一直从事的生计的丧失——具有普遍性。",
+								"在一个以农业为主、有许多偏远地区和不受政府控制的区域的贫穷国家里，土地既是一种无价的实物资产，又是一种情感寄托，构成人们自我认同的一部分。它是社会中的主线，围绕土地的冲突有可能导致骚乱。",
+								"致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”"
+							]
 						}
 					]
 				}
@@ -121,42 +148,54 @@
 			"sectionId": "2",
 			"title": "2. 抱负",
 			"subTitle": "",
-			"headerMedia": {
+			"sectionCover": {
 				"picture?": {
-					"srcset": "./images/2560_getty_-factory-in-yangon-lr.jpg 1100w, ./images/2560_getty_-factory-in-yangon-mr.jpg 1500w, ./images/2560_getty_-factory-in-yangon-hr.jpg",
-							"orientation": "landscape",
+					"source": {
+						"srcset": "./images/2560_getty_-factory-in-yangon-lr.jpg 1100w, ./images/2560_getty_-factory-in-yangon-mr.jpg 1500w, ./images/2560_getty_-factory-in-yangon-hr.jpg"
+					},
 					"image": "./images/2560_getty_-factory-in-yangon-mr.jpg"
 				}				
 			},
-			"colPrimary": [
+			"sectionBlock": [
 				{
-					"text?": ["去年的选举标志着缅甸在近半个世纪军政府统治之后对外开放迈出的关键一步。该国经济增长率超过8%，而且处于亚洲战略要冲，自2011年军政府倒台以来，这个国家吸引了国际投资者的浓厚兴趣。"],
-					"video?": {
-						"cc?": {
-							"src": "http://p.bokecc.com/player?vid=402E9E7943F29BFD9C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
-						}
-					}
-				},
-				{
-					"text?": [
-						"咨询公司麦肯锡(McKinsey)预计，到2030年，缅甸经济规模可能增长至2010年的4倍以上，达到2000亿美元的峰值。包括联合利华(Unilever)、可口可乐(Coca-Cola)以及啤酒制造商喜力(Heineken)和嘉士伯(Carlsberg)在内的消费品企业已纷纷进入缅甸。"
-					],
-
-					"figure?": {
-						"imgNoLink": {
-							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/3carlsberg-mr_voued4u.jpg"
+					"colPrimary": [
+						{
+							"text?": [
+								"去年的选举标志着缅甸在近半个世纪军政府统治之后对外开放迈出的关键一步。该国经济增长率超过8%，而且处于亚洲战略要冲，自2011年军政府倒台以来，这个国家吸引了国际投资者的浓厚兴趣。",
+								"咨询公司麦肯锡(McKinsey)预计，到2030年，缅甸经济规模可能增长至2010年的4倍以上，达到2000亿美元的峰值。包括联合利华(Unilever)、可口可乐(Coca-Cola)以及啤酒制造商喜力(Heineken)和嘉士伯(Carlsberg)在内的消费品企业已纷纷进入缅甸。"
+							]
 						},
-						"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
-					}
-				}, 
-				{
-					"text?": ["缅甸还拥有丰富的自然资源。自绝对军事统治结束以来的油田拍卖吸引了众多买家的兴趣，从美国雪佛龙(Chevron)、英荷石油公司——荷兰皇家壳牌(Royal Dutch Shell)、印度信实工业(Reliance Industries)，到哈萨克斯坦天然气巨头以及形形色色的当地大亨。"],
-					"blockQuote?": {
-
-						"quote": "‘选择标准不应基于表现，而应基于个性。在中国，谦逊才能成事，粗鲁只会碰壁’",
-
-						"footer": "中欧国际工商学院(Ceibs)副教授金台烈(Tae-Yeol Kim)"
-					}
+						{
+							"figure?": {
+								"imgNoLink?": {
+									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/3carlsberg-mr_voued4u.jpg"
+								},
+								"caption?": {
+									"text": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								}
+							}
+						}, 
+						{
+							"text?": [
+								"缅甸还拥有丰富的自然资源。自绝对军事统治结束以来的油田拍卖吸引了众多买家的兴趣，从美国雪佛龙(Chevron)、英荷石油公司——荷兰皇家壳牌(Royal Dutch Shell)、印度信实工业(Reliance Industries)，到哈萨克斯坦天然气巨头以及形形色色的当地大亨。",
+								"然而，一些冶炼行业受到侵犯人权和腐败指控的困扰。翡翠的年产值据估计达到310亿美元，相当于缅甸官方国内生产总值(GDP)的近一半。缅甸出产的这种贵重玉石有许多通过北部边境被走私出境，用于满足中国新富阶层推动的市场。",
+								"随着中国的成本越来越高、劳方越来越强硬，缅甸有成为下一个“亚洲工厂”的雄心。仰光是缅甸最大的城市和商业中心，在仰光周边，新的工业园区不断涌现和发展壮大，Gap和H&M就在从这些工业园区里的工厂采购服装。缅甸仍需要克服从基础设施到电力供应的各种巨大障碍，但它的劳动力成本很低。最低工资水平仅为每小时36美分，而中国的工资至少每小时1.65美元。",
+								"缅甸当局启动了建设一系列工业园区的计划，希望催生经济繁荣。位于皎漂所在岛屿中心的一个地区即将成为一个占地逾4000英亩的综合园区，拥有深海港口设施、工厂和渔场。官员们一直将皎漂经济特区宣传为“小新加坡”，有可能成为连接中国、非洲和中东地区的贸易走廊。"
+							]
+						}
+					],
+					"colSecondary?": {
+						"figure?": {
+							"imgNoLink?": [
+								{
+									"src": "./images/myanmarnumbers.png"	
+								},
+								{
+									"src": "./images/myan_num_36c.png"
+								}
+							]
+						}
+					}				
 				}
 			],
 			"adBanner?": {
@@ -178,18 +217,20 @@
 			"翻译：何黎",
 			"中文网制作：史书华、倪卫国"
 		],
-		"backgroundVideo?": {
-			"poster": "./images/boat-blinkie-backup-mr.jpg",
-			"source": [
-				{
-					"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.mp4",
-					"type": "video/mp4"
-				},
-				{
-					"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.webmhd.webm",
-					"type": "video/webm"
-				}
-			]
+		"creditsCover?": {
+			"video?": {
+				"poster": "./images/boat-blinkie-backup-mr.jpg",
+				"source": [
+					{
+						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.mp4",
+						"type": "video/mp4"
+					},
+					{
+						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.webmhd.webm",
+						"type": "video/webm"
+					}
+				]	
+			}		
 		}
 	},
 	"suggestedReads": {
@@ -197,25 +238,25 @@
 		"items": [
 			{
 				"href": "https://ig.ft.com/sites/land-rush-investment/",
-				"imgSrc": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/landrush_xrefpanel.png",
+				"src": "./images/landrush_xrefpanel.png",
 				"title": "FT系列：全球土地调查",
 				"text": "Across continents, big investors are pouring in billions into one of the world's most precious resources – land. They promise progress. But their arrival can upend livelihoods and spark life-and-death struggles. <a href=\"https://ig.ft.com/sites/land-rush-investment/\">阅读更多</a>"
 			},
 			{
 				"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
-				"imgSrc": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/xref_ethiopia-mr_qoad6xx.jpg",
+				"src": "./images/xref_ethiopia-mr_qoad6xx.jpg",
 				"title": "埃塞俄比亚：百万富豪的农地",
 				"text": "Mohammed al-Amoudi has spent $200m planting a rice farm the size of 20,000 soccer pitches. But old grievances linger in this fertile corner of a land stalked by hunger."
 			},
 			{
 				"href": "https://ig.ft.com/sites/land-rush-investment/indonesia",
-				"imgSrc": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/xref_indo-mr_8njq2rv.jpg",
+				"src": "./images/xref_indo-mr_8njq2rv.jpg",
 				"title": "印尼：拯救地球",
 				"text": "Norway’s government has offered Indonesia a billion dollars to save its rainforests. Now its ministers are heading to the Borneo jungle to see if there is any chance of success."
 			},
 			{
 				"href": "http://www.ftchinese.com/story/001066631",
-				"imgSrc": "http://i.ftimg.net/picture/7/000059567_piclink.jpg",
+				"src": "http://i.ftimg.net/picture/7/000059567_piclink.jpg",
 				"title": "中国：企业掀起海外置地热潮"
 			}
 		]

@@ -5,7 +5,7 @@
 
       {{# items}}
       <li class="suggested-reads__item" data-o-grid-col>
-        <a class="lazyload__outer" href="{{{href}}}"><img class="lazyload__inner" src="{{{imgSrc}}}"></a>
+        <a class="suggested-reads__link lazyload__outer" href="{{{href}}}"><img class="lazyload__inner" src="{{{src}}}"></a>
 
         <h3 class="suggested-reads__title"><a href="{{{href}}}">{{title}}</a></h3>
         <p>{{{text}}}</p>
@@ -16,3 +16,17 @@
   </div>
 </div>
 {{/ suggestedReads}}
+
+{{# moreOn}}
+<div class="more-on">
+  <div class="more-on__container" data-o-grid-container>
+    <div class="more-on__row" data-o-grid-row>
+      {{# sections}}
+      <div class="more-on__col" data-o-grid-col>
+        {{> partials/more-on}}
+      </div>
+      {{/ sections}}     
+    </div>
+  </div>
+</div>
+{{/ moreOn}} 

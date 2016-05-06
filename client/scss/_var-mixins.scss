@@ -20,7 +20,7 @@ $ig-primary-col-width: 6;
 	}
 }
 
-@mixin lazyloadSetMediaRatio($ratio) {
+@mixin igSetMediaRatio($ratio) {
 	padding-top: $ratio;
 }
 

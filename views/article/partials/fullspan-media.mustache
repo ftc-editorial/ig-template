@@ -1,0 +1,21 @@
+<div class="fullspan__media-container">
+	{{# video?}}
+	<div class="fullspan__media-inner" data-media-type="video">
+	  <video class="fullspan__media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
+	    {{# source}}
+	    <source src="{{{src}}}" type="{{{type}}}">
+	    {{/ source}}
+	  </video>          
+	</div>
+	{{/ video?}}
+
+	{{# picture?}}
+	<picture class="fullspan__media-inner" data-media-type="picture">
+		{{# source}}
+	  <source srcset="{{{srcset}}}">
+	  {{/ source}}
+
+	  <img class="fullspan__media" src="{{{image}}}">
+	</picture>
+	{{/ picture?}}
+</div>

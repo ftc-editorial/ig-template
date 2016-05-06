@@ -1,0 +1,17 @@
+.section__block {
+	[data-o-grid-row] {
+		justify-content: center;
+	}
+}
+.section__col-primary {
+  @include oGridRespondTo(M) {
+    @include igGridColWidth($ig-primary-col-width);
+  }
+}
+
+.section__col-secondary {
+  display: none;
+  @include oGridRespondTo(M) {
+    @include igGridColWidth((12 - $ig-primary-col-width));
+  }
+}

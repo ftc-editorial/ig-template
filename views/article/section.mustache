@@ -1,5 +1,5 @@
 {{# sections}}
-  <section class="article__section" id="nav-index-{{sectionId}}">
+  <section class="section__container" id="nav-index-{{sectionId}}">
 
     <div class="section__header">
 
@@ -7,101 +7,88 @@
         <h2 class="section__header-primary">{{title}}</h2>
         <p class="section__header-secondary">{{subTitle}}</p>
       </div><!-- data-o-grid-container -->
-      {{# headerMedia}}
-        {{> background-media}}
-      {{/ headerMedia}}
+      {{# sectionCover}}
+        {{> partials/fullspan-media}}
+      {{/ sectionCover}}
     </div><!-- section__header -->
     
     {{# sectionBlock}}
-    <div class="section__body">
-      <div class="section__body-wrapper">
-      
-      <div>
-        <video preload="metadata" loop="true" muted="true" autoplay="true"  poster="./images/mpv-shot0002.jpg">
-          <source src="https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_pjiqzqp.mp4" type="video/mp4">
-          <source src="https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_fposetk.webm" type="video/webm">
-        </video>        
-      </div>
+    <div class="section__block">
 
-        <div class="section__content" data-o-grid-container>
-          <div data-o-grid-row>
-            <div class="section__col-primary" data-o-grid-col>
-            {{# colPrimary}}
-            
-              {{# text?}}
-              <p>{{{.}}}</p>
-              {{/ text?}}
+      {{# blockMedia?}}
+          {{> partials/fullspan-media}}
+      {{/ blockMedia?}}
 
-              {{# figure?}}
-                {{> figure}}
-              {{/ figure?}}
+      <div class="section__block-content" data-o-grid-container>
+        <div data-o-grid-row>
+          <div class="section__col-primary" data-o-grid-col>
+          {{# colPrimary}}
+          
+            {{# text?}}
+            <p>{{{.}}}</p>
+            {{/ text?}}
 
-              {{# blockQuote?}}
-              <figure class="section__blockquote">
-                <blockquote class="section__blockquote-text">
-                {{quote}} 
-                </blockquote>
-                <footer class="section__blockquote-caption">{{footer}}</footer>
-              </figure>
-              {{/ blockQuote?}}
+            {{# figure?}}
+              {{> partials/figure}}
+            {{/ figure?}}
 
-              {{# video?}}
-              <div class="lazyload__outer section__video-container" data-media-ratio="6/19">
-                <div class="lazyload__inner">
-                  {{# cc?}}
-                  <script src="{{{src}}}" type="text/javascript"></script>
-                  {{/ cc?}}
+            {{# blockQuote?}}
+            <figure class="section__blockquote">
+              <blockquote class="section__blockquote-text">
+              {{quote}} 
+              </blockquote>
+              <footer class="section__blockquote-caption">{{footer}}</footer>
+            </figure>
+            {{/ blockQuote?}}
 
-                  {{# ft?}}
-                  <video class="section__video" preload="metadata" controls poster="{{{poster}}}">
-                    {{# source}}
-                    <source src="{{{src}}}" type="{{{type}}}">
-                    {{/ source}}
-                  </video>
-                  {{/ ft?}}
+            {{# video?}}
+            <div class="lazyload__outer section__video-container" data-media-ratio="6/19">
+              <div class="lazyload__inner">
+                {{# cc?}}
+                <script src="{{{src}}}" type="text/javascript"></script>
+                {{/ cc?}}
 
-                </div>
+                {{# ft?}}
+                <video class="section__video" preload="metadata" controls poster="{{{poster}}}">
+                  {{# source}}
+                  <source src="{{{src}}}" type="{{{type}}}">
+                  {{/ source}}
+                </video>
+                {{/ ft?}}
+
               </div>
-              {{/ video?}}
+            </div>
+            {{/ video?}}
 
-              {{# readMore?}}
-              <div class="section__read-more">
-                <a class="lazyload__outer" data-media-ratio="6/19" href="{{{href}}}">
-                  <img class="lazyload__inner" src="{{{src}}}">
-                </a>
+            {{# readMore?}}
+            <div class="section__more-on">
+              {{> partials/figure}}              
+              {{> partials/more-on}}    
+            </div>
+            {{/ readMore?}}
 
-                <h3 class="section__read-more-title">{{title}}</h3>
-                <ul class="section__read-more-items">
-                  {{# items}}
-                    <li><a href="{{{href}}}">{{name}}</a></li>
-                  {{/ items}}
-                </ul>        
-              </div>
-              {{/ readMore?}}
+          {{/ colPrimary}}
+          </div><!-- col-primary -->
 
-            {{/ colPrimary}}
-            </div><!-- col-primary -->
+          {{# colSecondary?}}
+          <aside class="section__col-secondary" data-o-grid-col>
 
-            {{# colSecondary?}}
-            <aside class="section__col-secondary" data-o-grid-col>
+            {{# figure?}}
+              {{> partials/figure}}
+            {{/ figure?}}
 
-              {{# figure}}
-                {{> figure}}
-              {{/ figure}}
+          </aside>
+          {{/ colSecondary?}}   
 
-            </aside>
-            {{/ colSecondary?}}   
-
-          </div><!-- data-o-grid-row -->        
-        </div><!-- data-o-grid-container-->        
-      </div><!-- .section__body-wrapper-->
+        </div><!-- data-o-grid-row -->        
+      </div><!-- data-o-grid-container-->        
 
     </div><!-- .section__body -->
     {{/ sectionBlock}}
   </section>
   
   {{# adBanner?}}
-    {{> ad}}
+    {{> partials/ad}}
   {{/ adBanner?}}
 
 {{/ sections}}
