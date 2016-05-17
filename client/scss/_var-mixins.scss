@@ -3,6 +3,9 @@ $ig-primary-col-width: 6;
 
 /* $ratio: percentage(height / width) */
 @mixin lazyloadMedia($classname: 'lazyload', $ratio:percentage(9/16)) {
+	@if unit($ratio) != "%" {
+		$ratio: percentage($ratio);
+	}
 	.#{$classname}__outer {
 		position: relative;
 		display: block;
@@ -21,6 +24,9 @@ $ig-primary-col-width: 6;
 }
 
 @mixin igSetMediaRatio($ratio) {
+	@if unit($ratio) != "%" {
+		$ratio: percentage($ratio);
+	}
 	padding-top: $ratio;
 }
 

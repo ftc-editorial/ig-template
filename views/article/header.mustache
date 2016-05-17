@@ -2,26 +2,26 @@
   <div class="article__header-container" data-o-grid-container>
 
     <div class="article__header-wrapper">
-        <h1 class="article__header-primary">{{articleHeadline}}</h1>
+        <h1 class="article__header-primary">{{articleHead}}</h1>
 
         <p class="article__header-secondary">{{articleSubhead}}</p>
     </div>
     
     <div class="article__time-byline">
 
-    {{# publishedDate?}}
+    {{# publishedDate}}
       <time class="article__timestamp o-date" data-o-component="o-date" datetime="" title="">{{date}}</time>
-    {{/ publishedDate?}}
+    {{/ publishedDate}}
 
-    {{# byline?}}
+    {{# byline}}
       <p class="article__byline">{{text}}</p>
-    {{/ byline?}}
+    {{/ byline}}
 
     </div>
 
   </div><!-- data-o-grid-container -->
   
-  {{# articleCover?}}
+  {{# articleCover}}
       {{> partials/fullspan-media}}
-  {{/ articleCover?}}
+  {{/ articleCover}}
 </header>

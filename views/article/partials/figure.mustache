@@ -1,19 +1,14 @@
-<figure class="section__figure{{#mobileOnly?}} section__figure--mobile{{/mobileOnly?}}">
+<figure class="section__figure{{#mobileOnly}} section__figure--mobile{{/mobileOnly}}">
 
-  {{# imgWithLink?}}
-  <a class="section__figure-container lazyload__outer" href="{{{href}}}">
+  {{#hasLink}}<a{{/hasLink}}
+  {{^hasLink}}<div{{/hasLink}}
+  class="section__figure-container lazyload__outer"
+  {{#hasLink}}href="{{{href}}}"{{/hasLink}}
+  data-media-ratio="{{ratio}}">
     <img src="{{{src}}}" class="section__figure-image lazyload__inner">
-  </a>                
-  {{/ imgWithLink?}}
-
-  {{# imgNoLink?}}
-  <div class="section__figure-container lazyload__outer">
-    <img src="{{{src}}}" class="section__figure-image lazyload__inner">
-  </div>
-  {{/ imgNoLink?}}
+  {{#hasLink}}</a>{{/hasLink}}
+  {{^hasLink}}</div>{{/hasLink}}         
   
-  {{# caption?}}
-  <figcaption class="section__figure-caption">{{text}}</figcaption>
-  {{/ caption?}}
-
+  <figcaption class="section__figure-caption">{{caption}}</figcaption>
+ 
 </figure>

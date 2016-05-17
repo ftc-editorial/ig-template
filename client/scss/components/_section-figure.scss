@@ -5,6 +5,12 @@
   	border-bottom: 0;
   }
 }
+.section__figure-container {
+    @include igSetMediaRatio(71.42%);
+}
+.section__figure-container[data-media-ratio="7/5"] {
+	@include igSetMediaRatio(7/5);
+}
 .section__figure-image {
 	object-fit: cover;	
 }

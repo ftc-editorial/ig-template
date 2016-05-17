@@ -37,8 +37,6 @@ gulp.task(function mustache() {
     console.log(e);
     return;
   }
-  
-  const theme = article.lightTheme;
 
   const footer = JSON.parse(fs.readFileSync('model/footer.json'));
 
@@ -51,7 +49,6 @@ gulp.task(function mustache() {
   return gulp.src('views/index.mustache')
     .pipe($.changed(DEST))
     .pipe($.mustache({
-      theme: theme,
       analytics: analytics,
       article: article,
       footer: footer
@@ -69,7 +66,7 @@ gulp.task(function mustache() {
 gulp.task('styles', function styles() {
   const DEST = '.tmp/styles';
 
-  return gulp.src('client/main.scss')
+  return gulp.src('client/scss/main.scss')
     .pipe($.changed(DEST))
     .pipe($.plumber())
     .pipe($.sourcemaps.init({loadMaps:true}))
@@ -96,7 +93,7 @@ gulp.task('styles', function styles() {
 
 gulp.task('scripts', function() {
   const b = browserify({
-    entries: 'client/main.js',
+    entries: 'client/js/main.js',
     debug: true,
     cache: {},
     packageCache: {},
@@ -133,7 +130,7 @@ gulp.task('js', function() {
   const DEST = '.tmp/scripts/';
 
   const b = browserify({
-    entries: 'client/main.js',
+    entries: 'client/js/main.js',
     debug: true,
     cache: {},
     packageCache: {},

@@ -13,72 +13,72 @@
     </div><!-- section__header -->
     
     {{# sectionBlock}}
-    <div class="section__block">
+    <div class="section__block{{#scrollmation}} section__block--scrollmation{{/scrollmation}}">
 
-      {{# blockMedia?}}
+      {{# blockMedia}}
           {{> partials/fullspan-media}}
-      {{/ blockMedia?}}
+      {{/ blockMedia}}
 
       <div class="section__block-content" data-o-grid-container>
         <div data-o-grid-row>
           <div class="section__col-primary" data-o-grid-col>
           {{# colPrimary}}
           
-            {{# text?}}
+            {{# text}}
             <p>{{{.}}}</p>
-            {{/ text?}}
+            {{/ text}}
 
-            {{# figure?}}
+            {{# figure}}
               {{> partials/figure}}
-            {{/ figure?}}
+            {{/ figure}}
 
-            {{# blockQuote?}}
+            {{# video}}
+            <div class="lazyload__outer section__video-container" data-media-ratio="6/19">
+              <div class="lazyload__inner">
+                {{# cc}}
+                <script src="{{{src}}}" type="text/javascript"></script>
+                {{/ cc}}
+
+                {{# ft}}
+                <video class="section__video" preload="metadata" controls poster="{{{poster}}}">
+                  {{# source}}
+                  <source src="{{{src}}}" type="{{{type}}}">
+                  {{/ source}}
+                </video>
+                {{/ ft}}
+
+              </div>
+            </div>
+            {{/ video}}
+
+            {{# blockQuote}}
             <figure class="section__blockquote">
               <blockquote class="section__blockquote-text">
               {{quote}} 
               </blockquote>
               <footer class="section__blockquote-caption">{{footer}}</footer>
             </figure>
-            {{/ blockQuote?}}
+            {{/ blockQuote}}
 
-            {{# video?}}
-            <div class="lazyload__outer section__video-container" data-media-ratio="6/19">
-              <div class="lazyload__inner">
-                {{# cc?}}
-                <script src="{{{src}}}" type="text/javascript"></script>
-                {{/ cc?}}
-
-                {{# ft?}}
-                <video class="section__video" preload="metadata" controls poster="{{{poster}}}">
-                  {{# source}}
-                  <source src="{{{src}}}" type="{{{type}}}">
-                  {{/ source}}
-                </video>
-                {{/ ft?}}
-
-              </div>
-            </div>
-            {{/ video?}}
-
-            {{# readMore?}}
+            {{# readMore}}
             <div class="section__more-on">
               {{> partials/figure}}              
               {{> partials/more-on}}    
             </div>
-            {{/ readMore?}}
+            {{/ readMore}}
 
           {{/ colPrimary}}
           </div><!-- col-primary -->
 
-          {{# colSecondary?}}
+          {{# colSecondary}}
           <aside class="section__col-secondary" data-o-grid-col>
 
-            {{# figure?}}
+            {{# figure}}
               {{> partials/figure}}
-            {{/ figure?}}
+            {{/ figure}}
 
           </aside>
-          {{/ colSecondary?}}   
+          {{/ colSecondary}}   
 
         </div><!-- data-o-grid-row -->        
       </div><!-- data-o-grid-container-->        
@@ -87,8 +87,8 @@
     {{/ sectionBlock}}
   </section>
   
-  {{# adBanner?}}
+  {{# adBanner}}
     {{> partials/ad}}
-  {{/ adBanner?}}
+  {{/ adBanner}}
 
 {{/ sections}}
