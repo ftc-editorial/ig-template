@@ -30,13 +30,7 @@ const projectName = dataFile.slice(0, -5);
 gulp.task(function mustache() {
   const DEST = '.tmp';
 
-  try {
-    const article = JSON.parse(fs.readFileSync('model/' + dataFile));
-  } catch (e) {
-    console.log(`Cannot read your data file: models/${dataFile}`);
-    console.log(e);
-    return;
-  }
+  const article = JSON.parse(fs.readFileSync('model/' + dataFile));
 
   const footer = JSON.parse(fs.readFileSync('model/footer.json'));
 
