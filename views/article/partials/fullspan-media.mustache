@@ -1,21 +1,28 @@
-<div class="fullspan__media-container">
-	{{# video}}
-	<div class="fullspan__media-inner" data-media-type="video">
-	  <video class="fullspan__media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
-	    {{# source}}
-	    <source src="{{{src}}}" type="{{{type}}}">
-	    {{/ source}}
-	  </video>          
-	</div>
-	{{/ video}}
+<div class="fullspan-media__container">
+  <div class="lazyload__outer">
+    <div class="lazyload__inner">
+      {{# ccVideo}}
+      <script src="{{{src}}}" type="text/javascript"></script>
+      {{/ ccVideo}}
 
-	{{# picture}}
-	<picture class="fullspan__media-inner" data-media-type="picture">
-		{{# source}}
-	  	<source {{#mediaQuery}}media="{{.}}"{{/mediaQuery}} srcset="{{#srcset}}{{{.}}}{{/srcset}}">
-	  {{/ source}}
+      {{# video}}
+      <div class="fullspan-media__inner">
+        <video class="fullspan-media" preload="metadata" controls poster="{{{poster}}}">
+          {{# source}}
+          <source src="{{{src}}}" type="{{{type}}}">
+          {{/ source}}
+        </video>    
+      </div>
+      {{/ video}}
 
-	  <img class="fullspan__media" src="{{{image}}}">
-	</picture>
-	{{/ picture}}
+      {{# picture}}
+      <picture class="fullspan-media__inner">
+        {{# source}}
+        <source srcset="{{#srcset}}{{{.}}}{{/srcset}}">
+        {{/ source}}
+        <img class="fullspan-media" src="{{{src}}}">
+      </picture>
+      {{/ picture}}
+    </div>
+  </div>  
 </div>

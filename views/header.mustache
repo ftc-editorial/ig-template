@@ -7,23 +7,7 @@
 </symbol>
 </svg>
 <header class="o-header{{#lightTheme}} o-header--light{{/lightTheme}}" data-o-component="o-header">
-  <!--div class="o-header__top">
-    <div class="o-header__container" >
-      <div class="o-header__inner">
-        
-        <div class="o-header__masthead">
-          <a href="http://www.ftchinese.com" title="前往FT中文网首页"><span>FT中文网</span></a>
-        </div>
-      {{# article.englishEdition?}}
-        <div class="o-header__edition-switch">
-          <a class="o-header__edition" href="{{{href}}}">英文版</a>
-        </div>
-      {{/ article.englishEdition?}}  
-      </div>
-    </div>
-  </div-->
 
-  <div class="o-header__bottom">
     <div class="o-header__container">
       <div class="o-header__left">
         <div class="o-header__logo">
@@ -35,9 +19,9 @@
       <div class="o-header__center">
         <span class="o-header__headline">{{articleHead}}</span>
 
-        {{# alterLang?}}
+        {{# alterLang}}
           <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
-        {{/ alterLang?}}
+        {{/ alterLang}}
       </div>
 
       <nav class="o-header__right">
@@ -65,14 +49,13 @@
           </li>
           {{/ sections}}
 
-          {{# alterLang?}}
+          {{# alterLang}}
           <li class="o-header__nav-item mobile">
             <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
-          {{/ alterLang?}}
+          {{/ alterLang}}
           </li>
         </ol>           
       </nav>         
     </div><!-- o-header__container -->    
-  </div><!-- o-header__bottom -->
 
 </header>

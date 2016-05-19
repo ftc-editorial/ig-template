@@ -1,6 +1,4 @@
-$o-header-top-height: 50px;
-$o-header-bottom-height: 50px;
-$o-header-height: 45px;
+$o-header-height: 50px;
 
 @include oColorsSetUseCase(o-header, background, 'grey-tint5');
 @include oColorsSetUseCase(o-header, text, 'white');

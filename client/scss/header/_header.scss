@@ -6,24 +6,13 @@
 	margin: 0;
 	border: 0;
 	width: 100%;
-		
+	height: $o-header-height;
+	@include oColorsFor(o-header, text background);
+
 	a {
 		text-decoration: none;
 	}
-
-	height: $o-header-bottom-height;
-}
-
-.o-header__bottom {
-	box-sizing: border-box;
-	position: relative;
-
-	width: 100%;
-	height: 100%;
-	
-	@include oColorsFor(o-header, text background);
-
-	.o-header--light & {
+	&--light {
 		@include oColorsFor(o-header--light, text background);
 		border-bottom: 1px solid oColorsGetColorFor(o-header-divider--light, border);
 	}
@@ -50,7 +39,7 @@
 .o-header__logo,
 .o-header__series {
 	box-sizing: border-box;
-	height: $o-header-bottom-height;
+	height: $o-header-height;
 	//line-height: $o-header-bottom-height;
 	// display: inline-block;
 	display: table-cell;
@@ -69,8 +58,8 @@
 	box-sizing: border-box;
 	padding: 5px;
 	display: inline-block;
-	height: $o-header-bottom-height;
-	width: $o-header-bottom-height;
+	height: $o-header-height;
+	width: $o-header-height;
 	span {
 		display: none;
 	}
@@ -91,7 +80,7 @@
 	text-align: center;
 	width: 100%;
 	height: 100%;
-	line-height: $o-header-bottom-height;
+	line-height: $o-header-height;
 
 	.o-header__edition {
 		display: none;

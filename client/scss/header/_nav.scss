@@ -28,8 +28,8 @@
 	background: none;
 
 	text-align: center;
-	height: $o-header-bottom-height;
-	width: $o-header-bottom-height;
+	height: $o-header-height;
+	width: $o-header-height;
 	display: table-cell;
 	vertical-align: middle;
 
@@ -85,7 +85,7 @@
 	#menu-toggler:checked ~ & {
 		display: block;
 		position: fixed;
-		top: $o-header-bottom-height;
+		top: $o-header-height;
 		right: 0;
 		bottom: 0;
 	}

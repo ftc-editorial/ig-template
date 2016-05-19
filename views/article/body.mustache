@@ -8,16 +8,16 @@
         <p class="section__header-secondary">{{subTitle}}</p>
       </div><!-- data-o-grid-container -->
       {{# sectionCover}}
-        {{> partials/fullspan-media}}
+        {{> partials/cover-media}}
       {{/ sectionCover}}
     </div><!-- section__header -->
     
     {{# sectionBlock}}
     <div class="section__block{{#scrollmation}} section__block--scrollmation{{/scrollmation}}">
 
-      {{# blockMedia}}
+      {{# fullspanMedia}}
           {{> partials/fullspan-media}}
-      {{/ blockMedia}}
+      {{/ fullspanMedia}}
 
       <div class="section__block-content" data-o-grid-container>
         <div data-o-grid-row>
@@ -54,9 +54,9 @@
             {{# blockQuote}}
             <figure class="section__blockquote">
               <blockquote class="section__blockquote-text">
-              {{quote}} 
+              {{text}} 
               </blockquote>
-              <footer class="section__blockquote-caption">{{footer}}</footer>
+              <footer class="section__blockquote-caption">{{caption}}</footer>
             </figure>
             {{/ blockQuote}}
 
@@ -83,7 +83,7 @@
         </div><!-- data-o-grid-row -->        
       </div><!-- data-o-grid-container-->        
 
-    </div><!-- .section__body -->
+    </div>
     {{/ sectionBlock}}
   </section>
   

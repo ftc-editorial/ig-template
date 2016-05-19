@@ -9,19 +9,15 @@
     
     <div class="article__time-byline">
 
-    {{# publishedDate}}
-      <time class="article__timestamp o-date" data-o-component="o-date" datetime="" title="">{{date}}</time>
-    {{/ publishedDate}}
+    <time class="article__timestamp o-date" data-o-component="o-date" datetime="" title="">{{publishTime}}</time>
 
-    {{# byline}}
-      <p class="article__byline">{{text}}</p>
-    {{/ byline}}
+    <p class="article__byline">{{byline}}</p>
 
     </div>
 
   </div><!-- data-o-grid-container -->
   
   {{# articleCover}}
-      {{> partials/fullspan-media}}
+      {{> partials/cover-media}}
   {{/ articleCover}}
 </header>

@@ -7,7 +7,7 @@
 	.section__figure {
 		margin: 0;
 	}
-	.section__figure-container {
+	.lazyload__outer {
 		@include igSetMediaRatio(50%);
 	}
 }
