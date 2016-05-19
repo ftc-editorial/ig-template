@@ -1,0 +1,39 @@
+
+<!--
+You can use cc video as section-head's background, but it's not recommended. 
+CC videos using swf have very wired styles. The result is unpredictable.
+But you can embed it in the text. On large screen the video might be scaled out of  the screen estate when using in this way.
+-->
+{{# ccVideo}}
+<div class="lazyload__outer">
+	<div class="lazyload__inner">
+		<script src="{{{src}}}" type="text/javascript"></script>
+	</div>
+</div>
+
+{{/ ccVideo}}
+
+{{# video}}
+<!-- 
+Fix chrome bug. Chrome does not respect the height when set object-fit:cover on video element.
+Add addintional wrapper and set `overflow:hidden;`
+See: http://stackoverflow.com/questions/30700144/responsive-object-fit-cover-fix-on-chrome
+-->
+<div class="fullspan-media__wrapper" data-media-type="video">
+  <video class="fullspan-media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
+    {{# source}}
+    <source src="{{{src}}}" type="{{{type}}}">
+    {{/ source}}
+  </video>          
+</div>
+{{/ video}}
+
+{{# picture}}
+<picture class="fullspan-media__wrapper" data-media-type="picture">
+	{{# source}}
+  	<source {{#mediaQuery}}media="{{.}}"{{/mediaQuery}} srcset="{{#srcset}}{{{.}}}{{/srcset}}">
+  {{/ source}}
+
+  <img class="fullspan-media" src="{{{image}}}">
+</picture>
+{{/ picture}}

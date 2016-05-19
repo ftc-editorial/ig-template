@@ -1,0 +1,52 @@
+.section__body--scrollmation {
+  @include oColorsFor(ig-text-over-media, text);
+
+
+  @include oGridRespondTo($until: M) {
+    .section__fullspan-media {
+      position: relative;
+      //height: 542px;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 30%;
+        background-image: linear-gradient(to bottom, transparent, #000);
+      }
+      background-image: linear-gradient(to top, #000 0%, transparent 30%, transparent);
+    }
+    .section__body-container {
+      background-color: #000;
+      padding-bottom: 40px;
+    }
+  }
+  
+  @include oGridRespondTo(M) {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, transparent);
+      z-index: 2;
+    }
+    .section__fullspan-media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    .section__body-container {
+      padding-top: 450px;
+      padding-bottom: 250px;
+      position: relative;
+      z-index: 3;
+    }        
+  } 
+}
+

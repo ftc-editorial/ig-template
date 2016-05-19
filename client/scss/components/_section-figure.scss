@@ -1,6 +1,18 @@
 .section__figure {
   text-align: center;
   margin: 15px auto;
+
+	&--mobile {
+		display: block;
+	}
+
+	@include oGridRespondTo(M) {
+		&--mobile {
+			display: none;
+		}
+	}
+
+
   a, a:hover {
   	border-bottom: 0;
   }

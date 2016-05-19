@@ -7,8 +7,8 @@
   }
 }
 
-.article__header,
-.section__header,
+.article__head,
+.section__head,
 .article__credits {
   box-sizing: border-box;
   padding-top: $o-header-height; 
@@ -19,13 +19,17 @@
   text-align: center;
 }
 
-.article__header-container,
-.section__header-container {
+.article__head-container,
+.section__head-container {
   position: relative;
   height: 100%;
 }
 
 @include lazyloadMedia;
+
+.section__body {
+  position: relative;
+}
 
 .more-on__title {
   margin: 10px 0;

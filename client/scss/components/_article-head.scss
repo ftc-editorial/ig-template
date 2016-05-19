@@ -1,11 +1,11 @@
-.article__header-wrapper {
+.article__head-wrapper {
 	box-sizing: border-box;
     width: 100%;
     padding: 5%;
     text-align: center;
 }
 
-.article__header-primary {
+.article__head-primary {
 	margin: 0;
 	font-size: 50px;
 
@@ -14,7 +14,7 @@
 	}
 }
 
-.article__header-secondary {
+.article__head-secondary {
 	font-size: 32px;
 
 	@include oGridRespondTo(M) {

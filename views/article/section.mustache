@@ -1,25 +1,31 @@
 {{# sections}}
   <section class="section__container" id="nav-index-{{sectionId}}">
 
-    <div class="section__header">
+    <div class="section__head">
 
-      <div class="section__header-container" data-o-grid-container>
-        <h2 class="section__header-primary">{{title}}</h2>
-        <p class="section__header-secondary">{{subTitle}}</p>
+      <div class="section__head-container" data-o-grid-container>
+        <h2 class="section__head-primary">{{title}}</h2>
+        <p class="section__head-secondary">{{subTitle}}</p>
       </div><!-- data-o-grid-container -->
+
       {{# sectionCover}}
-        {{> partials/cover-media}}
+      <div class="fullspan-media__container">
+        {{> partials/media}}
+      </div>  
       {{/ sectionCover}}
+
     </div><!-- section__header -->
     
-    {{# sectionBlock}}
-    <div class="section__block{{#scrollmation}} section__block--scrollmation{{/scrollmation}}">
+    {{# sectionBody}}
+    <div class="section__body{{#scrollmation}} section__body--scrollmation{{/scrollmation}}">
 
       {{# fullspanMedia}}
-          {{> partials/fullspan-media}}
+      <div class="section__fullspan-media"{{#ccVideo}} data-source="cc"{{/ccVideo}}>
+        {{> partials/media}}
+      </div>
       {{/ fullspanMedia}}
 
-      <div class="section__block-content" data-o-grid-container>
+      <div class="section__body-container" data-o-grid-container>
         <div data-o-grid-row>
           <div class="section__col-primary" data-o-grid-col>
           {{# colPrimary}}
@@ -33,7 +39,7 @@
             {{/ figure}}
 
             {{# video}}
-            <div class="lazyload__outer section__video-container" data-media-ratio="6/19">
+            <div class="lazyload__outer section__video-container" data-media-ratio="9/16">
               <div class="lazyload__inner">
                 {{# cc}}
                 <script src="{{{src}}}" type="text/javascript"></script>
@@ -84,7 +90,7 @@
       </div><!-- data-o-grid-container-->        
 
     </div>
-    {{/ sectionBlock}}
+    {{/ sectionBody}}
   </section>
   
   {{# adBanner}}
