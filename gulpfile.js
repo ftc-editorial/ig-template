@@ -320,14 +320,13 @@ gulp.task("mustache:demos", function() {
     .then(function(contents){
       gulp.src('views/index.mustache')
         .pipe($.mustache({
-          lightTheme: true,
           article: contents[0],
           footer: contents[1]
         }, {
           extension: '.html'
         }))
         .pipe($.rename({
-          basename: 'light-theme'
+          basename: 'dark-theme'
         }))
         .pipe(gulp.dest(DEST));
 
@@ -343,7 +342,7 @@ gulp.task("mustache:demos", function() {
           extension: '.html'
         }))
         .pipe($.rename({
-          basename: 'dark-theme'
+          basename: 'light-theme'
         }))
         .pipe(gulp.dest(DEST));
     })
