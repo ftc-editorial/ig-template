@@ -48,10 +48,6 @@ gulp.task(function mustache() {
 
   var analytics = false;
 
-  // if (taskName === 'build' || taskName === 'deploy') {
-  //   analytics = true;    
-  // }
-
   if (process.env.NODE_ENV === 'production') {
     analytics = true;
   }
@@ -318,6 +314,7 @@ gulp.task("mustache:demos", function() {
       return contents.map(JSON.parse);
     })
     .then(function(contents){
+
       gulp.src('views/index.mustache')
         .pipe($.mustache({
           article: contents[0],
@@ -332,7 +329,7 @@ gulp.task("mustache:demos", function() {
 
         return contents;
     })
-    .then(function(contents) {
+    .then(function(contents) { 
       gulp.src('views/index.mustache')
         .pipe($.mustache({
           lightTheme: true,
