@@ -12,6 +12,7 @@ const babelify = require('babelify');
 const cssnext = require('postcss-cssnext');
 const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
+process.env.NODE_ENV = 'development';
 
 const config = require('./config.json');
 
@@ -24,37 +25,64 @@ const knownOptions = {
 const argv = minimist(process.argv.slice(2), knownOptions);
 
 const taskName = argv._[0];
-const dataFile = argv.i;
-const projectName = dataFile.slice(0, -5);
+const articleDataFile = path.resolve(__dirname, 'model', argv.i);
+const footerDataFile = path.resolve(__dirname, 'model/footer.json');
+const projectName = path.basename(argv.i, '.json');
+
+function readFilePromisified(filename) {
+  return new Promise(
+    function(resolve, reject) {
+      fs.readFile(filename, 'utf8', function(err, data) {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(data);
+        }
+      });
+    }
+  );
+}
 
 gulp.task(function mustache() {
   const DEST = '.tmp';
 
-  const article = JSON.parse(fs.readFileSync('model/' + dataFile));
+  var analytics = false;
 
-  const footer = JSON.parse(fs.readFileSync('model/footer.json'));
+  // if (taskName === 'build' || taskName === 'deploy') {
+  //   analytics = true;    
+  // }
 
-  const analytics = false;
-
-  if (taskName === 'build' || taskName === 'deploy') {
-    analytics = true;    
+  if (process.env.NODE_ENV === 'production') {
+    analytics = true;
   }
 
-  return gulp.src('views/index.mustache')
-    .pipe($.changed(DEST))
-    .pipe($.mustache({
-      analytics: analytics,
-      article: article,
-      footer: footer
-    }, {
-      extension: '.html'
-    }))
-    .pipe($.size({
-      gzip: true,
-      showFiles: true
-    }))
-    .pipe(gulp.dest(DEST))
-    .pipe(browserSync.stream({once: true}));
+  const dataFiles = [articleDataFile, footerDataFile];
+
+  const promisedData = dataFiles.map(readFilePromisified);
+  
+  return Promise.all(promisedData)
+    .then(function(contents) {
+      return contents.map(JSON.parse);
+    })
+    .then(function(contents){
+      gulp.src('views/index.mustache')
+        .pipe($.mustache({
+          analytics: analytics,
+          article: contents[0],
+          footer: contents[1]
+        }, {
+          extension: '.html'
+        }))
+        .pipe($.size({
+          gzip: true,
+          showFiles: true
+        }))
+        .pipe(gulp.dest(DEST))
+        .pipe(browserSync.stream({once: true}));
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 });
 
 gulp.task('styles', function styles() {
@@ -198,10 +226,11 @@ gulp.task('serve:dist', function() {
 /* build */
 gulp.task('html', function() {
   return gulp.src('.tmp/index.html')
-/*    .pipe($.useref({searchPath: ['.', '.tmp']}))
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano()))*/
-    .pipe($.if('*.html', $.htmlReplace(config.static)))
+    // .pipe($.useref({searchPath: ['.', '.tmp']}))
+    // .pipe($.if('*.js', $.uglify()))
+    // .pipe($.if('*.css', $.cssnano()))
+    // .pipe($.if('*.html', $.htmlReplace(config.static)))
+    .pipe($.htmlReplace(config.static))
     .pipe($.smoosher())
     .pipe(gulp.dest('dist'));
 });
@@ -230,7 +259,24 @@ gulp.task('clean', function() {
   });
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('mustache', 'styles', 'js', 'images', 'extras'), 'html'));
+// Set NODE_ENV in gulp task.
+// Mainly used to produce different mustache results.
+// Any easy way to set it?
+gulp.task('dev', function() {
+  return Promise.resolve(process.env.NODE_ENV = 'development')
+    .then(function(value) {
+      console.log('NODE_ENV: ' + process.env.NODE_ENV);
+    });
+});
+
+gulp.task('prod', function() {
+  return Promise.resolve(process.env.NODE_ENV = 'production')
+    .then(function(value) {
+      console.log('NODE_ENV: ' + process.env.NODE_ENV);
+    });
+});
+
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'js', 'images', 'extras'), 'html', 'dev'));
 
 
 /**********deploy***********/
@@ -260,33 +306,50 @@ gulp.task('deploy:html', function() {
 gulp.task('deploy', gulp.series('build', gulp.parallel('deploy:assets', 'deploy:html')));
 
 /* demos */
+
 gulp.task("mustache:demos", function() {
   const DEST = '.tmp';
+  const dataFiles = [articleDataFile, footerDataFile];
 
-  const article = JSON.parse(fs.readFileSync('model/' + dataFile));
+  const promisedData = dataFiles.map(readFilePromisified);
+  
+  return Promise.all(promisedData)
+    .then(function(contents) {
+      return contents.map(JSON.parse);
+    })
+    .then(function(contents){
+      gulp.src('views/index.mustache')
+        .pipe($.mustache({
+          lightTheme: true,
+          article: contents[0],
+          footer: contents[1]
+        }, {
+          extension: '.html'
+        }))
+        .pipe($.rename({
+          basename: 'light-theme'
+        }))
+        .pipe(gulp.dest(DEST));
 
-  const footer = JSON.parse(fs.readFileSync('model/footer.json'));
-
-  return gulp.src('demos/*.mustache')
-    .pipe($.changed(DEST))
-    .pipe($.if('light-theme.mustache',
-      $.mustache({
-        lightTheme: true,
-        article: article,
-        footer: footer
-      }, {
-        extension: '.html'
-      }),
-      $.mustache({
-        lightTheme: false,
-        article: article,
-        footer: footer
-      }, {
-        extension: '.html'
-      })
-    ))
-    .pipe(gulp.dest(DEST))
-    .pipe(browserSync.stream({once: true}));
+        return contents;
+    })
+    .then(function(contents) {
+      gulp.src('views/index.mustache')
+        .pipe($.mustache({
+          lightTheme: true,
+          article: contents[0],
+          footer: contents[1]
+        }, {
+          extension: '.html'
+        }))
+        .pipe($.rename({
+          basename: 'dark-theme'
+        }))
+        .pipe(gulp.dest(DEST));
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 });
 
 gulp.task('copy:demos', function() {
