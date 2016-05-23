@@ -33,7 +33,29 @@
 {{# analytics}}
   {{> partials/analytics}}
 {{/ analytics}}
-
+<script type="text/javascript">
+function getViewportSize(w) {
+    w = w || window;
+    if (w.innerWidth != null) { //For browsers except IE8-
+        return {
+            w: w.innerWidth,
+            h: w.innerHeight
+        };
+    }
+    var d = w.document; // IE in standard mode
+    if (document.compatMode == 'CSS1Compat') {
+        return {
+            w: d.documentElement.clientWidth,
+            h: d.documentElement.clientHeight
+        };
+    }
+    return { // browsers in quirks mode
+        w: d.body.clientWidth,
+        h: d.body.clientHeight
+    };
+}
+var viewport = getViewportSize();
+</script>
 </head>
 
 <body>
@@ -49,6 +71,9 @@
   {{> footer}}
 {{/ footer}}
 
+<script type="text/javascript">
+  console.log(viewport);
+</script>
 <!-- smoosh -->
 <script src="scripts/bundle.js"></script>
 <!-- endsmoosh -->
