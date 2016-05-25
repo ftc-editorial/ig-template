@@ -41,6 +41,7 @@ oShare.init();
 
 // });
 
+
 function activeNavLink(currentPage, navLinks) {
 	var currentNavLink = navLinks[currentPage - 1];
 	currentNavLink.addClass('active');
