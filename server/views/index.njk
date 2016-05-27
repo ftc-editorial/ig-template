@@ -5,18 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/bower_components/ftc-icons/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-    <title>{{title}}</title>
+    <title>Interactive Graphics Generator</title>
 
 </head>
 
 <body>
 <h1>Interactive Graphics Generator</h1>
-<div>
-  <h2>Composer</h2>
+<div class="toolset">
+  <h2>Toolset</h2>
+  <button class="">Add Cover</button>
+  <button>Add A Section</button>
 </div>
 
 <div>
-  <h2>Live Preview</h2>
+  <h2>Workbench</h2>
+  <div class="meta-data">
+  	<h3>Add Meta Data</h3>
+  	<form>
+  		<label>description</label><input type="text" name="description">
+  		<label>og:title</label><input type="text" name="ogTitle">
+  		<label>og:type</label><input type="text" name="ogType">
+  		<label>title</label><input type="text" name="title">
+  	</form>
+  </div>
+  <div class="o-header">
+  	<h3>Header Info</h3>
+  	<label>series title: </label><input type="text" name="seriesTitle">
+  	<label>alternative lang: </label><input type="text" name="">
+  </div>
+  <div class="article-head">
+  	<h3>Article Head</h3>
+  	<form>
+  		<label>article head: </label><input type="text" name="articleHead">
+  		<label>article subhead: </label><input type="text" name="articleSubhead">
+  		<label>publish time: </label><input type="text" name="publishTime">
+  		<label>byline: </label><input type="text" name="byLine">
+  		<div class="article-cover">
+  			<h4>Cover Media</h4>
+	  		<input type="radio" id="cover-picture" name="coverMedia" value="picture"><label for="cover-picture">Picture</label>
+	  		<input type="radio" id="cover-video" name="coverMedia" value="video"><label for="cover-video">Video</label>
+  		</div>
+  	</form>
+  </div>
+
+  <div class="article-body">
+  	<div class="add-section">
+  		
+  	</div>
+  </div>
 </div>
 
 

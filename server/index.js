@@ -1,9 +1,11 @@
 const express = require('express');
 const engines = require('consolidate');
 const nunjucks = require('nunjucks');
+var debug = require('debug')('app');
 // const Datastore = require('nedb');
 
 const app = express();
+debug('booting Interactive Graphics CMS');
 
 // const filename = 'db/' + process.argv[2];
 
@@ -35,14 +37,17 @@ const app = express();
 
 nunjucks.configure('views', {
 	autoescape: true,
-	express: app
+	express: app,
+	watch:true,
+	noCache: true
 });
 
 
 app.get('/', function(req, res) {
+	debug(req.method + ' ' + req.url)
 	res.render('index.njk', {title: 'Test'});
 });
 
-app.listen(3010, function () {
+app.listen(3010, function () {	
   console.log('Example app listening on port 3010!');
 });
