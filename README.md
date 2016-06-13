@@ -32,3 +32,7 @@ To use the 'light' theme, add `theme:true,` as the first entry in you json file.
 - `<picture>`
 - `vh`
 
+## CMS
+### Enable debug
+`DEBUG=app node index.js`
+
