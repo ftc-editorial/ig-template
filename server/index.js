@@ -3,6 +3,7 @@ const engines = require('consolidate');
 const nunjucks = require('nunjucks');
 var debug = require('debug')('app');
 // const Datastore = require('nedb');
+const mongoose = require('mongoose');
 
 const app = express();
 debug('booting Interactive Graphics CMS');

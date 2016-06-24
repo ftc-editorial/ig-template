@@ -117,13 +117,36 @@ function showHideNav($elm, $navContainer) {
 const sections = document.querySelectorAll('.section__container');
 const section1 = sections[0];
 const height = window.innerHeight;
-const state = {
-	1: 'below viewport',
-	2: 'showing',
-	3: 'in viewport',
-	4: 'leaving',
-	5: 'left'
-};
+
+const secInfo = [];
+for (let i = 0; i < sections.length; i++) {
+	const tmp = {
+		id: i + 1,
+		el: sections[i],
+		_visible: false,
+		counter: 0,
+		get visible() {
+			return this._visible;
+		},
+		set visible(newValue) {
+			if (newValue !== this._visible) {
+				this._visible = newValue;
+				if (this._visible) {
+					this.counter += 1;
+					this.logPages('News', this.id);
+				}
+			}
+		},
+		logPages: function(pageName, pageNumber) {
+			console.log('Logged page: ' + pageName + ' ' + pageNumber);
+		}
+	};
+
+	secInfo.push(tmp);
+}
+
+console.log(secInfo);
+
 const info =
 {
 	id: 1,
@@ -131,7 +154,7 @@ const info =
 	_visible: false,
 	counter: 0,
 	logPages: function(pageName, pageNumber) {
-		console.log('Logged page: ' + pageName + ' ' + pageNumber);
+		console.log('Logged page: ' + pageName + ' ' + pageNumber)
 	}
 };
 
@@ -153,10 +176,6 @@ Object.defineProperty(info, 'visible', {
 var previousY = window.pageYOffset;
 
 window.addEventListener('scroll', function() {
-	const rect = section1.getBoundingClientRect();
-	const top = rect.top;
-	const bottom = rect.bottom;
-	
 	var dir;
 	const currentY = window.pageYOffset;
 	const scrolled = currentY - previousY;
@@ -169,34 +188,42 @@ window.addEventListener('scroll', function() {
 		dir = -1;
 	}
 
-	if (top >= height) {
-		console.log('top below viewport.');
-		info.visible = false;	
-	}
+	for(let i = 0; i < secInfo.length; i++) {
+		const currentInfo = secInfo[i];
+		const rect = currentInfo.el.getBoundingClientRect();
+		const top = rect.top;
+		const bottom = rect.bottom;
 
-	if (top > 0 && top < height) {
-		console.log('top in viewport.');
-		if (dir === 1) {
-			info.visible = true;
-		}
-	}
-
-	if (top < 0 && bottom > height) {
-		console.log('top above; bottom below.');
-	}
-
-	if (bottom < height && bottom > 0) {
-		console.log('bottom in viewport.');
-		if (dir === -1) {
-			info.visible = true;
+		if (top >= height) {
+			console.log(currentInfo.id + ': top below viewport.');
+			currentInfo.visible = false;	
 		}
 
-	}
+		if (top > 0 && top < height) {
+			console.log(currentInfo.id + ': top in viewport.');
+			if (dir === 1) {
+				currentInfo.visible = true;
+			}
+		}
 
-	if (bottom < 0) {
-		console.log('bottom above.');
-		info.visible = false;
-	}
-	console.log(info);
+		if (top < 0 && bottom > height) {
+			console.log(currentInfo.id + ': top above; bottom below.');
+		}
+
+		if (bottom < height && bottom > 0) {
+			console.log(currentInfo.id + ': bottom in viewport.');
+			if (dir === -1) {
+				currentInfo.visible = true;
+			}
+
+		}
+
+		if (bottom < 0) {
+			console.log(currentInfo.id + ': bottom above.');
+			currentInfo.visible = false;
+		}
+
+		console.log(currentInfo);			
+	}	
 });
 
