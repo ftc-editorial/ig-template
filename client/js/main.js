@@ -1,7 +1,7 @@
-'use strict'
-var oShare = require('ftc-share');
-
+const oShare = require('ftc-share');
+const oToggler = require('./toggler');
 oShare.init();
+oToggler.init();
 
 // $(function() {
 
@@ -113,3 +113,90 @@ function showHideNav($elm, $navContainer) {
 		e.stopPropagation();
 	});
 }
+
+const sections = document.querySelectorAll('.section__container');
+const section1 = sections[0];
+const height = window.innerHeight;
+const state = {
+	1: 'below viewport',
+	2: 'showing',
+	3: 'in viewport',
+	4: 'leaving',
+	5: 'left'
+};
+const info =
+{
+	id: 1,
+	el: 'section',
+	_visible: false,
+	counter: 0,
+	logPages: function(pageName, pageNumber) {
+		console.log('Logged page: ' + pageName + ' ' + pageNumber);
+	}
+};
+
+Object.defineProperty(info, 'visible', {
+	get: function() {
+		return this._visible;
+	},
+	set: function(newValue) {
+		if (newValue !== this._visible) {
+			this._visible = newValue;
+			if (this._visible) {
+				this.counter += 1;
+				this.logPages('News', this.id);
+			}
+		}
+	}
+});
+
+var previousY = window.pageYOffset;
+
+window.addEventListener('scroll', function() {
+	const rect = section1.getBoundingClientRect();
+	const top = rect.top;
+	const bottom = rect.bottom;
+	
+	var dir;
+	const currentY = window.pageYOffset;
+	const scrolled = currentY - previousY;
+	previousY = currentY;
+	if (scrolled > 0) {
+		dir = 1;
+	}
+
+	if (scrolled < 0) {
+		dir = -1;
+	}
+
+	if (top >= height) {
+		console.log('top below viewport.');
+		info.visible = false;	
+	}
+
+	if (top > 0 && top < height) {
+		console.log('top in viewport.');
+		if (dir === 1) {
+			info.visible = true;
+		}
+	}
+
+	if (top < 0 && bottom > height) {
+		console.log('top above; bottom below.');
+	}
+
+	if (bottom < height && bottom > 0) {
+		console.log('bottom in viewport.');
+		if (dir === -1) {
+			info.visible = true;
+		}
+
+	}
+
+	if (bottom < 0) {
+		console.log('bottom above.');
+		info.visible = false;
+	}
+	console.log(info);
+});
+
