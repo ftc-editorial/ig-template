@@ -7,6 +7,7 @@
     "o-colors": "^3.3.2",
     "o-grid": "^4.0.7",
     "zepto": "^1.1.6",
-    "ftc-share": "^1.0.4"
+    "ftc-share": "^1.0.6",
+    "ftc-icons": "^2.0.2"
   }
 }
