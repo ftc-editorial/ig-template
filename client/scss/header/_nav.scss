@@ -1,11 +1,7 @@
-#menu-toggler {
-	display: none;
-}
-
 .o-share {
 	display: none;	
-	@include oGridRespondTo(L) {		
-		display: table-cell;
+	@include oGridRespondTo(M) {
+		display: inline-block;		
 		vertical-align: middle;
 	}
 }
@@ -27,10 +23,12 @@
 	cursor: pointer;
 	background: none;
 
-	text-align: center;
 	height: $o-header-height;
 	width: $o-header-height;
-	display: table-cell;
+	line-height: $o-header-height;
+	display: inline-block;
+
+	text-align: center;	
 	vertical-align: middle;
 
 	span {
@@ -40,24 +38,26 @@
 		width: 20px;
 		height: 20px;
 		fill: oColorsGetColorFor(o-header, text);
+		display: inline-block;
+		vertical-align: middle;
 	}
 	.o-header--light & {
 		svg {
 			fill: oColorsGetColorFor(o-header--light, text);
 		}
 	}
-	.icon-hamburger {
+	.o-icons__hamburger {
 		display: inline-block;
 	}
-	.icon-cross {
+	.o-icons__cross {
 		display: none;
 	}
 	
-	#menu-toggler:checked ~ & {
-		.icon-hamburger {
+	&[aria-expanded="true"] {
+		.o-icons__hamburger {
 			display: none;
 		}
-		.icon-cross {
+		.o-icons__cross {
 			display: inline-block;
 		}
 	}
@@ -82,7 +82,7 @@
 		width: 210px;
 	}
 	
-	#menu-toggler:checked ~ & {
+	&[aria-hidden="false"] {
 		display: block;
 		position: fixed;
 		top: $o-header-height;
