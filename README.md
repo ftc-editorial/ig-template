@@ -32,6 +32,15 @@ To use the 'light' theme, add `theme:true,` as the first entry in you json file.
 - `<picture>`
 - `vh`
 
+## NOTES:
+Wechat cover image:
+```
+<img src="{{{article.wechatImage}}}" style="display:block; width:0px; height:0px; overflow:hidden">
+```
+1. Style should be set inline;
+2. Do not use display:none;
+3. For width:0px; height:0px; to be effective, img should be display:block.
+
 ## CMS
 ### Enable debug
 `DEBUG=app node index.js`
