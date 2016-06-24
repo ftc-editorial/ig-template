@@ -10,21 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 {{# article}}
-  <meta name="description" content="{{description}}" />
-  <meta property="og:title" content="{{ogTitle}}"/>
-  <meta property="og:type" content="{{ogType}}"/>
-  <meta property="og:image" content="{{{ogImage}}}"/>
-  <meta property="og:url" content="{{{ogUrl}}}">
-  <meta property="og:description" content="{{description}}" />
-  <meta property="og:locale" content="zh-Hans">
-  <meta property="og:site_name" content="FT中文网">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="{{{assetsPath}}}favicons/apple-touch-icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="{{{assetsPath}}}favicons/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="{{{assetsPath}}}favicons/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{{assetsPath}}}favicons/apple-touch-icon-76x76.png">
-  <link href="{{{assetsPath}}}favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-  <title>{{title}} - FT中文网</title>
+  {{> partials/meta}}
 {{/ article}}
 
   <!-- smoosh-->
@@ -33,32 +19,10 @@
 {{# analytics}}
   {{> partials/analytics}}
 {{/ analytics}}
-<script type="text/javascript">
-function getViewportSize(w) {
-    w = w || window;
-    if (w.innerWidth != null) { //For browsers except IE8-
-        return {
-            w: w.innerWidth,
-            h: w.innerHeight
-        };
-    }
-    var d = w.document; // IE in standard mode
-    if (document.compatMode == 'CSS1Compat') {
-        return {
-            w: d.documentElement.clientWidth,
-            h: d.documentElement.clientHeight
-        };
-    }
-    return { // browsers in quirks mode
-        w: d.body.clientWidth,
-        h: d.body.clientHeight
-    };
-}
-var viewport = getViewportSize();
-</script>
 </head>
 
 <body>
+<img src="{{{article.wechatImage}}}" style="display:block; width:0px; height:0px; overflow:hidden">
 {{# article}}
   {{> header}}
 {{/ article}}
@@ -71,9 +35,6 @@ var viewport = getViewportSize();
   {{> footer}}
 {{/ footer}}
 
-<script type="text/javascript">
-  console.log(viewport);
-</script>
 <!-- smoosh -->
 <script src="scripts/bundle.js"></script>
 <!-- endsmoosh -->
