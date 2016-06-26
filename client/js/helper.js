@@ -7,7 +7,7 @@ function getPageOffset() {
 	return {x:x, y:y};
 }
 
-function getElementPosition(e) {
+function getElementCoords(e) {
 
 	if (!(e instanceof HTMLElement)) {
 		e = document.querySelector(e);
@@ -19,9 +19,11 @@ function getElementPosition(e) {
 	var y1 = box.top + offset.y;
 	var y2 = box.bottom + offset.y;
 
-	return {xLeft: x1,  xRight: x2, yTop: y1,yBottom: y2};
+	return {left: x1,  right: x2, top: y1, bottom: y2};
 }
 
+// return floating-point numbers.
+// To get integers, use element.offsetHeight, element.offsetWidth.
 function getElementSize(e) {
     var box = e.getBoundingClientRect();
     var w = box.width || (box.right - box.left);
@@ -29,6 +31,17 @@ function getElementSize(e) {
     return {w: w, h: h}
 }
 
-exports.getPageOffset = getPageOffset;
-exports.getElementPosition = getElementPosition;
-exports.getElementSize = getElementSize;
+function merge(o, p) {
+	for (var prop in p) {
+		if (o.hasOwnProperty(prop)) {continue;}
+		o[prop] = p[prop];
+	}
+	return o;
+}
+
+module.exports = {
+	getPageOffset: getPageOffset,
+	getElementCoords: getElementCoords,
+	getElementSize: getElementSize,
+	merge: merge
+};

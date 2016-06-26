@@ -79,7 +79,7 @@ Toggler.init = function(el) {
     togglerInstances.push(new Toggler(togglerEls[i]));
   }
 
-  return togglerInstances
+  return togglerInstances;
 }
 
 module.exports = Toggler;
