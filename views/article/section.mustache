@@ -17,7 +17,7 @@
     </div><!-- section__header -->
     
     {{# sectionBody}}
-    <div class="section__body{{#scrollmation}} section__body--scrollmation{{/scrollmation}}">
+    <div class="section__body"{{#fullspanMedia.sticky}} data-o-component="o-sticky"{{/fullspanMedia.sticky}}>
 
       {{# fullspanMedia}}
       <div class="section__fullspan-media"{{#ccVideo}} data-source="cc"{{/ccVideo}}>
@@ -25,7 +25,7 @@
       </div>
       {{/ fullspanMedia}}
 
-      <div class="section__body-container" data-o-grid-container>
+      <div class="section__body-container" data-o-grid-container{{#colSecondary.sticky}} data-o-component="o-sticky"{{/colSecondary.sticky}}>
         <div data-o-grid-row>
           <div class="section__col-primary" data-o-grid-col>
           {{# colPrimary}}
@@ -39,31 +39,11 @@
             {{/ figure}}
 
             {{# video}}
-            <div class="lazyload__outer section__video-container" data-media-ratio="9/16">
-              <div class="lazyload__inner">
-                {{# cc}}
-                <script src="{{{src}}}" type="text/javascript"></script>
-                {{/ cc}}
-
-                {{# ft}}
-                <video class="section__video" preload="metadata" controls poster="{{{poster}}}">
-                  {{# source}}
-                  <source src="{{{src}}}" type="{{{type}}}">
-                  {{/ source}}
-                </video>
-                {{/ ft}}
-
-              </div>
-            </div>
+              {{> partials/video}}
             {{/ video}}
 
             {{# blockQuote}}
-            <figure class="section__blockquote">
-              <blockquote class="section__blockquote-text">
-              {{text}} 
-              </blockquote>
-              <footer class="section__blockquote-caption">{{caption}}</footer>
-            </figure>
+              {{> partials/blockquote}}
             {{/ blockQuote}}
 
             {{# readMore}}
@@ -77,7 +57,7 @@
           </div><!-- col-primary -->
 
           {{# colSecondary}}
-          <aside class="section__col-secondary" data-o-grid-col>
+          <aside class="section__col-secondary">
 
             {{# figure}}
               {{> partials/figure}}

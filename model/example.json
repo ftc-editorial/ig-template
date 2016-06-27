@@ -90,6 +90,7 @@
 						}
 					],
 					"colSecondary": {
+						"sticky": true,
 						"figure": {
 							"hasLink": {
 								"href": "https://www.ft.com/land"
@@ -212,6 +213,7 @@
 						}
 					],
 					"colSecondary": {
+						"sticky": true,
 						"figure":  [
 							{
 								"src": "./images/myanmarnumbers.png"	
@@ -248,8 +250,8 @@
 			},
 			"sectionBody": [
 				{
-					"scrollmation": true,
 					"fullspanMedia": {
+						"sticky": true,
 						"picture": {
 							"image": "images/oil_buildings-mr_l0sccsl.jpg"
 						}
@@ -439,6 +441,7 @@
 				{
 					"scrollmation": true,
 					"fullspanMedia": {
+						"sticky": true,
 						"picture": {
 							"image": "images/tighter_maw-mr_6cqlaxv.jpg"
 						}

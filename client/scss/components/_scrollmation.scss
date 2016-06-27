@@ -1,4 +1,4 @@
-.section__body--scrollmation {
+.section__body[data-o-component="o-sticky"] {
   @include oColorsFor(ig-text-over-media, text);
 
 
