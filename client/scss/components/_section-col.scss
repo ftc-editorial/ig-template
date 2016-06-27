@@ -11,7 +11,26 @@
 
 .section__col-secondary {
   display: none;
+  position: relative;
+
   @include oGridRespondTo(M) {
     @include igGridColWidth((12 - $ig-primary-col-width));
+  }
+  .o-sticky-target {
+    width: 100%;
+    &[aria-sticky="top"] {
+      position: absolute;
+      top: $o-header-height;
+    }
+    &[aria-sticky="fixed"] {
+      position: fixed;
+      top: $o-header-height;
+      width: calc(50% - 10px);
+    }
+    &[aria-sticky="bottom"] {
+      position: absolute;
+      bottom: $o-header-height;
+
+    }
   }
 }

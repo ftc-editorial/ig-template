@@ -20,12 +20,12 @@
     <div class="section__body"{{#fullspanMedia.sticky}} data-o-component="o-sticky"{{/fullspanMedia.sticky}}>
 
       {{# fullspanMedia}}
-      <div class="section__fullspan-media"{{#ccVideo}} data-source="cc"{{/ccVideo}}>
+      <div class="section__fullspan-media"{{#ccVideo}} data-source="cc"{{/ccVideo}}{{#sticky}} data-o-sticky-target{{/sticky}}>
         {{> partials/media}}
       </div>
       {{/ fullspanMedia}}
 
-      <div class="section__body-container" data-o-grid-container{{#colSecondary.sticky}} data-o-component="o-sticky"{{/colSecondary.sticky}}>
+      <div class="section__body-container" data-o-grid-container>
         <div data-o-grid-row>
           <div class="section__col-primary" data-o-grid-col>
           {{# colPrimary}}
@@ -57,12 +57,12 @@
           </div><!-- col-primary -->
 
           {{# colSecondary}}
-          <aside class="section__col-secondary">
-
+          <aside class="section__col-secondary" data-o-grid-col{{#sticky}} data-o-component="o-sticky"{{/sticky}}>
+            <div class="o-sticky-target" {{#sticky}} data-o-sticky-target{{/sticky}}>
             {{# figure}}
               {{> partials/figure}}
-            {{/ figure}}
-
+            {{/ figure}}  
+            </div>
           </aside>
           {{/ colSecondary}}   
 

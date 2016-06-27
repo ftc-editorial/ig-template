@@ -8,86 +8,100 @@ function logPages(pageName, pageNumber) {
 	}	
 }
 
+const Page = {
+	init: function(id, el) {
+		this.id = id;
+		this.el = el;
+		this.visible = false;
+		this.counter = 0;
+	},
+	setVisible: function (newValue) {
+		if (newValue !== this.visible) {
+			this.visible = newValue;
+			if (this.visible) {
+				this.counter += 1;
+				this.logPages('Page', this.id);
+			}
+		}
+	},
 
-const sections = document.querySelectorAll('.section__container');
-const height = window.innerHeight;
-var previousY = window.pageYOffset;
+	logPages: function(pageName, pageNumber) {
+		console.log(pageName + ': ' + pageNumber);
+		console.log('Logging page ' + this.id + ' for ' + this.counter + ' times');
+	}
+};
 
-const secInfo = [];
-for (let i = 0; i < sections.length; i++) {
-	const tmp = {
-		id: i + 1,
-		el: sections[i],
-		_visible: false,
-		counter: 0,
-		get visible() {
-			return this._visible;
-		},
-		set visible(newValue) {
-			if (newValue !== this._visible) {
-				this._visible = newValue;
-				if (this._visible) {
-					this.counter += 1;
-					this.logPages('News', this.id);
+function PageCounter(pageEls) {
+	const pageCounter = this;
+	const pageInstances = [];
+
+	function init() {
+		pageCounter.dir = 0;
+		pageCounter.lastY = window.pageYOffset;
+		pageCounter.winHeight = window.innerHeight;
+
+		for (let i = 0, len = pageEls.length; i < len; i++) {
+			const newPage = Object.create(Page);
+			newPage.init(i+1, pageEls[i]);
+			pageInstances.push(newPage);
+		}
+	
+		window.addEventListener('DOMContentLoaded', handleScroll);
+		window.addEventListener('resize', handleResize);
+		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('unload', function() {
+			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('resize', handleResize);
+		});
+	}
+
+	function handleResize() {
+		pageCounter.winHeight = window.innerHeight;
+	}
+
+	function handleScroll() {
+		const scrollY = window.pageYOffset;
+
+		if (scrollY > pageCounter.lastY) {
+			pageCounter.dir = 1;
+		} else if (scrollY < pageCounter.lastY) {
+			pageCounter.dir = -1;
+		}
+		pageCounter.lastY = scrollY;
+
+		pageInstances.forEach(function(page) {
+			const pageRect = page.el.getBoundingClientRect();
+			const top = pageRect.top;
+			const bottom = pageRect.bottom;
+
+			if (top >= pageCounter.winHeight) {
+				console.log(page.id + ': top below viewport.');
+				page.setVisible(false);
+			}
+
+			if (top > 0 && top < pageCounter.winHeight) {
+				console.log(page.id + ': top in viewport.');
+		// If user refreshed page and viewport spans two pages. Those two pages will both logged.
+				if (pageCounter.dir === 1 || pageCounter.dir === 0) {
+					page.setVisible(true);
 				}
 			}
-		},
-		logPages: function(pageName, pageNumber) {
-			console.log('Logged page: ' + pageName + ' ' + pageNumber);
-		}
-	};
 
-	secInfo.push(tmp);
-}
-
-window.addEventListener('scroll', function() {
-	var dir;
-	const currentY = window.pageYOffset;
-	const scrolled = currentY - previousY;
-	previousY = currentY;
-	if (scrolled > 0) {
-		dir = 1;
-	}
-
-	if (scrolled < 0) {
-		dir = -1;
-	}
-
-	for(let i = 0; i < secInfo.length; i++) {
-		const currentInfo = secInfo[i];
-		const rect = currentInfo.el.getBoundingClientRect();
-		const top = rect.top;
-		const bottom = rect.bottom;
-
-		if (top >= height) {
-			console.log(currentInfo.id + ': top below viewport.');
-			currentInfo.visible = false;	
-		}
-
-		if (top > 0 && top < height) {
-			console.log(currentInfo.id + ': top in viewport.');
-			if (dir === 1) {
-				currentInfo.visible = true;
-			}
-		}
-
-		if (top < 0 && bottom > height) {
-			console.log(currentInfo.id + ': top above; bottom below.');
-		}
-
-		if (bottom < height && bottom > 0) {
-			console.log(currentInfo.id + ': bottom in viewport.');
-			if (dir === -1) {
-				currentInfo.visible = true;
+			if (top < 0 && bottom > pageCounter.winHeight) {
+				console.log(page.id + ': top above; bottom below.');
 			}
 
-		}
+			if (bottom < pageCounter.winHeight && bottom > 0) {
+				console.log(page.id + ': bottom in viewport.');
+				if (pageCounter.dir === -1 || pageCounter.dir === 0) {
+					page.setVisible(true);
+				}
+			}
 
-		if (bottom < 0) {
-			console.log(currentInfo.id + ': bottom above.');
-			currentInfo.visible = false;
-		}
-
-		console.log(currentInfo);			
+			if (bottom < 0) {
+				console.log(page.id + ': bottom above.');
+				page.setVisible(false);
+			}
+		});
 	}	
-});
+}

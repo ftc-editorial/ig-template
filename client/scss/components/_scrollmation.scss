@@ -1,7 +1,6 @@
 .section__body[data-o-component="o-sticky"] {
   @include oColorsFor(ig-text-over-media, text);
 
-
   @include oGridRespondTo($until: M) {
     .section__fullspan-media {
       position: relative;
@@ -34,12 +33,27 @@
       background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, transparent);
       z-index: 2;
     }
-    .section__fullspan-media {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+    .section__fullspan-media {     
       z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+      &[aria-sticky="top"] {
+
+      }
+      &[aria-sticky="fixed"] {
+        position: fixed;
+        top: 0;
+      }
+      &[aria-sticky="bottom"] {
+        position: absolute;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
     }
     .section__body-container {
       padding-top: 450px;

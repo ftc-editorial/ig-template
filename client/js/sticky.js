@@ -6,6 +6,7 @@ const helper = require('./helper');
 // 	targetEl: HTMLElement,
 // 	debug: false
 // }
+const stickyTargetAttribute = '[data-o-sticky-target]';
 
 function Sticky(rootEl, config) {
 	const oSticky = this;
@@ -23,8 +24,9 @@ function Sticky(rootEl, config) {
 		} else if (!(rootEl instanceof HTMLElement)) {
 			rootEl = document.querySelector(rootEl);
 		}
+		oSticky.rootEl = rootEl;
 
-		oSticky.targetEl = rootEl.hasAttribute('aria-controls') ? rootEl.getAttribute('aria-controls') : '';
+		oSticky.targetEl = rootEl.hasAttribute('aria-controls') ? rootEl.getAttribute('aria-controls') : rootEl.querySelector(stickyTargetAttribute);
 
 
 		for (let prop in config) {
@@ -32,6 +34,7 @@ function Sticky(rootEl, config) {
 		}
 // If element to stick no exist, exit.
 		if (!oSticky.targetEl) {
+			console.log('Failed to find sticky-target under ' + oSticky.rootEl);
 			return;
 		}
 
@@ -49,7 +52,6 @@ function Sticky(rootEl, config) {
 			oSticky.endPoint = stickyRange.end;
 		}
 
-		oSticky.rootEl = rootEl;
 		oSticky.lastPosition = -1;
 		oSticky.lastHeight = -1;
 		loop();
