@@ -1,0 +1,16 @@
+<div class="lazyload__outer section__video-container" data-media-ratio="9/16">
+  <div class="lazyload__inner">
+    {{# cc}}
+    <script src="{{{src}}}" type="text/javascript"></script>
+    {{/ cc}}
+
+    {{# ft}}
+    <video class="section__video" preload="metadata" controls poster="{{{poster}}}">
+      {{# source}}
+      <source src="{{{src}}}" type="{{{type}}}">
+      {{/ source}}
+    </video>
+    {{/ ft}}
+
+  </div>
+</div>
