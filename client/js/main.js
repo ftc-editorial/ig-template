@@ -1,7 +1,12 @@
 const oShare = require('ftc-share');
-const oToggler = require('./toggler');
+const oToggle = require('./toggle');
+const oSticky = require('./sticky');
 oShare.init();
-oToggler.init();
+oToggle.init();
+const stickyInstances = oSticky.init();
+console.log(stickyInstances);
+
+
 
 
 

@@ -24,12 +24,13 @@ function Sticky(rootEl, config) {
 			rootEl = document.querySelector(rootEl);
 		}
 
-		oSticky.targetEl = rootEl.hasAttribute('aria-controls') ? rootEl.getAttribute('aria-controls') : null;
+		oSticky.targetEl = rootEl.hasAttribute('aria-controls') ? rootEl.getAttribute('aria-controls') : '';
+
 
 		for (let prop in config) {
 			oSticky[prop] = config[prop];
 		}
-
+// If element to stick no exist, exit.
 		if (!oSticky.targetEl) {
 			return;
 		}
@@ -120,6 +121,7 @@ Sticky.init = function(el, config) {
 	for (let i = 0; i < stickyEls.length; i++) {
 		StickyInstances.push(new Sticky(stickyEls[i], config));
 	}
+	console.log(StickyInstances);
 	return StickyInstances;
 }
 
