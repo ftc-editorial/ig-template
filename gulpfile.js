@@ -115,7 +115,7 @@ gulp.task('scripts', function() {
     debug: true,
     cache: {},
     packageCache: {},
-    transform: [debowerify, babelify],
+    transform: [babelify, debowerify],
     plugin: [watchify]
   });
 
