@@ -17,19 +17,18 @@
     @include igGridColWidth((12 - $ig-primary-col-width));
   }
   .o-sticky-target {
-    width: 100%;
+    padding-top: $o-header-height;
     &[aria-sticky="top"] {
       position: absolute;
-      top: $o-header-height;
+      top: 0;
     }
     &[aria-sticky="fixed"] {
       position: fixed;
-      top: $o-header-height;
-      width: calc(50% - 10px);
+      top: 0;
     }
     &[aria-sticky="bottom"] {
       position: absolute;
-      bottom: $o-header-height;
+      bottom: 0;
 
     }
   }

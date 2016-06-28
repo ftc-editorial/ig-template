@@ -103,5 +103,8 @@ function PageCounter(pageEls) {
 				page.setVisible(false);
 			}
 		});
-	}	
+	}
+	init();	
 }
+
+module.exports = PageCounter;

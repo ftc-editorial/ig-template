@@ -1,55 +1,79 @@
-const offset = 0;
 function Sticky (rootEl) {
-	const oSticky = this;
 
-	function init() {
-		if (!rootEl) {
-			rootEl = document.body;
-		} else if (!(rootEl instanceof HTMLElement)) {
-			rootEl = document.querySelector(rootEl);
+	if (!rootEl) {
+		rootEl = document.body;
+	} else if (!(rootEl instanceof HTMLElement)) {
+		rootEl = document.querySelector(rootEl);
+	}
+	this.rootEl = rootEl;
+
+	const targetEl = rootEl.querySelector('[data-o-sticky-target]');
+	targetEl.style.width = rootEl.offsetWidth + 'px';
+	this.targetEl = targetEl;
+
+	const rootRect = rootEl.getBoundingClientRect();
+
+	this.start = rootRect.top;
+	this.end = rootRect.bottom - targetEl.offsetHeight;
+
+}
+
+Sticky.init = function(el, config) {
+	const stickyInstances = [];
+
+	if (!el && !config) {
+		el = document.body;
+		config = {offset: 0};
+	} else if (!config) {
+		if (!(el instanceof HTMLElement)) {
+			if (typeof el === 'string') {
+				el = document.querySelector(el);
+			} else {
+				config = el;
+				el = document.body;
+			}
 		}
+	}
 
-		oSticky.rootEl = rootEl;
-		oSticky.targetEl = rootEl.querySelector('[data-o-sticky-target]');
-		
-		oSticky.targetEl.style.width = rootEl.offsetWidth + 'px';
+	const stickyEls = el.querySelectorAll('[data-o-component=o-sticky]');
 
-		const rootRect = rootEl.getBoundingClientRect();
-		oSticky.start = rootRect.top;
+	for (let i = 0, len = stickyEls.length; i < len; i++) {
+		stickyInstances.push(new Sticky(stickyEls[i]));
+	}
 
-		// const targetRect = oSticky.targetEl.getBoundingClientRect();
-		oSticky.end = rootRect.bottom - oSticky.targetEl.offsetHeight;
 
-		window.addEventListener('DOMContentLoaded', handleScroll);
-		window.addEventListener('scroll', handleScroll);
-		window.addEventListener('resize', function() {
-			oSticky.targetEl.style.width = rootEl.offsetWidth + 'px';
+	window.addEventListener('DOMContentLoaded', handleScroll);
+	window.addEventListener('scroll', handleScroll);
+	window.addEventListener('resize', handleResize);
+
+	return stickyInstances;
+
+	function handleResize() {
+		stickyInstances.forEach(function(sticky) {
+			sticky.targetEl.style.width = sticky.rootEl.offsetWidth + 'px';
 		});
 	}
 
 	function handleScroll() {
-		const rootRect = rootEl.getBoundingClientRect();
-		oSticky.start = rootRect.top;
 
-		// const targetRect = oSticky.targetEl.getBoundingClientRect();
-		oSticky.end = rootRect.bottom - oSticky.targetEl.offsetHeight;
+		stickyInstances.forEach(function(sticky) {
+			const rootRect = sticky.rootEl.getBoundingClientRect();
+			sticky.start = rootRect.top;
+			sticky.end = rootRect.bottom - sticky.targetEl.offsetHeight;
 
+			if (sticky.start > config.offset) {
+				sticky.targetEl.setAttribute('aria-sticky', 'top');
+			}
 
-		if (oSticky.start > offset) {
-			oSticky.targetEl.setAttribute('aria-sticky', 'top');
-		}
+			if (sticky.start < config.offset && sticky.end > config.offset) {
+				sticky.targetEl.setAttribute('aria-sticky', 'fixed');
+			}
 
-		if (oSticky.start < offset && oSticky.end > offset) {
-			oSticky.targetEl.setAttribute('aria-sticky', 'fixed');
-		}
-
-		if (oSticky.end < offset) {
-			oSticky.targetEl.setAttribute('aria-sticky', 'bottom');
-		}
+			if (sticky.end < config.offset) {
+				sticky.targetEl.setAttribute('aria-sticky', 'bottom');
+			}
+		});
 	}
-
-	init();
 }
 
-const sticky = new Sticky('.red');
-console.log(sticky);
+module.exports = Sticky;
