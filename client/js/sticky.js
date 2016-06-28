@@ -58,17 +58,21 @@ class Sticky {
 
 		this.handleResize();
 		this.handleScroll();
-
+		this.addEvent();
 		// window.addEventListener('DOMContentLoaded', this.handleScroll);
+	}
+
+	addEvent() {
 		window.addEventListener('scroll', this.handleScroll);
 		window.addEventListener('resize', this.handleResize);
 		window.addEventListener('unload', function() {
-
+			window.removeEventListener('scroll', this.handleScroll);
+			window.removeEventListener('resize', this.handleResize);
 		});
 	}
 
 	handleScroll() {
-		this.stikcys.forEach(function(sticky) {
+		this.stickys.forEach(function(sticky) {
 
 			const rootRect = sticky.rootEl.getBoundingClientRect();
 			sticky.start = rootRect.top;
@@ -95,5 +99,4 @@ class Sticky {
 	}
 }
 
-
-export default Sticky;
+module.exports = Sticky;

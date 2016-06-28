@@ -36,6 +36,10 @@ function PageCounter(pageEls) {
 	const pageInstances = [];
 
 	function init() {
+		if (typeof pageEls === 'string') {
+			pageEls = document.querySelectorAll(pageEls);
+		}
+
 		pageCounter.dir = 0;
 		pageCounter.lastY = window.pageYOffset;
 		pageCounter.winHeight = window.innerHeight;
@@ -45,21 +49,28 @@ function PageCounter(pageEls) {
 			newPage.init(i+1, pageEls[i]);
 			pageInstances.push(newPage);
 		}
-	
-		window.addEventListener('DOMContentLoaded', handleScroll);
+
+		addEvent();
+	}
+
+	function addEvent() {
+// Brwosers will automatically scrolle to previous position after refreshed and fire `scroll`.	
+		// window.addEventListener('DOMContentLoaded', handleScroll);
 		window.addEventListener('resize', handleResize);
 		window.addEventListener('scroll', handleScroll);
 		window.addEventListener('unload', function() {
 			window.removeEventListener('scroll', handleScroll);
 			window.removeEventListener('resize', handleResize);
-		});
+		});		
 	}
 
-	function handleResize() {
+	function handleResize(e) {
+		console.log(e.type)
 		pageCounter.winHeight = window.innerHeight;
 	}
 
-	function handleScroll() {
+	function handleScroll(e) {
+		console.log(e.type);
 		const scrollY = window.pageYOffset;
 
 		if (scrollY > pageCounter.lastY) {
