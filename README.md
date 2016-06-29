@@ -16,7 +16,9 @@ These gulp tasks will combine json data with mustache templates to build a stati
 
 To preview this project with default data (in the `model/example.json` file), simple run `gulp serve` or `gulp build`. You do not need to pass any arguments here.
 
-After running `gulp build`, you can run `gulp deploy` to go to server. NO arguments here.
+After running `gulp build`, you can run `gulp deploy` to server.
+
+NOTE: `gulp deploy` do not need any arguments.
 
 ## Data
 
