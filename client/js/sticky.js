@@ -1,22 +1,36 @@
+const helper = require('./helper');
 const defaultRootAttribute = '[data-o-component=o-sticky]';
 const defaultTargetAttribute = '[data-o-sticky-target]';
 
-function stickyElsAndTransitionPoints (el, config) {
+const StickyWidget = {
+	init: function(rootEl, config) {
+		const rootRect = rootEl.getBoundingClientRect();
+
+		this.rootEl = rootEl;
+		this.targetEl = rootEl.querySelector(config.targetSelector);
+
+		this.start = rootRect.top;
+		this.end = rootRect.bottom - this.targetEl.offsetHeight
+		this.state = 'top';
+	},
+
+	setState: function(newState) {
+		if (newState !== this.state) {
+			this.state = newState;
+			this.targetEl.setAttribute('aria-sticky', newState);
+		}
+	}
+};
+
+function generateStickyWidgets (el, config) {
 	const tmp = [];
 	const rootEls = el.querySelectorAll(config.rootSelector);
 
 	for (let i = 0, len = rootEls.length; i < len; i++) {
 		const rootEl = rootEls[i];
-
-		const targetEl = rootEl.querySelector(config.targetSelector);
-		const rootRect = rootEl.getBoundingClientRect();
-
-		tmp.push({
-			rootEl: rootEl,
-			targetEl: targetEl,
-			start: rootRect.top,
-			end: rootRect.bottom - targetEl.offsetHeight
-		});
+		const stickyWidget = Object.create(StickyWidget);
+		stickyWidget.init(rootEls[i], config);
+		tmp.push(stickyWidget)
 	}
 	return tmp;
 }
@@ -30,7 +44,7 @@ class Sticky {
 	constructor(el, config) {
 		if (!el && !config) {
 			el = document.body;
-			config = {offset: 0};
+			config = {};
 		} else if (!config) {
 			if (!(el instanceof HTMLElement)) {
 				if (typeof el === 'string') {
@@ -42,16 +56,14 @@ class Sticky {
 			}
 		}
 
-		if (!config.rootSelector) {
-			config.rootSelector = defaultRootAttribute;
-		}
+		config = helper.merge(config, {
+			offset: 0,
+			rootSelector: defaultRootAttribute,
+			targetSelector: defaultTargetAttribute
+		});
 
-		if (!config.targetSelector) {
-			config.targetSelector = defaultTargetAttribute;
-		}
-	
 		this.offset = config.offset;
-		this.stickys = stickyElsAndTransitionPoints(el, config);
+		this.stickys = generateStickyWidgets(el, config);
 
 		this.handleScroll = this.handleScroll.bind(this);
 		this.handleResize = this.handleResize.bind(this);
@@ -79,16 +91,18 @@ class Sticky {
 			sticky.end = rootRect.bottom - sticky.targetEl.offsetHeight;
 
 			if (sticky.start > this.offset) {
-				sticky.targetEl.setAttribute('aria-sticky', 'top');
+				sticky.setState('top');
 			}
 
 			if (sticky.start < this.offset && sticky.end > this.offset) {
-				sticky.targetEl.setAttribute('aria-sticky', 'fixed');
+				sticky.setState('fixed');
 			}
 
 			if (sticky.end < this.offset) {
-				sticky.targetEl.setAttribute('aria-sticky', 'bottom');
+				sticky.setState('bottom');
 			}
+			// console.log(sticky);
+
 		}, this);
 	}
 
