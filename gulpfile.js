@@ -34,6 +34,7 @@ function readFilePromisified(filename) {
     function(resolve, reject) {
       fs.readFile(filename, 'utf8', function(err, data) {
         if (err) {
+          console.log('Cannot find file: ' + filename);
           reject(err);
         } else {
           resolve(data);
@@ -77,7 +78,7 @@ gulp.task(function mustache() {
         .pipe(browserSync.stream({once: true}));
     })
     .catch(function(error) {
-      console.log(error);
+      throw error;
     });
 });
 
