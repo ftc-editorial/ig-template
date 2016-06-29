@@ -1,5 +1,5 @@
 {{# sections}}
-  <section class="section__container" id="nav-index-{{sectionId}}">
+  <section class="section__container" id="section-{{sectionId}}">
 
     <div class="section__head">
 
@@ -58,11 +58,13 @@
 
           {{# colSecondary}}
           <aside class="section__col-secondary" data-o-grid-col{{#sticky}} data-o-component="o-sticky"{{/sticky}}>
+
             <div class="o-sticky-target" {{#sticky}} data-o-sticky-target{{/sticky}}>
             {{# figure}}
               {{> partials/figure}}
             {{/ figure}}  
             </div>
+            
           </aside>
           {{/ colSecondary}}   
 
