@@ -12,6 +12,8 @@ const babelify = require('babelify');
 const cssnext = require('postcss-cssnext');
 const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
+const webpack = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 process.env.NODE_ENV = 'development';
 
 const config = require('./config.json');
@@ -111,6 +113,19 @@ gulp.task('styles', function styles() {
 });
 
 gulp.task('scripts', function() {
+  if (process.env.NODE_ENV === 'production') {
+    webpackConfig.watch = false;
+  }
+  
+  console.log(webpackConfig);
+  return gulp.src('client/js/main.js')
+    .pipe(webpack(webpackConfig))
+    .pipe($.sourcemaps.init({loadMaps: true}))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest('.tmp'));
+});
+
+gulp.task('scripts', function() {
   const b = browserify({
     entries: 'client/js/main.js',
     debug: true,
@@ -166,26 +181,6 @@ gulp.task('js', function() {
     .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(DEST));
-});
-
-gulp.task('lint', function() {
-  return gulp.src('client/**/*.js')
-    .pipe($.eslint({
-        extends: 'eslint:recommended',
-        globals: {
-          'd3': true,
-          'ga': true,
-          'fa': true
-        },
-        rules: {
-          semi: [2, "always"]
-        },
-        envs: [
-          'browser'
-        ]
-    }))
-    .pipe($.eslint.format())
-    .pipe($.eslint.failAfterError());  
 });
 
 gulp.task('serve', 
