@@ -110,7 +110,6 @@ gulp.task('scripts', function() {
     webpackConfig.watch = false;
   }
   
-  console.log(webpackConfig);
   return gulp.src('client/js/main.js')
     .pipe(webpack(webpackConfig))
     .pipe($.sourcemaps.init({loadMaps: true}))
