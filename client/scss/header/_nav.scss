@@ -94,6 +94,13 @@
 .o-header__nav-item {
 	line-height: 34px;
 	border-bottom: 1px dotted oColorsGetColorFor(o-header-divider, border);
+	&:last-child {
+		border-bottom: 0;
+	}
+
+	.o-header__edition {
+		display: block;
+	}
 
 	@include oGridRespondTo(M) {
 		margin-left: 0;
