@@ -82,4 +82,4 @@ Toggle.init = function(el) {
   return toggleInstances;
 }
 
-module.exports = Toggle;
+export default Toggle;

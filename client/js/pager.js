@@ -124,4 +124,4 @@ function PageCounter(pageEls) {
 	init();	
 }
 
-module.exports = PageCounter;
+export default PageCounter;

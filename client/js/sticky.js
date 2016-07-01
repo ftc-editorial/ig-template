@@ -113,4 +113,4 @@ class Sticky {
 	}
 }
 
-module.exports = Sticky;
+export default Sticky;
