@@ -1,9 +1,6 @@
 const Share = require('ftc-share');
-// const oToggle = require('./toggle');
 import Toggle from './toggle';
-// const Sticky = require('./sticky');
 import Sticky from './sticky';
-// const PageCounter = require('./pager');
 import PageCounter from './pager';
 Share.init();
 Toggle.init();
