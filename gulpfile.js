@@ -6,7 +6,7 @@ const del = require('del');
 const cssnext = require('postcss-cssnext');
 const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
-const webpack = require('webpack-stream');
+const webpackStream = require('webpack-stream');
 const merge = require('merge-stream');
 const webpackConfig = require('./webpack.config.js');
 process.env.NODE_ENV = 'development';
@@ -111,11 +111,16 @@ gulp.task('scripts', function() {
   }
   
   return gulp.src('client/js/main.js')
-    .pipe(webpack(webpackConfig))
-    .pipe($.sourcemaps.init({loadMaps: true}))
-    .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest(DEST))
-    .pipe(browserSync.stream({once:true}));
+    .pipe(webpackStream(webpackConfig, null, function(err, stats) {
+      $.util.log(stats.toString({
+          colors: $.util.colors.supportsColor,
+          chunks: false,
+          hash: false,
+          version: false
+      }));
+      browserSync.reload();
+    }))
+    .pipe(gulp.dest(DEST));
 });
 
 
