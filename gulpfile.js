@@ -72,7 +72,8 @@ gulp.task('mustache', function () {
       gzip: true,
       showFiles: true
     })) 
-    .pipe(gulp.dest(DEST));
+    .pipe(gulp.dest(DEST))
+    .pipe(browserSync.stream({once:true}));
 });
 
 gulp.task('styles', function styles() {
@@ -100,7 +101,7 @@ gulp.task('styles', function styles() {
     }))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest(DEST))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({once:true}));
 });
 
 gulp.task('scripts', function() {
@@ -120,6 +121,7 @@ gulp.task('scripts', function() {
       }));
       browserSync.reload();
     }))
+    .on('error', $.util.log) 
     .pipe(gulp.dest(DEST));
 });
 
