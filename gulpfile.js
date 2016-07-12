@@ -22,8 +22,8 @@ const knownOptions = {
 const argv = minimist(process.argv.slice(2), knownOptions);
 
 const taskName = argv._[0];
-const articleDataFile = path.resolve(__dirname, 'model', argv.i);
-const footerDataFile = path.resolve(__dirname, 'model/footer.json');
+const articleDataFile = path.resolve(__dirname, 'data', argv.i);
+const footerDataFile = path.resolve(__dirname, 'data', 'footer.json');
 const projectName = path.basename(argv.i, '.json');
 
 function readFilePromisified(filename) {
@@ -142,7 +142,7 @@ gulp.task('serve',
 
     gulp.watch('client/**/*.{csv,svg,png,jpg}', browserSync.reload);
     gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
-    gulp.watch(['views/**/**/*.mustache', 'model/*.json'], gulp.parallel('mustache'));
+    gulp.watch(['views/**/**/*.mustache', 'data/*.json'], gulp.parallel('mustache'));
     //gulp.watch('client/**/*.js', gulp.parallel('lint'));
   })
 );
@@ -314,7 +314,7 @@ gulp.task('watch:demos',
     gulp.watch('client/**/*.{csv,svg,png,jpg}', browserSync.reload);
     gulp.watch('client/**/**/*.scss', gulp.parallel('styles'));
     gulp.watch('demos/*.html', gulp.parallel('copy:demos'));
-    gulp.watch(['views/**/*.mustache', 'model/*.json', 'demos/*.mustache'], gulp.parallel('mustache:demos'));
+    gulp.watch(['views/**/*.mustache', 'data/*.json', 'demos/*.mustache'], gulp.parallel('mustache:demos'));
     //gulp.watch('client/**/*.js', gulp.parallel('lint'));
   })
 );
