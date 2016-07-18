@@ -6,9 +6,13 @@ const del = require('del');
 const cssnext = require('postcss-cssnext');
 const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
-const webpackStream = require('webpack-stream');
 const merge = require('merge-stream');
-const webpackConfig = require('./webpack.config.js');
+const rollup = require('rollup').rollup;
+const buble = require('rollup-plugin-buble');
+const bowerResolve = require('rollup-plugin-bower-resolve');
+
+var cache;
+
 process.env.NODE_ENV = 'development';
 
 const config = require('./config.json');
@@ -104,31 +108,32 @@ gulp.task('styles', function styles() {
     .pipe(browserSync.stream({once:true}));
 });
 
-gulp.task('scripts', function() {
-  const DEST = '.tmp/scripts/';
+gulp.task('rollup', () => {
+  return rollup({
+    entry: 'client/js/main.js',
+    plugins: [
+      bowerResolve(),
+      buble()
+    ],
+    cache: cache,
+  }).then(function(bundle) {
+    cache = bundle;
 
-  if (process.env.NODE_ENV === 'production') {
-    webpackConfig.watch = false;
-  }
-  
-  return gulp.src('client/js/main.js')
-    .pipe(webpackStream(webpackConfig, null, function(err, stats) {
-      $.util.log(stats.toString({
-          colors: $.util.colors.supportsColor,
-          chunks: false,
-          hash: false,
-          version: false
-      }));
-      browserSync.reload();
-    }))
-    .on('error', $.util.log) 
-    .pipe(gulp.dest(DEST));
+    return bundle.write({
+      format: 'iife',
+      // moduleName: 'Share',
+      // moduleId: 'ftc-share',
+      dest: '.tmp/scripts/bundle.js',
+      sourceMap: true,
+    }).then(function() {
+      browserSync.reload('bundle.js');
+    });
+  });
 });
-
 
 gulp.task('serve', 
   gulp.parallel(
-    'mustache', 'styles', 'scripts', 
+    'mustache', 'styles', 'rollup', 
 
     function serve() {
     browserSync.init({
@@ -143,7 +148,7 @@ gulp.task('serve',
     gulp.watch('client/**/*.{csv,svg,png,jpg}', browserSync.reload);
     gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
     gulp.watch(['views/**/**/*.mustache', 'data/*.json'], gulp.parallel('mustache'));
-    //gulp.watch('client/**/*.js', gulp.parallel('lint'));
+    gulp.watch('client/**/*.js', gulp.parallel('rollup'));
   })
 );
 
@@ -209,7 +214,7 @@ gulp.task('prod', function() {
     });
 });
 
-gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'scripts', 'images', 'extras'), 'html', 'dev'));
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'html', 'dev'));
 
 
 /**********deploy***********/
@@ -297,10 +302,10 @@ gulp.task('copy:demos', function() {
     .pipe(browserSync.stream({once: true}));
 });
 
-gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'scripts', 'images', 'extras'));
+gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'rollup', 'images', 'extras'));
 
 gulp.task('watch:demos', 
-  gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'scripts',
+  gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'rollup',
     function serve() {
     browserSync.init({
       server: {
@@ -315,7 +320,7 @@ gulp.task('watch:demos',
     gulp.watch('client/**/**/*.scss', gulp.parallel('styles'));
     gulp.watch('demos/*.html', gulp.parallel('copy:demos'));
     gulp.watch(['views/**/*.mustache', 'data/*.json', 'demos/*.mustache'], gulp.parallel('mustache:demos'));
-    //gulp.watch('client/**/*.js', gulp.parallel('lint'));
+    gulp.watch('client/**/*.js', gulp.parallel('rollup'));
   })
 );
 
@@ -332,7 +337,10 @@ gulp.task('demos', gulp.series('clean', 'build:demos', function(){
 // const debowerify = require('debowerify');
 // const babelify = require('babelify');
 // Browerify task deprecated.
-/*gulp.task('scripts', function() {
+/*
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
+gulp.task('scripts', function() {
   const b = browserify({
     entries: 'client/js/main.js',
     debug: true,
@@ -365,4 +373,26 @@ gulp.task('demos', gulp.series('clean', 'build:demos', function(){
       .pipe(gulp.dest('.tmp/scripts'))
       .pipe(browserSync.stream({once:true}));
   }
-});*/
+});
+
+gulp.task('scripts', function() {
+  const DEST = '.tmp/scripts/';
+
+  if (process.env.NODE_ENV === 'production') {
+    webpackConfig.watch = false;
+  }
+  
+  return gulp.src('client/js/main.js')
+    .pipe(webpackStream(webpackConfig, null, function(err, stats) {
+      $.util.log(stats.toString({
+          colors: $.util.colors.supportsColor,
+          chunks: false,
+          hash: false,
+          version: false
+      }));
+      browserSync.reload();
+    }))
+    .on('error', $.util.log) 
+    .pipe(gulp.dest(DEST));
+});
+*/
