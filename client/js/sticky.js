@@ -1,4 +1,5 @@
-const helper = require('./helper');
+import * as helper from './helper';
+
 const defaultRootAttribute = '[data-o-component=o-sticky]';
 const defaultTargetAttribute = '[data-o-sticky-target]';
 

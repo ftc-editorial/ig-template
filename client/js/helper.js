@@ -39,9 +39,10 @@ function merge(o, p) {
 	return o;
 }
 
-module.exports = {
-	getPageOffset: getPageOffset,
-	getElementCoords: getElementCoords,
-	getElementSize: getElementSize,
-	merge: merge
-};
+export {getPageOffset, getElementCoords, getElementSize, merge};
+// module.exports = {
+// 	getPageOffset: getPageOffset,
+// 	getElementCoords: getElementCoords,
+// 	getElementSize: getElementSize,
+// 	merge: merge
+// };

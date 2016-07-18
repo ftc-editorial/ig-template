@@ -1,4 +1,5 @@
-const Share = require('ftc-share');
+// const Share = require('ftc-share');
+import Share from 'ftc-share';
 import Toggle from './toggle';
 import Sticky from './sticky';
 import PageCounter from './pager';
