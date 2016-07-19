@@ -28,6 +28,99 @@ Data saved in `json` format in `model/your-project-name.json` folder.
 
 To use the 'light' theme, add `theme:true,` as the first entry in you json file.
 
+## Data Structure
+### Fields in JSON
+- `lightTheme`: <true | false>, // Use the light theme or not.
+- `darkTheme`: <true | false>, // Use the dark theme or not. `lightTheme` and `darkTheme` should be mutually exclusive.
+- `enableScroll`: <true | false>, // Enable / disable scrolling effect.
+
+- `articleCover` <object>. Its first level has a single entry whose key could be one of `cc`, `ft` or `picture` depending on the type of media.
+```
+"articleCover": {
+	"picture": {
+		"source": <Array>, // one or more object
+		"src": <String> // image tag's src url.
+	}
+	// or
+	"ft": {
+		"poster": <String>, // the value of `poster` attribute for `<video>` tag.
+		"source": <Array> // difffernt format for `<video>`'s `<source>`
+	}
+	// or
+	"cc": {
+		"src": <string>. // url by cc video.
+	}
+}
+```
+`source` entry for `picture`:
+```
+"source": [
+	{
+		"landscape": <true | false>, // if `true`, output `media="(min-aspect-ratio: 1/1)"`
+		"portrait": <true | false>, // if `true`, output `media="(max-aspect-ratio: 1/1)"`
+		"srcset": [
+			"images/sapienza_new-lr_cycwhld.jpg 1100w,", // trailing `1100w` indicate above which size the image will be used. Omitted for default.
+			"images/sapienza_new-mr_osvv1bn.jpg 1500w,",
+			"images/sapienza_new-hr_f0hbatq.jpg"
+		]
+	}
+]
+```
+
+Corresponding HTML:
+```
+<picture>
+	<source media="(min-aspect-ratio: 1/1)" srcset="">
+	<source media="(max-aspect-ratio: 1/1)" srcset="">
+	<img src="">
+</picture>
+```
+
+`source` entry for `ft`
+```
+"source": [
+	{
+		"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
+		"type": "mp4" // for the `<source>` tag's `type` attribute.
+	},
+	{
+		"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
+		"type": "webm"
+	}
+]
+```
+Correponding HTML:
+```
+ <video poster="{{poster}}">
+    <source src="https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4" type="video/mp4">
+    <source src="https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm" type="video/webm">
+</video>          
+```
+`sectionCover`, `fullspanMedia` use the same teamplate as this one.
+
+- `figure` <object>
+`<figure>` element in a paragraph.
+```
+"figure": {
+	"mobileOnly": <true | false>, 
+	// whether the image is visible only on mobile devices.
+
+	"ratio": "", 
+	// image's width/height ratio, e.g, `7/5`. Omit it if you do not have wired dimensions.
+
+	"hasLink": {
+		"href": "https://www.ft.com/land"
+	}, 
+	// whehter the image is clickable or not. Omit it or leave it empty if you do not want to jump away.
+
+	"imgSrc": "./images/new_logo.png",
+	
+	"caption": <String> 
+	// Caption for the image.
+}
+```
+
+
 ## Polyfills needed
 
 - `object-fit`
