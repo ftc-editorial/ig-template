@@ -1,5 +1,6 @@
 {	
 	"lightTheme": false,
+	"darkTheme": true,
 	"enableScroll": true,
 	"assetsPath": "/bower_components/ftc-icons/",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
@@ -40,16 +41,16 @@
 					]
 				}
 			],
-			"image": "images/sapienza_new-mr_osvv1bn.jpg"	
+			"src": "images/sapienza_new-mr_osvv1bn.jpg"	
 		}
 	},
 	"sections": [
 		{
-			"sectionId":"1",
+			"id":"1",
 			"title": "1. 失去的土地",
 			"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 			"sectionCover": {
-				"video": {
+				"ft": {
 					"poster": "./images/mpv-shot0001.jpg",
 					"source": [
 						{
@@ -74,6 +75,7 @@
 						{
 							"figure": {
 								"mobileOnly": true,
+								"ratio": "",
 								"hasLink": {
 									"href": "https://www.ft.com/land"
 								},
@@ -100,7 +102,7 @@
 				},
 				{
 					"fullspanMedia": {
-						"video": {
+						"ft": {
 							"poster": "./images/mpv-shot0002.jpg",
 							"source": [
 								{
@@ -161,12 +163,12 @@
 			}
 		},
 		{
-			"sectionId": 2,
+			"id": 2,
 			"title": "2. 抱负",
 			"subTitle": "",
 			"sectionCover": {
 				"picture": {
-					"source": {
+					"source": [{
 						"landscape": false,
 						"portrait": false,
 						"srcset": [
@@ -174,8 +176,8 @@
 							"./images/2560_getty_-factory-in-yangon-mr.jpg 1500w,",
 							"./images/2560_getty_-factory-in-yangon-hr.jpg"
 						]
-					},
-					"image": "./images/2560_getty_-factory-in-yangon-mr.jpg"
+					}],
+					"src": "./images/2560_getty_-factory-in-yangon-mr.jpg"
 				}				
 			},
 			"sectionBody": [
@@ -232,10 +234,10 @@
 			}
 		},
 		{
-			"sectionId": 3,
+			"id": 3,
 			"title": "3. 村庄",
 			"sectionCover": {
-				"video": {
+				"ft": {
 					"poster": "images/2560_beach_football_backup-mr_4rt5h4b.jpg",
 					"source": [
 						{
@@ -254,7 +256,8 @@
 					"fullspanMedia": {
 						"sticky": true,
 						"picture": {
-							"image": "images/oil_buildings-mr_l0sccsl.jpg"
+							"source": [],
+							"src": "images/oil_buildings-mr_l0sccsl.jpg"
 						}
 					},
 					"colPrimary": [
@@ -341,18 +344,22 @@
 			]
 		},
 		{
-			"sectionId": 4,
+			"id": 4,
 			"title": "4. 导火索",
 			"subTitle": "任何一个购买土地的人都有可能发现自己陷入纠纷”",
 			"sectionCover": {
 				"picture": {
-					"srcset": [
-						"./images/conflict-lr.jpg 1100w,",
-                		"./images/conflict-mr.jpg 1500w,",
-                		"./images/conflict-hr.jpg"
-					]
-				},
-				"image": "images/conflict-mr.jpg"
+					"source": [{
+						"landscape": false,
+						"portrait": false,
+						"srcset": [
+							"./images/conflict-lr.jpg 1100w,",
+	        		"./images/conflict-mr.jpg 1500w,",
+	        		"./images/conflict-hr.jpg"
+						]							
+					}],
+					"src": "images/conflict-mr.jpg"
+				}
 			},
 			"sectionBody": [
 				{
@@ -398,18 +405,22 @@
 			]
 		},
 		{
-			"sectionId": 5,
+			"id": 5,
 			"title": "5. 赢家和输家",
 			"subTitle": "‘自从他们夺走了我们所有的土地，我们农民能做的只有哭’",
 			"sectionCover": {
 				"picture": {
-					"srcset": [
-						"images/this_famer_2-lr.jpg 1100w,",
-						"images/this_famer_2-mr.jpg 1500w,",
-						"images/this_famer_2-hr.jpg"
-					]
-				},
-				"image": "images/this_famer_2-mr.jpg"
+					"source": [{
+						"landscape": false,
+						"portrait": false,
+						"srcset": [
+							"images/this_famer_2-lr.jpg 1100w,",
+							"images/this_famer_2-mr.jpg 1500w,",
+							"images/this_famer_2-hr.jpg"
+						]						
+					}],
+					"src": "images/this_famer_2-mr.jpg"
+				}
 			},
 			"sectionBody": [
 				{
@@ -443,7 +454,8 @@
 					"fullspanMedia": {
 						"sticky": true,
 						"picture": {
-							"image": "images/tighter_maw-mr_6cqlaxv.jpg"
+							"source": [],
+							"src": "images/tighter_maw-mr_6cqlaxv.jpg"
 						}
 					},
 					"colPrimary": [
@@ -476,7 +488,7 @@
 				},
 				{
 					"fullspanMedia": {
-						"ccVideo": {
+						"cc": {
 							"src": "http://p.bokecc.com/player?vid=3911C434C7B707389C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
 						}
 					}
