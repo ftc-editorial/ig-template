@@ -79,7 +79,8 @@
 								"hasLink": {
 									"href": "https://www.ft.com/land"
 								},
-								"imgSrc": "./images/new_logo.png"
+								"imgSrc": "./images/new_logo.png",
+								"caption": ""
 							}
 						},
 						{
@@ -93,10 +94,9 @@
 					"colSecondary": {
 						"sticky": true,
 						"figure": {
-							"hasLink": {
-								"href": "https://www.ft.com/land"
-							},
-							"imgSrc": "./images/new_logo.png"
+							"link": "https://www.ft.com/land",
+							"imgSrc": "./images/new_logo.png",
+							"caption": ""
 						}
 					}					
 				},
@@ -126,9 +126,7 @@
 						},
 						{
 							"readMore": {
-								"hasLink": {
-									"href": "https://www.ft.com/land"
-								},
+								"link": "https://www.ft.com/land",
 								"imgSrc": "./images/landrush_xref.png",
 								"title": "阅读更多",
 								"items": [
@@ -205,7 +203,8 @@
 						{
 							"figure": {
 								"mobileOnly": true,
-								"imgSrc": "./images/myanmarnumbers.png"
+								"imgSrc": "./images/myanmarnumbers.png",
+								"caption": ""
 							}
 						},
 						{
@@ -219,10 +218,12 @@
 						"sticky": true,
 						"figure":  [
 							{
-								"imgSrc": "./images/myanmarnumbers.png"	
+								"imgSrc": "./images/myanmarnumbers.png",
+								"caption": ""
 							},
 							{
-								"imgSrc": "./images/myan_num_36c.png"
+								"imgSrc": "./images/myan_num_36c.png",
+								"caption": ""
 							}
 						]
 					}				
@@ -354,8 +355,8 @@
 						"portrait": false,
 						"srcset": [
 							"./images/conflict-lr.jpg 1100w,",
-	        		"./images/conflict-mr.jpg 1500w,",
-	        		"./images/conflict-hr.jpg"
+	        				"./images/conflict-mr.jpg 1500w,",
+	        				"./images/conflict-hr.jpg"
 						]							
 					}],
 					"src": "images/conflict-mr.jpg"
@@ -510,7 +511,7 @@
 			"中文网制作：史书华、倪卫国"
 		],
 		"creditsCover": {
-			"video": {
+			"ft": {
 				"poster": "./images/boat-blinkie-backup-mr.jpg",
 				"source": [
 					{
