@@ -28,7 +28,7 @@
       </div>
 
       <nav class="o-header__right" data-o-component="o-toggle">
-        <div class="o-share{{^ lightTheme}} o-share--dark{{/ lightTheme}}" data-o-component="o-share"></div>
+        <div class="o-share{{# darkTheme}} o-share--dark{{/ darkTheme}}" data-o-component="o-share"></div>
 
         <button class="o-header__nav-toggle" data-o-toggle-button aria-controls=".o-header__nav">
           <span>目录</span>
@@ -47,7 +47,7 @@
 
           {{# sections}}
           <li class="o-header__nav-item">
-            <a class="o-header__nav-link" href="#section-{{sectionId}}">{{title}}</a>
+            <a class="o-header__nav-link" href="#section-{{id}}">{{title}}</a>
           </li>
           {{/ sections}}
 
