@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/bower_components/ftc-icons/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <title>Interactive Graphics Generator</title>
+</head>
+
+<body>
+<h1>Interactive Graphics Generator</h1>
+<div class="toolset">
+  <h2>Toolset</h2>
+  <button class="">Add Cover</button>
+  <button>Add A Section</button>
+</div>
+
+<div class="workbench">
+  <h2>Workbench</h2>
+  <div class="meta-data">
+  	<h3>Add Meta Data</h3>
+  	<form action="/meta" method="post">
+      <div>
+        <label for="meta-description">Description</label><input id="meta-description" type="text" name="description">
+      </div>
+  		<div>
+        <label for="og-title">OG Title</label><input id="og-title" type="text" name="ogTitle">
+      </div>
+  		<div>
+        <span>OG Type: </span>
+        <input id="og-type__article" type="radio" name="ogType" checked><label for="og-type__article">article</label>
+      </div>
+  		<div>
+        <label for="title">Title</label><input id="title" type="text" name="title">
+      </div>
+      <button type="submit" name="submit">Save</button>
+  	</form>
+  </div>
+
+  <div class="o-header">
+  	<h3>Header</h3>
+    <form action="/o-header" method="post">
+      <div>
+        <label for="series-title">Series title:</label><input id="series-title" type="text" name="seriesTitle">
+      </div>
+      <div>
+        <span>Alternative Version:</span>
+        <input id="en-text" type="checkbox" name="englishEdition.text"><label for="en-text">English</label>
+        <label for="en-url">URL</label><input id="en-url" type="url" name="englishEdition.href">
+      </div>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+
+  <div class="article-head">
+  	<h3>Article Head</h3>
+  	<form action="/article-head" method="post">
+      <div>
+        <label for="article-head">Article head:</label><input id="article-head" type="text" name="articleHead">
+      </div>
+  		<div>
+        <label for="article-subhead">Article subhead:</label><input id="article-subhead" type="text" name="articleSubhead">
+      </div>
+  		<div>
+        <label for="publish-time">Publish time: </label><input id="publish-time" type="text" name="publishTime">
+      </div>
+  		<div>
+        <label for="byline">Byline: </label><input id="byline" type="text" name="byline">
+      </div>
+  		<div class="article-cover">
+  			<p>Fullspan Media</p>
+	  		<label for="article-cover__picture">Picture</label><input type="radio" id="article-cover__picture" name="articleCover" value="picture">
+	  		<label for="article-cover__ft">FT Video</label><input type="radio" id="article-cover__ft" name="articleCover" value="ft">
+        <label for="article-cover__cc">CC Video</label><input type="radio" id="article-cover__cc" name="articleCover" value="cc">
+  		</div>
+
+      <div>
+        <label for="orient__landscape">Landscape</label><input id="orient__landscape" type="radio" name="orient" value="landscape">
+        <label for="orient__portrait">Portraint</label><input id="orient__portrait" type="radio" name="orient" value="portrait">  
+      </div>
+
+      <div class="media-source">
+        <div>
+          <label for="srcset1">Srcset 1:</label><input id="srcset1" type="text" name="srcset">
+        </div>
+        <div>
+          <label for="srcset2">Srcset 2:</label><input id="srcset2" type="text" name="srcset">
+        </div>
+        <div>
+          <label for="srcset3">Srcset 3:</label><input id="srcset3" type="text" name="srcset"> 
+        </div>              
+      </div>
+      
+      <button type="submit">Save</button>
+  	</form>
+  </div>
+
+</div>
+
+
+
+</body>
+
+
+</html>

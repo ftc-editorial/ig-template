@@ -35,5 +35,10 @@
     "rollup": "^0.34.1",
     "rollup-plugin-bower-resolve": "^0.1.1",
     "rollup-plugin-buble": "^0.12.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "nunjucks": "^2.4.2"
   }
 }
