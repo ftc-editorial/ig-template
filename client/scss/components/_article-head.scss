@@ -3,6 +3,9 @@
     width: 100%;
     padding: 5%;
     text-align: center;
+    @include oGridRespondTo(M) {
+    	transform: translate(0, 50%);
+    }
 }
 
 .article__head-primary {
@@ -16,6 +19,8 @@
 
 .article__head-secondary {
 	font-size: 32px;
+	margin: 0;
+	padding: 0;
 
 	@include oGridRespondTo(M) {
 		font-size: 48px;
