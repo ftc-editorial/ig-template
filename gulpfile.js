@@ -61,12 +61,11 @@ gulp.task('mustache', function () {
     .pipe($.data(function(file) {
       return Promise.all(promisedData)
         .then(function(value) {
-           const contents = value.map(JSON.parse);
-           return {
-            analytics: analytics,
-            article: contents[0],
-            footer: contents[1]
-           };
+           const jsonData = value.map(JSON.parse);
+           const viewData = jsonData[0];
+           viewData.footer = jsonData[1];
+           viewData.analytics = analytics;
+           return viewData;
         });
     }))   
     .pipe($.mustache({}, {

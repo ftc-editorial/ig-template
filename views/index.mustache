@@ -9,35 +9,47 @@
   <meta name="author" content="FTC Interactive Graphics"> 
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-{{# article}}
+
   {{> partials/meta}}
-{{/ article}}
 
   <!-- smoosh-->
   <link rel="stylesheet" type="text/css" href="styles/main.css">
   <!-- endsmoosh -->
+{{# customCss}}
+  {{> custom-css}}
+{{/ customCss}}
+
 {{# analytics}}
   {{> partials/analytics}}
 {{/ analytics}}
 </head>
 
 <body>
-<img src="{{{article.wechatImage}}}" style="display:block; width:0px; height:0px; overflow:hidden">
-{{# article}}
-  {{> header}}
-{{/ article}}
+<img src="{{{wechatImage}}}" style="display:block; width:0px; height:0px; overflow:hidden">
 
-{{# article}}
-  {{> article/main}}
-{{/ article}}
+{{> partials/header}}
+
+{{> article/main}}
 
 {{# footer}}
-  {{> footer}}
+  {{> partials/footer}}
 {{/ footer}}
 
 <!-- smoosh -->
 <script src="scripts/bundle.js"></script>
 <!-- endsmoosh -->
+
+{{# highcharts}}
+<script src="/bower_components/highcharts/highcharts.js"></script>
+{{/ highcharts}}
+
+{{# d3}}
+<script src="/bower_components/d3/d3.min.js"></script>
+{{/ d3}}
+
+{{# customJs}}
+  {{> custom-js}}
+{{/ customJs}}
 
 <!-- build:log -->
 <script src=""></script>
