@@ -1,6 +1,6 @@
 {{# sections}}
   <section class="section__container" id="section-{{id}}">
-
+    {{# sectionHead}}
     <div class="section__head">
 
       <div class="section__head-container" data-o-grid-container>
@@ -15,6 +15,7 @@
       {{/ sectionCover}}
 
     </div><!-- section__header -->
+    {{/ sectionHead}}
     
     {{# sectionBody}}
     <div class="section__body"{{#fullspanMedia.sticky}} data-o-component="o-sticky"{{/fullspanMedia.sticky}}>
