@@ -19,16 +19,16 @@ const config = require('./config.json');
 
 const knownOptions = {
   string: 'input',
-  default: {input: 'example.json'},
+  default: {input: 'example'},
   alias: {i: 'input'}
 };
 
 const argv = minimist(process.argv.slice(2), knownOptions);
 
 const taskName = argv._[0];
-const articleDataFile = path.resolve(__dirname, 'data', argv.i);
+const articleDataFile = path.resolve(__dirname, 'data', argv.i + '.json');
 const footerDataFile = path.resolve(__dirname, 'data', 'footer.json');
-const projectName = path.basename(argv.i, '.json');
+const projectName = argv.i;
 
 function readFilePromisified(filename) {
   return new Promise(
