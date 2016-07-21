@@ -1,8 +1,4 @@
 {
-	"static": {
-		"d3": "http://interactive.ftchinese.com/bower_components/d3/d3.min.js",
-	    "log": "http://static.ftchinese.com/js/log.js?v=6"
-	},
 	"html": "../special/",
 	"assets": "../ft-interact/",
 	"test": "../interact/",

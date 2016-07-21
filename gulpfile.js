@@ -163,16 +163,19 @@ gulp.task('serve:dist', function() {
 });
 
 /* build */
-gulp.task('html', function() {
+
+
+gulp.task('useref', () => {
   return gulp.src('.tmp/index.html')
-    // .pipe($.useref({searchPath: ['.', '.tmp']}))
-    // .pipe($.if('*.js', $.uglify()))
-    // .pipe($.if('*.css', $.cssnano()))
-    // .pipe($.if('*.html', $.htmlReplace(config.static)))
-    .pipe($.htmlReplace(config.static))
-    .pipe($.smoosher())
-    .pipe(gulp.dest('dist'));
+    .pipe($.useref({searchPath: ['.tmp', 'data']}))
+    .pipe(gulp.dest('dist')); 
 });
+
+gulp.task('html', gulp.series('useref', function smoosh () {
+  return gulp.src('dist/index.html')
+    .pipe($.smoosher())
+    .pipe(gulp.dest('dist')); 
+}));
 
 gulp.task('extras', function () {
   return gulp.src('client/**/*.csv', {

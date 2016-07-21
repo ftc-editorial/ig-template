@@ -13,10 +13,16 @@
   {{> partials/meta}}
 
   <!-- smoosh-->
+  <!-- build:css styles/bundle.css -->
   <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <!-- endbuild -->
   <!-- endsmoosh -->
 {{# customCss}}
-  {{> custom-css}}
+  <!-- smoosh -->
+  <!-- build:css styles/custom.css-->
+  <link rel="stylesheet" type="text/css" href="styles/{{customCss}}.css">
+  <!-- endbuild -->
+  <!-- endsmoosh -->
 {{/ customCss}}
 
 {{# analytics}}
@@ -36,7 +42,9 @@
 {{/ footer}}
 
 <!-- smoosh -->
+<!-- build:js scripts/bundle.js-->
 <script src="scripts/bundle.js"></script>
+<!-- endbuild -->
 <!-- endsmoosh -->
 
 {{# highcharts}}
@@ -48,10 +56,14 @@
 {{/ d3}}
 
 {{# customJs}}
-  {{> custom-js}}
+<!-- smoosh -->
+<!-- build:js styles/custom.js -->
+<script src="scripts/{{customJs}}.js"></script>
+<!-- endbuild -->
+<!-- endsmoosh -->
 {{/ customJs}}
 
-<!-- build:log -->
+<!-- build:js http://static.ftchinese.com/js/log.js?v=6 -->
 <script src=""></script>
 <!-- endbuild -->
 </body>
