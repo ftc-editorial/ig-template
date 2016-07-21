@@ -20,6 +20,18 @@ After running `gulp build`, you can run `gulp deploy` to server.
 
 NOTE: `gulp deploy` do not need any arguments.
 
+## Custom CSS/JS
+In you json file, set any of these fields to `true` will enable the correspoding functions:
+```
+"highcharts": false,
+"d3": false,
+"customCss": false,
+"customJs": false,
+```
+You use you custom css/js, you also need to write you code to the file. Write you own css to the file `views/custom-css.mustache`, and js to the file `views/custom-js.mustache`.
+
+DO NOT touch any other files!
+
 ## Data
 
 Data saved in `json` format in `model/your-project-name.json` folder.
