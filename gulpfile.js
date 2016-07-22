@@ -252,89 +252,52 @@ gulp.task('deploy:html', function() {
 
 gulp.task('deploy', gulp.series('build', gulp.parallel('deploy:assets', 'deploy:html')));
 
-
 /* demos */
 gulp.task("mustache:demos", function() {
   const DEST = '.tmp';
   const dataFiles = [articleDataFile, footerDataFile];
 
   const promisedData = dataFiles.map(readFilePromisified);
-  const src = gulp.src('./views/index.mustache');
 
-  return Promise.all(promisedData)
-    .then(function(value) {
-       const jsonData = value.map(JSON.parse);
-       const viewData = jsonData[0];
-       viewData.footer = jsonData[1];
-       return viewData;
-    }).then(function(value) {
-      console.log(value.lightTheme);
-      gulp.src('./views/index.mustache')
-        .pipe($.mustache(value, {
-          extension: '.html'
-        }))
-        .pipe($.rename({
-          basename: 'dark-theme'
-        }))
-        .pipe(gulp.dest(DEST));
+  const dark = gulp.src('./views/index.mustache')
+    .pipe($.data(function(file) {
+      return Promise.all(promisedData)
+        .then(function(value) {
+           const jsonData = value.map(JSON.parse);
+           const viewData = jsonData[0];
+           viewData.footer = jsonData[1];
+           return viewData;
+        });
+    }))   
+    .pipe($.mustache({}, {
+      extension: '.html'
+    }))
+    .pipe($.rename({
+      basename: 'dark-theme'
+    }))
+    .pipe(gulp.dest(DEST));
 
-      return value;
-    }).then(function(value) {
-      const lightData = value;
-      lightData.lightTheme = true;
-      lightData.darkTheme = false;
+  const light = gulp.src('./views/index.mustache')
+    .pipe($.data(function(file) {
+      return Promise.all(promisedData)
+        .then(function(value) {
+           const jsonData = value.map(JSON.parse);
+           const viewData = jsonData[0];
+           viewData.footer = jsonData[1];
+           viewData.darkTheme = false;
+           viewData.lightTheme = true;
+           return viewData;
+        });
+    }))   
+    .pipe($.mustache({}, {
+      extension: '.html'
+    }))
+    .pipe($.rename({
+      basename: 'light-theme'
+    }))
+    .pipe(gulp.dest(DEST));
 
-      gulp.src('./views/index.mustache')
-        .pipe($.mustache(lightData, {
-          extension: '.html'
-        }))
-        .pipe($.rename({
-          basename: 'light-theme'
-        }))
-        .pipe(gulp.dest(DEST));      
-    }).catch(function(err) {
-      console.log(err);
-    });
-  // const dark = gulp.src('./views/index.mustache')
-  //   .pipe($.data(function(file) {
-  //     return Promise.all(promisedData)
-  //       .then(function(value) {
-  //          const contents = value.map(JSON.parse);
-  //          return {
-  //           article: contents[0],
-  //           footer: contents[1]
-  //          };
-  //       });
-  //   }))   
-  //   .pipe($.mustache({}, {
-  //     extension: '.html'
-  //   }))
-  //   .pipe($.rename({
-  //     basename: 'dark-theme'
-  //   }))
-  //   .pipe(gulp.dest(DEST));
-
-  // const light = gulp.src('./views/index.mustache')
-  //   .pipe($.data(function(file) {
-  //     return Promise.all(promisedData)
-  //       .then(function(value) {
-  //          const contents = value.map(JSON.parse);
-  //          contents[0].lightTheme = true;
-  //          return {
-  //           article: contents[0],
-  //           footer: contents[1]
-  //          };
-  //       });
-  //   }))   
-  //   .pipe($.mustache({}, {
-  //     extension: '.html'
-  //   }))
-  //   .pipe($.rename({
-  //     basename: 'light-theme'
-  //   }))
-  //   .pipe(gulp.dest(DEST));
-
-  // return merge(dark, light);
+  return merge(dark, light);
 });
 
 gulp.task('copy:demos', function() {
@@ -343,14 +306,24 @@ gulp.task('copy:demos', function() {
     .pipe(browserSync.stream({once: true}));
 });
 
-gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'rollup', 'images', 'extras'));
+gulp.task('images:demos', function () {
+  return gulp.src('demos/images/*.{png,jpg,gif,svg}')
+    .pipe($.imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [{cleanupIDs: false}]
+    }))
+    .pipe(gulp.dest('.tmp/images'));
+});
+
+gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'rollup', 'images:demos'));
 
 gulp.task('watch:demos', 
   gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'rollup',
     function serve() {
     browserSync.init({
       server: {
-        baseDir: ['demos', '.tmp', 'client'],
+        baseDir: ['demos', '.tmp'],
         routes: {
           '/bower_components': 'bower_components'
         }
@@ -366,74 +339,6 @@ gulp.task('watch:demos',
 );
 
 gulp.task('demos', gulp.series('clean', 'build:demos', function(){
-  return gulp.src(['.tmp/**/**', 'dist/**/**'])
+  return gulp.src(['.tmp/**/**'])
     .pipe(gulp.dest(config.assets + 'ig-template'));
 }));
-
-// Deprecate browserify
-// const source = require('vinyl-source-stream');
-// const buffer = require('vinyl-buffer');
-// const browserify = require('browserify');
-// const watchify = require('watchify');
-// const debowerify = require('debowerify');
-// const babelify = require('babelify');
-// Browerify task deprecated.
-/*
-const webpackStream = require('webpack-stream');
-const webpackConfig = require('./webpack.config.js');
-gulp.task('scripts', function() {
-  const b = browserify({
-    entries: 'client/js/main.js',
-    debug: true,
-    cache: {},
-    packageCache: {},
-    transform: [babelify, debowerify],
-    plugin: [watchify]
-  });
-
-  b.on('update', bundle);
-  b.on('log', $.util.log);
-
-  bundle();
-
-  function bundle(ids) {
-    $.util.log('Compiling JS...');
-    if (ids) {
-      console.log('Chnaged Files:\n' + ids);
-    }   
-    return b.bundle()
-      .on('error', function(err) {
-        $.util.log(err.message);
-        browserSync.notify('Browerify Error!')
-        this.emit('end')
-      })
-      .pipe(source('bundle.js'))
-      .pipe(buffer())
-      .pipe($.sourcemaps.init({loadMaps: true}))
-      .pipe($.sourcemaps.write('./'))
-      .pipe(gulp.dest('.tmp/scripts'))
-      .pipe(browserSync.stream({once:true}));
-  }
-});
-
-gulp.task('scripts', function() {
-  const DEST = '.tmp/scripts/';
-
-  if (process.env.NODE_ENV === 'production') {
-    webpackConfig.watch = false;
-  }
-  
-  return gulp.src('client/js/main.js')
-    .pipe(webpackStream(webpackConfig, null, function(err, stats) {
-      $.util.log(stats.toString({
-          colors: $.util.colors.supportsColor,
-          chunks: false,
-          hash: false,
-          version: false
-      }));
-      browserSync.reload();
-    }))
-    .on('error', $.util.log) 
-    .pipe(gulp.dest(DEST));
-});
-*/
