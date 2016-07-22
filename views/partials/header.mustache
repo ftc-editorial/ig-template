@@ -41,15 +41,11 @@
         </button>
         
         <ol class="o-header__nav" data-o-toggle-target>
+          {{# toc}}
           <li class="o-header__nav-item">
-            <a class="o-header__nav-link" href="#nav-section-0">序</a>
+            <a class="o-header__nav-link" href="#{{target}}">{{text}}</a>
           </li>
-
-          {{# sections}}
-          <li class="o-header__nav-item">
-            <a class="o-header__nav-link" href="#section-{{id}}">{{title}}</a>
-          </li>
-          {{/ sections}}
+          {{/ toc}}
 
           {{# englishEdition}}
           <li class="o-header__nav-item mobile">

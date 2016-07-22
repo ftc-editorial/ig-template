@@ -1,6 +1,10 @@
 {	
 	"lightTheme": false,
 	"darkTheme": true,
+	"highcharts": false,
+	"d3": false,
+	"customCss": false,
+	"customJs": false,
 	"enableScroll": true,
 	"assetsPath": "/bower_components/ftc-icons/",
 	"description": "讨论中国经济增长的虚实，一直是让经济观察者兴奋的议题。到底要如何读懂中国2015年关键经济数字？我们带你从头理解。",
@@ -9,9 +13,20 @@
 	"ogImage": "http://i.ftimg.net/picture/9/000056909_piclink.jpg",
 	"ogUrl": "http://www.ftchinese.com/interactive/5775",
 	"wechatImage": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fchina-gdp%2Fimages%2Fcover.jpg?source=ftchinese",
-	"title": "数据报道：如何读懂中国GDP？",
+	"pageTitle": "数据报道：如何读懂中国GDP？",
 	"englishEdition": {},
 	"seriesTitle": "2015中国年度报告",
+	"toc": [{
+		"text": "第一部分",
+		"target": "top"
+	}, {
+		"text": "第二部分",
+		"target": "section-2"
+	}, {
+		"text": "第三部分",
+		"target": "section-3"
+	}],
+	"articleLead": "《2015中国年度报告》",
 	"articleHead": "如何读懂中国GDP？",
 	"articleSubhead": "",
 	"publishTime": "",
@@ -25,13 +40,6 @@
 	"sections": [
 		{
 			"id":"1",
-			"title": "",
-			"subTitle": "",
-			"sectionCover": {
-				"picture": {
-					"src": "http://interactive.ftchinese.com/china-gdp/images/steel.jpg"
-				}
-			},
 			"sectionBody": [
 				{
 					"colPrimary": [
@@ -41,7 +49,16 @@
 								"今年3月，中国总理李克强在“两会”期间将全年经济增速调整为增长“7%左右”，开启一整年的“小数点”论战：国家统计局数据和市场预期若有落差，总有大量声音质疑官方数字的客观性和准确性。",
 								"数据纷争，纠结的并不是小数点后的表面数字，所有人更想追问一个核心问题：中国经济增速到底放慢多少？假如看好中国经济持续增长，官方和民间理解的国内生产总值（GDP）数据若产生微幅差距不是问题。但在今年，市场更多的声音是，中国官方恐怕高估了GDP。眼前的中国正承受经济下行的巨大压力，投资者和经济观察家更需要精确的GDP数字，以帮助他们理解中国当前及未来走势。",
 								"我们试着整理今年主要专家学者的看法和研究，从头开始带你理解：官方发布数字和市场预估究竟有何差距？以及应该如何解懂中国GDP？",
-								"计算基础不同，是民间和官方数据落差的主因。",
+								"计算基础不同，是民间和官方数据落差的主因。"
+							]
+						}, {
+							"figure": {
+								"mobileOnly": true,
+								"imgSrc": "http://interactive.ftchinese.com/china-gdp/./images/harryWu.jpg",
+								"caption": ""
+							}
+						}, {
+							"text": [
 								"凯投宏观（Capital Economics）认为，面对今年进口价格下跌，用来衡量通货膨胀、显示名义和实际GDP差距的“平减指数” （GDP deflator）被中国低估，如此会造成最终GDP实际数值高估。专家学者的怀疑不是没理由，中国官方未公开平减指数的计算。",
 								"官方数据的支持者、香港科技大学经济学教授霍尔兹（Carsten Holz）也认为，中国官方名义GDP可信赖，但GDP平减指数恐怕存在问题。",
 								"长期研究中国经济议题的东京一桥大学（Hitotsubashi University）经济学教授伍晓鹰（Harry Wu），<a href=\"http://www.ftchinese.com/story/001064428\">站在另一个角度怀疑中国官方数据</a>。他认为，官方数据存有根本错误，高估“非物质服务业”和“工业产出增长率”。依据伍晓鹰的计算，在多数情况下，他对增长下滑（如1954、1966年）和经济衰退（如1961、1976年）的估计数字都比官方数据更加严重。",
@@ -59,14 +76,16 @@
 				}
 			],
 			"adBanner": {
-				"adId": "ad-1",
-				"adSrc": "/m/marketing/ad-mobile.html#adtype=ad300x250-story&adid=storyview1"
+				"src": "/m/marketing/ad-mobile.html#adtype=ad300x250-story&adid=storyview1"
 			}
 		},
 		{
 			"id": 2,
-			"title": "官方数据的内在矛盾",
-			"subTitle": "数字非黑即白，但官方数据之间相互矛盾，是研究者的巨大考验。",
+			"sectionHead": {
+				"viewportHeight": true,
+				"title": "官方数据的内在矛盾",
+				"subTitle": "数字非黑即白，但官方数据之间相互矛盾，是研究者的巨大考验。"
+			},
 			"sectionCover": {
 				"picture": {
 					"source": [],
@@ -75,6 +94,7 @@
 			},
 			"sectionBody": [
 				{
+
 					"colPrimary": [
 						{
 							"text": [
@@ -85,6 +105,12 @@
 						}, {
 							"blockQuote": {
 								"text": "地方政府受经济指标考核压力，上报数字有“灌水”的可能性；而中央政府会对全国数字有一个“缩水”的再调整。",
+								"caption": ""
+							}
+						}, {
+							"figure": {
+								"mobileOnly": true,
+								"imgSrc": "http://interactive.ftchinese.com/china-gdp/images/province.jpg",
 								"caption": ""
 							}
 						}
@@ -101,14 +127,16 @@
 				}
 			],
 			"adBanner": {
-				"adId": "ad-2",
-				"adSrc": "/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
+				"src": "/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
 			}
 		},
 		{
 			"id": 3,
-			"title": "李克强指数仍有用吗？",
-			"subTitle": "用电量、铁路货运量及银行贷款，这三组数据被媒体称为“李克强指数”，一度被当作观察中国经济走势的重要指标。",
+			"sectionHead": {
+				"viewportHeight": true,
+				"title": "李克强指数仍有用吗？",
+				"subTitle": "用电量、铁路货运量及银行贷款，这三组数据被媒体称为“李克强指数”，一度被当作观察中国经济走势的重要指标。"
+			},
 			"sectionCover": {
 				"picture": {
 					"source": [],
@@ -120,7 +148,18 @@
 					"colPrimary": [
 						{
 							"text": [
-								"以下这张图表是近年来李克强指数和官方GDP数据的走势，很明显，今年李克强指数已经与中国官方经济数据出现较大偏差。",
+								"以下这张图表是近年来李克强指数和官方GDP数据的走势，很明显，今年李克强指数已经与中国官方经济数据出现较大偏差。"
+							]
+						},
+						{
+							"figure": {
+								"mobileOnly": true,
+								"imgSrc": "http://interactive.ftchinese.com/china-gdp/images/li.jpg",
+								"caption": ""
+							}
+						},
+						{
+							"text": [
 								"李克强指数在今年表现逊于GDP，中间的落差或许可以从指数的组成谈起：指数观察用电量、铁路运货量、银行放贷，过于偏重制造业活动的计算，未能充分体现中国逐渐成长的服务行业动能。李克强日前还对外公布自己新的经济观察指标：居民收入、就业率、能源消耗量，三者数据也被解读为，政府期待关心焦点从工业指数移转到服务行业。",
 								"服务行业确实是中国近年经济指标的少数亮点。从行业别来看中国国民经济，服务业占比正逐年增加。根据中国商务部最新资料，前三季最终消费支出对经济增长的贡献率为58.4%，比例远高于投资和工业部门。",
 								"彼得森国际经济研究所(Peterson Institute for International Economics)高级研究员尼古拉斯·R·拉迪（Nicholas R. Lardy）今年就在媒体上撰文称，若继续使用旧的李克强指数的用电量来观察中国经济增长，如同“看着后视镜开车”。"

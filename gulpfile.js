@@ -137,7 +137,7 @@ gulp.task('serve',
     function serve() {
     browserSync.init({
       server: {
-        baseDir: ['.tmp', 'client'],
+        baseDir: ['.tmp', 'demos'],
         routes: {
           '/bower_components': 'bower_components'
         }
@@ -216,7 +216,7 @@ gulp.task('prod', function() {
     });
 });
 
-gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'html', 'dev'));
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', /*'images',*/ 'extras'), 'html', 'dev'));
 
 
 /**********deploy***********/
@@ -226,8 +226,9 @@ gulp.task('deploy:assets', function() {
 });
 
 gulp.task('deploy:html', function() {
+  console.log(path.resolve(__dirname, config.html));
   return gulp.src('dist/index.html')
-    .pipe($.prefix(config.prefixUrl + projectName))
+    .pipe($.prefix(config.prefixUrl))
     .pipe($.rename({
       basename: projectName, 
       extname: '.html'

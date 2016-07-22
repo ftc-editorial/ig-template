@@ -1,11 +1,16 @@
 {{# sections}}
   <section class="section__container" id="section-{{id}}">
+    
     {{# sectionHead}}
-    <div class="section__head">
+    <div class="section__head{{#viewportHeight}} viewport-height{{/viewportHeight}}{{#sectionCover}} text-over-media{{/sectionCover}}">
 
       <div class="section__head-container" data-o-grid-container>
+        {{# title}}
         <h2 class="section__head-primary">{{title}}</h2>
+        {{/ title}}
+        {{# subTitle}}
         <p class="section__head-secondary">{{subTitle}}</p>
+        {{/ subTitle}}
       </div><!-- data-o-grid-container -->
 
       {{# sectionCover}}
@@ -16,12 +21,12 @@
 
     </div><!-- section__header -->
     {{/ sectionHead}}
-    
+
     {{# sectionBody}}
     <div class="section__body"{{#fullspanMedia.sticky}} data-o-component="o-sticky"{{/fullspanMedia.sticky}}>
 
       {{# fullspanMedia}}
-      <div class="section__fullspan-media"{{#ccVideo}} data-source="cc"{{/ccVideo}}{{#sticky}} data-o-sticky-target{{/sticky}}>
+      <div class="section__fullspan-media"{{#cc}} data-source="cc"{{/cc}}{{#sticky}} data-o-sticky-target{{/sticky}}>
         {{> partials/media}}
       </div>
       {{/ fullspanMedia}}

@@ -1,4 +1,8 @@
 <figure class="section__figure{{#mobileOnly}} section__figure--mobile{{/mobileOnly}}" data-media-ratio="{{ratio}}">
+	{{# title}}
+	<p class="section__figure-title">{{title}}</p>
+	{{/ title}}
+	
   {{# link}}<a{{/ link}}
   {{^ link}}<div{{/ link}}
   class="lazyload__outer"
