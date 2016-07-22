@@ -65,6 +65,7 @@ gulp.task('mustache', function () {
            const viewData = jsonData[0];
            viewData.footer = jsonData[1];
            viewData.analytics = analytics;
+           viewData.projectName = projectName;
            return viewData;
         });
     }))   
@@ -137,16 +138,21 @@ gulp.task('serve',
     function serve() {
     browserSync.init({
       server: {
-        baseDir: ['.tmp', 'demos'],
+        baseDir: ['.tmp', 'custom', 'demos'],
         routes: {
           '/bower_components': 'bower_components'
         }
       }
     });
 
-    gulp.watch('client/**/*.{csv,svg,png,jpg}', browserSync.reload);
-    gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
+
+    browserSync.watch('custom/**/*.{css,js,csv}')
+    .on('change', browserSync.reload);
+
     gulp.watch(['views/**/**/*.mustache', 'data/*.json'], gulp.parallel('mustache'));
+
+    gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
+
     gulp.watch('client/**/*.js', gulp.parallel('rollup'));
   })
 );
