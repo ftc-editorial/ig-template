@@ -26,11 +26,12 @@ In you json file, set any of these fields to `true` will include those libraries
 "highcharts": false,
 "d3": false,
 ```
-To include your custom css/js (if any), set those fields to the files' name, which should be put in `data/scripts` and `data/styles` respectively. Set them to `false` will not include custom css/js files.
+To include your custom css/js (if any), set those fields to `true`. Set them to `false` will not include custom css/js files.
 ```
-"customCss": "example",
-"customJs": "example",
+"customCss": "false",
+"customJs": "false",
 ```
+You custom js/css files should be put in `custom/js` and `custom/css` folders respectively, and named after the json file. For example, if the json file is `china-gdp.json`, custom js/css should be named `china-gdp.js` and `china-gdp.css`.
 
 DO NOT touch any other files!
 
