@@ -48,12 +48,6 @@ function readFilePromisified(filename) {
 gulp.task('mustache', function () {
   const DEST = '.tmp';
 
-  var analytics = false;
-
-  if (process.env.NODE_ENV === 'production') {
-    analytics = true;
-  }
-
   const dataFiles = [articleDataFile, footerDataFile];
   const promisedData = dataFiles.map(readFilePromisified);
 
@@ -64,8 +58,11 @@ gulp.task('mustache', function () {
            const jsonData = value.map(JSON.parse);
            const viewData = jsonData[0];
            viewData.footer = jsonData[1];
-           viewData.analytics = analytics;
            viewData.projectName = projectName;
+           if (process.env.NODE_ENV === 'production') {
+              viewData.analytics = true;
+              viewData.iconsPath = config.icons;
+            }
            return viewData;
         });
     }))   
@@ -169,8 +166,6 @@ gulp.task('serve:dist', function() {
 });
 
 /* build */
-
-
 gulp.task('useref', () => {
   return gulp.src('.tmp/index.html')
     .pipe($.useref({searchPath: ['.tmp', 'data']}))
@@ -184,14 +179,16 @@ gulp.task('html', gulp.series('useref', function smoosh () {
 }));
 
 gulp.task('extras', function () {
-  return gulp.src('client/**/*.csv', {
+  return gulp.src('data/csv/*.csv', {
     dot: true
   })
   .pipe(gulp.dest('dist'));
 });
 
 gulp.task('images', function () {
-  return gulp.src('client/images/*.{svg,png,jpg,jpeg,gif}')
+  const SRC = 'images/' + projectName + '/*.{svg,png,jpg,jpeg,gif}';
+
+  return gulp.src(SRC)
     .pipe($.imagemin({
       progressive: true,
       interlaced: true,
@@ -222,7 +219,7 @@ gulp.task('prod', function() {
     });
 });
 
-gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', /*'images',*/ 'extras'), 'html', 'dev'));
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'html', 'dev'));
 
 
 /**********deploy***********/
@@ -234,7 +231,7 @@ gulp.task('deploy:assets', function() {
 gulp.task('deploy:html', function() {
   console.log(path.resolve(__dirname, config.html));
   return gulp.src('dist/index.html')
-    .pipe($.prefix(config.prefixUrl))
+    .pipe($.prefix(config.imgPrefix))
     .pipe($.rename({
       basename: projectName, 
       extname: '.html'
@@ -262,47 +259,80 @@ gulp.task("mustache:demos", function() {
   const dataFiles = [articleDataFile, footerDataFile];
 
   const promisedData = dataFiles.map(readFilePromisified);
+  const src = gulp.src('./views/index.mustache');
 
-  const dark = gulp.src('./views/index.mustache')
-    .pipe($.data(function(file) {
-      return Promise.all(promisedData)
-        .then(function(value) {
-           const contents = value.map(JSON.parse);
-           return {
-            article: contents[0],
-            footer: contents[1]
-           };
-        });
-    }))   
-    .pipe($.mustache({}, {
-      extension: '.html'
-    }))
-    .pipe($.rename({
-      basename: 'dark-theme'
-    }))
-    .pipe(gulp.dest(DEST));
+  return Promise.all(promisedData)
+    .then(function(value) {
+       const jsonData = value.map(JSON.parse);
+       const viewData = jsonData[0];
+       viewData.footer = jsonData[1];
+       return viewData;
+    }).then(function(value) {
+      console.log(value.lightTheme);
+      src.pipe($.mustache(value, {
+        extension: '.html'
+      }))
+      .pipe($.rename({
+        basename: 'dark-theme'
+      }))
+      .pipe(gulp.dest(DEST));
 
-  const light = gulp.src('./views/index.mustache')
-    .pipe($.data(function(file) {
-      return Promise.all(promisedData)
-        .then(function(value) {
-           const contents = value.map(JSON.parse);
-           contents[0].lightTheme = true;
-           return {
-            article: contents[0],
-            footer: contents[1]
-           };
-        });
-    }))   
-    .pipe($.mustache({}, {
-      extension: '.html'
-    }))
-    .pipe($.rename({
-      basename: 'light-theme'
-    }))
-    .pipe(gulp.dest(DEST));
+      return value;
+    }).then(function(value) {
+      const lightData = value;
+      lightData.lightTheme = true;
+      lightData.darkTheme = false;
 
-  return merge(dark, light);
+      src.pipe($.mustache(lightData, {
+        extension: '.html'
+      }))
+      .pipe($.rename({
+        basename: 'light-theme'
+      }))
+      .pipe(gulp.dest(DEST));      
+    }).catch(function(err) {
+      console.log(err);
+    });
+  // const dark = gulp.src('./views/index.mustache')
+  //   .pipe($.data(function(file) {
+  //     return Promise.all(promisedData)
+  //       .then(function(value) {
+  //          const contents = value.map(JSON.parse);
+  //          return {
+  //           article: contents[0],
+  //           footer: contents[1]
+  //          };
+  //       });
+  //   }))   
+  //   .pipe($.mustache({}, {
+  //     extension: '.html'
+  //   }))
+  //   .pipe($.rename({
+  //     basename: 'dark-theme'
+  //   }))
+  //   .pipe(gulp.dest(DEST));
+
+  // const light = gulp.src('./views/index.mustache')
+  //   .pipe($.data(function(file) {
+  //     return Promise.all(promisedData)
+  //       .then(function(value) {
+  //          const contents = value.map(JSON.parse);
+  //          contents[0].lightTheme = true;
+  //          return {
+  //           article: contents[0],
+  //           footer: contents[1]
+  //          };
+  //       });
+  //   }))   
+  //   .pipe($.mustache({}, {
+  //     extension: '.html'
+  //   }))
+  //   .pipe($.rename({
+  //     basename: 'light-theme'
+  //   }))
+  //   .pipe(gulp.dest(DEST));
+
+  // return merge(dark, light);
 });
 
 gulp.task('copy:demos', function() {

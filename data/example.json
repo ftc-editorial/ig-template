@@ -6,7 +6,7 @@
 	"customCss": false,
 	"customJs": false,
 	"enableScroll": true,
-	"assetsPath": "/bower_components/ftc-icons/",
+	"iconsPath": "/bower_components/ftc-icons/",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 	"ogTitle": "缅甸失地农民",
 	"ogType": "article",
