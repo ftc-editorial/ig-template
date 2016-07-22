@@ -3,7 +3,7 @@
 	"darkTheme": true,
 	"highcharts": false,
 	"d3": false,
-	"customCss": false,
+	"customCss": true,
 	"customJs": false,
 	"enableScroll": true,
 	"assetsPath": "/bower_components/ftc-icons/",

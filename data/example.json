@@ -19,6 +19,22 @@
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
 	},
 	"seriesTitle": "调查报道",
+	"toc": [{
+		"text": "1. 失去的土地",
+		"target": "section-1"
+	},{
+		"text": "2. 抱负",
+		"target": "section-2"
+	},{
+		"text": "",
+		"target": "section-3"
+	},{
+		"text": "",
+		"target": "section-4"
+	},{
+		"text": "",
+		"target": "section-5"
+	}],
 	"articleHead": "缅甸失地农民",
 	"articleSubhead": "被打乱的生活",
 	"publishTime": "2016年3月25日",
@@ -52,23 +68,24 @@
 		{
 			"id":"1",
 			"sectionHead": {
+				"viewportHeight": true,
 				"title": "1. 失去的土地",
-				"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
-				"sectionCover": {
-					"ft": {
-						"poster": "./images/mpv-shot0001.jpg",
-						"source": [
-							{
-								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
-								"type": "mp4"
-							},
-							{
-								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
-								"type": "webm"
-							}
-						]
-					}				
-				}
+				"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。"
+			},
+			"sectionCover": {
+				"ft": {
+					"poster": "./images/mpv-shot0001.jpg",
+					"source": [
+						{
+							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
+							"type": "mp4"
+						},
+						{
+							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
+							"type": "webm"
+						}
+					]
+				}				
 			},
 			"sectionBody": [
 				{
@@ -168,22 +185,23 @@
 		{
 			"id": 2,
 			"sectionHead": {
+				"viewportHeight": true,
 				"title": "2. 抱负",
-				"subTitle": "",
-				"sectionCover": {
-					"picture": {
-						"source": [{
-							"landscape": false,
-							"portrait": false,
-							"srcset": [
-								"./images/2560_getty_-factory-in-yangon-lr.jpg 1100w,",
-								"./images/2560_getty_-factory-in-yangon-mr.jpg 1500w,",
-								"./images/2560_getty_-factory-in-yangon-hr.jpg"
-							]
-						}],
-						"src": "./images/2560_getty_-factory-in-yangon-mr.jpg"
-					}				
-				}	
+				"subTitle": ""
+			},
+			"sectionCover": {
+				"picture": {
+					"source": [{
+						"landscape": false,
+						"portrait": false,
+						"srcset": [
+							"./images/2560_getty_-factory-in-yangon-lr.jpg 1100w,",
+							"./images/2560_getty_-factory-in-yangon-mr.jpg 1500w,",
+							"./images/2560_getty_-factory-in-yangon-hr.jpg"
+						]
+					}],
+					"src": "./images/2560_getty_-factory-in-yangon-mr.jpg"
+				}				
 			},
 			"sectionBody": [
 				{
@@ -243,21 +261,22 @@
 		{
 			"id": 3,
 			"sectionHead": {
-				"title": "3. 村庄",
-				"sectionCover": {
-					"ft": {
-						"poster": "images/2560_beach_football_backup-mr_4rt5h4b.jpg",
-						"source": [
-							{
-								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_3.mp4.mp4",
-								"type": "mp4"
-							},
-							{
-								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.webm",
-								"type": "webm"
-							}
-						]
-					}				
+				"viewportHeight": true,
+				"title": "3. 村庄"			
+			},
+			"sectionCover": {
+				"ft": {
+					"poster": "images/2560_beach_football_backup-mr_4rt5h4b.jpg",
+					"source": [
+						{
+							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_3.mp4.mp4",
+							"type": "mp4"
+						},
+						{
+							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.webm",
+							"type": "webm"
+						}
+					]
 				}				
 			},
 			"sectionBody": [
@@ -355,22 +374,23 @@
 		{
 			"id": 4,
 			"sectionHead": {
+				"viewportHeight": true,
 				"title": "4. 导火索",
-				"subTitle": "任何一个购买土地的人都有可能发现自己陷入纠纷”",
-				"sectionCover": {
-					"picture": {
-						"source": [{
-							"landscape": false,
-							"portrait": false,
-							"srcset": [
-								"./images/conflict-lr.jpg 1100w,",
-		        				"./images/conflict-mr.jpg 1500w,",
-		        				"./images/conflict-hr.jpg"
-							]							
-						}],
-						"src": "images/conflict-mr.jpg"
-					}
-				}				
+				"subTitle": "任何一个购买土地的人都有可能发现自己陷入纠纷”"				
+			},
+			"sectionCover": {
+				"picture": {
+					"source": [{
+						"landscape": false,
+						"portrait": false,
+						"srcset": [
+							"./images/conflict-lr.jpg 1100w,",
+	        				"./images/conflict-mr.jpg 1500w,",
+	        				"./images/conflict-hr.jpg"
+						]							
+					}],
+					"src": "images/conflict-mr.jpg"
+				}
 			},
 			"sectionBody": [
 				{
@@ -418,22 +438,23 @@
 		{
 			"id": 5,
 			"sectionHead": {
+				"viewportHeight": true,
 				"title": "5. 赢家和输家",
-				"subTitle": "‘自从他们夺走了我们所有的土地，我们农民能做的只有哭’",
-				"sectionCover": {
-					"picture": {
-						"source": [{
-							"landscape": false,
-							"portrait": false,
-							"srcset": [
-								"images/this_famer_2-lr.jpg 1100w,",
-								"images/this_famer_2-mr.jpg 1500w,",
-								"images/this_famer_2-hr.jpg"
-							]						
-						}],
-						"src": "images/this_famer_2-mr.jpg"
-					}
-				}				
+				"subTitle": "‘自从他们夺走了我们所有的土地，我们农民能做的只有哭’"			
+			},
+			"sectionCover": {
+				"picture": {
+					"source": [{
+						"landscape": false,
+						"portrait": false,
+						"srcset": [
+							"images/this_famer_2-lr.jpg 1100w,",
+							"images/this_famer_2-mr.jpg 1500w,",
+							"images/this_famer_2-hr.jpg"
+						]						
+					}],
+					"src": "images/this_famer_2-mr.jpg"
+				}
 			},
 			"sectionBody": [
 				{
