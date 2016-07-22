@@ -269,13 +269,14 @@ gulp.task("mustache:demos", function() {
        return viewData;
     }).then(function(value) {
       console.log(value.lightTheme);
-      src.pipe($.mustache(value, {
-        extension: '.html'
-      }))
-      .pipe($.rename({
-        basename: 'dark-theme'
-      }))
-      .pipe(gulp.dest(DEST));
+      gulp.src('./views/index.mustache')
+        .pipe($.mustache(value, {
+          extension: '.html'
+        }))
+        .pipe($.rename({
+          basename: 'dark-theme'
+        }))
+        .pipe(gulp.dest(DEST));
 
       return value;
     }).then(function(value) {
@@ -283,13 +284,14 @@ gulp.task("mustache:demos", function() {
       lightData.lightTheme = true;
       lightData.darkTheme = false;
 
-      src.pipe($.mustache(lightData, {
-        extension: '.html'
-      }))
-      .pipe($.rename({
-        basename: 'light-theme'
-      }))
-      .pipe(gulp.dest(DEST));      
+      gulp.src('./views/index.mustache')
+        .pipe($.mustache(lightData, {
+          extension: '.html'
+        }))
+        .pipe($.rename({
+          basename: 'light-theme'
+        }))
+        .pipe(gulp.dest(DEST));      
     }).catch(function(err) {
       console.log(err);
     });
