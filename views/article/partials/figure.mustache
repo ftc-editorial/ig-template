@@ -7,11 +7,18 @@
   {{^ link}}<div{{/ link}}
   class="lazyload__outer"
   {{# link}}href="{{{link}}}"{{/ link}}>
-    <img src="{{{imgSrc}}}" class="section__figure-image lazyload__inner">
+    <img src="{{{imgSrc}}}" class="section__figure-image lazyload__inner
+    {{#scrollmation}}
+    o-scrollmation-target
+    {{/scrollmation}}"
+    {{#scrollmation}}
+    data-o-scrollmation-srcset="{{#scrollSet}}{{{.}}} {{/scrollSet}}"
+    {{/scrollmation}}>
   {{# link}}</a>{{/ link}}
   {{^ link}}</div>{{/ link}}         
   
   {{# caption}}
   <figcaption class="section__figure-caption">{{caption}}</figcaption>
  	{{/ caption}}
+  
 </figure>

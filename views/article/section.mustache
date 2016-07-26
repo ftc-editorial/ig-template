@@ -23,10 +23,13 @@
     {{/ sectionHead}}
 
     {{# sectionBody}}
-    <div class="section__body"{{#fullspanMedia.sticky}} data-o-component="o-sticky"{{/fullspanMedia.sticky}}>
+    <div class="section__body"
+    {{#fullspanMedia.sticky}}data-o-component="o-sticky"{{/fullspanMedia.sticky}}>
 
       {{# fullspanMedia}}
-      <div class="section__fullspan-media"{{#cc}} data-source="cc"{{/cc}}{{#sticky}} data-o-sticky-target{{/sticky}}>
+      <div class="section__fullspan-media
+      {{#sticky}}o-sticky-target{{/sticky}}"
+      {{#cc}}data-source="cc"{{/cc}}>
         {{> partials/media}}
       </div>
       {{/ fullspanMedia}}
@@ -63,14 +66,16 @@
           </div><!-- col-primary -->
 
           {{# colSecondary}}
-          <aside class="section__col-secondary" data-o-grid-col{{#sticky}} data-o-component="o-sticky"{{/sticky}}>
-
-            <div class="o-sticky-target" {{#sticky}} data-o-sticky-target{{/sticky}}>
+          <aside class="section__col-secondary"
+          data-o-grid-col
+          data-o-component="{{#sticky}}o-sticky{{/sticky}}
+          {{#scrollmation}}o-scrollmation{{/scrollmation}}">
+            
+            <div class="{{#sticky}}o-sticky-target{{/sticky}}">
             {{# figure}}
               {{> partials/figure}}
             {{/ figure}}  
             </div>
-            
           </aside>
           {{/ colSecondary}}   
 
