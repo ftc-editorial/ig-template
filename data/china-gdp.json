@@ -6,6 +6,7 @@
 	"customCss": true,
 	"customJs": false,
 	"enableScroll": true,
+	"autoNav": true,
 	"assetsPath": "/bower_components/ftc-icons/",
 	"description": "讨论中国经济增长的虚实，一直是让经济观察者兴奋的议题。到底要如何读懂中国2015年关键经济数字？我们带你从头理解。",
 	"ogTitle": "数据报道：如何读懂中国GDP？- FT中文网",
@@ -16,30 +17,22 @@
 	"pageTitle": "数据报道：如何读懂中国GDP？",
 	"englishEdition": {},
 	"seriesTitle": "2015中国年度报告",
-	"toc": [{
-		"text": "第一部分",
-		"target": "top"
-	}, {
-		"text": "第二部分",
-		"target": "section-2"
-	}, {
-		"text": "第三部分",
-		"target": "section-3"
-	}],
 	"articleLead": "《2015中国年度报告》",
 	"articleHead": "如何读懂中国GDP？",
 	"articleSubhead": "",
 	"publishTime": "",
 	"byline": "",
-	"articleCover": {
-		"picture": {
-			"source": [],
-			"src": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fchina-gdp%2Fimages%2Fcover.jpg?source=ftchinese"	
-		}
-	},
+	"articleCover": false,
 	"sections": [
 		{
 			"id":"1",
+			"navText": "第一部分",
+			"sectionCover": {
+				"picture": {
+					"source": [],
+					"src": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fchina-gdp%2Fimages%2Fcover.jpg?source=ftchinese"	
+				}
+			},
 			"sectionBody": [
 				{
 					"colPrimary": [
@@ -81,6 +74,7 @@
 		},
 		{
 			"id": 2,
+			"navText": "第二部分",
 			"sectionHead": {
 				"viewportHeight": true,
 				"title": "官方数据的内在矛盾",
@@ -132,6 +126,7 @@
 		},
 		{
 			"id": 3,
+			"navText": "第三部分",
 			"sectionHead": {
 				"viewportHeight": true,
 				"title": "李克强指数仍有用吗？",
@@ -167,7 +162,7 @@
 						},
 						{
 							"video": {
-								"title": "视频：上海街头消费调查",
+								"videoTitle": "视频：上海街头消费调查",
 								"cc": {
 									"src":"http://p.bokecc.com/player?vid=4F61BBAAEAE419989C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
 								},

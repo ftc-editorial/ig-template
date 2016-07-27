@@ -6,6 +6,7 @@
 	"customCss": false,
 	"customJs": false,
 	"enableScroll": true,
+	"autoNav": false,
 	"iconsPath": "/bower_components/ftc-icons/",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 	"ogTitle": "缅甸失地农民",
@@ -19,7 +20,7 @@
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
 	},
 	"seriesTitle": "调查报道",
-	"autoNav": true,
+	
 	"articleHead": "缅甸失地农民",
 	"articleSubhead": "被打乱的生活",
 	"publishTime": "2016年3月25日",
