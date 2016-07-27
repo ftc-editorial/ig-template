@@ -1,6 +1,8 @@
 {{# sections}}
   <section class="section__container" id="section-{{id}}">
-    
+    {{# articleHead}}
+      {{> head}}
+    {{/ articleHead}}
     {{# sectionHead}}
     <div class="section__head{{#viewportHeight}} viewport-height{{/viewportHeight}}{{#sectionCover}} text-over-media{{/sectionCover}}">
 
@@ -84,10 +86,11 @@
 
     </div>
     {{/ sectionBody}}
-  </section>
-  
-  {{# adBanner}}
+  {{# adBanner}} 
     {{> partials/ad}}
   {{/ adBanner}}
+  </section>
+  
+
 
 {{/ sections}}
