@@ -7,6 +7,9 @@ const cssnext = require('postcss-cssnext');
 const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
 const merge = require('merge-stream');
+const rollupStream = require('rollup-stream');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
 const rollup = require('rollup').rollup;
 const buble = require('rollup-plugin-buble');
 const bowerResolve = require('rollup-plugin-bower-resolve');
@@ -105,9 +108,38 @@ gulp.task('styles', function styles() {
     .pipe(browserSync.stream({once:true}));
 });
 
+gulp.task('eslint', () => {
+  return gulp.src('client/js/*.js')
+    .pipe($.eslint())
+    .pipe($.eslint.format())
+    .pipe($.eslint.failAfterError());
+});
+
+gulp.task('js', () => {
+  return rollupStream({
+    entry: 'client/js/main.js',
+    treeshake: false,
+    plugins: [
+      bowerResolve(),
+      buble()
+    ],
+    cache: cache,
+    format: 'iife'
+  })
+  .pipe($.plumber())
+  .pipe(source('main.js', './scr'))
+  .pipe(buffer())
+  .pipe($.sourcemaps.init({loadMaps: true}))
+  .pipe($.rename('bundle.js'))
+  .pipe($.sourcemaps.write('.'))
+  .pipe(gulp.dest('.tmp/scripts'))
+  .pipe(browserSync.stream({once:true}));
+});
+
 gulp.task('rollup', () => {
   return rollup({
     entry: 'client/js/main.js',
+    treeshake: false,
     plugins: [
       bowerResolve(),
       buble()
@@ -130,7 +162,7 @@ gulp.task('rollup', () => {
 
 gulp.task('serve', 
   gulp.parallel(
-    'mustache', 'styles', 'rollup', 
+    'mustache', 'styles', 'js', 
 
     function serve() {
     browserSync.init({
@@ -150,7 +182,7 @@ gulp.task('serve',
 
     gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
 
-    gulp.watch('client/**/*.js', gulp.parallel('rollup'));
+    gulp.watch('client/**/*.js', gulp.parallel('js'));
   })
 );
 
