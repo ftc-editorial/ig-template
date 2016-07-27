@@ -109,7 +109,7 @@ class PageLogger {
 			return navEl;
 		}
 
-		if (config) {
+		if (document.documentElement.classList.contains('enable-autonav')) {
 			if (!config.navContainer) {
 				config.navContainer = document.body;
 			} else if (!(config.navContainer instanceof HTMLElement)) {
