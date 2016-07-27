@@ -19,22 +19,7 @@
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
 	},
 	"seriesTitle": "调查报道",
-	"toc": [{
-		"text": "1. 失去的土地",
-		"target": "section-1"
-	},{
-		"text": "2. 抱负",
-		"target": "section-2"
-	},{
-		"text": "",
-		"target": "section-3"
-	},{
-		"text": "",
-		"target": "section-4"
-	},{
-		"text": "",
-		"target": "section-5"
-	}],
+	"autoNav": true,
 	"articleHead": "缅甸失地农民",
 	"articleSubhead": "被打乱的生活",
 	"publishTime": "2016年3月25日",
@@ -67,6 +52,8 @@
 	"sections": [
 		{
 			"id":"1",
+			"navText": "1. 失去的土地",
+			"articleHead": false,
 			"sectionHead": {
 				"viewportHeight": true,
 				"title": "1. 失去的土地",
@@ -99,9 +86,7 @@
 							"figure": {
 								"mobileOnly": true,
 								"ratio": "",
-								"hasLink": {
-									"href": "https://www.ft.com/land"
-								},
+								"link": "https://www.ft.com/land",
 								"imgSrc": "./images/new_logo.png",
 								"caption": ""
 							}
@@ -241,16 +226,16 @@
 					],
 					"colSecondary": {
 						"sticky": true,
-						"figure":  [
-							{
-								"imgSrc": "./images/myanmarnumbers.png",
-								"caption": ""
-							},
-							{
-								"imgSrc": "./images/myan_num_36c.png",
-								"caption": ""
-							}
-						]
+						"scrollmation": true,
+						"figure":  {
+							"imgSrc": null,
+							"scrollSet": [
+								"./images/myanmarnumbers.png",
+								"./images/myan_num_36c.png",
+								"./images/myanmarnumbers2.png"
+							],
+							"caption": ""
+						}
 					}				
 				}
 			],
@@ -431,7 +416,8 @@
 								"另一位一直在缅甸工作的前英国外交官表示：“任何一个购买土地的人都很有可能发现自己陷入纠纷。”"
 							]
 						}
-					]
+					],
+					"colSecondary": {}
 				}
 			]
 		},
@@ -482,7 +468,8 @@
 								"他称，该土地计划用于开发旅游设施，造福当地社区，村民均得到了合理补偿。然而，他承诺会弄清村民抱怨的缘由。“我们从未抢夺金钱，也从未抢夺土地。我们不想败坏名声。”"
 							]
 						}
-					]
+					],
+					"colSecondary": {}
 				},
 				{
 					"fullspanMedia": {
