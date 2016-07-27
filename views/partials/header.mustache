@@ -19,12 +19,14 @@
       </div>
 
       <div class="o-header__center">
+        {{^ autoNav}}
         <div class="o-header__title">
           <span class="o-header__headline">{{articleHead}}</span>
           {{# englishEdition}}
           <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
           {{/ englishEdition}}          
         </div>
+        {{/ autoNav}}
       </div>
 
       <nav class="o-header__right" data-o-component="o-toggle">
@@ -43,8 +45,16 @@
         <ol class="o-header__nav" data-o-toggle-target>
           {{# toc}}
           <li class="o-header__nav-item">
-            <a class="o-header__nav-link" href="#{{target}}">{{text}}</a>
+            <a class="o-header__nav-link" href="#{{id}}">{{text}}</a>
           </li>
+          {{/ toc}}
+
+          {{^ toc}}
+            {{# sections}}
+            <li class="o-header__nav-item">
+              <a class="o-header__nav-link" href="#section-{{id}}">{{sectionHead.title}}</a>
+            </li>
+            {{/ sections}}
           {{/ toc}}
 
           {{# englishEdition}}
