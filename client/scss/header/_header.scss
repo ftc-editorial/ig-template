@@ -111,6 +111,10 @@
 }
 
 .o-header__auto-nav {
+	display: none;
+	@include oGridRespondTo(M) {
+		display: block;
+	}
 	.o-header__nav-link {
 		display: inline-block;
 		line-height: $o-header-height;

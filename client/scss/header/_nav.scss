@@ -1,7 +1,7 @@
 .o-share {
 	display: none;	
 	@include oGridRespondTo(M) {
-		display: inline-block;		
+		display: inline-block;
 		vertical-align: middle;
 	}
 }
@@ -59,6 +59,12 @@
 		}
 		.o-icons__cross {
 			display: inline-block;
+		}
+	}
+
+	.enable-autonav & {
+		@include oGridRespondTo(M) {
+			width: 0px;
 		}
 	}
 }
