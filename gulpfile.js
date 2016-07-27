@@ -182,7 +182,7 @@ gulp.task('serve',
 
     gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
 
-    gulp.watch('client/**/*.js', gulp.parallel('js'));
+    gulp.watch('client/**/*.js', gulp.parallel('rollup'));
   })
 );
 
