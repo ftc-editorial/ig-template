@@ -1,10 +1,10 @@
-<header class="article__head{{#articleCover}} viewport-height text-over-media{{/articleCover}}" id="nav-section-0">
+<header class="article__head{{#viewportHeight}} viewport-height text-over-media{{/viewportHeight}}">
   <div class="article__head-container" data-o-grid-container>
 
     <div class="article__head-wrapper">
-        <p class="article__head-lead">{{articleLead}}</p>
-        <h1 class="article__head-primary">{{articleHead}}</h1>
-        <p class="article__head-secondary">{{articleSubhead}}</p>
+        <p class="article__head-lead">{{lead}}</p>
+        <h1 class="article__head-primary">{{headline}}</h1>
+        <p class="article__head-secondary">{{subhead}}</p>
     </div>
     
     <div class="article__time-byline">
@@ -17,9 +17,7 @@
 
   </div><!-- data-o-grid-container -->
   
-  {{# articleCover}}
   <div class="fullspan-media__container">
     {{> partials/media}}
   </div>  
-  {{/ articleCover}}
 </header>

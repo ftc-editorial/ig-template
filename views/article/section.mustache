@@ -3,8 +3,9 @@
     {{# articleHead}}
       {{> head}}
     {{/ articleHead}}
+    
     {{# sectionHead}}
-    <div class="section__head{{#viewportHeight}} viewport-height{{/viewportHeight}}{{#sectionCover}} text-over-media{{/sectionCover}}">
+    <header class="section__head{{#viewportHeight}} viewport-height{{/viewportHeight}}{{#textOverMedia}} text-over-media{{/textOverMedia}}">
 
       <div class="section__head-container" data-o-grid-container>
         {{# title}}
@@ -21,7 +22,7 @@
       </div>  
       {{/ sectionCover}}
 
-    </div><!-- section__header -->
+    </header><!-- section__header -->
     {{/ sectionHead}}
 
     {{# sectionBody}}

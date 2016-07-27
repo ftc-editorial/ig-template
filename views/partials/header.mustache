@@ -21,15 +21,15 @@
       <div class="o-header__center">
         {{^ autoNav}}
         <div class="o-header__title">
-          <span class="o-header__headline">{{articleHead}}</span>
+          <span class="o-header__headline">{{articleHead.headline}}</span>
           {{# englishEdition}}
           <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
-          {{/ englishEdition}}          
+          {{/ englishEdition}}   
         </div>
         {{/ autoNav}}
       </div>
 
-      <nav class="o-header__right" data-o-component="o-toggle">
+      <div class="o-header__right" data-o-component="o-toggle">
         <div class="o-share{{# darkTheme}} o-share--dark{{/ darkTheme}}" data-o-component="o-share"></div>
 
         <button class="o-header__nav-toggle" data-o-toggle-button aria-controls=".o-header__nav">
@@ -55,7 +55,7 @@
           {{/ englishEdition}}
           </li>
         </ol>           
-      </nav>         
+      </div>         
     </div><!-- o-header__container -->    
 
 </header>

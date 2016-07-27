@@ -1,24 +1,26 @@
-<div>
+<figure class="section__figure" data-media-ratio="9/16">
+
   {{#videoTitle}}
-  <h4 class="section__video-title">{{videoTitle}}</h4>
+  <h4 class="section__figure-title">{{videoTitle}}</h4>
   {{/videoTitle}}
-  <div class="lazyload__outer section__video-container" data-media-ratio="9/16">
+
+  <div class="lazyload__outer section__video-container" >
     <div class="lazyload__inner">
       {{# cc}}
       <script src="{{{src}}}" type="text/javascript"></script>
       {{/ cc}}
-
-      {{# ft}}
-      <video class="section__video" preload="metadata" controls poster="{{{poster}}}">
-        {{# source}}
-        <source src="{{{src}}}" type="{{{type}}}">
-        {{/ source}}
-      </video>
-      {{/ ft}}
-
     </div>
+
+    {{# ft}}
+    <video class="section__figure-video lazyload__inner" preload="metadata" controls poster="{{{poster}}}">
+      {{# source}}
+      <source src="{{{src}}}" type="{{{type}}}">
+      {{/ source}}
+    </video>
+    {{/ ft}}
   </div>
+
   {{#caption}}
-  <p class="section__video-caption">{{caption}}</p>
+  <figcaption class="section__figure-caption">{{caption}}</figcaption>
   {{/caption}}  
-</div>
+</figure>

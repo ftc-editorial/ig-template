@@ -20,12 +20,13 @@
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
 	},
 	"seriesTitle": "调查报道",
-	
-	"articleHead": "缅甸失地农民",
-	"articleSubhead": "被打乱的生活",
-	"publishTime": "2016年3月25日",
-	"byline": "英国《金融时报》报道",
-	"articleCover": {
+	"articleHead": {
+		"viewportHeight": true,
+		"lead": "",
+		"headline": "缅甸失地农民",
+		"subhead": "被打乱的生活",
+		"publishTime": "2016年3月25日",
+		"byline": "英国《金融时报》报道",
 		"picture": {
 			"source": [
 				{
@@ -54,9 +55,9 @@
 		{
 			"id":"1",
 			"navText": "1. 失去的土地",
-			"articleHead": false,
 			"sectionHead": {
 				"viewportHeight": true,
+				"textOverMedia": true,
 				"title": "1. 失去的土地",
 				"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。"
 			},
@@ -172,6 +173,7 @@
 			"id": 2,
 			"sectionHead": {
 				"viewportHeight": true,
+				"textOverMedia": true,
 				"title": "2. 抱负",
 				"subTitle": ""
 			},
@@ -248,6 +250,7 @@
 			"id": 3,
 			"sectionHead": {
 				"viewportHeight": true,
+				"textOverMedia": true,
 				"title": "3. 村庄"			
 			},
 			"sectionCover": {
@@ -361,6 +364,7 @@
 			"id": 4,
 			"sectionHead": {
 				"viewportHeight": true,
+				"textOverMedia": true,
 				"title": "4. 导火索",
 				"subTitle": "任何一个购买土地的人都有可能发现自己陷入纠纷”"				
 			},
@@ -426,6 +430,7 @@
 			"id": 5,
 			"sectionHead": {
 				"viewportHeight": true,
+				"textOverMedia": true,
 				"title": "5. 赢家和输家",
 				"subTitle": "‘自从他们夺走了我们所有的土地，我们农民能做的只有哭’"			
 			},

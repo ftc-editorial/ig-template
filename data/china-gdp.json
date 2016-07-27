@@ -7,7 +7,7 @@
 	"customJs": false,
 	"enableScroll": true,
 	"autoNav": true,
-	"assetsPath": "/bower_components/ftc-icons/",
+	"iconsPath": "/bower_components/ftc-icons/",
 	"description": "讨论中国经济增长的虚实，一直是让经济观察者兴奋的议题。到底要如何读懂中国2015年关键经济数字？我们带你从头理解。",
 	"ogTitle": "数据报道：如何读懂中国GDP？- FT中文网",
 	"ogType": "article",
@@ -17,21 +17,18 @@
 	"pageTitle": "数据报道：如何读懂中国GDP？",
 	"englishEdition": {},
 	"seriesTitle": "2015中国年度报告",
-	"articleLead": "《2015中国年度报告》",
-	"articleHead": "如何读懂中国GDP？",
-	"articleSubhead": "",
-	"publishTime": "",
-	"byline": "",
-	"articleCover": false,
+
 	"sections": [
 		{
 			"id":"1",
 			"navText": "第一部分",
-			"sectionCover": {
+			"articleHead": {
+				"viewportHeight": true,
+				"lead": "《2015中国年度报告》",
+				"headline": "如何读懂中国GDP？",
 				"picture": {
-					"source": [],
 					"src": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fchina-gdp%2Fimages%2Fcover.jpg?source=ftchinese"	
-				}
+				}				
 			},
 			"sectionBody": [
 				{
@@ -77,6 +74,7 @@
 			"navText": "第二部分",
 			"sectionHead": {
 				"viewportHeight": true,
+				"textOverMedia": true,
 				"title": "官方数据的内在矛盾",
 				"subTitle": "数字非黑即白，但官方数据之间相互矛盾，是研究者的巨大考验。"
 			},
@@ -129,6 +127,7 @@
 			"navText": "第三部分",
 			"sectionHead": {
 				"viewportHeight": true,
+				"textOverMedia": true,
 				"title": "李克强指数仍有用吗？",
 				"subTitle": "用电量、铁路货运量及银行贷款，这三组数据被媒体称为“李克强指数”，一度被当作观察中国经济走势的重要指标。"
 			},
