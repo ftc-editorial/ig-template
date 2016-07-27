@@ -96,6 +96,7 @@
 	}
 }
 
+.o-header__auto-nav,
 .o-header__title {
 	box-sizing: border-box;
 	text-align: left;
@@ -107,6 +108,19 @@
 	top: 0;
 	bottom: 0;
 	text-align: center;
+}
+
+.o-header__auto-nav {
+	.o-header__nav-link {
+		display: inline-block;
+		line-height: $o-header-height;
+		color: rgba(255,255,255,0.6);
+
+		&:hover,
+		&.active {
+			color: white;
+		}
+	}
 }
 
 .o-header__headline,
