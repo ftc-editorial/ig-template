@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const toggleBtnAttribute = '[data-o-toggle-button]';
 const toggleTargetAttribute = '[data-o-toggle-target]';
 
@@ -80,6 +81,6 @@ Toggle.init = function(el) {
   }
 
   return toggleInstances;
-}
+};
 
 export default Toggle;

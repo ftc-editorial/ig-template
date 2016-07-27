@@ -1,14 +1,21 @@
-// const Share = require('ftc-share');
+/* eslint-disable no-console */
+
 import Share from 'ftc-share';
 import Toggle from './toggle';
 import Sticky from './sticky';
-import PageCounter from './pager';
+import Scrollmation from './scrollmation';
+
+import PageLogger from './page-logger';
 Share.init();
 Toggle.init();
 
-// Only enable sticky effect when HTML tag has `enabel-scrollmation` class.
+// Only enable sticky and scrollmation effects when HTML tag has `enabel-scrollmation` class.
 if (document.documentElement.classList.contains('enable-scrollmation')) {
-	new Sticky();	
+	// new Sticky();	
+	Sticky.init();
+	Scrollmation.init();
 }
 
-new PageCounter('.section__container');
+PageLogger.init('.section__container', {
+	navContainer: '.o-header__center'
+});

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const scrollmationRootAttr = '[data-o-component~=o-scrollmation]';
 const scrollmationTargetClass = '.o-scrollmation-target';
 const scrollmationSrcSetAttr = 'data-o-scrollmation-srcset';
@@ -51,7 +52,6 @@ class Scrollmation {
 
 		if (rectTop > this.start) {
 			this.setImage(0);
-			console.log('not started, using first image.');
 		} else {
 			if (movedDistance < this.allowedRange) {
 				const remainder = Math.floor( movedDistance / this.segmentDistance);
@@ -84,7 +84,9 @@ class Scrollmation {
 		}
 
 		window.addEventListener('scroll', handleScroll);
-		// window.addEventListener('load', handleScroll);
+		window.addEventListener('unload', function() {
+			window.removeEventListener('scroll', handleScroll);
+		});
 
 		return scrollInstances;
 	}
