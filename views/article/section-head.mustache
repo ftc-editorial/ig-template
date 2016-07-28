@@ -1,0 +1,19 @@
+<header class="section__head{{#viewportHeight}} viewport-height{{/viewportHeight}}{{#textOverMedia}} text-over-media{{/textOverMedia}}">
+
+  <div class="section__head-container" data-o-grid-container>
+    {{# title}}
+    <p class="section__head-lead">{{lead}}</p>
+    <h2 class="section__head-primary">{{title}}</h2>
+    {{/ title}}
+    {{# subTitle}}
+    <p class="section__head-secondary">{{subTitle}}</p>
+    {{/ subTitle}}
+  </div><!-- data-o-grid-container -->
+
+  {{# sectionCover}}
+  <div class="fullspan-media__container">
+    {{> partials/media}}
+  </div>  
+  {{/ sectionCover}}
+
+</header><!-- section__header -->
