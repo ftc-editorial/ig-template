@@ -64,3 +64,25 @@
   } 
 }
 
+.section__col-secondary {
+  .o-sticky-target {
+    padding: $o-header-height 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    height: 100vh;
+
+    &[aria-sticky="top"] {
+      position: absolute;
+      top: 0;
+    }
+    &[aria-sticky="fixed"] {
+      position: fixed;
+      top: 0;
+    }
+    &[aria-sticky="bottom"] {
+      position: absolute;
+      bottom: 0;
+
+    }
+  }  
+}

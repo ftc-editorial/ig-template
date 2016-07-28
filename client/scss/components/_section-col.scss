@@ -16,20 +16,4 @@
   @include oGridRespondTo(M) {
     @include igGridColWidth((12 - $ig-primary-col-width));
   }
-  .o-sticky-target {
-    padding: $o-header-height 0;
-    &[aria-sticky="top"] {
-      position: absolute;
-      top: 0;
-    }
-    &[aria-sticky="fixed"] {
-      position: fixed;
-      top: 0;
-    }
-    &[aria-sticky="bottom"] {
-      position: absolute;
-      bottom: 0;
-
-    }
-  }
 }
