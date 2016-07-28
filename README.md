@@ -1,24 +1,32 @@
 ## Gulp Commands
 
-### Pass your json file as a command line argument
+### Local Development
+Pass your json file's name (without extension) as an augument to gulp task:
 
-`gulp serve -i your-data-file-name.json`
+```
+gulp serve -i your-data-file-name
+```
 
-or
-
-`gulp serve --input=your-data-file-name.json`
-
-They are identical. It is the same with `gulp build`:
-
-`gulp build -i your-data-file-name.json`
+### Build
+```
+gulp build -i your-data-file-name
+```
 
 These gulp tasks will combine json data with mustache templates to build a static html file.
 
-To preview this project with default data (in the `model/example.json` file), simple run `gulp serve` or `gulp build`. You do not need to pass any arguments here.
+### Preview before deploy
+After `build` task:
+```
+gulp serve:dist
+``` 
 
-After running `gulp build`, you can run `gulp deploy` to server.
+### Deploy
+```
+gulp deploy -i your-data-file-name
+``` 
 
-NOTE: `gulp deploy` do not need any arguments.
+Any command withou argument will use the default demo data.
+
 
 ## Custom CSS/JS
 In you json file, set any of these fields to `true` will include those libraries:
