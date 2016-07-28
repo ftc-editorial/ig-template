@@ -162,7 +162,7 @@ gulp.task('rollup', () => {
 
 gulp.task('serve', 
   gulp.parallel(
-    'mustache', 'styles', 'js', 
+    'mustache', 'styles', 'rollup', 
 
     function serve() {
     browserSync.init({
