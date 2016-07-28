@@ -22,15 +22,14 @@ const config = require('./config.json');
 
 const knownOptions = {
   string: 'input',
-  default: {input: 'example'},
+  default: {input: 'myanmar'},
   alias: {i: 'input'}
 };
 
 const argv = minimist(process.argv.slice(2), knownOptions);
 
-const taskName = argv._[0];
-const articleDataFile = path.resolve(__dirname, 'data', argv.i + '.json');
-const footerDataFile = path.resolve(__dirname, 'data', 'footer.json');
+const contentFileName = path.resolve(__dirname, 'data', argv.i + '.json');
+const footerFileName = path.resolve(__dirname, 'data', 'footer.json');
 const projectName = argv.i;
 
 function readFilePromisified(filename) {
@@ -51,8 +50,8 @@ function readFilePromisified(filename) {
 gulp.task('mustache', function () {
   const DEST = '.tmp';
 
-  const dataFiles = [articleDataFile, footerDataFile];
-  const promisedData = dataFiles.map(readFilePromisified);
+  const fileNames = [contentFileName, footerFileName];
+  const promisedData = fileNames.map(readFilePromisified);
 
   return gulp.src('./views/index.mustache')
     .pipe($.data(function(file) {
@@ -78,6 +77,25 @@ gulp.task('mustache', function () {
     })) 
     .pipe(gulp.dest(DEST))
     .pipe(browserSync.stream({once:true}));
+});
+
+gulp.task('record', () => {
+  return Promise.all([contentFileName, 'demos/index.json'].map(readFilePromisified))
+    .then(function(contentArr) {
+      const parsedData = contentArr.map(JSON.parse);
+      const contentData = parsedData[0];
+      const indexData = parsedData[1];
+      const key = argv.i;
+      const value = contentData.articleCover ? contentData.articleCover.headline : contentData.sections[0].articleHead.headline;
+      indexData.items[key] = value;
+      return indexData;
+    })
+    .then(function(value) {
+      const data = JSON.stringify(value, 4);
+      fs.writeFile('demos/index.json', data, (err) => {
+
+      });
+    });
 });
 
 gulp.task('styles', function styles() {
@@ -167,7 +185,7 @@ gulp.task('serve',
     function serve() {
     browserSync.init({
       server: {
-        baseDir: ['.tmp', 'custom', 'demos'],
+        baseDir: ['.tmp', 'custom', 'images'],
         routes: {
           '/bower_components': 'bower_components'
         }
@@ -190,10 +208,10 @@ gulp.task('serve',
 gulp.task('useref', () => {
   return gulp.src('.tmp/index.html')
     .pipe($.useref({searchPath: ['.tmp', 'custom']}))
-    .pipe(gulp.dest('dist')); 
+    .pipe(gulp.dest('.tmp')); 
 });
 
-gulp.task('html', gulp.series('useref', function smoosh () {
+gulp.task('smoosher', gulp.series('useref', function smoosh () {
   return gulp.src('dist/index.html')
     .pipe($.smoosher())
     .pipe(gulp.dest('dist')); 
@@ -207,7 +225,8 @@ gulp.task('extras', function () {
 });
 
 gulp.task('images', function () {
-  const SRC = 'images/' + projectName + '/*.{svg,png,jpg,jpeg,gif}';
+  const SRC = path.resolve('images', projectName, '*.{svg,png,jpg,jpeg,gif}') ;
+  const DEST = path.resolve(config.assets, 'images', projectName);
 
   return gulp.src(SRC)
     .pipe($.imagemin({
@@ -215,7 +234,7 @@ gulp.task('images', function () {
       interlaced: true,
       svgoPlugins: [{cleanupIDs: false}]
     }))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest(DEST));
 });
 
 gulp.task('clean', function() {
@@ -240,12 +259,12 @@ gulp.task('prod', function() {
     });
 });
 
-gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'html', 'dev'));
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'smoosher', 'dev'));
 
 gulp.task('serve:dist', function() {
   browserSync.init({
     server: {
-      baseDir: ['dist'],
+      baseDir: ['dist', 'images'],
       routes: {
         '/bower_components': 'bower_components'
       }
@@ -254,11 +273,6 @@ gulp.task('serve:dist', function() {
 });
 
 /**********deploy***********/
-gulp.task('deploy:assets', function() {
-  return gulp.src(['dist/**/*.{csv,png,jpg,svg}'])
-    .pipe(gulp.dest(config.assets + projectName))
-});
-
 gulp.task('deploy:html', function() {
   console.log(path.resolve(__dirname, config.html));
   return gulp.src('dist/index.html')
@@ -281,95 +295,4 @@ gulp.task('deploy:html', function() {
     .pipe(gulp.dest(config.html));
 });
 
-gulp.task('deploy', gulp.series('build', gulp.parallel('deploy:assets', 'deploy:html')));
-
-/* demos */
-gulp.task("mustache:demos", function() {
-  const DEST = '.tmp';
-  const dataFiles = [articleDataFile, footerDataFile];
-
-  const promisedData = dataFiles.map(readFilePromisified);
-
-  const dark = gulp.src('./views/index.mustache')
-    .pipe($.data(function(file) {
-      return Promise.all(promisedData)
-        .then(function(value) {
-           const jsonData = value.map(JSON.parse);
-           const viewData = jsonData[0];
-           viewData.footer = jsonData[1];
-           return viewData;
-        });
-    }))   
-    .pipe($.mustache({}, {
-      extension: '.html'
-    }))
-    .pipe($.rename({
-      basename: 'dark-theme'
-    }))
-    .pipe(gulp.dest(DEST));
-
-  const light = gulp.src('./views/index.mustache')
-    .pipe($.data(function(file) {
-      return Promise.all(promisedData)
-        .then(function(value) {
-           const jsonData = value.map(JSON.parse);
-           const viewData = jsonData[0];
-           viewData.footer = jsonData[1];
-           viewData.darkTheme = false;
-           viewData.lightTheme = true;
-           return viewData;
-        });
-    }))   
-    .pipe($.mustache({}, {
-      extension: '.html'
-    }))
-    .pipe($.rename({
-      basename: 'light-theme'
-    }))
-    .pipe(gulp.dest(DEST));
-
-  return merge(dark, light);
-});
-
-gulp.task('copy:demos', function() {
-  return gulp.src('demos/index.html')
-    .pipe(gulp.dest('.tmp'))
-    .pipe(browserSync.stream({once: true}));
-});
-
-gulp.task('images:demos', function () {
-  return gulp.src('demos/images/*.{png,jpg,gif,svg}')
-    .pipe($.imagemin({
-      progressive: true,
-      interlaced: true,
-      svgoPlugins: [{cleanupIDs: false}]
-    }))
-    .pipe(gulp.dest('.tmp/images'));
-});
-
-gulp.task('build:demos', gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'rollup', 'images:demos'));
-
-gulp.task('watch:demos', 
-  gulp.parallel('copy:demos', 'mustache:demos', 'styles', 'rollup',
-    function serve() {
-    browserSync.init({
-      server: {
-        baseDir: ['demos', '.tmp'],
-        routes: {
-          '/bower_components': 'bower_components'
-        }
-      }
-    });
-
-    gulp.watch('client/**/*.{csv,svg,png,jpg}', browserSync.reload);
-    gulp.watch('client/**/**/*.scss', gulp.parallel('styles'));
-    gulp.watch('demos/*.html', gulp.parallel('copy:demos'));
-    gulp.watch(['views/**/*.mustache', 'data/*.json', 'demos/*.mustache'], gulp.parallel('mustache:demos'));
-    gulp.watch('client/**/*.js', gulp.parallel('rollup'));
-  })
-);
-
-gulp.task('demos', gulp.series('clean', 'build:demos', function(){
-  return gulp.src(['.tmp/**/**'])
-    .pipe(gulp.dest(config.assets + 'ig-template'));
-}));
+gulp.task('deploy', gulp.series('build', gulp.parallel('images', 'deploy:html')));
