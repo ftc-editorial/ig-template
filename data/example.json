@@ -20,7 +20,7 @@
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
 	},
 	"seriesTitle": "调查报道",
-	"articleHead": {
+	"articleCover": {
 		"viewportHeight": true,
 		"lead": "",
 		"headline": "缅甸失地农民",
@@ -49,7 +49,9 @@
 				}
 			],
 			"src": "images/sapienza_new-mr_osvv1bn.jpg"	
-		}
+		},
+		"cc": false,
+		"ft": false
 	},
 	"sections": [
 		{
