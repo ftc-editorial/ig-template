@@ -102,7 +102,7 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": true,
+						"sticky": false,
 						"figure": {
 							"link": "https://www.ft.com/land",
 							"imgSrc": "./images/new_logo.png",
@@ -229,14 +229,13 @@
 					],
 					"colSecondary": {
 						"sticky": true,
-						"scrollmation": true,
+						"slides": [
+							"./images/myanmarnumbers.png",
+							"./images/myan_num_36c.png",
+							"./images/myanmarnumbers2.png"
+						],
 						"figure":  {
 							"imgSrc": null,
-							"scrollSet": [
-								"./images/myanmarnumbers.png",
-								"./images/myan_num_36c.png",
-								"./images/myanmarnumbers2.png"
-							],
 							"caption": ""
 						}
 					}				

@@ -1,4 +1,7 @@
-<figure class="section__figure{{#mobileOnly}} section__figure--mobile{{/mobileOnly}}" data-media-ratio="{{ratio}}">
+<figure class="section__figure
+{{#mobileOnly}}section__figure--mobile{{/mobileOnly}}"
+data-media-ratio="{{ratio}}"
+>
 	{{# figureTitle}}
 	<h4 class="section__figure-title">{{figureTitle}}</h4>
 	{{/ figureTitle}}
@@ -7,13 +10,8 @@
   {{^ link}}<div{{/ link}}
   class="lazyload__outer"
   {{# link}}href="{{{link}}}"{{/ link}}>
-    <img src="{{{imgSrc}}}" class="section__figure-image lazyload__inner
-    {{#scrollmation}}
-    o-scrollmation-target
-    {{/scrollmation}}"
-    {{#scrollmation}}
-    data-o-scrollmation-srcset="{{#scrollSet}}{{{.}}} {{/scrollSet}}"
-    {{/scrollmation}}>
+    <img src="{{{imgSrc}}}" class="section__figure-image lazyload__inner"
+    data-slides-set="{{#slides}}{{{.}}} {{/slides}}">
   {{# link}}</a>{{/ link}}
   {{^ link}}</div>{{/ link}}         
   
