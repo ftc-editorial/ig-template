@@ -1,10 +1,36 @@
 .section__body[data-o-component="o-sticky"] {
   @include oColorsFor(ig-text-over-media, text);
+  
+  @include oGridRespondTo(M) {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, transparent);
+      z-index: 2;
+    }
+    .section__fullspan-media {     
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: auto;
+    }
+    .section__body-container {
+      padding-top: 450px;
+      padding-bottom: 250px;
+      position: relative;
+      z-index: 3;
+    }        
+  }
 
   @include oGridRespondTo($until: M) {
     .section__fullspan-media {
       position: relative;
-      //height: 542px;
       &:after {
         content: '';
         position: absolute;
@@ -21,68 +47,25 @@
       padding-bottom: 40px;
     }
   }
-  
-  @include oGridRespondTo(M) {
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, transparent);
-      z-index: 2;
-    }
-    .section__fullspan-media {     
-      z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: auto;
-      &[aria-sticky="top"] {
-
-      }
-      &[aria-sticky="fixed"] {
-        position: fixed;
-        top: 0;
-      }
-      &[aria-sticky="bottom"] {
-        position: absolute;
-        top: auto;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-    }
-    .section__body-container {
-      padding-top: 450px;
-      padding-bottom: 250px;
-      position: relative;
-      z-index: 3;
-    }        
-  } 
 }
 
-.section__col-secondary {
-  .o-sticky-target {
-    padding: $o-header-height 0;
-    box-sizing: border-box;
-    border: 1px solid red;
-    height: 100vh;
+.o-sticky-target {
+  padding: $o-header-height 0;
+  box-sizing: border-box;
+  height: 100vh;
 
-    &[aria-sticky="top"] {
-      position: absolute;
-      top: 0;
-    }
-    &[aria-sticky="fixed"] {
-      position: fixed;
-      top: 0;
-    }
-    &[aria-sticky="bottom"] {
-      position: absolute;
-      bottom: 0;
+  &[aria-sticky="top"] {
+    position: absolute;
+    top: 0;
+  }
+  &[aria-sticky="fixed"] {
+    position: fixed;
+    top: 0;
+  }
+  &[aria-sticky="bottom"] {
+    position: absolute;
+    bottom: 0;
 
-    }
-  }  
-}
+  }
+}  
+
