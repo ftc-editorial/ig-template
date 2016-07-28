@@ -17,7 +17,6 @@
 	"pageTitle": "数据报道：如何读懂中国GDP？",
 	"englishEdition": {},
 	"seriesTitle": "2015中国年度报告",
-
 	"sections": [
 		{
 			"id":"1",
@@ -28,7 +27,7 @@
 				"headline": "如何读懂中国GDP？",
 				"picture": {
 					"src": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fchina-gdp%2Fimages%2Fcover.jpg?source=ftchinese"	
-				}				
+				}
 			},
 			"sectionBody": [
 				{
@@ -57,7 +56,7 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": true,
+						"sticky": false,
 						"figure": {
 							"imgSrc": "http://interactive.ftchinese.com/china-gdp/./images/harryWu.jpg",
 							"caption": ""
@@ -108,7 +107,7 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": true,
+						"sticky": false,
 						"figure":  [
 							{
 								"imgSrc": "http://interactive.ftchinese.com/china-gdp/images/province.jpg",
