@@ -15,15 +15,11 @@
   <!-- smoosh-->
   <!-- build:css styles/bundle.css -->
   <link rel="stylesheet" type="text/css" href="styles/main.css">
-  <!-- endbuild -->
-  <!-- endsmoosh -->
 {{# customCss}}
-  <!-- smoosh -->
-  <!-- build:css styles/custom.css-->
   <link rel="stylesheet" type="text/css" href="styles/{{projectName}}.css">
+{{/ customCss}}
   <!-- endbuild -->
   <!-- endsmoosh -->
-{{/ customCss}}
 
 {{# analytics}}
   {{> partials/analytics}}
@@ -41,11 +37,7 @@
   {{> partials/footer}}
 {{/ footer}}
 
-<!-- smoosh -->
-<!-- build:js scripts/bundle.js-->
-<script src="scripts/bundle.js"></script>
-<!-- endbuild -->
-<!-- endsmoosh -->
+
 
 {{# highcharts}}
 <script src="/bower_components/highcharts/highcharts.js"></script>
@@ -55,13 +47,14 @@
 <script src="/bower_components/d3/d3.min.js"></script>
 {{/ d3}}
 
-{{# customJs}}
 <!-- smoosh -->
-<!-- build:js styles/custom.js -->
+<!-- build:js scripts/bundle.js-->
+<script src="scripts/bundle.js"></script>
+{{# customJs}}
 <script src="scripts/{{projectName}}.js"></script>
+{{/ customJs}}
 <!-- endbuild -->
 <!-- endsmoosh -->
-{{/ customJs}}
 
 <!-- build:js http://static.ftchinese.com/js/log.js?v=6 -->
 <script src=""></script>

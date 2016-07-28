@@ -186,21 +186,10 @@ gulp.task('serve',
   })
 );
 
-gulp.task('serve:dist', function() {
-  browserSync.init({
-    server: {
-      baseDir: ['dist'],
-      routes: {
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
-});
-
 /* build */
 gulp.task('useref', () => {
   return gulp.src('.tmp/index.html')
-    .pipe($.useref({searchPath: ['.tmp', 'data']}))
+    .pipe($.useref({searchPath: ['.tmp', 'custom']}))
     .pipe(gulp.dest('dist')); 
 });
 
@@ -253,6 +242,16 @@ gulp.task('prod', function() {
 
 gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'html', 'dev'));
 
+gulp.task('serve:dist', function() {
+  browserSync.init({
+    server: {
+      baseDir: ['dist'],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    }
+  });
+});
 
 /**********deploy***********/
 gulp.task('deploy:assets', function() {
