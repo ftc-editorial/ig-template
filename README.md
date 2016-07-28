@@ -25,7 +25,7 @@ gulp serve:dist
 gulp deploy -i your-data-file-name
 ``` 
 
-Any command withou argument will use the default demo data.
+Any command withou argument will use `myanmar.json` by default.
 
 
 ## Custom CSS/JS
