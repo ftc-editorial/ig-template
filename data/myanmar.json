@@ -14,7 +14,7 @@
 	"ogImage": "",
 	"ogUrl": "",
 	"pageTitle": "缅甸失地农民",
-	"wechatImage": "myanmar/sapienza_new-lr_cycwhld.jpg",	
+	"wechatImage": "/myanmar/sapienza_new-lr_cycwhld.jpg",	
 	"englishEdition": {
 		"text": "English",
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
@@ -33,18 +33,18 @@
 					"landscape": true,
 					"portrait": false,
 					"srcset": [
-						"myanmar/sapienza_new-lr_cycwhld.jpg 1100w,",
-						"myanmar/sapienza_new-mr_osvv1bn.jpg 1500w,",
-						"myanmar/sapienza_new-hr_f0hbatq.jpg"
+						"/myanmar/sapienza_new-lr_cycwhld.jpg 1100w,",
+						"/myanmar/sapienza_new-mr_osvv1bn.jpg 1500w,",
+						"/myanmar/sapienza_new-hr_f0hbatq.jpg"
 					]
 				},
 				{
 					"landscape": false,
 					"portrait": true,
 					"srcset": [
-						"./myanmar/sapienza_new_upright-lr_52x9hcu.jpg 1100w,",
-						"./myanmar/sapienza_new_upright-mr_ekp7ldm.jpg 1500w,",
-						"./myanmar/sapienza_new_upright-hr_jepwvb9.jpg"
+						"/myanmar/sapienza_new_upright-lr_52x9hcu.jpg 1100w,",
+						"/myanmar/sapienza_new_upright-mr_ekp7ldm.jpg 1500w,",
+						"/myanmar/sapienza_new_upright-hr_jepwvb9.jpg"
 					]
 				}
 			],
@@ -65,7 +65,7 @@
 			},
 			"sectionCover": {
 				"ft": {
-					"poster": "./myanmar/mpv-shot0001.jpg",
+					"poster": "/myanmar/mpv-shot0001.jpg",
 					"source": [
 						{
 							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
@@ -91,7 +91,7 @@
 								"mobileOnly": true,
 								"ratio": "",
 								"link": "https://www.ft.com/land",
-								"imgSrc": "./myanmar/new_logo.png",
+								"imgSrc": "/myanmar/new_logo.png",
 								"caption": ""
 							}
 						},
@@ -107,7 +107,7 @@
 						"sticky": false,
 						"figure": {
 							"link": "https://www.ft.com/land",
-							"imgSrc": "./myanmar/new_logo.png",
+							"imgSrc": "/myanmar/new_logo.png",
 							"caption": ""
 						}
 					}					
@@ -115,7 +115,7 @@
 				{
 					"fullspanMedia": {
 						"ft": {
-							"poster": "./myanmar/mpv-shot0002.jpg",
+							"poster": "/myanmar/mpv-shot0002.jpg",
 							"source": [
 								{
 									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_pjiqzqp.mp4",
@@ -139,7 +139,7 @@
 						{
 							"readMore": {
 								"link": "https://www.ft.com/land",
-								"imgSrc": "./myanmar/landrush_xref.png",
+								"imgSrc": "/myanmar/landrush_xref.png",
 								"title": "阅读更多",
 								"items": [
 									{
@@ -185,12 +185,12 @@
 						"landscape": false,
 						"portrait": false,
 						"srcset": [
-							"./myanmar/2560_getty_-factory-in-yangon-lr.jpg 1100w,",
-							"./myanmar/2560_getty_-factory-in-yangon-mr.jpg 1500w,",
-							"./myanmar/2560_getty_-factory-in-yangon-hr.jpg"
+							"/myanmar/2560_getty_-factory-in-yangon-lr.jpg 1100w,",
+							"/myanmar/2560_getty_-factory-in-yangon-mr.jpg 1500w,",
+							"/myanmar/2560_getty_-factory-in-yangon-hr.jpg"
 						]
 					}],
-					"src": "./myanmar/2560_getty_-factory-in-yangon-mr.jpg"
+					"src": "/myanmar/2560_getty_-factory-in-yangon-mr.jpg"
 				}				
 			},
 			"sectionBody": [
@@ -204,7 +204,7 @@
 						},
 						{
 							"figure": {
-								"imgSrc": "myanmar/3carlsberg-mr_voued4u.jpg",
+								"imgSrc": "/myanmar/3carlsberg-mr_voued4u.jpg",
 								
 								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
 								}		
@@ -218,7 +218,7 @@
 						{
 							"figure": {
 								"mobileOnly": true,
-								"imgSrc": "./myanmar/myanmarnumbers.png",
+								"imgSrc": "/myanmar/myanmarnumbers.png",
 								"caption": ""
 							}
 						},
@@ -232,9 +232,9 @@
 					"colSecondary": {
 						"sticky": true,
 						"slides": [
-							"./myanmar/myanmarnumbers.png",
-							"./myanmar/myan_num_36c.png",
-							"./myanmar/myanmarnumbers2.png"
+							"/myanmar/myanmarnumbers.png",
+							"/myanmar/myan_num_36c.png",
+							"/myanmar/myanmarnumbers2.png"
 						],
 						"figure":  {
 							"imgSrc": null,
@@ -256,7 +256,7 @@
 			},
 			"sectionCover": {
 				"ft": {
-					"poster": "myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg",
+					"poster": "/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg",
 					"source": [
 						{
 							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_3.mp4.mp4",
@@ -275,7 +275,7 @@
 						"sticky": true,
 						"picture": {
 							"source": [],
-							"src": "myanmar/oil_buildings-mr_l0sccsl.jpg"
+							"src": "/myanmar/oil_buildings-mr_l0sccsl.jpg"
 						}
 					},
 					"colPrimary": [
@@ -290,7 +290,7 @@
 						},
 						{
 							"figure": {
-								"imgSrc": "myanmar/water_from_cpnc_in_madae_island_2012_-mr_rtivasc.jpg",
+								"imgSrc": "/myanmar/water_from_cpnc_in_madae_island_2012_-mr_rtivasc.jpg",
 								
 								"caption": "中国石油天然气集团公司2012年建造了一个提供饮用水的水库，作为其投资计划的一部分。该公司在皎漂Madae岛上的粉顶建筑里设有总部。（新华/Corbis；路透)"
 							}
@@ -316,7 +316,7 @@
 						},
 						{
 							"figure": {
-								"imgSrc": "myanmar/hla_own_min__700wide-lr_fn0dkkp.jpg",
+								"imgSrc": "/myanmar/hla_own_min__700wide-lr_fn0dkkp.jpg",
 								"caption": 
 									"自从卖掉自己的土地后，拉翁梅（中）不得不干起体力活，只要是能干的活儿都接。她说，当初征地者承诺付给她的那个数字，她始终没有全额收到。"
 							}
@@ -333,7 +333,7 @@
 						{
 							"figure": {
 								"ratio": "7/5",
-								"imgSrc": "myanmar/win_naing_upright_steve-mr_54uwam9.jpg",
+								"imgSrc": "/myanmar/win_naing_upright_steve-mr_54uwam9.jpg",
 								"caption": "温乃在大宇的终端综合区里有一份园丁的工作。"
 							}
 						},
@@ -347,7 +347,7 @@
 						},
 						{
 							"figure": {
-								"imgSrc": "myanmar/shwe_at_700-lr_5mhb1qg.jpg",
+								"imgSrc": "/myanmar/shwe_at_700-lr_5mhb1qg.jpg",
 								"caption": "位于皎漂的天然气终端。（Nyaunt Win/EPA）"
 							}							
 						},
@@ -375,12 +375,12 @@
 						"landscape": false,
 						"portrait": false,
 						"srcset": [
-							"./myanmar/conflict-lr.jpg 1100w,",
-	        				"./myanmar/conflict-mr.jpg 1500w,",
-	        				"./myanmar/conflict-hr.jpg"
+							"/myanmar/conflict-lr.jpg 1100w,",
+	        				"/myanmar/conflict-mr.jpg 1500w,",
+	        				"/myanmar/conflict-hr.jpg"
 						]							
 					}],
-					"src": "myanmar/conflict-mr.jpg"
+					"src": "/myanmar/conflict-mr.jpg"
 				}
 			},
 			"sectionBody": [
@@ -395,7 +395,7 @@
 						},
 						{
 							"figure": {
-								"imgSrc": "myanmar/citic_agreement_in_naypyidaw_dshgcv9-mr_1d6gyub.jpg",
+								"imgSrc": "/myanmar/citic_agreement_in_naypyidaw_dshgcv9-mr_1d6gyub.jpg",
 								"caption": "2015年12月，一场特别典礼正在内比都举行。典礼是为了庆祝中国国企中信赢得在皎漂特别经济区建造一个工业园和深水港的合同。（U Aung/新华/Alamy Live News）"
 							}							
 						},
@@ -441,12 +441,12 @@
 						"landscape": false,
 						"portrait": false,
 						"srcset": [
-							"myanmar/this_famer_2-lr.jpg 1100w,",
-							"myanmar/this_famer_2-mr.jpg 1500w,",
-							"myanmar/this_famer_2-hr.jpg"
+							"/myanmar/this_famer_2-lr.jpg 1100w,",
+							"/myanmar/this_famer_2-mr.jpg 1500w,",
+							"/myanmar/this_famer_2-hr.jpg"
 						]						
 					}],
-					"src": "myanmar/this_famer_2-mr.jpg"
+					"src": "/myanmar/this_famer_2-mr.jpg"
 				}
 			},
 			"sectionBody": [
@@ -462,7 +462,7 @@
 						},
 						{
 							"figure": {
-								"imgSrc": "myanmar/inle2_4dqflxb-mr_9kvmmwh.jpg",
+								"imgSrc": "/myanmar/inle2_4dqflxb-mr_9kvmmwh.jpg",
 								"caption": "茵莱湖，缅甸主要旅游胜地之一。娘水镇周边的农民说，他们的土地被征用，计划用于开发旅游设施。"
 							}							
 						},
@@ -483,7 +483,7 @@
 						"sticky": true,
 						"picture": {
 							"source": [],
-							"src": "myanmar/tighter_maw-mr_6cqlaxv.jpg"
+							"src": "/myanmar/tighter_maw-mr_6cqlaxv.jpg"
 						}
 					},
 					"colPrimary": [
@@ -496,7 +496,7 @@
 						},
 						{
 							"figure": {
-								"imgSrc": "myanmar/kaung-3-mr_ilhlem6.jpg",
+								"imgSrc": "/myanmar/kaung-3-mr_ilhlem6.jpg",
 								"caption": "冈山吴，掸邦级别最高的文官"
 							}
 						},
@@ -539,7 +539,7 @@
 		],
 		"creditsCover": {
 			"ft": {
-				"poster": "./myanmar/boat-blinkie-backup-mr.jpg",
+				"poster": "/myanmar/boat-blinkie-backup-mr.jpg",
 				"source": [
 					{
 						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.mp4",
@@ -558,19 +558,19 @@
 		"items": [
 			{
 				"href": "https://ig.ft.com/sites/land-rush-investment/",
-				"imgSrc": "./myanmar/landrush_xrefpanel.png",
+				"imgSrc": "/myanmar/landrush_xrefpanel.png",
 				"title": "FT系列：全球土地调查",
 				"text": "Across continents, big investors are pouring in billions into one of the world's most precious resources – land. They promise progress. But their arrival can upend livelihoods and spark life-and-death struggles. <a href=\"https://ig.ft.com/sites/land-rush-investment/\">阅读更多</a>"
 			},
 			{
 				"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
-				"imgSrc": "./myanmar/xref_ethiopia-mr_qoad6xx.jpg",
+				"imgSrc": "/myanmar/xref_ethiopia-mr_qoad6xx.jpg",
 				"title": "埃塞俄比亚：百万富豪的农地",
 				"text": "Mohammed al-Amoudi has spent $200m planting a rice farm the size of 20,000 soccer pitches. But old grievances linger in this fertile corner of a land stalked by hunger."
 			},
 			{
 				"href": "https://ig.ft.com/sites/land-rush-investment/indonesia",
-				"imgSrc": "./myanmar/xref_indo-mr_8njq2rv.jpg",
+				"imgSrc": "/myanmar/xref_indo-mr_8njq2rv.jpg",
 				"title": "印尼：拯救地球",
 				"text": "Norway’s government has offered Indonesia a billion dollars to save its rainforests. Now its ministers are heading to the Borneo jungle to see if there is any chance of success."
 			},
