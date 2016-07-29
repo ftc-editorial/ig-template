@@ -9,11 +9,11 @@
     {{/ sectionHead}}
 
     {{# sectionBody}}
-    <div class="section__body"
+    <div class="section__body{{#textOverMedia}} text-over-media{{/textOverMedia}}"
     {{#fullspanMedia.sticky}}data-o-component="o-sticky"{{/fullspanMedia.sticky}}>
 
       {{# fullspanMedia}}
-      <div class="section__fullspan-media
+      <div class="fullspan-media__container
       {{#sticky}}o-sticky-target{{/sticky}}"
       {{#cc}}data-source="cc"{{/cc}}>
         {{> partials/media}}
@@ -56,7 +56,7 @@
           data-o-grid-col data-o-component="{{#sticky}}o-sticky{{/sticky}}">
             
             <div class="{{#sticky}}o-sticky-target{{/sticky}}"
-            {{#slides}}data-slides-target=".section__figure-image"{{/slides}}>
+            {{#slides}}data-slides-target="img"{{/slides}}>
             {{# figure}}
               {{> partials/figure}}
             {{/ figure}}  

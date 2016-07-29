@@ -7,6 +7,10 @@
   }
 }
 
+.viewport-height {
+  height: 100vh;
+}
+
 .article__head,
 .section__head {
   box-sizing: border-box;
@@ -18,28 +22,26 @@
   }
 }
 
-.text-over-media {
-  @include oColorsFor(ig-text-over-media, text);
-}
-
-.viewport-height {
-  height: 100vh;
-}
-
 .article__head-container,
 .section__head-container {
   position: relative;
   height: 100%;
 }
 
+// Ratio: the media's height/width.
+// It could be in the form `140%` or `7/5`.
 @include lazyloadMedia;
 
-.section__body {
-  position: relative;
-
-  &[data-o-component="o-sticky"] .section__figure-caption {
-    color: #ccc;
+[data-media-ratio="9/16"] {
+  .lazyload__outer {
+    @include igSetMediaRatio(9/16);
   }
+}
+[data-media-ratio="7/5"] {
+  width: 80%;
+  .lazyload__outer {
+    @include igSetMediaRatio(7/5);
+  } 
 }
 
 .more-on__title {

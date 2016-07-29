@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 15px 0;
 
+  .section__col-secondary & {
+  	padding: $o-header-height + 15px 0;
+  }
+
 	&--mobile {
 		display: block;
 	}
@@ -13,8 +17,10 @@
 		}
 	}
 
-	a, a:hover {
-		border-bottom: 0;
+	&--video {
+		.lazyload__outer {
+			background-color: #000;
+		}
 	}
 
 	&-title {
@@ -28,33 +34,21 @@
 	   line-height: 1.3;
 	}
 
-	&-image {
+	[data-o-component="o-sticky"] &-caption {
+		color: #ccc;
+	}
+	a, a:hover {
+		border-bottom: 0;
+	}
+
+	img {
 		object-fit: cover;	
 	}
 
-	&-video {
+	video {
 		box-sizing: border-box;
 		object-fit: contain;
 	}
-// Ratio: the media's height/width.
-// It could be in the form `140%` or `7/5`.
-
-	&[data-media-ratio="9/16"] {
-		.lazyload__outer {
-			@include igSetMediaRatio(9/16);
-		}
-	}
-
-	&[data-media-ratio="7/5"] {
-		width: 80%;
-
-		.lazyload__outer {
-			@include igSetMediaRatio(7/5);
-		}
-	}
 }
 
-.section__video-container {
-	background-color: #000;
-}
 

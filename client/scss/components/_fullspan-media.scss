@@ -1,36 +1,83 @@
-.fullspan-media {
-  &__container {
+.text-over-media {
+  @include oColorsFor(ig-text-over-media, text);
+  position: relative;
+
+  .fullspan-media__container {
     box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
     @include oColorsFor(ig-text-over-media, background);
     @include igBackgroundOverlay;
+
+    @include oGridRespondTo(M) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;      
+    }
+  }
+}
+
+.section__body.text-over-media {
+  @include oGridRespondTo(M) {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, transparent);
+      z-index: 2;
+    }
+
+    .fullspan-media__container {
+      bottom: auto;
+      height: 100vh;
+    }
+
+    .section__body-container {
+      padding-top: 450px;
+      padding-bottom: 250px;
+      position: relative;
+      z-index: 3;
+    }
   }
 
-  &__wrapper {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-  }
+  @include oGridRespondTo($until: M) {
+    .fullspan-media__container {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 30%;
+        background-image: linear-gradient(to bottom, transparent, #000);
+      }
+      background-image: linear-gradient(to top, #000 0%, transparent 30%, transparent);    
+    }
 
+    .section__body-container {
+      background-color: #000;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+
+.fullspan-media__wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.fullspan-media {
   box-sizing: border-box;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover; 
-}
-
-.section__fullspan-media {
-
-  .fullspan-media__wrapper[data-media-type="picture"] {
-    @include oGridRespondTo(M) {
-      height: 100vh;
-    }
-  }
-}
+} 
