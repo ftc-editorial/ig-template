@@ -7,6 +7,10 @@
   }
 }
 
+.viewport-height {
+  height: 100vh;
+}
+
 .article__head,
 .section__head {
   box-sizing: border-box;
@@ -16,14 +20,6 @@
   &.viewport-height {
     padding-bottom: 0;
   }
-}
-
-.text-over-media {
-  @include oColorsFor(ig-text-over-media, text);
-}
-
-.viewport-height {
-  height: 100vh;
 }
 
 .article__head-container,
@@ -46,11 +42,6 @@
   .lazyload__outer {
     @include igSetMediaRatio(7/5);
   } 
-}
-
-
-.section__body {
-  position: relative;
 }
 
 .more-on__title {

@@ -22,6 +22,7 @@ class Sticky {
 			console.log('Abort. Root element is heigher than sticky element. No need of scrollmantion effect.');
 			return;
 		}
+
 		config = config ||  {};
 
 		this.rootEl = rootEl;
@@ -29,40 +30,11 @@ class Sticky {
 		this.start = (config.start && typeof config.start === 'number') ? config.start : 0;
 		this.fixedRange = fixedRange;
 		this.state = '';
+		this.rootHeight = rootEl.offsetHeight;
+		this.targetHeight = targetEl.offsetHeight;
 
-		this.initSlides();
 		this.setTargetElWidth();
 		this.updatePosition();
-	}
-
-	initSlides() {
-		const slidesTargetClass = this.targetEl.getAttribute('data-slides-target');
-		if (!slidesTargetClass) {
-			console.log('Slides not enabled.')
-			return;
-		}
-		const imgEl = this.targetEl.querySelector(slidesTargetClass);
-
-		if (!imgEl) {
-			console.log('Cannot find slides image container.');
-			return;
-		}
-
-		const images = imgEl.getAttribute('data-slides-set').trim().split(' ');
-		const imageLen = images.length;
-		if (!imageLen) {
-			console.log('No slides images');
-			return;
-		}
-		const slideInterval = (this.fixedRange === 0 ) ? 0 : this.fixedRange / imageLen;
-
-		console.log(slideInterval);
-
-		this.enableSlides = true;
-		this.imgEl = imgEl;
-		this.images = images;
-		this.slideInterval = slideInterval;
-		this.currentImgIndex = -1;		
 	}
 
 	setState(newState) {
@@ -72,12 +44,6 @@ class Sticky {
 		}
 	}
 
-	setImage(index) {
-		if (this.currentImgIndex !== index) {
-			this.currentImgIndex = index;
-			this.imgEl.src = this.images[index];
-		}
-	}
 
 	setTargetElWidth() {
 		this.targetEl.style.width = this.rootEl.offsetWidth + 'px';
@@ -88,25 +54,14 @@ class Sticky {
 
 		if (rectTop > this.start) {
 			this.setState('top');
-			if (this.enableSlides) {
-				this.setImage(0);
-			}			
+			
 		} else if (rectTop <= this.start) {
 			const movedDistance = Math.abs(rectTop - this.start);
 
 			if (movedDistance < this.fixedRange) {
 				this.setState('fixed');
-
-				if (this.enableSlides) {
-					const remainder = Math.floor( movedDistance / this.slideInterval);
-					this.setImage(remainder);
-				}
-
 			} else {
 				this.setState('bottom');
-				if (this.enableSlides) {
-					this.setImage(this.images.length - 1);
-				}
 			}
 		}
 	}
@@ -125,6 +80,7 @@ class Sticky {
 		}
 
 		function handleScroll() {
+			console.log(stickyInstances);
 			for (let i = 0, len = stickyInstances.length; i < len; i++) {
 				stickyInstances[i].updatePosition();
 			}

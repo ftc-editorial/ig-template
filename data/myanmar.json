@@ -5,7 +5,7 @@
 	"d3": false,
 	"customCss": false,
 	"customJs": false,
-	"enableScroll": true,
+	"enableScroll": false,
 	"autoNav": false,
 	"iconsPath": "/bower_components/ftc-icons/",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
@@ -271,6 +271,7 @@
 			},
 			"sectionBody": [
 				{
+					"textOverMedia": true,
 					"fullspanMedia": {
 						"sticky": true,
 						"picture": {
@@ -479,6 +480,7 @@
 					"colSecondary": {}
 				},
 				{
+					"textOverMedia": true,
 					"fullspanMedia": {
 						"sticky": true,
 						"picture": {
