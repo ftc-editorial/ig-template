@@ -1,10 +1,10 @@
-<figure class="section__figure" data-media-ratio="9/16">
+<figure class="section__figure section__figure--video" data-media-ratio="9/16">
 
   {{#videoTitle}}
   <h4 class="section__figure-title">{{videoTitle}}</h4>
   {{/videoTitle}}
 
-  <div class="lazyload__outer section__video-container" >
+  <div class="lazyload__outer">
     <div class="lazyload__inner">
       {{# cc}}
       <script src="{{{src}}}" type="text/javascript"></script>
@@ -12,7 +12,7 @@
     </div>
 
     {{# ft}}
-    <video class="section__figure-video lazyload__inner" preload="metadata" controls poster="{{{poster}}}">
+    <video class="lazyload__inner" preload="metadata" controls poster="{{{poster}}}">
       {{# source}}
       <source src="{{{src}}}" type="{{{type}}}">
       {{/ source}}

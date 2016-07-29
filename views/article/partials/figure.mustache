@@ -1,7 +1,5 @@
-<figure class="section__figure
-{{#mobileOnly}}section__figure--mobile{{/mobileOnly}}"
-data-media-ratio="{{ratio}}"
->
+<figure class="section__figure section__figure--image
+{{#mobileOnly}}section__figure--mobile{{/mobileOnly}}" data-media-ratio="{{ratio}}">
 	{{# figureTitle}}
 	<h4 class="section__figure-title">{{figureTitle}}</h4>
 	{{/ figureTitle}}
@@ -10,8 +8,10 @@ data-media-ratio="{{ratio}}"
   {{^ link}}<div{{/ link}}
   class="lazyload__outer"
   {{# link}}href="{{{link}}}"{{/ link}}>
-    <img src="{{{imgSrc}}}" class="section__figure-image lazyload__inner"
+
+    <img src="{{{imgSrc}}}" class="lazyload__inner"
     data-slides-set="{{#slides}}{{{.}}} {{/slides}}">
+
   {{# link}}</a>{{/ link}}
   {{^ link}}</div>{{/ link}}         
   
