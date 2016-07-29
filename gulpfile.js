@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const url = require('url');
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const del = require('del');
@@ -179,16 +180,41 @@ gulp.task('prod', function() {
     });
 });
 
-gulp.task('useref', () => {
-  return gulp.src('.tmp/index.html')
-    .pipe($.useref({searchPath: ['.tmp', 'custom']}))
-    .pipe(gulp.dest('.tmp')); 
+gulp.task('custom', () => {
+  const SRC = 'custom/**/' + projectName + '.{js,css}';
+  const DEST = '.tmp';
+  console.log('Copy custom js and css files to:', DEST);
+
+  return gulp.src(SRC)
+    .pipe(gulp.dest(DEST));
 });
 
-gulp.task('smoosh', gulp.series('useref', function smoosh () {
+gulp.task('prefix', () => {
+  return gulp.src('.tmp/index.html')
+    .pipe($.cheerio(function($, file) {
+      $('picture source').each(function() {
+        var source = $(this);
+        var srcset = source.attr('srcset')
+        if (srcset) {
+          srcset = srcset.split(',').map(function(href) {
+            return url.resolve(config.imgPrefix, href).replace('%20', ' ');
+          }).join(', ');
+          source.attr('srcset', srcset);
+        }    
+      });
+    }))
+    .pipe(gulp.dest('dist'));
+})
+
+gulp.task('smoosh', gulp.series('custom', function smoosh () {
   return gulp.src('.tmp/index.html')
     .pipe($.smoosher({
       ignoreFilesNotFound: true
+    }))
+    .pipe($.useref())
+    .pipe($.rename({
+      basename: projectName, 
+      extname: '.html'
     }))
     .pipe(gulp.dest('dist')); 
 }));
@@ -201,8 +227,9 @@ gulp.task('extras', function () {
 });
 
 gulp.task('images', function () {
-  const SRC = path.resolve('images', projectName, '*.{svg,png,jpg,jpeg,gif}') ;
-  const DEST = path.resolve(config.assets, 'images', projectName);
+  const SRC = './images/' + projectName + '/*.{svg,png,jpg,jpeg,gif}' ;
+  const DEST = path.resolve(__dirname, config.assets, 'images', projectName);
+  console.log('Copying images to:', DEST);
 
   return gulp.src(SRC)
     .pipe($.imagemin({
@@ -222,10 +249,12 @@ gulp.task('clean', function() {
 gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'smoosh', 'dev'));
 
 gulp.task('serve:dist', function() {
+  const indexFile = projectName + '.html';
+
   browserSync.init({
     server: {
       baseDir: ['dist', 'images'],
-      index: 'argv.i' + '.html',
+      index:  indexFile,
       routes: {
         '/bower_components': 'bower_components'
       }
@@ -235,12 +264,22 @@ gulp.task('serve:dist', function() {
 
 /**********deploy***********/
 gulp.task('deploy:html', function() {
-  console.log(path.resolve(__dirname, config.html));
+  const DEST = path.resolve(__dirname, config.html)
+  console.log('Deploying built html file to:', DEST);
   return gulp.src('dist/index.html')
     .pipe($.prefix(config.imgPrefix))
-    .pipe($.rename({
-      basename: projectName, 
-      extname: '.html'
+// Gulp-prefix cannot prefix <srouce srcset="url, url2">. Do it manually.
+    .pipe($.cheerio(function($, file) {
+      $('picture source').each(function() {
+        var source = $(this);
+        var srcset = source.attr('srcset')
+        if (srcset) {
+          srcset = srcset.split(',').map(function(href) {
+            return url.resolve(config.imgPrefix, href).replace('%20', ' ');
+          }).join(', ');
+          source.attr('srcset', srcset);
+        }    
+      });
     }))
     .pipe($.htmlmin({
       removeComments: true,
@@ -253,32 +292,26 @@ gulp.task('deploy:html', function() {
       gzip: true,
       showFiles: true
     }))
-    .pipe(gulp.dest(config.html));
+    .pipe(gulp.dest(DEST));
 });
 
-gulp.task('deploy', gulp.series('build', gulp.parallel('images', 'deploy:html')));
+gulp.task('deploy', gulp.series('build', 'deploy:html'));
 
 // demos
-gulp.task('copy:demo', () => {
-  const src = 'custom/**/' + projectName + '.{js,css}';
-  console.log('Copy files to dist: ' + src);
-  return gulp.src(src)
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('dist:demo', () => {
+gulp.task('html:demo', () => {
+  console.log('Rename html to:', projectName, 'Copy all to: dist');
   return gulp.src('.tmp/**/*.{html,css,js,map}')
     .pipe($.if('index.html', $.rename({basename: projectName})))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('record', () => {
+// Build an index page listing all projects sent to test serve.
+gulp.task('index', () => {
   return Promise.all([contentFileName, 'demos/index.json'].map(readFilePromisified))
     .then((contentArr) => {
       const parsedData = contentArr.map(JSON.parse);
       const contentData = parsedData[0];
       const indexData = parsedData[1];
-      console.log(indexData);
       const key = argv.i;
       const value = contentData.articleCover ? contentData.articleCover.headline : contentData.sections[0].articleHead.headline;
       if (!indexData.items) {
@@ -292,7 +325,6 @@ gulp.task('record', () => {
       return indexData;
     })
     .then((value) => {
-      console.log(value)
       const res = nunjucks.render('demos/index.njk', value);
       fs.writeFile('dist/index.html', res, (err) => {
         console.log('dist/index.html created.');
@@ -306,3 +338,12 @@ gulp.task('record', () => {
       });
     });
 });
+
+gulp.task('copy:demo', () => {
+  const DEST = path.resolve(__dirname, config.assets, 'ig-template');
+  console.log('Copy demo of', projectName, 'to', DEST);
+  return gulp.src('dist/**/*.{html,js,css,map}')
+    .pipe(gulp.dest(DEST));
+});
+
+gulp.task('demo', gulp.series(gulp.parallel('mustache', 'styles', 'rollup', 'images', 'custom', 'index'), 'html:demo', 'copy:demo'));
