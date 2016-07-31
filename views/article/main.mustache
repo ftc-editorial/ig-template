@@ -1,8 +1,21 @@
 <article class="article" role="main">
-{{# articleCover}}
-	{{> article-head}}
-{{/ articleCover}}
-{{> section}}
-{{> credits}}
-{{> suggested-reads}}
+{{# articleHead}}
+	{{> ig-head}}
+{{/ articleHead}}
+
+{{# sections}}
+	{{> section}}
+{{/ sections}}
+
+{{# credits}}
+	{{> credits}}
+{{/ credits}}
+
+{{# suggestedReads}}
+	{{> suggested-reads}}
+{{/ suggestedReads}}
+
+{{# moreTopics}}
+	{{> more-topics}}
+{{/ moreTopics}} 
 </article>

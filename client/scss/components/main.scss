@@ -1,12 +1,16 @@
 @import "base";
-@import "fullspan-media";
-@import "article-head";
-@import "section-head";
-// @import "sticky";
-@import "section-col";
-@import "section-figure";
-@import "section-more-on";
-@import "section-quote";
+
+@import "ig-head";
+@import "ig-scrollmation";
+@import "ig-media";
+@import "ig-figure";
+@import "ig-blockquote";
+@import "ig-credits";
+@import "ig-more";
+
+@import "section-layout";
+@import "section-scrollmation";
 @import "section-ad";
-@import "credits";
+// @import "credits";
 @import "suggested-reads";
+@import "more-topics";

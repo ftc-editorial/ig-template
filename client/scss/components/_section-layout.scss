@@ -1,19 +1,24 @@
-.section__body-container {
+.section-body {
 	[data-o-grid-row] {
 		justify-content: center;
 	}
 }
-.section__col-primary {
+.section-body__primary {
   @include oGridRespondTo(M) {
     @include igGridColWidth($ig-primary-col-width);
   }
 }
 
-.section__col-secondary {
+.section-body__secondary {
   display: none;
   position: relative;
 
   @include oGridRespondTo(M) {
     @include igGridColWidth((12 - $ig-primary-col-width));
   }
+}
+
+.section-body__aside {
+  width: 100%;
+  height: 100%;
 }

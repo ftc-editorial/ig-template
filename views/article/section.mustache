@@ -1,67 +1,78 @@
-{{# sections}}
-  <section class="section__container" id="section-{{id}}">
-    {{# articleHead}}
-      {{> article-head}}
-    {{/ articleHead}}
+
+  <section class="section" id="section-{{id}}">
 
     {{# sectionHead}}
-      {{> section-head}}
+      {{> ig-head}}
     {{/ sectionHead}}
 
     {{# sectionBody}}
-    <div class="section__body{{#textOverMedia}} text-over-media{{/textOverMedia}}"
-    {{#fullspanMedia.sticky}}data-o-component="o-sticky"{{/fullspanMedia.sticky}}>
+    <div class="section-body
+    {{#credits}}
+    section-body--credits
+    {{/credits}}
+    {{#fullMedia.sticky}}
+    ig-scrollmation
+    {{/fullMedia.sticky}}">
 
-      {{# fullspanMedia}}
-      <div class="fullspan-media__container
-      {{#sticky}}o-sticky-target{{/sticky}}"
+      {{# fullMedia}}
+      <div class="section-media
+      {{#sticky}}ig-scrollmation__sticky{{/sticky}}"
       {{#cc}}data-source="cc"{{/cc}}>
-        {{> partials/media}}
+        {{> partials/ig-media}}
       </div>
-      {{/ fullspanMedia}}
+      {{/ fullMedia}}
 
-      <div class="section__body-container" data-o-grid-container>
+      <div class="section-body__container" data-o-grid-container>
         <div data-o-grid-row>
-          <div class="section__col-primary" data-o-grid-col>
+
+          {{# credits}}
+          <div data-o-grid-col>
+            {{> ig-credits}}
+          </div>
+          {{/ credits}}
+          
+          {{^ credits}}
+          <div class="section-body__primary" data-o-grid-col>
           {{# colPrimary}}
           
             {{# text}}
             <p>{{{.}}}</p>
             {{/ text}}
 
-            {{# figure}}
-              {{> partials/figure}}
-            {{/ figure}}
+            {{# image}}
+              {{> partials/ig-image}}
+            {{/ image}}
 
             {{# video}}
-              {{> partials/video}}
+              {{> partials/ig-video}}
             {{/ video}}
 
             {{# blockQuote}}
-              {{> partials/blockquote}}
+              {{> partials/ig-blockquote}}
             {{/ blockQuote}}
 
             {{# readMore}}
-            <div class="section__more-on">
-              {{> partials/figure}}              
-              {{> partials/more-on}}    
-            </div>
+              {{> partials/ig-more}}
             {{/ readMore}}
-
+            
           {{/ colPrimary}}
           </div><!-- col-primary -->
+          {{/ credits}}
 
           {{# colSecondary}}
-          <aside class="section__col-secondary"
-          data-o-grid-col data-o-component="{{#sticky}}o-sticky{{/sticky}}">
-            
-            <div class="{{#sticky}}o-sticky-target{{/sticky}}"
-            {{#slides}}data-slides-target="img"{{/slides}}>
-            {{# figure}}
-              {{> partials/figure}}
-            {{/ figure}}  
-            </div>
+          <aside class="section-body__secondary"
+          data-o-grid-col>
 
+            <div class="section-body__aside{{#image.sticky}} ig-scrollmation{{/image.sticky}}">
+
+              {{# image}}
+              <div class="viewport-height{{#sticky}} ig-scrollmation__sticky{{/sticky}}"
+              {{#slides}}data-slides-target="img"{{/slides}}>
+                {{> partials/ig-image}}
+              </div>
+              {{/ image}}
+
+            </div>
           </aside>
           {{/ colSecondary}}   
 
@@ -74,7 +85,3 @@
     {{> partials/ad}}
   {{/ adBanner}}
   </section>
-  
-
-
-{{/ sections}}

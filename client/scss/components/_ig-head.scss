@@ -1,0 +1,113 @@
+.ig-head {
+  box-sizing: border-box;
+  padding-top: $o-header-height; 
+  position: relative;
+  text-align: center;
+  @include oColorsFor(ig-text-over-media, text);
+}
+
+.ig-head__container {
+  position: relative;
+  height: 100%;
+}
+
+.ig-head__primary {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5%;
+  text-align: center;
+}
+
+.ig-head__lead {
+  margin: 0;
+  padding: 0;
+  @include oGridRespondTo(M) {
+    font-size: 28px;
+  }
+}
+// this is used as article title
+.ig-head__title {
+  box-sizing: border-box;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  @include oGridRespondTo(M) {
+    font-size: 100px;
+  }
+}
+// this is used as section title
+.ig-head__heading {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: 1.1;
+  @include oGridRespondTo(M) {
+    font-size: 48px;
+  }
+  .viewport-height & {
+    margin: 1em 0;
+    padding: 5% 0 12px 0;
+  }
+}
+
+.ig-head__subtitle {
+  font-size: 32px;
+  @include oGridRespondTo(M) {
+    font-size: 48px;
+  }
+}
+
+.ig-head__secondary {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+}
+
+.ig-head__intro {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em 0 0 0;
+  font-size: 20px;
+
+  @include oGridRespondTo(M) {
+    font-size: 26px;
+    min-width: 80%;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .viewport-height & {
+    padding: 5%;
+  }
+}
+
+.ig-head__byline {
+  border-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1em;
+  text-align: center;
+}
+
+.ig__timestamp,
+.ig__author {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.ig-head__background {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    @include oColorsFor(ig-media, background);
+    @include igBackgroundOverlay; 
+}

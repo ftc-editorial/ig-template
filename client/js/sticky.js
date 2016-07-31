@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-const stickyRootAttribute = '[data-o-component~=o-sticky]';
-const stickyTargetClass = '.o-sticky-target';
+const stickyRootSelector = '.ig-scrollmation';
+const stickyTargetSelector = '.ig-scrollmation__sticky';
 
 class Sticky {
 	constructor(rootEl, config) {
@@ -11,7 +11,7 @@ class Sticky {
 		}
 
 		const rootRect = rootEl.getBoundingClientRect();
-		const targetEl = rootEl.querySelector(stickyTargetClass);
+		const targetEl = rootEl.querySelector(stickyTargetSelector);
 
 		if (!targetEl) {
 			console.log('Abort. Sticky target does not exist for ' + this.rootEl);
@@ -74,7 +74,7 @@ class Sticky {
 			el = document.querySelector(el);
 		}
 
-		const stickyElements = el.querySelectorAll(stickyRootAttribute);
+		const stickyElements = el.querySelectorAll(stickyRootSelector);
 		for (let i = 0; i < stickyElements.length; i++) {
 			stickyInstances.push(new Sticky(stickyElements[i]));
 		}

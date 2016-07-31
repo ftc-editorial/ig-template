@@ -1,9 +1,9 @@
-.section__figure {
+.ig-figure {
   text-align: center;
   margin: 0 auto;
   padding: 15px 0;
 
-  .section__col-secondary & {
+  .section-body__secondary & {
   	padding: $o-header-height + 15px 0;
   }
 
@@ -23,18 +23,18 @@
 		}
 	}
 
-	&-title {
+	&__title {
 		margin: 1em 0 0.5em 0;
 	}
 
-	&-caption {
+	&__caption {
 	   @include oColorsFor(ig-caption, text);
 	   margin-top: 10px;
 	   font-size: 16px;
 	   line-height: 1.3;
 	}
 
-	[data-o-component="o-sticky"] &-caption {
+	.ig-scrollmation &__caption {
 		color: #ccc;
 	}
 	a, a:hover {

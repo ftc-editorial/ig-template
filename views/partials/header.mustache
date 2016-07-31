@@ -21,7 +21,7 @@
       <div class="o-header__center">
         {{^ autoNav}}
         <div class="o-header__title">
-          <span class="o-header__headline">{{articleCover.headline}}</span>
+          <span class="o-header__headline">{{articleHead.title}}</span>
           {{# englishEdition}}
           <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
           {{/ englishEdition}}   
@@ -44,9 +44,11 @@
         
         <ol class="o-header__nav" data-o-toggle-target>
           {{# sections}}
+          {{# navText}}
           <li class="o-header__nav-item">
-            <a class="o-header__nav-link" href="#section-{{id}}">{{navText}}{{^navText}}{{sectionHead.title}}{{/navText}}</a>
+            <a class="o-header__nav-link" href="#section-{{id}}">{{navText}}</a>
           </li>
+          {{/ navText}}
           {{/ sections}}
 
           {{# englishEdition}}

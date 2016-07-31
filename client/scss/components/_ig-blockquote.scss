@@ -1,10 +1,10 @@
-.section__blockquote {
+.ig-blockquote {
   padding: 1px 0px;
   margin: 30px auto;
   text-align: center;
   width: 80%;
   
-  .section__blockquote-text {
+  &__text {
     font-weight: normal;
     font-style: normal;
     font-size: 1.6em;
@@ -13,7 +13,7 @@
     padding: 0;
   }
 
-  .section__blockquote-caption {
+  &__caption {
     @include oColorsFor(ig-caption, text);
     line-height: 1.7;
     margin: 35px 0;

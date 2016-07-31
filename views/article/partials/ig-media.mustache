@@ -1,9 +1,8 @@
-
-<!--
+{{!-- 
 You can use cc video as section-head's background, but it's not recommended. 
 CC videos using swf have very wired styles. The result is unpredictable.
 But you can embed it in the text. On large screen the video might be scaled out of  the screen estate when using in this way.
--->
+--}}
 {{# cc}}
 <div class="lazyload__outer">
 	<div class="lazyload__inner">
@@ -12,14 +11,14 @@ But you can embed it in the text. On large screen the video might be scaled out 
 </div>
 {{/ cc}}
 
-<!-- 
+{{!-- 
 Fix chrome bug. Chrome does not respect the height when set object-fit:cover on video element.
 Add addintional wrapper and set `overflow:hidden;`
 See: http://stackoverflow.com/questions/30700144/responsive-object-fit-cover-fix-on-chrome
--->
+ --}}
 {{# ft}}
-<div class="fullspan-media__wrapper" data-media-type="video">
-  <video class="fullspan-media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
+<div class="ig-media__wrapper" data-media-type="video">
+  <video class="ig-media" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
     {{# source}}
     <source src="{{{src}}}" type="video/{{{type}}}">
     {{/ source}}
@@ -28,7 +27,7 @@ See: http://stackoverflow.com/questions/30700144/responsive-object-fit-cover-fix
 {{/ ft}}
 
 {{# picture}}
-<picture class="fullspan-media__wrapper" data-media-type="picture">
+<picture class="ig-media__wrapper" data-media-type="picture">
 	{{# source}}
   	<source
       {{#landscape}}media="(min-aspect-ratio: 1/1)"{{/landscape}}
@@ -36,6 +35,6 @@ See: http://stackoverflow.com/questions/30700144/responsive-object-fit-cover-fix
       srcset="{{#srcset}}{{{.}}}{{/srcset}}">
   {{/ source}}
 
-  <img class="fullspan-media" src="{{{src}}}">
+  <img class="ig-media" src="{{{src}}}">
 </picture>
 {{/ picture}}
