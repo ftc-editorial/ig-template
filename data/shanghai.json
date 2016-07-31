@@ -17,9 +17,9 @@
 	"wechatImage": "wechat's image",	
 	"englishEdition": {
 		"text": "English",
-		"href": ""
+		"href": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/"
 	},
-	"seriesTitle": "特别报道",
+	"seriesTitle": "特别报道 | 老外看中国",
 	"sections": [
 		{
 			"id":"1",
@@ -58,23 +58,17 @@
 						"cc": null,
 						"ft": null,
 						"picture": {
-							"source": [{
-								"landscape": true,
-								"portrait": false,
-								"srcset": [
-									"/shanghai/xu6118472taichi_practitioners-mr_8vdlp7y.jpeg 1100w,",
-									"/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg 1500w,",
-									"/shanghai/xu6118472taichi_practitioners-lr_db21cbl.jpeg"
-								]
-							}, {
-								"landscape": false,
-								"portrait": true,
-								"srcset": [
-									"url 1100w,",
-									"url 1500w,",
-									"url"
-								]
-							}],
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/shanghai/xu6118472taichi_practitioners-mr_8vdlp7y.jpeg 1100w,",
+										"/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg 1500w,",
+										"/shanghai/xu6118472taichi_practitioners-lr_db21cbl.jpeg"
+									]
+								}
+							],
 							"src": "/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg"	
 						}
 					},
@@ -718,7 +712,6 @@
 			"sectionBody": [
 				{
 					"fullMedia": "{{> ig-media.json}}",
-					"credits": "{{> ig-credits.json}}",
 					"colPrimary": [
 						{
 							"text": [
@@ -892,7 +885,7 @@
 					}
 				},
 				{
-					
+
 				}
 			],
 			"adBanner": null

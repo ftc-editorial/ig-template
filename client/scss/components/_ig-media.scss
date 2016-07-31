@@ -1,4 +1,4 @@
-.ig-media__wrapper {
+.ig-media {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-.ig-media {
+.ig-media__content {
   box-sizing: border-box;
   display: block;
   width: 100%;
