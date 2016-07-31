@@ -1,0 +1,23 @@
+{
+	"source": [
+		{
+			"landscape": true,
+			"portrait": false,
+			"srcset": [
+				"url 1100w,",
+				"url 1500w,",
+				"url"
+			]
+		},
+		{
+			"landscape": false,
+			"portrait": true,
+			"srcset": [
+				"url 1100w,",
+				"url 1500w,",
+				"url"
+			]
+		}
+	],
+	"src": "url"	
+}

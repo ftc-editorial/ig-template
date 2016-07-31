@@ -1,0 +1,15 @@
+{
+	"forArticle": false,
+	"viewportHeight": true,
+	"lead": null,
+	"title": null,
+	"heading": "",
+	"subtitle": null,
+	"intro": null,
+	"byline": null,
+	"background": {
+		"cc": "{{> media/cc.json}}",
+		"ft": "{{> media/ft.json}}",
+		"picture": "{{> media/picture.json}}"				
+	}				
+}

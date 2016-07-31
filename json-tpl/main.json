@@ -1,0 +1,31 @@
+{
+	"lightTheme": false,
+	"darkTheme": true,
+	"highcharts": false,
+	"d3": false,
+	"customCss": false,
+	"customJs": false,
+	"enableScroll": true,
+	"autoNav": false,
+	"iconsPath": "/bower_components/ftc-icons/",
+	"description": "",
+	"ogTitle": "",
+	"ogType": "article",
+	"ogImage": "",
+	"ogUrl": "",
+	"pageTitle": "",
+	"wechatImage": "",	
+	"englishEdition": {
+		"text": "English",
+		"href": ""
+	},
+	"seriesTitle": "",
+	"articleHead": "{{> ig-head.json}}",
+	"sections": [
+		"{{> section}}", 
+		"{{> section}}", 
+		"repeat"
+	],
+	"suggestedReads": "{{> sugested-reads.json}}",
+	"moreTopics": "{{> more-topics}}"
+}

@@ -1,0 +1,13 @@
+{
+	"id": "{{id}}",
+	"navText": "Text for navigation",
+	"sectionHead": "{{> ig-head.json}}",
+	"sectionBody": [
+		"{{> section-body.json}}", 
+		"{{> section-body.json}}",
+		"repeat..."
+	],
+	"adBanner": {
+		"src": ""
+	}
+}

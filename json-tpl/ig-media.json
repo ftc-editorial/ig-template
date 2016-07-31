@@ -1,0 +1,6 @@
+{
+	"sticky": false,
+	"cc": "{{> media/cc.json}}",
+	"ft": "{{> media/ft.json}}",
+	"picture": "{{> media/picture.json}}"
+}

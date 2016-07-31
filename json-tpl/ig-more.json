@@ -1,0 +1,27 @@
+{
+	"readMore": {
+		"image": {
+			"mobileOnly": false,
+			"ratio": null,
+			"title": null,
+			"link": null,
+			"src": null,
+			"caption": null
+		},
+		"title": null,
+		"items": [
+			{
+				"href": null,
+				"text": null
+			},
+			{
+				"href": null,
+				"text": null
+			},
+			{
+				"href": null,
+				"text": null
+			}
+		]
+	}
+}

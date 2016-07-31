@@ -1,0 +1,13 @@
+{
+	"poster": "url",
+	"source": [
+		{
+			"src": "url",
+			"type": "mp4"
+		}, 
+		{
+			"src": "url",
+			"type": "webm"
+		}
+	]
+}

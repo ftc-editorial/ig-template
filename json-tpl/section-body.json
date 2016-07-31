@@ -1,0 +1,27 @@
+{
+	"fullMedia": "{{> ig-media.json}}",
+	"credits": "{{> ig-credits.json}}",
+	"colPrimary": [
+		{
+			"text": [
+				"para1",
+				"para1"
+			]
+		}, 
+		{
+			"image": "{{> ig-image.json}}"
+		},
+		{
+			"video": "{{> ig-video.json}}"
+		},
+		{
+			"blockQuote": "{{> ig-blockquote.json}}"
+		},
+		{
+			"readMore": "{{> ig-more.json}}"
+		}
+	],
+	"colSecondary": {
+		"image": "{{> ig-image.json}}"
+	}	
+}
