@@ -21,13 +21,22 @@
 		{
 			"id":"1",
 			"navText": "第一部分",
-			"articleHead": {
+			"sectionHead": {
+				"forArticle": true,
 				"viewportHeight": true,
 				"lead": "《2015中国年度报告》",
-				"headline": "如何读懂中国GDP？",
-				"picture": {
-					"src": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fchina-gdp%2Fimages%2Fcover.jpg?source=ftchinese"	
-				}
+				"title": "如何读懂中国GDP？",
+				"heading": null,
+				"subtitle": "",
+				"intro": null,
+				"byline": null,
+				"background": {
+					"cc": null,
+					"ft": null,
+					"picture": {
+						"src": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fchina-gdp%2Fimages%2Fcover.jpg?source=ftchinese"	
+					}
+				}		
 			},
 			"sectionBody": [
 				{
@@ -41,9 +50,14 @@
 								"计算基础不同，是民间和官方数据落差的主因。"
 							]
 						}, {
-							"figure": {
+							"image": {
+								"sticky": false,
 								"mobileOnly": true,
-								"imgSrc": "http://interactive.ftchinese.com/china-gdp/./images/harryWu.jpg",
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "http://interactive.ftchinese.com/china-gdp/./images/harryWu.jpg",
+								"slides": [],
 								"caption": ""
 							}
 						}, {
@@ -56,9 +70,15 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": false,
-						"figure": {
-							"imgSrc": "http://interactive.ftchinese.com/china-gdp/./images/harryWu.jpg",
+						
+						"image": {
+							"sticky": false,
+							"mobileOnly": false,
+							"ratio": null,
+							"title": null,
+							"link": null,
+							"src": "http://interactive.ftchinese.com/china-gdp/./images/harryWu.jpg",
+							"slides": [],
 							"caption": ""
 						}
 					}					
@@ -72,16 +92,22 @@
 			"id": 2,
 			"navText": "第二部分",
 			"sectionHead": {
+				"forArticle": false,
 				"viewportHeight": true,
-				"textOverMedia": true,
-				"title": "官方数据的内在矛盾",
-				"subTitle": "数字非黑即白，但官方数据之间相互矛盾，是研究者的巨大考验。"
-			},
-			"sectionCover": {
-				"picture": {
-					"source": [],
-					"src": "http://interactive.ftchinese.com/china-gdp/images/kid.jpg"
-				}				
+				"lead": null,
+				"title": null,
+				"heading": "官方数据的内在矛盾",
+				"subtitle": null,
+				"intro": "数字非黑即白，但官方数据之间相互矛盾，是研究者的巨大考验。",
+				"byline": null,
+				"background": {
+					"cc": null,
+					"ft": null,
+					"picture": {
+						"source": [],
+						"src": "http://interactive.ftchinese.com/china-gdp/images/kid.jpg"
+					}			
+				}	
 			},
 			"sectionBody": [
 				{
@@ -99,21 +125,29 @@
 								"caption": ""
 							}
 						}, {
-							"figure": {
+							"image": {
+								"sticky": false,
 								"mobileOnly": true,
-								"imgSrc": "http://interactive.ftchinese.com/china-gdp/images/province.jpg",
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "http://interactive.ftchinese.com/china-gdp/images/province.jpg",
+								"slides": [],
 								"caption": ""
 							}
 						}
 					],
 					"colSecondary": {
-						"sticky": false,
-						"figure":  [
-							{
-								"imgSrc": "http://interactive.ftchinese.com/china-gdp/images/province.jpg",
-								"caption": ""
-							}
-						]
+						"image": {
+							"sticky": false,
+							"mobileOnly": false,
+							"ratio": null,
+							"title": null,
+							"link": null,
+							"src": "http://interactive.ftchinese.com/china-gdp/images/province.jpg",
+							"slides": [],
+							"caption": ""
+						}
 					}				
 				}
 			],
@@ -125,16 +159,22 @@
 			"id": 3,
 			"navText": "第三部分",
 			"sectionHead": {
+				"forArticle": false,
 				"viewportHeight": true,
-				"textOverMedia": true,
-				"title": "李克强指数仍有用吗？",
-				"subTitle": "用电量、铁路货运量及银行贷款，这三组数据被媒体称为“李克强指数”，一度被当作观察中国经济走势的重要指标。"
-			},
-			"sectionCover": {
-				"picture": {
-					"source": [],
-					"src": "http://interactive.ftchinese.com/china-gdp/images/steamTrain.jpg"
-				}
+				"lead": null,
+				"title": null,
+				"heading": "李克强指数仍有用吗？",
+				"subtitle": "",
+				"intro": "用电量、铁路货运量及银行贷款，这三组数据被媒体称为“李克强指数”，一度被当作观察中国经济走势的重要指标。",
+				"byline": null,
+				"background": {
+					"cc": null,
+					"ft": null,
+					"picture": {
+						"source": [],
+						"src": "http://interactive.ftchinese.com/china-gdp/images/steamTrain.jpg"
+					}				
+				}	
 			},
 			"sectionBody": [
 				{
@@ -145,9 +185,14 @@
 							]
 						},
 						{
-							"figure": {
+							"image": {
+								"sticky": false,
 								"mobileOnly": true,
-								"imgSrc": "http://interactive.ftchinese.com/china-gdp/images/li.jpg",
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "http://interactive.ftchinese.com/china-gdp/images/li.jpg",
+								"slides": [],
 								"caption": ""
 							}
 						},
@@ -160,7 +205,7 @@
 						},
 						{
 							"video": {
-								"videoTitle": "视频：上海街头消费调查",
+								"title": "视频：上海街头消费调查",
 								"cc": {
 									"src":"http://p.bokecc.com/player?vid=4F61BBAAEAE419989C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
 								},
@@ -179,61 +224,77 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": true,
-						"figure":  [
+						"image":  [
 							{
-								"imgSrc": "http://interactive.ftchinese.com/china-gdp/images/li.jpg",
+								"sticky": false,
+								"mobileOnly": false,
+								"ratio": null,
+								"title": null,
+								"src": "http://interactive.ftchinese.com/china-gdp/images/li.jpg",
+								"slides": [],
 								"caption": ""
 							}
+						]
+					}
+				},
+				{
+					"fullMedia": {
+						"sticky": false,
+						"cc": null,
+						"ft": null,
+						"picture": {
+							"source": [],
+							"src": "http://interactive.ftchinese.com/china-gdp/images/china_1.jpg" 
+						}
+					},
+					"credits": {
+						"title": "制作团队",
+						"items": [
+							"编辑：史书华",
+							"补充报道：蒋馨尔",
+							"前端工程：倪卫国"
 						]
 					}
 				}
 			]
 		}
 	],
-	"credits": {
-		"title": "制作团队",
-		"items": [
-			"编辑：史书华",
-			"补充报道：蒋馨尔",
-			"前端工程：倪卫国"
-		],
-		"creditsCover": {
-			"picture": {
-				"source": [],
-				"src": "http://interactive.ftchinese.com/china-gdp/images/china_1.jpg"	
-			}		
-		}
-	},
-	"moreOn": {
-		"sections":[
+	"moreTopics": {
+		"topics":[
 			{
 				"title": "回顾2015中国经济报道与分析：",
 				"items": [
 					{
 						"href": "http://www.ftchinese.com/story/001062430",
-						"text": "06/09 中国经济增速“被高估”"
+						"date": "06/09",
+						"text": " 中国经济增速“被高估”"
 					},
 					{
 						"href": "http://www.ftchinese.com/story/001064021",
-						"text": "09/18 中国经济数据虚实难辨"
+						"date": "09/18",
+						"text": " 中国经济数据虚实难辨"
 					},
 					{
 						"href": "http://www.ftchinese.com/story/001064212",
-						"text": "09/30 中国经济统计数据可信吗？"
+						"date": "09/30",
+						"text": "中国经济统计数据可信吗？"
 					},
 					{
 						"href": "http://www.ftchinese.com/story/001064428",
-						"text": "09/20 伍晓鹰：中国经济增速有多快？"
+						"date": "09/20",
+						"text": "伍晓鹰：中国经济增速有多快？"
 					},{
 						"href": "http://www.ftchinese.com/story/001064444",
-						"text": "10/20 分析：中国经济再平衡关键期"
+						"date": "10/20",
+						"text": " 分析：中国经济再平衡关键期"
 					},{
 						"href": "http://www.ftchinese.com/story/001065080",
-						"text": "12/02 需求端，供给端，还是改革端？"
+						"date": "12/02",
+						"text": "需求端，供给端，还是改革端？"
 					},{
 						"href": "http://www.ftchinese.com/story/001065154",
-						"text": "12/07 服务业成中国经济增长关键"
+						"date": "12/07",
+						"text": "服务业成中国经济增长关键"
 					}
 				]
 			}

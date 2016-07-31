@@ -9,6 +9,9 @@
 	}
 	&__items {
 		padding: 0.5em 0;
+		span {
+			padding-right: 0.5em
+		}
 	  a {
 	    line-height: 1.7;
 	    &:hover {

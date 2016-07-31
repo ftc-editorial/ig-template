@@ -17,10 +17,8 @@
 		}
 	}
 
-	&--video {
-		.lazyload__outer {
-			background-color: #000;
-		}
+	&__video {
+		background-color: #000;
 	}
 
 	&__title {

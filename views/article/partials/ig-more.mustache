@@ -6,7 +6,9 @@
 	<h3 class="ig-more__title">{{title}}</h3>
 	<ul class="ig-more__items">
 	{{# items}}
-	  <li><a href="{{{href}}}">{{text}}</a></li>
+	  <li>
+	  	{{#date}}<span>{{date}}</span>{{/date}}
+	  	<a href="{{{href}}}">{{text}}</a></li>
 	{{/ items}}
 	</ul>	
 </div>
