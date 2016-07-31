@@ -136,6 +136,8 @@ class PageLogger {
 			window.removeEventListener('scroll', handleScroll);
 			window.removeEventListener('resize', handleResize);
 		});
+		console.log(pageInstances);
+		return pageInstances;
 	}
 }
 

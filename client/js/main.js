@@ -13,6 +13,6 @@ if (document.documentElement.classList.contains('enable-scrollmation')) {
 	Sticky.init();
 }
 
-PageLogger.init('.section__container', {
+PageLogger.init('.section', {
 	navContainer: '.o-header__center'
 });

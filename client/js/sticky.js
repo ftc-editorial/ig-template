@@ -80,7 +80,6 @@ class Sticky {
 		}
 
 		function handleScroll() {
-			console.log(stickyInstances);
 			for (let i = 0, len = stickyInstances.length; i < len; i++) {
 				stickyInstances[i].updatePosition();
 			}
