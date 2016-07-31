@@ -5,8 +5,8 @@
 	"d3": false,
 	"customCss": false,
 	"customJs": false,
-	"enableScroll": false,
-	"autoNav": false,
+	"enableScroll": true,
+	"autoNav": null,
 	"iconsPath": "/bower_components/ftc-icons/",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 	"ogTitle": "缅甸失地农民",
@@ -20,38 +20,45 @@
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
 	},
 	"seriesTitle": "调查报道",
-	"articleCover": {
+	"articleHead": {
+		"forArticle": true,
 		"viewportHeight": true,
 		"lead": "",
-		"headline": "缅甸失地农民",
-		"subhead": "被打乱的生活",
-		"publishTime": "2016年3月25日",
-		"byline": "英国《金融时报》报道",
-		"picture": {
-			"source": [
-				{
-					"landscape": true,
-					"portrait": false,
-					"srcset": [
-						"/myanmar/sapienza_new-lr_cycwhld.jpg 1100w,",
-						"/myanmar/sapienza_new-mr_osvv1bn.jpg 1500w,",
-						"/myanmar/sapienza_new-hr_f0hbatq.jpg"
-					]
-				},
-				{
-					"landscape": false,
-					"portrait": true,
-					"srcset": [
-						"/myanmar/sapienza_new_upright-lr_52x9hcu.jpg 1100w,",
-						"/myanmar/sapienza_new_upright-mr_ekp7ldm.jpg 1500w,",
-						"/myanmar/sapienza_new_upright-hr_jepwvb9.jpg"
-					]
-				}
-			],
-			"src": "myanmar/sapienza_new-mr_osvv1bn.jpg"	
+		"title": "缅甸失地农民",
+		"heading": "",
+		"subtitle": "被打乱的生活",
+		"intro": "",
+		"byline": {
+			"publishTime": "2016年3月25日",
+			"author": "英国《金融时报》报道"
 		},
-		"cc": false,
-		"ft": false
+		"background": {
+			"cc": false,
+			"ft": false,
+			"picture": {
+				"source": [
+					{
+						"landscape": true,
+						"portrait": false,
+						"srcset": [
+							"/myanmar/sapienza_new-lr_cycwhld.jpg 1100w,",
+							"/myanmar/sapienza_new-mr_osvv1bn.jpg 1500w,",
+							"/myanmar/sapienza_new-hr_f0hbatq.jpg"
+						]
+					},
+					{
+						"landscape": false,
+						"portrait": true,
+						"srcset": [
+							"/myanmar/sapienza_new_upright-lr_52x9hcu.jpg 1100w,",
+							"/myanmar/sapienza_new_upright-mr_ekp7ldm.jpg 1500w,",
+							"/myanmar/sapienza_new_upright-hr_jepwvb9.jpg"
+						]
+					}
+				],
+				"src": "myanmar/sapienza_new-mr_osvv1bn.jpg"	
+			}			
+		}
 	},
 	"sections": [
 		{
@@ -59,23 +66,26 @@
 			"navText": "1. 失去的土地",
 			"sectionHead": {
 				"viewportHeight": true,
-				"textOverMedia": true,
-				"title": "1. 失去的土地",
-				"subTitle": "在缅甸，独裁统治的结束引发了围绕土地的争斗。"
-			},
-			"sectionCover": {
-				"ft": {
-					"poster": "/myanmar/mpv-shot0001.jpg",
-					"source": [
-						{
-							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
-							"type": "mp4"
-						},
-						{
-							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
-							"type": "webm"
-						}
-					]
+				"title": null,
+				"heading": "1. 失去的土地",
+				"subtitle": null,
+				"intro": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
+				"background": {
+					"cc": null,
+					"ft": {
+						"poster": "/myanmar/mpv-shot0001.jpg",
+						"source": [
+							{
+								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
+								"type": "mp4"
+							},
+							{
+								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
+								"type": "webm"
+							}
+						]
+					},
+					"picture": null				
 				}				
 			},
 			"sectionBody": [
@@ -87,12 +97,15 @@
 							]
 						},
 						{
-							"figure": {
+							"image": {
+								"sticky": false,
 								"mobileOnly": true,
-								"ratio": "",
+								"ratio": null,
+								"title": null,
 								"link": "https://www.ft.com/land",
-								"imgSrc": "/myanmar/new_logo.png",
-								"caption": ""
+								"src": "/myanmar/new_logo.png",
+								"slides": null,
+								"caption": null
 							}
 						},
 						{
@@ -104,16 +117,22 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": false,
-						"figure": {
+						"image": {
+							"sticky": false,
+							"mobileOnly": false,
+							"ratio": null,
+							"title": null,
 							"link": "https://www.ft.com/land",
-							"imgSrc": "/myanmar/new_logo.png",
-							"caption": ""
+							"src": "/myanmar/new_logo.png",
+							"slides": null,
+							"caption": null
 						}
 					}					
 				},
 				{
-					"fullspanMedia": {
+					"fullMedia": {
+						"sticky": false,
+						"cc": null,
 						"ft": {
 							"poster": "/myanmar/mpv-shot0002.jpg",
 							"source": [
@@ -126,7 +145,8 @@
 									"type": "webm"
 								}
 							]
-						}
+						},
+						"picture": null
 					},
 					"colPrimary": [
 						{
@@ -138,8 +158,14 @@
 						},
 						{
 							"readMore": {
-								"link": "https://www.ft.com/land",
-								"imgSrc": "/myanmar/landrush_xref.png",
+								"image": {
+									"mobileOnly": false,
+									"ratio": "1/2",
+									"title": null,
+									"link": "https://www.ft.com/land",
+									"src": "/myanmar/landrush_xref.png",
+									"caption": null
+								},
 								"title": "阅读更多",
 								"items": [
 									{
@@ -173,24 +199,27 @@
 		},
 		{
 			"id": 2,
+			"navText": "2. 抱负",
 			"sectionHead": {
 				"viewportHeight": true,
-				"textOverMedia": true,
-				"title": "2. 抱负",
-				"subTitle": ""
-			},
-			"sectionCover": {
-				"picture": {
-					"source": [{
-						"landscape": false,
-						"portrait": false,
-						"srcset": [
-							"/myanmar/2560_getty_-factory-in-yangon-lr.jpg 1100w,",
-							"/myanmar/2560_getty_-factory-in-yangon-mr.jpg 1500w,",
-							"/myanmar/2560_getty_-factory-in-yangon-hr.jpg"
-						]
-					}],
-					"src": "/myanmar/2560_getty_-factory-in-yangon-mr.jpg"
+				"lead": false,
+				"title": false,
+				"heading": "2. 抱负",
+				"subtitle": "",
+				"intro": "",
+				"background": {
+					"picture": {
+						"source": [{
+							"landscape": false,
+							"portrait": false,
+							"srcset": [
+								"/myanmar/2560_getty_-factory-in-yangon-lr.jpg 1100w,",
+								"/myanmar/2560_getty_-factory-in-yangon-mr.jpg 1500w,",
+								"/myanmar/2560_getty_-factory-in-yangon-hr.jpg"
+							]
+						}],
+						"src": "/myanmar/2560_getty_-factory-in-yangon-mr.jpg"
+					}				
 				}				
 			},
 			"sectionBody": [
@@ -203,9 +232,12 @@
 							]					
 						},
 						{
-							"figure": {
-								"imgSrc": "/myanmar/3carlsberg-mr_voued4u.jpg",
-								
+							"image": {
+								"mobileOnly": false,
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/myanmar/3carlsberg-mr_voued4u.jpg",								
 								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
 								}		
 						},
@@ -216,9 +248,12 @@
 							]
 						},
 						{
-							"figure": {
+							"image": {
 								"mobileOnly": true,
-								"imgSrc": "/myanmar/myanmarnumbers.png",
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/myanmar/myanmarnumbers.png",
 								"caption": ""
 							}
 						},
@@ -230,14 +265,18 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": true,
-						"slides": [
-							"/myanmar/myanmarnumbers.png",
-							"/myanmar/myan_num_36c.png",
-							"/myanmar/myanmarnumbers2.png"
-						],
-						"figure":  {
-							"imgSrc": null,
+						"image":  {
+							"sticky": true,
+							"mobileOnly": false,
+							"ratio": "",
+							"title": "",
+							"link": false,
+							"src": null,
+							"slides": [
+								"/myanmar/myanmarnumbers.png",
+								"/myanmar/myan_num_36c.png",
+								"/myanmar/myanmarnumbers2.png"
+							],
 							"caption": ""
 						}
 					}				
@@ -249,33 +288,39 @@
 		},
 		{
 			"id": 3,
+			"navText": "3. 村庄",
 			"sectionHead": {
 				"viewportHeight": true,
-				"textOverMedia": true,
-				"title": "3. 村庄"			
-			},
-			"sectionCover": {
-				"ft": {
-					"poster": "/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg",
-					"source": [
-						{
-							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_3.mp4.mp4",
-							"type": "mp4"
-						},
-						{
-							"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.webm",
-							"type": "webm"
-						}
-					]
-				}				
+				"lead": null,
+				"title": null,
+				"heading": "3. 村庄",
+				"subtitle": null,
+				"intro": null,
+				"byline": null,
+				"background": {
+					"ft": {
+						"poster": "/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg",
+						"source": [
+							{
+								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_3.mp4.mp4",
+								"type": "mp4"
+							},
+							{
+								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.webm",
+								"type": "webm"
+							}
+						]
+					}				
+				}						
 			},
 			"sectionBody": [
 				{
-					"textOverMedia": true,
-					"fullspanMedia": {
+					"fullMedia": {
 						"sticky": true,
+						"cc": null,
+						"ft": null,
 						"picture": {
-							"source": [],
+							"source": null,
 							"src": "/myanmar/oil_buildings-mr_l0sccsl.jpg"
 						}
 					},
@@ -290,8 +335,12 @@
 							]
 						},
 						{
-							"figure": {
-								"imgSrc": "/myanmar/water_from_cpnc_in_madae_island_2012_-mr_rtivasc.jpg",
+							"image": {
+								"mobileOnly": true,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/myanmar/water_from_cpnc_in_madae_island_2012_-mr_rtivasc.jpg",
 								
 								"caption": "中国石油天然气集团公司2012年建造了一个提供饮用水的水库，作为其投资计划的一部分。该公司在皎漂Madae岛上的粉顶建筑里设有总部。（新华/Corbis；路透)"
 							}
@@ -316,8 +365,12 @@
 							]
 						},
 						{
-							"figure": {
-								"imgSrc": "/myanmar/hla_own_min__700wide-lr_fn0dkkp.jpg",
+							"image": {
+								"mobileOnly": false,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/myanmar/hla_own_min__700wide-lr_fn0dkkp.jpg",
 								"caption": 
 									"自从卖掉自己的土地后，拉翁梅（中）不得不干起体力活，只要是能干的活儿都接。她说，当初征地者承诺付给她的那个数字，她始终没有全额收到。"
 							}
@@ -332,9 +385,12 @@
 							]
 						},
 						{
-							"figure": {
+							"image": {
+								"mobileOnly": false,
 								"ratio": "7/5",
-								"imgSrc": "/myanmar/win_naing_upright_steve-mr_54uwam9.jpg",
+								"title": null,
+								"link": null,
+								"src": "/myanmar/win_naing_upright_steve-mr_54uwam9.jpg",
 								"caption": "温乃在大宇的终端综合区里有一份园丁的工作。"
 							}
 						},
@@ -347,8 +403,12 @@
 							]
 						},
 						{
-							"figure": {
-								"imgSrc": "/myanmar/shwe_at_700-lr_5mhb1qg.jpg",
+							"image": {
+								"mobileOnly": false,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/myanmar/shwe_at_700-lr_5mhb1qg.jpg",
 								"caption": "位于皎漂的天然气终端。（Nyaunt Win/EPA）"
 							}							
 						},
@@ -364,25 +424,31 @@
 		},
 		{
 			"id": 4,
+			"navText": "4. 导火索",
 			"sectionHead": {
 				"viewportHeight": true,
-				"textOverMedia": true,
-				"title": "4. 导火索",
-				"subTitle": "任何一个购买土地的人都有可能发现自己陷入纠纷”"				
-			},
-			"sectionCover": {
-				"picture": {
-					"source": [{
-						"landscape": false,
-						"portrait": false,
-						"srcset": [
-							"/myanmar/conflict-lr.jpg 1100w,",
-	        				"/myanmar/conflict-mr.jpg 1500w,",
-	        				"/myanmar/conflict-hr.jpg"
-						]							
-					}],
-					"src": "/myanmar/conflict-mr.jpg"
-				}
+				"lead": null,
+				"title": null,
+				"heading": "4. 导火索",
+				"subtitle": null,
+				"intro": "“任何一个购买土地的人都有可能发现自己陷入纠纷”",
+				"byline": null,
+				"background": {
+					"cc": null,
+					"ft": null,
+					"picture": {
+						"source": [{
+							"landscape": false,
+							"portrait": false,
+							"srcset": [
+								"/myanmar/conflict-lr.jpg 1100w,",
+		        				"/myanmar/conflict-mr.jpg 1500w,",
+		        				"/myanmar/conflict-hr.jpg"
+							]							
+						}],
+						"src": "/myanmar/conflict-mr.jpg"
+					}
+				}								
 			},
 			"sectionBody": [
 				{
@@ -395,8 +461,12 @@
 							]
 						},
 						{
-							"figure": {
-								"imgSrc": "/myanmar/citic_agreement_in_naypyidaw_dshgcv9-mr_1d6gyub.jpg",
+							"image": {
+								"mobileOnly": false,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/myanmar/citic_agreement_in_naypyidaw_dshgcv9-mr_1d6gyub.jpg",
 								"caption": "2015年12月，一场特别典礼正在内比都举行。典礼是为了庆祝中国国企中信赢得在皎漂特别经济区建造一个工业园和深水港的合同。（U Aung/新华/Alamy Live News）"
 							}							
 						},
@@ -424,31 +494,35 @@
 							]
 						}
 					],
-					"colSecondary": {}
+					"colSecondary": true
 				}
 			]
 		},
 		{
 			"id": 5,
+			"navText": "5. 赢家和输家",
 			"sectionHead": {
 				"viewportHeight": true,
-				"textOverMedia": true,
-				"title": "5. 赢家和输家",
-				"subTitle": "‘自从他们夺走了我们所有的土地，我们农民能做的只有哭’"			
-			},
-			"sectionCover": {
-				"picture": {
-					"source": [{
-						"landscape": false,
-						"portrait": false,
-						"srcset": [
-							"/myanmar/this_famer_2-lr.jpg 1100w,",
-							"/myanmar/this_famer_2-mr.jpg 1500w,",
-							"/myanmar/this_famer_2-hr.jpg"
-						]						
-					}],
-					"src": "/myanmar/this_famer_2-mr.jpg"
-				}
+				"lead": null,
+				"title": null,
+				"heading": "5. 赢家和输家",
+				"subtitle": null,
+				"intro": "‘自从他们夺走了我们所有的土地，我们农民能做的只有哭’",
+				"byline": null,
+				"background": {
+					"picture": {
+						"source": [{
+							"landscape": false,
+							"portrait": false,
+							"srcset": [
+								"/myanmar/this_famer_2-lr.jpg 1100w,",
+								"/myanmar/this_famer_2-mr.jpg 1500w,",
+								"/myanmar/this_famer_2-hr.jpg"
+							]						
+						}],
+						"src": "/myanmar/this_famer_2-mr.jpg"
+					}
+				}						
 			},
 			"sectionBody": [
 				{
@@ -462,8 +536,12 @@
 							]
 						},
 						{
-							"figure": {
-								"imgSrc": "/myanmar/inle2_4dqflxb-mr_9kvmmwh.jpg",
+							"image": {
+								"mobileOnly": false,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/myanmar/inle2_4dqflxb-mr_9kvmmwh.jpg",
 								"caption": "茵莱湖，缅甸主要旅游胜地之一。娘水镇周边的农民说，他们的土地被征用，计划用于开发旅游设施。"
 							}							
 						},
@@ -477,14 +555,13 @@
 							]
 						}
 					],
-					"colSecondary": {}
+					"colSecondary": true
 				},
 				{
-					"textOverMedia": true,
-					"fullspanMedia": {
+					"fullMedia": {
 						"sticky": true,
 						"picture": {
-							"source": [],
+							"source": null,
 							"src": "/myanmar/tighter_maw-mr_6cqlaxv.jpg"
 						}
 					},
@@ -497,8 +574,12 @@
 							]
 						},
 						{
-							"figure": {
-								"imgSrc": "/myanmar/kaung-3-mr_ilhlem6.jpg",
+							"image": {
+								"mobileOnly": false,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/myanmar/kaung-3-mr_ilhlem6.jpg",
 								"caption": "冈山吴，掸邦级别最高的文官"
 							}
 						},
@@ -515,48 +596,58 @@
 						}
 					],
 					"colSecondary": true
-				},
-				{
-					"fullspanMedia": {
-						"cc": {
-							"src": "http://p.bokecc.com/player?vid=3911C434C7B707389C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
-						}
-					}
 				}
 			]
+		}, {
+			"id": 6,
+			"sectionBody": [{
+				"fullMedia": {
+					"sticky": false,
+					"cc": {
+						"src": "http://p.bokecc.com/player?vid=3911C434C7B707389C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
+					},
+					"ft": null,
+					"picture": null
+				}
+			}, {
+				"fullMedia": {
+					"sticky": false,
+					"cc": null,
+					"ft": {
+						"poster": "/myanmar/boat-blinkie-backup-mr.jpg",
+						"source": [
+							{
+								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.mp4",
+								"type": "mp4"
+							},
+							{
+								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.webmhd.webm",
+								"type": "webm"
+							}
+						]	
+					},
+					"picture": null
+				},
+				"credits": {
+					"title": "制作团队",
+					"items": [
+						"项目经理：Christine Spolar",
+						"文字報道：Michael Peel",
+						"设计暨制作：Kari-Ruth Pedersen",
+						"编辑：Christine Spolar, Sue Matthias, Orla Ryan and Chinny Li",
+						"地图：Steve Bernard",
+						"摄影图像：Steve Sapienza, Reuters, EPA",
+						"视频：Steve Sapienza of the Pulitzer Center on Crisis Reporting",
+						"翻译：何黎",
+						"中文网制作：史书华、倪卫国"
+					]
+				}
+			}]
 		}
 	],
-	"credits": {
-		"title": "制作团队",
-		"items": [
-			"项目经理：Christine Spolar",
-			"文字報道：Michael Peel",
-			"设计暨制作：Kari-Ruth Pedersen",
-			"编辑：Christine Spolar, Sue Matthias, Orla Ryan and Chinny Li",
-			"地图：Steve Bernard",
-			"摄影图像：Steve Sapienza, Reuters, EPA",
-			"视频：Steve Sapienza of the Pulitzer Center on Crisis Reporting",
-			"翻译：何黎",
-			"中文网制作：史书华、倪卫国"
-		],
-		"creditsCover": {
-			"ft": {
-				"poster": "/myanmar/boat-blinkie-backup-mr.jpg",
-				"source": [
-					{
-						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.mp4",
-						"type": "mp4"
-					},
-					{
-						"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.webmhd.webm",
-						"type": "webm"
-					}
-				]	
-			}		
-		}
-	},
+
 	"suggestedReads": {
-		"title": "",
+		"title": null,
 		"items": [
 			{
 				"href": "https://ig.ft.com/sites/land-rush-investment/",
@@ -583,8 +674,8 @@
 			}
 		]
 	},
-	"moreOn": {
-		"sections":[
+	"moreTopics": {
+		"topics":[
 			{
 				"title": "缅甸相关阅读",
 				"items": [
