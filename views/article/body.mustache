@@ -1,23 +1,35 @@
 <section class="section" id="section-{{id}}">
-
-  <div class="section-block ig-scrollmation">
-
+  
+  {{# sectionBlock}}
+  <div class="section-block ig-scrollmation viewport-height">
+    
+    {{# sectionMedia}}
     <div class="section-media ig-scrollmation__sticky">
       {{> partials/ig-media}}
     </div>
+    {{/ sectionMedia}}
 
-    <header class="ig-head ig-head--article" data-o-grid-container>
-      {{> ig-head}}
-    </header>
+    {{# }}
+    <div class="section-text-over-media" data-o-grid-container>
+      {{# head}}
+        {{> ig-head}}
+      {{/ head}}
 
-    <div class="text-over-media" data-o-grid-container>
-      <p></p>
-      {{> ig-credits}}
+      {{# text}}
+      <p>{{{.}}}</p>
+      {{/ text}}
+      
+      {{# credits}}
+        {{> ig-credits}}
+      {{/ credits}}
     </div>
+    {{/ }}
 
+    {{# cols}}
     <div class="section-cols" data-o-grid-container>
       <div data-o-grid-row>
         <div class="section-col__primary" data-o-grid-col>
+        {{# colPrimary}}
           {{# text}}
           <p>{{{.}}}</p>
           {{/ text}}
@@ -25,15 +37,36 @@
           {{# image}}
             {{> partials/ig-image}}
           {{/ image}}
-
           
-        </div>
+          {{# video}}
+            {{> partials/ig-video}}
+          {{/ video}}
 
-        <div class="section-col__secondary" data-o-grid-col>
-          
+          {{# quote}}
+            {{> partials/ig-quote}}
+          {{/ quote}}
+
+          {{# readMore}}
+            {{> partials/ig-more}}
+          {{/ readMore}}
+        {{/ colPrimary}}
         </div>
+        
+        {{# colSecondary}}
+        <div class="section-col__secondary ig-scrollmation" data-o-grid-col>
+
+          <div class="ig-scrollmation__sticky">
+          {{# image}}
+            {{> partials/ig-image}}
+          {{image}}
+          </div>
+
+        </div>
+        {{/ colSecondary}}
       </div>
     </div>
+    {{/ cols}}
 
   </div>
+  {{/ sectionBlock}}
 </section>
