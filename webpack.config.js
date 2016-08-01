@@ -5,7 +5,7 @@ module.exports = {
 	// entry: './client/js/main.js',
 	output: {
 		path: path.join(__dirname, '.tmp/scripts'),
-		filename: 'bundle.js',
+		filename: 'main.js',
 		sourceMapFilename: '[file].map'
 	},
 	watch: true,
@@ -14,7 +14,10 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				exclude: /(node_modules)/,
+				include: [
+					path.resolve(__dirname, 'client/js'),
+					path.resolve(__dirname, 'bower_components')
+				],
 				loader: 'babel',
 				query: {
 					presets: ['es2015']

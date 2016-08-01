@@ -13,8 +13,9 @@ const buffer = require('vinyl-buffer');
 const rollup = require('rollup').rollup;
 const buble = require('rollup-plugin-buble');
 const bowerResolve = require('rollup-plugin-bower-resolve');
-
 const nunjucks = require('nunjucks');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 
 var cache;
 
@@ -116,6 +117,46 @@ gulp.task('eslint', () => {
     .pipe($.eslint.failAfterError());
 });
 
+gulp.task('webpack', function(done) {
+  const DEST = '.tmp/scripts/';
+  return gulp.src('client/js/main.js')
+    .pipe(webpackStream(webpackConfig, null, function(err, stats) {
+      $.util.log(stats.toString({
+          colors: $.util.colors.supportsColor,
+          chunks: false,
+          hash: false,
+          version: false
+      }));
+      browserSync.reload({once: true});
+    }))
+    .pipe(gulp.dest(DEST));
+});
+
+
+
+gulp.task('serve', 
+  gulp.parallel(
+    'mustache', 'styles', 'webpack', 
+
+    function serve() {
+    browserSync.init({
+      server: {
+        baseDir: ['.tmp', 'custom', 'images'],
+        routes: {
+          '/bower_components': 'bower_components'
+        }
+      },
+      files: 'custom/**/*.{css,js,csv}'
+    });
+
+    gulp.watch(['views/**/**/*.mustache', 'data/*.json'], gulp.parallel('mustache'));
+
+    gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
+  })
+);
+
+/* build */
+// use rollup and buble to build js
 gulp.task('rollup', () => {
   return rollup({
     entry: 'client/js/main.js',
@@ -134,36 +175,9 @@ gulp.task('rollup', () => {
       // moduleId: 'ftc-share',
       dest: '.tmp/scripts/main.js',
       sourceMap: true,
-    }).then(function() {
-      browserSync.reload('main.js');
     });
   });
 });
-
-gulp.task('serve', 
-  gulp.parallel(
-    'mustache', 'styles', 'rollup', 
-
-    function serve() {
-    browserSync.init({
-      server: {
-        baseDir: ['.tmp', 'custom', 'images'],
-        routes: {
-          '/bower_components': 'bower_components'
-        }
-      },
-      files: 'custom/**/*.{css,js,csv}'
-    });
-
-    gulp.watch(['views/**/**/*.mustache', 'data/*.json'], gulp.parallel('mustache'));
-
-    gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
-
-    gulp.watch('client/**/*.js', gulp.parallel('rollup'));
-  })
-);
-
-/* build */
 // Set NODE_ENV according to dirrent task run.
 // Any easy way to set it?
 gulp.task('dev', function() {
