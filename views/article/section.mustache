@@ -1,87 +1,88 @@
+<section class="section" id="section-{{id}}">
 
-  <section class="section" id="section-{{id}}">
+  {{# sectionHead}}
+    {{> ig-head}}
+  {{/ sectionHead}}
 
-    {{# sectionHead}}
-      {{> ig-head}}
-    {{/ sectionHead}}
+  
+  <div class="section-body
+  {{#credits}}
+  section-body--credits
+  {{/credits}}
+  {{#fullMedia.sticky}}
+  ig-scrollmation
+  {{/fullMedia.sticky}}">
+  
+  {{# sectionBody}}
 
-    {{# sectionBody}}
-    <div class="section-body
-    {{#credits}}
-    section-body--credits
-    {{/credits}}
-    {{#fullMedia.sticky}}
-    ig-scrollmation
-    {{/fullMedia.sticky}}">
+    {{# fullMedia}}
+    <div class="section-media
+    {{#sticky}}ig-scrollmation__sticky{{/sticky}}"
+    {{#cc}}data-source="cc"{{/cc}}>
+      {{> partials/ig-media}}
+    </div>
+    {{/ fullMedia}}
 
-      {{# fullMedia}}
-      <div class="section-media
-      {{#sticky}}ig-scrollmation__sticky{{/sticky}}"
-      {{#cc}}data-source="cc"{{/cc}}>
-        {{> partials/ig-media}}
-      </div>
-      {{/ fullMedia}}
+    <div class="section-body__container" data-o-grid-container>
+      <div data-o-grid-row>
 
-      <div class="section-body__container" data-o-grid-container>
-        <div data-o-grid-row>
+        {{# credits}}
+        <div data-o-grid-col>
+          {{> ig-credits}}
+        </div>
+        {{/ credits}}
+        
+        {{^ credits}}
+        <div class="section-body__primary" data-o-grid-col>
+        {{# colPrimary}}
+        
+          {{# text}}
+          <p>{{{.}}}</p>
+          {{/ text}}
 
-          {{# credits}}
-          <div data-o-grid-col>
-            {{> ig-credits}}
-          </div>
-          {{/ credits}}
+          {{# image}}
+            {{> partials/ig-image}}
+          {{/ image}}
+
+          {{# video}}
+            {{> partials/ig-video}}
+          {{/ video}}
+
+          {{# blockQuote}}
+            {{> partials/ig-blockquote}}
+          {{/ blockQuote}}
+
+          {{# readMore}}
+            {{> partials/ig-more}}
+          {{/ readMore}}
           
-          {{^ credits}}
-          <div class="section-body__primary" data-o-grid-col>
-          {{# colPrimary}}
-          
-            {{# text}}
-            <p>{{{.}}}</p>
-            {{/ text}}
+        {{/ colPrimary}}
+        </div><!-- col-primary -->
+        {{/ credits}}
+
+        {{# colSecondary}}
+        <aside class="section-body__secondary"
+        data-o-grid-col>
+
+          <div class="section-body__aside{{#image.sticky}} ig-scrollmation{{/image.sticky}}">
 
             {{# image}}
+            <div class="viewport-height{{#sticky}} ig-scrollmation__sticky{{/sticky}}"
+            {{#slides}}data-slides-target="img"{{/slides}}>
               {{> partials/ig-image}}
+            </div>
             {{/ image}}
 
-            {{# video}}
-              {{> partials/ig-video}}
-            {{/ video}}
+          </div>
+        </aside>
+        {{/ colSecondary}}   
 
-            {{# blockQuote}}
-              {{> partials/ig-blockquote}}
-            {{/ blockQuote}}
-
-            {{# readMore}}
-              {{> partials/ig-more}}
-            {{/ readMore}}
-            
-          {{/ colPrimary}}
-          </div><!-- col-primary -->
-          {{/ credits}}
-
-          {{# colSecondary}}
-          <aside class="section-body__secondary"
-          data-o-grid-col>
-
-            <div class="section-body__aside{{#image.sticky}} ig-scrollmation{{/image.sticky}}">
-
-              {{# image}}
-              <div class="viewport-height{{#sticky}} ig-scrollmation__sticky{{/sticky}}"
-              {{#slides}}data-slides-target="img"{{/slides}}>
-                {{> partials/ig-image}}
-              </div>
-              {{/ image}}
-
-            </div>
-          </aside>
-          {{/ colSecondary}}   
-
-        </div><!-- data-o-grid-row -->        
-      </div><!-- data-o-grid-container-->        
-
-    </div>
-    {{/ sectionBody}}
-  {{# adBanner}} 
-    {{> partials/ad}}
-  {{/ adBanner}}
-  </section>
+      </div><!-- data-o-grid-row -->        
+    </div><!-- data-o-grid-container-->        
+  {{/ sectionBody}}
+  </div>
+  
+{{# adBanner}} 
+  {{> partials/ad}}
+{{/ adBanner}}
+</section>
