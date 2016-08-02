@@ -64,29 +64,36 @@
 		{
 			"id":"1",
 			"navText": "1. 失去的土地",
+			"sectionBlocks": [
+				{
+					"viewportHeight": true,
+					"scrollmation": false,
+					"sectionMedia": {
+						"cc": null,
+						"ft": {
+							"poster": "/myanmar/mpv-shot0001.jpg",
+							"source": [
+								{
+									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
+									"type": "mp4"
+								},
+								{
+									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
+									"type": "webm"
+								}
+							]
+						},
+						"picture": null				
+					}
+				}
+			]
 			"sectionHead": {
 				"viewportHeight": true,
 				"title": null,
 				"heading": "1. 失去的土地",
 				"subtitle": null,
 				"intro": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
-				"background": {
-					"cc": null,
-					"ft": {
-						"poster": "/myanmar/mpv-shot0001.jpg",
-						"source": [
-							{
-								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
-								"type": "mp4"
-							},
-							{
-								"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
-								"type": "webm"
-							}
-						]
-					},
-					"picture": null				
-				}				
+				"background": 				
 			},
 			"sectionBody": [
 				{

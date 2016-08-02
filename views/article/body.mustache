@@ -1,6 +1,6 @@
 <section class="section" id="section-{{id}}">
   
-  {{# sectionBlock}}
+  {{# sectionBlocks}}
   <div class="section-block ig-scrollmation viewport-height">
     
     {{# sectionMedia}}
@@ -9,7 +9,7 @@
     </div>
     {{/ sectionMedia}}
 
-    {{# }}
+    {{# textOverMedia}}
     <div class="section-text-over-media" data-o-grid-container>
       {{# head}}
         {{> ig-head}}
@@ -23,7 +23,7 @@
         {{> ig-credits}}
       {{/ credits}}
     </div>
-    {{/ }}
+    {{/ textOverMedia}}
 
     {{# cols}}
     <div class="section-cols" data-o-grid-container>
@@ -68,5 +68,5 @@
     {{/ cols}}
 
   </div>
-  {{/ sectionBlock}}
+  {{/ sectionBlocks}}
 </section>
