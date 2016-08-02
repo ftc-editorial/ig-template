@@ -1,5 +1,16 @@
 <article class="article" role="main">
+
 {{# articleHead}}
+	<div class="article-header viewport-height">
+		{{# background}}
+		<div class="article-header__background">
+			{{> partials/ig-media}}
+		</div>
+		{{/ background}}
+		<div class="article-header__text" data-o-grid-container>
+			{{> partials/ig-head}}
+		</div>
+	</div>
 	{{> ig-head}}
 {{/ articleHead}}
 

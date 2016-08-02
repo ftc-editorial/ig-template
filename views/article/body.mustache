@@ -18,7 +18,7 @@ when .section-block has .viewport-height, .section-media should be absolutely po
     {{# textOverMedia}}
     <div class="section-text-over-media" data-o-grid-container>
       {{# head}}
-        {{> ig-head}}
+        {{> partials/ig-head}}
       {{/ head}}
 
       {{# text}}
@@ -26,7 +26,7 @@ when .section-block has .viewport-height, .section-media should be absolutely po
       {{/ text}}
       
       {{# credits}}
-        {{> ig-credits}}
+        {{> partials/ig-credits}}
       {{/ credits}}
     </div>
     {{/ textOverMedia}}
@@ -59,14 +59,18 @@ when .section-block has .viewport-height, .section-media should be absolutely po
         </div>
         
         {{# colSecondary}}
-        <div class="section-col__secondary ig-scrollmation" data-o-grid-col>
+        <div class="section-col__secondary" data-o-grid-col>
+          
+          <div class="section-col__secondary-inner ig-scrollmation">
 
-          <div class="ig-scrollmation__sticky">
-          {{# image}}
-            {{> partials/ig-image}}
-          {{image}}
+            <div class="viewport-height ig-scrollmation__sticky">
+            {{# image}}
+              {{> partials/ig-image}}
+            {{image}}
+            </div>
+            
           </div>
-
+          
         </div>
         {{/ colSecondary}}
       </div>

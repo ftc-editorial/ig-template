@@ -1,24 +1,42 @@
+.article-header__background {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    // z-index: -1;
+
+    @include oColorsFor(ig-media, background);
+    @include igBackgroundOverlay; 
+}
+
+.article-header__text {
+  position: relative;
+  height: 100%;
+}
+/* ********** */
+
 .ig-head {
   box-sizing: border-box;
   padding-top: $o-header-height; 
   position: relative;
+  height: 100%;
   text-align: center;
   @include oColorsFor(ig-text-over-media, text);
-}
-
-.ig-head__container {
-  position: relative;
-  height: 100%;
 }
 
 .ig-head__primary {
   box-sizing: border-box;
   width: 100%;
   padding: 5%;
-  text-align: center;
+  // text-align: center;
 }
 
 .ig-head__lead {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   @include oGridRespondTo(M) {
@@ -97,17 +115,4 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
-}
-
-.ig-head__background {
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-
-    @include oColorsFor(ig-media, background);
-    @include igBackgroundOverlay; 
 }

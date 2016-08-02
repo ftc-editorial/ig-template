@@ -21,8 +21,7 @@
 	},
 	"seriesTitle": "调查报道",
 	"articleHead": {
-		"forArticle": true,
-		"viewportHeight": true,
+		"headFor": "aritcle",
 		"lead": "",
 		"title": "缅甸失地农民",
 		"heading": "",
