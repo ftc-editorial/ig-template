@@ -1,13 +1,21 @@
 {
 	"id": "{{id}}",
 	"navText": "Text for navigation",
-	"sectionHead": "{{> ig-head.json}}",
-	"sectionBody": [
-		"{{> section-body.json}}", 
-		"{{> section-body.json}}",
-		"repeat..."
+	"sectionBlocks": [
+		{
+			"viewportHeight": "true | false",
+			"scrollmation": "true | false",
+			"sectionMedia": "{{> ig-media.json}}",
+			"textOverMedia": {
+				"head": "{{> ig-head.json}}",
+				"text": ["para1", "para2"],
+				"credits": "{{> ig-credits.json}}"
+			},
+			"cols": {
+				"colPrimary": [],
+				"colSecondary": {}
+			}
+		}
 	],
-	"adBanner": {
-		"src": ""
-	}
+	"ad": ""
 }

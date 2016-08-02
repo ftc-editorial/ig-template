@@ -327,7 +327,7 @@ gulp.task('index', () => {
       const contentData = parsedData[0];
       const indexData = parsedData[1];
       const key = argv.i;
-      const value = contentData.articleCover ? contentData.articleCover.headline : contentData.sections[0].articleHead.headline;
+      const value = contentData.pageTitle;
       if (!indexData.items) {
         indexData.items = {};
       }

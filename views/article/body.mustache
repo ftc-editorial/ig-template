@@ -1,14 +1,20 @@
 <section class="section" id="section-{{id}}">
   
   {{# sectionBlocks}}
-  <div class="section-block ig-scrollmation viewport-height">
-    
+  <div class="section-block
+  {{#scrollmation}}ig-scrollmation{{/scrollmation}}
+  {{#viewportHeight}}viewport-height{{/viewportHeight}}">
+{{!-- when section-block has .ig-scrollmation, .section-media should be absolutely position to top, 100vh. text-over-media shoulde be auto height.
+when .section-block has .viewport-height, .section-media should be absolutely positioned, 100% width and height, has an overlay.
+
+ --}}    
     {{# sectionMedia}}
-    <div class="section-media ig-scrollmation__sticky">
+    <div class="section-media
+    {{#scrollmation}}ig-scrollmation__sticky{{/scrollmation}}">
       {{> partials/ig-media}}
     </div>
     {{/ sectionMedia}}
-
+{{!-- If section-block has .viewport-height, it must mean text-over-media should be 100% width and height. .section-media should be asbolutely positioned. --}}
     {{# textOverMedia}}
     <div class="section-text-over-media" data-o-grid-container>
       {{# head}}
@@ -69,4 +75,8 @@
 
   </div>
   {{/ sectionBlocks}}
+
+  {{# ad}}
+    {{> partials/ad}}
+  {{/ ad}}
 </section>
