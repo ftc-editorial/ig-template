@@ -5,7 +5,7 @@
 	"d3": false,
 	"customCss": false,
 	"customJs": false,
-	"enableScroll": true,
+	"enableScroll": false,
 	"autoNav": null,
 	"iconsPath": "/bower_components/ftc-icons/",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
@@ -144,7 +144,7 @@
 					}
 				},
 				{
-					"viewportHeight": true,
+					"viewportHeight": false,
 					"scrollmation": false,
 					"sectionMedia": {
 						"cc": null,
@@ -167,7 +167,7 @@
 					"cols": null
 				},
 				{
-					"viewportHeight": true,
+					"viewportHeight": false,
 					"scrollmation": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
@@ -386,7 +386,7 @@
 							},
 							{
 								"image": {
-									"mobileOnly": true,
+									"mobileOnly": false,
 									"ratio": null,
 									"title": null,
 									"link": null,
@@ -648,7 +648,14 @@
 				{
 					"viewportHeight": false,
 					"scrollmation": true,
-					"sectionMedia": null,
+					"sectionMedia": {
+						"cc": null,
+						"ft": null,
+						"picture": {
+							"source": null,
+							"src": "/myanmar/tighter_maw-mr_6cqlaxv.jpg"
+						}
+					},
 					"textOverMedia": null,
 					"cols": {
 						"colPrimary": [
@@ -690,7 +697,7 @@
 			"id": 6,
 			"sectionBlocks": [
 				{
-					"viewportHeight": true,
+					"viewportHeight": false,
 					"scrollmation": false,
 					"sectionMedia": {
 						"cc": {
@@ -723,7 +730,7 @@
 						"picture": null
 					},
 					"textOverMedia": {
-						"head": {},
+						"head": null,
 						"text": null,
 						"credits": {
 							"title": "制作团队",

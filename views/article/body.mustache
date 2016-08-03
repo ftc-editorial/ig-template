@@ -16,65 +16,72 @@ when .section-block has .viewport-height, .section-media should be absolutely po
     {{/ sectionMedia}}
 {{!-- If section-block has .viewport-height, it must mean text-over-media should be 100% width and height. .section-media should be asbolutely positioned. --}}
     {{# textOverMedia}}
-    <div class="section-text-over-media" data-o-grid-container>
+    <div class="section-text-over-media">
+      
       {{# head}}
         {{> partials/ig-head}}
       {{/ head}}
 
       {{# text}}
-      <p>{{{.}}}</p>
+      <div data-o-grid-container>
+        <p>{{{.}}}</p>
+      </div>
       {{/ text}}
       
       {{# credits}}
         {{> partials/ig-credits}}
-      {{/ credits}}
+      {{/ credits}}        
+      
     </div>
     {{/ textOverMedia}}
 
     {{# cols}}
-    <div class="section-cols" data-o-grid-container>
-      <div data-o-grid-row>
-        <div class="section-col__primary" data-o-grid-col>
-        {{# colPrimary}}
-          {{# text}}
-          <p>{{{.}}}</p>
-          {{/ text}}
+    <div class="section-cols">
+      <div data-o-grid-container>
+        <div data-o-grid-row>
+          <div class="section-col__primary" data-o-grid-col>
+          {{# colPrimary}}
+            {{# text}}
+            <p>{{{.}}}</p>
+            {{/ text}}
 
-          {{# image}}
-            {{> partials/ig-image}}
-          {{/ image}}
-          
-          {{# video}}
-            {{> partials/ig-video}}
-          {{/ video}}
-
-          {{# quote}}
-            {{> partials/ig-quote}}
-          {{/ quote}}
-
-          {{# readMore}}
-            {{> partials/ig-more}}
-          {{/ readMore}}
-        {{/ colPrimary}}
-        </div>
-        
-        {{# colSecondary}}
-        <div class="section-col__secondary" data-o-grid-col>
-          
-          <div class="section-col__secondary-inner ig-scrollmation">
-
-            <div class="viewport-height ig-scrollmation__sticky">
             {{# image}}
               {{> partials/ig-image}}
             {{/ image}}
-            </div>
+            
+            {{# video}}
+              {{> partials/ig-video}}
+            {{/ video}}
 
+            {{# quote}}
+              {{> partials/ig-quote}}
+            {{/ quote}}
+
+            {{# readMore}}
+              {{> partials/ig-more}}
+            {{/ readMore}}
+          {{/ colPrimary}}
           </div>
           
-        </div>
-        {{/ colSecondary}}
-      </div>
-    </div>
+          {{# colSecondary}}
+          <div class="section-col__secondary" data-o-grid-col>
+            
+            <div class="section-col__secondary-inner">
+
+              <div class="section-media__aside viewport-height"><!--sticky-->
+              {{# image}}
+                {{> partials/ig-image}}
+              {{/ image}}
+              </div>
+
+            </div>
+            
+          </div>
+          {{/ colSecondary}}
+        </div>        
+      </div><!-- container -->
+
+    </div><!-- section-cols -->
     {{/ cols}}
 
   </div>

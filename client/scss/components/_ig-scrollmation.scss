@@ -2,8 +2,6 @@
   position: relative;
 
   .ig-scrollmation__sticky {
-    position: absolute;
-    top: 0;
     &[aria-sticky="top"] {
       position: absolute;
     }

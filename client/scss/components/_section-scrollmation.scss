@@ -1,7 +1,0 @@
-// The media container should have a background if media is not loaded.
-.section-media {
-  box-sizing: border-box;
-  @include oColorsFor(ig-media, background);
-}
-
-

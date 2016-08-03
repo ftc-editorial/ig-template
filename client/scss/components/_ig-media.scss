@@ -4,6 +4,14 @@
   height: 100%;
   display: block;
   overflow: hidden;
+
+  &[data-media-type="video"] {
+    background-color: #000;
+  }
+
+  &[data-media-type="picture"] {
+    @include oColorsFor(ig-media, background);
+  }
 }
 
 .ig-media__content {

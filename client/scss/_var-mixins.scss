@@ -56,6 +56,10 @@ $ig-primary-col-width: 6;
 	}
 }
 
+@mixin igBackgroundMask {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
 @mixin igQuoteDivider {
 	content: '';
 	display: block;
