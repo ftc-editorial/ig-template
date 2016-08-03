@@ -245,6 +245,7 @@
 					},
 					"textOverMedia": {
 						"head": {
+							"headFor": "section",
 							"lead": false,
 							"title": false,
 							"heading": "2. 抱负",
@@ -347,6 +348,7 @@
 					},
 					"textOverMedia": {
 						"head": {
+							"headFor": "section",
 							"lead": null,
 							"title": null,
 							"heading": "3. 村庄",
@@ -504,6 +506,7 @@
 					},
 					"textOverMedia": {
 						"head": {
+							"headFor": "section",
 							"lead": null,
 							"title": null,
 							"heading": "4. 导火索",
@@ -549,7 +552,7 @@
 								]
 							},
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "给外国投资者的主要建议是：不要依赖律师。即便文件说相关人等已经签字确认产权归属，其中仍有可能存在问题。",
 									"caption": "缅甸尽责企业中心(Myanmar Centre for Responsible Business)的负责人薇姬•鲍曼(Vicky Bowman)"
 								}
@@ -591,6 +594,7 @@
 					},
 					"textOverMedia": {
 						"head": {
+							"headFor": "section",
 							"lead": null,
 							"title": null,
 							"heading": "5. 赢家和输家",
