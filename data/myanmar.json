@@ -5,7 +5,7 @@
 	"d3": false,
 	"customCss": false,
 	"customJs": false,
-	"enableScroll": false,
+	"enableScroll": true,
 	"autoNav": null,
 	"iconsPath": "/bower_components/ftc-icons/",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
@@ -66,7 +66,7 @@
 			"sectionBlocks": [
 				{
 					"viewportHeight": true,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
@@ -99,7 +99,7 @@
 				},
 				{
 					"viewportHeight": false,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
 					"cols": {
@@ -130,8 +130,8 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": false,
 							"image": {
-								"sticky": false,
 								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
@@ -145,7 +145,7 @@
 				},
 				{
 					"viewportHeight": false,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
@@ -168,7 +168,7 @@
 				},
 				{
 					"viewportHeight": false,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
 					"cols": {
@@ -226,8 +226,9 @@
 			"sectionBlocks": [
 				{
 					"viewportHeight": true,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": {
+						"fixed": true,
 						"cc": null,
 						"ft": null,
 						"picture": {
@@ -257,7 +258,7 @@
 				},
 				{
 					"viewportHeight": false,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
 					"cols": {
@@ -302,19 +303,29 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": true,
 							"image":  {
-								"sticky": true,
 								"mobileOnly": false,
-								"ratio": "",
-								"title": "",
-								"link": false,
+								"ratio": null,
+								"title": null,
+								"link": null,
 								"src": null,
-								"slides": [
-									"/myanmar/myanmarnumbers.png",
-									"/myanmar/myan_num_36c.png",
-									"/myanmar/myanmarnumbers2.png"
-								],
-								"caption": ""
+								"caption": null,
+								"slideSets": [
+									{
+										"src": "/myanmar/myanmarnumbers.png",
+										"caption": ""
+									},
+									{
+										"src": "/myanmar/myan_num_36c.png",
+										"caption": ""
+									},
+									{
+										"src": "/myanmar/myanmarnumbers2.png",
+										"caption": ""
+									}
+								]
 							}
 						}
 					}
@@ -328,8 +339,9 @@
 			"sectionBlocks": [
 				{
 					"viewportHeight": true,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": {
+						"fixed": false,
 						"cc": null,
 						"ft": {
 							"poster": "/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg",
@@ -363,8 +375,9 @@
 				},
 				{
 					"viewportHeight":false,
-					"scrollmation": true,
+					"sticky": true,
 					"sectionMedia": {
+						"fixed": false,
 						"cc": null,
 						"ft": null,
 						"picture": {
@@ -401,12 +414,15 @@
 								]
 							}
 						],
-						"colSecondary": {}
+						"colSecondary": {
+							"sticky": false,
+							"image": null
+						}
 					}
 				},
 				{
 					"viewportHeight": false,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
 					"cols": {
@@ -487,8 +503,9 @@
 			"sectionBlocks": [
 				{
 					"viewportHeight": true,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": {
+						"fixed": true,
 						"cc": null,
 						"ft": null,
 						"picture": {
@@ -519,7 +536,7 @@
 				},
 				{
 					"viewportHeight": false,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
 					"cols": {
@@ -565,7 +582,10 @@
 								]
 							}
 						],
-						"colSecondary": {}
+						"colSecondary": {
+							"sticky": false,
+							"image": null
+						}
 					}
 				}
 			],
@@ -577,8 +597,9 @@
 			"sectionBlocks": [
 				{
 					"viewportHeight": true,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": {
+						"fixed": true,
 						"picture": {
 							"source": [{
 								"landscape": false,
@@ -609,7 +630,7 @@
 				},
 				{
 					"viewportHeight": false,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
 					"cols": {
@@ -642,12 +663,15 @@
 								]
 							}
 						],
-						"colSecondary": {}
+						"colSecondary": {
+							"sticky": false,
+							"image": null
+						}
 					}
 				},
 				{
 					"viewportHeight": false,
-					"scrollmation": true,
+					"sticky": true,
 					"sectionMedia": {
 						"cc": null,
 						"ft": null,
@@ -688,7 +712,10 @@
 								]
 							}
 						],
-						"colSecondary": {}
+						"colSecondary": {
+							"sticky": false,
+							"image": null
+						}
 					}
 				}
 			]
@@ -698,7 +725,7 @@
 			"sectionBlocks": [
 				{
 					"viewportHeight": false,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": {
 						"cc": {
 							"src": "http://p.bokecc.com/player?vid=3911C434C7B707389C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
@@ -711,7 +738,7 @@
 				},
 				{
 					"viewportHeight": true,
-					"scrollmation": false,
+					"sticky": false,
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
@@ -753,7 +780,7 @@
 		}
 	],
 	"suggestedReads": {
-		"title": null,
+		"head": null,
 		"items": [
 			{
 				"href": "https://ig.ft.com/sites/land-rush-investment/",

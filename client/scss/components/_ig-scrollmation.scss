@@ -1,7 +1,7 @@
-.ig-scrollmation {
+.ig-sticky {
   position: relative;
 
-  .ig-scrollmation__sticky {
+  .ig-sticky-target {
     &[aria-sticky="top"] {
       position: absolute;
     }

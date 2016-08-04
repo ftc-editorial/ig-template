@@ -9,7 +9,8 @@ $ig-primary-col-width: 6;
 	padding-top: $ratio;
 }
 
-@mixin lazyloadMedia($classname: 'lazyload', $ratio:71.42%) {
+// $ratio: 71.42%
+@mixin lazyloadMedia($classname: 'lazyload', $ratio: 71.42%) {
 	@if unit($ratio) != "%" {
 		$ratio: percentage($ratio);
 	}

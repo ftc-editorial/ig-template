@@ -2,15 +2,18 @@
   
   {{# sectionBlocks}}
   <div class="section-block
-  {{#scrollmation}}ig-scrollmation{{/scrollmation}}
+  {{#sticky}}ig-sticky{{/sticky}}
   {{#viewportHeight}}viewport-height{{/viewportHeight}}">
-{{!-- when section-block has .ig-scrollmation, .section-media should be absolutely position to top, 100vh. text-over-media shoulde be auto height.
+{{!-- when section-block has .ig-sticky, .section-media should be absolutely position to top, 100vh. text-over-media shoulde be auto height.
 when .section-block has .viewport-height, .section-media should be absolutely positioned, 100% width and height, has an overlay.
 
  --}}    
     {{# sectionMedia}}
     <div class="section-media
-    {{#scrollmation}}ig-scrollmation__sticky{{/scrollmation}}">
+    {{#fixed}}
+    section-media--fixed
+    {{/fixed}}
+    {{#sticky}}ig-sticky-target{{/sticky}}">
       {{> partials/ig-media}}
     </div>
     {{/ sectionMedia}}
@@ -66,9 +69,14 @@ when .section-block has .viewport-height, .section-media should be absolutely po
           {{# colSecondary}}
           <div class="section-col__secondary" data-o-grid-col>
             
-            <div class="section-col__secondary-inner">
+            <div class="section-col__secondary-inner
+            {{#sticky}}ig-sticky{{/sticky}}
+            {{#slide}}ig-slide{{/slide}}">
 
-              <div class="section-media__aside viewport-height"><!--sticky-->
+              <div class="section-media__aside
+              {{#sticky}}viewport-height
+              ig-sticky-target{{/sticky}}
+              {{#slide}}ig-slide-target{{/slide}}"><!--sticky-->
               {{# image}}
                 {{> partials/ig-image}}
               {{/ image}}

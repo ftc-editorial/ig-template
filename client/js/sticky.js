@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-const stickyRootSelector = '.ig-scrollmation';
-const stickyTargetSelector = '.ig-scrollmation__sticky';
+const stickyRootSelector = '.ig-sticky';
+const stickyTargetSelector = '.ig-sticky-target';
 
 class Sticky {
 	constructor(rootEl, config) {

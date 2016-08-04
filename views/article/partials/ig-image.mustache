@@ -10,13 +10,18 @@
   {{# link}}href="{{{link}}}"{{/ link}}>
 
     <img src="{{{src}}}" class="ig-figure__image lazyload__inner"
-    data-slides-set="{{#slides}}{{{.}}} {{/slides}}">
+    {{#slide}}
+    data-slides-set="{{#slideSets}}src:{{{src}}},text:{{caption}} {{/slideSets}}
+    {{/slide}}">
 
   {{# link}}</a>{{/ link}}
   {{^ link}}</div>{{/ link}}         
   
-  {{# caption}}
-  <figcaption class="ig-figure__caption">{{caption}}</figcaption>
- 	{{/ caption}}
+  <figcaption class="ig-figure__caption"
+  {{#slide}}
+  data-slides-text="{{#slideSets}}{{{caption}}} {{/slideSets}}
+  {{/slide}}">
+    {{caption}}
+  </figcaption>
   
 </figure>

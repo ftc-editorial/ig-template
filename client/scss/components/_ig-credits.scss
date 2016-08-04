@@ -1,6 +1,14 @@
 .ig-credits {
+	position: relative;
 	box-sizing: border-box;
 	padding-top: $o-header-height;
+	padding-left: oGridGutter();
+	padding-right: oGridGutter();
+
+	@include oGridRespondTo(M) {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
 }
 .ig-credits__title {
 	margin: 0 0 10px 0;

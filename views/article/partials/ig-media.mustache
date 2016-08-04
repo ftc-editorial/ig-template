@@ -5,8 +5,12 @@ CC videos using swf have very wired styles. The result is unpredictable.
 But you can embed it in the text. On large screen the video might be scaled out of  the screen estate when using in this way.
 --}}
 {{# cc}}
-<div class="ig-media" data-media-type="video">
-		<script src="{{{src}}}" type="text/javascript"></script>
+<div class="ig-media" data-media-type="video" data-media-src="cc" data-media-ratio="9/16">
+  <div class="lazyload__outer">
+    <div class="lazyload__inner">
+      <script src="{{{src}}}" type="text/javascript"></script>
+    </div>
+  </div>
 </div>
 {{/ cc}}
 
