@@ -5,19 +5,20 @@
   display: block;
   overflow: hidden;
 
-  &[data-media-type="video"] {
+  &__video {
     background-color: #000;
   }
 
-  &[data-media-type="picture"] {
+  &__picture {
     @include oColorsFor(ig-media, background);
+  }
+
+  &__content {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
   }
 }
 
-.ig-media__content {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}

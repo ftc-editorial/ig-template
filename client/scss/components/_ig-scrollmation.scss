@@ -1,19 +1,21 @@
-.ig-sticky {
-  position: relative;
+@include oGridRespondTo(M) {
+  .ig-sticky {
+    position: relative;
 
-  .ig-sticky-target {
-    &[aria-sticky="top"] {
-      position: absolute;
-    }
-    &[aria-sticky="fixed"] {
-      position: fixed;
-      top: 0;
-      bottom: auto;
-    }
-    &[aria-sticky="bottom"] {
-      position: absolute;
-      top: auto;
-      bottom: 0;
+    .ig-sticky-target {
+      &[aria-sticky="top"] {
+        position: absolute;
+      }
+      &[aria-sticky="fixed"] {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+      }
+      &[aria-sticky="bottom"] {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 const slideRootSelector = '.ig-slide';
 const slideContainerSelector = '.ig-slide-target';
+const slideDataAttr = 'data-slide-set';
 const slideImgSelector = '.ig-figure__image';
 const slideCaptionSelector = '.ig-figure__caption';
 
@@ -17,7 +18,7 @@ class Slide {
 
 		if (!containerEl) {
 			console.log('Abort. Container elm does not exist for ' + this.rootEl);
-			return null;
+			return;
 		}
 
 		const slideRange = rootEl.offsetHeight - containerEl.offsetHeight;
@@ -26,11 +27,13 @@ class Slide {
 		const captionEl = containerEl.querySelector(slideCaptionSelector);
 
 		if (!imgEl) {
-			console.log(containerEl, ' deos not have img elm. Abort.');
+			console.log(containerEl, ' deos not have img or caption elm. Abort.');
 			return;
 		}
 
-		const images = imgEl.getAttribute('data-slides-set').trim().split(' ');
+		const images = imgEl.getAttribute(slideDataAttr).trim().split(' ');
+		const captions = captionEl.getAttribute(slideDataAttr).trim().split(' ');
+
 		const imageLen = images.length;
 
 		if (!imageLen) {
@@ -53,6 +56,9 @@ class Slide {
 
 		this.imgEl = imgEl;
 		this.images = images;
+
+		this.captionEl = captionEl;
+		this.captions = captions;
 		
 		this.currentImgIndex = -1;
 		this.start = (config.start && typeof config.start === 'number') ? config.start : 0;
@@ -65,6 +71,10 @@ class Slide {
 			this.currentImgIndex = index;
 			if (this.imgEl && this.images[index]) {
 				this.imgEl.src = this.images[index];
+			}
+
+			if (this.captionEl && this.captions[index]) {
+				this.captionEl.textContent = this.captions[index];
 			}
 		}
 	}
