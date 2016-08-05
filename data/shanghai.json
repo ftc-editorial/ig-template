@@ -62,7 +62,7 @@
 					"viewportHeight": false,
 					"sticky": true,
 					"sectionMedia": {
-						"sticky": true,
+						"fixed": false,
 						"cc": null,
 						"ft": null,
 						"picture": {
@@ -80,13 +80,18 @@
 							"src": "/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg"	
 						}
 					},
-					"textOverMedia": {
-						"text": [
-							"从马可•波罗(Marco Polo)和忽必烈(Kublai Khan)的时代开始，中国就一直对外国人有着一种吸引力——要说眼下哪座中国城市对外国人吸引力最大，恐怕非中国风最淡的上海莫属。",
-							"上海既有异国风情又不让人感到特别陌生，既现代又不失古韵。它吸引着世界各地想从中国经济繁荣中分一杯羹的人，而且不会让他们感到难以适应。"
-						]
-					},
-					"cols": null
+					"textOverMedia": null,
+					"cols": {
+						"colPrimary": [
+							{
+								"text": [
+									"从马可•波罗(Marco Polo)和忽必烈(Kublai Khan)的时代开始，中国就一直对外国人有着一种吸引力——要说眼下哪座中国城市对外国人吸引力最大，恐怕非中国风最淡的上海莫属。",
+									"上海既有异国风情又不让人感到特别陌生，既现代又不失古韵。它吸引着世界各地想从中国经济繁荣中分一杯羹的人，而且不会让他们感到难以适应。"
+								]
+							}
+						],
+						"colSecondary": {}
+					}
 				},
 				{
 					"viewportHeight": false,
@@ -104,18 +109,17 @@
 							},
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,
 									"src": "/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
-									"slides": [],
+									"slideSets": [],
 									"caption": null
 								}
 							},						
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "‘他们来到上海，主要是为了赚钱：他们考虑的或是跨国企业在上海亚洲总部的外派历练机会；或是在他们经济陷于困境的母国找不到的工作岗位；或是追随自己当高管的丈夫或妻子；或是来教书或学习’",
 									"caption": null
 								}
@@ -127,13 +131,12 @@
 							}, 
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": false,
 									"ratio": null,
 									"title": null,
 									"link": null,
 									"src": "/shanghai/37cc51e2-f3d4-11e4-99de-00144feab7de.jpeg",
-									"slides": null,
+									"slideSets": [],
 									"caption": null
 								}
 							},
@@ -144,7 +147,7 @@
 								]
 							},
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "‘生活成本也在上升：上海去年跻身世界生活成本最高城市排行榜的前10名’",
 									"caption": null
 								}
@@ -156,6 +159,8 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": true,
 							"image": {
 								"sticky": true,
 								"mobileOnly": false,
@@ -163,19 +168,47 @@
 								"title": null,
 								"link": null,
 								"src": null,
-								"slides": [
-									"/shanghai/c19d04226725dbdbaaa1c5a657edb665.jpg",
-									"/shanghai/shanghai-shorthand-chartpart2-lr_7fvuhlg.jpg",
-									"/shanghai/shanghai-shorthand-chartpart3-lr_a9jjvca.jp",
-									"/shanghai/shanghai-shorthand-chartpart4-lr_yfp4x2x.jp",
-									"/shanghai/shanghai-shorthand-chartpart5-lr_cvuuubc.jpg",
-									"/shanghai/shanghai-shorthand-chartpart6-lr_skwchzf.jpg",
-									"/shanghai/shanghai-shorthand-chartpart7-lr_dll7ctc.jpg",
-									"/shanghai/media/shanghai-shorthand-chartpart8-lr_muc0xyk.jpg",
-									"/shanghai/shanghai-shorthand-chartpart9-lr_genn1ld.jpg",
-									"/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg"
-								],
-								"caption": null
+								"caption": null,
+								"slideSets": [
+									{
+										"src":"/shanghai/c19d04226725dbdbaaa1c5a657edb665.jpg",
+										"caption": ""
+									},
+									{
+										"src":"/shanghai/shanghai-shorthand-chartpart2-lr_7fvuhlg.jpg",
+										"caption": ""
+									},
+									{
+										"src":"/shanghai/shanghai-shorthand-chartpart3-lr_a9jjvca.jp",
+										"caption": ""
+									},
+									{
+										"src":"/shanghai/shanghai-shorthand-chartpart4-lr_yfp4x2x.jp",
+										"caption": ""
+									},
+									{
+										"src":"/shanghai/shanghai-shorthand-chartpart5-lr_cvuuubc.jpg",
+										"caption": ""
+									},
+									{
+										"src":"/shanghai/shanghai-shorthand-chartpart6-lr_skwchzf.jpg",
+										"caption": ""
+									},
+									{
+										"src":"/shanghai/shanghai-shorthand-chartpart7-lr_dll7ctc.jpg",
+										"caption": ""
+									},
+									{
+										"src":"/shanghai/media/shanghai-shorthand-chartpart8-lr_muc0xyk.jpg",
+										"caption": ""
+									},
+									{
+										"src":"/shanghai/shanghai-shorthand-chartpart9-lr_genn1ld.jpg"},
+									{
+										"src":"/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
+										"caption": ""
+									}
+								]
 							}
 						}
 					}
@@ -220,7 +253,18 @@
 						"cc": null,
 						"ft": null,
 						"picture": {
-
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/shanghai/an26a8-lr.jpg 1100w,",
+										"/shanghai/an26a8-mr.jpg 1500w,",
+										"/shanghai/an26a8-hr.jpg"
+									]
+								}
+							],
+							"src": "/shanghai/an26a8-mr.jpg"
 						}
 					},
 					"textOverMedia": {
@@ -244,7 +288,7 @@
 								]
 							}, 
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "‘选择标准不应基于表现，而应基于个性。在中国，谦逊才能成事，粗鲁只会碰壁’",
 									"caption": "中欧国际工商学院(CEIBS)副教授金台烈(TAE-YEOL KIM)"
 								}
@@ -325,7 +369,7 @@
 					"cols": {
 						"colPrimary": [
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "‘吸引我的是早8点前的中国。然后就是晚上，我会再次见到那个有着丰富文化的中国；这两个时刻之间的中国，我不喜欢。’",
 									"caption": "中国欧盟商会(EU CHAMBER OF COMMERCE IN CHINA)主席伍德克(JOERG WUTTKE)"
 								}
@@ -481,7 +525,7 @@
 								}
 							},
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "‘西式医疗和教育服务贵得离谱’",
 									"caption": ""
 								}
@@ -557,7 +601,7 @@
 								]
 							},
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "‘经济压力开始显现，我认为，我们将看到更多外侨比自己预期的更早离开，或者在花钱方面更精打细算’",
 									"caption": "《上海家庭》执行主编西多涅•理查兹"
 								}
@@ -730,7 +774,7 @@
 								}
 							},
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "‘2011年我来到这里时，这儿只有3座博物馆，现在已经有了14座。上海艺术界已经真正地爆发了。’",
 									"caption": "JULIE CHUN，艺术专家"
 								}
@@ -920,7 +964,7 @@
 								]
 							}, 
 							{
-								"blockQuote": {
+								"quote": {
 									"text": "‘离开城市吧。比起游览这座看起来就像有着中文路标的纽约的城市……一次西藏大草原上的村庄之旅可能更令你印象深刻。’",
 									"caption": "萨拉•瑙曼，旅行作家"
 								}
