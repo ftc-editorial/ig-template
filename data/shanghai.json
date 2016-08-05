@@ -1151,8 +1151,8 @@
 					"cols": null
 				},
 				{
-					"viewportHeight": true,
-					"sticky": false,
+					"viewportHeight": false,
+					"sticky": true,
 					"sectionMedia": {
 						"sticky": true,
 						"cc": null,
@@ -1166,7 +1166,8 @@
 										"/images/shanghai/bar_pic140510034_high_res_-mr_dezb8jx.jpg 1100w,",
 										"/images/shanghai/bar_pic140510034_high_res_-hr_lm1svfb.jpg 1500w,",
 										"/images/shanghai/bar_pic140510034_high_res_-lr_rzntd9p.jpg"
-									]
+									],
+									"src": "/images/shanghai/bar_pic140510034_high_res_-mr_dezb8jx.jpg"
 								}
 							],
 							"src": "/images/shanghai/bar_pic140510034_high_res_-mr_dezb8jx.jpg"	
