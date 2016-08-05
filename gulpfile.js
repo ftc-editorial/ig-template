@@ -141,7 +141,7 @@ gulp.task('serve',
     function serve() {
     browserSync.init({
       server: {
-        baseDir: ['.tmp', 'custom', 'images'],
+        baseDir: ['.tmp', 'custom', 'public'],
         routes: {
           '/bower_components': 'bower_components'
         }

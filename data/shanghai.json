@@ -31,7 +31,7 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
-							"poster": "/shanghai/blinky-4-hr_kgpjdpm.png",
+							"poster": "/images/shanghai/blinky-4-hr_kgpjdpm.png",
 							"source": [{
 								"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.mp4",
 								"type": "mp4"
@@ -71,13 +71,13 @@
 									"landscape": false,
 									"portrait": false,
 									"srcset": [
-										"/shanghai/xu6118472taichi_practitioners-mr_8vdlp7y.jpeg 1100w,",
-										"/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg 1500w,",
-										"/shanghai/xu6118472taichi_practitioners-lr_db21cbl.jpeg"
+										"/images/shanghai/xu6118472taichi_practitioners-mr_8vdlp7y.jpeg 1100w,",
+										"/images/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg 1500w,",
+										"/images/shanghai/xu6118472taichi_practitioners-lr_db21cbl.jpeg"
 									]
 								}
 							],
-							"src": "/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg"	
+							"src": "/images/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg"	
 						}
 					},
 					"textOverMedia": null,
@@ -135,7 +135,7 @@
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "/shanghai/37cc51e2-f3d4-11e4-99de-00144feab7de.jpeg",
+									"src": "/images/shanghai/37cc51e2-f3d4-11e4-99de-00144feab7de.jpeg",
 									"slideSets": [],
 									"caption": null
 								}
@@ -171,41 +171,41 @@
 								"caption": null,
 								"slideSets": [
 									{
-										"src":"/shanghai/c19d04226725dbdbaaa1c5a657edb665.jpg",
+										"src": "/images/shanghai/shanghai-shorthand-chartpart1-lr_f76r7qt.jpg",
 										"caption": ""
 									},
 									{
-										"src":"/shanghai/shanghai-shorthand-chartpart2-lr_7fvuhlg.jpg",
+										"src": "/images/shanghai/shanghai-shorthand-chartpart2-lr_7fvuhlg.jpg",
 										"caption": ""
 									},
 									{
-										"src":"/shanghai/shanghai-shorthand-chartpart3-lr_a9jjvca.jp",
+										"src": "/images/shanghai/shanghai-shorthand-chartpart3-lr_a9jjvca.jpg",
 										"caption": ""
 									},
 									{
-										"src":"/shanghai/shanghai-shorthand-chartpart4-lr_yfp4x2x.jp",
+										"src":"/images/shanghai/shanghai-shorthand-chartpart4-lr_yfp4x2x.jpg",
 										"caption": ""
 									},
 									{
-										"src":"/shanghai/shanghai-shorthand-chartpart5-lr_cvuuubc.jpg",
+										"src":"/images/shanghai/shanghai-shorthand-chartpart5-lr_cvuuubc.jpg",
 										"caption": ""
 									},
 									{
-										"src":"/shanghai/shanghai-shorthand-chartpart6-lr_skwchzf.jpg",
+										"src":"/images/shanghai/shanghai-shorthand-chartpart6-lr_skwchzf.jpg",
 										"caption": ""
 									},
 									{
-										"src":"/shanghai/shanghai-shorthand-chartpart7-lr_dll7ctc.jpg",
+										"src":"/images/shanghai/shanghai-shorthand-chartpart7-lr_dll7ctc.jpg",
 										"caption": ""
 									},
 									{
-										"src":"/shanghai/media/shanghai-shorthand-chartpart8-lr_muc0xyk.jpg",
+										"src":"/images/shanghai/shanghai-shorthand-chartpart8-lr_muc0xyk.jpg",
 										"caption": ""
 									},
 									{
-										"src":"/shanghai/shanghai-shorthand-chartpart9-lr_genn1ld.jpg"},
+										"src":"/images/shanghai/shanghai-shorthand-chartpart9-lr_genn1ld.jpg"},
 									{
-										"src":"/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
+										"src":"/images/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
 										"caption": ""
 									}
 								]
@@ -224,10 +224,22 @@
 					"viewportHeight": true,
 					"sticky": false,
 					"sectionMedia": {
+						"fixed": true,
 						"cc": null,
 						"ft": null,
 						"picture": {
-
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/shanghai/an26a8-lr.jpg 1100w,",
+										"/images/shanghai/an26a8-mr.jpg 1500w,",
+										"/images/shanghai/an26a8-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/shanghai/an26a8-mr.jpg"
 						}	
 					},
 					"textOverMedia": {
@@ -255,16 +267,14 @@
 						"picture": {
 							"source": [
 								{
-									"landscape": false,
-									"portrait": false,
 									"srcset": [
-										"/shanghai/an26a8-lr.jpg 1100w,",
-										"/shanghai/an26a8-mr.jpg 1500w,",
-										"/shanghai/an26a8-hr.jpg"
-									]
+										"/images/shanghai/xu6244782general_economy_image-lr.jpeg 1100w,",
+	                "/images/shanghai/xu6244782general_economy_image-mr.jpeg 1500w,",
+	                "/images/shanghai/xu6244782general_economy_image-hr.jpeg"
+	              ]
 								}
 							],
-							"src": "/shanghai/an26a8-mr.jpg"
+							"src": "/images/shanghai/xu6244782general_economy_image-mr.jpeg"
 						}
 					},
 					"textOverMedia": {
@@ -301,13 +311,12 @@
 							},
 							{
 								"image": {
-									"sticky": false,
-									"mobileOnly": false,
+									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "/shanghai/xu6226308an_investor_looks_at-lr_sn7viu7",
-									"slides": [],
+									"src": "/images/shanghai/xu6226308an_investor_looks_at-lr_sn7viu7.jpeg",
+									"slideSes": null,
 									"caption": null
 								}
 							},
@@ -319,22 +328,37 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": true,
 							"image": {
-								"sticky": true,
 								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
 								"link": null,
 								"src": null,
-								"slides": [
-									"/shanghai/xu5869863a_man_walks_past_a_br-lr_efmm7z3",
-									"/shanghai/xu6217447inside_the_auto_shang-lr_yack78h",
-									"/shanghai/xu6226308an_investor_looks_at-lr_sn7viu7",
-									"/shanghai/xu6244781general_economy_image-lr_pp440rd",
-									"/shanghai/",
-									"/shanghai/waiting_metro_a7dkx4-lr_c6wu5gx.jpg"
-								],
-								"caption": null
+								"caption": null,
+								"slideSets": [
+									{
+										"src": "/images/shanghai/xu5869863a_man_walks_past_a_br-lr_efmm7z3.jpeg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/xu6217447inside_the_auto_shang-lr_yack78h.jpeg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/xu6226308an_investor_looks_at-lr_sn7viu7.jpeg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/xu6244781general_economy_image-lr_pp440rd.jpeg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/waiting_metro_a7dkx4-lr_c6wu5gx.jpg",
+										"caption": ""
+									}
+								]
 							}
 						}	
 					}
@@ -381,13 +405,11 @@
 							}, 
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "./media/_ab_1148-lr_bt2azna.jpg",
-									"slides": [],
+									"src": "/images/shanghai/_ab_1148-lr_bt2azna.jpg",
 									"caption": null
 								}
 							},
@@ -398,18 +420,25 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": true,
 							"image": {
-								"sticky": false,
 								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
 								"link": null,
 								"src": "",
-								"slides": [
-									"./media/_ab_1148-lr_bt2azna.jpg",
-									"./media/_ab_1321-lr_ism0ozp.jpg"
-								],
-								"caption": "上海数百处新建筑工地之一"
+								"caption": "",
+								"slideSets": [
+									{
+										"src": "/images/shanghai/_ab_1148-lr_bt2azna.jpg",
+										"caption": "上海数百处新建筑工地之一"
+									},
+									{
+										"src": "/images/shanghai/_ab_1321-lr_ism0ozp.jpg",
+										"caption": "远观中国第一高楼——上海中心大厦(Shanghai Tower)"
+									}
+								]
 							}
 						}	
 					}
@@ -458,18 +487,41 @@
 					"viewportHeight": true,
 					"sticky": false,
 					"sectionMedia": {
-
+						"fixed": true,
+						"cc": null,
+						"ft": null,
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portraint": false,
+									"srcset": [
+										"/images/shanghai/ma_jong_ab_1398-lr.jpg 1100w,",
+                		"/images/shanghai/ma_jong_ab_1398-mr.jpg 1500w,",
+                		"/images/shanghai/ma_jong_ab_1398-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/shanghai/ma_jong_ab_1398-mr.jpg"
+						}
 					},
 					"textOverMedia": {
-
+						"text": ["‘在上海过西方式生活，比在其他任何中国城市都容易得多’"]
 					},
 					"cols": null
 				},
 				{
-					"viewportHeight": false,
+					"viewportHeight": true,
+					"sticky": true,
 					"sticky": false,
 					"sectionMedia": {
-						"sticky": true
+						"fixed": false,
+						"cc": null,
+						"ft": null,
+						"picture": {
+							"source": null,
+							"src": "/images/shanghai/_ab_0686-mr_e4cka1t.jpg"
+						}
 					},
 					"textOverMedia": {
 						"text": ["“你是说，除了全职保姆，我还喜欢在上海生活的哪些方面？”上海“男太太”（即随迁丈夫）群体中的一员雷•赫拉蒂(Ray Heraty)问道。中国人管妻子叫“太太”，男太太的戏称便由此而生。赫拉蒂在家陪三个小孩，他太太是一家美国科技公司的高管。像大多数女性或男性随迁配偶（现在男性比例越来越高）一样，他喜欢上海便宜的家政服务，一名全职保姆的月薪在3000至6000元人民币（合490至980美元）之间。他说：“这意味着，每周有一个晚上我能跟妻子约会。” "]
@@ -480,17 +532,17 @@
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": {
-						"sticky": false,
+						"fixed": false,
 						"cc": null,
 						"ft": {
-							"poster": "./media/ray_heraty-mr.png",
+							"poster": "/images/shanghai/ray_heraty-mr.png",
 							"source": [
 								{
-									"src": "./media/ray_heraty_1280x720.mp4",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/ray_heraty_1280x720.mp4",
 									"type": "mp4"
 								}, 
 								{
-									"src": "./media/ray_heraty_1280x720.webmhd.webm",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/ray_heraty_1280x720.webmhd.webm",
 									"type": "webm"
 								}
 							]
@@ -514,13 +566,11 @@
 							}, 
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "./media/expats_by_countries_3-lr_ztwdc1k.jpg",
-									"slides": [],
+									"src": "/images/shanghai/expats_by_countries_3-lr_ztwdc1k.jpg",
 									"caption": null
 								}
 							},
@@ -537,13 +587,11 @@
 							}, 
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": false,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "http://im.ft-static.com/content/images/365c6716-f3d4-11e4-99de-00144feab7de.img",
-									"slides": [],
+									"src": "images/shanghai/365c6716-f3d4-11e4-99de-00144feab7de.img",
 									"caption": null
 								}
 							},
@@ -554,6 +602,8 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": true,
 							"image": {
 								"sticky": false,
 								"mobileOnly": false,
@@ -561,12 +611,21 @@
 								"title": null,
 								"link": null,
 								"src": "",
-								"slides": [
-									"./media/expats_by_countries_1-lr_kjsgwck.jpg",
-									"./media/expats_by_countries_2-lr_ibwep01.jpg",
-									"./media/expats_by_countries_3-lr_ztwdc1k.jpg"
-								],
-								"caption": null
+								"caption": null,
+								"slideSets": [
+									{
+										"src": "/images/shanghai/expats_by_countries_1-lr_kjsgwck.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/expats_by_countries_2-lr_ibwep01.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/expats_by_countries_3-lr_ztwdc1k.jpg",
+										"caption": ""
+									}
+								]
 							}
 						}						
 					}
@@ -585,13 +644,11 @@
 							}, 
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "./media/162246805-lr_ezat6ja.jpg",
-									"slides": [],
+									"src": "/images/shanghai/162246805-lr_ezat6ja.jpg",
 									"caption": null
 								}
 							},
@@ -613,15 +670,16 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": false,
 							"image": {
-								"sticky": false,
 								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
 								"link": null,
-								"src": "./media/162246805-lr_ezat6ja.jpg",
-								"slides": [],
-								"caption": null
+								"src": "/images/shanghai/162246805-lr_ezat6ja.jpg",
+								"caption": null,
+								"slideSets": null
 							}
 						}							
 					}
@@ -639,14 +697,14 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
-							"poster": "./media/blinky-2-mr.png",
+							"poster": "/images/shanghai/blinky-2-mr.png",
 							"source": [
 								{
-									"src": "./media/blinky-2.mp4",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-2.mp4",
 									"type": "mp4"
 								}, 
 								{
-									"src": "./media/blinky-2.webmhd.webm",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-2.webmhd.webm",
 									"type": "webm"
 								}
 							]
@@ -669,7 +727,23 @@
 					"viewportHeight": true,
 					"sticky": false,
 					"sectionMedia": {
-
+						"fixed": true,
+						"cc": null,
+						"ft": null,
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/shanghai/street_food_-_cooking_good_ab_1197-lr.jpg 1100w,",
+                		"/images/shanghai/street_food_-_cooking_good_ab_1197-mr.jpg 1500w,",
+                		"/images/shanghai/street_food_-_cooking_good_ab_1197-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/shanghai/street_food_-_cooking_good_ab_1197-mr.jpg"
+						}
 					},
 					"textOverMedia": {
 						"text": ["‘上海有街头小吃文化传统，因为它是个移民城市’"]
@@ -677,7 +751,7 @@
 					"cols": null
 				},
 				{
-					"viewportHeight": true,
+					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
@@ -690,13 +764,11 @@
 							}, 
 							{
 								"image": {
-									"sticky": false,
-									"mobileOnly": false,
+									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "./media/food_street_market_ab_1066-lr_ebhsppr.jpg",
-									"slides": [],
+									"src": "/images/shanghai/food_street_market_ab_1066-lr_ebhsppr.jpg",
 									"caption": null
 								}
 							},
@@ -709,37 +781,43 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": true,
 							"image": {
-								"sticky": false,
 								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
 								"link": null,
 								"src": "",
-								"slides": [
-									"./media/food_street_market_ab_1066-lr_ebhsppr.jpg",
-									"./media/street_food_vendor_2_ab_1230-lr_udn0oo1.jpg"
-								],
-								"caption": null
+								"caption": null,
+								"slideSets": [
+									{
+										"src": "/images/shanghai/food_street_market_ab_1066-lr_ebhsppr.jpg",
+										"caption": "安顺路菜市场"
+									},
+									{
+										"src": "/images/shanghai/street_food_vendor_2_ab_1230-lr_udn0oo1.jpg",
+										"caption": "肇周路夜市"
+									}
+								]								
 							}
 						}	
 					}
 				},
 				{
-					"viewportHeight": true,
+					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": {
-						"sticky": false,
 						"cc": null,
 						"ft": {
-							"poster": "./media/anna_greenspan-1-mr.png",
+							"poster": "/images/shanghai/anna_greenspan-1-mr.png",
 							"source": [
 								{
-									"src": "./media/anna_greenspan.mp4",
+									"src": ".http://ig.ft.com/sites/2015/special-reports/shanghai/media/anna_greenspan.mp4",
 									"type": "mp4"
 								}, 
 								{
-									"src": "./media/anna_greenspan_1280x720.webmhd.webm",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/anna_greenspan_1280x720.webmhd.webm",
 									"type": "webm"
 								}
 							]
@@ -750,7 +828,7 @@
 					"cols": null
 				},
 				{
-					"viewportHeight": true,
+					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
@@ -763,13 +841,11 @@
 							}, 
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": false,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "./media/gallery_good_3_ab_1477-lr_0xk2ssw.jpg",
-									"slides": [],
+									"src": "/images/shanghai/gallery_good_3_ab_1477-lr_0xk2ssw.jpg",
 									"caption": null
 								}
 							},
@@ -788,34 +864,36 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": false,
 							"image": {
 								"sticky": false,
 								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
 								"link": null,
-								"src": "./media/gallery_good_3_ab_1477-lr_0xk2ssw.jpg",
-								"slides": [],
-								"caption": "上海当代艺术博物馆的展出活动"
+								"src": "/images/shanghai/gallery_good_3_ab_1477-lr_0xk2ssw.jpg",
+								"caption": "上海当代艺术博物馆的展出活动",
+								"slideSets": null
 							}
 						}							
 					}
 				},
 				{
-					"viewportHeight": true,
+					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": {
 						"sticky": false,
 						"cc": null,
 						"ft": {
-							"poster": "./media/julie_chun-mr.png",
+							"poster": "/images/shanghai/julie_chun-mr.png",
 							"source": [
 								{
-									"src": "./media/julie_chun_1280x720.mp4",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/julie_chun_1280x720.mp4",
 									"type": "mp4"
 								}, 
 								{
-									"src": "./media/julie_chun_1280x720.webmhd.webm",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/julie_chun_1280x720.webmhd.webm",
 									"type": "webm"
 								}
 							]
@@ -838,14 +916,14 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
-							"poster": "./media/blinky-8-mr.png",
+							"poster": "/images/shanghai/blinky-8-mr.png",
 							"source": [
 								{
-									"src": "./media/blinky_8-revised.mp4",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky_8-revised.mp4",
 									"type": "mp4"
 								}, 
 								{
-									"src": "./media/blinky_8-revised.webmhd.webm",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky_8-revised.webmhd.webm",
 									"type": "webm"
 								}
 							]
@@ -871,7 +949,20 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": null,
-						"picture": {}
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/shanghai/on_train_ac14wj-lr.jpg 1100w,",
+                		"/images/shanghai/on_train_ac14wj-mr.jpg 1500w,",
+                		"/images/shanghai/on_train_ac14wj-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/shanghai/on_train_ac14wj-mr.jpg"
+						}
 					},
 					"textOverMedia": {
 						"text": ["‘上海是前往任何地方展开奇异之旅的绝佳大本营’"]
@@ -893,13 +984,11 @@
 							}, 
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "./media/dreamstime_xl_35847524-lr_h1aiwgc.jpg",
-									"slides": [],
+									"src": "/images/shanghai/dreamstime_xl_35847524-lr_h1aiwgc.jpg",
 									"caption": "山西大同悬空寺"
 								}
 							},
@@ -911,18 +1000,25 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": true,
 							"image": {
-								"sticky": false,
 								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
 								"link": null,
 								"src": "",
-								"slides": [
-									"./media/dreamstime_xl_35847524-lr_h1aiwgc.jpg",
-									"./media/dreamstime_xl_23894458-lr_1r6qm7m.jpg"
-								],
-								"caption": "山西大同悬空寺"
+								"caption": "",
+								"slideSets": [
+									{
+										"src": "/images/shanghai/dreamstime_xl_35847524-lr_h1aiwgc.jpg",
+										"caption": "山西大同悬空寺"
+									},
+									{
+										"src": "/images/shanghai/dreamstime_xl_23894458-lr_1r6qm7m.jpg",
+										"caption": ""
+									}
+								]
 							}
 						}						
 					}
@@ -934,14 +1030,14 @@
 						"sticky": false,
 						"cc": null,
 						"ft": {
-							"poster": "./media/sara_naumann-mr.png",
+							"poster": "/images/shanghai/sara_naumann-mr.png",
 							"source": [
 								{
-									"src": "./media/sara_naumann_1280x720.mp4",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/sara_naumann_1280x720.mp4",
 									"type": "mp4"
 								}, 
 								{
-									"src": "./media/sara_naumann_1280x720.webmhd.webm",
+									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/sara_naumann_1280x720.webmhd.webm",
 									"type": "webm"
 								}
 							]
@@ -971,13 +1067,11 @@
 							},
 							{
 								"image": {
-									"sticky": false,
 									"mobileOnly": false,
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "./media/map06-lr_atrsm5o.jpg",
-									"slides": [],
+									"src": "/images/shanghai/map06-lr_atrsm5o.jpg",
 									"caption": null
 								}
 							},
@@ -990,22 +1084,41 @@
 							}
 						],
 						"colSecondary": {
+							"sticky": true,
+							"slide": true,
 							"image": {
-								"sticky": true,
 								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
 								"link": null,
 								"src": "",
-								"slides": [
-									"./media/map01-lr_fdj4ele.jpg",
-									"./media/map02-lr_ptgfaux.jpg",
-									"./media/map03-lr_1dedsj1.jpg",
-									"./media/map04-lr_m8kbltg.jpg",
-									"./media/map05-lr_vmrarob.jpg",
-									"./media/map06-lr_atrsm5o.jpg"
-								],
-								"caption": null
+								"caption": null,
+								"slideSets": [
+									{
+										"src": "/images/shanghai/map01-lr_fdj4ele.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/map02-lr_ptgfaux.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/map03-lr_1dedsj1.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/map04-lr_m8kbltg.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/map05-lr_vmrarob.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/shanghai/map06-lr_atrsm5o.jpg",
+										"caption": ""
+									}
+								]
 							}
 						}							
 					}
@@ -1023,13 +1136,13 @@
 									"landscape": false,
 									"portrait": false,
 									"srcset": [
-										"./media/xu5239503the_sun_rises_behind-lr 1100w,",
-										"./media/xu5239503the_sun_rises_behind-mr 1500w,",
-										"./media/xu5239503the_sun_rises_behind-hr"
+										"/images/shanghai/xu5239503the_sun_rises_behind-lr.jpeg 1100w,",
+										"/images/shanghai/xu5239503the_sun_rises_behind-mr.jpeg 1500w,",
+										"/images/shanghai/xu5239503the_sun_rises_behind-hr.jpeg"
 									]
 								}
 							],
-							"src": "./media/xu5239503the_sun_rises_behind-mr"	
+							"src": "/images/shanghai/xu5239503the_sun_rises_behind-mr.jpeg"
 						}
 					},
 					"textOverMedia": {
@@ -1050,13 +1163,13 @@
 									"landscape": false,
 									"portrait": false,
 									"srcset": [
-										"./media/bar_pic140510034_high_res_-mr_dezb8jx.jpg 1100w,",
-										"./media/bar_pic140510034_high_res_-hr_lm1svfb.jpg 1500w,",
-										"./media/bar_pic140510034_high_res_-lr_rzntd9p.jpg"
+										"/images/shanghai/bar_pic140510034_high_res_-mr_dezb8jx.jpg 1100w,",
+										"/images/shanghai/bar_pic140510034_high_res_-hr_lm1svfb.jpg 1500w,",
+										"/images/shanghai/bar_pic140510034_high_res_-lr_rzntd9p.jpg"
 									]
 								}
 							],
-							"src": "./media/bar_pic140510034_high_res_-mr_dezb8jx.jpg"	
+							"src": "/images/shanghai/bar_pic140510034_high_res_-mr_dezb8jx.jpg"	
 						}
 					},
 					"textOverMedia": {
@@ -1080,16 +1193,12 @@
 					},
 					"cols": null
 				}
-			]
-			"sectionBody": [
-				{
-
-				},
-				{
-
-				}
 			],
 			"adBanner": null
 		}
-	]
+	],
+	
+	"moreTopics": {
+
+	}
 }

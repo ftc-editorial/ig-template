@@ -59,6 +59,10 @@
 }
 
 .section-text-over-media {
+  p {
+    margin: 0;
+    padding: 0;
+  }
   .viewport-height & {
     height: 100%;
     @include oColorsFor(ig-text-over-media, text);
