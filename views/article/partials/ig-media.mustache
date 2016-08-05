@@ -21,7 +21,7 @@ See: http://stackoverflow.com/questions/30700144/responsive-object-fit-cover-fix
  --}}
 {{# ft}}
 <div class="ig-media" data-media-type="video">
-  <video class="ig-media__content" preload="metadata" loop="true" muted="true" autoplay="true"  poster="{{{poster}}}">
+  <video class="ig-media__content" preload="metadata" poster="{{{poster}}}" {{setting}}{{^setting}} controls{{/setting}}>
     {{# source}}
     <source src="{{{src}}}" type="video/{{{type}}}">
     {{/ source}}

@@ -14,7 +14,7 @@
 	"ogImage": "",
 	"ogUrl": "",
 	"pageTitle": "在沪外侨眼中的上海",
-	"wechatImage": "wechat's image",	
+	"wechatImage": "/images/shanghai/blinky-4-hr_kgpjdpm.png",	
 	"englishEdition": {
 		"text": "English",
 		"href": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/"
@@ -31,6 +31,7 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
+							"setting": "loop muted autoplay",
 							"poster": "/images/shanghai/blinky-4-hr_kgpjdpm.png",
 							"source": [{
 								"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.mp4",
@@ -113,7 +114,7 @@
 									"ratio": null,
 									"title": null,
 									"link": null,
-									"src": "/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
+									"src": "/images/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
 									"slideSets": [],
 									"caption": null
 								}
@@ -456,6 +457,7 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
+							"setting": "loop muted autoplay",
 							"poster": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky-5-hr_trwu830.png",
 							"source": [
 								{
@@ -511,9 +513,8 @@
 					"cols": null
 				},
 				{
-					"viewportHeight": true,
+					"viewportHeight": false,
 					"sticky": true,
-					"sticky": false,
 					"sectionMedia": {
 						"fixed": false,
 						"cc": null,
@@ -523,10 +524,15 @@
 							"src": "/images/shanghai/_ab_0686-mr_e4cka1t.jpg"
 						}
 					},
-					"textOverMedia": {
-						"text": ["“你是说，除了全职保姆，我还喜欢在上海生活的哪些方面？”上海“男太太”（即随迁丈夫）群体中的一员雷•赫拉蒂(Ray Heraty)问道。中国人管妻子叫“太太”，男太太的戏称便由此而生。赫拉蒂在家陪三个小孩，他太太是一家美国科技公司的高管。像大多数女性或男性随迁配偶（现在男性比例越来越高）一样，他喜欢上海便宜的家政服务，一名全职保姆的月薪在3000至6000元人民币（合490至980美元）之间。他说：“这意味着，每周有一个晚上我能跟妻子约会。” "]
-					},
-					"cols": null					
+					"textOverMedia": null,
+					"cols": {
+						"colPrimary": [
+							{
+								"text": ["“你是说，除了全职保姆，我还喜欢在上海生活的哪些方面？”上海“男太太”（即随迁丈夫）群体中的一员雷•赫拉蒂(Ray Heraty)问道。中国人管妻子叫“太太”，男太太的戏称便由此而生。赫拉蒂在家陪三个小孩，他太太是一家美国科技公司的高管。像大多数女性或男性随迁配偶（现在男性比例越来越高）一样，他喜欢上海便宜的家政服务，一名全职保姆的月薪在3000至6000元人民币（合490至980美元）之间。他说：“这意味着，每周有一个晚上我能跟妻子约会。” "]
+							}
+						],
+						"colSecondary": {}
+					}					
 				},
 				{
 					"viewportHeight": false,
@@ -535,6 +541,7 @@
 						"fixed": false,
 						"cc": null,
 						"ft": {
+							"setting": null,
 							"poster": "/images/shanghai/ray_heraty-mr.png",
 							"source": [
 								{
@@ -697,6 +704,7 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
+							"setting": "loop muted autoplay",
 							"poster": "/images/shanghai/blinky-2-mr.png",
 							"source": [
 								{
@@ -712,14 +720,16 @@
 						"picture": null	
 					},
 					"textOverMedia": {
-						"headFor": "section",
-						"viewportHeight": true,
-						"lead": null,
-						"title": null,
-						"heading": "中外美食之旅",
-						"subtitle": null,
-						"intro": null,
-						"byline": null
+						"head": {
+							"headFor": "section",
+							"viewportHeight": true,
+							"lead": null,
+							"title": null,
+							"heading": "中外美食之旅",
+							"subtitle": null,
+							"intro": null,
+							"byline": null
+						}
 					},
 					"cols": null
 				},
@@ -841,7 +851,7 @@
 							}, 
 							{
 								"image": {
-									"mobileOnly": false,
+									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,
@@ -916,6 +926,7 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
+							"setting": "loop muted autoplay",
 							"poster": "/images/shanghai/blinky-8-mr.png",
 							"source": [
 								{
@@ -947,6 +958,7 @@
 					"viewportHeight": true,
 					"sticky": false,
 					"sectionMedia": {
+						"fixed": true,
 						"cc": null,
 						"ft": null,
 						"picture": {
@@ -1067,7 +1079,7 @@
 							},
 							{
 								"image": {
-									"mobileOnly": false,
+									"mobileOnly": true,
 									"ratio": null,
 									"title": null,
 									"link": null,

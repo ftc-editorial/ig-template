@@ -70,6 +70,7 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
+							"setting": "loop muted autoplay",
 							"poster": "/images/myanmar/mpv-shot0001.jpg",
 							"source": [
 								{
@@ -149,6 +150,7 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
+							"setting": "loop muted autoplay",
 							"poster": "/images/myanmar/mpv-shot0002.jpg",
 							"source": [
 								{
@@ -346,6 +348,7 @@
 						"fixed": false,
 						"cc": null,
 						"ft": {
+							"setting": "loop muted autoplay",
 							"poster": "/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg",
 							"source": [
 								{
@@ -744,6 +747,7 @@
 					"sectionMedia": {
 						"cc": null,
 						"ft": {
+							"setting": "loop muted autoplay",
 							"poster": "/images/myanmar/boat-blinkie-backup-mr.jpg",
 							"source": [
 								{
