@@ -6,10 +6,10 @@
 	
   {{# link}}<a{{/ link}}
   {{^ link}}<div{{/ link}}
-  class="lazyload__outer"
+  class="ig-figure__image lazyload__outer"
   {{# link}}href="{{{link}}}"{{/ link}}>
 
-    <img src="{{{src}}}" class="ig-figure__image lazyload__inner"
+    <img src="{{{src}}}" class="lazyload__inner ig-slide-media"
     {{#slide}}
     data-slide-set="{{#slideSets}}{{{src}}} {{/slideSets}}"{{/slide}}>
     
@@ -27,6 +27,6 @@
   {{/caption}}
 
   {{#slide}}
-  <figcaption class="ig-figure__caption" data-slide-set="{{#slideSets}}{{caption}} {{/slideSets}}"></figcaption>
+  <figcaption class="ig-figure__caption ig-slide-caption" data-slide-set="{{#slideSets}}{{caption}} {{/slideSets}}"></figcaption>
   {{/slide}}
 </figure>

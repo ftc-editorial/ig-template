@@ -2,8 +2,8 @@
 const slideRootSelector = '.ig-slide';
 const slideContainerSelector = '.ig-slide-target';
 const slideDataAttr = 'data-slide-set';
-const slideImgSelector = '.ig-figure__image';
-const slideCaptionSelector = '.ig-figure__caption';
+const slideImgSelector = '.ig-slide-image';
+const slideCaptionSelector = '.ig-slide-caption';
 
 class Slide {
 	constructor(rootEl, config) {
