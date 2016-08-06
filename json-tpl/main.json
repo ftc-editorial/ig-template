@@ -20,12 +20,38 @@
 		"href": ""
 	},
 	"seriesTitle": "",
-	"articleHead": "{{> ig-head.json}}",
+	"articleHeader": "{{> ig-head.json}}",
 	"sections": [
 		"{{> section}}", 
 		"{{> section}}", 
 		"repeat"
 	],
-	"suggestedReads": "{{> sugested-reads.json}}",
-	"moreTopics": "{{> more-topics}}"
+	"articleFooter": {
+		"sections": [
+			{
+				"id": 1,
+				"sectionTitle": "",
+				"sectionCols": [
+					{
+						"link": "",
+						"image": {
+							"ratio": "",
+							"src": "",
+							"textOnImage":""
+						},
+						"srTitle": "",
+						"srSummary": [],
+						"srList": {
+							"listItem": [
+								{
+									"href": "",
+									"text": ""
+								}
+							]
+						}
+					}
+				]
+			}
+		]
+	}
 }
