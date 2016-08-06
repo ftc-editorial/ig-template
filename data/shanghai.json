@@ -91,7 +91,10 @@
 								]
 							}
 						],
-						"colSecondary": {}
+						"colSecondary": {
+							"sticky": false,
+							"image": null
+						}
 					}
 				},
 				{
@@ -279,9 +282,10 @@
 						}
 					},
 					"textOverMedia": {
-						"text": [
-							"‘对西方人来说，在华工作需要具备一套特别的技能——有时甚至对其他东亚国家的人来说也是如此’"
-						]
+						"leadin": {
+							"position": "left bottom",
+							"text": "‘对西方人来说，在华工作需要具备一套特别的技能——有时甚至对其他东亚国家的人来说也是如此’"
+						}
 					},
 					"cols": null
 				},
@@ -508,7 +512,10 @@
 						}
 					},
 					"textOverMedia": {
-						"text": ["‘在上海过西方式生活，比在其他任何中国城市都容易得多’"]
+						"leadin": {
+							"position": "left bottom",
+							"text": "‘在上海过西方式生活，比在其他任何中国城市都容易得多’"
+						}
 					},
 					"cols": null
 				},
@@ -531,7 +538,10 @@
 								"text": ["“你是说，除了全职保姆，我还喜欢在上海生活的哪些方面？”上海“男太太”（即随迁丈夫）群体中的一员雷•赫拉蒂(Ray Heraty)问道。中国人管妻子叫“太太”，男太太的戏称便由此而生。赫拉蒂在家陪三个小孩，他太太是一家美国科技公司的高管。像大多数女性或男性随迁配偶（现在男性比例越来越高）一样，他喜欢上海便宜的家政服务，一名全职保姆的月薪在3000至6000元人民币（合490至980美元）之间。他说：“这意味着，每周有一个晚上我能跟妻子约会。” "]
 							}
 						],
-						"colSecondary": {}
+						"colSecondary": {
+							"sticky": false,
+							"image": null
+						}
 					}					
 				},
 				{
@@ -756,7 +766,10 @@
 						}
 					},
 					"textOverMedia": {
-						"text": ["‘上海有街头小吃文化传统，因为它是个移民城市’"]
+						"leadin": {
+							"position": "right bottom",
+							"text": "‘上海有街头小吃文化传统，因为它是个移民城市’"
+						}
 					},
 					"cols": null
 				},
@@ -977,7 +990,10 @@
 						}
 					},
 					"textOverMedia": {
-						"text": ["‘上海是前往任何地方展开奇异之旅的绝佳大本营’"]
+						"leadin": {
+							"position": "left bottom",
+							"text": "‘上海是前往任何地方展开奇异之旅的绝佳大本营’"
+						}
 					},
 					"cols": null
 				},
@@ -1158,7 +1174,10 @@
 						}
 					},
 					"textOverMedia": {
-						"text": ["‘在中国这片土地上，人人都能纵情于内心深处的马可•波罗情怀’"]
+						"leadin": {
+							"position": "center bottom",
+							"text": "‘在中国这片土地上，人人都能纵情于内心深处的马可•波罗情怀’"
+						}
 					},
 					"cols": null
 				},
@@ -1210,8 +1229,104 @@
 			"adBanner": null
 		}
 	],
-	
-	"moreTopics": {
-
+	"articleFooter": {
+		"sections": [
+			{
+				"id": 1,
+				"sectionTitle": "本系列报道",
+				"sectionCols": [
+					{
+						"image": {
+							"ratio": "16/15",
+							"link": "http://www.ft.com/ig/sites/2015/special-reports/lessons-in-britishness/",
+							"src": "/images/shanghai/b061ec0e-f7e2-11e4-8bd5-00144feab7de.jpg",
+							"textOnImage":"第1部分：英国",
+							"caption": "British boarding schools attract pupils from all over the globe"
+						},
+						"srTitle": "",
+						"srSummary": [],
+						"srList": null
+					},
+					{
+						"image": {
+							"ratio": "16/15",
+							"link": "http://www.ftchinese.com/interactive/4427",
+							"src": "/images/shanghai/b5ef4b26-f7e2-11e4-8bd5-00144feab7de.jpg",
+							"textOnImage":"第2部分：中国",
+							"caption": "How do expatriates make the most of life in Shanghai?"
+						},
+						"srTitle": "",
+						"srSummary": [],
+						"srList": null
+					},
+					{
+						"image": {
+							"ratio": "16/15",
+							"link": "http://www.ft.com/brazil-fortunes",
+							"src": "/images/shanghai/739f838c-f89e-11e4-8e16-00144feab7de.jpg",
+							"textOnImage":"第3部分：巴西",
+							"caption": "Foreign entrepreneurs are under pressure as recession bites"
+						},
+						"srTitle": "",
+						"srSummary": [],
+						"srList": null
+					}
+				]
+			},
+			{
+				"id": 2,
+				"sectionTitle": "相关阅读",
+				"sectionCols": [
+					{
+						"link": "",
+						"image": null,
+						"srTitle": "FT",
+						"srSummary": [],
+						"srList": {
+							"listItem": [
+								{
+									"href": "http://www.ftchinese.com/story/001061577",
+									"text": "分析：经济减速让北京陷入两难"
+								},
+								{
+									"href": "http://www.ftchinese.com/story/001060251",
+									"text": "上海11名官员因外滩踩踏事件受罚"
+								},
+								{
+									"href": "http://www.ftchinese.com/story/001060339",
+									"text": "中国人心系中式早餐"
+								}
+							]
+						}
+					},
+					{
+						"link": "",
+						"image": null,
+						"srTitle": "其他来源:",
+						"srSummary": [],
+						"srList": {
+							"listItem": [
+								{
+									"href": "https://expatexplorer.hsbc.com/survey/files/pdfs/overall-reports/2014/HSBCExpatExplorer2014report.pdf",
+									"text": "Expat explorer report 2014 – HSBC"
+								},
+								{
+									"href": "http://www.mercer.com/content/mercer/global/all/en/newsroom/cost-of-living-survey.html",
+									"text": "Cost of living rankings 2014 – Mercer"
+								},
+								{
+									"href": "http://www.rolandberger.com/media/publications/2013-02-01-rbsc-pub-MaximizingthevalueofChinasmuseums.html",
+									"text": "Maximising the value of China’s museums, 2013 – Roland Berger"
+								},
+								{
+									"href": "http://www.nytimes.com/2012/04/15/travel/moganshan-china-a-lofty-retreat-from-sweltering-shanghai.html?r=0",
+									"text": "A lofty retreat from sweltering Shanghai – New York Times"
+								}
+							]
+						}
+					}
+				]
+			}
+		]
 	}
 }
