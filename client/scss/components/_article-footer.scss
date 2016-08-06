@@ -22,8 +22,8 @@
 			@include igGridColWidth(4);
 		}
 
-		@include oGridRespondTo(XL) {
-			@include igGridColWidth(3);
-		}		
+		// @include oGridRespondTo(XL) {
+		// 	@include igGridColWidth(3);
+		// }		
 	}
 }

@@ -2,10 +2,6 @@
   margin: 0 auto;
   padding: 15px 0;
 
-  .section-col__secondary & {
-  	padding: $o-header-height + 15px 0;
-  }
-
 	&--mobile {
 		display: block;
 	}
@@ -29,12 +25,16 @@
 		background-color: rgba(0, 96, 156, .85);
 	}
 
-	&__video {
-		background-color: #000;
-	}
-
 	&__title {
 		margin: 1em 0 0.5em 0;
+	}
+
+	&__video {
+		@include oColorsFor(ig-video, background);
+	}
+
+	&__image {
+		@include oColorsFor(ig-image, background);
 	}
 
 	&__caption {
@@ -45,22 +45,13 @@
 	   text-align: center;
 	}
 
-	.ig-sticky .section-cols &__caption {
-		color: #ccc;
-	}
-
-	.suggested-reads &__caption {
-		color: #000;
-		text-align: left;
-	}
-
 	img {
-		object-fit: cover;	
+		object-fit: cover;
 	}
 
 	video {
 		box-sizing: border-box;
-		object-fit: contain;
+		object-fit: contain; 
 	}
 }
 

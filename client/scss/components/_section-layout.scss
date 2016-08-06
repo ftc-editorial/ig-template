@@ -4,6 +4,13 @@
 	}
 }
 .section-col__primary {
+  a {
+    border-bottom: 1px solid transparent
+  }
+  a:hover {
+    border-bottom: 1px solid;
+  }
+  
   &-inner {
     box-sizing: border-box;
     position: relative;
@@ -23,6 +30,14 @@
   position: relative;
   padding-left: 10%;
   padding-right: 5%;
+
+  .ig-figure {
+    padding: $o-header-height + 15px 0;
+  }
+
+  .ig-figure__image {
+    background-color: transparent;
+  }
 
   @include oGridRespondTo(M) {
     @include igGridColWidth((12 - $ig-primary-col-width));

@@ -10,4 +10,6 @@
 @include oColorsSetUseCase(ig-ad, text, 'grey-tint5');
 
 @include oColorsSetUseCase(ig-text-over-media, text, 'white');
+@include oColorsSetUseCase(ig-image, background, 'pink-tint2');
+@include oColorsSetUseCase(ig-video, background, 'grey-tint5');
 @include oColorsSetUseCase(ig-media, background, 'pink-tint4');

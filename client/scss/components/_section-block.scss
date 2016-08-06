@@ -122,10 +122,16 @@
     background-color: #000;
     padding-bottom: 40px;
 
+    .ig-figure__caption {
+      color: #ccc;
+    }
+
     @include oGridRespondTo(M) {
       padding-top: 450px;
       padding-bottom: 250px;
+
       @include igBackgroundMask;
+      
       background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, transparent);      
     }
 

@@ -13,6 +13,15 @@
 		border-bottom: 0;
 	}
 
+	.ig-figure__image {
+		object-fit: contain;
+	}
+
+	.ig-figure__caption {
+		color: #000;
+		text-align: left;
+	}
+
 	&__title {
 		line-height: 1.2;
 		margin: 0;
