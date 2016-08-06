@@ -17,11 +17,27 @@
 	{{> body}}
 {{/ sections}}
 
-{{# suggestedReads}}
-	{{> suggested-reads}}
-{{/ suggestedReads}}
+{{# articleFooter}}
+	<div class="article-footer">
+		<div data-o-grid-container>
+			{{# sections}}
+			<div class="article-footer__section" id="article-footer__section-{{id}}">
+		    {{#sectionTitle}}
+		    <h2 class="article-footer__section-title">{{sectionTitle}}</h2>
+		    {{/sectionTitle}}
 
-{{# moreTopics}}
-	{{> more-topics}}
-{{/ moreTopics}} 
+		    <div class="article-footer__row" data-o-grid-row>
+		      {{#sectionCols}}
+		      <div class="article-footer__col" data-o-grid-col>
+		      	{{> suggested-reads}}
+		      </div>
+		      {{/sectionCols}}
+		    </div>  
+			</div>
+			{{/ sections}}
+		</div>
+	</div><!-- .article-footer -->
+{{/ articleFooter}}
+
+
 </article>

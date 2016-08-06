@@ -5,7 +5,7 @@ CC videos using swf have very wired styles. The result is unpredictable.
 But you can embed it in the text. On large screen the video might be scaled out of  the screen estate when using in this way.
 --}}
 {{# cc}}
-<div class="ig-media" data-media-type="video" data-media-src="cc" data-media-ratio="9/16">
+<div class="ig-media ig-media--video" data-media-src="cc" data-media-ratio="9/16">
   <div class="lazyload__outer">
     <div class="lazyload__inner">
       <script src="{{{src}}}" type="text/javascript"></script>
@@ -20,7 +20,7 @@ Add addintional wrapper and set `overflow:hidden;`
 See: http://stackoverflow.com/questions/30700144/responsive-object-fit-cover-fix-on-chrome
  --}}
 {{# ft}}
-<div class="ig-media" data-media-type="video">
+<div class="ig-media ig-media--video">
   <video class="ig-media__content" preload="metadata" poster="{{{poster}}}" {{setting}}{{^setting}} controls{{/setting}}>
     {{# source}}
     <source src="{{{src}}}" type="video/{{{type}}}">
@@ -30,7 +30,7 @@ See: http://stackoverflow.com/questions/30700144/responsive-object-fit-cover-fix
 {{/ ft}}
 
 {{# picture}}
-<picture class="ig-media" data-media-type="picture">
+<picture class="ig-media ig-media--picture">
 	{{# source}}
 	<source
     {{#landscape}}media="(min-aspect-ratio: 1/1)"{{/landscape}}

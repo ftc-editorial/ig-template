@@ -3,12 +3,13 @@
 		{{> ig-image}}
 	{{/ image}}
 	
-	<h3 class="ig-more__title">{{title}}</h3>
-	<ul class="ig-more__items">
-	{{# items}}
-	  <li>
-	  	{{#date}}<span>{{date}}</span>{{/date}}
-	  	<a href="{{{href}}}">{{text}}</a></li>
-	{{/ items}}
+	<h4 class="ig-more__title">{{title}}</h4>
+
+	<ul class="ig-more__list">
+	{{# listItems}}
+	  <li class="ig-more__list-item">
+	  	<a href="{{{href}}}">{{text}}</a>
+	  </li>
+	{{/ listItems}}
 	</ul>	
 </div>

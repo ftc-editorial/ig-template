@@ -25,11 +25,11 @@ when .section-block has .viewport-height, .section-media should be absolutely po
         {{> partials/ig-head}}
       {{/ head}}
 
-      {{# text}}
-      <div data-o-grid-container>
-        <p>{{{.}}}</p>
+      {{# leadin}}
+      <div class="section-leadin{{#position}} section-leadin--positioned {{position}}{{/position}}">
+        <p class="section-leadin__text">{{text}}</p>
       </div>
-      {{/ text}}
+      {{/ leadin}}
       
       {{# credits}}
         {{> partials/ig-credits}}
@@ -43,27 +43,31 @@ when .section-block has .viewport-height, .section-media should be absolutely po
       <div data-o-grid-container>
         <div data-o-grid-row>
           <div class="section-col__primary" data-o-grid-col>
-          {{# colPrimary}}
-            {{# text}}
-            <p>{{{.}}}</p>
-            {{/ text}}
+            <div class="section-col__primary-inner">
 
-            {{# image}}
-              {{> partials/ig-image}}
-            {{/ image}}
-            
-            {{# video}}
-              {{> partials/ig-video}}
-            {{/ video}}
+            {{# colPrimary}}
 
-            {{# quote}}
-              {{> partials/ig-quote}}
-            {{/ quote}}
+              {{# text}}
+              <p>{{{.}}}</p>
+              {{/ text}}
 
-            {{# readMore}}
-              {{> partials/ig-more}}
-            {{/ readMore}}
-          {{/ colPrimary}}
+              {{# image}}
+                {{> partials/ig-image}}
+              {{/ image}}
+              
+              {{# video}}
+                {{> partials/ig-video}}
+              {{/ video}}
+
+              {{# quote}}
+                {{> partials/ig-quote}}
+              {{/ quote}}
+
+              {{# readMore}}
+                {{> partials/ig-more}}
+              {{/ readMore}}
+            {{/ colPrimary}} 
+            </div>
           </div>
           
           {{# colSecondary}}

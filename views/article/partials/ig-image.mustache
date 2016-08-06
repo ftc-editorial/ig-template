@@ -12,15 +12,21 @@
     <img src="{{{src}}}" class="ig-figure__image lazyload__inner"
     {{#slide}}
     data-slide-set="{{#slideSets}}{{{src}}} {{/slideSets}}"{{/slide}}>
+    
+    {{#textOnImage}}
+    <figcaption class="ig-figure__image-text">{{textOnImage}}</figcaption>
+    {{/textOnImage}}
 
   {{# link}}</a>{{/ link}}
   {{^ link}}</div>{{/ link}}         
   
-  <figcaption class="ig-figure__caption"
-  {{#slide}}
-  data-slide-set="{{#slideSets}}{{caption}} {{/slideSets}}"
-  {{/slide}}>
-    {{caption}}
+  {{#caption}}
+  <figcaption class="ig-figure__caption">
+    {{caption }}
   </figcaption>
-  
+  {{/caption}}
+
+  {{#slide}}
+  <figcaption class="ig-figure__caption" data-slide-set="{{#slideSets}}{{caption}} {{/slideSets}}"></figcaption>
+  {{/slide}}
 </figure>
