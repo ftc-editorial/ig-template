@@ -4,7 +4,16 @@
 	}
 }
 .section-col__primary {
+  &-inner {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   @include oGridRespondTo(M) {
+    &-inner {
+      padding: 20px 30px;
+    }
     @include igGridColWidth($ig-primary-col-width);
   }
 }
@@ -12,13 +21,17 @@
 .section-col__secondary {
   display: none;
   position: relative;
+  padding-left: 10%;
+  padding-right: 5%;
 
   @include oGridRespondTo(M) {
     @include igGridColWidth((12 - $ig-primary-col-width));
   }
-}
 
-.section-col__secondary-inner {
-  width: 100%;
-  height: 100%;
+  &-inner {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -59,10 +59,7 @@
 }
 
 .section-text-over-media {
-  p {
-    margin: 0;
-    padding: 0;
-  }
+  position: relative;
   .viewport-height & {
     height: 100%;
     @include oColorsFor(ig-text-over-media, text);
@@ -82,8 +79,45 @@
   }
 }
 
+.section-leadin {
+  min-width: 290px;
+  width: 40%;
+  max-width: 620px; 
+  padding: 5%;
+  margin: 0 auto;
+  text-align: center;
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    @include oGridRespondTo(M) {
+      font-size: 30px;
+    }
+  }
+
+  &--positioned {
+    position: absolute;
+  }
+  &.left {
+    left: 0;
+    text-align: left
+  }
+  &.bottom {
+    bottom: 10%;
+  }
+  &.right {
+    right: 0;
+    text-align: right;
+  }
+  &.center {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
 .section-cols {
   position: relative;
+
   .ig-sticky & {
     background-color: #000;
     padding-bottom: 40px;
@@ -100,5 +134,3 @@
     }
   }
 }
-
-

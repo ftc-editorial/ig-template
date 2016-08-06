@@ -1,0 +1,29 @@
+.article-footer {
+
+	&__section {
+		padding-top: 2em;
+	}
+	
+	&__section-title {
+		margin: 0;
+		@include oGridRespondTo(M) {
+		    font-size: 36px;
+		}
+	}
+
+	&__col {
+		@include igGridColWidth(12);
+
+		@include oGridRespondTo(M) {
+			@include igGridColWidth(6);
+		}
+
+		@include oGridRespondTo(L) {
+			@include igGridColWidth(4);
+		}
+
+		@include oGridRespondTo(XL) {
+			@include igGridColWidth(3);
+		}		
+	}
+}

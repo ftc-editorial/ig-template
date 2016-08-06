@@ -5,11 +5,11 @@
   display: block;
   overflow: hidden;
 
-  &__video {
+  &--video {
     background-color: #000;
   }
 
-  &__picture {
+  &--picture {
     @include oColorsFor(ig-media, background);
   }
 

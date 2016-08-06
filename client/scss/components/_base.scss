@@ -15,10 +15,20 @@
 // It could be in the form `140%` or `7/5`.
 @include lazyloadMedia;
 
+[data-media-ratio="1/2"] {
+  .lazyload__outer {
+    @include igSetMediaRatio(1/2);
+  }
+}
 [data-media-ratio="9/16"] {
   .lazyload__outer {
     @include igSetMediaRatio(9/16);
   }
+}
+[data-media-ratio="16/15"] {
+  .lazyload__outer {
+    @include igSetMediaRatio(16/15);
+  }  
 }
 [data-media-ratio="7/5"] {
   @include oGridRespondTo(M) {
@@ -28,8 +38,8 @@
     @include igSetMediaRatio(7/5);
   } 
 }
-[data-media-ratio="1/2"] {
+[data-media-ratio="14/10"] {
   .lazyload__outer {
-    @include igSetMediaRatio(1/2);
+    @include igSetMediaRatio(14/10);
   }
 }

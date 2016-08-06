@@ -30,6 +30,9 @@
   padding: 0;
   @include oGridRespondTo(M) {
     font-size: 100px;
+    // min-width: 80%;
+    // width: 80%;
+    margin: 0 auto;
   }
 }
 // this is used as section title
@@ -64,15 +67,14 @@
 
 .ig-head__intro {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 1em 0 0 0;
   font-size: 20px;
 
   @include oGridRespondTo(M) {
-    font-size: 26px;
+    font-size: 24px;
     min-width: 80%;
     width: 80%;
-    margin: 0 auto;
   }
 
   .viewport-height & {
