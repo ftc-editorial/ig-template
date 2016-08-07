@@ -9,7 +9,8 @@
   class="ig-figure__image lazyload__outer"
   {{# link}}href="{{{link}}}"{{/ link}}>
 
-    <img src="{{{src}}}" class="lazyload__inner ig-slide-media"
+    <img src="{{{src}}}" class="lazyload__inner
+    {{#slide}}ig-slide-image{{/slide}}"
     {{#slide}}
     data-slide-set="{{#slideSets}}{{{src}}} {{/slideSets}}"{{/slide}}>
     
