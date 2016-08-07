@@ -20,11 +20,50 @@
 		"href": ""
 	},
 	"seriesTitle": "",
-	"articleHeader": "{{> ig-head.json}}",
+	"articleHead": {
+		"headFor": "aritcle",
+		"lead": "",
+		"title": "",
+		"heading": "",
+		"subtitle": "",
+		"intro": "",
+		"byline": {
+			"publishTime": "",
+			"author": ""
+		},
+		"background": {
+			"cc": {},
+			"ft": {},
+			"picture": {}		
+		}		
+	},
 	"sections": [
-		"{{> section}}", 
-		"{{> section}}", 
-		"repeat"
+		{
+			"id":"",
+			"navText": "",
+			"sectionBlocks": [
+				{
+					"viewportHeight": "true | false",
+					"sticky": "true | false",
+					"sectionMedia": {
+						"fixed": "true | false",
+						"cc": "",
+						"ft": "",
+						"picture": ""
+					},
+					"textOverMedia": {
+						"head":"{{> ig-head.json}}",
+						"leadin": {
+							"position": "left | right | bottom | center",
+							"text": []
+						},
+						"credits": "{{> ig-credits.json}}"
+					},
+					"cols": "{{> cols.json}}"
+				}
+			],
+			"ad": ""
+		}
 	],
 	"articleFooter": {
 		"sections": [

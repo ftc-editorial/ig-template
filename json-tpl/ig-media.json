@@ -1,6 +1,43 @@
 {
-	"sticky": false,
-	"cc": "{{> media/cc.json}}",
-	"ft": "{{> media/ft.json}}",
-	"picture": "{{> media/picture.json}}"
+	"fixed": "true | false",
+	"cc": {
+		"src": ""
+	},
+	"ft": {
+		"setting": "loop muted autoplay",
+		"poster": "url",
+		"source": [
+			{
+				"src": "url",
+				"type": "mp4"
+			}, 
+			{
+				"src": "url",
+				"type": "webm"
+			}
+		]		
+	},
+	"picture": {
+		"source": [
+			{
+				"landscape": true,
+				"portrait": false,
+				"srcset": [
+					"url 1100w,",
+					"url 1500w,",
+					"url"
+				]
+			},
+			{
+				"landscape": false,
+				"portrait": true,
+				"srcset": [
+					"url 1100w,",
+					"url 1500w,",
+					"url"
+				]
+			}
+		],
+		"src": "url"	
+	} 
 }

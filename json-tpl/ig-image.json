@@ -1,10 +1,15 @@
 {
-	"sticky": false,
-	"mobileOnly": false,
-	"ratio": null,
-	"title": null,
-	"link": null,
+	"mobileOnly": "true | false",
+	"ratio": "",
+	"title": "",
+	"link": "",
 	"src": "",
-	"slides": [],
-	"caption": null
+	"caption": "",
+	"textOnImage": "",
+	"slideSets": [
+		{
+			"src": "",
+			"caption": ""
+		}
+	]
 }

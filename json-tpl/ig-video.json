@@ -5,12 +5,15 @@
 	},
 	"ft": {
 		"poster": null,
-		"source": [{
-			"src": null,
-			"type": "mp4"
-		}, {
-			"src": null,
-			"type": "webm"
-		}]
+		"source": [
+			{
+				"src": null,
+				"type": "mp4"
+			}, 
+			{
+				"src": null,
+				"type": "webm"
+			}
+		]
 	}
 }

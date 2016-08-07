@@ -1,15 +1,8 @@
 {
 	"readMore": {
-		"image": {
-			"mobileOnly": false,
-			"ratio": null,
-			"title": null,
-			"link": null,
-			"src": null,
-			"caption": null
-		},
-		"title": null,
-		"items": [
+		"image": "{{> ig-image.json}}",
+		"title": "阅读更多",
+		"listItems": [
 			{
 				"href": null,
 				"text": null

@@ -1,0 +1,24 @@
+{
+	"colPrimary":[
+		{
+			"text": ["para1", "para2"]
+		},
+		{
+			"image": "{{> ig-image.json}}"
+		},
+		{
+			"video": "{{> ig-video.json}}"
+		},
+		{
+			"quote": "{{> ig-quote.json}}"
+		},
+		{
+			"readMore": "{{> ig-more.json}}"
+		}
+	],
+	"colSecondary": {
+		"sticky": "true | false",
+		"slide": "true | false",
+		"image": "{{> ig-image.json}}"
+	}
+}
