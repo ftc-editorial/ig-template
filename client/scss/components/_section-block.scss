@@ -69,12 +69,13 @@
   .ig-sticky & {
     background-color: #000;
     padding-bottom: 40px;
+    @include oColorsFor(ig-text-over-media, text);
 
     @include oGridRespondTo(M) {
       padding-top: 450px;
       padding-bottom: 250px;
-      @include oColorsFor(ig-text-over-media, text);
-      @include igBackgroundMask;      
+      
+      @include igBackgroundMask;
     }
   }
 }
