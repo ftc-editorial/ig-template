@@ -241,7 +241,7 @@ gulp.task('extras', function () {
 });
 
 gulp.task('images', function () {
-  const SRC = './images/' + projectName + '/*.{svg,png,jpg,jpeg,gif}' ;
+  const SRC = './public/images/' + projectName + '/*.{svg,png,jpg,jpeg,gif}' ;
   const DEST = path.resolve(__dirname, config.assets, 'images', projectName);
   console.log('Copying images to:', DEST);
 
@@ -249,7 +249,8 @@ gulp.task('images', function () {
     .pipe($.imagemin({
       progressive: true,
       interlaced: true,
-      svgoPlugins: [{cleanupIDs: false}]
+      svgoPlugins: [{cleanupIDs: false}],
+      verbose: true
     }))
     .pipe(gulp.dest(DEST));
 });
@@ -267,7 +268,7 @@ gulp.task('serve:dist', function() {
 
   browserSync.init({
     server: {
-      baseDir: ['dist', 'images'],
+      baseDir: ['dist', 'public'],
       index:  indexFile,
       routes: {
         '/bower_components': 'bower_components'
