@@ -2,6 +2,6 @@
 	"html": "../special/",
 	"assets": "../ft-interact/",
 	"test": "../interact/",
-	"imgPrefix": "http://interactive.ftchinese.com/images/",
+	"imgPrefix": "http://interactive.ftchinese.com/",
 	"icons": "http://static.ftchinese.com/ftc-icons/"
 }
