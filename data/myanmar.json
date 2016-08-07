@@ -32,8 +32,8 @@
 			"author": "英国《金融时报》报道"
 		},
 		"background": {
-			"cc": false,
-			"ft": false,
+			"cc": null,
+			"ft": null,
 			"picture": {
 				"source": [
 					{
@@ -93,7 +93,7 @@
 							"subtitle": null,
 							"intro": "在缅甸，独裁统治的结束引发了围绕土地的争斗。"
 						},
-						"text":[],
+						"leadin":[],
 						"credits": null
 					},
 					"cols": null
@@ -132,13 +132,13 @@
 						],
 						"colSecondary": {
 							"sticky": false,
+							"slide": false,
 							"image": {
-								"mobileOnly": false,
 								"ratio": null,
 								"title": null,
 								"link": "https://www.ft.com/land",
 								"src": "/images/myanmar/new_logo.png",
-								"slides": null,
+								"slideSets": null,
 								"caption": null
 							}
 						}							
