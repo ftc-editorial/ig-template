@@ -1,10 +1,21 @@
 {
 	"colPrimary":[
 		{
-			"text": ["para1", "para2"]
+			"text": [
+				"para1", 
+				"para2"
+			]
 		},
 		{
-			"image": "{{> ig-image.json}}"
+			"image": {
+				"mobileOnly": "true | false",
+				"ratio": "",
+				"heightToWidth": "",
+				"title": "",
+				"link": "",
+				"src": "",
+				"caption": ""
+			}
 		},
 		{
 			"video": "{{> ig-video.json}}"
@@ -18,7 +29,20 @@
 	],
 	"colSecondary": {
 		"sticky": "true | false",
+		"height": "100vh | 100%",
 		"slide": "true | false",
-		"image": "{{> ig-image.json}}"
+		"image": {
+			"ratio": "",
+			"heightToWidth": "",
+			"link": "",
+			"src": "",
+			"caption": "",
+			"slideSets": [
+				{
+					"src": "",
+					"caption": ""
+				}
+			]
+		}
 	}
 }
