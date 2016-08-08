@@ -52,14 +52,17 @@ Data saved in `json` format in `model/your-project-name.json` folder.
 To use the 'light' theme, add `theme:true,` as the first entry in you json file.
 
 ## Data Structure
+**This part is not update**. 
+You'd better refer to `json-tpl`, a collection of abstracted json template.
+
 ### Fields in JSON
 - `lightTheme`: <true | false>, // Use the light theme or not.
 - `darkTheme`: <true | false>, // Use the dark theme or not. `lightTheme` and `darkTheme` should be mutually exclusive.
 - `enableScroll`: <true | false>, // Enable / disable scrolling effect.
 
-- `articleCover` <object>. Its first level has a single entry whose key could be one of `cc`, `ft` or `picture` depending on the type of media.
+- `sectionMedia` <object>. Its first level has a single entry whose key could be one of `cc`, `ft` or `picture` depending on the type of media.
 ```
-"articleCover": {
+{
 	"picture": {
 		"source": <Array>, // one or more object
 		"src": <String> // image tag's src url.
@@ -121,7 +124,7 @@ Correponding HTML:
 ```
 `sectionCover`, `fullspanMedia` use the same teamplate as this one.
 
-- `figure` <object>
+- `image` <object>
 `<figure>` element in a paragraph.
 ```
 "figure": {
@@ -131,12 +134,10 @@ Correponding HTML:
 	"ratio": "", 
 	// image's width/height ratio, e.g, `7/5`. Omit it if you do not have wired dimensions.
 
-	"hasLink": {
-		"href": "https://www.ft.com/land"
-	}, 
+	"link":  "https://www.ft.com/land", 
 	// whehter the image is clickable or not. Omit it or leave it empty if you do not want to jump away.
 
-	"imgSrc": "./images/new_logo.png",
+	"src": "/images/myanmar/new_logo.png",
 	
 	"caption": <String> 
 	// Caption for the image.
