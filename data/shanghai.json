@@ -164,6 +164,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100vh",
 							"slide": true,
 							"image": {
 								"sticky": true,
@@ -334,6 +335,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100vh",
 							"slide": true,
 							"image": {
 								"mobileOnly": false,
@@ -426,6 +428,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100%",
 							"slide": true,
 							"image": {
 								"mobileOnly": false,
@@ -620,6 +623,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100vh",
 							"slide": true,
 							"image": {
 								"sticky": false,
@@ -688,6 +692,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100%",
 							"slide": false,
 							"image": {
 								"mobileOnly": false,
@@ -805,6 +810,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100%",
 							"slide": true,
 							"image": {
 								"mobileOnly": false,
@@ -888,6 +894,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100vh",
 							"slide": false,
 							"image": {
 								"sticky": false,
@@ -1029,6 +1036,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100vh",
 							"slide": true,
 							"image": {
 								"mobileOnly": false,
@@ -1044,7 +1052,7 @@
 									},
 									{
 										"src": "/images/shanghai/dreamstime_xl_23894458-lr_1r6qm7m.jpg",
-										"caption": ""
+										"caption": "西藏牧民"
 									}
 								]
 							}
@@ -1113,6 +1121,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100vh",
 							"slide": true,
 							"image": {
 								"mobileOnly": false,

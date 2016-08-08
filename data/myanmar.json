@@ -308,6 +308,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
+							"height": "100vh",
 							"slide": true,
 							"image":  {
 								"mobileOnly": false,

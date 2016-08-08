@@ -75,12 +75,11 @@ when .section-block has .viewport-height, .section-media should be absolutely po
             
             <div class="section-col__secondary-inner
             {{#sticky}}ig-sticky{{/sticky}}
-            {{#slide}}ig-slide{{/slide}}">
+            {{#slide}}ig-slide{{/slide}}" style="min-height:{{height}};">
 
-              <div class="section-media__aside
-              {{#sticky}}viewport-height
-              ig-sticky-target{{/sticky}}
-              {{#slide}}ig-slide-target{{/slide}}">
+              <div class="section-col__secondary__media
+              {{#sticky}}ig-sticky-target{{/sticky}}
+              {{#slide}}ig-slide-target{{/slide}}" style="height:{{height}};">
               {{# image}}
                 {{> partials/ig-image}}
               {{/ image}}

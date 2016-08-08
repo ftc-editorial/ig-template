@@ -49,9 +49,4 @@
     width: 100%;
     height: 100%;
   }
-
-// In case the it is shorter than the .ig-sticky-target inside it.
-  &-inner.ig-sticky {
-    min-height: 100vh;
-  }
 }
