@@ -22,33 +22,35 @@
 	"seriesTitle": "特别报道 | 老外看中国",
 	"sections": [
 		{
-			"id":"1",
+			"id":1,
 			"navText": "1",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
+					"background": {
+						"fixed": false,
 						"ft": {
-							"setting": "loop muted autoplay",
 							"poster": "/images/shanghai/blinky-4-hr_kgpjdpm.png",
-							"source": [{
-								"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.mp4",
-								"type": "mp4"
-							}, {
-								"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.webmhd.webm",
-								"type": "webm"
-							}]
+							"source": [
+								{
+									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.mp4",
+									"type": "mp4"
+								}, 
+								{
+									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.webmhd.webm",
+									"type": "webm"
+								}
+							]
 						},
 						"picture": null
 					},
 					"textOverMedia": {
 						"head": {
-							"headFor": "article",		
+							"headFor": "article",
 							"lead": null,
 							"title": "在沪外侨眼中的上海",
-							"heading": null,
 							"subtitle": "",
 							"intro": "在高薪工作机会的吸引下，世界各地的人士纷纷涌入中国的商业之都。不过，是什么因素让他们留了下来？上海的外侨在这里讲述了他们的家庭生活、上海的街头小吃以及“逃离”这座城市的故事。",
 							"byline": {
@@ -60,11 +62,11 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": false,
 					"sticky": true,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [
@@ -98,9 +100,10 @@
 					}
 				},
 				{
+					"blockId": 3,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
 					"cols": {
 						"colPrimary": [
@@ -212,15 +215,15 @@
 			"adBanner": ""
 		},
 		{
-			"id": "2",
+			"id": 2,
 			"navText": "2",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [
@@ -253,11 +256,11 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [
@@ -281,6 +284,7 @@
 					"cols": null
 				},
 				{
+					"blockId": 3,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
@@ -353,6 +357,7 @@
 					}
 				},
 				{
+					"blockId": 4,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": {
@@ -368,13 +373,13 @@
 									"type": "webm"
 								}
 							]
-						},
-						"picture": null
+						}
 					},
 					"textOverMedia": null,
 					"cols": null
 				},
 				{
+					"blockId": 5,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
@@ -430,14 +435,15 @@
 			"adBanner": ""
 		},
 		{
-			"id": "3",
+			"id": 3,
 			"navText": "3",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
+					"background": {
+						"fixed": false,
 						"ft": {
 							"setting": "loop muted autoplay",
 							"poster": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky-5-hr_trwu830.png",
@@ -468,11 +474,11 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [
@@ -498,9 +504,10 @@
 					"cols": null
 				},
 				{
+					"blockId": 3,
 					"viewportHeight": false,
 					"sticky": true,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
 						"cc": null,
 						"ft": null,
@@ -523,10 +530,10 @@
 					}					
 				},
 				{
+					"blockId": 4,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": {
-						"fixed": false,
 						"cc": null,
 						"ft": {
 							"setting": null,
@@ -541,13 +548,13 @@
 									"type": "webm"
 								}
 							]
-						},
-						"picture": null
+						}
 					},
 					"textOverMedia": null,
 					"cols": null
 				},
 				{
+					"blockId": 5,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
@@ -619,6 +626,7 @@
 					}
 				},
 				{
+					"blockId": 6,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
@@ -674,16 +682,15 @@
 			"adBanner": ""
 		},
 		{
-			"id": "4",
+			"id": 4,
 			"navText": "4",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
+					"background": {
 						"ft": {
-							"setting": "loop muted autoplay",
 							"poster": "/images/shanghai/blinky-2-mr.png",
 							"source": [
 								{
@@ -713,11 +720,11 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [
@@ -743,6 +750,7 @@
 					"cols": null
 				},
 				{
+					"blockId": 3,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
@@ -791,6 +799,7 @@
 					}
 				},
 				{
+					"blockId": 4,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": {
@@ -807,13 +816,13 @@
 									"type": "webm"
 								}
 							]
-						},
-						"picture": null
+						}
 					},
 					"textOverMedia": null,
 					"cols": null
 				},
 				{
+					"blockId": 4,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
@@ -863,10 +872,10 @@
 					}
 				},
 				{
+					"blockId": 5,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": {
-						"sticky": false,
 						"cc": null,
 						"ft": {
 							"poster": "/images/shanghai/julie_chun-mr.png",
@@ -880,8 +889,7 @@
 									"type": "webm"
 								}
 							]
-						},
-						"picture": null
+						}
 					},
 					"textOverMedia": null,
 					"cols": null
@@ -890,14 +898,14 @@
 			"adBanner": ""
 		},
 		{
-			"id": "5",
+			"id": 5,
 			"navText": "5",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
+					"background": {
 						"ft": {
 							"setting": "loop muted autoplay",
 							"poster": "/images/shanghai/blinky-8-mr.png",
@@ -928,11 +936,11 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [
@@ -958,10 +966,12 @@
 					"cols": null
 				},
 				{
+					"blockId": 3,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
+					"sectionMedia": null,
 					"cols": {
 						"colPrimary": [
 							{
@@ -1006,10 +1016,11 @@
 					}
 				},
 				{
+					"blockId": 4,
 					"viewportHeight": false,
 					"sticky": false,
+					"background": null,
 					"sectionMedia": {
-						"sticky": false,
 						"cc": null,
 						"ft": {
 							"poster": "/images/shanghai/sara_naumann-mr.png",
@@ -1023,15 +1034,16 @@
 									"type": "webm"
 								}
 							]
-						},
-						"picture": null
+						}
 					},
 					"textOverMedia": null,
 					"cols": null
 				},
 				{
+					"blockId": 5,
 					"viewportHeight": false,
 					"sticky": false,
+					"background": null,
 					"sectionMedia": null,
 					"textOverMedia": null,
 					"cols": {
@@ -1100,11 +1112,11 @@
 					}
 				},
 				{
+					"blockId": 6,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [
@@ -1130,11 +1142,10 @@
 					"cols": null
 				},
 				{
+					"blockId": 7,
 					"viewportHeight": false,
 					"sticky": true,
-					"sectionMedia": {
-						"sticky": true,
-						"cc": null,
+					"background": {
 						"ft": null,
 						"picture": {
 							"source": [
