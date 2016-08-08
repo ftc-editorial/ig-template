@@ -851,7 +851,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
-							"height": "100vh",
+							"height": "100%",
 							"image": {
 								"ratio": null,
 								"title": null,
@@ -989,7 +989,7 @@
 						],
 						"colSecondary": {
 							"sticky": true,
-							"height": "100vh",
+							"height": "100%",
 							"slide": {
 								"slideSets": [
 									{
