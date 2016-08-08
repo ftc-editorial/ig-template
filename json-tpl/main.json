@@ -24,36 +24,27 @@
 		"headFor": "aritcle",
 		"lead": "",
 		"title": "",
-		"heading": "",
 		"subtitle": "",
 		"intro": "",
 		"byline": {
 			"publishTime": "",
 			"author": ""
 		},
-		"background": {
-			"cc": {},
-			"ft": {},
-			"picture": {}		
-		}		
+		"background": "{{> ig-background.json}}"		
 	},
 	"sections": [
 		{
-			"id":"",
+			"id": 1,
 			"navText": "",
 			"sectionBlocks": [
 				{
 					"blockId": 1,
 					"viewportHeight": "true | false",
 					"sticky": "true | false",
-					"sectionMedia": {
-						"fixed": "true | false",
-						"cc": "",
-						"ft": "",
-						"picture": ""
-					},
+					"background": "{{> ig-background.json}}",
+					"sectionMedia": "{{> ig-video.json}}",
 					"textOverMedia": {
-						"head":"{{> ig-head.json}}",
+						"head": "{{> ig-head.json}}",
 						"leadin": {
 							"position": "left | right | bottom | center",
 							"text": []

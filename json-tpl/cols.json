@@ -18,31 +18,63 @@
 			}
 		},
 		{
-			"video": "{{> ig-video.json}}"
+			"video": {
+				"title": null,
+				"cc": {
+					"src": null
+				},
+				"ft": {
+					"poster": null,
+					"source": [
+						{
+							"src": null,
+							"type": "mp4"
+						}, 
+						{
+							"src": null,
+							"type": "webm"
+						}
+					]
+				},
+				"caption": ""
+			}
 		},
 		{
-			"quote": "{{> ig-quote.json}}"
+			"quote": {
+				"text": "",
+				"caption": ""
+			}
 		},
 		{
-			"readMore": "{{> ig-more.json}}"
+			"readMore": {
+				"image": "{{> ig-image.json}}",
+				"title": "阅读更多",
+				"listItems": [
+					{
+						"href": null,
+						"text": null
+					}
+				]
+			}
 		}
 	],
 	"colSecondary": {
 		"sticky": "true | false",
 		"height": "100vh | 100%",
-		"slide": "true | false",
-		"image": {
-			"ratio": "",
-			"heightToWidth": "",
-			"link": "",
-			"src": "",
-			"caption": "",
+		"slide": {
 			"slideSets": [
 				{
 					"src": "",
 					"caption": ""
 				}
 			]
+		},
+		"image": {
+			"ratio": "",
+			"heightToWidth": "",
+			"link": "",
+			"src": "",
+			"caption": ""
 		}
 	}
 }
