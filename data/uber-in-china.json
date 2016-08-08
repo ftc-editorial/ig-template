@@ -26,11 +26,11 @@
 			"navText": "1",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
-						"cc": "",
 						"ft": "",
 						"picture": {
 							"source": [
@@ -75,9 +75,10 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
 					"cols": {
 						"colPrimary":[
@@ -160,11 +161,11 @@
 			"navText": "2",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": "",
 						"ft": "",
 						"picture": {
 							"source": [
@@ -189,9 +190,10 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
 					"cols": {
 						"colPrimary":[
@@ -277,11 +279,11 @@
 			"navText": "3",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": "",
 						"ft": "",
 						"picture": {
 							"source": [
@@ -306,9 +308,10 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
 					"cols": {
 						"colPrimary":[
@@ -373,11 +376,12 @@
 			"navText": "4",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": "",
+						
 						"ft": "",
 						"picture": {
 							"source": [
@@ -402,11 +406,12 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": "",
+						
 						"ft": "",
 						"picture": ""
 					},

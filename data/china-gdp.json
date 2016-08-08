@@ -19,15 +19,15 @@
 	"seriesTitle": "2015中国年度报告",
 	"sections": [
 		{
-			"id":"1",
+			"id": 1,
 			"navText": "第一部分",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
-						"cc": "",
 						"ft": "",
 						"picture": {
 							"src": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Finteractive.ftchinese.com%2Fchina-gdp%2Fimages%2Fcover.jpg?source=ftchinese"	
@@ -49,9 +49,10 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
 					"cols":{
 						"colPrimary": [
@@ -108,11 +109,11 @@
 			"navText": "第二部分",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
-						"cc": "",
 						"ft": "",
 						"picture": {
 							"source": [],
@@ -135,11 +136,12 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": "",
+						
 						"ft": "",
 						"picture": {
 							"src": "http://interactive.ftchinese.com/china-gdp/images/stock2.jpg"
@@ -156,9 +158,10 @@
 					"cols": null
 				},
 				{
+					"blockId": 3,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
 					"cols": {
 						"colPrimary": [
@@ -209,11 +212,12 @@
 			"navText": "第三部分",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
-						"cc": "",
+						
 						"ft": "",
 						"picture": {
 							"source": [],
@@ -236,11 +240,12 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": "",
+						
 						"ft": "",
 						"picture": {
 							"src": "http://interactive.ftchinese.com/china-gdp/images/steel.jpg"
@@ -259,9 +264,10 @@
 					"cols": null
 				},
 				{
+					"blockId": 3,
 					"viewportHeight": false,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
 					"cols":{
 						"colPrimary": [
@@ -326,11 +332,11 @@
 					}					 
 				},
 				{
+					"blockId": 4,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
-						"cc": "",
 						"ft": "",
 						"picture": {
 							"source": [],
