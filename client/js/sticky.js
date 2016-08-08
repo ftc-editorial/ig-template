@@ -10,6 +10,7 @@ class Sticky {
 			rootEl = document.querySelector(rootEl);
 		}
 
+		this.enabled = false;
 		const rootRect = rootEl.getBoundingClientRect();
 		const targetEl = rootEl.querySelector(stickyTargetSelector);
 
@@ -17,18 +18,16 @@ class Sticky {
 			console.log('Abort. Sticky target does not exist for ' + this.rootEl);
 			return;
 		}
-		const fixedRange = rootEl.offsetHeight - targetEl.offsetHeight;
-		if (fixedRange < 0) {
-			console.log('Abort. Root element is heigher than sticky element. No need of scrollmantion effect.');
-			return;
-		}
+
+		this.enabled = true;
+		const stickyRange = rootEl.offsetHeight - targetEl.offsetHeight;
 
 		config = config ||  {};
 
 		this.rootEl = rootEl;
 		this.targetEl = targetEl;
 		this.start = (config.start && typeof config.start === 'number') ? config.start : 0;
-		this.fixedRange = fixedRange;
+		this.stickyRange = stickyRange;
 		this.state = '';
 		this.rootHeight = rootEl.offsetHeight;
 		this.targetHeight = targetEl.offsetHeight;
@@ -58,7 +57,7 @@ class Sticky {
 		} else if (rectTop <= this.start) {
 			const movedDistance = Math.abs(rectTop - this.start);
 
-			if (movedDistance < this.fixedRange) {
+			if (movedDistance < this.stickyRange) {
 				this.setState('fixed');
 			} else {
 				this.setState('bottom');
@@ -81,7 +80,11 @@ class Sticky {
 
 		function handleScroll() {
 			for (let i = 0, len = stickyInstances.length; i < len; i++) {
-				stickyInstances[i].updatePosition();
+				if (stickyInstances[i].enabled) {
+					stickyInstances[i].updatePosition();
+				} else {
+					console.log('Sticky for ', stickyInstances[i], ' is not enabled.');
+				}
 			}
 		}
 
