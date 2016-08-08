@@ -17,7 +17,7 @@ These gulp tasks will combine json data with mustache templates to build a stati
 ### Preview before deploy
 After `build` task:
 ```
-gulp serve:dist
+gulp serve:dist -i your-data-file-name
 ``` 
 
 ### Deploy
