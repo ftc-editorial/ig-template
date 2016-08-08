@@ -21,7 +21,7 @@
 
 // when .section-block has .ig-sticky, it means .section-media is treated as background while .section-block does not have fixed height. You have to set .section-media's height explicitly to fill the window height and width.
 // .viewport-height and .ig-sticky should be mutually exclusive.
-  .ig-sticky & {
+  [data-ig-component="ig-sticky"] & {
     position: relative;
     @include oGridRespondTo(M) {
       position: absolute;
@@ -52,7 +52,7 @@
 
 // on mobile devies, when .section-block has .ig-sticky, the sticky effect if disabled. .section-media flows naturally. It has a mask from bottom to 30% height as a transition gradient to the text following it.  
   @include oGridRespondTo($until: M) {
-    .ig-sticky &:after {
+    [data-ig-component="ig-sticky"] &:after {
       content: '';
       display: block;
       position: absolute;
@@ -77,7 +77,7 @@
 
 // same as .secion-cols setting.
 // mainly for credits page.
-  .ig-sticky & {
+  [data-ig-component="ig-sticky"] & {
     background-color: #000;
     padding-bottom: 40px;
     @include oColorsFor(ig-text-over-media, text);
@@ -132,14 +132,10 @@
   position: relative;
 
 // when .section-block has .ig-sticky, .section-cols should scrolled over .section-media.
-  .ig-sticky & {
+  [data-ig-component="ig-sticky"] & {
     background-color: #000;
     padding-bottom: 40px;
 
-// override .ig-figure__caption's default color since it is not readable on dark background.
-    .ig-figure__caption {
-      color: #ccc;
-    }
 // It should be high enough to be able to scrolled.
     @include oGridRespondTo(M) {
       padding-top: 450px;

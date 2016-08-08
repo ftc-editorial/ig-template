@@ -1,0 +1,9 @@
+.ig-slide {
+	margin: 0 auto;
+	padding: $o-header-height + 15px 0;
+
+	img {
+		width: 100%;
+		object-fit: contain;
+	}
+}

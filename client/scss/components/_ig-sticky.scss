@@ -1,5 +1,5 @@
 @include oGridRespondTo(M) {
-  .ig-sticky {
+  [data-ig-component~="ig-sticky"] {
     position: relative;
 
     .ig-sticky-target {

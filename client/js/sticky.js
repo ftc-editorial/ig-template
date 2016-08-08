@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const stickyRootSelector = '.ig-sticky';
+const stickyRootSelector = '[data-ig-component~="ig-sticky"]';
 const stickyTargetSelector = '.ig-sticky-target';
 
 class Sticky {

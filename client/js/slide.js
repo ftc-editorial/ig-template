@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
-const slideRootSelector = '.ig-slide';
+const slideRootSelector = '[data-ig-component~="ig-slide"]';
 const slideContainerSelector = '.ig-slide-target';
 const slideDataAttr = 'data-slide-set';
-const slideImgSelector = '.ig-slide-image';
-const slideCaptionSelector = '.ig-slide-caption';
+const slideImgSelector = '.ig-slide__image';
+const slideCaptionSelector = '.ig-slide__caption';
 
 class Slide {
 	constructor(rootEl, config) {

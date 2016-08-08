@@ -9,10 +9,7 @@
   class="ig-figure__image lazyload__outer"
   {{# link}}href="{{{link}}}"{{/ link}} style="{{#heightToWidth}}padding-top:{{heightToWidth}};{{/heightToWidth}}">
 
-    <img src="{{{src}}}" class="lazyload__inner
-    {{#slide}}ig-slide-image{{/slide}}"
-    {{#slide}}
-    data-slide-set="{{#slideSets}}{{{src}}} {{/slideSets}}"{{/slide}}>
+    <img src="{{{src}}}" class="lazyload__inner">
     
     {{#textOnImage}}
     <figcaption class="ig-figure__image-text">{{textOnImage}}</figcaption>
@@ -27,7 +24,4 @@
   </figcaption>
   {{/caption}}
 
-  {{#slide}}
-  <figcaption class="ig-figure__caption ig-slide-caption" data-slide-set="{{#slideSets}}{{caption}} {{/slideSets}}"></figcaption>
-  {{/slide}}
 </figure>

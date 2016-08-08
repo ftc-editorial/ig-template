@@ -1,0 +1,570 @@
+{
+	"lightTheme": false,
+	"darkTheme": true,
+	"highcharts": false,
+	"d3": false,
+	"customCss": false,
+	"customJs": false,
+	"enableScroll": true,
+	"autoNav": true,
+	"iconsPath": "/bower_components/ftc-icons/",
+	"description": "这款叫车应用颠覆了世界各地的出租车及运输公司。但在拥有亿万城市通勤族的中国，它为拼抢市场份额每年亏损10亿美元。",
+	"ogTitle": "优步鏖战中国 - FT中文网",
+	"ogType": "article",
+	"ogImage": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/sapienza_new-lr_cycwhld.jpg",
+	"ogUrl": "",
+	"pageTitle": "优步鏖战中国",
+	"wechatImage": "http://i.ftimg.net/picture/2/000063342_piclink.jpg",	
+	"englishEdition": {
+		"text": "English",
+		"href": "https://ig.ft.com/sites/uber-in-china/"
+	},
+	"seriesTitle": "FT Weekend Magazine",
+	"sections": [
+		{
+			"id": 1,
+			"navText": "1",
+			"sectionBlocks": [
+				{
+					"viewportHeight": true,
+					"sticky": false,
+					"sectionMedia": {
+						"fixed": false,
+						"cc": "",
+						"ft": "",
+						"picture": {
+							"source": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"/images/uber-in-china/dsc04760land-lr.jpg 1100w,",
+										"/images/uber-in-china/dsc04760land-mr.jpg 1500w,",
+										"/images/uber-in-china/dsc04760land-hr.jpg"
+									]
+								},
+								{
+									"landscape": false,
+									"portrait": true,
+									"srcset": [
+										"/images/uber-in-china/dsc05428landport-lr.jpg 1100w,",
+										"/images/uber-in-china/dsc05428landport-mr.jpg 1500w,",
+										"/images/uber-in-china/dsc05428landport-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/uber-in-china/dsc04760land-mr.jpg"	
+						} 
+					},
+					"textOverMedia": {
+						"head":{
+							"headFor": "article",
+							"lead": "",
+							"title": "优步鏖战中国",
+							"heading": "",
+							"subtitle": "",
+							"intro": "这款叫车应用颠覆了世界各地的出租车及运输公司。但在拥有亿万城市通勤族的中国，它为拼抢市场份额每年亏损10亿美元。",
+							"byline": {
+								"publishTime": "2016年6月25日",
+								"author": "英国《金融时报》驻旧金山记者何丽(Leslie Hook)报道"
+							}			
+						},
+						"leadin": null,
+						"credits": null
+					},
+					"cols": null
+				},
+				{
+					"viewportHeight": false,
+					"sticky": false,
+					"sectionMedia": null,
+					"textOverMedia": null,
+					"cols": {
+						"colPrimary":[
+							{
+								"text": [
+									"在优步(Uber)位于中国广州的新办公室中，工位上的员工们不时会发出开心的尖叫声，那是因为他们看见了办公室里的那只小猫，这只怕生的猫咪多数时间都躲在家具下面，每次出现都会引发骚动。它的名字叫“千万辆”。对于这样一只胆怯的小动物来说，这是一个相当气派的名字，但这就是优步，一个雄心无处不在的地方——办公室宠物也不例外。", 
+									"“这个名字代表了我们的一些业务目标，”沈翘欣(Cleo Sham)承认，这个三十多岁留着利落短发的年轻人，帮助把中国南方拥有1200万人口的广州市变成了优步全球业务最繁忙的城市。当她一年半前加入优步时，广州办公室只有180平方英尺。",
+									"“我们三个人挤在一个房间，没日没夜地工作，”沈翘欣略带留恋地说道。她发过传单，做过电话推销，也做过摆摊推销。以前在广州没人听说过优步，她上前推销的很多人都会把“优步”与中国视频网站优酷(Youku)搞混。“有很多的质疑声，我们也遭遇了很多拒绝，”她回忆道。"
+								]
+							},
+							{
+								"image": {
+									"mobileOnly": false,
+									"ratio": "7/5",
+									"heightToWidth": "",
+									"title": "",
+									"link": "",
+									"src": "/images/uber-in-china/dsc04511port-mr.jpg",
+									"caption": "优步中国广州总经理沈翘欣"
+								}
+							},
+							{
+								"text": [
+									"如今，知名度已不再是问题。中国已成为优步最大的市场，按周接单量算，中国在优步总业务量中占比超过三分之一。中国是优步最大的赌注，也是其最难啃的市场：优步在中国的亏损比在世界任何其他国家都多。由于一直在与强大的中国竞争对手滴滴出行(Didi Chuxing)争夺市场份额，优步去年在华亏损超10亿美元，今年的亏损额预计至少与去年持平。",
+									"攻克中国市场的雄心直接来自优步39岁的首席执行官特拉维斯•卡兰尼克(Travis Kalanick)，正是卡兰尼克积极进攻的个人风格成就了优步的崛起。六年前，卡兰尼克与友人加勒特•坎普(Garrett Camp)在旧金山创立了优步；这两位创始人最初设想的是一款叫豪华轿车的手机应用，可以让人们简单地“一键乘车”。自那时起，优步已发展成为一个颠覆了世界各地出租车及运输公司的专车服务提供商。",
+									"目前，优步已在全球68个国家开展业务，但中国向来比较特殊。优步亚洲业务主管、32岁的美国人艾伦•佩恩(Allen Penn)回忆称：“特拉维斯本人对优步在中国取得成功的投入程度比对任何其他国家都高得多。”去年，卡兰尼克近五分之一的时间在中国度过。在其他国家，优步聘用当地的首席执行官，但在中国，卡兰尼克亲自担任优步中国(Uber China)首席执行官的角色。"
+								]
+							},
+							{
+								"image": {
+									"mobileOnly": false,
+									"ratio": "7/5",
+									"heightToWidth": "",
+									"title": "",
+									"link": "",
+									"src": "/images/uber-in-china/452250438-mr_avfbhbl.jpg",
+									"caption": "优步首席执行官特拉维斯•卡兰尼克(Travis Kalanick)"
+								}
+							},
+							{
+								"text": [
+									"优步在中国的冒险仅仅始于三年多一点之前，那时，卡兰尼克、佩恩及几名高管对中国进行了一次考察，试图找到让优步避免重复其他外国科技公司所犯错误的方法。从Facebook、谷歌(Google)到亚马逊(Amazon)，多数硅谷科技巨头都已在中国折戟，原因多种多样——从审查制度、知识产权盗窃到偏袒国内领军企业的政府规章。但优步一直坚信自身的特殊地位。“我们喜欢追求看似不可能实现之事，”卡兰尼克对我说，“对我们而言，那个时候尝试进入中国还力有不逮——但这也正是令人兴奋之处。”", 
+									"优步决定在中国实施一种不同于在任何其他地方尝试过的战略。它将在中国成立一家独立实体——优步中国，后者可以吸引中国本土投资者，还可以从优步全球获得资金支持，优步持有优步中国大比例的未公开股份。优步希望，成立中国公司可以避免外企面临的一些限制。",
+									"在进行那次考察的时候，优步还是一家规模相对较小的初创公司。公司只有100多名员工，在10个国家开展了业务，已从投资者手中累计筹得5000万美元。那时还很难看出这款叫车应用会变成今天这般规模的全球巨头——有史以来获得投资最多的初创公司，市场估值达625亿美元。本月早些时候，优步宣布了最新一笔注资，是来自沙特阿拉伯主权财富基金的35亿美元投资。优步还在商谈，准备进行高达20亿美元的债务融资，这将使得该公司可动用的资金达到逾130亿美元。",
+									"“我们来到中国时，人们都说我疯了，”卡兰尼克今年1月在北京演讲时说，“或许我们依然疯狂。”"
+								]
+							}						
+						],
+						"colSecondary": {
+							"sticky": true,
+							"height": "100vh",
+							"slide": {
+								"slideSets": [
+									{
+										"src": "/images/uber-in-china/v2_shorthand_uber2-lr_rxhkdyw.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/v2_shorthand_uber22-lr_aps8uaw.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/v2_shorthand_uber23-lr_ttuhedi.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/v2_shorthand_uber24-lr_jhxtosl.jpg",
+										"caption": ""
+									}
+								]
+							}
+						}
+					}
+				}
+			],
+			"ad": ""
+		},
+		{
+			"id": 2,
+			"navText": "2",
+			"sectionBlocks": [
+				{
+					"viewportHeight": true,
+					"sticky": false,
+					"sectionMedia": {
+						"fixed": true,
+						"cc": "",
+						"ft": "",
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/uber-in-china/dsc05225-lr.jpg 1100w,",
+										"/images/uber-in-china/dsc05225-mr.jpg 1500w,",
+										"/images/uber-in-china/dsc05225-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/uber-in-china/dsc05225-mr.jpg"	
+						} 
+					},
+					"textOverMedia": {
+						"head":null,
+						"leadin": null,
+						"credits": null
+					},
+					"cols": null
+				},
+				{
+					"viewportHeight": false,
+					"sticky": false,
+					"sectionMedia": null,
+					"textOverMedia": null,
+					"cols": {
+						"colPrimary":[
+							{
+								"text": [
+									"优步首次赴中国考察时，太专注于避免重蹈西方科技公司覆辙了，以至于其中国竞争对手——只是简单地通过手机应用提供传统的出租车服务——当时肯定没有引起优步高管的注意。2013年初，中国最大的两家出租车应用公司——滴滴(Didi)与快的(Kuaidi)——还只是商业模式完全不同于优步的小公司。", 
+									"但随着滴滴与快的壮大，它们之间上演了一场为争夺市场份额而大量给出租车司机和乘客发放补贴的烧钱大战。两家公司提供的补贴如此慷慨，以至于精明的骗子都开发了软件来骗取补贴。滴滴与快的竞相圈占的战场后来变成了全球最不理性的打车市场，到优步加入这场大战时，游戏规则已经基本确立了。",
+									"从交通基础设施方面看，中国打车市场已具有很多使其准备好迎接一场颠覆性革命的要素。过去20年间，快速的城市化进程让上亿人涌入新城市，但出行方式的选择并未随之增多。出租车行业未能跟上经济增长的步伐，在一些城市造成打车难的问题。结果是交通拥堵和空气污染，而这些正是优步提出要协助解决的问题。",
+									"2014年2月，优步正式进入中国，在上海、广州、深圳三个城市推出豪华车服务。阻碍优步的有许多道“减速带”，包括谷歌地图(Google Maps)在中国被屏蔽，而优步要靠它来定位司机和乘客，于是优步只得重新设计软件。那年秋天，优步扩大了业务范围，推出了平价服务“人民优步”(People’s Uber)，任何人只要能通过背景审核，都可以用自己的私家车提供打车服务。2014年底时，优步在中国专车市场已获得了约1%的市场份额。",
+									"与此同时，滴滴与快的之间的补贴大战最终将它们推向彼此的怀抱，双方于2015年2月宣布合并。",
+									"现如今，滴滴出行是中国遥遥领先的最大专车服务公司，也是最能融资的。去年滴滴出行从腾讯(Tencent)、阿里巴巴(Alibaba)和中国主权财富基金中国投资公司(CIC)等投资者融资逾20亿美元。在刚刚结束的最新一轮融资中，滴滴出行从苹果(Apple)等投资者处获得了45亿美元，另外还有28亿美元的债务融资。",
+									"滴滴出行的业务遍及全国400多座城市，在半数城市处于盈利状态。优步最初主攻中国最大的几个城市，现在已进驻50多个城市，计划到今年9月拓展到120座城市。",
+									"2015年滴滴与快的合并的一个直接后果就是他们开始减少对出租车补贴的投入，转而将目光投向专车市场。他们对专车订单的补贴急剧提升，新合并的公司在当年头5个月就砸进去了2.7亿美元。"
+								]
+							},
+							{
+								"image": {
+									"ratio": "",
+									"heightToWidth": "223.68%",
+									"title": "",
+									"link": "",
+									"src": "http://i.ftimg.net/picture/1/000063351_piclink.jpg",
+									"caption": ""
+								}
+							},
+							{
+								"text": [
+									"补贴策略颠覆了优步的商业模式。优步通常的做法是抽取乘客车费的25%左右，再将剩下的车费交给司机。优步之所以能保持低成本运营，是因为它并不雇佣司机，或保有车辆。但是在中国，优步向司机支付的费用是乘客车费的一倍以上，这意味着优步的大多数单子是赔钱的。中国其他叫车服务公司采用了类似策略。",
+									"滴滴和优步都指责对方挑起补贴大战，攀比补贴额度高低已成了中国叫车市场的游戏规则。卡兰尼克说：“这并不是优步的做事方法。但我们在中国是第二名，所以在某些方面，我们必须效仿第一名。”",
+									"而滴滴则称自己的补贴是纯粹的防御。滴滴副总裁朱景士(Stephen Zhu)表示，在一些竞争对手补贴得不那么积极的城市，滴滴“相当赚钱”。他说：“实际上，补贴是用来补偿较差的乘客和司机体验的。”他没有点名优步。",
+									"这种补贴是有害的，不仅因为它耗空了现金，还因为它掩盖了供求的真实水平。优步亚洲业务负责人佩恩表示：“你可以去一座城市砸一大堆钱，赢得一定市场份额，但这不是真实水平。这就像把什么都买下来——但其实你是在租，不是买。”",
+									"许多优步司机表示如果没有奖励他们不会拉活儿，而乘客也表示如果叫车变贵了他们会减少使用。32岁的北京居民徐德胜（音）表示：“我过去基本用滴滴，不过现在换成了优步，因为它更便宜。”他表示由于价格便宜，自己现在每天都用优步叫车。虽然优步的服务也包括豪华车，但便宜的叫车服务才是优步在中国的业务堡垒。优步的拼车服务以低至2元人民币（合21便士）的车费，在几个重点城市占叫车量的逾一半。"
+								]
+							}
+						],
+						"colSecondary": {
+							"sticky": true,
+							"height": "100vh",
+							"slide": {
+								"slideSets": [
+									{
+										"src": "/images/uber-in-china/timelineq8_r0qvine-mr_40filqt.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/timelineq7_9tqmrkf-mr_fam4ln1.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/timelineq6_i56obsl-mr_wkour64.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/timelineq5_sy2rs1i-mr_h3zywkw.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/timelineq4_1iepfvs-mr_nzp8yiu.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/timelineq3_baxv9ru-mr_mcr3yre.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/timelineq2_jqcyyes-mr_ngj0qob.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/timelineq_ugtyqzb-mr_jmnw806.jpg",
+										"caption": ""
+									}
+								]
+							}
+						}
+					}
+				}
+			],
+			"ad": ""
+		},
+		{
+			"id":3,
+			"navText": "3",
+			"sectionBlocks": [
+				{
+					"viewportHeight": true,
+					"sticky": false,
+					"sectionMedia": {
+						"fixed": true,
+						"cc": "",
+						"ft": "",
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/uber-in-china/dsc05335land-lr.jpg 1100w,",
+										"/images/uber-in-china/dsc05335land-mr.jpg 1500w,",
+										"/images/uber-in-china/dsc05335land-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/uber-in-china/dsc05335land-mr.jpg"	
+						} 
+					},
+					"textOverMedia": {
+						"head":null,
+						"leadin": null,
+						"credits": null
+					},
+					"cols": null
+				},
+				{
+					"viewportHeight": false,
+					"sticky": false,
+					"sectionMedia": null,
+					"textOverMedia": null,
+					"cols": {
+						"colPrimary":[
+							{
+								"text": [
+									"北京21岁的董（音）司机表示：“优步在美国合法吗？它在这儿是非法的。”他对拥有一辆私家车感到自豪，这辆车是在他父母的帮助下购买的。", 
+									"几乎每个优步司机在搭载外国乘客时都会提出这一问题。董司机告诉我，就在几天前他有个兄弟在送优步客人时被交警抓了，然后被罚了2万元人民币（合2100英镑），相当于两个月的薪水。在我们快到我的目的地火车站时，他紧张地藏起手机——那上面运行着优步应用，然后问是否能在几条街远的地方把我放下来。司机之间不断分享着交警新设检查点的消息，北京南站当日就在这张名单上。",
+									"绝大多数中国司机认为优步是非法的（可还是为优步开车），但从技术层面上，中国并未明令禁止优步。在某种程度上，优步这种打破规则的精神正适合杂乱无章的中国经济，在中国，创业精神得到极力推崇，打破规则是常态。卡兰尼克表示，“中国是我们遇到的做生意环境最友好的国家之一”。此言虽略有夸张，但优步在中国只是偶尔被警察突袭办事处，比起在其他国家完全被禁，这的确只算得上小挫折。"
+								]
+							},
+							{
+								"image": {
+									"mobileOnly": false,
+									"ratio": "7/5",
+									"heightToWidth": "",
+									"title": "",
+									"link": "",
+									"src": "/images/uber-in-china/dsc05133port_yperid0-mr_01oq7r3.jpg",
+									"caption": "优步中国战略及政府关系负责人柳甄"
+								}
+							},
+							{
+								"text": [
+									"优步中国战略及政府关系负责人柳甄提到叫车方面的监管规定时表示：“这里有很多灰色地带。我不认为它是不合法的，它正处于合法化进程中。”",
+									"当卡兰尼克不在的时候，柳甄就是优步在中国的代言人，她的主要使命之一是确保“合法化过程”尽可能地平稳。北京方面正在制定一系列将会完全重新定义中国专车行业的监管规定。中国交通运输部在去年10月发布的新规征求意见稿中，提出了禁止私家车提供运营服务的具有潜在破坏性的规定。",
+									"当新规发布的时候，优步和滴滴都相当沉默。但在政府内部出现了反对声音。“创新”和“共享经济”已成为中共最高领导层挂在嘴边的词语，这份征求意见稿很难说符合这种精神。中国国务院要求交通运输部作出修改，引发了一场至今仍在持续的争论。",
+									"驻上海的经济学家刘元举表示，在中国数十年经济改革之后，支持共享经济是迈向市场经济的更广泛改革中的一小步。他说：“人们非常愿意支持创新，政府中一些人无疑希望支持这种（共享经济），但他们也面临巨大压力。”",
+									"他解释称，中国政府内部的保守派与革新派正在幕后上演争斗大戏，专车新规只是这部大戏中的一个小插曲。中国总理李克强已让创新成为其经济议程的关键部分，并亲自会晤了卡兰尼克和滴滴创始人程维。",
+									"迄今为止只有少数几个关于新规内容的线索。今年3月，中国交通部长对网约车补贴进行了猛烈抨击，认为它们“不利于市场的健康持续发展”，而且对出租车“不公平”。然而，他也承认，私家车服务广受欢迎，并暗示称，在经过某种司机注册程序之后，它们可能被正式合法化。",
+									"汽车共享初创企业易到用车（Yidao Yongche，刚刚更名为易到）的创始人周航表示，他预计新规将会允许私家车提供专车服务，但这些车的数量将会“非常有限”。他预计最廉价的打车服务模式受到的影响最大，这对优步来说可能是个坏消息。然而，很少有分析师预计优步的外国“血统”将意味着它面临特殊的障碍。刘元举表示：“它与Facebook或Twitter截然不同。”他是指这两家公司的服务因为审查原因而在中国被禁。",
+									"广州互联网咨询公司艾媒咨询(iiMedia)首席执行官张毅谈到了四分之一销售收入来自中国市场的苹果(Apple)公司。他挥舞着自己手中的iPhone说道：“为什么苹果（在中国）取得了成功？就是因为它们纯做生意。”他说，优步的业务并未触及国家安全等敏感领域，而且其权力下放的企业架构也有好处。“滴滴有外国投资者，优步中国是独立的，因此就股东而言基本上没有什么不同。”优步已经消除了中国政府可能存在的数据担忧，将乘客信息存储于中国本地服务器上。"
+								]
+							}
+						],
+						"colSecondary": {
+							"sticky": true,
+							"height": "100vh",
+							"slide": {
+								"slideSets": [
+									{
+										"src": "/images/uber-in-china/dsc04661port-lr_hcknkff.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/dsc04702port-lr_gayakjx.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/dsc05285port-lr_6cglgef.jpg",
+										"caption": ""
+									}
+								]
+							}
+						}
+					}
+				}
+			],
+			"ad": ""
+		},
+		{
+			"id":4,
+			"navText": "4",
+			"sectionBlocks": [
+				{
+					"viewportHeight": true,
+					"sticky": false,
+					"sectionMedia": {
+						"fixed": true,
+						"cc": "",
+						"ft": "",
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/uber-in-china/dsc04862land-lr.jpg 1100w,",
+										"/images/uber-in-china/dsc04862land-mr.jpg 1500w,",
+										"/images/uber-in-china/dsc04862land-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/uber-in-china/dsc04862land-mr.jpg"	
+						} 
+					},
+					"textOverMedia": {
+						"head":null,
+						"leadin": null,
+						"credits": null
+					},
+					"cols": null
+				},
+				{
+					"viewportHeight": false,
+					"sticky": false,
+					"sectionMedia": {
+						"fixed": true,
+						"cc": "",
+						"ft": "",
+						"picture": ""
+					},
+					"textOverMedia": null,
+					"cols": {
+						"colPrimary":[
+							{
+								"text": [
+									"在专车规则问题悬而未决的同时，优步中国还在尽力应对另一个威胁：欺诈。中国有世界上最狡诈的叫车欺诈活动，司机和黑客在没有真实搭载乘客的情况下骗取打车软件公司的奖金。", 
+									"欺诈者甚至发展出他们自己的黑话，从而更容易在网络论坛上隐秘地交流。伪造行程被称为“打针”，这指的是优步应用中的红色定位图钉。司机发帖子称，“嗨，给我打一针”，然后欺诈者——他们通常自称为“专业护士”——就会做出回应。",
+									"欺诈者会伪造一个乘客账户，该账户看上去坐了一个司机的车，这个司机便获得奖金。2015年夏季，优步在中国的订单大约有3%是虚假的——大约每天有30000单——欺诈如今仍是个问题。",
+									"优步经理们每周花费数小时检查司机行程记录以发现欺诈模式，并决定取消哪些司机的资格。一位优步前员工回忆说：“每个周一是支付日，也是欺诈日。”他解释说，欺诈审查就在支付司机报酬前进行。当他2015年在优步工作的时候，“被抓住的欺诈活动都是非常严重的……只有那些每周刷数百单的人”。"
+								]
+							},
+							{
+								"image": {
+									"mobileOnly": false,
+									"ratio": "7/5",
+									"heightToWidth": "",
+									"title": "",
+									"link": "",
+									"src": "/images/uber-in-china/dsc04987port_vth5e0k-mr_sptmofn.jpg",
+									"caption": ""
+								}
+							},
+							{
+								"text": [
+									"优步表示，在打击欺诈方面取得了进展。负责优步成都运营的方寅表示：“我们有一些最聪明的工程师致力于这个问题。”他本人则潜入欺诈者的在线聊天室，暗中询问他们的方法。在位于旧金山的优步总部，有50人的工程师团队致力于发现欺诈行为，同时在中国每个城市还有本地的人工审核团队。为了打击欺诈账户，优步最近引入了额外的身份验证系统，比如乘客语音识别和司机面部识别。",
+									"欺诈规模在下降，不仅是因为上述努力，而且还得益于补贴大幅下降，这降低了刷单者的财务动机。优步表示，过去一年里将中国每单补贴削减了80%，而同期订单量增长了16倍。",
+									"优步自信能在不发放补贴的情况下最终在华获得成功，而这一趋势正是其理由的关键部分。优步成都总经理方寅解释说，随着优步网络的扩大，司机每小时可以搭载更多乘客，补贴变得不那么重要。“我们接的单越多，每单（在补贴上）就亏损得越少，因为我们正通过整个系统提升效率，”他说",
+									"但完全取消补贴并非易事。其他市场的案例表明，高补贴业务一旦取消补贴，有时业务便会随之蒸发。滴滴与快的最初用补贴推火的出租车叫车业务，如今只占它们合并后业务的极小一部分，而且带不来任何营收。其他市场的小型叫车服务公司（如雅加达的EasyTaxi）发现，当补贴终止时，它们的生意便完全枯竭。"
+								]
+							},
+							{
+								"image": {
+									"mobileOnly": "true | false",
+									"ratio": "",
+									"heightToWidth": "",
+									"title": "",
+									"link": "",
+									"src": "http://i.ftimg.net/picture/2/000063352_piclink.jpg",
+									"caption": ""
+								}
+							},
+							{
+								"text": [
+									"对于像优步中国这样并非市场领导者的公司而言，削减补贴尤为困难。在中国，不同公司计算出的市场占有率数据差异巨大——优步表示，其在中国专车市场占比超过30%，而滴滴自称占比超过80%，但人们的共识是，优步的市场份额比滴滴小得多。拥有最大市场份额可为叫车服务带来巨大优势，因为随着越来越多的司机和乘客加入这一系统，叫车服务质量也会相应提升：乘客再不必长时间等待，而司机可以赚更多钱。这种“网络效应”正是叫车服务公司愿意倾其所有争抢市场主导地位的原因。",
+									"关键的一个问题在于，为争夺市场主导地位，优步在中国将继续投入多少。与在其他国家不同，优步中国是一家独立公司，而且计划独立进行首次公开发行(IPO)，除了从优步全球(Uber Global)获得资金，它还可以自筹资金。去年，经过长时间的筹资努力，优步中国以70亿美元的估值筹到了12亿美元。然而，优步中国不愿透露其中多少来自投资者，多少来自优步自己的金库——也不愿透露优步在优步中国持多少股份。（优步只表示它是优步中国的“最大”股东。）优步中国的筹资还成功地吸引了一些中国知名企业的支持，包括海航集团(HNA Group)和广州汽车(Guangzhou Auto)。",
+									"卡兰尼克表示，优步还利用在其他市场获得的利润支持在中国的投资，但不愿透露具体数额。自今年2月以来，优步在北美、澳大利亚以及欧洲-中东-非洲地区都实现了盈利（息税前）。",
+									"但还有其他方面也需要优步投入资金，其中最大一块在于保护其市场份额免遭其他对手蚕食。即便在中国以外的地区，滴滴也已成为优步的强大对手——滴滴已经与优步的几家竞争对手结成同盟，包括美国的Lyft、印度的Ola以及东南亚的Grab。滴滴还鼓励其中国投资者如阿里巴巴、腾讯投资优步的这些对手。这四家公司将它们的应用连接起来，以便客户旅行时可以利用另外几家的叫车网络。",
+									"这种“钳形攻势”对优步的利润不可谓没有影响。在美国一些城市，为了抵挡Lyft的进攻，优步调低了车费，变得无利可图。“虽然我们时常能够盈利，但我们必须做出有意识的决策——为保护市场份额而舍弃利润，即便在成熟市场，”优步的一名高管表示。他说，“如果这种非理性融资在某个时候停下的话，（竞争性补贴）就会结束”，他指的是全球性叫车服务公司的筹资活动。当这些公司每一单都亏损时，“这确实让我想起了1999年，即那场高科技泡沫”，他补充说。",
+									"事实表明，优步在中国最大的问题不在于它是一家外国公司，而在于它最终遇到了一个完全与自己一样具有颠覆性和进攻性的对手。艾媒咨询的张毅表示：“对优步而言，最大的风险来自激烈竞争的市场，而非政府。”",
+									"考虑到优步雄厚的现金储备，它可以负担得起继续投资。作为一家非上市公司，优步没有股东要求盈利的压力。卡兰尼克曾表示，优步将“尽可能拖得晚一点”上市，并给出了一至十年的区间范围，这些时间足够用来继续向亏损业务注资。但是，优步有在中国的投资上限吗？卡兰尼克表示，在愿意投资多少方面，没有具体数额。“最重要的限制是投资回报率，”他沉思道，“你的企业值多少钱？你当然不想让支出超过其价值。”",
+									"",
+									"在没有净营收及利润的情况下，很难对优步中国进行估值。作为市场排名第二的公司，优步的市场地位将一直不稳。优步中国的多名高管表示，该公司无须在中国占有多数市场份额就能让业务持续发展并盈利。然而，卡兰尼克将在华的成功定义为成为第一，而且他不会轻易放弃这一目标。“我们喜欢难题，它们最能让我们兴奋，”他说，“这些难题让我们眼睛放光，敦促我们早起。”"
+								]
+							}
+						],
+						"colSecondary": {
+							"sticky": true,
+							"height": "100vh",
+							"slide": {
+								"slideSets": [
+									{
+										"src": "/images/uber-in-china/how-mr_wrqpvuo.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how2-mr_tpor1ct.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how3-mr_aoywdpz.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how4-mr_78pw7u3.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how5-mr_sxs4q9h.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how6-mr_l63ave5.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how7-mr_ubpqaee.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how8-mr_ziuxgwp.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how9-mr_jnvvmqk.jpg",
+										"caption": ""
+									},
+									{
+										"src": "/images/uber-in-china/how10-mr_mft1jwa.jpg",
+										"caption": ""
+									}
+								]
+							}
+						}
+					}
+				}
+			],
+			"ad": ""
+		}
+	],
+	"articleFooter": {
+		"sections": [
+			{
+				"id": 1,
+				"sectionTitle": "",
+				"sectionCols": [
+					{
+						"link": "",
+						"image": null,
+						"srTitle": "相关阅读",
+						"srSummary": [],
+						"srList": {
+							"listItem": [
+								{
+									"href": "http://www.ftchinese.com/story/001068078",
+									"text": "优步与滴滴烧钱大战何时休？"
+								},
+								{
+									"href": "http://www.ftchinese.com/story/001068002",
+									"text": "优步和滴滴激战中国市场"
+								},
+								{
+									"href": "http://www.ftchinese.com/story/001067392",
+									"text": "优步联手支付宝方便中国用户海外叫车"
+								},
+								{
+									"href": "http://www.ftchinese.com/story/001067524",
+									"text": "优步车上的“知心大姐”"
+								},
+								{
+									"href": "http://www.ftchinese.com/story/001064309",
+									"text": "中国公布打车应用法规草案"
+								},
+								{
+									"href": "http://www.ftchinese.com/story/001066252",
+									"text": "优步承认在华每年亏损逾10亿美元"
+								},
+								{
+									"href": "http://www.ftchinese.com/story/001063894",
+									"text": "优步和滴滴在中国比拼“烧钱”"
+								}
+							]
+						}
+					}
+				]
+			}
+		]
+	}
+}

@@ -118,7 +118,6 @@
 									"title": null,
 									"link": "https://www.ft.com/land",
 									"src": "/images/myanmar/new_logo.png",
-									"slides": null,
 									"caption": null
 								}
 							},
@@ -132,13 +131,11 @@
 						],
 						"colSecondary": {
 							"sticky": false,
-							"slide": false,
 							"image": {
 								"ratio": null,
 								"title": null,
 								"link": "https://www.ft.com/land",
 								"src": "/images/myanmar/new_logo.png",
-								"slideSets": null,
 								"caption": null
 							}
 						}							
@@ -309,14 +306,7 @@
 						"colSecondary": {
 							"sticky": true,
 							"height": "100vh",
-							"slide": true,
-							"image":  {
-								"mobileOnly": false,
-								"ratio": null,
-								"title": null,
-								"link": null,
-								"src": null,
-								"caption": null,
+							"slide":  {
 								"slideSets": [
 									{
 										"src": "/images/myanmar/myanmarnumbers.png",
