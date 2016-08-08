@@ -32,7 +32,6 @@
 			"author": "英国《金融时报》报道"
 		},
 		"background": {
-			"cc": null,
 			"ft": null,
 			"picture": {
 				"source": [
@@ -65,12 +64,11 @@
 			"navText": "1. 失去的土地",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
+					"background": {
 						"ft": {
-							"setting": "loop muted autoplay",
 							"poster": "/images/myanmar/mpv-shot0001.jpg",
 							"source": [
 								{
@@ -99,6 +97,7 @@
 					"cols": null
 				},
 				{
+					"blockId": 2,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
@@ -142,7 +141,7 @@
 					}
 				},
 				{
-					"viewportHeight": false,
+					"blockId": 3,
 					"sticky": false,
 					"sectionMedia": {
 						"cc": null,
@@ -159,17 +158,16 @@
 									"type": "webm"
 								}
 							]
-						},
-						"picture": null
+						}
 					},
-					"textOverMedia": null,
 					"cols": null
 				},
 				{
-					"viewportHeight": false,
+					"blockId": 4,
 					"sticky": false,
-					"sectionMedia": null,
+					"background": null,
 					"textOverMedia": null,
+					"sectionMedia": null,
 					"cols": {
 						"colPrimary": [
 							{
@@ -224,11 +222,11 @@
 			"navText": "2. 抱负",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": true,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [
@@ -254,12 +252,12 @@
 							"subtitle": "",
 							"intro": ""
 						}
-					},
-					"cols": null
+					}
 				},
 				{
-					"viewportHeight": false,
+					"blockId": 2,
 					"sticky": false,
+					"background": null,
 					"sectionMedia": null,
 					"textOverMedia": null,
 					"cols": {
@@ -333,11 +331,10 @@
 			"navText": "3. 村庄",
 			"sectionBlocks": [
 				{
-					"viewportHeight": true,
+					"blockId": 1,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
-						"cc": null,
 						"ft": {
 							"setting": "loop muted autoplay",
 							"poster": "/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg",
@@ -363,18 +360,14 @@
 							"subtitle": null,
 							"intro": null,
 							"byline": null
-						},
-						"text": null,
-						"credits": null
-					},
-					"cols": null
+						}
+					}
 				},
 				{
-					"viewportHeight":false,
+					"blockId": 2,
 					"sticky": true,
-					"sectionMedia": {
+					"background": {
 						"fixed": false,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": null,
@@ -417,7 +410,7 @@
 					}
 				},
 				{
-					"viewportHeight": false,
+					"blockId": 3,
 					"sticky": false,
 					"sectionMedia": null,
 					"textOverMedia": null,
@@ -498,11 +491,10 @@
 			"navText": "4. 导火索",
 			"sectionBlocks": [
 				{
-					"viewportHeight": true,
+					"blockId": 1,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
-						"cc": null,
 						"ft": null,
 						"picture": {
 							"source": [{
@@ -531,10 +523,8 @@
 					"cols": null
 				},
 				{
-					"viewportHeight": false,
+					"blockId": 2,
 					"sticky": false,
-					"sectionMedia": null,
-					"textOverMedia": null,
 					"cols": {
 						"colPrimary": [
 							{
@@ -592,9 +582,9 @@
 			"navText": "5. 赢家和输家",
 			"sectionBlocks": [
 				{
-					"viewportHeight": true,
+					"blockId": 1,
 					"sticky": false,
-					"sectionMedia": {
+					"background": {
 						"fixed": true,
 						"picture": {
 							"source": [{
@@ -618,17 +608,13 @@
 							"subtitle": null,
 							"intro": "‘自从他们夺走了我们所有的土地，我们农民能做的只有哭’",
 							"byline": null
-						},
-						"text": null,
-						"credits": null
+						}
 					},
 					"cols": null
 				},
 				{
-					"viewportHeight": false,
+					"blockId": 2,
 					"sticky": false,
-					"sectionMedia": null,
-					"textOverMedia": null,
 					"cols": {
 						"colPrimary": [
 							{
@@ -666,17 +652,15 @@
 					}
 				},
 				{
-					"viewportHeight": false,
+					"blockId": 3,
 					"sticky": true,
-					"sectionMedia": {
-						"cc": null,
+					"background": {
 						"ft": null,
 						"picture": {
 							"source": null,
 							"src": "/images/myanmar/tighter_maw-mr_6cqlaxv.jpg"
 						}
 					},
-					"textOverMedia": null,
 					"cols": {
 						"colPrimary": [
 							{
@@ -720,23 +704,19 @@
 			"id": 6,
 			"sectionBlocks": [
 				{
-					"viewportHeight": false,
+					"blockId": 1,
 					"sticky": false,
 					"sectionMedia": {
 						"cc": {
 							"src": "http://p.bokecc.com/player?vid=3911C434C7B707389C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
 						},
-						"ft": null,
-						"picture": null
-					},
-					"textOverMedia": null,
-					"cols": null
+						"ft": null
+					}
 				},
 				{
-					"viewportHeight": true,
+					"blockId": 2,
 					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
+					"background": {
 						"ft": {
 							"setting": "loop muted autoplay",
 							"poster": "/images/myanmar/boat-blinkie-backup-mr.jpg",
@@ -754,8 +734,6 @@
 						"picture": null
 					},
 					"textOverMedia": {
-						"head": null,
-						"text": null,
 						"credits": {
 							"title": "制作团队",
 							"items": [

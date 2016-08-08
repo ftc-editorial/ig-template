@@ -43,6 +43,7 @@
 			"navText": "",
 			"sectionBlocks": [
 				{
+					"blockId": 1,
 					"viewportHeight": "true | false",
 					"sticky": "true | false",
 					"sectionMedia": {

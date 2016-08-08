@@ -1,25 +1,25 @@
 <section class="section" id="section-{{id}}">
   
   {{# sectionBlocks}}
-  <div class="section-block
-  {{#viewportHeight}}viewport-height{{/viewportHeight}}"
-  data-ig-component="{{#sticky}}ig-sticky{{/sticky}}">
+  <div class="section-block"
+  data-ig-component="{{#sticky}}ig-sticky{{/sticky}}"
+  id="section-{{id}}__block-{{blockId}}">
 {{!-- when section-block has .ig-sticky, .section-media should be absolutely position to top, 100vh. text-over-media shoulde be auto height.
 when .section-block has .viewport-height, .section-media should be absolutely positioned, 100% width and height, has an overlay.
 
  --}}    
-    {{# sectionMedia}}
-    <div class="section-media
+    {{# background}}
+    <div class="section-background
     {{#fixed}}
-    section-media--fixed
+    section-background--fixed
     {{/fixed}}
     {{#sticky}}ig-sticky-target{{/sticky}}">
-      {{> partials/ig-media}}
+      {{> partials/ig-background}}
     </div>
-    {{/ sectionMedia}}
+    {{/ background}}
 {{!-- If section-block has .viewport-height, it must mean text-over-media should be 100% width and height. .section-media should be asbolutely positioned. --}}
     {{# textOverMedia}}
-    <div class="section-text-over-media">
+    <div class="section-text-over-media viewport-height">
       
       {{# head}}
         {{> partials/ig-head}}
@@ -37,6 +37,12 @@ when .section-block has .viewport-height, .section-media should be absolutely po
       
     </div>
     {{/ textOverMedia}}
+
+    {{# sectionMedia}}
+    <div class="section-media">
+      {{> partials/ig-video}}
+    </div>
+    {{/ sectionMedia}}
 
     {{# cols}}
     <div class="section-cols">

@@ -1,4 +1,4 @@
-.ig-media {
+.ig-background {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -13,7 +13,7 @@
     @include oColorsFor(ig-media, background);
   }
 
-  &__content {
+  &__media {
     box-sizing: border-box;
     display: block;
     width: 100%;

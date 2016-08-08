@@ -3,55 +3,21 @@
   position: relative;
 }
 
-.section-media {
+.section-background {
   box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
 
-// when .section-block has .viewport-height, it means .section-media inside it is treated as background.
-// Since container has fixed height of 100vh, .section-media could use height: 100%;.
-  .viewport-height & {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-
-// when .section-block has .ig-sticky, it means .section-media is treated as background while .section-block does not have fixed height. You have to set .section-media's height explicitly to fill the window height and width.
-// .viewport-height and .ig-sticky should be mutually exclusive.
-  [data-ig-component="ig-sticky"] & {
-    position: relative;
-    @include oGridRespondTo(M) {
-      position: absolute;
-      top: 0;
-      width: 100%;
-//or
-      // left: 0;
-      // right: 0;
-      height: 100vh;      
-    }
-  }
- 
-// when .section-media has .section-media--fixed, it means section the element inside it is position:fixed as background.
-// .section-media clips the the background as it scrolls.
-  @include oGridRespondTo(M) {
-    &--fixed {
-      clip: rect(0, auto, auto, 0);
-
-      .ig-media {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-    }    
-  }
-
-// on mobile devies, when .section-block has .ig-sticky, the sticky effect if disabled. .section-media flows naturally. It has a mask from bottom to 30% height as a transition gradient to the text following it.  
   @include oGridRespondTo($until: M) {
+    [data-ig-component="ig-sticky"] & {
+      position: relative;
+      height: 66vh;
+    }
+
     [data-ig-component="ig-sticky"] &:after {
       content: '';
       display: block;
@@ -60,20 +26,35 @@
       right: 0;
       bottom: -1px;
       height: 30%;
-      background-image: linear-gradient(to bottom, transparent, #000);
-    }    
+      background-image: linear-gradient(to bottom, transparent, #000);      
+    }
+  }
+
+  @include oGridRespondTo(M) {
+    [data-ig-component="ig-sticky"] & {
+      position: absolute;
+      height: 100vh;         
+    }
+
+    &--fixed {
+      clip: rect(0, auto, auto, 0);
+
+      .ig-background {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
   }
 }
 
 .section-text-over-media {
   position: relative;
-
-// when .section-block has .viewport-height.
-  .viewport-height & {
-    height: 100%;
-    @include oColorsFor(ig-text-over-media, text);
-    @include igBackgroundMask;
-  }
+  height: 100vh;
+  @include oColorsFor(ig-text-over-media, text);
+  @include igBackgroundMask;
 
 // same as .secion-cols setting.
 // mainly for credits page.
@@ -86,8 +67,6 @@
     @include oGridRespondTo(M) {
       padding-top: 450px;
       padding-bottom: 250px;
-      
-      @include igBackgroundMask;
     }
   }
 }
@@ -128,10 +107,12 @@
   }
 }
 
+.section-media {
+  @include oColorsFor(ig-video, background);
+}
 .section-cols {
   position: relative;
 
-// when .section-block has .ig-sticky, .section-cols should scrolled over .section-media.
   [data-ig-component="ig-sticky"] & {
     background-color: #000;
     padding-bottom: 40px;
