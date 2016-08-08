@@ -6,6 +6,8 @@
 .section-media {
   box-sizing: border-box;
 
+// when .section-block has .viewport-height, it means .section-media inside it is treated as background.
+// Since container has fixed height of 100vh, .section-media could use height: 100%;.
   .viewport-height & {
     position: absolute;
     top: 0;
@@ -17,6 +19,8 @@
     z-index: -1;
   }
 
+// when .section-block has .ig-sticky, it means .section-media is treated as background while .section-block does not have fixed height. You have to set .section-media's height explicitly to fill the window height and width.
+// .viewport-height and .ig-sticky should be mutually exclusive.
   .ig-sticky & {
     position: relative;
     @include oGridRespondTo(M) {
@@ -29,7 +33,9 @@
       height: 100vh;      
     }
   }
-  
+ 
+// when .section-media has .section-media--fixed, it means section the element inside it is position:fixed as background.
+// .section-media clips the the background as it scrolls.
   @include oGridRespondTo(M) {
     &--fixed {
       clip: rect(0, auto, auto, 0);
@@ -43,7 +49,8 @@
       }
     }    
   }
-  
+
+// on mobile devies, when .section-block has .ig-sticky, the sticky effect if disabled. .section-media flows naturally. It has a mask from bottom to 30% height as a transition gradient to the text following it.  
   @include oGridRespondTo($until: M) {
     .ig-sticky &:after {
       content: '';
@@ -60,24 +67,28 @@
 
 .section-text-over-media {
   position: relative;
+
+// when .section-block has .viewport-height.
   .viewport-height & {
     height: 100%;
     @include oColorsFor(ig-text-over-media, text);
     @include igBackgroundMask;
   }
 
-  .ig-sticky & {
-    background-color: #000;
-    padding-bottom: 40px;
-    @include oColorsFor(ig-text-over-media, text);
+// 
+//   .ig-sticky & {
+//     background-color: #000;
+//     padding-bottom: 40px;
+//     @include oColorsFor(ig-text-over-media, text);
 
-    @include oGridRespondTo(M) {
-      padding-top: 450px;
-      padding-bottom: 250px;
+// 
+//     @include oGridRespondTo(M) {
+//       padding-top: 450px;
+//       padding-bottom: 250px;
       
-      @include igBackgroundMask;
-    }
-  }
+//       @include igBackgroundMask;
+//     }
+//   }
 }
 
 .section-leadin {
@@ -119,20 +130,22 @@
 .section-cols {
   position: relative;
 
+// when .section-block has .ig-sticky, .section-cols should scrolled over .section-media.
   .ig-sticky & {
     background-color: #000;
     padding-bottom: 40px;
 
+// override .ig-figure__caption's default color since it is not readable on dark background.
     .ig-figure__caption {
       color: #ccc;
     }
-
+// It should be high enough to be able to scrolled.
     @include oGridRespondTo(M) {
       padding-top: 450px;
       padding-bottom: 250px;
 
       @include igBackgroundMask;
-      
+// a semi-transparent color masking the image behind it.     
       background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, transparent);      
     }
 
