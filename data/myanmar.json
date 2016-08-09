@@ -81,7 +81,20 @@
 								}
 							]
 						},
-						"picture": null				
+						"picture": {
+							"source": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"/images/myanmar/2560_flowers_blinkie-lr.jpg 1100w,",
+										"/images/myanmar/2560_flowers_blinkie-mr.jpg 1500w,",
+										"/images/myanmar/2560_flowers_blinkie-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/myanmar/2560_flowers_blinkie-mr.jpg"	
+						}
 					},
 					"textOverMedia": {
 						"head": {
@@ -349,7 +362,20 @@
 								}
 							]
 						},
-						"picture": null
+						"picture": {
+							"source": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"/images/myanmar/2560_beach_football_backup-lr_ff6vr1u.jpg 1100w,",
+										"/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg 1500w,",
+										"/images/myanmar/2560_beach_football_backup-hr_mnvbsnw.jpg"
+									]
+								}
+							],
+							"src": "/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg"	
+						}
 					},
 					"textOverMedia": {
 						"head": {
@@ -731,7 +757,20 @@
 								}
 							]	
 						},
-						"picture": null
+						"picture": {
+							"source": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"/images/myanmar/boat-blinkie-backup-lr.jpg 1100w,",
+										"/images/myanmar/boat-blinkie-backup-mr.jpg 1500w,",
+										"/images/myanmar/boat-blinkie-backup-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/myanmar/boat-blinkie-backup-mr.jpg"	
+						}
 					},
 					"textOverMedia": {
 						"credits": {
