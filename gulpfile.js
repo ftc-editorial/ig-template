@@ -322,36 +322,32 @@ gulp.task('html:demo', () => {
 
 // Build an index page listing all projects sent to test serve.
 gulp.task('index', () => {
-  return Promise.all([contentFileName, 'demos/index.json'].map(readFilePromisified))
-    .then((contentArr) => {
-      const parsedData = contentArr.map(JSON.parse);
-      const contentData = parsedData[0];
-      const indexData = parsedData[1];
-      const key = argv.i;
-      const value = contentData.pageTitle;
-      if (!indexData.items) {
-        indexData.items = {};
-      }
+  return gulp.src('demos/index.njk')
+    .pipe($.data(function() {
+      return Promise.all([contentFileName, 'demos/index.json'].map(readFilePromisified))
+        .then((contentArr) => {
+          const parsedData = contentArr.map(JSON.parse);
+          const contentData = parsedData[0];
+          const indexData = parsedData[1];
+          const key = argv.i;
+          const value = contentData.pageTitle;
+          if (!indexData.items) {
+            indexData.items = {};
+          }
 
-      if (!(key in indexData.items) || indexData.items[key] !== value) {
-        indexData.items[key] = value;
-      }
-    
-      return indexData;
-    })
-    .then((value) => {
-      const res = nunjucks.render('demos/index.njk', value);
-      fs.writeFile('dist/index.html', res, (err) => {
-        console.log('dist/index.html created.');
-      });
-      return value;
-    })
-    .then((value) => {
-      const data = JSON.stringify(value, 4);
-      fs.writeFile('demos/index.json', data, (err) => {
-        console.log('demos/index.json updated.');
-      });
-    });
+          if (!(key in indexData.items) || indexData.items[key] !== value) {
+            indexData.items[key] = value;
+          }
+// update the data in json.
+          fs.writeFile('demos/index.json', JSON.stringify(indexData, 4), (err) => {
+            console.log('demos/index.json updated.');
+          });
+// pass data to nunjucks.
+          return indexData;
+        })      
+    }))
+    .pipe($.nunjucks.compile())
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('copy:demo', () => {
@@ -361,4 +357,4 @@ gulp.task('copy:demo', () => {
     .pipe(gulp.dest(DEST));
 });
 
-gulp.task('demo', gulp.series(gulp.parallel('mustache', 'styles', 'rollup', 'images', 'custom', 'index'), 'html:demo', 'copy:demo'));
+gulp.task('demo', gulp.series('clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'custom', 'index'), 'html:demo', 'copy:demo'));
