@@ -212,6 +212,7 @@
 							{
 								"image": {
 									"ratio": "",
+									"extraStyles": "width: 70%",
 									"heightToWidth": "223.68%",
 									"title": "",
 									"link": "",
@@ -447,9 +448,9 @@
 							},
 							{
 								"image": {
-									"mobileOnly": "true | false",
+									"mobileOnly": true,
 									"ratio": "",
-									"heightToWidth": "",
+									"heightToWidth": "62.83%",
 									"title": "",
 									"link": "",
 									"src": "http://i.ftimg.net/picture/2/000063352_piclink.jpg",

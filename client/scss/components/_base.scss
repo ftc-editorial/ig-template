@@ -22,15 +22,8 @@
   }  
 }
 [data-media-ratio="7/5"] {
-  @include oGridRespondTo(M) {
-    width: 80%;
-  }
+  width: 90%;
   .lazyload__outer {
     @include igSetMediaRatio(7/5);
   } 
-}
-[data-media-ratio="14/10"] {
-  .lazyload__outer {
-    @include igSetMediaRatio(14/10);
-  }
 }
