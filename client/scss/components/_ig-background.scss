@@ -9,14 +9,7 @@
   height: 100%;
   display: block;
   overflow: hidden;
-
-  &--video {
-    background-color: #000;
-  }
-
-  &--picture {
-    @include oColorsFor(ig-media, background);
-  }
+  @include oColorsFor(ig-media, background);
 
   &__media {
     box-sizing: border-box;

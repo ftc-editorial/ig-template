@@ -52,6 +52,10 @@
 	   text-align: center;
 	}
 
+	.section-col__secondary &__caption {
+		text-align: left;
+	}
+
 	[data-ig-component="ig-sticky"] .section-col__primary &__caption {
 		color: #ccc;
 	}
