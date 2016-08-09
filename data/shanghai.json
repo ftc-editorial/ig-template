@@ -479,7 +479,7 @@
 									"srcset": [
 										"/images/shanghai/blinky-5-lr_obkiep9.png 1100w,",
 										"/images/shanghai/blinky-5-mr_fdexydk.png 1500w,",
-										"/media/blinky-5-hr_trwu830.png"
+										"/images/shanghai/blinky-5-hr_trwu830.png"
 									]
 								}
 							],
@@ -861,7 +861,7 @@
 					"cols": null
 				},
 				{
-					"blockId": 4,
+					"blockId": 5,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": null,
@@ -911,7 +911,7 @@
 					}
 				},
 				{
-					"blockId": 5,
+					"blockId": 6,
 					"viewportHeight": false,
 					"sticky": false,
 					"sectionMedia": {
