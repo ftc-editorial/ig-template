@@ -1,5 +1,6 @@
 .ig-background {
   box-sizing: border-box;
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
@@ -20,3 +21,9 @@
   }
 }
 
+.ig-background--picture[data-video-fallback] + .ig-background--video {
+  display: none;
+  @include oGridRespondTo(M) {
+    display: block;
+  }
+}
