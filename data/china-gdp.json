@@ -19,7 +19,7 @@
 	"seriesTitle": "2015中国年度报告",
 	"sections": [
 		{
-			"id": 1,
+			"sectionId": 1,
 			"navText": "第一部分",
 			"sectionBlocks": [
 				{
@@ -105,7 +105,7 @@
 			}
 		},
 		{
-			"id": 2,
+			"sectionId": 2,
 			"navText": "第二部分",
 			"sectionBlocks": [
 				{
@@ -208,7 +208,7 @@
 			"adBanner": "/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
 		},
 		{
-			"id": 3,
+			"sectionId": 3,
 			"navText": "第三部分",
 			"sectionBlocks": [
 				{

@@ -60,7 +60,7 @@
 	},
 	"sections": [
 		{
-			"id":"1",
+			"sectionId":"1",
 			"navText": "1. 失去的土地",
 			"sectionBlocks": [
 				{
@@ -231,7 +231,7 @@
 			"ad": ""
 		},
 		{
-			"id": 2,
+			"sectionId": 2,
 			"navText": "2. 抱负",
 			"sectionBlocks": [
 				{
@@ -340,7 +340,7 @@
 			"ad": ""
 		},
 		{
-			"id": 3,
+			"sectionId": 3,
 			"navText": "3. 村庄",
 			"sectionBlocks": [
 				{
@@ -513,7 +513,7 @@
 			"ad": ""
 		},
 		{
-			"id": 4,
+			"sectionId": 4,
 			"navText": "4. 导火索",
 			"sectionBlocks": [
 				{
@@ -604,7 +604,7 @@
 			"ad": ""
 		},
 		{
-			"id": 5,
+			"sectionId": 5,
 			"navText": "5. 赢家和输家",
 			"sectionBlocks": [
 				{
@@ -727,7 +727,7 @@
 			]
 		},
 		{
-			"id": 6,
+			"sectionId": 6,
 			"sectionBlocks": [
 				{
 					"blockId": 1,

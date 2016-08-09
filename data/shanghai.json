@@ -22,7 +22,7 @@
 	"seriesTitle": "特别报道 | 老外看中国",
 	"sections": [
 		{
-			"id":1,
+			"sectionId": 1,
 			"navText": "1",
 			"sectionBlocks": [
 				{
@@ -44,7 +44,20 @@
 								}
 							]
 						},
-						"picture": null
+						"picture": {
+							"source": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"./media/blinky-4-lr_mlpr2gs.png 1100w,",
+										"./media/blinky-4-mr_ua2r4wd.png 1500w,",
+										"./media/blinky-4-hr_kgpjdpm.png"
+									]
+								}
+							],
+							"src": "./media/blinky-4-mr_ua2r4wd.png"	
+						} 
 					},
 					"textOverMedia": {
 						"head": {
@@ -215,7 +228,7 @@
 			"adBanner": ""
 		},
 		{
-			"id": 2,
+			"sectionId": 2,
 			"navText": "2",
 			"sectionBlocks": [
 				{
@@ -435,7 +448,7 @@
 			"adBanner": ""
 		},
 		{
-			"id": 3,
+			"sectionId": 3,
 			"navText": "3",
 			"sectionBlocks": [
 				{
@@ -446,7 +459,7 @@
 						"fixed": false,
 						"ft": {
 							"setting": "loop muted autoplay",
-							"poster": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky-5-hr_trwu830.png",
+							"poster": "./media/blinky-5-mr_fdexydk.png",
 							"source": [
 								{
 									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.mp4",
@@ -458,7 +471,20 @@
 								}
 							]
 						},
-						"picture": null	
+						"picture": {
+							"source": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"./media/blinky-5-lr_obkiep9.png 1100w,",
+										"./media/blinky-5-mr_fdexydk.png 1500w,",
+										"/media/blinky-5-hr_trwu830.png"
+									]
+								}
+							],
+							"src": "./media/blinky-5-mr_fdexydk.png"	
+						} 
 					},
 					"textOverMedia": {
 						"head": {
@@ -682,7 +708,7 @@
 			"adBanner": ""
 		},
 		{
-			"id": 4,
+			"sectionId": 4,
 			"navText": "4",
 			"sectionBlocks": [
 				{
@@ -703,7 +729,20 @@
 								}
 							]
 						},
-						"picture": null	
+						"picture": {
+							"source": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"./media/blinky-2-lr.png 1100w,",
+										"./media/blinky-2-mr.png 1500w,",
+										"./media/blinky-2-hr.png"
+									]
+								}
+							],
+							"src": "./media/blinky-2-mr.png"	
+						} 
 					},
 					"textOverMedia": {
 						"head": {
@@ -898,7 +937,7 @@
 			"adBanner": ""
 		},
 		{
-			"id": 5,
+			"sectionId": 5,
 			"navText": "5",
 			"sectionBlocks": [
 				{
@@ -920,7 +959,20 @@
 								}
 							]
 						},
-						"picture": null	
+						"picture": {
+							"source": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"./media/blinky-8-lr.png 1100w,",
+										"./media/blinky-8-mr.png 1500w,",
+										"./media/blinky-8-hr.png"
+									]
+								}
+							],
+							"src": "./media/blinky-8-mr.png"	
+						} 
 					},
 					"textOverMedia": {
 						"head": {

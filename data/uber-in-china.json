@@ -22,7 +22,7 @@
 	"seriesTitle": "FT Weekend Magazine",
 	"sections": [
 		{
-			"id": 1,
+			"sectionId": 1,
 			"navText": "1",
 			"sectionBlocks": [
 				{
@@ -157,7 +157,7 @@
 			"ad": ""
 		},
 		{
-			"id": 2,
+			"sectionId": 2,
 			"navText": "2",
 			"sectionBlocks": [
 				{
@@ -275,7 +275,7 @@
 			"ad": ""
 		},
 		{
-			"id":3,
+			"sectionId":3,
 			"navText": "3",
 			"sectionBlocks": [
 				{
@@ -372,7 +372,7 @@
 			"ad": ""
 		},
 		{
-			"id":4,
+			"sectionId":4,
 			"navText": "4",
 			"sectionBlocks": [
 				{
