@@ -15,7 +15,14 @@
           <a class="o-header__logo-link" href="/" title="前往FT中文网首页"><span>FT中文网</span><img src="{{{iconsPath}}}svg/brand-ftc-square.svg" target="_blank"></a>
         </div> 
                
-        <div class="o-header__series"><span>{{seriesTitle}}</span></div>
+        <div class="o-header__series">
+          <span>{{seriesTitle}}</span>
+          {{# autoNav}}
+            {{# englishEdition}}
+            <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
+            {{/ englishEdition}} 
+          {{/ autoNav}}
+        </div>
       </div>
 
       <div class="o-header__center">
