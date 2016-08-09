@@ -2,8 +2,8 @@
   
   {{# sectionBlocks}}
   <div class="section-block"
-  data-ig-component="{{#sticky}}ig-sticky{{/sticky}}"
-  id="section-{{sectionId}}__block-{{blockId}}">
+  id="section-{{sectionId}}__block-{{blockId}}"
+  {{#sticky}}data-ig-component="ig-sticky"{{/sticky}}>
 {{!-- when section-block has .ig-sticky, .section-media should be absolutely position to top, 100vh. text-over-media shoulde be auto height.
 when .section-block has .viewport-height, .section-media should be absolutely positioned, 100% width and height, has an overlay.
 
@@ -95,8 +95,6 @@ when .section-block has .viewport-height, .section-media should be absolutely po
               {{/ image}}
 
               </div>
-
-              
 
             </div>
             
