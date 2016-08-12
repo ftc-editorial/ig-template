@@ -347,6 +347,9 @@ gulp.task('index', () => {
         })      
     }))
     .pipe($.nunjucks.compile())
+    .pipe($.rename({
+      extname: '.html'
+    }))
     .pipe(gulp.dest('dist'));
 });
 
