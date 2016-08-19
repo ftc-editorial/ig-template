@@ -35,18 +35,19 @@
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.0",
     "gulp-util": "^3.0.7",
-    "merge-stream": "^1.0.0",
     "minimist": "^1.2.0",
     "postcss-cssnext": "^2.7.0",
     "rollup": "^0.34.5",
     "rollup-plugin-bower-resolve": "^0.1.1",
     "rollup-plugin-buble": "^0.12.1",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "webpack-stream": "^3.2.0"
+    "rollup-plugin-uglify": "^1.0.1",
+    "webpack": "^1.13.2"
   },
   "dependencies": {
+    "co": "^4.6.0",
     "express": "^4.14.0",
+    "is-there": "^4.3.3",
+    "mkdirp": "^0.5.1",
     "morgan": "^1.7.0",
     "nunjucks": "^2.4.2"
   }

@@ -1,27 +1,37 @@
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
+const isThere = require('is-there');
+const co = require('co');
+const mkdirp = require('mkdirp');
+const nunjucks = require('nunjucks');
+const helper = require('./helper');
+
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const cssnext = require('postcss-cssnext');
 const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
-const merge = require('merge-stream');
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
+
 const rollup = require('rollup').rollup;
 const buble = require('rollup-plugin-buble');
 const bowerResolve = require('rollup-plugin-bower-resolve');
-const nunjucks = require('nunjucks');
-const webpackStream = require('webpack-stream');
+const uglify = require('rollup-plugin-uglify');
+
+const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
 var cache;
 
-process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'dev';
 
 const config = require('./config.json');
+
+nunjucks.configure('demos', {
+  autoescape: false,
+  noCache: true
+});
 
 const knownOptions = {
   string: 'input',
@@ -31,44 +41,39 @@ const knownOptions = {
 
 const argv = minimist(process.argv.slice(2), knownOptions);
 
-const contentFileName = path.resolve(__dirname, 'data', argv.i + '.json');
-const footerFileName = path.resolve(__dirname, 'data', 'footer.json');
+const contentDataFile = path.resolve(__dirname, 'data', argv.i + '.json');
+const footerDataFile = path.resolve(__dirname, 'data', 'footer.json');
 const projectName = argv.i;
 
-function readFilePromisified(filename) {
-  return new Promise(
-    function(resolve, reject) {
-      fs.readFile(filename, 'utf8', function(err, data) {
-        if (err) {
-          console.log('Cannot find file: ' + filename);
-          reject(err);
-        } else {
-          resolve(data);
-        }
-      });
-    }
-  );
-}
+// change NODE_ENV between tasks.
+gulp.task('prod', function(done) {
+  process.env.NODE_ENV = 'prod';
+  done();
+});
+
+gulp.task('dev', function(done) {
+  process.env.NODE_ENV = 'dev';
+  done();
+});
+
 
 gulp.task('mustache', function () {
   const DEST = '.tmp';
 
-  const fileNames = [contentFileName, footerFileName];
-  const promisedData = fileNames.map(readFilePromisified);
+  const jsonFiles = [contentDataFile, footerDataFile];
 
   return gulp.src('./views/index.mustache')
     .pipe($.data(function(file) {
-      return Promise.all(promisedData)
+      return Promise.all(jsonFiles.map(helper.readJSON))
         .then(function(value) {
-           const jsonData = value.map(JSON.parse);
-           const viewData = jsonData[0];
-           viewData.footer = jsonData[1];
-           viewData.projectName = projectName;
-           if (process.env.NODE_ENV === 'production') {
-              viewData.analytics = true;
-              viewData.iconsPath = config.icons;
+           const context = value[0];
+           context.footer = value[1];
+           // viewData.projectName = projectName;
+           if (process.env.NODE_ENV === 'prod') {
+              context.analytics = true;
+              context.iconsPath = config.icons;
             }
-           return viewData;
+           return context;
         });
     }))   
     .pipe($.mustache({}, {
@@ -101,6 +106,7 @@ gulp.task('styles', function styles() {
         }
       })
     ]))
+    .pipe($.if(process.env.NODE_ENV === 'prod', $.cssnano()))
     .pipe($.size({
       gzip: true,
       showFiles: true
@@ -118,21 +124,23 @@ gulp.task('eslint', () => {
 });
 
 gulp.task('webpack', function(done) {
-  const DEST = '.tmp/scripts/';
-  return gulp.src('client/js/main.js')
-    .pipe(webpackStream(webpackConfig, null, function(err, stats) {
-      $.util.log(stats.toString({
-          colors: $.util.colors.supportsColor,
-          chunks: false,
-          hash: false,
-          version: false
-      }));
-      browserSync.reload({once: true});
+// change webpack config if env is production.
+  if (process.env.NODE_ENV === 'prod') {
+    delete webpackConfig.watch;
+    webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin())
+  }
+  webpack(webpackConfig, function(err, stats) {
+    if (err) throw new $.util.PluginError('webpack', err);
+    $.util.log('[webpack]', stats.toString({
+      colors: $.util.colors.supportsColor,
+      chunks: false,
+      hash: false,
+      version: false
     }))
-    .pipe(gulp.dest(DEST));
+    browserSync.reload({once: true});
+    done();
+  });
 });
-
-
 
 gulp.task('serve', 
   gulp.parallel(
@@ -150,7 +158,6 @@ gulp.task('serve',
     });
 
     gulp.watch(['views/**/**/*.mustache', 'data/*.json'], gulp.parallel('mustache'));
-
     gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
   })
 );
@@ -160,10 +167,10 @@ gulp.task('serve',
 gulp.task('rollup', () => {
   return rollup({
     entry: 'client/js/main.js',
-    treeshake: false,
     plugins: [
       bowerResolve(),
-      buble()
+      buble(),
+      uglify()
     ],
     cache: cache,
   }).then(function(bundle) {
@@ -171,27 +178,10 @@ gulp.task('rollup', () => {
 
     return bundle.write({
       format: 'iife',
-      // moduleName: 'Share',
-      // moduleId: 'ftc-share',
       dest: '.tmp/scripts/main.js',
       sourceMap: true,
     });
   });
-});
-// Set NODE_ENV according to dirrent task run.
-// Any easy way to set it?
-gulp.task('dev', function() {
-  return Promise.resolve(process.env.NODE_ENV = 'development')
-    .then(function(value) {
-      console.log('NODE_ENV: ' + process.env.NODE_ENV);
-    });
-});
-
-gulp.task('prod', function() {
-  return Promise.resolve(process.env.NODE_ENV = 'production')
-    .then(function(value) {
-      console.log('NODE_ENV: ' + process.env.NODE_ENV);
-    });
 });
 
 gulp.task('custom', () => {
@@ -203,6 +193,7 @@ gulp.task('custom', () => {
     .pipe(gulp.dest(DEST));
 });
 
+// gulp-prefix cannot prefix `source` of `<picture>`.
 gulp.task('prefix', () => {
   return gulp.src('.tmp/index.html')
     .pipe($.cheerio(function($, file) {
@@ -261,7 +252,7 @@ gulp.task('clean', function() {
   });
 });
 
-gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'smoosh', 'dev'));
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'smoosh'));
 
 gulp.task('serve:dist', function() {
   const indexFile = projectName + '.html';
@@ -321,36 +312,45 @@ gulp.task('html:demo', () => {
 });
 
 // Build an index page listing all projects sent to test serve.
+// Read the content of selected project's json, get its `pageTitle` entry.
+// Read the content of `demos/index.json`. Use the `arig.i` as key to check if this key exists.
+// If this key does not exist, add it with `pageTitle` as value.
 gulp.task('index', () => {
-  return gulp.src('demos/index.njk')
-    .pipe($.data(function() {
-      return Promise.all([contentFileName, 'demos/index.json'].map(readFilePromisified))
-        .then((contentArr) => {
-          const parsedData = contentArr.map(JSON.parse);
-          const contentData = parsedData[0];
-          const indexData = parsedData[1];
-          const key = argv.i;
-          const value = contentData.pageTitle;
-          if (!indexData.items) {
-            indexData.items = {};
-          }
+  return co(function *() {
+    const dataFiles = [contentDataFile, 'demos/index.json'];
+    const destDir = 'dist';
 
-          if (!(key in indexData.items) || indexData.items[key] !== value) {
-            indexData.items[key] = value;
-          }
-// update the data in json.
-          fs.writeFile('demos/index.json', JSON.stringify(indexData, 4), (err) => {
-            console.log('demos/index.json updated.');
-          });
-// pass data to nunjucks.
-          return indexData;
-        })      
-    }))
-    .pipe($.nunjucks.compile())
-    .pipe($.rename({
-      extname: '.html'
-    }))
-    .pipe(gulp.dest('dist'));
+    if (!isThere(destDir)) {
+      mkdirp(destDir, (err) => {
+        if (err) console.log(err);
+      });
+    }
+
+    const [projectData, indexData] = yield Promise.all(dataFiles.map(helper.readJSON));
+    const key = argv.i;
+    const value = projectData.pageTitle;
+
+    if (!indexData.projectList) {
+      indexData.porjectList = {};
+    }
+    indexData.porjectList = indexData.porjectList || {};
+
+    if(!indexData.projectList.hasOwnProperty(key) || indexData.projectList[key] !== value) {
+      indexData.porjectList[key] = value;
+      const ws = fs.createWriteStream('demos/index.json');
+      ws.write(JSON.stringify(indexData));
+      ws.on('error', (error) => {
+        console.log(error);
+      });
+    }
+
+    const res = nunjucks.render('index.njk', indexData);
+    const indexPage = fs.createWriteStream('dist/index.html');
+    indexPage.write(res);
+    indexPage.on('error', (error) => {
+      console.log(error);
+    });
+  });
 });
 
 gulp.task('copy:demo', () => {
