@@ -30,7 +30,8 @@ const config = require('./config.json');
 
 nunjucks.configure('demos', {
   autoescape: false,
-  noCache: true
+  noCache: true,
+  watch: true
 });
 
 const knownOptions = {
