@@ -30,8 +30,7 @@ const config = require('./config.json');
 
 nunjucks.configure('demos', {
   autoescape: false,
-  noCache: true,
-  watch: true
+  noCache: true
 });
 
 const knownOptions = {
@@ -58,34 +57,69 @@ gulp.task('dev', function(done) {
 });
 
 
-gulp.task('mustache', function () {
-  const DEST = '.tmp';
+// gulp.task('mustache', function () {
+//   const DEST = '.tmp';
 
-  const jsonFiles = [contentDataFile, footerDataFile];
+//   const jsonFiles = [contentDataFile, footerDataFile];
 
-  return gulp.src('./views/index.mustache')
-    .pipe($.data(function(file) {
-      return Promise.all(jsonFiles.map(helper.readJSON))
-        .then(function(value) {
-           const context = value[0];
-           context.footer = value[1];
-           // viewData.projectName = projectName;
-           if (process.env.NODE_ENV === 'prod') {
-              context.analytics = true;
-              context.iconsPath = config.icons;
-            }
-           return context;
-        });
-    }))   
-    .pipe($.mustache({}, {
-      extension: '.html'
-    }))
-    .pipe($.size({
-      gzip: true,
-      showFiles: true
-    })) 
-    .pipe(gulp.dest(DEST))
-    .pipe(browserSync.stream({once:true}));
+//   return gulp.src('./views/index.mustache')
+//     .pipe($.data(function(file) {
+//       return Promise.all(jsonFiles.map(helper.readJSON))
+//         .then(function(value) {
+//            const context = value[0];
+//            context.footer = value[1];
+//            // viewData.projectName = projectName;
+//            if (process.env.NODE_ENV === 'prod') {
+//               context.analytics = true;
+//               context.iconsPath = config.icons;
+//             }
+//            return context;
+//         });
+//     }))   
+//     .pipe($.mustache({}, {
+//       extension: '.html'
+//     }))
+//     .pipe($.size({
+//       gzip: true,
+//       showFiles: true
+//     })) 
+//     .pipe(gulp.dest(DEST))
+//     .pipe(browserSync.stream({once:true}));
+// });
+
+gulp.task('index', () => {
+  return co(function *() {
+    const jsonFiles = [contentDataFile, footerDataFile];
+    const destDir = '.tmp';
+
+    if (!isThere(destDir)) {
+      mkdirp(destDir, (err) => {
+        if (err) console.log(err);
+      });
+    }
+
+    const [context, footer] = yield Promise.all(jsonFiles.map(helper.readJSON));
+    context.footer = footer;
+    context.projectName = projectName;
+
+   if (process.env.NODE_ENV === 'prod') {
+      context.analytics = true;
+      context.iconsPath = config.icons;
+      context.production = true;
+    }
+
+    const res = nunjucks.render('index.html', context);
+    const indexPage = fs.createWriteStream('.tmp/index.html');
+    indexPage.write(res);
+    indexPage.on('error', (error) => {
+      console.log(error);
+    });
+  })
+  .then(function(){
+    browserSync.reload('index.html');
+  }, function(err) {
+    console.error(err.stack);
+  });
 });
 
 gulp.task('styles', function styles() {
@@ -138,7 +172,7 @@ gulp.task('webpack', function(done) {
       hash: false,
       version: false
     }))
-    browserSync.reload({once: true});
+    browserSync.reload('main.js');
     done();
   });
 });
@@ -253,7 +287,7 @@ gulp.task('clean', function() {
   });
 });
 
-gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'extras'), 'smoosh'));
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('index', 'styles', 'rollup', 'images', 'extras'), 'smoosh'));
 
 gulp.task('serve:dist', function() {
   const indexFile = projectName + '.html';
@@ -316,7 +350,7 @@ gulp.task('html:demo', () => {
 // Read the content of selected project's json, get its `pageTitle` entry.
 // Read the content of `demos/index.json`. Use the `arig.i` as key to check if this key exists.
 // If this key does not exist, add it with `pageTitle` as value.
-gulp.task('index', () => {
+gulp.task('index:demo', () => {
   return co(function *() {
     const dataFiles = [contentDataFile, 'demos/index.json'];
     const destDir = 'dist';
@@ -361,4 +395,4 @@ gulp.task('copy:demo', () => {
     .pipe(gulp.dest(DEST));
 });
 
-gulp.task('demo', gulp.series('clean', gulp.parallel('mustache', 'styles', 'rollup', 'images', 'custom', 'index'), 'html:demo', 'copy:demo'));
+gulp.task('demo', gulp.series('clean', gulp.parallel('index', 'styles', 'rollup', 'images', 'custom', 'index:demo'), 'html:demo', 'copy:demo'));

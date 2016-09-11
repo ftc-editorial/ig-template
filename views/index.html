@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block body %}
+<article class="article" role="main">
+
+{% if articleCover %}
+  <div class="article-header viewport-height">
+    {% if articleCover.background %}
+    <div class="article-header__background">
+      {% include "partials/ig-background.html" %}
+    </div>
+    {% endif %}
+    <div class="article-header__text">
+      {% include "partials/ig-head.html" %}
+    </div>
+  </div>
+{% endif %}
+
+{% include "sections.html" %}
+
+{% if articleFooter %}
+  <div class="article-footer">
+    <div data-o-grid-container>
+      {% for section in articleFooter.sections%}
+      <div class="article-footer__section" id="article-footer__section-{{section.id}}">
+        
+        {% if section.sectionTitle %}
+        <h2 class="article-footer__section-title">{{section.sectionTitle}}</h2>
+        {% endif %}
+
+        <div class="article-footer__row" data-o-grid-row>
+          {% for col in sectionCols %}
+          <div class="article-footer__col" data-o-grid-col>
+            {% include "partials/suggested-reads.html" %}
+          </div>
+          {% endfor%}
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+  </div><!-- .article-footer -->
+{% endif %}
+
+</article>
+{% endblock %}

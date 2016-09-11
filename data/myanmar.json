@@ -6,7 +6,7 @@
 	"customCss": false,
 	"customJs": false,
 	"enableScroll": true,
-	"autoNav": null,
+	"autoNav": false,
 	"iconsPath": "/bower_components/ftc-icons/",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 	"ogTitle": "缅甸失地农民",
@@ -15,26 +15,26 @@
 	"ogUrl": "",
 	"pageTitle": "缅甸失地农民",
 	"wechatImage": "/images/myanmar/sapienza_new-lr_cycwhld.jpg",	
-	"englishEdition": {
+	"edition": {
 		"text": "English",
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
 	},
 	"seriesTitle": "调查报道",
-	"articleHead": {
+	"articleCover": {
 		"headFor": "aritcle",
-		"lead": "",
+		"lead": null,
 		"title": "缅甸失地农民",
-		"heading": "",
+		"heading": null,
 		"subtitle": "被打乱的生活",
-		"intro": "",
+		"intro": null,
 		"byline": {
 			"publishTime": "2016年3月25日",
 			"author": "英国《金融时报》报道"
 		},
 		"background": {
-			"ft": null,
+			"video": null,
 			"picture": {
-				"source": [
+				"sources": [
 					{
 						"landscape": true,
 						"portrait": false,
@@ -68,21 +68,16 @@
 					"viewportHeight": true,
 					"sticky": false,
 					"background": {
-						"ft": {
+						"video": {
 							"poster": "/images/myanmar/mpv-shot0001.jpg",
-							"source": [
-								{
-									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
-									"type": "mp4"
-								},
-								{
-									"src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm",
-									"type": "webm"
-								}
-							]
+							"sources": {
+								"mp4": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
+								"webm": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm"
+							}
 						},
 						"picture": {
-							"source": [
+							"isVedioFallback": true,
+							"sources": [
 								{
 									"landscape": true,
 									"portrait": false,

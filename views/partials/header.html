@@ -6,38 +6,36 @@
 <path d="M1.5 20.14v-4.93c0-1.35.478-2.503 1.433-3.458S5.04 10.32 6.39 10.32h88.22c1.324 0 2.47.477 3.438 1.432S99.5 13.86 99.5 15.21v4.93c0 1.323-.484 2.47-1.452 3.437s-2.114 1.45-3.438 1.45H6.39c-1.35 0-2.502-.482-3.457-1.45C1.978 22.61 1.5 21.463 1.5 20.14zm0 31.824v-4.89c0-1.376.478-2.547 1.433-3.502.955-.95 2.108-1.426 3.458-1.426h88.22c1.324 0 2.47.478 3.438 1.426.968.955 1.452 2.126 1.452 3.502v4.89c0 1.324-.484 2.47-1.452 3.438-.968.97-2.114 1.452-3.438 1.452H6.39c-1.35 0-2.502-.483-3.457-1.452-.955-.967-1.433-2.114-1.433-3.438zm0 26.936c0-1.35.478-2.51 1.433-3.465S5.04 74.01 6.39 74.01h88.22c1.324 0 2.47.47 3.438 1.425S99.5 77.55 99.5 78.9v4.89c0 1.376-.484 2.534-1.452 3.477-.968.943-2.114 1.415-3.438 1.415H6.39c-1.35 0-2.502-.472-3.457-1.415-.955-.943-1.433-2.1-1.433-3.476V78.9z"/>
 </symbol>
 </svg>
-<header class="o-header{{#lightTheme}} o-header--light{{/lightTheme}}" data-o-component="o-header">
+<header class="o-header{% if lightTheme %} o-header--light{% endif %}" data-o-component="o-header">
 
     <div class="o-header__container">
 
       <div class="o-header__left">
         <div class="o-header__logo">
-          <a class="o-header__logo-link" href="/" title="前往FT中文网首页"><span>FT中文网</span><img src="{{{iconsPath}}}svg/brand-ftc-square.svg" target="_blank"></a>
+          <a class="o-header__logo-link" href="/" title="前往FT中文网首页"><span>FT中文网</span><img src="{{iconsPath}}svg/brand-ftc-square.svg" target="_blank"></a>
         </div> 
                
         <div class="o-header__series">
           <span>{{seriesTitle}}</span>
-          {{# autoNav}}
-            {{# englishEdition}}
-            <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
-            {{/ englishEdition}} 
-          {{/ autoNav}}
+          {% if autoNav and edition %}
+            <a class="o-header__edition" href="{{edition.href}}" target="_blank">{{edition.text}}</a>
+          {% endif %}
         </div>
       </div>
 
       <div class="o-header__center">
-        {{^ autoNav}}
+        {% if not autoNav %}
         <div class="o-header__title">
           <span class="o-header__headline">{{pageTitle}}</span>
-          {{# englishEdition}}
-          <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
-          {{/ englishEdition}}   
+          {% if edition%}
+          <a class="o-header__edition" href="{{edition.href}}" target="_blank">{{edition.text}}</a>
+          {% endif %}
         </div>
-        {{/ autoNav}}
+        {% endif %}
       </div>
 
       <div class="o-header__right" data-o-component="o-toggle">
-        <div class="o-share{{# darkTheme}} o-share--dark{{/ darkTheme}}" data-o-component="o-share"></div>
+        <div class="o-share{% if darkTheme %} o-share--dark{% endif %}" data-o-component="o-share"></div>
 
         <button class="o-header__nav-toggle" data-o-toggle-button aria-controls=".o-header__nav">
           <span>目录</span>
@@ -50,19 +48,19 @@
         </button>
         
         <ol class="o-header__nav" data-o-toggle-target>
-          {{# sections}}
-          {{# navText}}
-          <li class="o-header__nav-item">
-            <a class="o-header__nav-link" href="#section-{{sectionId}}">{{navText}}</a>
-          </li>
-          {{/ navText}}
-          {{/ sections}}
-
-          {{# englishEdition}}
-          <li class="o-header__nav-item mobile">
-            <a class="o-header__edition" href="{{{href}}}" target="_blank">{{text}}</a>
-          {{/ englishEdition}}
-          </li>
+          {% for section in sections%}
+            {% if section.navText %}
+            <li class="o-header__nav-item">
+              <a class="o-header__nav-link" href="#section-{{loop.index}}">{{section.navText}}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+          
+          {% if edition %}
+            <li class="o-header__nav-item mobile">
+              <a class="o-header__edition" href="{{edition.href}}" target="_blank">{{edition.text}}</a>
+            </li>
+          {% endif %}
         </ol>           
       </div>         
     </div><!-- o-header__container -->    

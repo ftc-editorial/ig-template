@@ -43,7 +43,7 @@
 	],
 	"link_sections": [
 		{
-			"title": {"title": "服务"},
+			"title": "服务",
 			"items": [
 				{
 					"text": "会议活动",
@@ -64,7 +64,7 @@
 			]
 		},
 		{
-			"title": {"title": "关注我们"},
+			"title": "关注我们",
 			"items": [
 				{
 					"text": "微信",
@@ -89,7 +89,7 @@
 			]
 		},
 		{
-			"title": {"title": "支持"},
+			"title": "支持",
 			"items": [
 				{
 					"text": "关于我们",
@@ -110,7 +110,7 @@
 			]
 		},
 		{
-			"title": {"title": "法务&广告"},
+			"title": "法务&广告",
 			"items": [
 				{
 					"text": "广告业务",

@@ -1,32 +1,41 @@
-<footer class="o-footer{{#lightTheme}} o-footer--light{{/lightTheme}}" data-o-component="o-footer">
+<footer class="o-footer{% if lightTheme %} o-footer--light{% endif %}" data-o-component="o-footer">
   <div class="o-footer__container" data-o-grid-container>
 
     <nav class="o-footer__nav">
       <h3 class="o-footer__title">频道</h3>
        <ul class="o-footer__row o-footer__section-list" data-o-grid-row>
-        {{# sections}}
-          <li class="o-footer__col o-footer__link" data-o-grid-col><a href="{{{href}}}">{{text}}</a></li>
-        {{/ sections}}
+
+        {% for section in footer.sections%}
+        <li class="o-footer__col o-footer__link" data-o-grid-col><a href="{{section.href}}">{{section.text}}</a></li>
+        {% endfor %}
+
         </ul>
     </nav>
 
     <div class="o-footer__row o-footer__link-lists" data-o-grid-row>
-      {{# link_sections}}
+      
+      {% for section in footer.link_sections%}
       <nav class="o-footer__col o-footer__link-list" data-o-grid-col>
-        {{# title}}<h3 class="o-footer__title">{{title}}</h3>{{/ title}}
+        
+        {% if section.title %}
+        <h3 class="o-footer__title">{{section.title}}</h3>
+        {% endif %}
+
         <ul>
-          {{# items}}
+          {% for item in section.items %}
           <li class="o-footer__link">
-            <a href="{{{href}}}">{{text}}</a>
+            <a href="{{item.href}}">{{item.text}}</a>
           </li>
-          {{/ items}}
+          {% endfor %}
         </ul>
+        
       </nav>
-      {{/ link_sections}}
+      {% endfor %}
+
     </div>
 
     <div class="o-footer__row o-footer__copyright">
-        <span>&#xA9; FT中文网 {{copyrightYear}}.</span>
+        <span>&#xA9; FT中文网 {{footer.copyrightYear}}.</span>
         <span><abbr title="Financial Times">FT</abbr> and &#x2018;Financial Times&#x2019; are trademarks of The Financial Times Ltd.</span>
     </div> 
   </div>      
