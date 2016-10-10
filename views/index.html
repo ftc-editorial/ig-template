@@ -1,22 +1,24 @@
 {% extends "base.html" %}
 
-{% block body %}
+{% block content %}
 <article class="article" role="main">
 
-{% if articleCover %}
-  <div class="article-header viewport-height">
-    {% if articleCover.background %}
+{% if cover %}
+  {% include "text-over-media.html" %}
+{#   <div class="article-header viewport-height">
+    {% if cover.background %}
     <div class="article-header__background">
       {% include "partials/ig-background.html" %}
     </div>
     {% endif %}
+
     <div class="article-header__text">
       {% include "partials/ig-head.html" %}
     </div>
-  </div>
+  </div> #}
 {% endif %}
 
-{% include "sections.html" %}
+{# {% include "sections.html" %} #}
 
 {% if articleFooter %}
   <div class="article-footer">

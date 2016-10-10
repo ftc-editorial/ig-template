@@ -1,50 +1,49 @@
-const fs = require('fs');
+const promisify = require('promisify-node')
+const fs = promisify('fs');
 const path = require('path');
 const url = require('url');
 const isThere = require('is-there');
 const co = require('co');
 const mkdirp = require('mkdirp');
-const nunjucks = require('nunjucks');
 const helper = require('./helper');
 
-const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const cssnext = require('postcss-cssnext');
+
+const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
+
 const minimist = require('minimist');
+const options = {
+  string: ['input'],
+  alias: {
+    i: 'input'
+  },
+  default: {
+    input: 'myanmar'
+  }
+};
+const argv = minimist(process.argv.slice(2), options);
 
 const rollup = require('rollup').rollup;
 const buble = require('rollup-plugin-buble');
 const bowerResolve = require('rollup-plugin-bower-resolve');
 const uglify = require('rollup-plugin-uglify');
+var cache;
 
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
-var cache;
-
-process.env.NODE_ENV = 'dev';
+const footer = require('./bower_components/ftc-footer');
 
 const config = require('./config.json');
 
-nunjucks.configure('demos', {
-  autoescape: false,
-  noCache: true
-});
+const dataFile = path.resolve(__dirname, `data/${argv.i}.json`);
 
-const knownOptions = {
-  string: 'input',
-  default: {input: 'myanmar'},
-  alias: {i: 'input'}
-};
-
-const argv = minimist(process.argv.slice(2), knownOptions);
-
-const contentDataFile = path.resolve(__dirname, 'data', argv.i + '.json');
-const footerDataFile = path.resolve(__dirname, 'data', 'footer.json');
 const projectName = argv.i;
 
+process.env.NODE_ENV = 'dev';
 // change NODE_ENV between tasks.
 gulp.task('prod', function(done) {
   process.env.NODE_ENV = 'prod';
@@ -56,40 +55,8 @@ gulp.task('dev', function(done) {
   done();
 });
 
-
-// gulp.task('mustache', function () {
-//   const DEST = '.tmp';
-
-//   const jsonFiles = [contentDataFile, footerDataFile];
-
-//   return gulp.src('./views/index.mustache')
-//     .pipe($.data(function(file) {
-//       return Promise.all(jsonFiles.map(helper.readJSON))
-//         .then(function(value) {
-//            const context = value[0];
-//            context.footer = value[1];
-//            // viewData.projectName = projectName;
-//            if (process.env.NODE_ENV === 'prod') {
-//               context.analytics = true;
-//               context.iconsPath = config.icons;
-//             }
-//            return context;
-//         });
-//     }))   
-//     .pipe($.mustache({}, {
-//       extension: '.html'
-//     }))
-//     .pipe($.size({
-//       gzip: true,
-//       showFiles: true
-//     })) 
-//     .pipe(gulp.dest(DEST))
-//     .pipe(browserSync.stream({once:true}));
-// });
-
-gulp.task('index', () => {
+gulp.task('html', () => {
   return co(function *() {
-    const jsonFiles = [contentDataFile, footerDataFile];
     const destDir = '.tmp';
 
     if (!isThere(destDir)) {
@@ -98,22 +65,19 @@ gulp.task('index', () => {
       });
     }
 
-    const [context, footer] = yield Promise.all(jsonFiles.map(helper.readJSON));
-    context.footer = footer;
-    context.projectName = projectName;
-
    if (process.env.NODE_ENV === 'prod') {
       context.analytics = true;
       context.iconsPath = config.icons;
       context.production = true;
     }
 
-    const res = nunjucks.render('index.html', context);
-    const indexPage = fs.createWriteStream('.tmp/index.html');
-    indexPage.write(res);
-    indexPage.on('error', (error) => {
-      console.log(error);
-    });
+    const context = yield fs.readFile(dataFile);
+    context.footer = footer;
+    context.projectName = projectName;
+
+    const renderResult = yield helper.render('index.html', context);
+
+    yield fs.writeFile('.tmp/index.html', renderResult, 'utf8');
   })
   .then(function(){
     browserSync.reload('index.html');

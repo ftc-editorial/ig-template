@@ -1,32 +1,32 @@
-<header class="ig-head ig-head--{{headFor}}" data-o-grid-container>
+<header class="ig-head ig-head--{{type}}" data-o-grid-container>
 
   <div class="ig-head__primary">
-    {{#lead}}
+    {% if lead %}
     <p class="ig-head__lead">{{lead}}</p>
-    {{/lead}}
+    {% endif %}
 <!-- this is used as article title -->
-    {{#title}}
+    {% if title %}
     <h1 class="ig-head__title">{{title}}</h1>
-    {{/title}}
+    {% endif %}
 <!-- This is used as section title -->
-    {{#heading}}
-    <h2 class="ig-head__heading">{{heading}}</h2>
-    {{/heading}}
+    {% if caption %}
+    <h2 class="ig-head__caption">{{caption}}</h2>
+    {% endif %}
 <!-- this is used as subtitle for both article's title or section's title. -->
-    {{#subtitle}}
+    {% if subtitle %}
     <h3 class="ig-head__subtitle">{{subtitle}}</h3>
-    {{/subtitle}}
+    {% endif %}
 
-    {{#intro}}
+    {% if intro %}
     <p class="ig-head__intro">{{intro}}</p>
-    {{/intro}}
+    {% endif %}
   </div>
 
-  {{#byline}}
+  {% if publishTime or author %}
   <div class="ig-head__byline">
-    <time class="ig__timestamp o-date">{{publishTime}}</time>
-    <p class="ig__author">{{author}}</p>
+    <time class="ig-head__timestamp o-date">{{publishTime}}</time>
+    <p class="ig-head__author">{{author}}</p>
   </div>
-  {{/byline}}
+  {% endif %}
 </header>
  

@@ -1,12 +1,15 @@
 {
-  "name": "data-report",
+  "name": "interactive-graphics",
   "private": true,
+  "devDependencies": {},
   "dependencies": {
+    "ftc-icons": "^3.1.0",
+    "ftc-logos": "^0.3.0",
+    "ftc-share": "^2.1.0",
     "d3": "^4.1.1",
     "o-colors": "^3.3.2",
     "o-grid": "^4.0.7",
-    "ftc-share": "^1.1.0",
-    "ftc-icons": "^2.0.2",
-    "highcharts": "^4.2.5"
+    "highcharts": "^4.2.5",
+    "ftc-footer": "^0.0.3"
   }
 }
