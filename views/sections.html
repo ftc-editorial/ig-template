@@ -50,6 +50,50 @@ when .section-block has .viewport-height, .section-media should be absolutely po
         <div data-o-grid-row>
           <div class="section-col__primary" data-o-grid-col>
             <div class="section-col__primary-inner">
+            {% for content in colPrimary %}
+              
+              {% for text in content.text %}
+              <p>{{text}}</p>
+              {% endfor%}
+
+              {% if content.image %}
+              {% set image = content.image %}
+              {% include "partials/ig-image" %}
+              {% endif %}
+
+              {% if content.video %}
+              {% set video = content.video %}
+              {% include "partials/ig-video" %}
+              {% endif %}
+
+              {% if content.quote %}
+              {% set quote = content.quote %}
+                <figure class="ig-blockquote">
+                  <blockquote class="ig-blockquote__text">
+                  {{quote.text}} 
+                  </blockquote>
+                  <figcaption class="ig-blockquote__caption">{{quote.caption}}</figcaption>
+                </figure>
+              {% endif %}
+            {% endfor %}
+
+            {% if content.readMore %}
+              {% set readMore = content.readMore %}
+              <div class="ig-more">
+                {% set image = readMore.image %}
+                {% include "partials/ig-image.html" %}
+                
+                <h4 class="ig-more__title">{{readMore.title}}</h4>
+
+                <ul class="ig-more__list">
+                {% for item in readMore.listItems%}
+                  <li class="ig-more__list-item">
+                    <a href="{{{item.href}}}">{{item.text}}</a>
+                  </li>
+                {% endfor %}
+                </ul> 
+              </div>
+            {% endif %}
 
             {{# colPrimary}}
 
