@@ -3,9 +3,8 @@
 {% block content %}
 <article class="article" role="main">
 
-{% if cover %}
-  {% include "text-over-media.html" %}
-{#   <div class="article-header viewport-height">
+{# {% if cover %}
+  <div class="article-header viewport-height">
     {% if cover.background %}
     <div class="article-header__background">
       {% include "partials/ig-background.html" %}
@@ -15,12 +14,27 @@
     <div class="article-header__text">
       {% include "partials/ig-head.html" %}
     </div>
-  </div> #}
-{% endif %}
+  </div>
+{% endif %} #}
 
-{# {% include "sections.html" %} #}
+{% for section in sections %}
+<section class="section" id="section-{{loop.index}}">
+  {% for group in section.groups %}
+    <div class="text-over-media viewport-height">
+    
+      {% set picture = group.media.picture %}
+      {% set video = group.meida.video %}
+      {% include "partials/ig-background.html" %}
 
-{% if articleFooter %}
+      {% set text = group.text %}
+      {% include "partials/ig-head.html" %}
+    </div>
+  {% endfor %}
+</section>
+{% endfor %}
+
+
+{# {% if articleFooter %}
   <div class="article-footer">
     <div data-o-grid-container>
       {% for section in articleFooter.sections%}
@@ -42,7 +56,7 @@
       {% endfor %}
     </div>
   </div><!-- .article-footer -->
-{% endif %}
+{% endif %} #}
 
 </article>
 {% endblock %}

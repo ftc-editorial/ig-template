@@ -1,0 +1,17 @@
+<div class="columns">
+	<div class="o-grid-container">
+		<div class="o-grid-row">
+			<div class="section-col__primary" data-o-grid-colspan="12 M6">
+				<div class="section-col__primary-inner">
+					
+				</div>
+			</div>
+			
+			{% if colSecondary %}
+			<div class="section-col__secondary" data-o-grid-colspan="12 M6">
+				{% block colSecondary %}{% endblock %}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

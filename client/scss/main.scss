@@ -3,6 +3,8 @@
 
 @import "ftc-icons/main";
 @import "ftc-share/main";
+$o-footer-is-silent: false;
+@import "ftc-footer/main";
 
 @import "colors";
 @import "var-mixins";

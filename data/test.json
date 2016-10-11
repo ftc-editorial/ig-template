@@ -1,0 +1,75 @@
+{
+	"header": {
+		"theme": "theme-dark"
+	},
+	"share": {
+		"theme": "theme-dark"
+	},
+	"highcharts": false,
+	"d3": false,
+	"customCss": false,
+	"customJs": false,
+	"enableScroll": true,
+	"autoNav": false,
+	"iconsPath": "/bower_components/ftc-logos/static",
+	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
+	"ogTitle": "缅甸失地农民",
+	"ogType": "article",
+	"ogImage": "",
+	"ogUrl": "",
+	"pageTitle": "缅甸失地农民",
+	"wechatImage": "/images/myanmar/sapienza_new-lr_cycwhld.jpg",	
+	"edition": {
+		"text": "English",
+		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
+	},
+	"seriesTitle": "调查报道",
+	"sections": [
+		{
+			"navText": null,
+			"groups": [
+				{
+					"type": "article-cover",
+					"media": {
+						"video": null,
+						"picture": {
+							"sources": [
+								{
+									"landscape": true,
+									"portrait": false,
+									"srcset": [
+										"/images/myanmar/sapienza_new-lr_cycwhld.jpg 1100w",
+										"/images/myanmar/sapienza_new-mr_osvv1bn.jpg 1500w",
+										"/images/myanmar/sapienza_new-hr_f0hbatq.jpg"
+									]
+								},
+								{
+									"landscape": false,
+									"portrait": true,
+									"srcset": [
+										"/images/myanmar/sapienza_new_upright-lr_52x9hcu.jpg 1100w",
+										"/images/myanmar/sapienza_new_upright-mr_ekp7ldm.jpg 1500w",
+										"/images/myanmar/sapienza_new_upright-hr_jepwvb9.jpg"
+									]
+								}
+							],
+							"src": "/images/myanmar/sapienza_new-mr_osvv1bn.jpg"	
+						}			
+					},
+					"text": {
+						"lead": null,
+						"title": "缅甸失地农民",
+						"heading": null,
+						"subtitle": "被打乱的生活",
+						"intro": null,
+						"publishTime": "2016年3月25日",
+						"author": "英国《金融时报》报道"
+					}
+				}
+			]
+		},
+		{
+
+		}
+	]	
+}

@@ -26,12 +26,6 @@ const options = {
 };
 const argv = minimist(process.argv.slice(2), options);
 
-const rollup = require('rollup').rollup;
-const buble = require('rollup-plugin-buble');
-const bowerResolve = require('rollup-plugin-bower-resolve');
-const uglify = require('rollup-plugin-uglify');
-var cache;
-
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
@@ -40,6 +34,7 @@ const footer = require('./bower_components/ftc-footer');
 const config = require('./config.json');
 
 const dataFile = path.resolve(__dirname, `data/${argv.i}.json`);
+console.log(`Using daat file: ${dataFile}`);
 
 const projectName = argv.i;
 
@@ -71,7 +66,8 @@ gulp.task('html', () => {
       context.production = true;
     }
 
-    const context = yield fs.readFile(dataFile);
+    const data = yield fs.readFile(dataFile);
+    const context = JSON.parse(data);
     context.footer = footer;
     context.projectName = projectName;
 
@@ -143,7 +139,7 @@ gulp.task('webpack', function(done) {
 
 gulp.task('serve', 
   gulp.parallel(
-    'mustache', 'styles', 'webpack', 
+    'html', 'styles', 'webpack', 
 
     function serve() {
     browserSync.init({
@@ -156,32 +152,32 @@ gulp.task('serve',
       files: 'custom/**/*.{css,js,csv}'
     });
 
-    gulp.watch(['views/**/**/*.mustache', 'data/*.json'], gulp.parallel('mustache'));
+    gulp.watch(['views/**/**/*.html', 'data/*.json'], gulp.parallel('html'));
     gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
   })
 );
 
-/* build */
-// use rollup and buble to build js
-gulp.task('rollup', () => {
-  return rollup({
-    entry: 'client/js/main.js',
-    plugins: [
-      bowerResolve(),
-      buble(),
-      uglify()
-    ],
-    cache: cache,
-  }).then(function(bundle) {
-    cache = bundle;
+// /* build */
+// // use rollup and buble to build js
+// gulp.task('rollup', () => {
+//   return rollup({
+//     entry: 'client/js/main.js',
+//     plugins: [
+//       bowerResolve(),
+//       buble(),
+//       uglify()
+//     ],
+//     cache: cache,
+//   }).then(function(bundle) {
+//     cache = bundle;
 
-    return bundle.write({
-      format: 'iife',
-      dest: '.tmp/scripts/main.js',
-      sourceMap: true,
-    });
-  });
-});
+//     return bundle.write({
+//       format: 'iife',
+//       dest: '.tmp/scripts/main.js',
+//       sourceMap: true,
+//     });
+//   });
+// });
 
 gulp.task('custom', () => {
   const SRC = 'custom/**/' + projectName + '.{js,css}';
@@ -251,7 +247,7 @@ gulp.task('clean', function() {
   });
 });
 
-gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('index', 'styles', 'rollup', 'images', 'extras'), 'smoosh'));
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('html', 'styles', 'webpack', 'images', 'extras'), 'smoosh'));
 
 gulp.task('serve:dist', function() {
   const indexFile = projectName + '.html';
@@ -359,4 +355,4 @@ gulp.task('copy:demo', () => {
     .pipe(gulp.dest(DEST));
 });
 
-gulp.task('demo', gulp.series('clean', gulp.parallel('index', 'styles', 'rollup', 'images', 'custom', 'index:demo'), 'html:demo', 'copy:demo'));
+gulp.task('demo', gulp.series('clean', gulp.parallel('html', 'styles', 'webpack', 'images', 'custom', 'index:demo'), 'html:demo', 'copy:demo'));

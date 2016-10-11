@@ -3,7 +3,7 @@
   "private": true,
   "devDependencies": {},
   "dependencies": {
-    "ftc-icons": "^3.1.0",
+    "ftc-icons": "^3.3.0",
     "ftc-logos": "^0.3.0",
     "ftc-share": "^2.1.0",
     "d3": "^4.1.1",
