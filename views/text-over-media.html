@@ -1,9 +1,12 @@
 <div class="text-over-media viewport-height">
-  <div class="text-over-media__background">
+  <div class="text-over-media__background background-fixed">
+    {% set picture = segment.media.picture %}
+    {% set video = segment.media.video %}
     {% include "partials/ig-background.html" %}
   </div>
   
   <div class="text-over-media__text">
+    {% set text = segment.text %}
     {% include "partials/ig-head.html" %}
   </div>
 </div>

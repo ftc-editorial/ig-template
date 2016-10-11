@@ -19,16 +19,8 @@
 
 {% for section in sections %}
 <section class="section" id="section-{{loop.index}}">
-  {% for group in section.groups %}
-    <div class="text-over-media viewport-height">
-    
-      {% set picture = group.media.picture %}
-      {% set video = group.meida.video %}
-      {% include "partials/ig-background.html" %}
-
-      {% set text = group.text %}
-      {% include "partials/ig-head.html" %}
-    </div>
+  {% for segment in section.segments %}
+    {% include segment.type + ".html" %}
   {% endfor %}
 </section>
 {% endfor %}

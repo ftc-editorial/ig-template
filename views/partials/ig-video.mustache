@@ -5,19 +5,19 @@
   {{/title}}
 
   <div class="ig-figure__video lazyload__outer">
-    {{# cc}}
+    {% if video.provider == "cc" %}
     <div class="lazyload__inner">
-      <script src="{{{src}}}" type="text/javascript"></script>
+      <script src="{{video.src}}" type="text/javascript"></script>
     </div>
-    {{/ cc}}
+    {% endif %}
 
-    {{# ft}}
-    <video class="lazyload__inner" preload="metadata" controls poster="{{{poster}}}">
-      {{# source}}
-      <source src="{{{src}}}" type="{{{type}}}">
-      {{/ source}}
+    {% if video.provider == "ft" %}
+    <video class="lazyload__inner" preload="metadata" controls poster="{{video.poster}}">
+      {% for type, src in video.source %}
+      <source src="{{src}}" type="{{type}}">
+      {% endfor %}
     </video>
-    {{/ ft}}
+    {% endif %}
   </div>
 
   {{#caption}}
