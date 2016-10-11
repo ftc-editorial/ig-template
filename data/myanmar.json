@@ -696,31 +696,20 @@
 			"navText": null,
 			"segments": [
 				{
-					"_note": "Segment 1"
-				}
-			]
-		}
-	],
-	"sections": [
-		{
-			"sectionId": 6,
-			"sectionBlocks": [
-				{
-					"blockId": 1,
-					"sticky": false,
-					"sectionMedia": {
-						"cc": {
+					"_note": "Segment 1, section 6",
+					"type": "section-media",
+					"media": {
+						"video": {
+							"provider": "cc",
 							"src": "http://p.bokecc.com/player?vid=3911C434C7B707389C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1"
-						},
-						"ft": null
+						}
 					}
 				},
 				{
-					"blockId": 2,
-					"sticky": false,
-					"background": {
-						"ft": {
-							"setting": "loop muted autoplay",
+					"_note": "Segment 2, section 6",
+					"type": "text-over-media",
+					"media": {
+						"video": {
 							"poster": "/images/myanmar/boat-blinkie-backup-mr.jpg",
 							"source": [
 								{
@@ -748,7 +737,7 @@
 							"src": "/images/myanmar/boat-blinkie-backup-mr.jpg"	
 						}
 					},
-					"textOverMedia": {
+					"text": {
 						"credits": {
 							"title": "制作团队",
 							"items": [
@@ -763,8 +752,7 @@
 								"中文网制作：史书华、倪卫国"
 							]
 						}
-					},
-					"cols": null
+					} 
 				}
 			]
 		}

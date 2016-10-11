@@ -6,7 +6,18 @@
   </div>
   
   <div class="text-over-media__text">
-    {% set text = segment.text %}
-    {% include "partials/ig-head.html" %}
+	  {% set text = segment.text %}
+	  {% include "partials/ig-head.html" %}
+
+		{{# leadin}}
+	  <div class="section-leadin{{#position}} section-leadin--positioned {{position}}{{/position}}">
+	    <p class="section-leadin__text">{{text}}</p>
+	  </div>
+	  {{/ leadin}}
+	  
+	  {{# credits}}
+	    {{> partials/ig-credits}}
+	  {{/ credits}}   	
   </div>
+ 
 </div>
