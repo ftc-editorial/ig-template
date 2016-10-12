@@ -1,5 +1,11 @@
 {
+  "name": "ftc-ig",
+  "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "git push && git push --tags"
+  },
   "engines": {
     "node": ">=6.0.0"
   },
