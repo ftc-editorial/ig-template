@@ -5,58 +5,21 @@ body {
   @include oColorsFor(page);
 }
 
-// Simplified version of `o-grid` layout.
-[data-o-grid-container] {
-  position: relative;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: $o-grid-min-width;
-  max-width: $_o-grid-max-width;
-  padding-left: oGridGutter();
-  padding-right: oGridGutter();
+.o-grid-container {
+  @include oGridContainer;
+}
 
-  @include oGridRespondTo(M) {
-    padding-left: oGridGutter(M);
-    padding-right: oGridGutter(M);
-  }
-
-  @include oGridTargetIE8 {
-    padding-left: oGridGutter($o-grid-fixed-layout);
-    padding-right: oGridGutter($o-grid-fixed-layout);
-    width: oGridGetMaxWidthForLayout($o-grid-fixed-layout, $grid-mode: 'fixed');
+.o-grid-row {
+  @include oGridRow;
+// Center content 
+  .section-columns & {
+    justify-content: center;
   }
 }
 
-[data-o-grid-row] {
-  //display: table;
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-left: -1 * oGridGutter();
-
-  @include oGridRespondTo(M) {
-    margin-left: -1 * oGridGutter(M);
-  }
-
-  @include oGridTargetIE8 {
-    margin-left: -1 * oGridGutter($o-grid-fixed-layout);
-  }
-}
-
-[data-o-grid-col] {
-  position: relative;
-  box-sizing: border-box;
-  flex: 1 1 0%;
-  padding-left: oGridGutter();
-
-  @include oGridRespondTo(M) {
-    padding-left: oGridGutter(M);
-  }
-
-  @include oGridTargetIE8 {
-    padding-left: oGridGutter($o-grid-fixed-layout);
-  }
+.section-col__primary,
+.section-col__secondary {
+  @include oGridColspan((default: 12, M: 6));
 }
 
 figure {

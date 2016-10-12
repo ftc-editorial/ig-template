@@ -1,8 +1,8 @@
-.section-cols {
-	[data-o-grid-row] {
-		justify-content: center;
-	}
+.section-columns {
+  box-sizing: border-box;
+  position: relative;
 }
+
 .section-col__primary {
   p a {
     border-bottom: 1px solid transparent
@@ -21,19 +21,13 @@
     &-inner {
       padding: 20px 30px;
     }
-    @include igGridColWidth($ig-primary-col-width);
   }
 }
 
 .section-col__secondary {
-  display: none;
   position: relative;
   padding-left: 10%;
   padding-right: 5%;
-
-  @include oGridRespondTo(M) {
-    @include igGridColWidth((12 - $ig-primary-col-width));
-  }
 
   &-inner {
     box-sizing: border-box;

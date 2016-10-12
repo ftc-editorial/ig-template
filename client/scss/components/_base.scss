@@ -2,6 +2,13 @@
   height: 100vh;
 }
 
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // Ratio: the media's height/width.
 // It could be in the form `140%` or `7/5`.
 @include lazyloadMedia;

@@ -1,23 +1,30 @@
 <div class="text-over-media viewport-height">
   <div class="text-over-media__background background-fixed">
-    {% set picture = segment.media.picture %}
-    {% set video = segment.media.video %}
     {% include "partials/ig-background.html" %}
   </div>
   
   <div class="text-over-media__text">
-	  {% set text = segment.text %}
-	  {% include "partials/ig-head.html" %}
-
-		{{# leadin}}
-	  <div class="section-leadin{{#position}} section-leadin--positioned {{position}}{{/position}}">
-	    <p class="section-leadin__text">{{text}}</p>
-	  </div>
-	  {{/ leadin}}
 	  
-	  {{# credits}}
-	    {{> partials/ig-credits}}
-	  {{/ credits}}   	
+	  {% if head %}
+	  {% include "partials/ig-head.html" %}
+		{% endif %}
+
+	  {% if byline %}
+	  <div class="ig-byline">
+	    <time class="ig-byline__timestamp o-date">{{byline.publishTime}}</time>
+	    <p class="ig-byline__author">{{byline.author}}</p>
+	  </div>
+	  {% endif %}
+
+		{% if leadin %}
+	  <div class="ig-leadin{% if leadin.position %} ig-leadin--positioned {{leadin.position}}{% endif %}">
+	    <p class="ig-leadin__text">{{leadin.text}}</p>
+	  </div>
+	  {% endif %}
+	  
+	  {% if credits %}
+	    {% include "partials/ig-credits.html" %}
+	  {% endif %}   	
   </div>
  
 </div>

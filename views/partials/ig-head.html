@@ -1,32 +1,25 @@
-<header class="ig-head ig-head--{{type}}" data-o-grid-container>
+<header class="ig-head o-grid-container{% if head.verticalCenter %} vertical-center{% endif %}">
 
-  <div class="ig-head__primary">
-    {% if text.lead %}
-    <p class="ig-head__lead">{{text.lead}}</p>
+  <div class="ig-head__inner">
+    {% if head.lead %}
+    <p class="ig-head__lead">{{head.lead}}</p>
     {% endif %}
 <!-- this is used as article title -->
-    {% if text.title %}
-    <h1 class="ig-head__title">{{text.title}}</h1>
+    {% if head.title %}
+    <h1 class="ig-head__title">{{head.title}}</h1>
     {% endif %}
 <!-- This is used as section title -->
-    {% if text.caption %}
-    <h2 class="ig-head__caption">{{text.caption}}</h2>
+    {% if head.heading %}
+    <h2 class="ig-head__heading">{{head.heading}}</h2>
     {% endif %}
 <!-- this is used as subtitle for both article's title or section's title. -->
-    {% if text.subtitle %}
-    <h3 class="ig-head__subtitle">{{text.subtitle}}</h3>
+    {% if head.subtitle %}
+    <h3 class="ig-head__subtitle">{{head.subtitle}}</h3>
     {% endif %}
 
-    {% if text.intro %}
-    <p class="ig-head__intro">{{text.intro}}</p>
+    {% if head.intro %}
+    <p class="ig-head__intro">{{head.intro}}</p>
     {% endif %}
   </div>
-
-  {% if text.publishTime or text.author %}
-  <div class="ig-head__byline">
-    <time class="ig-head__timestamp o-date">{{text.publishTime}}</time>
-    <p class="ig-head__author">{{text.author}}</p>
-  </div>
-  {% endif %}
 </header>
  

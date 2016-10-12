@@ -53,6 +53,7 @@ gulp.task('dev', function(done) {
 gulp.task('html', () => {
   return co(function *() {
     const destDir = '.tmp';
+    var renderResult = '';
 
     if (!isThere(destDir)) {
       mkdirp(destDir, (err) => {
@@ -71,7 +72,11 @@ gulp.task('html', () => {
     context.footer = footer;
     context.projectName = projectName;
 
-    const renderResult = yield helper.render('index.html', context);
+    try {
+      renderResult = yield helper.render('index.html', context);
+    } catch (e) {
+      console.error(e.stack);
+    }
 
     yield fs.writeFile('.tmp/index.html', renderResult, 'utf8');
   })

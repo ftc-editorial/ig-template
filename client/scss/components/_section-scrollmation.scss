@@ -1,0 +1,51 @@
+.ig-sticky-target {
+  position: relative;
+
+  height: 100vh;
+}
+
+.section-scrollmation {  
+  .section-columns {
+    background-color: #000;
+    padding-bottom: 40px;
+
+// It should be high enough to be able to scrolled.
+    @include oGridRespondTo(M) {
+      padding-top: 450px;
+      padding-bottom: 250px;
+
+      @include igBackgroundMask;
+// a semi-transparent color masking the image behind it.     
+      background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, transparent);      
+    }
+
+    p {
+      @include oColorsFor(ig-text-over-media, text);
+    }
+  }
+
+  @include oGridRespondTo($until: M) {
+    .ig-sticky-target {
+      position: relative;
+      height: 66vh;
+    }
+
+    .ig-sticky-target:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 30%;
+      background-image: linear-gradient(to bottom, transparent, #000);      
+    }
+  }
+
+  @include oGridRespondTo(M) {
+    .ig-sticky-target {
+      position: absolute;
+      height: 100vh;         
+    }
+  }
+}

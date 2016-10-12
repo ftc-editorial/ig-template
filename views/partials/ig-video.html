@@ -1,8 +1,8 @@
 <figure class="ig-figure ig-figure--video" data-media-ratio="9/16">
 
-  {{#title}}
-  <h4 class="ig-figure__title">{{title}}</h4>
-  {{/title}}
+  {% if video.title %}
+  <h4 class="ig-figure__title">{{video.title}}</h4>
+  {% endif %}
 
   <div class="ig-figure__video lazyload__outer">
     {% if video.provider == "cc" %}
@@ -20,7 +20,7 @@
     {% endif %}
   </div>
 
-  {{#caption}}
-  <figcaption class="ig-figure__caption">{{caption}}</figcaption>
-  {{/caption}}  
+  {% if video.caption %}
+  <figcaption class="ig-figure__caption">{{video.caption}}</figcaption>
+  {% endif %}  
 </figure>

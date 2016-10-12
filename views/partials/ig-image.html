@@ -1,0 +1,26 @@
+<figure class="ig-figure ig-figure--image
+{% if image.mobileOnly %}ig-figure--mobile{% endif %}" data-media-ratio="{{image.ratio}}"
+{% if image.extraStyles %}style="{{image.extraStyles}};"{% endif %}>
+	{% if image.title %}
+	<h4 class="ig-figure__title">{{image.title}}</h4>
+	{% endif %}
+	
+  {% if image.link %}<a{% else %}<div{% endif %}
+  class="ig-figure__image lazyload__outer"
+  {% if image.link %}href="{{image.link}}"{% endif %} style="{% if image.heightToWidth %}padding-top:{{image.heightToWidth}};{% endif %}">
+
+    <img src="{{image.src}}" class="lazyload__inner">
+    
+    {% if image.textOnImage %}
+    <figcaption class="ig-figure__image-text">{{image.textOnImage}}</figcaption>
+    {% endif %}
+
+  {% if image.link %}</a>{% else %}</div>{% endif %}         
+  
+  {% if image.caption %}
+  <figcaption class="ig-figure__caption">
+    {{image.caption }}
+  </figcaption>
+  {% endif %}
+
+</figure>

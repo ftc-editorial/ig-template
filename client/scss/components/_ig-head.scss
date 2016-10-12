@@ -1,17 +1,13 @@
 .ig-head {
   box-sizing: border-box;
-  padding-top: $o-header-height; 
-  position: relative;
-  height: 100%;
+  width: 100%;
   text-align: center;
-  @include oColorsFor(ig-text-over-media, text);
 }
 
-.ig-head__primary {
+.ig-head__inner {
   box-sizing: border-box;
   width: 100%;
   padding: 5%;
-  // text-align: center;
 }
 
 .ig-head__lead {
@@ -82,18 +78,19 @@
   }
 }
 
-.ig-head__byline {
-  border-sizing: border-box;
+.ig-byline {
+  box-sizing: border-box;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 1em;
   text-align: center;
+
+  &__timestamp,
+  &__author {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }  
 }
 
-.ig__timestamp,
-.ig__author {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-}
