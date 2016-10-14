@@ -10,6 +10,7 @@
     "o-colors": "^3.3.2",
     "o-grid": "^4.2.3",
     "highcharts": "^4.2.5",
-    "ftc-footer": "^0.0.3"
+    "ftc-footer": "^0.0.3",
+    "ftc-sticky": "^0.1.0"
   }
 }

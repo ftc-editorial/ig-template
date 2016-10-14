@@ -60,12 +60,15 @@
         data-o-sticky-target=".ig-sticky-target"
         data-o-scrollmation-image=".ig-figure__image"
         data-o-scrollmation-caption=".ig-figure__caption"
-        data-o-scrollmation-assets="{% raw %}{{% endraw %}{% for slide in slides %}'{{slide.src}':'{{slide.text}}'{% if not loop.last %}, {% endif %}{% endfor %}{% raw %}}{% endraw %}"
+        data-o-scrollmation-assets="{% raw %}{{% endraw %}
+        {% for slide in slides %}
+        '{{slide.src}}':'{{slide.text}}'
+        {% if not loop.last %}, {% endif %}
+        {% endfor %}
+        {% raw %}}{% endraw %}"
         {% endif %}>
-          {% if colSecondary.image %}
           {% set image = colSecondary.image %}
-            {% include "partials/ig-image.html" %}
-          {% endif %}
+          {% include "partials/ig-image.html" %}
         </div>
 			</div>
 			{% endif %}
