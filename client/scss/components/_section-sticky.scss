@@ -4,7 +4,7 @@
   height: 100vh;
 }
 
-.section-scrollmation {  
+.section-sticky {  
   .section-columns {
     background-color: #000;
     padding-bottom: 40px;
@@ -25,12 +25,12 @@
   }
 
   @include oGridRespondTo($until: M) {
-    .ig-sticky-target {
+    &__background {
       position: relative;
       height: 66vh;
     }
 
-    .ig-sticky-target:after {
+    &__background:after {
       content: '';
       display: block;
       position: absolute;
@@ -43,7 +43,7 @@
   }
 
   @include oGridRespondTo(M) {
-    .ig-sticky-target {
+    &__background {
       position: absolute;
       height: 100vh;         
     }

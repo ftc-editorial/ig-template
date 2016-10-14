@@ -30,21 +30,6 @@ $ig-primary-col-width: 6;
 	}
 }
 
-@mixin igGridColWidth($span) {
-	@if type-of($span) == number {
-		display: block;
-
-		// Fix Safari bug
-		flex-basis: oGridColspan($span);
-		// Define width in %
-		min-width: oGridColspan($span);
-		max-width: oGridColspan($span);
-
-		// For IE8
-		width: oGridColspan($span);
-	}
-}
-
 @mixin igBackgroundOverlay {
 	&:after {
 		content: '';

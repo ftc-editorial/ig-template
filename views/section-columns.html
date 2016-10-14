@@ -53,20 +53,15 @@
 			
 			{% if colSecondary %}
 			<div class="section-col__secondary" data-o-grid-colspan="12 M6">
-				<div class="section-col__secondary-inner"{% if colSecondary.slides %} data-ig-component="ig-sticky ig-slide"{% endif %}{% if colSecondary.height %}{{height}}{% endif %}>
-          
-          {% if colSecondary.slides %}
-          {% set slides = colSecondary.slides %}
-          <div class="{% if colSecondary.slides %}ig-sticky-target ig-slide-target{% endif %}">
-
-            <figure class="ig-slide">
-              <img class="ig-slide__image" data-slide-set="{% for slide in slides %}{{slide.src}}{% if not loop.last %} {% endif %}{% endfor %}">
-
-              <figcaption class="ig-slide__caption" data-slide-set="{% for caption in colSecondary.slideSets %}{{caption}}{% if not loop.last %} {% endif %}{% endfor %}"></figcaption>
-            </figure>
-          </div>
-          {% endif %}
-          
+				<div class="section-col__secondary-inner"
+        {% if colSecondary.slides %}
+        {% set slides = colSecondary.slides %}
+        data-o-component="o-scrollmation"
+        data-o-sticky-target=".ig-sticky-target"
+        data-o-scrollmation-image=".ig-figure__image"
+        data-o-scrollmation-caption=".ig-figure__caption"
+        data-o-scrollmation-assets="{% raw %}{{% endraw %}{% for slide in slides %}'{{slide.src}':'{{slide.text}}'{% if not loop.last %}, {% endif %}{% endfor %}{% raw %}}{% endraw %}"
+        {% endif %}>
           {% if colSecondary.image %}
           {% set image = colSecondary.image %}
             {% include "partials/ig-image.html" %}

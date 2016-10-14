@@ -307,15 +307,15 @@
 						"slides":  [
 							{
 								"src": "/images/myanmar/myanmarnumbers.png",
-								"caption": ""
+								"text": ""
 							},
 							{
 								"src": "/images/myanmar/myan_num_36c.png",
-								"caption": ""
+								"text": ""
 							},
 							{
 								"src": "/images/myanmar/myanmarnumbers2.png",
-								"caption": ""
+								"text": ""
 							}
 						]
 					}					
@@ -366,7 +366,7 @@
 				},
 				{
 					"_note": "Segment 2, section 3",
-					"type": "section-scrollmation",
+					"type": "section-sticky",
 					"media": {
 						"picture": {
 							"source": null,
@@ -626,7 +626,7 @@
 				},
 				{
 					"_note": "Segment 3, section 5",
-					"type": "section-scrollmation",
+					"type": "section-sticky",
 					"media": {
 						"picture": {
 							"source": null,

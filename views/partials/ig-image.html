@@ -9,7 +9,7 @@
   class="ig-figure__image lazyload__outer"
   {% if image.link %}href="{{image.link}}"{% endif %} style="{% if image.heightToWidth %}padding-top:{{image.heightToWidth}};{% endif %}">
 
-    <img src="{{image.src}}" class="lazyload__inner">
+    <img{% if image.src %} src="{{image.src}}"{% endif %} class="ig-figure__image lazyload__inner">
     
     {% if image.textOnImage %}
     <figcaption class="ig-figure__image-text">{{image.textOnImage}}</figcaption>
