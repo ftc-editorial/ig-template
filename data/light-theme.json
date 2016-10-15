@@ -1,6 +1,13 @@
 {
-	"lightTheme": true,
-	"darkTheme": false,
+	"header": {
+		"theme": "theme-light"
+	},
+	"share": {
+		"theme": "theme-default"
+	},
+	"footer": {
+		"theme": "theme-light"
+	},
 	"demo": true,
 	"highcharts": false,
 	"d3": false,
@@ -8,7 +15,7 @@
 	"customJs": false,
 	"enableScroll": false,
 	"autoNav": null,
-	"iconsPath": "/bower_components/ftc-icons/",
+	"iconsPath": "/bower_components/ftc-logos/static",
 	"description": "Interactive Graphics",
 	"ogTitle": "Interactive Graphics",
 	"ogType": "article",
@@ -16,24 +23,29 @@
 	"ogUrl": "",
 	"pageTitle": "Interactive Graphics Light Theme",
 	"wechatImage": null,	
-	"englishEdition": {
+	"edition": {
 		"text": "English",
 		"href": "http://interactive.ftchinese.com/ig-template/index.html"
 	},
 	"seriesTitle": "Interactive Graphics",
-	"articleHead": {
-		"forArticle": true,
-		"viewportHeight": true,
-		"lead": "",
-		"title": "Interactive Graphics",
-		"heading": "",
-		"subtitle": "Light Theme",
-		"intro": "",
-		"byline": null,
-		"background": {
-			"picture": {
-				"src": "http://s.cn.bing.net/az/hprichbg/rb/KohPanyi_ZH-CN12194565147_1920x1080.jpg"
-			}
+	"sections": [
+		{
+			"segments": [
+				{
+					"type": "text-over-media",
+					"media": {
+						"picture": {
+							"src": "hhttp://s.cn.bing.net/az/hprichbg/rb/KohPanyi_ZH-CN12194565147_1920x1080.jpg"
+						}
+					},
+					"text": {
+						"head": {
+							"title": "Interactive Graphics",
+							"subtitle": "Light Theme"
+						}
+					}
+				}
+			]
 		}
-	}
+	]
 }
