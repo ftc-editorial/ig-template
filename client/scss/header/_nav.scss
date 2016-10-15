@@ -6,13 +6,6 @@
 	}
 }
 
-.o-share--dark {
-	@include oShareCustomBase {
-		background-color: transparent;
-		border: 1px solid #ffffff;
-	}
-}
-
 .o-header__nav-toggle {
 	box-sizing: border-box;
 	position: relative;
@@ -35,8 +28,8 @@
 		display: none;
 	}
 	svg {
-		width: 20px;
-		height: 20px;
+		width: 40px;
+		height: 40px;
 		fill: oColorsGetColorFor(o-header, text);
 		display: inline-block;
 		vertical-align: middle;
