@@ -1,5 +1,5 @@
 {% if picture %}
-<picture class="ig-background ig-background--picture"{% if picture.isVideoFallback %} data-video-fallback{% endif %}>
+<picture class="ig-background ig-background--picture{% if media.video %} video-fallback{% endif %}">
 	{% for source in picture.sources%}
 	<source
     {% if source.landscape %}media="(min-aspect-ratio: 1/1)"{% endif %}

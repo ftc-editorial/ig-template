@@ -5,21 +5,38 @@
 	<h4 class="ig-figure__title">{{image.title}}</h4>
 	{% endif %}
 	
-  {% if image.link %}<a{% else %}<div{% endif %}
-  class="ig-figure__image lazyload__outer"
-  {% if image.link %}href="{{image.link}}"{% endif %} style="{% if image.heightToWidth %}padding-top:{{image.heightToWidth}};{% endif %}">
+  {% if image.link %}
+  <a
+  {% else %}
+  <div
+  {% endif %}
+  class="ig-figure__media-wrapper"
+  {% if image.link %}
+  href="{{image.link}}"
+  {% endif %}
+  {% if image.ratio %}
+  data-media-ratio="{{image.ratio}}"
+  {% endif %}
+  {% if image.heightToWidth %}
+  style="padding-top:{{image.heightToWidth}};"
+  {% endif %}>
 
-    <img{% if image.src %} src="{{image.src}}"{% endif %} class="ig-figure__image lazyload__inner">
+    <img{% if image.src %} src="{{image.src}}"{% endif %} class="ig-figure__media">
     
     {% if image.textOnImage %}
     <figcaption class="ig-figure__image-text">{{image.textOnImage}}</figcaption>
     {% endif %}
 
-  {% if image.link %}</a>{% else %}</div>{% endif %}         
+  {% if image.link %}
+  </a>
+  {% else %}
+  </div>
+  {% endif %}         
   
   {% if image.caption %}
-  <figcaption class="ig-figure__caption">
+  <figcaption class="ig-figure__caption">{% if image.link %}<a href="{{image.link}}">{% endif %}
     {{image.caption }}
+  {% if image.link %}</a>{% endif %}
   </figcaption>
   {% endif %}
 

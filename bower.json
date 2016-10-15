@@ -11,6 +11,6 @@
     "o-grid": "^4.2.3",
     "highcharts": "^4.2.5",
     "ftc-footer": "^0.0.3",
-    "ftc-sticky": "^0.1.0"
+    "ftc-sticky": "^0.1.1"
   }
 }

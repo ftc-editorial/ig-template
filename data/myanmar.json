@@ -148,8 +148,8 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": false,
 						"image": {
+							"sticky": "true",
 							"ratio": null,
 							"title": null,
 							"link": "https://www.ft.com/land",
@@ -196,7 +196,7 @@
 									"caption": null
 								},
 								"title": "阅读更多",
-								"listItems": [
+								"items": [
 									{
 										"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia",
 										"text": "Ethiopia: The billionaire’s farm"
@@ -302,8 +302,6 @@
 						}
 					],
 					"colSecondary": {
-						"sticky": true,
-						"height": "100vh",
 						"slides":  [
 							{
 								"src": "/images/myanmar/myanmarnumbers.png",
@@ -481,6 +479,7 @@
 					"_note": "Segment 1. Cover of section 4",
 					"type": "text-over-media",
 					"media": {
+						"fixed": true,
 						"picture": {
 							"source": [
 								{
@@ -566,6 +565,7 @@
 					"_note": "Segment 1. Cover of section 5.",
 					"type": "text-over-media",
 					"media": {
+						"fixed": true,
 						"picture": {
 							"source": [{
 								"landscape": false,
@@ -733,76 +733,70 @@
 			]
 		}
 	],
-	"articleFooter": {
-		"sections": [
-			{
-				"id": 1,
-				"sectionTitle": "The Great Land Rush",
-				"sectionCols": [
-					{
+	"suggestedReads":[
+		{
+			"title": "The Great Land Rush",
+			"columns": [
+				{
+					"image": {
+						"ratio": "",
 						"link": "https://ig.ft.com/sites/land-rush-investment/",
-						"image": {
-							"ratio": "",
-							"src": "/images/myanmar/landrush_xrefpanel.png",
-							"textOnImage": ""
-						},
-						"srTitle": "FT系列：全球土地调查",
-						"srSummary": [
-							"Across continents, big investors are pouring in billions into one of the world's most precious resources – land. They promise progress. But their arrival can upend livelihoods and spark life-and-death struggles. <a href=\"https://ig.ft.com/sites/land-rush-investment/\">阅读更多</a>"
-						]
+						"src": "/images/myanmar/landrush_xrefpanel.png",
+						"caption": "FT系列：全球土地调查"
 					},
-					{
+					"summary": [
+						"Across continents, big investors are pouring in billions into one of the world's most precious resources – land. They promise progress. But their arrival can upend livelihoods and spark life-and-death struggles. <a href=\"https://ig.ft.com/sites/land-rush-investment/\">阅读更多</a>"
+					]		
+				},
+				{
+					"image": {
+						"ratio": "",
 						"link": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
-						"image": {
-							"ratio": "",
-							"src": "/images/myanmar/xref_ethiopia-mr_qoad6xx.jpg",
-							"textOnImage": ""
-						},
-						"srTitle": "埃塞俄比亚：百万富豪的农地",
-						"srSummary":["Mohammed al-Amoudi has spent $200m planting a rice farm the size of 20,000 soccer pitches. But old grievances linger in this fertile corner of a land stalked by hunger."]
-					},
-					{
+						"src": "/images/myanmar/xref_ethiopia-mr_qoad6xx.jpg",
+						"caption": "埃塞俄比亚：百万富豪的农地"
+					},					
+					"summary": [
+						"Mohammed al-Amoudi has spent $200m planting a rice farm the size of 20,000 soccer pitches. But old grievances linger in this fertile corner of a land stalked by hunger."
+					]
+				},
+				{
+					"image": {
+						"ratio": "",
 						"link": "https://ig.ft.com/sites/land-rush-investment/indonesia",
-						"image": {
-							"ratio": "",
-							"src": "/images/myanmar/xref_indo-mr_8njq2rv.jpg",
-							"textOnImage": ""
+						"src": "/images/myanmar/xref_indo-mr_8njq2rv.jpg",
+						"caption": "印尼：拯救地球"
+					},
+					"summary": [
+						"Norway’s government has offered Indonesia a billion dollars to save its rainforests. Now its ministers are heading to the Borneo jungle to see if there is any chance of success."
+					]
+				}
+			] 
+		},
+		{
+			"title": null,
+			"columns": [
+				{
+					"title": "缅甸相关阅读",
+					"items": [
+						{
+							"href": "http://www.ftchinese.com/story/001065924#adchannelID=2000",
+							"text": "投资缅甸经济特区风险莫测"
 						},
-						"srTitle": "印尼：拯救地球",
-						"srSummary":["Norway’s government has offered Indonesia a billion dollars to save its rainforests. Now its ministers are heading to the Borneo jungle to see if there is any chance of success."]
-					}
-				]
-			},
-			{
-				"id": 2,
-				"sectionTitle": null,
-				"sectionCols": [
-					{
-						"srTitle": "缅甸相关阅读",
-						"srList": {
-							"listItem": [
-								{
-									"href": "http://www.ftchinese.com/story/001065924#adchannelID=2000",
-									"text": "投资缅甸经济特区风险莫测"
-								},
-								{
-									"href": "http://www.ftchinese.com/story/001066441#adchannelID=2000",
-									"text": "许知远：缅甸“帝国”的风格"
-								},
-								{
-									"href": "http://www.ftchinese.com/story/001062457#adchannelID=2000",
-									"text": "走向务实政治的昂山素季"
-								},
-								{
-									"href": "http://www.ftchinese.com/story/001061286",
-									"text": "中缅果敢困境是个治理问题"
-								}
-							]	
-						}
-					}
-				]
-			}
-		]
-	}
-
+						{
+							"href": "http://www.ftchinese.com/story/001066441#adchannelID=2000",
+							"text": "许知远：缅甸“帝国”的风格"
+						},
+						{
+							"href": "http://www.ftchinese.com/story/001062457#adchannelID=2000",
+							"text": "走向务实政治的昂山素季"
+						},
+						{
+							"href": "http://www.ftchinese.com/story/001061286",
+							"text": "中缅果敢困境是个治理问题"
+						}						
+					]
+				}
+			]
+		}
+	]
 }

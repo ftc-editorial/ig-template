@@ -1,0 +1,27 @@
+<div class="read-more__column" data-o-grid-colspan="12 M6 L4">
+  {% if column.image %}
+    {% set image = column.image %}
+    {% include "partials/ig-image.html" %}
+  {% endif %}
+  
+  {% if column.title %}
+  <h4 class="read-more__title">{{column.title}}</h4>
+  {% endif %}
+
+  {% if column.summary %}
+    <div class="read-more__summary">
+      {% for para in column.summary %}
+      <p>{{para}}</p>
+      {% endfor %}          
+    </div>
+  {% endif %}
+  
+  {% if column.items %}
+    <ul class="read-more__list">
+      {% for item in column.items %}
+        <li><a href="{{item.href}}">{{item.text}}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+</div>

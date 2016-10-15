@@ -1,14 +1,10 @@
 .ig-background {
   box-sizing: border-box;
+// Position to keep stacking order.  
+  position: relative;
   display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  display: block;
   overflow: hidden;
   @include oColorsFor(ig-media, background);
 
@@ -21,9 +17,18 @@
   }
 }
 
-.ig-background--picture[data-video-fallback] + .ig-background--video {
-  display: none;
-  @include oGridRespondTo(M) {
-    display: block;
-  }
+.ig-background--picture.video-fallback {
+// When video and picture are both present, picture is fallback to video.
+// Picture should hide behind the video and not take any space.
+  position: absolute;
+  top: 0;
+  left: 0;
+  & + .ig-background--video {
+    display: none;
+    @include oGridRespondTo(M) {
+      display: block;
+    }
+  }  
 }
+
+

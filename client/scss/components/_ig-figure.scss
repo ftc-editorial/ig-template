@@ -2,10 +2,6 @@
   margin: 0 auto;
   padding: 15px 0;
 
-  .section-col__secondary & {
-  	padding: $o-header-height + 15px 0;
-  }
-
 	&--mobile {
 		display: block;
 	}
@@ -16,9 +12,36 @@
 		}
 	}
 
+	&__title {
+		margin: 1em 0 0.5em 0;
+	}
+
+	&__media-wrapper {
+		@include lazyloadMedia('ig-figure__media');
+		&[data-media-ratio="1/2"] {
+			@include setLazyloadWrapperRatio(1/2);
+		}
+		&[data-media-ratio="9/16"] {
+			@include setLazyloadWrapperRatio(9/16);
+		}
+		&[data-media-ratio="16/15"] {
+			@include setLazyloadWrapperRatio(16/15);
+		}
+		&[data-media-ratio="7/5"] {
+			@include setLazyloadWrapperRatio(7/5);
+		}
+	}
+
+	&--video &__media {
+		@include oColorsFor(ig-video, background);
+	}
+
+	// &--image &__media {
+	// 	@include oColorsFor(ig-image, background);
+	// }
+
 	&__image-text {
 		box-sizing: border-box;
-
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -29,44 +52,12 @@
 		background-color: rgba(0, 96, 156, .85);
 	}
 
-	&__title {
-		margin: 1em 0 0.5em 0;
-	}
-
-	&__video {
-		@include oColorsFor(ig-video, background);
-	}
-
-	&__image {
-		@include oColorsFor(ig-image, background);
-	}
-	.section-col__secondary &__image {
-		background-color: transparent;
-	}
-
 	&__caption {
 	   @include oColorsFor(ig-caption, text);
 	   margin-top: 10px;
 	   font-size: 16px;
 	   line-height: 1.3;
 	   text-align: center;
-	}
-
-	.section-col__secondary &__caption {
-		text-align: left;
-	}
-
-	[data-ig-component="ig-sticky"] .section-col__primary &__caption {
-		color: #ccc;
-	}
-
-	img {
-		object-fit: cover;
-	}
-
-	video {
-		box-sizing: border-box;
-		object-fit: contain; 
 	}
 }
 

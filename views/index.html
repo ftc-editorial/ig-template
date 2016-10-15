@@ -6,14 +6,9 @@
 {% for section in sections %}
 <section class="section" id="section-{{loop.index}}">
   {% for segment in section.segments %}
-{#     <p>{{segment.type}}</p> #}
 
-    {% set picture = segment.media.picture %}
-    {% set video = segment.media.video %}
-
-    {% set head = segment.text.head %}
-    {% set byline = segment.text.byline%}
-    {% set credits = segment.text.credits%}
+    {% set media = segment.media %}
+    {% set text = segment.text %}
 
     {% set colPrimary = segment.colPrimary %}
     {% set colSecondary = segment.colSecondary %}
@@ -22,11 +17,11 @@
   {% endfor %}
 
   {% if ad %}
-  <div class="ig-ad">
-    <div class="ig-ad__container o-grid-container">
-      <p class="ig-ad__title">广告之后 精彩继续</p>
-      <div class="ig-ad__content">
-        <iframe id="ig-ad__section-{{loop.index}}" src="{{ad}}"></iframe>
+  <div class="section-ad">
+    <div class="section-ad__container o-grid-container">
+      <p class="section-ad__title">广告之后 精彩继续</p>
+      <div class="section-ad__content">
+        <iframe id="section-{{loop.index}}-ad" src="{{ad}}"></iframe>
       </div>
     </div>
   </div>
@@ -34,30 +29,21 @@
 </section>
 {% endfor %}
 
+{% for group in suggestedReads %}
+<div class="suggested-reads o-grid-container">
 
-{# {% if articleFooter %}
-  <div class="article-footer">
-    <div data-o-grid-container>
-      {% for section in articleFooter.sections%}
-      <div class="article-footer__section" id="article-footer__section-{{section.id}}">
-        
-        {% if section.sectionTitle %}
-        <h2 class="article-footer__section-title">{{section.sectionTitle}}</h2>
-        {% endif %}
+  {% if group.title %}
+  <h2 class="suggested-reads__title">{{group.title}}</h2>
+  {% endif %}  
 
-        <div class="article-footer__row" data-o-grid-row>
-          {% for col in sectionCols %}
-          <div class="article-footer__col" data-o-grid-col>
-            {% include "partials/suggested-reads.html" %}
-          </div>
-          {% endfor%}
-        </div>
-
-      </div>
-      {% endfor %}
-    </div>
-  </div><!-- .article-footer -->
-{% endif %} #}
+  <div class="o-grid-row">
+    {% for column in group.columns %}
+      {% include "partials/read-more.html" %}
+    {% endfor %}
+  </div>
+  
+</div>
+{% endfor %}
 
 </article>
 {% endblock %}

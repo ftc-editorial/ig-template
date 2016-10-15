@@ -4,15 +4,15 @@
   <h4 class="ig-figure__title">{{video.title}}</h4>
   {% endif %}
 
-  <div class="ig-figure__video lazyload__outer">
+  <div class="ig-figure__media-wrapper">
     {% if video.provider == "cc" %}
-    <div class="lazyload__inner">
+    <div class="ig-figure__media">
       <script src="{{video.src}}" type="text/javascript"></script>
     </div>
     {% endif %}
 
     {% if video.provider == "ft" %}
-    <video class="lazyload__inner" preload="metadata" controls poster="{{video.poster}}">
+    <video class="ig-figure__media" preload="metadata" controls poster="{{video.poster}}">
       {% for type, src in video.source %}
       <source src="{{src}}" type="{{type}}">
       {% endfor %}

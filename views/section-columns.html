@@ -29,47 +29,50 @@
             </figure>
           {% endif %}
         
-
           {% if content.readMore %}
-            {% set readMore = content.readMore %}
-            <div class="ig-more">
-              {% set image = readMore.image %}
-              {% include "partials/ig-image.html" %}
-              
-              <h4 class="ig-more__title">{{readMore.title}}</h4>
-
-              <ul class="ig-more__list">
-              {% for item in readMore.listItems%}
-                <li class="ig-more__list-item">
-                  <a href="{{item.href}}">{{item.text}}</a>
-                </li>
-              {% endfor %}
-              </ul> 
-            </div>
+            {% set column = content.readMore %}
+            {% include "partials/read-more.html" %}
           {% endif %}
+
         {% endfor %}					
 				</div>
 			</div>
 			
 			{% if colSecondary %}
 			<div class="section-col__secondary" data-o-grid-colspan="12 M6">
-				<div class="section-col__secondary-inner"
         {% if colSecondary.slides %}
         {% set slides = colSecondary.slides %}
+				<div class="section-col__secondary-inner o-sticky"
         data-o-component="o-scrollmation"
-        data-o-sticky-target=".ig-sticky-target"
-        data-o-scrollmation-image=".ig-figure__image"
+        data-o-sticky-target=".o-sticky__target"
+        data-o-scrollmation-image="img"
         data-o-scrollmation-caption=".ig-figure__caption"
         data-o-scrollmation-assets="{% raw %}{{% endraw %}
         {% for slide in slides %}
         '{{slide.src}}':'{{slide.text}}'
         {% if not loop.last %}, {% endif %}
         {% endfor %}
-        {% raw %}}{% endraw %}"
-        {% endif %}>
-          {% set image = colSecondary.image %}
-          {% include "partials/ig-image.html" %}
+        {% raw %}}{% endraw %}">
+          <div class="o-sticky__target">
+            <figure class="ig-figure">
+              <img class="ig-figure__image">
+              <figcaption class="ig-figure__caption"></figcaption>
+            </figure>
+          </div>
         </div>
+        {% endif %}
+
+        {% if colSecondary.image %}
+        {% set image = colSecondary.image %}
+        <div class="section-col__secondary-inner{% if image.sticky %} o-sticky{% endif %}"{% if image.sticky %} data-o-component="o-sticky" data-o-sticky-target=".o-sticky__target"{% endif %}>
+          {% if image.sticky %}<div class="o-sticky__target">{% endif %}
+          
+            {% include "partials/ig-image.html" %}
+
+          {% if image.sticky %}</div>{% endif %}
+        </div>
+        {% endif %}
+
 			</div>
 			{% endif %}
 		</div>

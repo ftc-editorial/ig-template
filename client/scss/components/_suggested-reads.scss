@@ -1,42 +1,30 @@
 .suggested-reads {
-	box-sizing: border-box;
-	width: 100%;
-	height: 100%;
-	// border-bottom: 1px dotted oColorsGetPaletteColor('grey-tint3');
-	padding: 15px 0;
+	padding-top: 2em;
 
-	a:hover {
-		border-bottom: 1px solid;
-	}
-	
-	.ig-figure a {
-		border-bottom: 0;
+	&__title {
+		margin: 0;
+		padding: 0;
+		@include oGridRespondTo(M) {
+		    font-size: 36px;
+		}		
 	}
 
+	.read-more__column {
+		@include oGridColspan((default: 12, M: 6, L: 4));		
+	}
+	.ig-figure {
+		padding-bottom: 5px;
+	}
 	.ig-figure__image {
 		object-fit: contain;
 	}
 
 	.ig-figure__caption {
-		color: #000;
 		text-align: left;
-	}
-
-	&__title {
-		line-height: 1.2;
-		margin: 0;
-
-		@include oGridRespondTo(L) {
-			margin: 0;
+		font-size: 1.17em;
+		font-weight: bold;
+		a:hover {
+			border-bottom: 1px solid;
 		}
-	}
-
-	&__summary {
-		margin: 5px 0 10px 0;
-	}
-
-	&__list-item {
-		margin: 1em 0;
-		font-size: 18px;
 	}	
 }

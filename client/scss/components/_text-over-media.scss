@@ -1,8 +1,9 @@
 .text-over-media {
 	box-sizing: border-box;
 	position: relative;
+  height: 100vh;
 
-	&__background {
+	&__media {
 		box-sizing: border-box;
 		position: absolute;
 		top: 0;
@@ -13,7 +14,7 @@
 		height: 100%;
 		@include oColorsFor(ig-media, background);
 
-    &--fixed {
+    &.background-fixed {
       clip: rect(0, auto, auto, 0);
 
       .ig-background {

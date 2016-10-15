@@ -1,10 +1,25 @@
-.ig-sticky-target {
-  position: relative;
+.section-sticky {
+  @include oGridRespondTo($until: M) {
+    .o-sticky__target {
+      position: relative;
+      height: 66vh;
+        &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 30%;
+        background-image: linear-gradient(to bottom, transparent, #000);      
+      }
+    }
+  }
 
-  height: 100vh;
-}
+  .ig-figure__caption {
+    color: #ccc;
+  }
 
-.section-sticky {  
   .section-columns {
     background-color: #000;
     padding-bottom: 40px;
@@ -21,31 +36,6 @@
 
     p {
       @include oColorsFor(ig-text-over-media, text);
-    }
-  }
-
-  @include oGridRespondTo($until: M) {
-    &__background {
-      position: relative;
-      height: 66vh;
-    }
-
-    &__background:after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1px;
-      height: 30%;
-      background-image: linear-gradient(to bottom, transparent, #000);      
-    }
-  }
-
-  @include oGridRespondTo(M) {
-    &__background {
-      position: absolute;
-      height: 100vh;         
     }
   }
 }

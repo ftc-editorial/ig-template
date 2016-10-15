@@ -22,6 +22,32 @@ body {
   @include oGridColspan((default: 12, M: 6));
 }
 
+.section-col__secondary {
+  @include oGridRespondTo($until: M) {
+    display: none;
+  }
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.o-sticky {
+  position: relative;
+  min-height: 100vh;
+  @include oGridRespondTo(M) {
+    &__target {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      @include oStickyBase;
+    }
+  }
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -42,4 +68,14 @@ a {
 p {
   font-size: 18px;
   line-height: 1.7;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+video {
+  box-sizing: border-box;
+  object-fit: contain; 
 }

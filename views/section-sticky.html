@@ -1,7 +1,10 @@
-<div class="section-sticky" data-o-component="o-sticky" data-o-sticky-target=".section-sticky__background">
-	<div class="section-sticky__background">
+<div class="section-sticky o-sticky" data-o-component="o-sticky" data-o-sticky-target=".o-sticky__target">
+	{% if media %}
+	{% set picture = media.picture %}
+	<div class="o-sticky__target">
 		{% include "partials/ig-background.html" %}
 	</div>
-
+	{% endif %}
+	
 	{% include "section-columns.html" %}
 </div>

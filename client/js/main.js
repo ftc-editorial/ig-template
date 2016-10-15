@@ -13,8 +13,9 @@ Toggle.init();
 
 // Only enable sticky and scrollmation effects when HTML tag has `enabel-scrollmation` class.
 if (document.documentElement.classList.contains('enable-scrollmation')) {
-	Sticky.init();
-	Scrollmation.init();
+	const stickies = Sticky.init();
+
+	const scroll = Scrollmation.init();
 }
 
 PageLogger.init('.section', {
