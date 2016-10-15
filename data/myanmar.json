@@ -81,7 +81,6 @@
 				{
 					"_note": "cover of 1st section.",
 					"type": "text-over-media",
-					"viewportHeight": true,
 					"sticky": false,
 					"media": {
 						"video": {
@@ -121,8 +120,6 @@
 				{
 					"_note": "Segment 2 for section 1.",
 					"type": "section-columns",
-					"viewportHeight": false,
-					"sticky": false,
 					"colPrimary": [
 						{
 							"text": [

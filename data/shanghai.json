@@ -1,13 +1,17 @@
 {	
-	"lightTheme": false,
-	"darkTheme": true,
+	"header": {
+		"theme": "theme-dark"
+	},
+	"share": {
+		"theme": "theme-dark"
+	},
 	"highcharts": false,
 	"d3": false,
 	"customCss": false,
 	"customJs": false,
 	"enableScroll": true,
 	"autoNav": true,
-	"iconsPath": "/bower_components/ftc-icons/",
+	"iconsPath": "/bower_components/ftc-logos/static",
 	"description": "Show in meta tag",
 	"ogTitle": "",
 	"ogType": "article",
@@ -15,34 +19,24 @@
 	"ogUrl": "",
 	"pageTitle": "在沪外侨眼中的上海",
 	"wechatImage": "/images/shanghai/blinky-4-hr_kgpjdpm.png",	
-	"englishEdition": {
+	"edition": {
 		"text": "English",
 		"href": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/"
 	},
 	"seriesTitle": "特别报道 | 老外看中国",
 	"sections": [
 		{
-			"sectionId": 1,
 			"navText": "1",
-			"sectionBlocks": [
+			"segments": [
 				{
-					"blockId": 1,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
-						"fixed": false,
-						"ft": {
+					"type": "text-over-media",
+					"media": {
+						"video": {
 							"poster": "/images/shanghai/blinky-4-hr_kgpjdpm.png",
-							"source": [
-								{
-									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.mp4",
-									"type": "mp4"
-								}, 
-								{
-									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.webmhd.webm",
-									"type": "webm"
-								}
-							]
+							"source": {
+								"mp4": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.mp4",
+								"webm": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_4-revised.webmhd.webm"
+							}
 						},
 						"picture": {
 							"source": [
@@ -59,28 +53,23 @@
 							"src": "/images/shanghai/blinky-4-mr_ua2r4wd.png"	
 						} 
 					},
-					"textOverMedia": {
+					"text": {
 						"head": {
-							"headFor": "article",
-							"lead": null,
+							"verticalCenter": true,
 							"title": "在沪外侨眼中的上海",
 							"subtitle": "",
-							"intro": "在高薪工作机会的吸引下，世界各地的人士纷纷涌入中国的商业之都。不过，是什么因素让他们留了下来？上海的外侨在这里讲述了他们的家庭生活、上海的街头小吃以及“逃离”这座城市的故事。",
-							"byline": {
-								"publishTime": "",
-								"author": "本文作者：帕提•沃德米尔(Patti Waldmeir)。补充报道：张嫣。"
-							}
+							"intro": "在高薪工作机会的吸引下，世界各地的人士纷纷涌入中国的商业之都。不过，是什么因素让他们留了下来？上海的外侨在这里讲述了他们的家庭生活、上海的街头小吃以及“逃离”这座城市的故事。"
+						},
+						"byline": {
+							"publishTime": "",
+							"author": "本文作者：帕提•沃德米尔(Patti Waldmeir)。补充报道：张嫣。"
 						}
-					},
-					"cols": null
+					}
 				},
 				{
-					"blockId": 2,
-					"viewportHeight": false,
-					"sticky": true,
-					"background": {
-						"fixed": false,
-						"ft": null,
+					"type": "section-sticky",
+					"media": {
+						"video": null,
 						"picture": {
 							"source": [
 								{
@@ -96,148 +85,131 @@
 							"src": "/images/shanghai/xu6118472taichi_practitioners-hr_8hdvvwm.jpeg"	
 						}
 					},
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"从马可•波罗(Marco Polo)和忽必烈(Kublai Khan)的时代开始，中国就一直对外国人有着一种吸引力——要说眼下哪座中国城市对外国人吸引力最大，恐怕非中国风最淡的上海莫属。",
-									"上海既有异国风情又不让人感到特别陌生，既现代又不失古韵。它吸引着世界各地想从中国经济繁荣中分一杯羹的人，而且不会让他们感到难以适应。"
-								]
-							}
-						],
-						"colSecondary": {
-							"sticky": false,
-							"image": null
+					"colPrimary": [
+						{
+							"text": [
+								"从马可•波罗(Marco Polo)和忽必烈(Kublai Khan)的时代开始，中国就一直对外国人有着一种吸引力——要说眼下哪座中国城市对外国人吸引力最大，恐怕非中国风最淡的上海莫属。",
+								"上海既有异国风情又不让人感到特别陌生，既现代又不失古韵。它吸引着世界各地想从中国经济繁荣中分一杯羹的人，而且不会让他们感到难以适应。"
+							]
 						}
+					],
+					"colSecondary": {
+						"sticky": false,
+						"image": null
 					}
 				},
 				{
-					"blockId": 3,
-					"viewportHeight": false,
-					"sticky": false,
-					"background": null,
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"用了几乎不到一代人的时间，上海就把自身从一座街道狭窄、建筑破旧、商业被数十年的共产主义体制拖垮的城市，改造为一座人口2300万、遍地摩天大厦和豪华商场的未来派大都市，成为无可争议的中国金融之都。在此期间，那些曾在上世纪把上海打造为“亚洲巴黎”的欧美人也回来了（与他们一同到来的还有成千上万日本人、韩国人、台湾人和新加坡人），试图帮助这座城市实现它在21世纪的梦想，即变身为“亚洲的纽约”。",
-									"他们来到上海，主要是为了赚钱：他们考虑的或是跨国企业在上海亚洲总部的外派历练机会；或是在他们经济陷于困境的母国找不到的工作岗位；或是追随自己当高管的丈夫或妻子；或是来教书或学习。政府数据显示，过去10年里，上海外侨人数增长了70%，从2005年的10万人增至去年的近17万人。",
-									"但外侨服务提供商表示，随着中国经济逐步放缓，外侨的构成正在变化，怀揣公司优厚薪酬福利来沪的外国人有所减少（因为企业为了降低成本更多地起用当地人担任高管），自掏腰包来沪的外国人有所增多。总体来看，去年上海外侨人数减少了3%，但迁居服务公司给出的数字和国际学校的入学人数表明，怀揣公司全套薪酬福利来沪的外籍高管，人数减少幅度要大得多。"
-								]
-							},
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
-									"caption": null
-								}
-							},						
-							{
-								"quote": {
-									"text": "‘他们来到上海，主要是为了赚钱：他们考虑的或是跨国企业在上海亚洲总部的外派历练机会；或是在他们经济陷于困境的母国找不到的工作岗位；或是追随自己当高管的丈夫或妻子；或是来教书或学习’",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"但国际猎头公司瀚纳仕(Hays)的中国区董事总经理西蒙•兰斯(Simon Lance)表示，上海的工作岗位可不缺少申请者。下面这一点恐怕是原因之一：汇丰(HSBC)去年的数据显示，在华生活的国际企业外派人员当中，有将近四分之一的人年收入高于30万美元，这一比例在汇丰调查的所有国家中高居榜首。", 
-									"但总体上看，上海在宜居方面的声望可远称不上名列前茅。就业咨询公司美世(Mercer) 2015年的一项排行榜显示，上海甚至没能在世界最宜居城市排行榜上进入前100名。维也纳在这项排行榜上排在首位，巴格达排在末尾；而上海仅排在第101位。"]
-							}, 
-							{
-								"image": {
-									"mobileOnly": false,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/37cc51e2-f3d4-11e4-99de-00144feab7de.jpeg",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"此外，美世的数据显示，生活成本也在上升：上海去年跻身世界生活成本最高城市排行榜的前10名。", 
-									"许多外侨抱怨称，他们生活质量的其他方面也变差了：交通、污染、食品安全和上网速度问题越来越严重。另外，对许多外侨来说，新年前夜上海外滩发生的、导致36人死亡的踩踏事件，让他们清醒地认识到了上海的拥挤与混乱、以及不讲公共文明——即便以全球特大城市标准衡量，上海的不讲公共文明现象也是极其严重的。"
-								]
-							},
-							{
-								"quote": {
-									"text": "‘生活成本也在上升：上海去年跻身世界生活成本最高城市排行榜的前10名’",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"所以说，找到上海令人倒胃口的一面并不难：有些外侨讨厌这座城市，也有些外侨只是在努力忍受它。但是，那些研究过外侨文化的人士表示，许多外侨热爱上海方方面面的十足活力——从工作到家庭生活，从文化到娱乐、旅游。在上海生活，一刻都不会觉得沉闷：一眨眼的工夫，这座城市就有翻天覆地的变化。"
-								]
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"用了几乎不到一代人的时间，上海就把自身从一座街道狭窄、建筑破旧、商业被数十年的共产主义体制拖垮的城市，改造为一座人口2300万、遍地摩天大厦和豪华商场的未来派大都市，成为无可争议的中国金融之都。在此期间，那些曾在上世纪把上海打造为“亚洲巴黎”的欧美人也回来了（与他们一同到来的还有成千上万日本人、韩国人、台湾人和新加坡人），试图帮助这座城市实现它在21世纪的梦想，即变身为“亚洲的纽约”。",
+								"他们来到上海，主要是为了赚钱：他们考虑的或是跨国企业在上海亚洲总部的外派历练机会；或是在他们经济陷于困境的母国找不到的工作岗位；或是追随自己当高管的丈夫或妻子；或是来教书或学习。政府数据显示，过去10年里，上海外侨人数增长了70%，从2005年的10万人增至去年的近17万人。",
+								"但外侨服务提供商表示，随着中国经济逐步放缓，外侨的构成正在变化，怀揣公司优厚薪酬福利来沪的外国人有所减少（因为企业为了降低成本更多地起用当地人担任高管），自掏腰包来沪的外国人有所增多。总体来看，去年上海外侨人数减少了3%，但迁居服务公司给出的数字和国际学校的入学人数表明，怀揣公司全套薪酬福利来沪的外籍高管，人数减少幅度要大得多。"
+							]
+						},
+						{
+							"image": {
+								"mobileOnly": true,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
+								"caption": null
 							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100vh",
-							"slide": {
-								"slideSets": [
-									{
-										"src": "/images/shanghai/shanghai-shorthand-chartpart1-lr_f76r7qt.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/shanghai-shorthand-chartpart2-lr_7fvuhlg.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/shanghai-shorthand-chartpart3-lr_a9jjvca.jpg",
-										"caption": ""
-									},
-									{
-										"src":"/images/shanghai/shanghai-shorthand-chartpart4-lr_yfp4x2x.jpg",
-										"caption": ""
-									},
-									{
-										"src":"/images/shanghai/shanghai-shorthand-chartpart5-lr_cvuuubc.jpg",
-										"caption": ""
-									},
-									{
-										"src":"/images/shanghai/shanghai-shorthand-chartpart6-lr_skwchzf.jpg",
-										"caption": ""
-									},
-									{
-										"src":"/images/shanghai/shanghai-shorthand-chartpart7-lr_dll7ctc.jpg",
-										"caption": ""
-									},
-									{
-										"src":"/images/shanghai/shanghai-shorthand-chartpart8-lr_muc0xyk.jpg",
-										"caption": ""
-									},
-									{
-										"src":"/images/shanghai/shanghai-shorthand-chartpart9-lr_genn1ld.jpg"},
-									{
-										"src":"/images/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
-										"caption": ""
-									}
-								]
+						},						
+						{
+							"quote": {
+								"text": "‘他们来到上海，主要是为了赚钱：他们考虑的或是跨国企业在上海亚洲总部的外派历练机会；或是在他们经济陷于困境的母国找不到的工作岗位；或是追随自己当高管的丈夫或妻子；或是来教书或学习’",
+								"caption": null
 							}
+						},
+						{
+							"text": [
+								"但国际猎头公司瀚纳仕(Hays)的中国区董事总经理西蒙•兰斯(Simon Lance)表示，上海的工作岗位可不缺少申请者。下面这一点恐怕是原因之一：汇丰(HSBC)去年的数据显示，在华生活的国际企业外派人员当中，有将近四分之一的人年收入高于30万美元，这一比例在汇丰调查的所有国家中高居榜首。", 
+								"但总体上看，上海在宜居方面的声望可远称不上名列前茅。就业咨询公司美世(Mercer) 2015年的一项排行榜显示，上海甚至没能在世界最宜居城市排行榜上进入前100名。维也纳在这项排行榜上排在首位，巴格达排在末尾；而上海仅排在第101位。"]
+						}, 
+						{
+							"image": {
+								"mobileOnly": false,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/37cc51e2-f3d4-11e4-99de-00144feab7de.jpeg",
+								"caption": null
+							}
+						},
+						{
+							"text": [
+								"此外，美世的数据显示，生活成本也在上升：上海去年跻身世界生活成本最高城市排行榜的前10名。", 
+								"许多外侨抱怨称，他们生活质量的其他方面也变差了：交通、污染、食品安全和上网速度问题越来越严重。另外，对许多外侨来说，新年前夜上海外滩发生的、导致36人死亡的踩踏事件，让他们清醒地认识到了上海的拥挤与混乱、以及不讲公共文明——即便以全球特大城市标准衡量，上海的不讲公共文明现象也是极其严重的。"
+							]
+						},
+						{
+							"quote": {
+								"text": "‘生活成本也在上升：上海去年跻身世界生活成本最高城市排行榜的前10名’",
+								"caption": null
+							}
+						},
+						{
+							"text": [
+								"所以说，找到上海令人倒胃口的一面并不难：有些外侨讨厌这座城市，也有些外侨只是在努力忍受它。但是，那些研究过外侨文化的人士表示，许多外侨热爱上海方方面面的十足活力——从工作到家庭生活，从文化到娱乐、旅游。在上海生活，一刻都不会觉得沉闷：一眨眼的工夫，这座城市就有翻天覆地的变化。"
+							]
 						}
+					],
+					"colSecondary": {
+						"slides": [
+							{
+								"src": "/images/shanghai/shanghai-shorthand-chartpart1-lr_f76r7qt.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/shanghai-shorthand-chartpart2-lr_7fvuhlg.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/shanghai-shorthand-chartpart3-lr_a9jjvca.jpg",
+								"caption": ""
+							},
+							{
+								"src":"/images/shanghai/shanghai-shorthand-chartpart4-lr_yfp4x2x.jpg",
+								"caption": ""
+							},
+							{
+								"src":"/images/shanghai/shanghai-shorthand-chartpart5-lr_cvuuubc.jpg",
+								"caption": ""
+							},
+							{
+								"src":"/images/shanghai/shanghai-shorthand-chartpart6-lr_skwchzf.jpg",
+								"caption": ""
+							},
+							{
+								"src":"/images/shanghai/shanghai-shorthand-chartpart7-lr_dll7ctc.jpg",
+								"caption": ""
+							},
+							{
+								"src":"/images/shanghai/shanghai-shorthand-chartpart8-lr_muc0xyk.jpg",
+								"caption": ""
+							},
+							{
+								"src":"/images/shanghai/shanghai-shorthand-chartpart9-lr_genn1ld.jpg"},
+							{
+								"src":"/images/shanghai/shanghai-shorthand-chartpart10_1-lr_shgjkne.jpg",
+								"caption": ""
+							}
+						]
 					}
 				}
 			],
-			"adBanner": ""
+			"ad": ""
 		},
 		{
-			"sectionId": 2,
 			"navText": "2",
-			"sectionBlocks": [
+			"segments": [
 				{
-					"blockId": 1,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
-						"fixed": true,
-						"ft": null,
+					"type": "text-over-media",
+					"media": {
+						"video": null,
 						"picture": {
 							"source": [
 								{
@@ -253,7 +225,7 @@
 							"src": "/images/shanghai/an26a8-mr.jpg"
 						}	
 					},
-					"textOverMedia": {
+					"text": {
 						"head": {
 							"headFor": "section",
 							"lead": null,
@@ -262,19 +234,14 @@
 							"subtitle": null,
 							"intro": null,
 							"byline": null
-						},
-						"text": null,
-						"credits": null
-					},
-					"cols": null
+						}
+					}
 				},
 				{
-					"blockId": 2,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
+					"type": "text-over-media",
+					"media": {
 						"fixed": true,
-						"ft": null,
+						"video": null,
 						"picture": {
 							"source": [
 								{
@@ -288,188 +255,151 @@
 							"src": "/images/shanghai/xu6244782general_economy_image-mr.jpeg"
 						}
 					},
-					"textOverMedia": {
+					"text": {
 						"leadin": {
 							"position": "left bottom",
 							"text": "‘对西方人来说，在华工作需要具备一套特别的技能——有时甚至对其他东亚国家的人来说也是如此’"
 						}
-					},
-					"cols": null
-				},
-				{
-					"blockId": 3,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": null,
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"“为了最有效地跟中国打交道，外国人应当适应一个现实，即中国有一套中国特有的规则，”祈立天(Tim Clissold)在他的新书",
-									"管理学与招聘专家一致认为，对西方人来说，在华工作需要具备一套特别的技能——有时甚至对其他东亚国家的人来说也是如此。“在中国作一名优秀管理者所需具备的软技能，跟在美国或英国不一样，”瀚纳仕的兰斯表示。“处理好各种关系……需要巧妙得多的手腕，这里的情况要复杂得多，”他说，“许多来华的外派人员行事风格非常直接，引起了不小的麻烦。”"
-								]
-							}, 
-							{
-								"quote": {
-									"text": "‘选择标准不应基于表现，而应基于个性。在中国，谦逊才能成事，粗鲁只会碰壁’",
-									"caption": "中欧国际工商学院(CEIBS)副教授金台烈(TAE-YEOL KIM)"
-								}
-							},
-							{
-								"text": [
-									"上海中欧国际工商学院组织行为学及人力资源管理学副教授金台烈表示，企业在为中国的岗位挑选外派员工时，应当把这一点考虑在内。",
-									"“选择标准不应基于表现，而应基于个性，”他说，“在中国，谦逊才能成事，粗鲁只会碰壁。”"
-								]
-							},
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/xu6226308an_investor_looks_at-lr_sn7viu7.jpeg",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"从韩国来华工作生活的金台烈表示，东亚人或许会发现，他们管理中国员工比西方人管理中国员工要容易一些，因为他们和中国人都有一个东方人的习惯——会结合大的背景看待职场中的问题，而不是只去责备员工个人。他说：“但是，如果韩国人认为自己了解中国、认为中国人跟韩国人差不多，那么他们可能会比西方人还糟糕。”",
-									"金台烈指出，有些外籍管理者不尊重下属。他说：“对一名外派人员——无论其来自韩国还是来自欧洲——来说，最重要的是要尊重中国员工。”管理者应当“用心去理解中国人，如果试图用脑去理解，他们可能会碰壁。中国人是在帮他们赚钱，所以他们需要记住这一点。”"
-								]
-							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100vh",
-							"slide": {
-								"slideSets": [
-									{
-										"src": "/images/shanghai/xu5869863a_man_walks_past_a_br-lr_efmm7z3.jpeg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/xu6217447inside_the_auto_shang-lr_yack78h.jpeg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/xu6226308an_investor_looks_at-lr_sn7viu7.jpeg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/xu6244781general_economy_image-lr_pp440rd.jpeg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/waiting_metro_a7dkx4-lr_c6wu5gx.jpg",
-										"caption": ""
-									}
-								]
-							}
-						}	
 					}
 				},
 				{
-					"blockId": 4,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
-						"ft": {
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"“为了最有效地跟中国打交道，外国人应当适应一个现实，即中国有一套中国特有的规则，”祈立天(Tim Clissold)在他的新书",
+								"管理学与招聘专家一致认为，对西方人来说，在华工作需要具备一套特别的技能——有时甚至对其他东亚国家的人来说也是如此。“在中国作一名优秀管理者所需具备的软技能，跟在美国或英国不一样，”瀚纳仕的兰斯表示。“处理好各种关系……需要巧妙得多的手腕，这里的情况要复杂得多，”他说，“许多来华的外派人员行事风格非常直接，引起了不小的麻烦。”"
+							]
+						}, 
+						{
+							"quote": {
+								"text": "‘选择标准不应基于表现，而应基于个性。在中国，谦逊才能成事，粗鲁只会碰壁’",
+								"caption": "中欧国际工商学院(CEIBS)副教授金台烈(TAE-YEOL KIM)"
+							}
+						},
+						{
+							"text": [
+								"上海中欧国际工商学院组织行为学及人力资源管理学副教授金台烈表示，企业在为中国的岗位挑选外派员工时，应当把这一点考虑在内。",
+								"“选择标准不应基于表现，而应基于个性，”他说，“在中国，谦逊才能成事，粗鲁只会碰壁。”"
+							]
+						},
+						{
+							"image": {
+								"mobileOnly": true,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/xu6226308an_investor_looks_at-lr_sn7viu7.jpeg",
+								"caption": null
+							}
+						},
+						{
+							"text": [
+								"从韩国来华工作生活的金台烈表示，东亚人或许会发现，他们管理中国员工比西方人管理中国员工要容易一些，因为他们和中国人都有一个东方人的习惯——会结合大的背景看待职场中的问题，而不是只去责备员工个人。他说：“但是，如果韩国人认为自己了解中国、认为中国人跟韩国人差不多，那么他们可能会比西方人还糟糕。”",
+								"金台烈指出，有些外籍管理者不尊重下属。他说：“对一名外派人员——无论其来自韩国还是来自欧洲——来说，最重要的是要尊重中国员工。”管理者应当“用心去理解中国人，如果试图用脑去理解，他们可能会碰壁。中国人是在帮他们赚钱，所以他们需要记住这一点。”"
+							]
+						}
+					],
+					"colSecondary": {
+						"slides": [
+							{
+								"src": "/images/shanghai/xu5869863a_man_walks_past_a_br-lr_efmm7z3.jpeg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/xu6217447inside_the_auto_shang-lr_yack78h.jpeg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/xu6226308an_investor_looks_at-lr_sn7viu7.jpeg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/xu6244781general_economy_image-lr_pp440rd.jpeg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/waiting_metro_a7dkx4-lr_c6wu5gx.jpg",
+								"caption": ""
+							}
+						]
+					}	
+				},
+				{
+					"type": "section-media",
+					"media": {
+						"video": {
+							"provider": "ft",
 							"poster": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/pierre_cohade-mr.png",
 							"source": [
 								{
 									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/pierre_cohade_1280x720.mp4",
-									"type": "mp4"
-								}, {
-									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/pierre_cohade_1280x720.webmhd.webm",
-									"type": "webm"
+									"webm": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/pierre_cohade_1280x720.webmhd.webm"
 								}
 							]
 						}
-					},
-					"textOverMedia": null,
-					"cols": null
+					}
 				},
 				{
-					"blockId": 5,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": null,
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"quote": {
+								"text": "‘吸引我的是早8点前的中国。然后就是晚上，我会再次见到那个有着丰富文化的中国；这两个时刻之间的中国，我不喜欢。’",
+								"caption": "中国欧盟商会(EU CHAMBER OF COMMERCE IN CHINA)主席伍德克(JOERG WUTTKE)"
+							}
+						},
+						{
+							"text": [
+								"表面上看，上海像是一座现代、甚至是西方风格的城市。但踏进上海的办公室后，来自西方的外派人员马上会意识到，这里跟自己的母国有多么大的差别。管理学专家表示，随着越来越多的外派人员加入当地企业，从中国的角度理解中国对外籍商业人士来说将变得日益重要。前固特异(Goodyear)亚太区总裁皮埃尔•柯华德(Pierre Cohade)表示，随着当地经济放缓以及当地对手变得更具竞争力，外籍商业人士必须更加努力才能赚到钱。“西方企业能够迅速建立优势地位的黄金时代已经结束了。”"
+							]
+						}, 
+						{
+							"image": {
+								"mobileOnly": true,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/_ab_1148-lr_bt2azna.jpg",
+								"caption": null
+							}
+						},
+						{
+							"text": [
+								"但管理学专家表示，最成功的商业人士记得工作不是生活的全部——即便在中国也是如此。“吸引我的是早8点前的中国，”中国欧盟商会主席伍德克说，“然后就是晚上，我会再次见到那个有着丰富文化的中国；这两个时刻之间的中国，我不喜欢。我讨厌早8点到晚6点之间的那套东西，喜欢晚6点到早8点的中国。”"
+							]
+						}
+					],
+					"colSecondary": {
+						"sticky": true,
+						"height": "100%",
+						"slides": [
 							{
-								"quote": {
-									"text": "‘吸引我的是早8点前的中国。然后就是晚上，我会再次见到那个有着丰富文化的中国；这两个时刻之间的中国，我不喜欢。’",
-									"caption": "中国欧盟商会(EU CHAMBER OF COMMERCE IN CHINA)主席伍德克(JOERG WUTTKE)"
-								}
+								"src": "/images/shanghai/_ab_1148-lr_bt2azna.jpg",
+								"caption": "上海数百处新建筑工地之一"
 							},
 							{
-								"text": [
-									"表面上看，上海像是一座现代、甚至是西方风格的城市。但踏进上海的办公室后，来自西方的外派人员马上会意识到，这里跟自己的母国有多么大的差别。管理学专家表示，随着越来越多的外派人员加入当地企业，从中国的角度理解中国对外籍商业人士来说将变得日益重要。前固特异(Goodyear)亚太区总裁皮埃尔•柯华德(Pierre Cohade)表示，随着当地经济放缓以及当地对手变得更具竞争力，外籍商业人士必须更加努力才能赚到钱。“西方企业能够迅速建立优势地位的黄金时代已经结束了。”"
-								]
-							}, 
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/_ab_1148-lr_bt2azna.jpg",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"但管理学专家表示，最成功的商业人士记得工作不是生活的全部——即便在中国也是如此。“吸引我的是早8点前的中国，”中国欧盟商会主席伍德克说，“然后就是晚上，我会再次见到那个有着丰富文化的中国；这两个时刻之间的中国，我不喜欢。我讨厌早8点到晚6点之间的那套东西，喜欢晚6点到早8点的中国。”"
-								]
+								"src": "/images/shanghai/_ab_1321-lr_ism0ozp.jpg",
+								"caption": "远观中国第一高楼——上海中心大厦(Shanghai Tower)"
 							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100%",
-							"slide": {
-								"slideSets": [
-									{
-										"src": "/images/shanghai/_ab_1148-lr_bt2azna.jpg",
-										"caption": "上海数百处新建筑工地之一"
-									},
-									{
-										"src": "/images/shanghai/_ab_1321-lr_ism0ozp.jpg",
-										"caption": "远观中国第一高楼——上海中心大厦(Shanghai Tower)"
-									}
-								]
-							}
-						}	
-					}
+						]
+					}	
 				}
 			],
-			"adBanner": ""
+			"ad": ""
 		},
 		{
-			"sectionId": 3,
 			"navText": "3",
-			"sectionBlocks": [
+			"segments": [
 				{
-					"blockId": 1,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
-						"fixed": false,
-						"ft": {
-							"setting": "loop muted autoplay",
+					"type": "text-over-media",
+					"media": {
+						"video": {
 							"poster": "/images/shanghai/blinky-5-mr_fdexydk.png",
-							"source": [
-								{
-									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.mp4",
-									"type": "mp4"
-								}, 
-								{
-									"src": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.webmhd.webm",
-									"type": "webm"
-								}
-							]
+							"source": {
+								"mp4": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.mp4",
+								"webm": "http://www.ft.com/ig/sites/2015/special-reports/shanghai/media/blinky_5-revised.webmhd.webm"
+							}
 						},
 						"picture": {
 							"source": [
@@ -486,26 +416,22 @@
 							"src": "/images/shanghai/blinky-5-mr_fdexydk.png"	
 						} 
 					},
-					"textOverMedia": {
+					"text": {
 						"head": {
 							"headFor": "section",
 							"lead": null,
 							"title": null,
 							"heading": "文化，请拨1",
 							"subtitle": null,
-							"intro": null,
-							"byline": null
+							"intro": null
 						}
-					},
-					"cols": null
+					}
 				},
 				{
-					"blockId": 2,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
+					"type": "text-over-media",
+					"media": {
 						"fixed": true,
-						"ft": null,
+						"video": null,
 						"picture": {
 							"source": [
 								{
@@ -521,213 +447,163 @@
 							"src": "/images/shanghai/ma_jong_ab_1398-mr.jpg"
 						}
 					},
-					"textOverMedia": {
+					"text": {
 						"leadin": {
 							"position": "left bottom",
 							"text": "‘在上海过西方式生活，比在其他任何中国城市都容易得多’"
 						}
-					},
-					"cols": null
-				},
-				{
-					"blockId": 3,
-					"viewportHeight": false,
-					"sticky": true,
-					"background": {
-						"fixed": false,
-						"cc": null,
-						"ft": null,
-						"picture": {
-							"source": null,
-							"src": "/images/shanghai/_ab_0686-mr_e4cka1t.jpg"
-						}
-					},
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": ["“你是说，除了全职保姆，我还喜欢在上海生活的哪些方面？”上海“男太太”（即随迁丈夫）群体中的一员雷•赫拉蒂(Ray Heraty)问道。中国人管妻子叫“太太”，男太太的戏称便由此而生。赫拉蒂在家陪三个小孩，他太太是一家美国科技公司的高管。像大多数女性或男性随迁配偶（现在男性比例越来越高）一样，他喜欢上海便宜的家政服务，一名全职保姆的月薪在3000至6000元人民币（合490至980美元）之间。他说：“这意味着，每周有一个晚上我能跟妻子约会。” "]
-							}
-						],
-						"colSecondary": {
-							"sticky": false,
-							"image": null
-						}
-					}					
-				},
-				{
-					"blockId": 4,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
-						"ft": {
-							"setting": null,
-							"poster": "/images/shanghai/ray_heraty-mr.png",
-							"source": [
-								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/ray_heraty_1280x720.mp4",
-									"type": "mp4"
-								}, 
-								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/ray_heraty_1280x720.webmhd.webm",
-									"type": "webm"
-								}
-							]
-						}
-					},
-					"textOverMedia": null,
-					"cols": null
-				},
-				{
-					"blockId": 5,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": null,
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"在上海过西方式生活，比在其他任何中国城市都容易得多，并且一直是越来越容易。“上海有更多的（国际）饭店、学校，以及花样更多的娱乐方式、甚至体育运动，”驻上海的顶级国际迁居服务公司Santa Fe Relocation中国区总经理詹姆斯•古丁(James Gooding)表示，“凯蒂•佩里(Katy Perry)（近来在这里举办了）两场音乐会，这在过去是绝没有的，它提升了这座城市的生活乐趣和国际化档次。”"
-								]
-							}, 
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/expats_by_countries_3-lr_ztwdc1k.jpg",
-									"caption": null
-								}
-							},
-							{
-								"quote": {
-									"text": "‘西式医疗和教育服务贵得离谱’",
-									"caption": ""
-								}
-							},
-							{
-								"text": [
-									"上海以生活成本低而闻名，这是它吸引外国人的另一大特点，多数外侨表示，收入在上海比在本国更容易维持生活。可这里的生活成本也开始上升。外国人仍有办法省钱，比如乘坐多条新建的地铁（最低价只要3元人民币），或乘坐起步价14元人民币的出租车，或者花很少钱吃一顿简单的上海菜。"
-								]
-							}, 
-							{
-								"image": {
-									"mobileOnly": false,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/365c6716-f3d4-11e4-99de-00144feab7de.jpg",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"但西式医疗和教育服务贵得离谱（对于那些外派到中国的福利不涵盖这两者的人而言）：国际学校的学费轻易就能达到每年两三万美元或更高，外资诊所价格可与美国的水平媲美。美世数据显示，一条牛仔裤都要1000元人民币，一杯咖啡40元人民币，一套两居室公寓（对平均的外侨家庭而言太小了）月租金要2.5万元人民币。"
-								]
-							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100vh",
-							"slide": {
-								"slideSets": [
-									{
-										"src": "/images/shanghai/expats_by_countries_1-lr_kjsgwck.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/expats_by_countries_2-lr_ibwep01.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/expats_by_countries_3-lr_ztwdc1k.jpg",
-										"caption": ""
-									}
-								]
-							}
-						}						
 					}
 				},
 				{
-					"blockId": 6,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": null,
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"“经济压力开始显现，我认为，我们将看到更多外侨比自己预期的更早离开，或者在花钱方面更精打细算，”《上海家庭》(Shanghai Family)执行主编西多涅•理查兹(Cidonie Richards)说。"
-								]
-							}, 
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/162246805-lr_ezat6ja.jpg",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"上海众心国际社区(Community Centre Shanghai)咨询总监卡丽•琼斯(Carrie Jones)表示，她观察到寻求降低心理咨询费的外侨大量增加，这反映出享有高额薪酬福利的高管在减少、年轻专业人士乃至学生在增多的人口变化趋势。"
-								]
-							},
-							{
-								"quote": {
-									"text": "‘经济压力开始显现，我认为，我们将看到更多外侨比自己预期的更早离开，或者在花钱方面更精打细算’",
-									"caption": "《上海家庭》执行主编西多涅•理查兹"
-								}
-							},
-							{
-								"text": [
-									"国际学校咨询集团(ISC)的理查德•加斯克尔(Richard Gaskell)表示，在学费昂贵的国际学校，传统外籍学生的录取人数也有所下滑，尽管归国华人的子女填补了这一空缺。"
-								]
+					"type": "section-sticky",
+					"media": {
+						"picture": {
+							"src": "/images/shanghai/_ab_0686-mr_e4cka1t.jpg"
+						}
+					},
+					"colPrimary": [
+						{
+							"text": ["“你是说，除了全职保姆，我还喜欢在上海生活的哪些方面？”上海“男太太”（即随迁丈夫）群体中的一员雷•赫拉蒂(Ray Heraty)问道。中国人管妻子叫“太太”，男太太的戏称便由此而生。赫拉蒂在家陪三个小孩，他太太是一家美国科技公司的高管。像大多数女性或男性随迁配偶（现在男性比例越来越高）一样，他喜欢上海便宜的家政服务，一名全职保姆的月薪在3000至6000元人民币（合490至980美元）之间。他说：“这意味着，每周有一个晚上我能跟妻子约会。” "]
+						}
+					],
+					"colSecondary": {}
+				},
+				{
+					"type": "section-media",
+					"media": {
+						"video": {
+							"provider": "ft",
+							"poster": "/images/shanghai/ray_heraty-mr.png",
+							"source": {
+								"mp4": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/ray_heraty_1280x720.mp4",
+								"webm": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/ray_heraty_1280x720.webmhd.webm"
 							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100%",
+						}
+					}
+				},
+				{
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"在上海过西方式生活，比在其他任何中国城市都容易得多，并且一直是越来越容易。“上海有更多的（国际）饭店、学校，以及花样更多的娱乐方式、甚至体育运动，”驻上海的顶级国际迁居服务公司Santa Fe Relocation中国区总经理詹姆斯•古丁(James Gooding)表示，“凯蒂•佩里(Katy Perry)（近来在这里举办了）两场音乐会，这在过去是绝没有的，它提升了这座城市的生活乐趣和国际化档次。”"
+							]
+						}, 
+						{
 							"image": {
+								"mobileOnly": true,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/expats_by_countries_3-lr_ztwdc1k.jpg",
+								"caption": null
+							}
+						},
+						{
+							"quote": {
+								"text": "‘西式医疗和教育服务贵得离谱’",
+								"caption": ""
+							}
+						},
+						{
+							"text": [
+								"上海以生活成本低而闻名，这是它吸引外国人的另一大特点，多数外侨表示，收入在上海比在本国更容易维持生活。可这里的生活成本也开始上升。外国人仍有办法省钱，比如乘坐多条新建的地铁（最低价只要3元人民币），或乘坐起步价14元人民币的出租车，或者花很少钱吃一顿简单的上海菜。"
+							]
+						}, 
+						{
+							"image": {
+								"mobileOnly": false,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/365c6716-f3d4-11e4-99de-00144feab7de.jpg",
+								"caption": null
+							}
+						},
+						{
+							"text": [
+								"但西式医疗和教育服务贵得离谱（对于那些外派到中国的福利不涵盖这两者的人而言）：国际学校的学费轻易就能达到每年两三万美元或更高，外资诊所价格可与美国的水平媲美。美世数据显示，一条牛仔裤都要1000元人民币，一杯咖啡40元人民币，一套两居室公寓（对平均的外侨家庭而言太小了）月租金要2.5万元人民币。"
+							]
+						}
+					],
+					"colSecondary": {
+						"slides": [
+							{
+								"src": "/images/shanghai/expats_by_countries_1-lr_kjsgwck.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/expats_by_countries_2-lr_ibwep01.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/expats_by_countries_3-lr_ztwdc1k.jpg",
+								"caption": ""
+							}
+						]
+					}						
+				},
+				{
+					"type":"section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"“经济压力开始显现，我认为，我们将看到更多外侨比自己预期的更早离开，或者在花钱方面更精打细算，”《上海家庭》(Shanghai Family)执行主编西多涅•理查兹(Cidonie Richards)说。"
+							]
+						}, 
+						{
+							"image": {
+								"mobileOnly": true,
 								"ratio": null,
 								"title": null,
 								"link": null,
 								"src": "/images/shanghai/162246805-lr_ezat6ja.jpg",
 								"caption": null
 							}
-						}							
-					}
+						},
+						{
+							"text": [
+								"上海众心国际社区(Community Centre Shanghai)咨询总监卡丽•琼斯(Carrie Jones)表示，她观察到寻求降低心理咨询费的外侨大量增加，这反映出享有高额薪酬福利的高管在减少、年轻专业人士乃至学生在增多的人口变化趋势。"
+							]
+						},
+						{
+							"quote": {
+								"text": "‘经济压力开始显现，我认为，我们将看到更多外侨比自己预期的更早离开，或者在花钱方面更精打细算’",
+								"caption": "《上海家庭》执行主编西多涅•理查兹"
+							}
+						},
+						{
+							"text": [
+								"国际学校咨询集团(ISC)的理查德•加斯克尔(Richard Gaskell)表示，在学费昂贵的国际学校，传统外籍学生的录取人数也有所下滑，尽管归国华人的子女填补了这一空缺。"
+							]
+						}
+					],
+					"colSecondary": {
+						"image": {
+							"sticky": true,
+							"ratio": null,
+							"title": null,
+							"link": null,
+							"src": "/images/shanghai/162246805-lr_ezat6ja.jpg",
+							"caption": null
+						}
+					}							
 				}
 			],
-			"adBanner": ""
+			"ad": ""
 		},
 		{
-			"sectionId": 4,
 			"navText": "4",
-			"sectionBlocks": [
+			"segments": [
 				{
-					"blockId": 1,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
-						"ft": {
+					"type": "text-over-media",
+					"media": {
+						"video": {
 							"poster": "/images/shanghai/blinky-2-mr.png",
-							"source": [
-								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-2.mp4",
-									"type": "mp4"
-								}, 
-								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-2.webmhd.webm",
-									"type": "webm"
-								}
-							]
+							"source": {
+								"mp4": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-2.mp4",
+								"webm": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky-2.webmhd.webm"
+							}
 						},
 						"picture": {
 							"source": [
@@ -744,27 +620,21 @@
 							"src": "/images/shanghai/blinky-2-mr.png"	
 						} 
 					},
-					"textOverMedia": {
+					"text": {
 						"head": {
-							"headFor": "section",
-							"viewportHeight": true,
 							"lead": null,
 							"title": null,
 							"heading": "中外美食之旅",
 							"subtitle": null,
-							"intro": null,
-							"byline": null
+							"intro": null
 						}
-					},
-					"cols": null
+					}
 				},
 				{
-					"blockId": 2,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
+					"type": "text-over-media",
+					"media": {
 						"fixed": true,
-						"ft": null,
+						"video": null,
 						"picture": {
 							"source": [
 								{
@@ -780,182 +650,140 @@
 							"src": "/images/shanghai/street_food_-_cooking_good_ab_1197-mr.jpg"
 						}
 					},
-					"textOverMedia": {
+					"text": {
 						"leadin": {
 							"position": "right bottom",
 							"text": "‘上海有街头小吃文化传统，因为它是个移民城市’"
 						}
-					},
-					"cols": null
-				},
-				{
-					"blockId": 3,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": null,
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"上海的餐馆提供来自世界各地的所有美食，价格却低于全球水平，上海的酒吧大多一直营业到天明，以纵情欢乐闻名。但上述因素可能意味着，今后外国人花在下馆子或者泡吧的闲钱要变少了。 "
-								]
-							}, 
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/food_street_market_ab_1066-lr_ebhsppr.jpg",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"不过即便预算不高，上海文化还是有许多可以体验之处——只要你对文化的定义不过于狭隘。上海纽约大学(NYU Shanghai)助理教授、《上海未来：重建现代性》(Shanghai Future: Modernity Remade)一书的作者安娜•格林斯潘(Anna Greenspan)说，比如你可以去品尝上海的街头小吃，这是品味正宗中国文化的最佳途径之一。",
-									"格林斯潘说：“上海有着极为精彩的历史和街头小吃文化传统，（因为它是）一座移民城市。上海拥有来自中国各地的移民……所以你可以在这儿的街头小吃中尝遍中国美味。”上海的汉堡包和披萨虽不算十分正宗，但与国外的味道已相差无几。可比起这些食物，街头小吃才是这座城市所剩无几的真实面貌之一。上海大部分历史建筑已被拆除，一幢幢未来风格的摩天大楼拔地而起。",
-									"即便是不会说普通话的住客，也可以通过一次街头小吃之旅，品味这“中国性”(Chineseness)的最后一座堡垒。它就蕴藏在这座城市里一屉屉热气腾腾的汤包、一锅锅滋滋作响的锅贴、一大桶一大桶的米粥，以及一张张葱油饼里。"
-								]
-							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100%",
-							"slide": {
-								"slideSets": [
-									{
-										"src": "/images/shanghai/food_street_market_ab_1066-lr_ebhsppr.jpg",
-										"caption": "安顺路菜市场"
-									},
-									{
-										"src": "/images/shanghai/street_food_vendor_2_ab_1230-lr_udn0oo1.jpg",
-										"caption": "肇周路夜市"
-									}
-								]								
-							}
-						}	
 					}
 				},
 				{
-					"blockId": 4,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
-						"ft": {
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"上海的餐馆提供来自世界各地的所有美食，价格却低于全球水平，上海的酒吧大多一直营业到天明，以纵情欢乐闻名。但上述因素可能意味着，今后外国人花在下馆子或者泡吧的闲钱要变少了。 "
+							]
+						}, 
+						{
+							"image": {
+								"mobileOnly": true,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/food_street_market_ab_1066-lr_ebhsppr.jpg",
+								"caption": null
+							}
+						},
+						{
+							"text": [
+								"不过即便预算不高，上海文化还是有许多可以体验之处——只要你对文化的定义不过于狭隘。上海纽约大学(NYU Shanghai)助理教授、《上海未来：重建现代性》(Shanghai Future: Modernity Remade)一书的作者安娜•格林斯潘(Anna Greenspan)说，比如你可以去品尝上海的街头小吃，这是品味正宗中国文化的最佳途径之一。",
+								"格林斯潘说：“上海有着极为精彩的历史和街头小吃文化传统，（因为它是）一座移民城市。上海拥有来自中国各地的移民……所以你可以在这儿的街头小吃中尝遍中国美味。”上海的汉堡包和披萨虽不算十分正宗，但与国外的味道已相差无几。可比起这些食物，街头小吃才是这座城市所剩无几的真实面貌之一。上海大部分历史建筑已被拆除，一幢幢未来风格的摩天大楼拔地而起。",
+								"即便是不会说普通话的住客，也可以通过一次街头小吃之旅，品味这“中国性”(Chineseness)的最后一座堡垒。它就蕴藏在这座城市里一屉屉热气腾腾的汤包、一锅锅滋滋作响的锅贴、一大桶一大桶的米粥，以及一张张葱油饼里。"
+							]
+						}
+					],
+					"colSecondary": {
+						"slides": [
+							{
+								"src": "/images/shanghai/food_street_market_ab_1066-lr_ebhsppr.jpg",
+								"caption": "安顺路菜市场"
+							},
+							{
+								"src": "/images/shanghai/street_food_vendor_2_ab_1230-lr_udn0oo1.jpg",
+								"caption": "肇周路夜市"
+							}
+						]								
+					}	
+				},
+				{
+					"type": "section-media",
+					"media": {
+						"video": {
+							"provider": "ft",
 							"poster": "/images/shanghai/anna_greenspan-1-mr.png",
 							"source": [
 								{
-									"src": ".http://ig.ft.com/sites/2015/special-reports/shanghai/media/anna_greenspan.mp4",
-									"type": "mp4"
-								}, 
-								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/anna_greenspan_1280x720.webmhd.webm",
-									"type": "webm"
+									"mp4": ".http://ig.ft.com/sites/2015/special-reports/shanghai/media/anna_greenspan.mp4",
+									"webm": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/anna_greenspan_1280x720.webmhd.webm"
 								}
 							]
 						}
-					},
-					"textOverMedia": null,
-					"cols": null
+					}
 				},
 				{
-					"blockId": 5,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": null,
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"外国人也可以通过徒步之旅，去感受这座城市饱受蹂躏的殖民史，那段历史就印刻在曾经为外国政府所控的几个租界里。路上还能一览上海老年人如何自娱自乐，他们会在傍晚时分跳起广场舞，清晨时遛鸟打太极。"
-								]
-							}, 
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/gallery_good_3_ab_1477-lr_0xk2ssw.jpg",
-									"caption": null
-								}
-							},
-							{
-								"quote": {
-									"text": "‘2011年我来到这里时，这儿只有3座博物馆，现在已经有了14座。上海艺术界已经真正地爆发了。’",
-									"caption": "JULIE CHUN，艺术专家"
-								}
-							},
-							{
-								"text": [
-									"上海的城市文化总展现出现代的一面，霓虹闪烁的高速公路与精心照亮的摩天大楼，每晚为居民们上演一场未来派的灯光秀。",
-									"上海的高雅文化也在不断上升中。据韩裔美国人Julie Chun介绍，上海正以惊人速度建设新的艺术博物馆。",
-									"Julie说：“2011年我来到这里时，这儿只有3座博物馆，现在已经有了14座。”据她讲，甚至在上海一个菜市场的水果摊、蔬菜摊、露天牙医和理发师之间，就陈列着一座旋转的现代艺术展品。"
-								]
-							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100%",
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"外国人也可以通过徒步之旅，去感受这座城市饱受蹂躏的殖民史，那段历史就印刻在曾经为外国政府所控的几个租界里。路上还能一览上海老年人如何自娱自乐，他们会在傍晚时分跳起广场舞，清晨时遛鸟打太极。"
+							]
+						}, 
+						{
 							"image": {
+								"mobileOnly": true,
 								"ratio": null,
 								"title": null,
 								"link": null,
 								"src": "/images/shanghai/gallery_good_3_ab_1477-lr_0xk2ssw.jpg",
-								"caption": "上海当代艺术博物馆的展出活动"
+								"caption": null
 							}
-						}							
-					}
+						},
+						{
+							"quote": {
+								"text": "‘2011年我来到这里时，这儿只有3座博物馆，现在已经有了14座。上海艺术界已经真正地爆发了。’",
+								"caption": "JULIE CHUN，艺术专家"
+							}
+						},
+						{
+							"text": [
+								"上海的城市文化总展现出现代的一面，霓虹闪烁的高速公路与精心照亮的摩天大楼，每晚为居民们上演一场未来派的灯光秀。",
+								"上海的高雅文化也在不断上升中。据韩裔美国人Julie Chun介绍，上海正以惊人速度建设新的艺术博物馆。",
+								"Julie说：“2011年我来到这里时，这儿只有3座博物馆，现在已经有了14座。”据她讲，甚至在上海一个菜市场的水果摊、蔬菜摊、露天牙医和理发师之间，就陈列着一座旋转的现代艺术展品。"
+							]
+						}
+					],
+					"colSecondary": {
+						"image": {
+							"sticky": true,
+							"ratio": null,
+							"title": null,
+							"link": null,
+							"src": "/images/shanghai/gallery_good_3_ab_1477-lr_0xk2ssw.jpg",
+							"caption": "上海当代艺术博物馆的展出活动"
+						}
+					}							
 				},
 				{
-					"blockId": 6,
-					"viewportHeight": false,
-					"sticky": false,
-					"sectionMedia": {
-						"cc": null,
-						"ft": {
+					"type": "section-media",
+					"media": {
+						"video": {
+							"provider": "ft",
 							"poster": "/images/shanghai/julie_chun-mr.png",
 							"source": [
 								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/julie_chun_1280x720.mp4",
-									"type": "mp4"
-								}, 
-								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/julie_chun_1280x720.webmhd.webm",
-									"type": "webm"
+									"mp4": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/julie_chun_1280x720.mp4",
+									"webm": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/julie_chun_1280x720.webmhd.webm"
 								}
 							]
 						}
-					},
-					"textOverMedia": null,
-					"cols": null
+					}
 				}
 			],
-			"adBanner": ""
+			"ad": ""
 		},
 		{
-			"sectionId": 5,
 			"navText": "5",
-			"sectionBlocks": [
+			"segments": [
 				{
-					"blockId": 1,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
-						"ft": {
-							"setting": "loop muted autoplay",
+					"type": "text-over-media",
+					"media": {
+						"video": {
 							"poster": "/images/shanghai/blinky-8-mr.png",
 							"source": [
 								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky_8-revised.mp4",
-									"type": "mp4"
-								}, 
-								{
-									"src": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky_8-revised.webmhd.webm",
-									"type": "webm"
+									"mp4": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky_8-revised.mp4",
+									"webm": "http://ig.ft.com/sites/2015/special-reports/shanghai/media/blinky_8-revised.webmhd.webm"
 								}
 							]
 						},
@@ -974,26 +802,21 @@
 							"src": "/images/shanghai/blinky-8-mr.png"	
 						} 
 					},
-					"textOverMedia": {
+					"text": {
 						"head": {
-							"headFor": "section",
 							"lead": null,
 							"title": null,
 							"heading": "上海之外",
 							"subtitle": null,
-							"intro": null,
-							"byline": null
+							"intro": null
 						}
-					},
-					"cols": null
+					}
 				},
 				{
-					"blockId": 2,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
+					"type": "text-over-media",
+					"media": {
 						"fixed": true,
-						"ft": null,
+						"video": null,
 						"picture": {
 							"source": [
 								{
@@ -1009,72 +832,57 @@
 							"src": "/images/shanghai/on_train_ac14wj-mr.jpg"
 						}
 					},
-					"textOverMedia": {
+					"text": {
 						"leadin": {
 							"position": "left bottom",
 							"text": "‘上海是前往任何地方展开奇异之旅的绝佳大本营’"
 						}
-					},
-					"cols": null
-				},
-				{
-					"blockId": 3,
-					"viewportHeight": false,
-					"sticky": false,
-					"background": null,
-					"textOverMedia": null,
-					"sectionMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"许多外国人都同意，在中国生活最棒的事之一就是，不必出门远游就可以享旅行之乐。每一趟杂货店之旅都是次奇妙体验，每一次逛街都让人觉得自己仿佛是马可•波罗。 ",
-									"但是，当新奇感渐渐消失，超市里的活牛蛙或是露天拔牙不再让你张口结舌，你会发现探索上海以外的中国是一项昂贵、耗时以及拥挤的活动。对于想趁周末出游或者“宅度假”的人而言，没有多少风景优美的地方可供他们选择。许多外国人还抱怨，上海糟糕的城市交通是阻止他们短途旅行的一大障碍。"
-								]
-							}, 
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/dreamstime_xl_35847524-lr_h1aiwgc.jpg",
-									"caption": "山西大同悬空寺"
-								}
-							},
-							{
-								"text": [
-									"自外国政府控制上海大片区域的年代以来，上海的外国人就一直络绎不绝地前往莫干山上的避暑胜地。从上海到莫干山需驱车3个小时（赶上天气不好需要5个小时），欧洲人一百多年前在山上曾建过避暑山庄，如今这些山庄得到修复。但除莫干山之外，选择十分有限。",
-									"不过，旅行作家萨拉•瑙曼(Sara Naumann)表示，到中国乡村旅行仍然是见识“真实”中国的最佳方式。瑙曼说：“离开城市吧。比起游览这座看起来就像有着中文路标的纽约的城市……一次西藏大草原上的村庄之旅可能更令你印象深刻。”"
-								]
-							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100%",
-							"slide": {
-								"slideSets": [
-									{
-										"src": "/images/shanghai/dreamstime_xl_35847524-lr_h1aiwgc.jpg",
-										"caption": "山西大同悬空寺"
-									},
-									{
-										"src": "/images/shanghai/dreamstime_xl_23894458-lr_1r6qm7m.jpg",
-										"caption": "西藏牧民"
-									}
-								]
-							}
-						}						
 					}
 				},
 				{
-					"blockId": 4,
-					"viewportHeight": false,
-					"sticky": false,
-					"background": null,
+					"type": "section-media",
+					"colPrimary": [
+						{
+							"text": [
+								"许多外国人都同意，在中国生活最棒的事之一就是，不必出门远游就可以享旅行之乐。每一趟杂货店之旅都是次奇妙体验，每一次逛街都让人觉得自己仿佛是马可•波罗。 ",
+								"但是，当新奇感渐渐消失，超市里的活牛蛙或是露天拔牙不再让你张口结舌，你会发现探索上海以外的中国是一项昂贵、耗时以及拥挤的活动。对于想趁周末出游或者“宅度假”的人而言，没有多少风景优美的地方可供他们选择。许多外国人还抱怨，上海糟糕的城市交通是阻止他们短途旅行的一大障碍。"
+							]
+						}, 
+						{
+							"image": {
+								"mobileOnly": true,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/dreamstime_xl_35847524-lr_h1aiwgc.jpg",
+								"caption": "山西大同悬空寺"
+							}
+						},
+						{
+							"text": [
+								"自外国政府控制上海大片区域的年代以来，上海的外国人就一直络绎不绝地前往莫干山上的避暑胜地。从上海到莫干山需驱车3个小时（赶上天气不好需要5个小时），欧洲人一百多年前在山上曾建过避暑山庄，如今这些山庄得到修复。但除莫干山之外，选择十分有限。",
+								"不过，旅行作家萨拉•瑙曼(Sara Naumann)表示，到中国乡村旅行仍然是见识“真实”中国的最佳方式。瑙曼说：“离开城市吧。比起游览这座看起来就像有着中文路标的纽约的城市……一次西藏大草原上的村庄之旅可能更令你印象深刻。”"
+							]
+						}
+					],
+					"colSecondary": {
+						"slides": [
+							{
+								"src": "/images/shanghai/dreamstime_xl_35847524-lr_h1aiwgc.jpg",
+								"caption": "山西大同悬空寺"
+							},
+							{
+								"src": "/images/shanghai/dreamstime_xl_23894458-lr_1r6qm7m.jpg",
+								"caption": "西藏牧民"
+							}
+						]
+					}						
+				},
+				{
+					"type": "section-media",
 					"sectionMedia": {
-						"cc": null,
-						"ft": {
+						"video": {
+							"provider":"ft",
 							"poster": "/images/shanghai/sara_naumann-mr.png",
 							"source": [
 								{
@@ -1087,89 +895,74 @@
 								}
 							]
 						}
-					},
-					"textOverMedia": null,
-					"cols": null
-				},
-				{
-					"blockId": 5,
-					"viewportHeight": false,
-					"sticky": false,
-					"background": null,
-					"sectionMedia": null,
-					"textOverMedia": null,
-					"cols": {
-						"colPrimary": [
-							{
-								"text": [
-									"不怕吃苦的外国人可以扔掉手里的中文旅游指南，前往一处“农家乐”去体验，在农民家里小住。在离上海数小时车程的山区，雨后春笋般冒出了许多乡村特色度假小屋（“乡村特色”是指没有暖气，有时候还不太干净，不是浪漫意义上的乡村特色），但主人通常不会讲英语，而且许多道路在英文地图上看不到。"
-								]
-							}, 
-							{
-								"quote": {
-									"text": "‘离开城市吧。比起游览这座看起来就像有着中文路标的纽约的城市……一次西藏大草原上的村庄之旅可能更令你印象深刻。’",
-									"caption": "萨拉•瑙曼，旅行作家"
-								}
-							},
-							{
-								"image": {
-									"mobileOnly": true,
-									"ratio": null,
-									"title": null,
-									"link": null,
-									"src": "/images/shanghai/map06-lr_atrsm5o.jpg",
-									"caption": null
-								}
-							},
-							{
-								"text": [
-									"假期到来之前，许多外国人仅通过上海的生活就已体验够了“真实的”中国，因此会选择到中国以外度假。由于游客众多，公共假期在中国国内旅游成了件花费高昂且令人不快的事。瑙曼表示对旅行者来说，污染严重也是一个越来越大的问题。",
-									"不过，对于那些可以在公众假期以外旅游的人，以及那些随遇而安的脾气好的人来说，上海是前往任何地方展开奇异之旅的绝佳大本营。与西藏牧民一起住在没有厕所、自来水以及暖气等便利设施的牦牛毛帐篷里；骑骆驼穿过戈壁沙漠，夜晚睡在满天繁星之下；在道观里度过一个清静的周末；或者去只卖狗肉的小镇吃一顿饭。这样的旅行选择数不胜数。",
-									"世界正变得越来越小，但中国可能是异国风情的最后一道风景线。中国的现代化速度极快，很快它可能就变得与其他国家一样。但对外国人而言，目前的中国、甚至上海，仍有陌生感。在这片土地上，人人都能纵情于内心深处的马可•波罗情怀，在这里，无论好坏，每一天都是一次冒险。"
-								]
-							}
-						],
-						"colSecondary": {
-							"sticky": true,
-							"height": "100vh",
-							"slide": {
-								"slideSets": [
-									{
-										"src": "/images/shanghai/map01-lr_fdj4ele.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/map02-lr_ptgfaux.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/map03-lr_1dedsj1.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/map04-lr_m8kbltg.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/map05-lr_vmrarob.jpg",
-										"caption": ""
-									},
-									{
-										"src": "/images/shanghai/map06-lr_atrsm5o.jpg",
-										"caption": ""
-									}
-								]
-							}
-						}							
 					}
 				},
 				{
-					"blockId": 6,
-					"viewportHeight": true,
-					"sticky": false,
-					"background": {
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"不怕吃苦的外国人可以扔掉手里的中文旅游指南，前往一处“农家乐”去体验，在农民家里小住。在离上海数小时车程的山区，雨后春笋般冒出了许多乡村特色度假小屋（“乡村特色”是指没有暖气，有时候还不太干净，不是浪漫意义上的乡村特色），但主人通常不会讲英语，而且许多道路在英文地图上看不到。"
+							]
+						}, 
+						{
+							"quote": {
+								"text": "‘离开城市吧。比起游览这座看起来就像有着中文路标的纽约的城市……一次西藏大草原上的村庄之旅可能更令你印象深刻。’",
+								"caption": "萨拉•瑙曼，旅行作家"
+							}
+						},
+						{
+							"image": {
+								"mobileOnly": true,
+								"ratio": null,
+								"title": null,
+								"link": null,
+								"src": "/images/shanghai/map06-lr_atrsm5o.jpg",
+								"caption": null
+							}
+						},
+						{
+							"text": [
+								"假期到来之前，许多外国人仅通过上海的生活就已体验够了“真实的”中国，因此会选择到中国以外度假。由于游客众多，公共假期在中国国内旅游成了件花费高昂且令人不快的事。瑙曼表示对旅行者来说，污染严重也是一个越来越大的问题。",
+								"不过，对于那些可以在公众假期以外旅游的人，以及那些随遇而安的脾气好的人来说，上海是前往任何地方展开奇异之旅的绝佳大本营。与西藏牧民一起住在没有厕所、自来水以及暖气等便利设施的牦牛毛帐篷里；骑骆驼穿过戈壁沙漠，夜晚睡在满天繁星之下；在道观里度过一个清静的周末；或者去只卖狗肉的小镇吃一顿饭。这样的旅行选择数不胜数。",
+								"世界正变得越来越小，但中国可能是异国风情的最后一道风景线。中国的现代化速度极快，很快它可能就变得与其他国家一样。但对外国人而言，目前的中国、甚至上海，仍有陌生感。在这片土地上，人人都能纵情于内心深处的马可•波罗情怀，在这里，无论好坏，每一天都是一次冒险。"
+							]
+						}
+					],
+					"colSecondary": {
+						"slides": [
+							{
+								"src": "/images/shanghai/map01-lr_fdj4ele.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/map02-lr_ptgfaux.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/map03-lr_1dedsj1.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/map04-lr_m8kbltg.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/map05-lr_vmrarob.jpg",
+								"caption": ""
+							},
+							{
+								"src": "/images/shanghai/map06-lr_atrsm5o.jpg",
+								"caption": ""
+							}
+						]
+					}							
+				},
+				{
+					"type": "text-over-media",
+					"media": {
 						"fixed": true,
-						"ft": null,
+						"video": null,
 						"picture": {
 							"source": [
 								{
@@ -1185,20 +978,17 @@
 							"src": "/images/shanghai/xu5239503the_sun_rises_behind-mr.jpeg"
 						}
 					},
-					"textOverMedia": {
+					"text": {
 						"leadin": {
 							"position": "center bottom",
 							"text": "‘在中国这片土地上，人人都能纵情于内心深处的马可•波罗情怀’"
 						}
-					},
-					"cols": null
+					}
 				},
 				{
-					"blockId": 7,
-					"viewportHeight": false,
-					"sticky": true,
-					"background": {
-						"ft": null,
+					"type": "section-sticky",
+					"media": {
+						"video": null,
 						"picture": {
 							"source": [
 								{
@@ -1215,129 +1005,103 @@
 							"src": "/images/shanghai/bar_pic140510034_high_res_-mr_dezb8jx.jpg"	
 						}
 					},
-					"textOverMedia": {
-						"credits":  {
-							"title": "鸣谢：",
-							"items": [
-								"作者：英国《金融时报》驻上海记者帕提•沃德米尔(Patti Waldmeir)；补充报道：张嫣", 
-								"视频与图片：鲍考什•阿尔吉尔达斯(Bakas Algirdas)",
-								"视频编辑：保罗•帕斯夸尔(Paolo Pascual)",
-								"编辑与设计：雨果•格林哈尔希(Hugo Greenhalgh)",
-								"制作：乔治•基里亚科斯(George Kyriakos)",
-								"图片编辑：安迪•米尔斯(Andy Mears)、迈克尔•克拉布特里(Michael Crabtree)",
-								"图像处理：克里斯•坎贝尔(Chris Campbell)",
-								"统计：凯特•弗赖(Keith Fray)",
-								"调研：阿尼娅•努斯鲍姆(Ania Nussbaum)",
-								"图片补充：路透社(Reuters)、Alamy、Dreamstime、范克新",
-								"译者：邢嵬、曲雯雯",
-								"中文网制作：史书华、倪卫国"
-							]
-						}
-					},
-					"cols": null
+					"credits":  {
+						"title": "鸣谢：",
+						"items": [
+							"作者：英国《金融时报》驻上海记者帕提•沃德米尔(Patti Waldmeir)；补充报道：张嫣", 
+							"视频与图片：鲍考什•阿尔吉尔达斯(Bakas Algirdas)",
+							"视频编辑：保罗•帕斯夸尔(Paolo Pascual)",
+							"编辑与设计：雨果•格林哈尔希(Hugo Greenhalgh)",
+							"制作：乔治•基里亚科斯(George Kyriakos)",
+							"图片编辑：安迪•米尔斯(Andy Mears)、迈克尔•克拉布特里(Michael Crabtree)",
+							"图像处理：克里斯•坎贝尔(Chris Campbell)",
+							"统计：凯特•弗赖(Keith Fray)",
+							"调研：阿尼娅•努斯鲍姆(Ania Nussbaum)",
+							"图片补充：路透社(Reuters)、Alamy、Dreamstime、范克新",
+							"译者：邢嵬、曲雯雯",
+							"中文网制作：史书华、倪卫国"
+						]
+					}
 				}
 			],
-			"adBanner": null
+			"ad": null
 		}
 	],
-	"articleFooter": {
-		"sections": [
-			{
-				"id": 1,
-				"sectionTitle": "本系列报道",
-				"sectionCols": [
-					{
-						"image": {
-							"ratio": "16/15",
-							"link": "http://www.ft.com/ig/sites/2015/special-reports/lessons-in-britishness/",
-							"src": "/images/shanghai/b061ec0e-f7e2-11e4-8bd5-00144feab7de.jpg",
-							"textOnImage":"第1部分：英国",
-							"caption": "British boarding schools attract pupils from all over the globe"
-						},
-						"srTitle": "",
-						"srSummary": [],
-						"srList": null
+	"suggestedReads": [
+		{
+			"title": "本系列报道",
+			"columns": [
+				{
+					"image": {
+						"ratio": "16/15",
+						"link": "http://www.ft.com/ig/sites/2015/special-reports/lessons-in-britishness/",
+						"src": "/images/shanghai/b061ec0e-f7e2-11e4-8bd5-00144feab7de.jpg",
+						"textOnImage":"第1部分：英国"
 					},
-					{
-						"image": {
-							"ratio": "16/15",
-							"link": "http://www.ftchinese.com/interactive/4427",
-							"src": "/images/shanghai/b5ef4b26-f7e2-11e4-8bd5-00144feab7de.jpg",
-							"textOnImage":"第2部分：中国",
-							"caption": "How do expatriates make the most of life in Shanghai?"
-						},
-						"srTitle": "",
-						"srSummary": [],
-						"srList": null
+					"summary": ["British boarding schools attract pupils from all over the globe"]
+				},
+				{
+					"image": {
+						"ratio": "16/15",
+						"link": "http://www.ftchinese.com/interactive/4427",
+						"src": "/images/shanghai/b5ef4b26-f7e2-11e4-8bd5-00144feab7de.jpg",
+						"textOnImage":"第2部分：中国"
 					},
-					{
-						"image": {
-							"ratio": "16/15",
-							"link": "http://www.ft.com/brazil-fortunes",
-							"src": "/images/shanghai/739f838c-f89e-11e4-8e16-00144feab7de.jpg",
-							"textOnImage":"第3部分：巴西",
-							"caption": "Foreign entrepreneurs are under pressure as recession bites"
+					"summary": ["How do expatriates make the most of life in Shanghai?"]
+				},
+				{
+					"image": {
+						"ratio": "16/15",
+						"link": "http://www.ft.com/brazil-fortunes",
+						"src": "/images/shanghai/739f838c-f89e-11e4-8e16-00144feab7de.jpg",
+						"textOnImage":"第3部分：巴西"
+					},
+					"summary": ["Foreign entrepreneurs are under pressure as recession bites"]
+				}
+			]
+		},
+		{
+			"title": "相关阅读",
+			"columns": [
+				{
+					"title": "FT",
+					"items": [
+						{
+							"href": "http://www.ftchinese.com/story/001061577",
+							"text": "分析：经济减速让北京陷入两难"
 						},
-						"srTitle": "",
-						"srSummary": [],
-						"srList": null
-					}
-				]
-			},
-			{
-				"id": 2,
-				"sectionTitle": "相关阅读",
-				"sectionCols": [
-					{
-						"link": "",
-						"image": null,
-						"srTitle": "FT",
-						"srSummary": [],
-						"srList": {
-							"listItem": [
-								{
-									"href": "http://www.ftchinese.com/story/001061577",
-									"text": "分析：经济减速让北京陷入两难"
-								},
-								{
-									"href": "http://www.ftchinese.com/story/001060251",
-									"text": "上海11名官员因外滩踩踏事件受罚"
-								},
-								{
-									"href": "http://www.ftchinese.com/story/001060339",
-									"text": "中国人心系中式早餐"
-								}
-							]
+						{
+							"href": "http://www.ftchinese.com/story/001060251",
+							"text": "上海11名官员因外滩踩踏事件受罚"
+						},
+						{
+							"href": "http://www.ftchinese.com/story/001060339",
+							"text": "中国人心系中式早餐"
 						}
-					},
-					{
-						"link": "",
-						"image": null,
-						"srTitle": "其他来源:",
-						"srSummary": [],
-						"srList": {
-							"listItem": [
-								{
-									"href": "https://expatexplorer.hsbc.com/survey/files/pdfs/overall-reports/2014/HSBCExpatExplorer2014report.pdf",
-									"text": "Expat explorer report 2014 – HSBC"
-								},
-								{
-									"href": "http://www.mercer.com/content/mercer/global/all/en/newsroom/cost-of-living-survey.html",
-									"text": "Cost of living rankings 2014 – Mercer"
-								},
-								{
-									"href": "http://www.rolandberger.com/media/publications/2013-02-01-rbsc-pub-MaximizingthevalueofChinasmuseums.html",
-									"text": "Maximising the value of China’s museums, 2013 – Roland Berger"
-								},
-								{
-									"href": "http://www.nytimes.com/2012/04/15/travel/moganshan-china-a-lofty-retreat-from-sweltering-shanghai.html?r=0",
-									"text": "A lofty retreat from sweltering Shanghai – New York Times"
-								}
-							]
+					]
+				},
+				{
+					"title": "其他来源:",
+					"items": [
+						{
+							"href": "https://expatexplorer.hsbc.com/survey/files/pdfs/overall-reports/2014/HSBCExpatExplorer2014report.pdf",
+							"text": "Expat explorer report 2014 – HSBC"
+						},
+						{
+							"href": "http://www.mercer.com/content/mercer/global/all/en/newsroom/cost-of-living-survey.html",
+							"text": "Cost of living rankings 2014 – Mercer"
+						},
+						{
+							"href": "http://www.rolandberger.com/media/publications/2013-02-01-rbsc-pub-MaximizingthevalueofChinasmuseums.html",
+							"text": "Maximising the value of China’s museums, 2013 – Roland Berger"
+						},
+						{
+							"href": "http://www.nytimes.com/2012/04/15/travel/moganshan-china-a-lofty-retreat-from-sweltering-shanghai.html?r=0",
+							"text": "A lofty retreat from sweltering Shanghai – New York Times"
 						}
-					}
-				]
-			}
-		]
-	}
+					]
+				}
+			]
+		}
+	]
 }

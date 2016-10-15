@@ -6,5 +6,11 @@
 	</div>
 	{% endif %}
 	
-	{% include "section-columns.html" %}
+	{% if colSecondary %}
+		{% include "section-columns.html" %}
+	{% endif %}
+
+	{% if credits %}
+		{% include "partials/ig-credits.html" %}
+	{% endif %}
 </div>
