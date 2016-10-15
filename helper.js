@@ -56,8 +56,17 @@ function readFile(filename) {
   );
 }
 
+function merge(o, p) {
+  for (var prop in p) {
+    if (o.hasOwnProperty(prop)) {continue;}
+    o[prop] = p[prop];
+  }
+  return o;
+}
+
 module.exports = {
   readJson: readJson,
   readFile: readFile,
-  render: render
+  render: render,
+  merge: merge
 };

@@ -69,7 +69,12 @@ gulp.task('html', () => {
 
     const data = yield fs.readFile(dataFile);
     const context = JSON.parse(data);
-    context.footer = footer;
+    if (context.footer) {
+      helper.merge(context.footer, footer);
+    } else {
+      context.footer = footer;
+    }
+    
     context.projectName = projectName;
 
     try {
