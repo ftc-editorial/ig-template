@@ -34,7 +34,7 @@
 		display: inline-block;
 		vertical-align: middle;
 	}
-	.o-header--light & {
+	.o-header--theme-light & {
 		svg {
 			fill: oColorsGetColorFor(o-header--light, text);
 		}

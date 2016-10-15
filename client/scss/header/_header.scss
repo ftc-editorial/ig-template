@@ -15,7 +15,7 @@
 	a {
 		text-decoration: none;
 	}
-	&--light {
+	&--theme-light {
 		@include oColorsFor(o-header--light, text background);
 		border-bottom: 1px solid oColorsGetColorFor(o-header-divider--light, border);
 	}
