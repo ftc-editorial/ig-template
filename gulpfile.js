@@ -201,20 +201,39 @@ gulp.task('custom', () => {
     .pipe(gulp.dest(DEST));
 });
 
+function addPrefix ($, file) {
+  $('picture source').each(function() {
+    var source = $(this);
+    var srcset = source.attr('srcset')
+    if (srcset) {
+      srcset = srcset.split(',').map(function(href) {
+        return url.resolve(config.urlPrefix, href.trim());
+      }).join(', ');
+      source.attr('srcset', srcset);
+    }    
+  });
+  
+  $('[data-o-component="o-scrollmation"]').each(function() {
+    var el = $(this);
+    var tmp = {};
+    var value = el.attr('data-o-scrollmation-assets');
+    value = JSON.parse(value.replace(/\'/g, '"'));
+    for (let k in value) {
+      const key = url.resolve(config.urlPrefix, k);
+      tmp[key] = value[k]
+    }
+    tmp = JSON.stringify(tmp).replace(/\"/g, "'");
+    el.attr('data-o-scrollmation-assets', tmp);
+  });
+}
 // gulp-prefix cannot prefix `source` of `<picture>`.
 gulp.task('prefix', () => {
-  return gulp.src('.tmp/index.html')
-    .pipe($.cheerio(function($, file) {
-      $('picture source').each(function() {
-        var source = $(this);
-        var srcset = source.attr('srcset')
-        if (srcset) {
-          srcset = srcset.split(',').map(function(href) {
-            return url.resolve(config.urlPrefix, href.trim());
-          }).join(', ');
-          source.attr('srcset', srcset);
-        }    
-      });
+  return gulp.src('.tmp/*.html')
+    .pipe($.cheerio({
+      run: addPrefix,
+      parserOptions: {
+        decodeEntities: false
+      }
     }))
     .pipe($.htmlmin({
       removeComments: true,
