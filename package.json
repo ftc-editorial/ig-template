@@ -1,14 +1,27 @@
 {
-  "name": "ftc-ig",
+  "name": "ig-template",
   "version": "0.2.0",
-  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postversion": "git push && git push --tags"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftc-editorial/ig-template.git"
+  },
   "engines": {
     "node": ">=6.0.0"
   },
+  "keywords": [
+    "FTC",
+    "toggle"
+  ],
+  "author": "weiguo.ni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ftc-editorial/ig-template/issues"
+  },
+  "homepage": "https://github.com/ftc-editorial/ig-template#readme",
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
@@ -17,6 +30,7 @@
     "browser-sync": "^2.17.2",
     "cheerio": "^0.22.0",
     "co": "^4.6.0",
+    "deepmerge": "^1.2.0",
     "del": "^2.2.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-changed": "^1.3.2",
@@ -34,9 +48,8 @@
     "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
     "gulp-smoosher": "0.0.9",
-    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.2",
     "gulp-util": "^3.0.7",
     "is-there": "^4.3.5",
     "minimist": "^1.2.0",
