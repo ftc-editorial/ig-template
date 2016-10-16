@@ -192,7 +192,8 @@ gulp.task('serve',
 );
 
 gulp.task('custom', () => {
-  const SRC = `custom/**/${projectName}.{js,css}`;
+  const customFile = argv.a ? '*' : argv.i
+  const SRC = `custom/**/${customFile}.{js,css}`;
   const DEST = '.tmp';
   console.log('Copy custom js and css files to:', DEST);
 
