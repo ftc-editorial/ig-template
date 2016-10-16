@@ -1,7 +1,6 @@
 {
-	"html": "../special/",
-	"assets": "../ft-interact/",
-	"test": "../interact/",
-	"imgPrefix": "http://interactive.ftchinese.com/",
-	"icons": "http://static.ftchinese.com/ftc-icons/"
+	"html": "../special",
+	"assets": "../ft-interact",
+	"test": "../interact",
+	"urlPrefix": "http://interactive.ftchinese.com"	
 }
