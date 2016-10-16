@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block pageTitle %}Interactive Graphics{% endblock %}
+{% block css %}
+<style type="text/css">
+li {
+	padding: 0.5em 0;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<h1>List of Interactive Graphics</h1>
+<ul>
+{% for demo in demos %}
+    <li><a href="./{{demo.projectName}}.html" target="_blank">{{demo.pageTitle}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
