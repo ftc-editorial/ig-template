@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block css %}
+  <!-- smoosh-->
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+	{% if customCss %}
+  <link rel="stylesheet" type="text/css" href="styles/{{projectName}}.css">
+	{% endif %}
+  <!-- endsmoosh -->
+	{% if analytics %}
+  	{% include "partials/analytics.html" %}
+	{% endif %}
+{% endblock %}
+
+{% block body %}
+	<img src="{{wechatImage}}" style="display:block; width:0px; height:0px; overflow:hidden">
+	{% include "partials/header.html" %}
+
+	{% block content %}{% endblock %}
+
+	{% include "partials/o-footer.html" %}
+
+	{% if highcharts %}
+	<script src="/bower_components/highcharts/highcharts.js"></script>
+	{% endif %}
+
+	{% if d3 %}
+	<script src="/bower_components/d3/d3.min.js"></script>
+	{% endif %}
+
+	<!-- smoosh -->
+	<script src="scripts/main.js"></script>
+	{% if customJs %}
+	<script src="scripts/{{projectName}}.js"></script>
+	{% endif %}
+	<!-- endsmoosh -->
+
+	{% if production %}
+	<script src="http://static.ftchinese.com/js/log.js?v=6"></script>
+	{% endif %}
+{% endblock %}

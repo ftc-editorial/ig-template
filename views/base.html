@@ -24,52 +24,22 @@
   <meta name="twitter:title" content="{{ogTitle}}">
   <meta name="twitter:description" content="{{description}}">
   <meta name="twitter:image" content="{{ogImage}}">
+  {% if production %}
+  {% set iconsPath = "http://interactive.ftchinese.com/ftc-logos/static" %}
+  {% else %}
+  {% set iconsPath = "/bower_components/ftc-logos/static" %}
+  {% endif %}
   <link rel="apple-touch-icon" sizes="180x180" href="{{iconsPath}}/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="152x152" href="{{iconsPath}}/favicons/apple-touch-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="120x120" href="{{iconsPath}}/favicons/apple-touch-icon-120x120.png">
   <link rel="apple-touch-icon" sizes="76x76" href="{{iconsPath}}/favicons/apple-touch-icon-76x76.png">
   <link href="{{iconsPath}}/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-  <title>{{pageTitle}} - FT中文网</title>
+  <title>{% block pageTitle %}{{pageTitle}}{% endblock %} - FT中文网</title>
 
-  <!-- smoosh-->
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-{% if customCss %}
-  <link rel="stylesheet" type="text/css" href="styles/{{projectName}}.css">
-{% endif %}
-  <!-- endsmoosh -->
-{% if analytics %}
-  {% include "partials/analytics.html" %}
-{% endif %}
+{% block css %}{% endblock %}
 </head>
 
 <body>
-<img src="{{wechatImage}}" style="display:block; width:0px; height:0px; overflow:hidden">
-{% include "partials/header.html" %}
-
-{% block content %}{% endblock %}
-
-{% include "partials/o-footer.html" %}
-
-{# if you want to use heightcharst or d3 #}
-{% if highcharts %}
-<script src="/bower_components/highcharts/highcharts.js"></script>
-{% endif %}
-
-{% if d3 %}
-<script src="/bower_components/d3/d3.min.js"></script>
-{% endif %}
-
-<!-- smoosh -->
-<script src="scripts/main.js"></script>
-{% if customJs %}
-<script src="scripts/{{projectName}}.js"></script>
-{% endif %}
-<!-- endsmoosh -->
-
-{% if production %}
-<script src="http://static.ftchinese.com/js/log.js?v=6"></script>
-{% endif %}
+  {% block body %}{% endblock %}
 </body>
-
-
 </html>
