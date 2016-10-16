@@ -11,7 +11,6 @@
 	"customJs": false,
 	"enableScroll": true,
 	"autoNav": false,
-	"iconsPath": "/bower_components/ftc-logos/static",
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
 	"ogTitle": "缅甸失地农民",
 	"ogType": "article",
@@ -92,14 +91,13 @@
 							}
 						},
 						"picture": {
-							"isVedioFallback": true,
 							"sources": [
 								{
 									"landscape": true,
 									"portrait": false,
 									"srcset": [
-										"/images/myanmar/2560_flowers_blinkie-lr.jpg 1100w,",
-										"/images/myanmar/2560_flowers_blinkie-mr.jpg 1500w,",
+										"/images/myanmar/2560_flowers_blinkie-lr.jpg 1100w",
+										"/images/myanmar/2560_flowers_blinkie-mr.jpg 1500w",
 										"/images/myanmar/2560_flowers_blinkie-hr.jpg"
 									]
 								}
@@ -338,8 +336,8 @@
 									"landscape": true,
 									"portrait": false,
 									"srcset": [
-										"/images/myanmar/2560_beach_football_backup-lr_ff6vr1u.jpg 1100w,",
-										"/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg 1500w,",
+										"/images/myanmar/2560_beach_football_backup-lr_ff6vr1u.jpg 1100w",
+										"/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg 1500w",
 										"/images/myanmar/2560_beach_football_backup-hr_mnvbsnw.jpg"
 									]
 								}
@@ -483,9 +481,9 @@
 									"landscape": false,
 									"portrait": false,
 									"srcset": [
-										"/images/myanmar/conflict-lr.jpg 1100w,",
-				        				"/images/myanmar/conflict-mr.jpg 1500w,",
-				        				"/images/myanmar/conflict-hr.jpg"
+										"/images/myanmar/conflict-lr.jpg 1100w",
+				        		"/images/myanmar/conflict-mr.jpg 1500w",
+				        		"/images/myanmar/conflict-hr.jpg"
 									]							
 								}
 							],
@@ -568,8 +566,8 @@
 								"landscape": false,
 								"portrait": false,
 								"srcset": [
-									"/images/myanmar/this_famer_2-lr.jpg 1100w,",
-									"/images/myanmar/this_famer_2-mr.jpg 1500w,",
+									"/images/myanmar/this_famer_2-lr.jpg 1100w",
+									"/images/myanmar/this_famer_2-mr.jpg 1500w",
 									"/images/myanmar/this_famer_2-hr.jpg"
 								]						
 							}],
@@ -701,8 +699,8 @@
 									"landscape": true,
 									"portrait": false,
 									"srcset": [
-										"/images/myanmar/boat-blinkie-backup-lr.jpg 1100w,",
-										"/images/myanmar/boat-blinkie-backup-mr.jpg 1500w,",
+										"/images/myanmar/boat-blinkie-backup-lr.jpg 1100w",
+										"/images/myanmar/boat-blinkie-backup-mr.jpg 1500w",
 										"/images/myanmar/boat-blinkie-backup-hr.jpg"
 									]
 								}

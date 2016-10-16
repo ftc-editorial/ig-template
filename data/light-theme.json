@@ -15,7 +15,6 @@
 	"customJs": false,
 	"enableScroll": false,
 	"autoNav": null,
-	"iconsPath": "/bower_components/ftc-logos/static",
 	"description": "Interactive Graphics",
 	"ogTitle": "Interactive Graphics",
 	"ogType": "article",

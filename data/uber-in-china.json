@@ -11,7 +11,6 @@
 	"customJs": false,
 	"enableScroll": true,
 	"autoNav": true,
-	"iconsPath": "/bower_components/ftc-logos/static",
 	"description": "这款叫车应用颠覆了世界各地的出租车及运输公司。但在拥有亿万城市通勤族的中国，它为拼抢市场份额每年亏损10亿美元。",
 	"ogTitle": "优步鏖战中国 - FT中文网",
 	"ogType": "article",

@@ -11,7 +11,6 @@
 	"customJs": false,
 	"enableScroll": true,
 	"autoNav": true,
-	"iconsPath": "/bower_components/ftc-logos/static",
 	"description": "讨论中国经济增长的虚实，一直是让经济观察者兴奋的议题。到底要如何读懂中国2015年关键经济数字？我们带你从头理解。",
 	"ogTitle": "数据报道：如何读懂中国GDP？- FT中文网",
 	"ogType": "article",
