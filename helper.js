@@ -5,6 +5,7 @@ const nunjucks = require('nunjucks');
 var env = new nunjucks.Environment(
   new nunjucks.FileSystemLoader(
     [
+      path.resolve(process.cwd(), 'demos/src'),
       path.resolve(process.cwd(), 'views'),
       path.resolve(process.cwd(), 'bower_components/ftc-footer'),
       path.resolve(process.cwd(), 'bower_components/ftc-icons')
@@ -14,13 +15,20 @@ var env = new nunjucks.Environment(
   {autoescape: false}
 );
 
-function render(template, context) {
+function render(template, context, name) {
   return new Promise(function(resolve, reject) {
     env.render(template, context, function(err, result) {
       if (err) {
         reject(err);
       } else {
-        resolve(result);
+        if (name) {
+          resolve({
+            name: name,
+            content: result
+          });          
+        } else {
+          resolve(result);
+        }
       }
     });
   });
@@ -34,7 +42,15 @@ function readJson(filename) {
           console.log('Cannot find file: ' + filename);
           reject(err);
         } else {
-          resolve(JSON.parse(data));
+          const content = JSON.parse(data);
+          const name = path.basename(filename, '.json');
+
+          Object.assign(content, {projectName: name});
+          
+          resolve({
+            name: name,
+            content: content
+          });
         }
       });
     }

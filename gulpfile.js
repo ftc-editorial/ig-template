@@ -6,6 +6,7 @@ const isThere = require('is-there');
 const co = require('co');
 const mkdirp = require('mkdirp');
 const helper = require('./helper');
+const merge = require('deepmerge');
 
 const browserSync = require('browser-sync').create();
 const del = require('del');
@@ -17,8 +18,10 @@ const $ = require('gulp-load-plugins')();
 const minimist = require('minimist');
 const options = {
   string: ['input'],
+  boolean: 'all',
   alias: {
-    i: 'input'
+    i: 'input',
+    a: 'all'
   },
   default: {
     input: 'myanmar'
@@ -33,10 +36,18 @@ const footer = require('./bower_components/ftc-footer');
 
 const config = require('./config.json');
 
-const dataFile = path.resolve(__dirname, `data/${argv.i}.json`);
-console.log(`Using daat file: ${dataFile}`);
+const demoList = require('./demos/src/demo-list.json');
+// If argv.a exists, you are building all in `demoList`. Otherwise a single project.
+const names = argv.a ? demoList : [argv.i];
+// Browser-syn use `index.html` for argv.a or single individual projects' name
+const index = argv.a ? 'index.html' : `${argv.i}.html`;
 
-const projectName = argv.i;
+const prodSetting = {
+  "analytics": true,
+  "production": true
+};
+
+const tmpDir = '.tmp';
 
 process.env.NODE_ENV = 'dev';
 // change NODE_ENV between tasks.
@@ -52,48 +63,56 @@ gulp.task('dev', function(done) {
 
 gulp.task('html', () => {
   return co(function *() {
-    const destDir = '.tmp';
-    var renderResult = '';
 
-    if (!isThere(destDir)) {
-      mkdirp(destDir, (err) => {
-        if (err) console.log(err);
+    if (!isThere(tmpDir)) {
+      mkdirp.sync(tmpDir);
+    }
+
+    const data = yield Promise.all(names.map(name => {
+      const file = path.resolve(process.cwd(), `data/${name}.json`);
+      return helper.readJson(file);
+    }));
+
+    const renderResults = yield Promise.all(data.map(datum => {
+      const template = 'index.html';
+      console.log(`Using data file ${datum.name}.json`);
+
+      const context = merge({
+        footer: footer
+      }, datum.content);
+      
+      if (process.env.NODE_ENV === 'prod') {
+        Object.assign(context, prodSetting);
+      } 
+
+      return helper.render(template, context, datum.name);
+    }));
+
+    yield Promise.all(renderResults.map(result => {
+      return fs.writeFile(`${tmpDir}/${result.name}.html`, result.content, 'utf8');
+    }));
+
+  // If argv.a passed, you are building all projects. Let's generate an index page listing them all.
+    if (argv.a) {
+    // Data is nested under `content` field. Unwrap it.
+      const demoData = data.map(d => {
+        return d.content
       });
-    }
 
-   if (process.env.NODE_ENV === 'prod') {
-      context.analytics = true;
-      context.iconsPath = config.icons;
-      context.production = true;
-    }
+      const demoResult = yield helper.render('demo.html', {demos: demoData});
 
-    const data = yield fs.readFile(dataFile);
-    const context = JSON.parse(data);
-    if (context.footer) {
-      helper.merge(context.footer, footer);
-    } else {
-      context.footer = footer;
-    }
-    
-    context.projectName = projectName;
-
-    try {
-      renderResult = yield helper.render('index.html', context);
-    } catch (e) {
-      console.error(e.stack);
-    }
-
-    yield fs.writeFile('.tmp/index.html', renderResult, 'utf8');
+      yield fs.writeFile(`${tmpDir}/index.html`, demoResult, 'utf8');
+    }       
   })
   .then(function(){
-    browserSync.reload('index.html');
+    browserSync.reload('*.html');
   }, function(err) {
     console.error(err.stack);
   });
 });
 
 gulp.task('styles', function styles() {
-  const DEST = '.tmp/styles';
+  const DEST = `${tmpDir}/styles`;
 
   return gulp.src('client/scss/main.scss')
     .pipe($.changed(DEST))
@@ -129,9 +148,7 @@ gulp.task('eslint', () => {
 });
 
 gulp.task('webpack', function(done) {
-// change webpack config if env is production.
   if (process.env.NODE_ENV === 'prod') {
-    delete webpackConfig.watch;
     webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin())
   }
   webpack(webpackConfig, function(err, stats) {
@@ -147,50 +164,35 @@ gulp.task('webpack', function(done) {
   });
 });
 
-gulp.task('serve', 
-  gulp.parallel(
-    'html', 'styles', 'webpack', 
+gulp.task('wpwatch', () => {
+  return Promise.resolve(webpackConfig.watch = true);
+});
 
-    function serve() {
-    browserSync.init({
-      server: {
-        baseDir: ['.tmp', 'custom', 'public'],
-        routes: {
-          '/bower_components': 'bower_components'
-        }
-      },
-      files: 'custom/**/*.{css,js,csv}'
-    });
+gulp.task('serve',
+  gulp.series('wpwatch', 
+    gulp.parallel(
+      'html', 'styles', 'webpack', 
 
-    gulp.watch(['views/**/**/*.html', 'data/*.json'], gulp.parallel('html'));
-    gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
-  })
+      function serve() {
+      browserSync.init({
+        server: {
+          baseDir: [tmpDir, 'custom', 'public'],
+          index: index,
+          routes: {
+            '/bower_components': 'bower_components'
+          }
+        },
+        files: 'custom/**/*.{css,js,csv}'
+      });
+
+      gulp.watch(['views/**/**/*.html', 'data/*.json'], gulp.parallel('html'));
+      gulp.watch('client/scss/**/**/*.scss', gulp.parallel('styles'));
+    })
+  )
 );
 
-// /* build */
-// // use rollup and buble to build js
-// gulp.task('rollup', () => {
-//   return rollup({
-//     entry: 'client/js/main.js',
-//     plugins: [
-//       bowerResolve(),
-//       buble(),
-//       uglify()
-//     ],
-//     cache: cache,
-//   }).then(function(bundle) {
-//     cache = bundle;
-
-//     return bundle.write({
-//       format: 'iife',
-//       dest: '.tmp/scripts/main.js',
-//       sourceMap: true,
-//     });
-//   });
-// });
-
 gulp.task('custom', () => {
-  const SRC = 'custom/**/' + projectName + '.{js,css}';
+  const SRC = `custom/**/${projectName}.{js,css}`;
   const DEST = '.tmp';
   console.log('Copy custom js and css files to:', DEST);
 
@@ -207,86 +209,7 @@ gulp.task('prefix', () => {
         var srcset = source.attr('srcset')
         if (srcset) {
           srcset = srcset.split(',').map(function(href) {
-            return url.resolve(config.imgPrefix, href).replace('%20', ' ');
-          }).join(', ');
-          source.attr('srcset', srcset);
-        }    
-      });
-    }))
-    .pipe(gulp.dest('dist'));
-})
-
-gulp.task('smoosh', gulp.series('custom', function smoosh () {
-  return gulp.src('.tmp/index.html')
-    .pipe($.smoosher({
-      ignoreFilesNotFound: true
-    }))
-    .pipe($.useref())
-    .pipe($.rename({
-      basename: projectName, 
-      extname: '.html'
-    }))
-    .pipe(gulp.dest('dist')); 
-}));
-
-gulp.task('extras', function () {
-  return gulp.src('data/csv/*.csv', {
-    dot: true
-  })
-  .pipe(gulp.dest('dist'));
-});
-
-gulp.task('images', function () {
-  const SRC = './public/images/' + projectName + '/*.{svg,png,jpg,jpeg,gif}' ;
-  const DEST = path.resolve(__dirname, config.assets, 'images', projectName);
-  console.log('Copying images to:', DEST);
-
-  return gulp.src(SRC)
-    .pipe($.imagemin({
-      progressive: true,
-      interlaced: true,
-      svgoPlugins: [{cleanupIDs: false}],
-      verbose: true
-    }))
-    .pipe(gulp.dest(DEST));
-});
-
-gulp.task('clean', function() {
-  return del(['.tmp', 'dist']).then(()=>{
-    console.log('.tmp and dist deleted');
-  });
-});
-
-gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('html', 'styles', 'webpack', 'images', 'extras'), 'smoosh'));
-
-gulp.task('serve:dist', function() {
-  const indexFile = projectName + '.html';
-
-  browserSync.init({
-    server: {
-      baseDir: ['dist', 'public'],
-      index:  indexFile,
-      routes: {
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
-});
-
-/**********deploy***********/
-gulp.task('deploy:html', function() {
-  const DEST = path.resolve(__dirname, config.html)
-  console.log('Deploying built html file to:', DEST);
-  return gulp.src('dist/index.html')
-    .pipe($.prefix(config.imgPrefix))
-// Gulp-prefix cannot prefix <srouce srcset="url, url2">. Do it manually.
-    .pipe($.cheerio(function($, file) {
-      $('picture source').each(function() {
-        var source = $(this);
-        var srcset = source.attr('srcset')
-        if (srcset) {
-          srcset = srcset.split(',').map(function(href) {
-            return url.resolve(config.imgPrefix, href).replace('%20', ' ');
+            return url.resolve(config.urlPrefix, href.trim());
           }).join(', ');
           source.attr('srcset', srcset);
         }    
@@ -302,67 +225,77 @@ gulp.task('deploy:html', function() {
     .pipe($.size({
       gzip: true,
       showFiles: true
+    }))    
+    .pipe(gulp.dest('dist'));
+})
+
+gulp.task('smoosh', gulp.series('custom', function smoosh () {
+  return gulp.src('.tmp/*.html')
+    .pipe($.smoosher({
+      ignoreFilesNotFound: true
+    }))
+    .pipe(gulp.dest('dist')); 
+}));
+
+gulp.task('extras', function () {
+  return gulp.src('data/csv/*.csv', {
+    dot: true
+  })
+  .pipe(gulp.dest('dist'));
+});
+
+gulp.task('clean', function() {
+  return del(['.tmp', 'dist']).then(()=>{
+    console.log('.tmp and dist deleted');
+  });
+});
+
+gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('html', 'styles', 'webpack', 'extras'), 'smoosh'));
+
+/**********deploy***********/
+gulp.task('images', function () {
+  const imgDir = argv.a ? '**' : argv.i;
+  const destDir = argv.a ? '' : argv.i;
+  const SRC = `./public/images/${imgDir}/*.{svg,png,jpg,jpeg,gif}`;
+  const DEST = path.resolve(__dirname, `${config.assets}/images/${destDir}`);
+
+  console.log(`Copying images ${SRC} to: ${DEST}`);
+
+  return gulp.src(SRC)
+    .pipe($.imagemin({
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [{cleanupIDs: false}],
+      verbose: true
     }))
     .pipe(gulp.dest(DEST));
 });
 
-gulp.task('deploy', gulp.series('build', 'deploy:html'));
+gulp.task('deploy:html', function() {
+  const DEST = path.resolve(__dirname, config.html)
 
-// demos
-gulp.task('html:demo', () => {
-  console.log('Rename html to:', projectName, 'Copy all to: dist');
-  return gulp.src('.tmp/**/*.{html,css,js,map}')
-    .pipe($.if('index.html', $.rename({basename: projectName})))
-    .pipe(gulp.dest('dist'));
-});
+  console.log(`Deploying built html file to: ${DEST}`);
 
-// Build an index page listing all projects sent to test serve.
-// Read the content of selected project's json, get its `pageTitle` entry.
-// Read the content of `demos/index.json`. Use the `arig.i` as key to check if this key exists.
-// If this key does not exist, add it with `pageTitle` as value.
-gulp.task('index:demo', () => {
-  return co(function *() {
-    const dataFiles = [contentDataFile, 'demos/index.json'];
-    const destDir = 'dist';
-
-    if (!isThere(destDir)) {
-      mkdirp(destDir, (err) => {
-        if (err) console.log(err);
-      });
-    }
-
-    const [projectData, indexData] = yield Promise.all(dataFiles.map(helper.readJSON));
-    const key = argv.i;
-    const value = projectData.pageTitle;
-
-    if (!indexData.projectList) {
-      indexData.porjectList = {};
-    }
-    indexData.porjectList = indexData.porjectList || {};
-
-    if(!indexData.projectList.hasOwnProperty(key) || indexData.projectList[key] !== value) {
-      indexData.porjectList[key] = value;
-      const ws = fs.createWriteStream('demos/index.json');
-      ws.write(JSON.stringify(indexData));
-      ws.on('error', (error) => {
-        console.log(error);
-      });
-    }
-
-    const res = nunjucks.render('index.njk', indexData);
-    const indexPage = fs.createWriteStream('dist/index.html');
-    indexPage.write(res);
-    indexPage.on('error', (error) => {
-      console.log(error);
-    });
-  });
-});
-
-gulp.task('copy:demo', () => {
-  const DEST = path.resolve(__dirname, config.assets, 'ig-template');
-  console.log('Copy demo of', projectName, 'to', DEST);
-  return gulp.src('dist/**/*.{html,js,css,map}')
+  return gulp.src('dist/*.html')
     .pipe(gulp.dest(DEST));
 });
 
-gulp.task('demo', gulp.series('clean', gulp.parallel('html', 'styles', 'webpack', 'images', 'custom', 'index:demo'), 'html:demo', 'copy:demo'));
+gulp.task('deploy', 
+  gulp.series('build', 
+    gulp.parallel(
+      'images',
+      'deploy:html'
+    )
+  )
+);
+/**************/
+
+gulp.task('demo:copy', () => {
+  const dest = path.resolve(__dirname, config.assets, path.basename(__dirname));
+  console.log(`Copying assets to ${dest}`);
+
+  return gulp.src(['tmp/**/*', 'custom/**/*.{js,css}'])
+    .pipe(gulp.dest(dest));
+});
+
+gulp.task(gulp.series('clean', gulp.parallel('html', 'styles', 'webpack', 'images', 'extras')));
