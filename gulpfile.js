@@ -39,7 +39,7 @@ const config = require('./config.json');
 const demoList = require('./demos/src/demo-list.json');
 // If argv.a exists, you are building all in `demoList`. Otherwise a single project.
 const names = argv.a ? demoList : [argv.i];
-// Browser-syn use `index.html` for argv.a or single individual projects' name
+// Browser-sync use `index.html` for argv.a or single individual projects' name
 const index = argv.a ? 'index.html' : `${argv.i}.html`;
 
 const prodSetting = {
@@ -246,7 +246,7 @@ gulp.task('prefix', () => {
       gzip: true,
       showFiles: true
     }))    
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('.tmp'));
 })
 
 gulp.task('smoosh', gulp.series('custom', function smoosh () {

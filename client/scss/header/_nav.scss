@@ -71,7 +71,7 @@
 
 	@include oColorsFor(o-header-nav, background);
 	
-	.o-header--light & {
+	.o-header--theme-light & {
 		@include oColorsFor(o-header-nav--light, background);
 	}
 
