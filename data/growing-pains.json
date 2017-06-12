@@ -16,13 +16,13 @@
 	"ogType": "article",
 	"ogImage": "",
 	"ogUrl": "",
-	"pageTitle": "growing pains",
+	"pageTitle": "Growing Pains",
 	"wechatImage": "/images/myanmar/sapienza_new-lr_cycwhld.jpg",	
 	"edition": {
 		"text": "English",
-		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
+		"href": "https://ig.ft.com/special-reports/growing-pains/"
 	},
-	"seriesTitle": "调查",
+	"seriesTitle": "特别报道",
 	"sections": [
 		{
 			"_note": "This section is the article's cover.",
@@ -60,7 +60,7 @@
 						"head": {
 							"verticalCenter": true,
 							"lead": null,
-							"title": "缅甸失地农民",
+							"title": "Growing Pains",
 							"heading": null,
 							"subtitle": "被打乱的生活",
 							"intro": null						
@@ -247,7 +247,7 @@
 							"headFor": "section",
 							"lead": false,
 							"title": false,
-							"heading": "2. 抱负",
+							"heading": "2. ‘To be a girl playing basketball — that’s the number one challenge’",
 							"subtitle": "",
 							"intro": ""							
 						}
@@ -259,7 +259,7 @@
 					"colPrimary": [
 						{
 							"text": [
-								"去年的选举标志着缅甸在近半个世纪军政府统治之后对外开放迈出的关键一步。该国经济增长率超过8%，而且处于亚洲战略要冲，自2011年军政府倒台以来，这个国家吸引了国际投资者的浓厚兴趣。",
+								"The Adams girls are luckier than some. Each day after school they are bussed to Children of Promise (CPNYC), the only after-school programme in New York City dedicated to children whose parents have been to jail.",
 								"咨询公司麦肯锡(McKinsey)预计，到2030年，缅甸经济规模可能增长至2010年的4倍以上，达到2000亿美元的峰值。包括联合利华(Unilever)、可口可乐(Coca-Cola)以及啤酒制造商喜力(Heineken)和嘉士伯(Carlsberg)在内的消费品企业已纷纷进入缅甸。"
 							]					
 						},
@@ -324,7 +324,7 @@
 					"type": "text-over-media",
 					"media": {
 						"video": {
-							"poster": "/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg",
+							"poster": "/images/growing-pains/section3-cover.jpg",
 							"source": {
 								"mp4": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_3.mp4.mp4",
 								"webm":  "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.webm"
@@ -336,13 +336,13 @@
 									"landscape": true,
 									"portrait": false,
 									"srcset": [
-										"/images/myanmar/2560_beach_football_backup-lr_ff6vr1u.jpg 1100w",
-										"/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg 1500w",
-										"/images/myanmar/2560_beach_football_backup-hr_mnvbsnw.jpg"
+										"/images/growing-pains/section3-cover.jpg 1100w",
+										"/images/growing-pains/section3-cover.jpg 1500w",
+										"/images/growing-pains/section3-cover.jpg"
 									]
 								}
 							],
-							"src": "/images/myanmar/2560_beach_football_backup-mr_4rt5h4b.jpg"	
+							"src": "/images/growing-pains/section3-cover.jpg"	
 						}
 					},
 					"text": {
@@ -350,7 +350,7 @@
 							"headFor": "section",
 							"lead": null,
 							"title": null,
-							"heading": "3. 村庄",
+							"heading": "3. ‘She’s maybe the kid I wish I could have been when I was her age’",
 							"subtitle": null,
 							"intro": null,
 							"byline": null							
@@ -487,7 +487,7 @@
 									]							
 								}
 							],
-							"src": "/images/myanmar/conflict-mr.jpg"
+							"src": "/images/growing-pains/section4-cover.jpg"
 						}
 					},
 					"text": {
@@ -495,7 +495,7 @@
 							"headFor": "section",
 							"lead": null,
 							"title": null,
-							"heading": "4. 导火索",
+							"heading": "4. ‘I’ll send you money, but y’all can’t come to Drake’s house’",
 							"subtitle": null,
 							"intro": "“任何一个购买土地的人都有可能发现自己陷入纠纷”",
 							"byline": null								
