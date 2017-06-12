@@ -7,16 +7,16 @@
 	},
 	"highcharts": false,
 	"d3": false,
-	"customCss": false,
+	"customCss": true,
 	"customJs": false,
 	"enableScroll": true,
 	"autoNav": false,
 	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
-	"ogTitle": "缅甸失地民",
+	"ogTitle": "成长的烦恼",
 	"ogType": "article",
 	"ogImage": "",
 	"ogUrl": "",
-	"pageTitle": "Growing Pains",
+	"pageTitle": "成长的烦恼",
 	"wechatImage": "/images/myanmar/sapienza_new-lr_cycwhld.jpg",	
 	"edition": {
 		"text": "English",
@@ -60,7 +60,7 @@
 						"head": {
 							"verticalCenter": true,
 							"lead": null,
-							"title": "Growing Pains",
+							"title": "成长的烦恼",
 							"heading": null,
 							"subtitle": "被打乱的生活",
 							"intro": null						
@@ -86,7 +86,7 @@
 							"provider": "ft",
 							"poster": "/images/myanmar/mpv-shot0001.jpg",
 							"sources": {
-								"mp4": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.mp4.mp4",
+								"mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4",
 								"webm": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm"
 							}
 						},
@@ -141,17 +141,7 @@
 								"说到那个天然气终端的影响时，她说：“因为我们不再拥有那些土地，我们成了不得不为其他人打工的穷人。我每天看到那些建筑物都会哭。”"
 							]
 						}
-					],
-					"colSecondary": {
-						"image": {
-							"sticky": "true",
-							"ratio": null,
-							"title": null,
-							"link": "https://www.ft.com/land",
-							"src": "/images/myanmar/new_logo.png",
-							"caption": null
-						}
-					}							
+					]							
 				},
 				{
 					"_note": "Segment 3 for section 1.",
