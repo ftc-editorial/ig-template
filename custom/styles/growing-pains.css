@@ -1,0 +1,20 @@
+.o-header{
+	background-color: #9e2f50;
+}
+
+.ig-head__inner {
+    padding: 20%;
+}
+
+.ig-byline{
+	bottom:5em;
+
+}
+
+.ig-figure__caption {
+    text-align: left;
+}
+
+a{
+	color:#5a93c5;
+}
