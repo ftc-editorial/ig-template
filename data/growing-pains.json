@@ -31,7 +31,14 @@
 				{
 					"type": "text-over-media",
 					"media": {
-						"video": null,
+						"video": {
+							"provider": "ft",
+							"poster": "/images/myanmar/mpv-shot0001.jpg",
+							"sources": {
+								"mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
+							}
+						},
+
 						"picture": {
 							"sources": [
 								{
@@ -62,8 +69,8 @@
 							"lead": null,
 							"title": "成长的烦恼",
 							"heading": null,
-							"subtitle": "被打乱的生活",
-							"intro": null						
+							"subtitle": null,
+							"intro": "Armani and Eva were born thousands of miles apart into very different worlds. Both girls are bright, sensitive and determined — and both are entering adolescence, a critical period when choices are made that could help them flourish or restrict their horizons forever"						
 						},
 						"byline": {
 							"publishTime": "2017年5月15日",
@@ -76,13 +83,15 @@
 
 		{
 			"_note": "Section 1",
-			"navText": "1. 阿美尼亚，美国布鲁克林",
+			"navText": "美国布鲁克林 阿美尼亚",
 			"segments": [
 				{
 					"_note": "cover of 1st section.",
 					"type": "text-over-media",
 					"sticky": false,
+
 					"media": {
+
 						"video": {
 							"provider": "ft",
 							"poster": "/images/myanmar/mpv-shot0001.jpg",
@@ -91,6 +100,7 @@
 								"webm": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm"
 							}
 						},
+
 						"picture": {
 							"sources": [
 								{
@@ -108,6 +118,7 @@
 					},
 					"text": {
 						"head": {
+							"verticalCenter": true,
 							"headFor": "section",
 							"title": null,
 							"heading": "阿美尼亚",
@@ -214,6 +225,7 @@
 
 					"text": {
 						"head": {
+							"verticalCenter": true,
 							"headFor": "section",
 							"lead": false,
 							"title": false,
@@ -319,12 +331,13 @@
 
 					"text": {
 						"head": {
+							"verticalCenter": true,
 							"headFor": "section",
 							"lead": false,
 							"title": false,
 							"heading": "‘She’s maybe the kid I wish I could have been when I was her age’",
 							"subtitle": "",
-							"intro": ""							
+							"intro": "- Arlene, on her daughter"							
 						}
 					}
 
@@ -407,12 +420,13 @@
 
 					"text": {
 						"head": {
+							"verticalCenter": true,
 							"headFor": "section",
 							"lead": false,
 							"title": false,
 							"heading": "‘I’ll send you money, but y’all can’t come to Drake’s house’",
 							"subtitle": "",
-							"intro": ""							
+							"intro": "- Armani plans her ultimate dream: hanging out with the rapper Drake"							
 						}
 					}
 
@@ -424,10 +438,10 @@
 						{
 							"text": [
 								"The girls take two city buses to get to their elementary school. As the 103 rolls downtown, Armani lays out a series of events that will result in her ultimate dream: hanging out with the rapper Drake.",
-								"Step 1: “What if Rondae Hollis-Jefferson [the basketball player] sees me at the Nets game?”",
-								"Step 2: “And what if he remembers me [from the day he was doing an event at a local Target store and posed for pictures with Armani] and invites me to the locker room?”",
-								"Step 3: “What if he introduces me to [rival player] Russell Westbrook?”",
-								"Step 4: “What happens if I talk to Russell Westbrook and he gives me his number? I bet I’ll get it.”",
+								"<b><i>第一步：</i></b> “What if Rondae Hollis-Jefferson [the basketball player] sees me at the Nets game?”",
+								"<b><i>第二步：</i></b>“And what if he remembers me [from the day he was doing an event at a local Target store and posed for pictures with Armani] and invites me to the locker room?”",
+								"<b><i>第三步：</i></b>“What if he introduces me to [rival player] Russell Westbrook?”",
+								"<b><i>第四步：</i></b>“What happens if I talk to Russell Westbrook and he gives me his number? I bet I’ll get it.”",
 								"“Next thing you know I’m at Drake’s house.”",
 								"Arlene asks that she not forget the little people. “I won’t forget you,” Armani replies, “I’ll send you money, but y’all can’t come to Drake’s house.”"
 							]
@@ -492,6 +506,7 @@
 
 					"text": {
 						"head": {
+							"verticalCenter": true,
 							"headFor": "section",
 							"lead": false,
 							"title": false,
@@ -562,7 +577,7 @@
 
 		{
 			"_note": "Section 2",
-			"navText": "2. 抱负",
+			"navText": "中国坪上镇 谢雅琦（伊娃）",
 			"segments": [
 				{
 					"_note": "Segement 1. Cover for section 2",
@@ -584,24 +599,25 @@
 									"landscape": true,
 									"portrait": false,
 									"srcset": [
-										"/images/growing-pains/armani-cover.jpg 1100w",
-										"/images/growing-pains/armani-cover.jpg 1500w",
-										"/images/growing-pains/armani-cover.jpg"
+										"/images/growing-pains/xie-cover.png 1100w",
+										"/images/growing-pains/xie-cover.png 1500w",
+										"/images/growing-pains/xie-cover.png"
 									]
 								}
 							],
-							"src": "/images/growing-pains/armani-cover.jpg"	
+							"src": "/images/growing-pains/xie-cover.png"	
 						}
 					},
 
 
 					"text": {
 						"head": {
+							"verticalCenter": true,
 							"headFor": "section",
 							"title": null,
-							"heading": "谢",
+							"heading": "谢雅琦（伊娃）",
 							"subtitle": null,
-							"intro": "中国平山"							
+							"intro": "中国，坪上镇"							
 						}
 					}
 				},
@@ -612,10 +628,10 @@
 					"colPrimary": [
 						{
 							"text": [
-								"Xie Yaqi is 12 years old.",
-								"Her English name is Eva. She carries it like a talisman; it reminds her of her favourite teacher back in the big city — and of her father. She has not seen her parents in two months.",
-								"Eva’s short life has straddled two worlds. Until she was seven, she was raised by her grandmother in the rural Pingshang township, while her parents moved between jobs in Guangdong province, the growth engine of China’s manufacturing industry. As soon as her father got a good enough job, he brought Eva to live with her mother and younger brother in the city and paid for her to attend a private school.",
-								"But last September, Eva’s father was forced to send his daughter back to the backwater he thought they had escaped."
+								"谢雅琦今年12岁。",
+								"她的英文名字叫伊娃(Eva)，她把这个名字当作护身符，它让她想起还在那座大城市里时，她最喜欢的老师，以及她的父亲。她已经两个月没见过父母了。",
+								"伊娃短短的人生已跨越了两个世界。七岁之前她在坪上镇由奶奶抚养，而她的父母则在中国的制造业增长引擎广东省不断地换工作。当伊娃的父亲终于找到一份还算不错的工作时，马上就把她接来与母亲和弟弟一起生活在城市里，还出钱让她上私立学校。",
+								"但去年9月，伊娃的父亲被迫将女儿送回封闭落后的乡下，那个他以为他们已经逃离的地方。"
 							]					
 						},
 						{
@@ -625,15 +641,15 @@
 								"title": "",
 								"link": false,
 								"src": "/images/growing-pains/xie-1-1.jpg",								
-								"caption": "Eva in her family home in Pingshang township, Hunan province"
+								"caption": "伊娃在湖南省坪上镇家中。"
 								}		
 						},
 						{
 							"text": [
-								"缅甸还拥有丰富的自然资源。自绝对军事统治结束以来的油田拍卖吸引了众多买家的兴趣，从美国雪佛龙(Chevron)、英荷石油公司——荷兰皇家壳牌(Royal Dutch Shell)、印度信实工业(Reliance Industries)，到哈萨克斯坦天然气巨头以及形形色色的当地大亨。",
-								"然而，一些冶炼行业受到侵犯人权和腐败指控的困扰。翡翠的年产值据估计达到310亿美元，相当于缅甸官方国内生产总值(GDP)的近一半。缅甸出产的这种贵重玉石有许多通过北部边境被走私出境，用于满足中国新富阶层推动的市场。",
-								"“I begged my mother to let me stay,” Eva says. “At first she agreed, but then my father didn’t have enough money. School fees over there are expensive. Actually, my mother tricked me into coming back... she said I should visit my grandmother for the summer. I missed my grandmother so I happily agreed to go home. After I got here I found out.”",
-								"Eva’s mother broke the news by telephone. “She said, ‘Yaqi, you can’t go back to school in Guangdong because your dad has too many debts. We don’t have enough money to send both you and your brother to school.’ I was very sad. I cried and cried into the quilt.”"
+								"据2010年最新全国人口普查，中国约有7000万名儿童不在父母身边生活，伊娃是其中之一。",
+								"自大规模移民40年前开始以来，已经有超过2.81亿人迁往城市，这是历史上规模最大、速度最快的一场人口流动。有些留守儿童始终未离开过农村，有些虽然进了城，但当父母再次流动时，他们却不能跟随。还有些孩子，比如伊娃，被带到城市却又再次被送回。",
+								"伊娃说：“我恳求妈妈让我留下来，当初她是答应了的。后来因为我爸爸现金不够……而且那边学费也很贵。我是被我妈骗回来了其实，她说暑假了，你回去看一下你奶奶，我也舍不得我奶奶。我那时候就高高兴兴地答应了，想回去看看奶奶，可是后来我才发现。”",
+								"伊娃的妈妈在电话里跟女儿说出了实情。“她说，‘雅琦，你不能回广东上学了，因为你爸爸欠了很多债，钱实在是不够你们两个学习了’。我那时候很伤心，然后躲被窝里面哭啊哭。”"
 							]
 						}
 					
@@ -666,12 +682,13 @@
 
 					"text": {
 						"head": {
+							"verticalCenter": true,
 							"headFor": "section",
 							"lead": false,
 							"title": false,
-							"heading": "‘We don’t have enough money to send you both to school’",
+							"heading": "“钱实在是不够你们两个学习了”",
 							"subtitle": "",
-							"intro": "- Eva's mother on why her daughter had to return to the countryside"							
+							"intro": "——伊娃的妈妈解释为什么她的女儿必须回乡下"							
 						}
 					}
 
@@ -682,10 +699,10 @@
 					"colPrimary": [
 						{
 							"text": [
-								"Eva must live in Pingshang in part because China’s school system has not kept pace with the country’s momentous population shift. Under the hukou, the household registration system that was established in the 1950s, people are still bound to their birthplace for access to education and healthcare.",
-								"The Chinese migrants who left their villages in the 1980s and 1990s left their children behind because the conditions in workers’ dormitories and their 12-hour shifts made it nearly impossible to raise a child. Later, more educated migrants found better jobs, rented private rooms and paid for their children to join them and attend unofficial schools. Today, more relaxed rules allow migrants to gain citizenship in one of the smaller cities if they can afford to buy property there.",
-								"By 2014, more than half of all children of migrants lived with at least one parent in a city, up from 30 per cent in 2010.",
-								""
+								"伊娃之所以必须住在坪上镇，一部分是因为中国的学校制度没有跟上中国这场声势浩大的人口流动。由于户口制度（上世纪50年代建立），人们仍然只能在自己的出生地接受教育和医疗保障。",
+								"中国上世纪八九十年代离开乡村的流动人员之所以将孩子留在家乡，是因为员工宿舍的条件以及他们的12小时轮班制，令他们几乎不可能养育孩子。后来，受过更多教育的流动人员找到了更好的工作，自己租了房子，花钱把子女接到身边生活，让他们念非公办学校。现在的规定更为宽松，在一些中小城市，流动人员如果能买房子，就可以获得当地户口。",
+								"至2014年，一半以上的流动人员子女至少跟着一名父母生活在城里，这个比例高于2010年的30%。"
+					
 							]
 						},
 						{
@@ -695,15 +712,14 @@
 								"title": "",
 								"link": false,
 								"src": "/images/growing-pains/xie-chart-1.png",								
-								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								"caption": ""
 								}		
 						},
 						
 						{
 							"text": [
-								"The logic of a migrant teenager’s education works like this: China’s highly competitive college entrance exam, the gaokao, can only be taken in the province where the student’s hukou is registered. The test requires memorising textbooks specific to that province, so students must attend high school and, usually, middle school, in that province. As a result, a migrant child’s path to the gaokao starts in the parents’ hometown, no matter how long ago they may have migrated away.",
-								"在一个以农业为主、有许多偏远地区和不受政府控制的区域的贫穷国家里，土地既是一种无价的实物资产，又是一种情感寄托，构成人们自我认同的一部分。它是社会中的主线，围绕土地的冲突有可能导致骚乱。",
-								"致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”"
+								"流动儿童的教育是这样的：学生只能在户口所在省份参加高考。高考需要考生掌握该省专用教科书，因此学生必须在该省上高中，通常还要在该省上初中。结果就是，流动儿童的高考之路要从父母的家乡开始，不管父母已经搬去外地多久了。",
+								"是要一家人一起生活，还是要让学龄孩子继续上学，身为父母的流动人员必须做出选择。他们的选择对女孩造成的压力最大。在6岁到14岁年龄段，男孩更可能与父母一起生活在城里。由于重男轻女的文化传统，那些留守女孩在即将进入少女时期时，已然在中国竞争性教育体系中落了下风。"
 							]
 						},
 						{
@@ -713,14 +729,14 @@
 								"title": "",
 								"link": false,
 								"src": "/images/growing-pains/xie-chart-2.png",								
-								"caption": "Eva is one of the 61m left-behind children living in rural areas"
+								"caption": "伊娃是6100万生活在农村的留守儿童之一。"
 								}		
 						},
 						{
 							"text": [
-								"Left-behind children, especially in the poorest villages, are more vulnerable to sexual abuse and kidnapping. Teenagers are far more likely to drop out of school or end up in jail. Sensational headlines about left-behind children killing themselves or others have shocked China, as have tales of tiny children left to take care of sick grandparents. Local governments will soon be required to provide guardians for the estimated 2m children who live without any adult present at all.",
-								"在一个以农业为主、有许多偏远地区和不受政府控制的区域的贫穷国家里，土地既是一种无价的实物资产，又是一种情感寄托，构成人们自我认同的一部分。它是社会中的主线，围绕土地的冲突有可能导致骚乱。",
-								"致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”"
+								"留守儿童，尤其是生活在贫困村庄的留守儿童，更易遭受性侵和绑架。留守少年辍学或最终进监狱的可能性也高得多。关于留守儿童自杀或杀害他人的耸动新闻，以及稚童被留下来照顾患病祖父母的故事，震惊了全中国。据估计有200万儿童在没有任何成年人照料的状态下生活，地方政府很快将必须为他们提供监护人。",
+								"对于像伊娃家这样经济条件较好的家庭来说，伤害主要是心理上的。2014年联合国儿童基金会(Unicef)在一份中国儿童调查报告中指出：“大多数留守儿童与父母的接触不规律且少，他们感到孤独、孤立无援。”",
+								"伊娃九岁的弟弟一开始也被送回坪上镇，但他太调皮捣蛋，于是伊娃的父母把他带回了城市。 小的时候，在搬去城里之前，伊娃与奶奶一起生活，那时她曾嫉妒待在父母身边的弟弟。而现在姐弟俩又分开了，她倒是怀念过去逗弟弟的时候。"
 							]
 						}
 
@@ -752,12 +768,13 @@
 
 					"text": {
 						"head": {
+							"verticalCenter": true,
 							"headFor": "section",
 							"lead": false,
 							"title": false,
-							"heading": "‘I missed my grandmother so I happily agreed to go home’",
+							"heading": "“我也舍不得我奶奶，我那时候就高高兴兴的答应了，想回去看看奶奶”",
 							"subtitle": "",
-							"intro": "- Eva, on how she was originally persuaded to leave her parents behind in Guangdong"							
+							"intro": "——伊娃解释她当初是怎么被说服离开在广东的父母的  "							
 						}
 					}
 
@@ -768,9 +785,9 @@
 					"colPrimary": [
 						{
 							"text": [
-								"Eva’s home in Pingshang is still half-finished, because her father ran out of money to build it. Ornate floor tiles contrast with raw concrete walls and a staircase without a banister.",
-								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。",
-								"Eva squints because she doesn’t like to wear her glasses. The squinting makes her look anxious, and she is. When she lived with her parents in Guangdong, she worried that her grandmother might suffer a fall and that no one would take care of her. Now that she is back in Pingshang, she worries that perhaps she fought too much with her brother and caused her mother too much trouble."
+								"伊娃在坪上镇的家还未完工，因为她父亲建到一半没钱了。与漂亮的地砖形成鲜明对比的，是粗糙的混凝土墙壁和没装栏杆的楼梯。",
+								"屋外，整夜都有蛙鸣，公鸡每天清晨打鸣。伊娃和奶奶、婶婶以及婶婶的两个年幼的儿子住在一起，他们的父亲也在外面打工。",
+								"因为不喜欢戴眼镜，伊娃要眯着眼睛看东西，这表情让她看起来很焦虑，她也确实焦虑。在广东和父母一起生活时，她担心奶奶可能跌倒，担心没人照顾奶奶。现在她回到坪上镇，又担心以前可能跟弟弟争吵太多，让妈妈太操心。"
 							]
 						},
 						{
@@ -780,14 +797,14 @@
 								"title": "",
 								"link": false,
 								"src": "/images/growing-pains/xie-2-1.jpg",								
-								"caption": "The view from outside Eva’s school in Pingshang"
+								"caption": "坪上镇伊娃所念学校外部景观"
 								}		
 						},
 						{
 							"text": [
-								"Eva’s home in Pingshang is still half-finished, because her father ran out of money to build it. Ornate floor tiles contrast with raw concrete walls and a staircase without a banister.",
-								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。",
-								"Eva squints because she doesn’t like to wear her glasses. The squinting makes her look anxious, and she is. When she lived with her parents in Guangdong, she worried that her grandmother might suffer a fall and that no one would take care of her. Now that she is back in Pingshang, she worries that perhaps she fought too much with her brother and caused her mother too much trouble."
+								"伊娃的父亲谢再生也担心着自己的女儿。他觉得跟父母分开生活损害了她的自尊心。他说：“我不觉得这件事有什么羞于启齿的，这是我们整个社会的问题。这是压在我心头最大的石头。”",
+								"伊娃的父亲走出坪上镇凭的是英语能力。伊娃说：“我爸爸对我英文很严格，他说想要出人头地，先学会英文。”",
+								"伊娃刚开始是讨厌这门语言的：“爸爸让我背ABC，我就很生气，差点把那个表全部撕掉了。因为爸爸老是很严格的，（家里）就天天打冷战。后来爸爸就把我送到另一个学校，小牛津(Little Oxford)，那边每班都有两个英语老师，一个外国人，一个中国人。那时候我就突然爱上了英文。”"
 							]
 						},
 						{
@@ -795,16 +812,17 @@
 								"provider": "cc",
 								"title": "",
 								"src":"http://p.bokecc.com/player?vid=C760A2798F56CA899C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
-								"caption": "Eva talks about learning English at Little Oxford school in Guangdong "
+								"caption": "伊娃谈起在广东小牛津学校学习英语"
 							}
 						},
 						
 						{
 							"text": [
-								"The implacable logic of the gaokao means that Eva would have had to move back to Pingshang for middle school even if her parents had been able to afford more private tuition in the city — their money problems only brought her exile forward by two years.",
-								"在一个以农业为主、有许多偏远地区和不受政府控制的区域的贫穷国家里，土地既是一种无价的实物资产，又是一种情感寄托，构成人们自我认同的一部分。它是社会中的主线，围绕土地的冲突有可能导致骚乱。",
+								"高考的无情逻辑意味着，就算父母拿得出更多钱让她在城里上私立学校，她也必须回坪上镇念初中，所以他们的财务问题只是将她回乡的时间提前了两年。",
+								"坪上镇的孩子要是初中（就读年龄为12岁到15岁）成绩还不错，或许有机会进附近城市一所寄宿学校。更好的高中意味着有希望上更好的大学，这就能转化成一份带着城市户口的工作。像伊娃这样的孩子之所以被送回乡下，是为了有机会拥有更好的未来——事实上也是重走父母走过的旅程。",
 								"致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”",
-								"“They are so tired,” she adds. “I make them sad because I don’t behave.”"
+								"因为会英语，伊娃的父亲在广东担任质量控制检验员，为外国买家检验产品。伊娃的母亲初中学历，在超市工作。伊娃说：“如果有急事，我会给她打电话。但一般我不打……我不想打扰她。有时候她上晚班，我又不知道她的排班。”",
+								"她说“他们太累了。我让他们难过，因为我不听话。”"
 							]
 						}
 					]
@@ -835,12 +853,13 @@
 
 					"text": {
 						"head": {
+						    "verticalCenter": true,
 							"headFor": "section",
 							"lead": false,
 							"title": false,
-							"heading": "‘Left-behind children are isolated in school, withdrawn’",
+							"heading": "“留守儿童在学校有点孤僻，有一点自闭的症状。”",
 							"subtitle": "",
-							"intro": "- Xie Xiaolin, Eva’s school principal"							
+							"intro": "——伊娃学校的校长谢小林  "							
 						}
 					}
 
@@ -851,10 +870,10 @@
 					"colPrimary": [
 						{
 							"text": [
-								"Eva’s mathematics teacher in Pingshang, Liu Zhenzhen, says Eva struggled when she moved from the city back to the school she had left as a small child. “She needed some time to adjust.”",
-								"Schools in Pingshang are good for a town of its size. The administration has not been shy about tapping the town’s diaspora for donations, to fill its budget gaps. A few years ago, a dance studio was built but it remains locked and unused. No dance teacher wanted to live in Pingshang.",
-								"缅甸的土地纠纷也让投资踌躇不前，而缅甸恰恰需要更多的投资。土地纠纷成为前来投资的企业确认的最明显风险之一。这包括了过去政府强占土地的遗留纠纷。投资者担心所有权争议带来的麻烦，以及由此而来的法律影响、罚款以及可能的负面舆论。",
-								"When she grows up, Eva wants to be a teacher."
+								"伊娃在坪上镇的数学老师刘珍珍说，伊娃离开这所学校时还很小，从城里再次回来上学那段时间，她过得很艰难。“她需要一些时间来调整。”",
+								"以一所乡镇学校的规模来说，坪上镇学校情况不错。当地政府并不羞于向出去的那些人寻求捐款，以填补其预算赤字。几年前这里建好了一个舞蹈工作室，但至今大门紧闭，闲置无用。因为没有舞蹈教师想住在坪上镇。",
+								"数学老师轮流教几个班，每班有50个孩子，两人一组坐在不配套的桌子后面。孩子们朗诵着课文，被老师点到名时大声说出答案。午餐时，有人从食堂提来一桶桶食物到教室吃。其他人打扫院子，用拖布拖楼梯。",
+								"伊娃希望长大后成为一名老师。"
 							]
 						},
 						{
@@ -864,15 +883,14 @@
 								"title": "",
 								"link": false,
 								"src": "/images/growing-pains/xie-3-1.jpg",								
-								"caption": "Eva in a classroom at her rural school"
+								"caption": "伊娃在这所乡下学校的教室里。"
 								}		
 						},
 						{
 							"text": [
-								"Nearly half of Pingshang’s adults have moved away, mostly to Guangdong. Manufacturing wages there are about 10 times average farming incomes at home. Xie Xiaolin, the head of Eva’s school, says about two-thirds of his 1,100 pupils have at least one parent away. Around one-third have neither parent at home.",
-								"Schools in Pingshang are good for a town of its size. The administration has not been shy about tapping the town’s diaspora for donations, to fill its budget gaps. A few years ago, a dance studio was built but it remains locked and unused. No dance teacher wanted to live in Pingshang.",
-								"缅甸的土地纠纷也让投资踌躇不前，而缅甸恰恰需要更多的投资。土地纠纷成为前来投资的企业确认的最明显风险之一。这包括了过去政府强占土地的遗留纠纷。投资者担心所有权争议带来的麻烦，以及由此而来的法律影响、罚款以及可能的负面舆论。",
-								"When she grows up, Eva wants to be a teacher."
+								"坪上镇近一半的成年人都外出了，多数是去广东。那里制造业的工资是家乡务农平均收入的10倍左右。伊娃学校的校长谢小林说，他的1100名学生中有约三分之二的孩子至少有一个家长外出打工，约三分之一的孩子双亲都外出了。",
+								"他担心孩子们在独自上学的路上发生交通事故，吃劣质的街头食物。根据他的经验，留守儿童的成绩通常在班级里排末尾。他说：“他们的成绩不是很好，他们性格的话，我觉得还是有缺陷。第一是由缺爱引起的，第二他们在学校有点孤僻，好像不愿意更多的主动去和别人交流，有一点自闭的症状。”有些孩子很调皮。",
+								"他说：“这是一个我们无法解决的矛盾。父母们离开是为了孩子好。”"
 							]
 						},
 						{
@@ -880,14 +898,14 @@
 								"provider": "cc",
 								"title": "",
 								"src":"http://p.bokecc.com/player?vid=7FD4CD7C00CD93319C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
-								"caption": "School head Xie worries about the left-behind children attending his school"
+								"caption": "校长谢小林为学校里的留守儿童感到担忧。"
 							}
 						},
 						
 						{
 							"text": [
-								"土地纠纷也是在缅甸之外可引起广泛共鸣的话题。缅甸的困难可能比较极端，但困扰它的问题——投机、大公司和当地社区之间的紧张关系、祖祖辈辈一直从事的生计的丧失——具有普遍性。",
-								"Bad behaviour can work in a boy’s favour, as it did for Eva’s brother. Given the importance of a son in traditional Chinese families, parents are more likely to respond if a boy appears to be having trouble in school. Eva’s cousin, for example, left her office job in the prosperous city of Hangzhou and moved home after her son began skipping school."
+								"伊娃的数学老师说：“女孩子要好管些。男孩子很淘气。如果他们的父母不在身边，他们往往会调皮捣蛋。有些女孩会跟祖父母或老师谈心，有些不跟任何人交心。”",
+								"调皮捣蛋可能会为男孩子带来好处，伊娃的弟弟就是这样。由于儿子在中国传统家庭中的重要性，如果是男孩在学校里遇到问题，父母们更有可能作出应对。比如伊娃的婶婶，就在儿子开始逃学之后，放弃了在繁华都市杭州的办公室工作，回到了老家。"
 							]
 						}
 					]
@@ -918,12 +936,13 @@
 
 					"text": {
 						"head": {
+						    "verticalCenter": true,
 							"headFor": "section",
 							"lead": false,
 							"title": false,
-							"heading": "‘I’m not a ‘tiger dad’. I want her to be optimistic and secure’",
+							"heading": "“我不是虎爸，我希望她快乐平安”",
 							"subtitle": "",
-							"intro": "- Eva's father, Xie Zaisheng"							
+							"intro": "——伊娃的父亲谢再生 "							
 						}
 					}
 
@@ -934,8 +953,8 @@
 					"colPrimary": [
 						{
 							"text": [
-								"It has been eight months since Eva left Little Oxford, and she is struggling to retain her English. Her new school doesn’t teach it. She has heard that her beloved foreign teacher, Emily, has moved back to the UK. She has found a new hobby, Honor of Kings, a fantasy role-playing game for smartphones that has taken China by storm.",
-								"It has also caused some storms at home. Eva’s father considers himself lucky to have escaped Pingshang just as China’s entry into the World Trade Organisation opened up a world of opportunity. He learnt English in night classes and by immersing himself in Hollywood movies. He wants Eva to study instead of playing video games."
+								"伊娃离开小牛津已经8个月了，她在保持英语水平方面遇到一些困难。她的新学校没有英语课。她听说自己心爱的外籍老师埃米莉(Emily)已经回英国去了。她有了一个新爱好，王者荣耀(Honor of Kings)，这个奇幻角色扮演手游在中国非常火爆。",
+								"这个游戏在家里也引起了一些火药味。伊娃的父亲认为自己很幸运，他逃离坪上镇时，正赶上中国加入世贸组织(WTO)，开启了一个充满机遇的时代。他在夜校上课，还埋头观看好莱坞电影，从而学会了英语。他想让伊娃好好学习，不要玩视频游戏。"
 							]
 						},
 						{
@@ -945,13 +964,13 @@
 								"title": "",
 								"link": false,
 								"src": "/images/growing-pains/xie-4-1.jpg",								
-								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								"caption": "坪上镇家中墙上挂着伊娃爷爷的遗像。"
 								}		
 						},
 						{
 							"text": [
-								"It has been eight months since Eva left Little Oxford, and she is struggling to retain her English. Her new school doesn’t teach it. She has heard that her beloved foreign teacher, Emily, has moved back to the UK. She has found a new hobby, Honor of Kings, a fantasy role-playing game for smartphones that has taken China by storm.",
-								"It has also caused some storms at home. Eva’s father considers himself lucky to have escaped Pingshang just as China’s entry into the World Trade Organisation opened up a world of opportunity. He learnt English in night classes and by immersing himself in Hollywood movies. He wants Eva to study instead of playing video games."
+								"他说：“春节我们回老家时，我发现她的自信心下降了很多，比我在电话里意识到的还严重。所以我逼她多学习，可她说自己不如其他学生优秀。”结果是一场大吵，他现在很后悔。他说：“我不是‘虎爸’（指对孩子严格苛刻的那种父母），我希望她快乐平安。”",
+								"现在他又找到了份体面的工作，正在考虑把伊娃带回城市。谢再生沉思道，也许等伊娃高中毕业时，中国的政策会发生变化，届时她就可以在广东考大学。如果没有，或许她可以出国留学，但这是场赌博，他不知道自己该不该赌一把。"
 							]
 						},
 						{
@@ -961,13 +980,13 @@
 								"title": "",
 								"link": false,
 								"src": "/images/growing-pains/xie-4-2.jpg",								
-								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								"caption": "伊娃和婶婶在坪上镇家中做晚饭。"
 								}		
 						},
 						{
 							"text": [
-								"It has been eight months since Eva left Little Oxford, and she is struggling to retain her English. Her new school doesn’t teach it. She has heard that her beloved foreign teacher, Emily, has moved back to the UK. She has found a new hobby, Honor of Kings, a fantasy role-playing game for smartphones that has taken China by storm.",
-								"It has also caused some storms at home. Eva’s father considers himself lucky to have escaped Pingshang just as China’s entry into the World Trade Organisation opened up a world of opportunity. He learnt English in night classes and by immersing himself in Hollywood movies. He wants Eva to study instead of playing video games."
+								"晚餐前，伊娃在家里嘹亮地唱了一首埃米莉教她的英语儿歌。她婶婶隔着窗户听着，抹掉了一滴眼泪，然后继续做晚饭。",
+								"我离开坪上镇后，伊娃找到了练习英语的另一个机会：微信。她输入道：“OK, sorry, I have a question,” she types. “Do you miss your children?（好的，抱歉，我有个问题。你想念你的孩子吗？）”"
 							]
 						}
 						
@@ -988,16 +1007,23 @@
 						{
 							"text": [
 								"制作团队",
-								"美国",
-								"blahblah",
-								"中国",
-								"韩璧如",
-								"编辑与制作",
+								"<i>美国</i>",
+								"报道：尼尔•孟希",
+								"摄影兼摄像：加亚•斯夸尔奇",
+								"<i>中国</i>",
+								"报道：韩碧如",
+								"摄影兼摄像：朱莉娅•马尔基",
+								"补充报道：张祺(Archie Zhang)",
+								"<i>剪辑与制作</i>",
+								"剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
 								"编辑：",
-								"图片编辑：",
+								"图片编辑：艾伦•诺克斯(Alan Knox)",
 								"图表:Cleve Jones",
-								"网页：",
-								"中文网制作："
+								"网页：乔治•基里亚科斯(George Kyriakos)",
+								"<i>中文网：</i>",
+								"翻译：蓝田",
+								"视频翻译：于江月",
+								"制作：史书华"
 							]
 						},
 						{
@@ -1008,13 +1034,8 @@
 								"link": null,
 								"src": "/images/growing-pains/gates-foundation.png",
 								
-								"caption": "All editorial content in this report is created by the FT. The Bill & Melinda Gates Foundation funded our reporting but had no prior sight of the content."
+								"caption": "本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。"
 							}
-						},
-						{
-							"text": [
-								"All editorial content in this report is created by the FT. The Bill & Melinda Gates Foundation funded our reporting but had no prior sight of the content."
-							]
 						}
 					],
 					"colSecondary": {}										
@@ -1027,39 +1048,39 @@
 	],
 	"suggestedReads":[
 		{
-			"title": "The Great Land Rush",
+			"title": "相关阅读",
 			"columns": [
 				{
 					"image": {
 						"ratio": "",
-						"link": "https://ig.ft.com/sites/land-rush-investment/",
-						"src": "/images/myanmar/landrush_xrefpanel.png",
-						"caption": "FT系列：全球土地调查"
+						"link": "http://www.ftchinese.com/story/001065535",
+						"src": "/images/growing-pains/more-1.jpg",
+						"caption": "留守儿童：中国奇迹的遗留难题"
 					},
 					"summary": [
-						"Across continents, big investors are pouring in billions into one of the world's most precious resources – land. They promise progress. But their arrival can upend livelihoods and spark life-and-death struggles. <a href=\"https://ig.ft.com/sites/land-rush-investment/\">阅读更多</a>"
+						"经济学家称“留守儿童”是中国现代化进程的必然代价，并预计随着经济结构的转型，这一群体可能产生严峻的家庭和社会问题。但另一些研究却提供与普遍观点完全不同的结论...<a href=\"http://www.ftchinese.com/story/001065535\">阅读更多</a>"
 					]		
 				},
 				{
 					"image": {
 						"ratio": "",
-						"link": "https://ig.ft.com/sites/land-rush-investment/ethiopia/",
-						"src": "/images/myanmar/xref_ethiopia-mr_qoad6xx.jpg",
-						"caption": "埃塞俄比亚：百万富豪的农地"
+						"link": "http://www.ftchinese.com/story/001072959",
+						"src": "/images/growing-pains/more-2.jpg",
+						"caption": "中国未来的人口红利在哪里？"
 					},					
 					"summary": [
-						"Mohammed al-Amoudi has spent $200m planting a rice farm the size of 20,000 soccer pitches. But old grievances linger in this fertile corner of a land stalked by hunger."
+						"沈凌：中国经济是否已不再有人口红利？计算人口对经济增长作用力时，除了需要考虑人口数量红利，还需要考虑质量红利...<a href=\"http://www.ftchinese.com/story/001072100\">阅读更多"
 					]
 				},
 				{
 					"image": {
 						"ratio": "",
-						"link": "https://ig.ft.com/sites/land-rush-investment/indonesia",
-						"src": "/images/myanmar/xref_indo-mr_8njq2rv.jpg",
-						"caption": "印尼：拯救地球"
+						"link": "http://www.ftchinese.com/story/001072100",
+						"src": "/images/growing-pains/more-3.jpg",
+						"caption": "雄安新区突显中国城镇化雄心"
 					},
 					"summary": [
-						"Norway’s government has offered Indonesia a billion dollars to save its rainforests. Now its ministers are heading to the Borneo jungle to see if there is any chance of success."
+						"中国政府设立雄安新区的规划，让地处河北省的相关地区成为焦点，也让外界得以一瞥中国迅猛的城市开发进程...<a href=\"http://www.ftchinese.com/story/001072100\">阅读更多"
 					]
 				}
 			] 
@@ -1068,19 +1089,19 @@
 			"title": null,
 			"columns": [
 				{
-					"title": "缅甸相关阅读",
+					"title": "FT中文网文章推荐",
 					"items": [
 						{
-							"href": "http://www.ftchinese.com/story/001065924#adchannelID=2000",
-							"text": "投资缅甸经济特区风险莫测"
+							"href": "http://www.ftchinese.com/channel/numbers-china.html",
+							"text": "中国经济一图览"
 						},
 						{
-							"href": "http://www.ftchinese.com/story/001066441#adchannelID=2000",
+							"href": "http://www.ftchinese.com/channel/numbers-china.html",
 							"text": "许知远：缅甸“帝国”的风格"
 						},
 						{
-							"href": "http://www.ftchinese.com/story/001062457#adchannelID=2000",
-							"text": "走向务实政治的昂山素季"
+							"href": "http://www.ftchinese.com/story/001069905",
+							"text": "应对留守儿童问题需多管齐下"
 						},
 						{
 							"href": "http://www.ftchinese.com/story/001061286",

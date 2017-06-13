@@ -1,0 +1,140 @@
+	//  cover:image with text
+
+	{
+					"_note": "Segment 2 for section 1.",
+					"type": "text-over-media",
+
+					
+					"media": {
+						"fixed": true,
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/myanmar/2560_getty_-factory-in-yangon-lr.jpg 1100w,",
+										"/images/myanmar/2560_getty_-factory-in-yangon-mr.jpg 1500w,",
+										"/images/myanmar/2560_getty_-factory-in-yangon-hr.jpg"
+									]
+								}
+							],
+							"src": "/images/myanmar/2560_getty_-factory-in-yangon-mr.jpg"
+						}						
+					},
+
+
+					"text": {
+						"head": {
+							"headFor": "section",
+							"lead": false,
+							"title": false,
+							"heading": "2. ‘To be a girl playing basketball — that’s the number one challenge’",
+							"subtitle": "",
+							"intro": ""							
+						}
+					}
+
+
+
+				}
+
+
+
+	// text section 
+
+	{
+					"_note": "Segment 3 for section 1.",
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"对那些潜在投资者和缅甸新政府的真正改革家来说，土地纠纷是一个巨大的阴影，笼罩着他们的计划。2012年，缅甸议会成立了一个委员会调查自1988年以来所谓的强占土地问题。该委员会在去年11月表示，它接到了大约1.7万宗投诉。活动人士表示，这只是实际纠纷数量的一小部分。在据估计有三分之二的人口直接或者间接依赖农业的缅甸，据称被强占土地的受害者大多是农民。",
+								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。",
+								"缅甸的土地纠纷也让投资踌躇不前，而缅甸恰恰需要更多的投资。土地纠纷成为前来投资的企业确认的最明显风险之一。这包括了过去政府强占土地的遗留纠纷。投资者担心所有权争议带来的麻烦，以及由此而来的法律影响、罚款以及可能的负面舆论。"
+							]
+						},
+						{
+							"readMore": {
+								"image": {
+									"mobileOnly": false,
+									"ratio": "1/2",
+									"title": null,
+									"link": "https://www.ft.com/land",
+									"src": "/images/myanmar/landrush_xref.png",
+									"caption": null
+								},
+								"title": "阅读更多",
+								"items": [
+									{
+										"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia",
+										"text": "Ethiopia: The billionaire’s farm"
+									},
+									{
+										"href": "https://ig.ft.com/sites/land-rush-investment/indonesia",
+										"text": "Indonesia: Saving the earth"
+									},
+									{
+										"href": "http://podcast.ft.com/2016/03/01/global-land-disputes/",
+										"text": "Listen to the podcast"
+									}
+								]
+							}
+						},
+						{
+							"text": [
+								"土地纠纷也是在缅甸之外可引起广泛共鸣的话题。缅甸的困难可能比较极端，但困扰它的问题——投机、大公司和当地社区之间的紧张关系、祖祖辈辈一直从事的生计的丧失——具有普遍性。",
+								"在一个以农业为主、有许多偏远地区和不受政府控制的区域的贫穷国家里，土地既是一种无价的实物资产，又是一种情感寄托，构成人们自我认同的一部分。它是社会中的主线，围绕土地的冲突有可能导致骚乱。",
+								"致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”"
+							]
+						}
+					]
+				},
+
+
+// text + image 
+
+{
+					"_note": "Segment 2",
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"The Adams girls are luckier than some. Each day after school they are bussed to Children of Promise (CPNYC), the only after-school programme in New York City dedicated to children whose parents have been to jail.",
+								"咨询公司麦肯锡(McKinsey)预计，到2030年，缅甸经济规模可能增长至2010年的4倍以上，达到2000亿美元的峰值。包括联合利华(Unilever)、可口可乐(Coca-Cola)以及啤酒制造商喜力(Heineken)和嘉士伯(Carlsberg)在内的消费品企业已纷纷进入缅甸。"
+							]					
+						},
+						{
+							"image": {
+								"mobileOnly": false,
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/images/myanmar/3carlsberg-mr_voued4u.jpg",								
+								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								}		
+						},
+						{
+							"text": [
+								"缅甸还拥有丰富的自然资源。自绝对军事统治结束以来的油田拍卖吸引了众多买家的兴趣，从美国雪佛龙(Chevron)、英荷石油公司——荷兰皇家壳牌(Royal Dutch Shell)、印度信实工业(Reliance Industries)，到哈萨克斯坦天然气巨头以及形形色色的当地大亨。",
+								"然而，一些冶炼行业受到侵犯人权和腐败指控的困扰。翡翠的年产值据估计达到310亿美元，相当于缅甸官方国内生产总值(GDP)的近一半。缅甸出产的这种贵重玉石有许多通过北部边境被走私出境，用于满足中国新富阶层推动的市场。"
+							]
+						},
+						{
+							"image": {
+								"mobileOnly": true,
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/images/myanmar/myanmarnumbers.png",
+								"caption": ""
+							}
+						},
+						{
+							"text": [
+								"随着中国的成本越来越高、劳方越来越强硬，缅甸有成为下一个“亚洲工厂”的雄心。仰光是缅甸最大的城市和商业中心，在仰光周边，新的工业园区不断涌现和发展壮大，Gap和H&M就在从这些工业园区里的工厂采购服装。缅甸仍需要克服从基础设施到电力供应的各种巨大障碍，但它的劳动力成本很低。最低工资水平仅为每小时36美分，而中国的工资至少每小时1.65美元。",
+								"缅甸当局启动了建设一系列工业园区的计划，希望催生经济繁荣。位于皎漂所在岛屿中心的一个地区即将成为一个占地逾4000英亩的综合园区，拥有深海港口设施、工厂和渔场。官员们一直将皎漂经济特区宣传为“小新加坡”，有可能成为连接中国、非洲和中东地区的贸易走廊。"
+							]
+						}
+					]					
+				}
