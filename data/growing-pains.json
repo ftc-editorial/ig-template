@@ -10,8 +10,8 @@
 	"customCss": true,
 	"customJs": false,
 	"enableScroll": true,
-	"autoNav": false,
-	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
+	"autoNav": true,
+	"description": "成长的烦恼",
 	"ogTitle": "成长的烦恼",
 	"ogType": "article",
 	"ogImage": "",
@@ -53,7 +53,7 @@
 									]
 								}
 							],
-							"src": "myanmar/sapienza_new-mr_osvv1bn.jpg"	
+							"src": "growing-pains/cover1.jpg"	
 						}			
 					},
 					"text": {
@@ -73,9 +73,10 @@
 				}
 			]
 		},
+
 		{
 			"_note": "Section 1",
-			"navText": "1. 失去的土地",
+			"navText": "1. 阿美尼亚，美国布鲁克林",
 			"segments": [
 				{
 					"_note": "cover of 1st section.",
@@ -96,71 +97,29 @@
 									"landscape": true,
 									"portrait": false,
 									"srcset": [
-										"/images/myanmar/2560_flowers_blinkie-lr.jpg 1100w",
-										"/images/myanmar/2560_flowers_blinkie-mr.jpg 1500w",
-										"/images/myanmar/2560_flowers_blinkie-hr.jpg"
+										"/images/growing-pains/armani-cover.jpg 1100w",
+										"/images/growing-pains/armani-cover.jpg 1500w",
+										"/images/growing-pains/armani-cover.jpg"
 									]
 								}
 							],
-							"src": "/images/myanmar/2560_flowers_blinkie-mr.jpg"	
+							"src": "/images/growing-pains/armani-cover.jpg"	
 						}
 					},
 					"text": {
 						"head": {
 							"headFor": "section",
 							"title": null,
-							"heading": "1. 失去的土地",
+							"heading": "阿美尼亚",
 							"subtitle": null,
-							"intro": "在缅甸，独裁统治的结束引发了围绕土地的争斗。"							
+							"intro": "美国布鲁克林"							
 						}
 					}
 				},
+
+
 				{
-					"_note": "Segment 2 for section 1.",
-					"type": "section-columns",
-					"colPrimary": [
-						{
-							"text": [
-								"在缅甸西部城镇皎漂(Kyaukphyu)附近，如今建起了一座天然气终端。走在经过那些弯弯曲曲的白色管道的那条路上时，拉翁梅(Hla Ohn May)仍会落泪。这位46岁的农妇有5个孩子，在这片面向孟加拉湾蓝色海水的绿地上，她曾经拥有一块自己的田地。"
-							]
-						},
-						{
-							"image": {
-								"mobileOnly": true,
-								"ratio": null,
-								"title": null,
-								"link": "https://www.ft.com/land",
-								"src": "/images/myanmar/new_logo.png",
-								"caption": null
-							}
-						},
-						{
-							"text":[
-								"后来她和其他村民的土地被一家财团买下，财团成员包括中国国有企业——<a href=\"http://www.ftchinese.com/tag/中石油\" target=\"_blank\">中国石油天然气集团公司</a>(China National Petroleum Corporation)和韩国大宇(Daewoo)。皎漂现在是中国政府投资的两条巨大跨境能源管道的起点，这让这些荒野海滨成为某些人口中“中国的西海岸”。",
-								"快速开放中的缅甸正努力利用其所处的亚洲战略要冲位置，上述事态是这种努力的很大一部分。拉翁梅和其他农民曾经用来种植大米和豆类的肥沃土地，现在只不过是工业园里的景观，被篱笆围起来，由身着橘黄色连体裤的公司员工精心修剪。拉翁梅拿到了278万缅元（按当前汇率计算合2250美元），但她觉得自己被便宜打发了，因为她放弃的是自己拥有过的唯一生产性资产。",
-								"说到那个天然气终端的影响时，她说：“因为我们不再拥有那些土地，我们成了不得不为其他人打工的穷人。我每天看到那些建筑物都会哭。”"
-							]
-						}
-					]							
-				},
-				{
-					"_note": "Segment 3 for section 1.",
-					"sticky": false,
-					"type": "section-media",
-					"media": {
-						"video": {
-							"provider": "ft",
-							"playerControl": "loop muted autoplay",
-							"poster": "/images/myanmar/mpv-shot0002.jpg",
-							"source":  {
-								"mp4": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_pjiqzqp.mp4",
-								"webm": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_fposetk.webm"
-							}
-						}
-					}
-				},
-				{
-					"_note": "Segment 4 for section 1.",
+					"_note": "text-segment 1 of section 1",
 					"type": "section-columns",
 					"colPrimary": [
 						{
@@ -171,32 +130,287 @@
 							]
 						},
 						{
-							"readMore": {
-								"image": {
-									"mobileOnly": false,
-									"ratio": "1/2",
-									"title": null,
-									"link": "https://www.ft.com/land",
-									"src": "/images/myanmar/landrush_xref.png",
-									"caption": null
-								},
-								"title": "阅读更多",
-								"items": [
-									{
-										"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia",
-										"text": "Ethiopia: The billionaire’s farm"
-									},
-									{
-										"href": "https://ig.ft.com/sites/land-rush-investment/indonesia",
-										"text": "Indonesia: Saving the earth"
-									},
-									{
-										"href": "http://podcast.ft.com/2016/03/01/global-land-disputes/",
-										"text": "Listen to the podcast"
-									}
-								]
-							}
+							"image": {
+								"mobileOnly": false,
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/images/myanmar/3carlsberg-mr_voued4u.jpg",								
+								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								}		
 						},
+
+						{
+							"text": [
+								"土地纠纷也是在缅甸之外可引起广泛共鸣的话题。缅甸的困难可能比较极端，但困扰它的问题——投机、大公司和当地社区之间的紧张关系、祖祖辈辈一直从事的生计的丧失——具有普遍性。"
+								
+							]
+						}
+					]
+				},
+
+				{
+					"_note": "Segment 2 for section 1.",
+					"type": "text-over-media",
+
+					
+					"media": {
+						"fixed": true,
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/growing-pains/armani-2-cover.jpg 1100w,",
+										"/images/growing-pains/armani-2-cover.jpg 1500w,",
+										"/images/growing-pains/armani-2-cover.jpg"
+									]
+								}
+							],
+							"src": "/images/growing-pains/armani-2-cover.jpg"
+						}						
+					},
+
+
+					"text": {
+						"head": {
+							"headFor": "section",
+							"lead": false,
+							"title": false,
+							"heading": "2. ‘To be a girl playing basketball — that’s the number one challenge’",
+							"subtitle": "",
+							"intro": ""							
+						}
+					}
+
+
+
+				},
+				{
+					"_note": "text-Segment 2 for section 1.",
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"对那些潜在投资者和缅甸新政府的真正改革家来说，土地纠纷是一个巨大的阴影，笼罩着他们的计划。2012年，缅甸议会成立了一个委员会调查自1988年以来所谓的强占土地问题。该委员会在去年11月表示，它接到了大约1.7万宗投诉。活动人士表示，这只是实际纠纷数量的一小部分。在据估计有三分之二的人口直接或者间接依赖农业的缅甸，据称被强占土地的受害者大多是农民。",
+								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。",
+								"缅甸的土地纠纷也让投资踌躇不前，而缅甸恰恰需要更多的投资。土地纠纷成为前来投资的企业确认的最明显风险之一。这包括了过去政府强占土地的遗留纠纷。投资者担心所有权争议带来的麻烦，以及由此而来的法律影响、罚款以及可能的负面舆论。"
+							]
+						},
+						{
+							"image": {
+								"mobileOnly": false,
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/images/myanmar/3carlsberg-mr_voued4u.jpg",								
+								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								}		
+						},
+						
+						{
+							"text": [
+								"土地纠纷也是在缅甸之外可引起广泛共鸣的话题。缅甸的困难可能比较极端，但困扰它的问题——投机、大公司和当地社区之间的紧张关系、祖祖辈辈一直从事的生计的丧失——具有普遍性。",
+								"在一个以农业为主、有许多偏远地区和不受政府控制的区域的贫穷国家里，土地既是一种无价的实物资产，又是一种情感寄托，构成人们自我认同的一部分。它是社会中的主线，围绕土地的冲突有可能导致骚乱。",
+								"致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”"
+							]
+						}
+					]
+				},
+				{
+					"_note": "Segment 3 for section 1.",
+					"type": "text-over-media",
+
+					
+					"media": {
+						"fixed": true,
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/growing-pains/armani-3-cover.jpg 1100w,",
+										"/images/growing-pains/armani-3-cover.jpg 1500w,",
+										"/images/growing-pains/armani-3-cover.jpg"
+									]
+								}
+							],
+							"src": "/images/growing-pains/armani-3-cover.jpg"
+						}						
+					},
+
+
+					"text": {
+						"head": {
+							"headFor": "section",
+							"lead": false,
+							"title": false,
+							"heading": "‘She’s maybe the kid I wish I could have been when I was her age’",
+							"subtitle": "",
+							"intro": ""							
+						}
+					}
+
+				},
+
+				{
+					"_note": "text-Segment 3 for section 1.",
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"对那些潜在投资者和缅甸新政府的真正改革家来说，土地纠纷是一个巨大的阴影，笼罩着他们的计划。2012年，缅甸议会成立了一个委员会调查自1988年以来所谓的强占土地问题。该委员会在去年11月表示，它接到了大约1.7万宗投诉。活动人士表示，这只是实际纠纷数量的一小部分。在据估计有三分之二的人口直接或者间接依赖农业的缅甸，据称被强占土地的受害者大多是农民。",
+								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。",
+								"缅甸的土地纠纷也让投资踌躇不前，而缅甸恰恰需要更多的投资。土地纠纷成为前来投资的企业确认的最明显风险之一。这包括了过去政府强占土地的遗留纠纷。投资者担心所有权争议带来的麻烦，以及由此而来的法律影响、罚款以及可能的负面舆论。"
+							]
+						},
+						{
+							"image": {
+								"mobileOnly": false,
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/images/myanmar/3carlsberg-mr_voued4u.jpg",								
+								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								}		
+						},
+						
+						{
+							"text": [
+								"土地纠纷也是在缅甸之外可引起广泛共鸣的话题。缅甸的困难可能比较极端，但困扰它的问题——投机、大公司和当地社区之间的紧张关系、祖祖辈辈一直从事的生计的丧失——具有普遍性。",
+								"在一个以农业为主、有许多偏远地区和不受政府控制的区域的贫穷国家里，土地既是一种无价的实物资产，又是一种情感寄托，构成人们自我认同的一部分。它是社会中的主线，围绕土地的冲突有可能导致骚乱。",
+								"致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”"
+							]
+						}
+					]
+				},
+				{
+					"_note": "Segment 4 for section 1.",
+					"type": "text-over-media",
+
+					
+					"media": {
+						"fixed": true,
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/growing-pains/armani-4-cover.jpg 1100w,",
+										"/images/growing-pains/armani-4-cover.jpg 1500w,",
+										"/images/growing-pains/armani-4-cover.jpg"
+									]
+								}
+							],
+							"src": "/images/growing-pains/armani-4-cover.jpg"
+						}						
+					},
+
+
+					"text": {
+						"head": {
+							"headFor": "section",
+							"lead": false,
+							"title": false,
+							"heading": "‘I’ll send you money, but y’all can’t come to Drake’s house’",
+							"subtitle": "",
+							"intro": ""							
+						}
+					}
+
+				},
+				{
+					"_note": "text-Segment 4 for section 1.",
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"对那些潜在投资者和缅甸新政府的真正改革家来说，土地纠纷是一个巨大的阴影，笼罩着他们的计划。2012年，缅甸议会成立了一个委员会调查自1988年以来所谓的强占土地问题。该委员会在去年11月表示，它接到了大约1.7万宗投诉。活动人士表示，这只是实际纠纷数量的一小部分。在据估计有三分之二的人口直接或者间接依赖农业的缅甸，据称被强占土地的受害者大多是农民。",
+								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。",
+								"缅甸的土地纠纷也让投资踌躇不前，而缅甸恰恰需要更多的投资。土地纠纷成为前来投资的企业确认的最明显风险之一。这包括了过去政府强占土地的遗留纠纷。投资者担心所有权争议带来的麻烦，以及由此而来的法律影响、罚款以及可能的负面舆论。"
+							]
+						},
+						{
+							"image": {
+								"mobileOnly": false,
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/images/myanmar/3carlsberg-mr_voued4u.jpg",								
+								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								}		
+						},
+						
+						{
+							"text": [
+								"土地纠纷也是在缅甸之外可引起广泛共鸣的话题。缅甸的困难可能比较极端，但困扰它的问题——投机、大公司和当地社区之间的紧张关系、祖祖辈辈一直从事的生计的丧失——具有普遍性。",
+								"在一个以农业为主、有许多偏远地区和不受政府控制的区域的贫穷国家里，土地既是一种无价的实物资产，又是一种情感寄托，构成人们自我认同的一部分。它是社会中的主线，围绕土地的冲突有可能导致骚乱。",
+								"致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”"
+							]
+						}
+					]
+				},
+				{
+					"_note": "Segment 5 for section 1.",
+					"type": "text-over-media",
+
+					
+					"media": {
+						"fixed": true,
+						"picture": {
+							"source": [
+								{
+									"landscape": false,
+									"portrait": false,
+									"srcset": [
+										"/images/growing-pains/armani-5-cover.jpg 1100w,",
+										"/images/growing-pains/armani-5-cover.jpg 1500w,",
+										"/images/growing-pains/armani-5-cover.jpg"
+									]
+								}
+							],
+							"src": "/images/growing-pains/armani-5-cover.jpg"
+						}						
+					},
+
+
+					"text": {
+						"head": {
+							"headFor": "section",
+							"lead": false,
+							"title": false,
+							"heading": "‘She has that confidence, that’s Mel’",
+							"subtitle": "",
+							"intro": ""							
+						}
+					}
+
+				},
+				{
+					"_note": "text-Segment 5 for section 1.",
+					"type": "section-columns",
+					"colPrimary": [
+						{
+							"text": [
+								"对那些潜在投资者和缅甸新政府的真正改革家来说，土地纠纷是一个巨大的阴影，笼罩着他们的计划。2012年，缅甸议会成立了一个委员会调查自1988年以来所谓的强占土地问题。该委员会在去年11月表示，它接到了大约1.7万宗投诉。活动人士表示，这只是实际纠纷数量的一小部分。在据估计有三分之二的人口直接或者间接依赖农业的缅甸，据称被强占土地的受害者大多是农民。",
+								"昂山素季(Aung San Suu Kyi)领导的全国民主联盟（National League for Democracy，简称：全民盟）在去年的大选中获得了压倒性的胜利，但土地纠纷为这种胜利蒙上了阴影。昂山素季推出的首批举措之一是发起捡垃圾行动，这是让一个被长期忽视的国家变得清洁起来的象征性举措。但对全民盟以及势力仍然不可小觑的旧军方精英来说，更艰巨的任务是应对围绕土地的“旧恨”，并设法避免制造“新仇”。缅甸受到国际赞誉但脆弱的转型能否持续，可能有赖于此。",
+								"缅甸的土地纠纷也让投资踌躇不前，而缅甸恰恰需要更多的投资。土地纠纷成为前来投资的企业确认的最明显风险之一。这包括了过去政府强占土地的遗留纠纷。投资者担心所有权争议带来的麻烦，以及由此而来的法律影响、罚款以及可能的负面舆论。"
+							]
+						},
+						{
+							"image": {
+								"mobileOnly": false,
+								"ratio": "",
+								"title": "",
+								"link": false,
+								"src": "/images/myanmar/3carlsberg-mr_voued4u.jpg",								
+								"caption": "嘉士伯投资7500万美元的啤酒厂2015年开工，该工厂位于勃固，与缅甸金星啤酒厂(Myanmar Golden Star Breweries)合资成立。（彭博）"
+								}		
+						},
+						
 						{
 							"text": [
 								"土地纠纷也是在缅甸之外可引起广泛共鸣的话题。缅甸的困难可能比较极端，但困扰它的问题——投机、大公司和当地社区之间的紧张关系、祖祖辈辈一直从事的生计的丧失——具有普遍性。",
@@ -206,8 +420,20 @@
 						}
 					]
 				}
+
+
+
+
+
+
+
+
+
 			]
 		},
+
+
+
 		{
 			"_note": "Section 2",
 			"navText": "2. 抱负",
@@ -215,6 +441,8 @@
 				{
 					"_note": "Segement 1. Cover for section 2",
 					"type": "text-over-media",
+
+
 					"media": {
 						"fixed": true,
 						"picture": {
@@ -232,6 +460,8 @@
 							"src": "/images/myanmar/2560_getty_-factory-in-yangon-mr.jpg"
 						}						
 					},
+
+
 					"text": {
 						"head": {
 							"headFor": "section",
@@ -242,6 +472,8 @@
 							"intro": ""							
 						}
 					}
+
+
 				},
 				{
 					"_note": "Segment 2",
@@ -285,23 +517,7 @@
 								"缅甸当局启动了建设一系列工业园区的计划，希望催生经济繁荣。位于皎漂所在岛屿中心的一个地区即将成为一个占地逾4000英亩的综合园区，拥有深海港口设施、工厂和渔场。官员们一直将皎漂经济特区宣传为“小新加坡”，有可能成为连接中国、非洲和中东地区的贸易走廊。"
 							]
 						}
-					],
-					"colSecondary": {
-						"slides":  [
-							{
-								"src": "/images/myanmar/myanmarnumbers.png",
-								"text": ""
-							},
-							{
-								"src": "/images/myanmar/myan_num_36c.png",
-								"text": ""
-							},
-							{
-								"src": "/images/myanmar/myanmarnumbers2.png",
-								"text": ""
-							}
-						]
-					}					
+					]					
 				}
 			]
 		},
