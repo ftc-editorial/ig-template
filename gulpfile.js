@@ -4,6 +4,7 @@ const path = require('path');
 const loadJsonFile = require('load-json-file');
 const writeJsonFile = require('write-json-file');
 const inline = pify(require('inline-source'));
+const minify = require('html-minifier').minify;
 const nunjucks = require('nunjucks');
 nunjucks.configure(['views', 'node_modules/@ftchinese/ftc-footer'], {
   noCache: true,
@@ -12,6 +13,7 @@ nunjucks.configure(['views', 'node_modules/@ftchinese/ftc-footer'], {
 });
 const render = pify(nunjucks.render);
 
+const del = require('del');
 const browserSync = require('browser-sync').create();
 const cssnext = require('postcss-cssnext');
 const gulp = require('gulp');
@@ -40,8 +42,6 @@ const options = {
   }
 };
 const argv = minimist(process.argv.slice(2), options);
-
-const config = require('./config.json');
 
 const projectName = argv.i;
 const dataFile = path.resolve(process.cwd(),`data/${projectName}.json`)
@@ -72,12 +72,20 @@ async function buildPage(template, data) {
 
   let html = await render(template, data);
   if (env.isProduction) {
+    console.log(`Inline js and css`);
     html = await inline(html, {
       compress: false,
       rootpath: path.resolve(process.cwd(), '.tmp')
-    })
+    });
+    console.log(`Minify html`);
+    html = minify(html, {
+      collapseBooleanAttributes: true,
+      collapseInlineTagWhitespace: true,
+      collapseWhitespace: true,
+      conservativeCollapse: true,
+      removeComments: true
+    });
   }
-
   await fs.writeAsync(dest, html);
 }
 
@@ -186,7 +194,7 @@ gulp.task('images', function () {
   console.log(`Copying images ${src} to: ${dest}`);
 
   return gulp.src(src)
-    .pipe($.imagemin({
+    .pipe(imagemin({
       progressive: true,
       interlaced: true,
       svgoPlugins: [{cleanupIDs: false}],
@@ -201,5 +209,5 @@ gulp.task('deploy:html', function() {
   console.log(`Deploying built html file to: ${dest}`);
 
   return gulp.src(`.tmp/${projectName}.html`)
-    .pipe(gulp.dest(DEST));
+    .pipe(gulp.dest(dest));
 });
