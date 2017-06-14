@@ -61,6 +61,7 @@ function buildPage(template, data) {
   const env = {
     projectName,
     static: 'http://interactive.ftchinese.com/',
+    assets: `http://interactive.ftchinese.com/images/${projectName}`,
     isProduction: process.env.NODE_ENV === 'production'
   };
   const context = Object.assign(data, {env});

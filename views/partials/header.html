@@ -16,22 +16,25 @@
       </div>
 
       <div class="o-header__center">
-        <div class="o-header__title">
           {% if config.navOnHeader %}
-            {% for section in sections %}
-              {% if section.nav %}
-                <a class="o-header__nav-link" href="#{{section.nav.id}}">{{section.nav.text}}</a>
-              {% endif %}
-            {% endfor %}
+            <span class="o-header__center-nav">
+              {% for section in sections %}
+                {% if section.nav %}
+                  <a class="o-header__nav-link" href="#{{section.nav.id}}">{{section.nav.text}}</a>
+                {% endif %}
+              {% endfor %}
+            </span>
           {% else%}
             
             <span class="o-header__headline">{{title.text}}</span>
             
           {% endif %}
-          {% if edition%}
-            <a class="o-header__edition" href="{{edition.href}}" target="_blank">{{edition.text}}</a>
+
+          {% if edition %}
+            <span class="o-header__edition">
+              <a class="o-header__nav-link" href="{{edition.href}}" target="_blank">{{edition.text}}</a>
+            </span>
           {% endif %}
-        </div>
       </div>
 
       <div class="o-header__right" data-o-component="o-toggle">
