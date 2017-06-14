@@ -3,7 +3,13 @@
   <link inline rel="stylesheet" type="text/css" href="styles/main.css">
 
 	{% if config.customCss %}
-  <link inline rel="stylesheet" type="text/css" href="styles/{{env.projectName}}.css">
+		{% if env.isProduction %}
+			<style>
+				{% include "styles/" + env.projectName + ".css" %}
+			</style>
+		{% else %}
+			<link rel="stylesheet" type="text/css" href="styles/{{env.projectName}}.css">
+		{% endif %}
 	{% endif %}
 
 	{% if env.isProduction %}

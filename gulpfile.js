@@ -6,11 +6,18 @@ const writeJsonFile = require('write-json-file');
 const inline = pify(require('inline-source'));
 const minify = require('html-minifier').minify;
 const nunjucks = require('nunjucks');
-nunjucks.configure(['views', 'node_modules/@ftchinese/ftc-footer'], {
-  noCache: true,
-  watch: false,
-  autoescape: false
-});
+nunjucks.configure(
+  [
+    'views', 
+    'node_modules/@ftchinese/ftc-footer',
+    'custom'
+  ], 
+  {
+    noCache: true,
+    watch: false,
+    autoescape: false
+  }
+);
 const render = pify(nunjucks.render);
 
 const del = require('del');
@@ -63,7 +70,7 @@ async function buildPage(template, data) {
   const env = {
     projectName,
     static: 'http://interactive.ftchinese.com/',
-    urlPrefix: isProduction ? `http://interactive.ftchinese.com/images/${projectName}` : '',
+    urlPrefix: isProduction ? `http://interactive.ftchinese.com` : '',
     isProduction
   };
 
@@ -208,6 +215,8 @@ gulp.task('deploy:html', function() {
 
   console.log(`Deploying built html file to: ${dest}`);
 
-  return gulp.src(`.tmp/${projectName}.html`)
+  return gulp.src(`${tmpDir}/${projectName}.html`)
     .pipe(gulp.dest(dest));
 });
+
+gulp.task('deploy', gulp.series('build', 'deploy:html', 'images'));
