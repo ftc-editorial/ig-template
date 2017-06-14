@@ -106,7 +106,7 @@
 
                         "video": {
                             "provider": "ft",
-                            "poster": "/images/myanmar/mpv-shot0001.jpg",
+                            "poster": "/images/growing-pains/armani-cover.jpg",
                             "sources": {
                                 "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4"
                             }
@@ -564,7 +564,7 @@
                     "media": {
                         "video": {
                             "provider": "ft",
-                            "poster": "/images/myanmar/mpv-shot0001.jpg",
+                            "poster": "/images/growing-pains/xie-cover.png",
                             "sources": {
                                 "mp4": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4"
                             }
