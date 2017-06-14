@@ -14,10 +14,10 @@
     "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
     "ogTitle": "成长的烦恼-FT中文网",
     "ogType": "article",
-    "ogImage": "/images/growing-pains/xie-cover.png",
-    "ogUrl": "",
-    "pageTitle": "成长的烦恼-FT中文网",
-    "wechatImage": "/images/growing-pains/xie-cover.png",
+    "ogImage": "http://i.ftimg.net/picture/2/000070722_piclink.jpg",
+    "ogUrl": "http://www.ftchinese.com/interactive/9484",
+    "pageTitle": "成长的烦恼",
+    "wechatImage": "http://i.ftimg.net/picture/3/000070723_piclink.jpg",
     "edition": {
         "text": "English",
         "href": "https://ig.ft.com/special-reports/growing-pains/"
@@ -30,8 +30,8 @@
                 "type": "text-over-media",
                 "media": {
                     "video": {
-                        "provider": "ft",
-                        "poster": "/images/myanmar/mpv-shot0001.jpg",
+                        "provider": "ftchinese",
+                        "poster": "/images/growing-pains/cover1.jpg",
                         "sources": {
                             "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
                         }
