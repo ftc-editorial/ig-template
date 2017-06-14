@@ -2,8 +2,8 @@
 
 import Share from 'ftc-share';
 import Sticky, {Scrollmation} from 'ftc-sticky';
-import Toggle from './toggle';
-import PageLogger from './page-logger';
+import Toggle from './js/toggle';
+import PageLogger from './js/page-logger';
 
 Share.init();
 Toggle.init();

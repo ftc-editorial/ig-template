@@ -1,0 +1,15 @@
+@import "o-colors/main";
+@import "o-grid/main";
+@import "o-icons/main";
+@import "o-colors/main";
+
+@import "ftc-share/main";
+$o-footer-is-silent: false;
+@import "ftc-footer/main";
+@import "ftc-sticky/main";
+
+@import "scss/colors";
+@import "scss/var-mixins";
+@import "scss/base";
+@import "scss/header/main";
+@import "scss/components/main";

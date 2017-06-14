@@ -27,32 +27,15 @@
 	span {
 		display: none;
 	}
-	svg {
-		width: 40px;
-		height: 40px;
-		fill: oColorsGetColorFor(o-header, text);
-		display: inline-block;
+
+	&:after {
+		content: '';
+		@include oIconsGetIcon(hamburger, $color: oColorsGetPaletteColor('white'), $container-width: 40, $apply-base-styles: true, $apply-width-height: true, $iconset-version: 1);
 		vertical-align: middle;
 	}
-	.o-header--theme-light & {
-		svg {
-			fill: oColorsGetColorFor(o-header--light, text);
-		}
-	}
-	.o-icons__hamburger {
-		display: inline-block;
-	}
-	.o-icons__cross {
-		display: none;
-	}
 	
-	&[aria-expanded="true"] {
-		.o-icons__hamburger {
-			display: none;
-		}
-		.o-icons__cross {
-			display: inline-block;
-		}
+	&[aria-expanded="true"]:after {
+		@include oIconsGetIcon(cross, $color: oColorsGetPaletteColor('white'), $apply-base-styles: false, $apply-width-height: false);
 	}
 
 	.enable-autonav & {
@@ -116,23 +99,27 @@
 .o-header__nav-link {
 	text-decoration: none;
 	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	font-size: 16px;
-	display: block;
 	padding: 0 15px;
 	line-height: 38px;
-
-	@include oColorsFor(o-header-item, text);
+	color: rgba(255,255,255,0.6);
+	&:hover,
+	&:active,
+	&:focus {
+		color: white;
+	}
 
 	.o-header--light &{
 		@include oColorsFor(o-header-item--light, text);
 		border-left: 5px solid orange;
 	}
 
-	&:hover,
-	&:focus {
-		color: oColorsGetColorFor(link-title-hover, text);
+	.o-header__nav & {
+		display: block;
 	}
 }
+
+
 

@@ -4,7 +4,7 @@
 <article class="article" role="main">
 
 {% for section in sections %}
-<section class="section" id="section-{{loop.index}}">
+<section class="section"{% if section.nav.id %} id="{{section.nav.id}}"{% endif %}>
   {% for segment in section.segments %}
 
     {% set media = segment.media %}

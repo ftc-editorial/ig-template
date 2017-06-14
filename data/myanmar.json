@@ -5,28 +5,43 @@
 	"share": {
 		"theme": "theme-dark"
 	},
-	"highcharts": false,
-	"d3": false,
-	"customCss": false,
-	"customJs": false,
-	"enableScroll": true,
-	"autoNav": false,
-	"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
-	"ogTitle": "缅甸失地农民",
-	"ogType": "article",
-	"ogImage": "",
-	"ogUrl": "",
-	"pageTitle": "缅甸失地农民",
-	"wechatImage": "/images/myanmar/sapienza_new-lr_cycwhld.jpg",	
+	"config": {
+		"highcharts": false,
+		"d3": false,
+		"customCss": false,
+		"customJs": false,
+		"enableScroll": true,
+		"navOnHeader": true
+	},
+	"title": {
+		"text": "缅甸失地农民",
+		"html": ""
+	},
 	"edition": {
 		"text": "English",
 		"href": "https://ig.ft.com/sites/land-rush-investment/myanmar/"
+	},
+	"meta": {
+		"title": "缅甸失地农民",
+		"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
+		"keyword": "",
+		"wx": {
+			"image": "/images/myanmar/sapienza_new-lr_cycwhld.jpg"
+		},
+		"og": {
+			"type": "article",
+			"site_name": "FT中文网",
+			"title": "缅甸失地农民",
+			"description": "在缅甸，独裁统治的结束引发了围绕土地的争斗。",
+			"image": "",
+			"url": ""
+		}
 	},
 	"seriesTitle": "调查报道",
 	"sections": [
 		{
 			"_note": "This section is the article's cover.",
-			"navText": null,
+			"nav": null,
 			"segments": [
 				{
 					"type": "text-over-media",
@@ -75,7 +90,10 @@
 		},
 		{
 			"_note": "Section 1",
-			"navText": "1. 失去的土地",
+			"nav": {
+				"text": "1",
+				"id": "the-lost-fields"
+			},
 			"segments": [
 				{
 					"_note": "cover of 1st section.",
@@ -220,7 +238,10 @@
 		},
 		{
 			"_note": "Section 2",
-			"navText": "2. 抱负",
+			"nav": {
+				"text": "2",
+				"id": "ambitions"
+			},
 			"segments": [
 				{
 					"_note": "Segement 1. Cover for section 2",
@@ -317,7 +338,10 @@
 		},
 		{
 			"_note": "Section 3",
-			"navText": "3. 村庄",
+			"nav":{
+				"text": "3",
+				"id": "the-village"
+			},
 			"segments": [
 				{
 					"_note": "Segment 1. Cover for section 3",
@@ -468,7 +492,10 @@
 		},
 		{
 			"_note": "Section 4",
-			"navText": "4. 导火索",
+			"nav": {
+				"text": "4",
+				"id": "flashpoints"
+			},
 			"segments": [
 				{
 					"_note": "Segment 1. Cover of section 4",
@@ -554,7 +581,10 @@
 		},
 		{
 			"_note": "Section 5",
-			"navText": "5. 赢家和输家",
+			"nav":{
+				"text": "5",
+				"id": "winners-and-losers"
+			},
 			"segments": [
 				{
 					"_note": "Segment 1. Cover of section 5.",
@@ -664,7 +694,10 @@
 		},
 		{
 			"_note": "Section 6",
-			"navText": null,
+			"nav":{
+				"text": "6",
+				"id": "myanmar-land-battles"
+			},
 			"segments": [
 				{
 					"_note": "Segment 1, section 6",

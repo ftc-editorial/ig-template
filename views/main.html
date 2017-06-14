@@ -1,12 +1,12 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 {% block css %}
-  <!-- smoosh-->
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link inline rel="stylesheet" type="text/css" href="styles/main.css">
+
 	{% if customCss %}
-  <link rel="stylesheet" type="text/css" href="styles/{{projectName}}.css">
+  <link inline rel="stylesheet" type="text/css" href="styles/{{env.projectName}}.css">
 	{% endif %}
-  <!-- endsmoosh -->
-	{% if analytics %}
+
+	{% if env.isProduction %}
   	{% include "partials/analytics.html" %}
 	{% endif %}
 {% endblock %}
@@ -27,14 +27,12 @@
 	<script src="/bower_components/d3/d3.min.js"></script>
 	{% endif %}
 
-	<!-- smoosh -->
-	<script src="scripts/main.js"></script>
+	<script inline src="scripts/main.js"></script>
 	{% if customJs %}
-	<script src="scripts/{{projectName}}.js"></script>
+	<script inline src="scripts/{{env.projectName}}.js"></script>
 	{% endif %}
-	<!-- endsmoosh -->
 
-	{% if production %}
+	{% if env.isProduction %}
 	<script src="http://static.ftchinese.com/js/log.js?v=6"></script>
 	{% endif %}
 {% endblock %}

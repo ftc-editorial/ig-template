@@ -1,16 +1,16 @@
 {
   "name": "interactive-graphics",
   "private": true,
-  "devDependencies": {},
+  "devDependencies": {
+    "ftc-footer": "^0.2.1"
+  },
   "dependencies": {
-    "ftc-icons": "^3.3.0",
-    "ftc-logos": "^0.3.0",
     "ftc-share": "^2.1.0",
     "d3": "^4.1.1",
     "o-colors": "^3.3.2",
     "o-grid": "^4.2.3",
-    "highcharts": "^4.2.5",
     "ftc-footer": "^0.0.3",
-    "ftc-sticky": "^0.1.1"
+    "ftc-sticky": "^0.1.1",
+    "o-icons": "^5.3.0"
   }
 }
