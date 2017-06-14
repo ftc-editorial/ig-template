@@ -4,9 +4,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postversion": "git push && git push --tags",
+    "build-html": "NODE_ENV=production node ./lib/build-page.js",
     "build-sass": "node-sass --include-path=bower_components --output-style=compressed client/main.scss public/styles/main.css",
     "build-js": "rollup -c",
-    "build": "npm run build-sass && npm run build-js"
+    "build": "npm run build-sass && npm run build-js && npm run build-html"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,6 @@
     "babel-preset-env": "^1.5.2",
     "bower": "^1.8.0",
     "browser-sync": "^2.18.12",
-    "cheerio": "^0.22.0",
     "del": "^2.2.2",
     "fs-jetpack": "^1.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
@@ -49,7 +49,6 @@
     "rollup": "^0.43.0",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-babili": "^3.1.0",
-    "rollup-plugin-bower-resolve": "^0.4.0",
-    "write-json-file": "^2.2.0"
+    "rollup-plugin-bower-resolve": "^0.4.0"
   }
 }

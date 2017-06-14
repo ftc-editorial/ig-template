@@ -1,25 +1,4 @@
-const pify = require('pify');
-const fs = require('fs-jetpack');
 const path = require('path');
-const loadJsonFile = require('load-json-file');
-const writeJsonFile = require('write-json-file');
-const inline = pify(require('inline-source'));
-const minify = require('html-minifier').minify;
-const nunjucks = require('nunjucks');
-nunjucks.configure(
-  [
-    'views', 
-    'node_modules/@ftchinese/ftc-footer',
-    'custom'
-  ], 
-  {
-    noCache: true,
-    watch: false,
-    autoescape: false
-  }
-);
-const render = pify(nunjucks.render);
-
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const cssnext = require('postcss-cssnext');
@@ -34,24 +13,16 @@ const babili = require('rollup-plugin-babili');
 const babel = require('rollup-plugin-babel');
 const bowerResolve = require('rollup-plugin-bower-resolve');
 
-const footer = require('@ftchinese/ftc-footer')();
-
-const minimist = require('minimist');
-const options = {
-  string: ['input'],
-  boolean: 'all',
+const argv = require('minimist')(process.argv.slice(2), {
   alias: {
-    i: 'input',
-    a: 'all'
+    i: 'input'
   },
   default: {
     input: 'myanmar'
   }
-};
-const argv = minimist(process.argv.slice(2), options);
+});
 
 const projectName = argv.i;
-const dataFile = path.resolve(process.cwd(),`data/${projectName}.json`)
 const htmlFile = `${projectName}.html`;
 const tmpDir = '.tmp';
 
@@ -65,47 +36,8 @@ gulp.task('dev', function() {
   return Promise.resolve(process.env.NODE_ENV = 'development');
 });
 
-async function buildPage(template, data) {
-  const isProduction = process.env.NODE_ENV === 'production';
-  const env = {
-    projectName,
-    static: 'http://interactive.ftchinese.com/',
-    urlPrefix: isProduction ? `http://interactive.ftchinese.com` : '',
-    isProduction
-  };
-
-  const context = Object.assign(data, {env});
-  const dest = `${tmpDir}/${htmlFile}`;
-
-  let html = await render(template, data);
-  if (env.isProduction) {
-    console.log(`Inline js and css`);
-    html = await inline(html, {
-      compress: false,
-      rootpath: path.resolve(process.cwd(), '.tmp')
-    });
-    console.log(`Minify html`);
-    html = minify(html, {
-      collapseBooleanAttributes: true,
-      collapseInlineTagWhitespace: true,
-      collapseWhitespace: true,
-      conservativeCollapse: true,
-      removeComments: true,
-      minifyCSS: true,
-      minifyJS: true
-    });
-  }
-  await fs.writeAsync(dest, html);
-}
-
 gulp.task('html', () => {
-
-  return loadJsonFile(dataFile)
-    .then(json => {
-      return buildPage('index.html', Object.assign(json, {
-        footer: footer
-      }));
-    })
+  return buildPage({input: argv.i})
     .then(() => {
       browserSync.reload('*.html');
       return Promise.resolve();
@@ -191,7 +123,6 @@ gulp.task('clean', function() {
 
 gulp.task('build', gulp.series('prod', 'clean', gulp.parallel('styles', 'scripts'), 'html', 'dev'));
 
-
 const deployDest = {
 	"html": "../special",
 	"assets": "../ft-interact"
@@ -221,4 +152,4 @@ gulp.task('deploy:html', function() {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('deploy', gulp.series('build', 'deploy:html', 'images'));
+gulp.task('deploy', gulp.series('build', 'deploy:html'));
