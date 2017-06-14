@@ -2,7 +2,7 @@
 {% block css %}
   <link inline rel="stylesheet" type="text/css" href="styles/main.css">
 
-	{% if customCss %}
+	{% if config.customCss %}
   <link inline rel="stylesheet" type="text/css" href="styles/{{env.projectName}}.css">
 	{% endif %}
 
