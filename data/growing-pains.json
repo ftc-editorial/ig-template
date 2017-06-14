@@ -5,22 +5,38 @@
     "share": {
         "theme": "theme-dark"
     },
-    "highcharts": false,
-    "d3": false,
-    "customCss": true,
-    "customJs": false,
-    "enableScroll": true,
-    "autoNav": true,
-    "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
-    "ogTitle": "成长的烦恼——FT中文网",
-    "ogType": "article",
-    "ogImage": "http://i.ftimg.net/picture/2/000070722_piclink.jpg",
-    "ogUrl": "http://www.ftchinese.com/interactive/9484",
-    "pageTitle": "成长的烦恼",
-    "wechatImage": "http://i.ftimg.net/picture/3/000070723_piclink.jpg",
+    "config": {
+      "highcharts": false,
+      "d3": false,
+      "customCss": true,
+      "customJs": false,
+      "enableScroll": true,
+      "navOnHeader": true
+    },
+    
+    "title": {
+      "text": "成长的烦恼",
+      "html": ""
+    },
     "edition": {
         "text": "English",
         "href": "https://ig.ft.com/special-reports/growing-pains/"
+    },
+    "meta": {
+      "title": "成长的烦恼",
+      "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
+      "keywords": "",
+      "wx": {
+        "image": "http://i.ftimg.net/picture/3/000070723_piclink.jpg"
+      },
+      "og": {
+        "type": "article",
+        "site_name": "FT中文网",
+        "title": "成长的烦恼——FT中文网",
+        "description":"阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
+        "image": "http://i.ftimg.net/picture/2/000070722_piclink.jpg",
+        "url": ""
+      }
     },
     "seriesTitle": "特别报道",
     "sections": [{
@@ -77,7 +93,10 @@
 
         {
             "_note": "Section 1",
-            "navText": "美国布鲁克林 阿尔马尼",
+            "nav": {
+              "text": "美国布鲁克林 阿尔马尼",
+              "id": "armani-brooklyn-new-york"
+            },
             "segments": [{
                     "_note": "cover of 1st section.",
                     "type": "text-over-media",
@@ -533,7 +552,10 @@
 
         {
             "_note": "Section 2",
-            "navText": "中国坪上镇 谢雅琦（伊娃）",
+            "nav":{
+              "text": "中国坪上镇 谢雅琦（伊娃）",
+              "id": "eva-pingshang-china"
+            },
             "segments": [{
                     "_note": "Segement 1. Cover for section 2",
                     "type": "text-over-media",
