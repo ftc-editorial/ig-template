@@ -69,7 +69,7 @@
                     },
                     "byline": {
                         "publishTime": "2017年5月15日",
-                        "author": "英国《金融时报》报道"
+                        "author": "英国《金融时报》尼尔•孟希(Neil Munshi)和韩碧如(Lucy Hornby)报道<br>摄影：加亚•斯夸尔奇(Gaia Squarci)和朱莉娅•马尔基(Giulia Marchi)"
                     }
                 }
             }]
@@ -89,8 +89,7 @@
                             "provider": "ft",
                             "poster": "/images/myanmar/mpv-shot0001.jpg",
                             "sources": {
-                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4",
-                                "webm": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm"
+                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4"
                             }
                         },
 
@@ -545,8 +544,7 @@
                             "provider": "ft",
                             "poster": "/images/myanmar/mpv-shot0001.jpg",
                             "sources": {
-                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4",
-                                "webm": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm"
+                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4"
                             }
                         },
                         "picture": {
