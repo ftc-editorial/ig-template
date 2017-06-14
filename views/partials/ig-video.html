@@ -12,7 +12,7 @@
     {% endif %}
 
     {% if video.provider == "ft" %}
-    <video class="ig-figure__media" preload="metadata" controls poster="{{video.poster}}">
+    <video class="ig-figure__media" preload="metadata" controls poster="{{env.urlPrefix}}{{video.poster}}">
       {% for type, src in video.source %}
       <source src="{{src}}" type="{{type}}">
       {% endfor %}

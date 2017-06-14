@@ -4,16 +4,16 @@
 	<source
     {% if source.landscape %}media="(min-aspect-ratio: 1/1)"{% endif %}
     {% if source.portrait %}media="(max-aspect-ratio: 1/1)"{% endif %}
-    srcset="{% for src in source.srcset %}{{src}}{% if not loop.last %}, {% endif %}{% endfor %}">
+    srcset="{% for src in source.srcset %}{{env.urlPrefix}}{{src}}{% if not loop.last %}, {% endif %}{% endfor %}">
   {% endfor %}
 
-  <img class="ig-background__media" src="{{picture.src}}">
+  <img class="ig-background__media" src="{{env.urlPrefix}}{{picture.src}}">
 </picture>
 {% endif %}
 
 {% if video %}
 <div class="ig-background ig-background--video">
-  <video class="ig-background__media" preload="metadata" poster="{{video.poster}}" muted autoplay loop>
+  <video class="ig-background__media" preload="metadata" poster="{{env.urlPrefix}}{{video.poster}}" muted autoplay loop>
     {% for type, src in video.sources %}
     <source src="{{src}}" type="video/{{type}}">
     {% endfor %}

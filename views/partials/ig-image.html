@@ -21,7 +21,7 @@
   style="padding-top:{{image.heightToWidth}};"
   {% endif %}>
 
-    <img{% if image.src %} src="{{image.src}}"{% endif %} class="ig-figure__media">
+    <img{% if image.src %} src="{{env.urlPrefix}}{{image.src}}"{% endif %} class="ig-figure__media">
     
     {% if image.textOnImage %}
     <figcaption class="ig-figure__image-text">{{image.textOnImage}}</figcaption>

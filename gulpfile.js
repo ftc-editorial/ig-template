@@ -58,11 +58,12 @@ gulp.task('dev', function() {
 });
 
 function buildPage(template, data) {
+  const isProduction = process.env.NODE_ENV === 'production';
   const env = {
     projectName,
     static: 'http://interactive.ftchinese.com/',
-    assets: `http://interactive.ftchinese.com/images/${projectName}`,
-    isProduction: process.env.NODE_ENV === 'production'
+    urlPrefix: isProduction ? `http://interactive.ftchinese.com/images/${projectName}` : '',
+    isProduction
   };
   const context = Object.assign(data, {env});
   const dest = `${tmpDir}/${htmlFile}`;
