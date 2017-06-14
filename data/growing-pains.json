@@ -47,7 +47,7 @@
                 "media": {
                     "video": {
                         "provider": "ftchinese",
-                        "poster": "/images/growing-pains/cover1.jpg",
+                        "poster": "/images/growing-pains/cover1.png",
                         "sources": {
                             "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
                         }
@@ -58,20 +58,20 @@
                             "landscape": true,
                             "portrait": false,
                             "srcset": [
-                                "/images/growing-pains/cover1.jpg 1100w,",
-                                "/images/growing-pains/cover1.jpg 1500w,",
-                                "/images/growing-pains/cover1.jpg"
+                                "/images/growing-pains/cover1.png 1100w,",
+                                "/images/growing-pains/cover1.png 1500w,",
+                                "/images/growing-pains/cover1.png"
                             ]
                         }, {
                             "landscape": false,
                             "portrait": true,
                             "srcset": [
-                                "/images/growing-pains/cover1.jpg 1100w,",
-                                "/images/growing-pains/cover1.jpg 1500w,",
-                                "/images/growing-pains/cover1.jpg"
+                                "/images/growing-pains/cover1.png 1100w,",
+                                "/images/growing-pains/cover1.png 1500w,",
+                                "/images/growing-pains/cover1.png"
                             ]
                         }],
-                        "src": "growing-pains/cover1.jpg"
+                        "src": "growing-pains/cover1.png"
                     }
                 },
                 "text": {
@@ -106,7 +106,7 @@
 
                         "video": {
                             "provider": "ft",
-                            "poster": "/images/growing-pains/armani-cover.jpg",
+                            "poster": "/images/growing-pains/armani-cover.png",
                             "sources": {
                                 "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4"
                             }
@@ -117,12 +117,12 @@
                                 "landscape": true,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/armani-cover.jpg 1100w",
-                                    "/images/growing-pains/armani-cover.jpg 1500w",
-                                    "/images/growing-pains/armani-cover.jpg"
+                                    "/images/growing-pains/armani-cover.png 1100w",
+                                    "/images/growing-pains/armani-cover.png 1500w",
+                                    "/images/growing-pains/armani-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/armani-cover.jpg"
+                            "src": "/images/growing-pains/armani-cover.png"
                         }
                     },
                     "text": {
@@ -153,7 +153,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-1-1.jpg",
+                                "src": "/images/growing-pains/armani-1-1.png",
                                 "caption": "阿尔马尼（中）和母亲阿琳、妹妹贾米娅在她们位于布鲁克林的家门口。"
                             }
                         },
@@ -187,7 +187,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-1-2.jpg",
+                                "src": "/images/growing-pains/armani-1-2.png",
                                 "caption": "阿琳和女儿们在位于贝德福德-施托伊弗桑特的学校外。"
                             }
                         }, {
@@ -214,12 +214,12 @@
                                 "landscape": false,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/armani-2-cover.jpg 1100w,",
-                                    "/images/growing-pains/armani-2-cover.jpg 1500w,",
-                                    "/images/growing-pains/armani-2-cover.jpg"
+                                    "/images/growing-pains/armani-2-cover.png 1100w,",
+                                    "/images/growing-pains/armani-2-cover.png 1500w,",
+                                    "/images/growing-pains/armani-2-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/armani-2-cover.jpg"
+                            "src": "/images/growing-pains/armani-2-cover.png"
                         }
                     },
 
@@ -253,7 +253,7 @@
                                 "ratio": "7/5",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-2-1.jpg",
+                                "src": "/images/growing-pains/armani-2-1.png",
                                 "caption": "昌塔尔•阿瑟斯自阿尔马尼7岁起一直担任她的顾问。"
                             }
                         },
@@ -273,7 +273,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-2-2.jpg",
+                                "src": "/images/growing-pains/armani-2-2.png",
                                 "caption": "阿尔马尼参加了为纽约市父母入狱的子女开设的课后项目“希望之子”。"
                             }
                         },
@@ -312,12 +312,12 @@
                                 "landscape": false,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/armani-3-cover.jpg 1100w,",
-                                    "/images/growing-pains/armani-3-cover.jpg 1500w,",
-                                    "/images/growing-pains/armani-3-cover.jpg"
+                                    "/images/growing-pains/armani-3-cover.png 1100w,",
+                                    "/images/growing-pains/armani-3-cover.png 1500w,",
+                                    "/images/growing-pains/armani-3-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/armani-3-cover.jpg"
+                            "src": "/images/growing-pains/armani-3-cover.png"
                         }
                     },
 
@@ -351,7 +351,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-3-1.jpg",
+                                "src": "/images/growing-pains/armani-3-1.png",
                                 "caption": "阿尔马尼和朋友们在贾米娅的生日派对上，地点是她们位于迪特马斯公园的家中。"
                             }
                         },
@@ -368,7 +368,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-3-2.jpg",
+                                "src": "/images/growing-pains/armani-3-2.png",
                                 "caption": "阿尔马尼和阿琳在表演New Edition的《Mr Telephone Man》，凯在旁边看着。"
                             }
                         },
@@ -395,12 +395,12 @@
                                 "landscape": false,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/armani-4-cover.jpg 1100w,",
-                                    "/images/growing-pains/armani-4-cover.jpg 1500w,",
-                                    "/images/growing-pains/armani-4-cover.jpg"
+                                    "/images/growing-pains/armani-4-cover.png 1100w,",
+                                    "/images/growing-pains/armani-4-cover.png 1500w,",
+                                    "/images/growing-pains/armani-4-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/armani-4-cover.jpg"
+                            "src": "/images/growing-pains/armani-4-cover.png"
                         }
                     },
 
@@ -436,7 +436,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-4-1.jpg",
+                                "src": "/images/growing-pains/armani-4-1.png",
                                 "caption": "阿尔马尼和贾米娅要乘坐两趟公交车，耗时近一个小时，才能到达学校"
                             }
                         },
@@ -473,12 +473,12 @@
                                 "landscape": false,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/armani-5-cover.jpg 1100w,",
-                                    "/images/growing-pains/armani-5-cover.jpg 1500w,",
-                                    "/images/growing-pains/armani-5-cover.jpg"
+                                    "/images/growing-pains/armani-5-cover.png 1100w,",
+                                    "/images/growing-pains/armani-5-cover.png 1500w,",
+                                    "/images/growing-pains/armani-5-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/armani-5-cover.jpg"
+                            "src": "/images/growing-pains/armani-5-cover.png"
                         }
                     },
 
@@ -510,7 +510,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-5-1.jpg",
+                                "src": "/images/growing-pains/armani-5-1.png",
                                 "caption": "阿尔马尼和凯在看篮球比赛。"
                             }
                         },
@@ -527,7 +527,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/armani-5-2.jpg",
+                                "src": "/images/growing-pains/armani-5-2.png",
                                 "caption": "迈尔生辰纪念日那天全家在一个室内充气城堡公园。"
                             }
                         },
@@ -612,7 +612,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/xie-1-1.jpg",
+                                "src": "/images/growing-pains/xie-1-1.png",
                                 "caption": "伊娃在湖南省坪上镇家中。"
                             }
                         }, {
@@ -638,12 +638,12 @@
                                 "landscape": false,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/xie-1-cover.jpg 1100w,",
-                                    "/images/growing-pains/xie-1-cover.jpg 1500w,",
-                                    "/images/growing-pains/xie-1-cover.jpg"
+                                    "/images/growing-pains/xie-1-cover.png 1100w,",
+                                    "/images/growing-pains/xie-1-cover.png 1500w,",
+                                    "/images/growing-pains/xie-1-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/xie-1-cover.jpg"
+                            "src": "/images/growing-pains/xie-1-cover.png"
                         }
                     },
 
@@ -716,12 +716,12 @@
                                 "landscape": false,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/xie-2-cover.jpg 1100w,",
-                                    "/images/growing-pains/xie-2-cover.jpg 1500w,",
-                                    "/images/growing-pains/xie-2-cover.jpg"
+                                    "/images/growing-pains/xie-2-cover.png 1100w,",
+                                    "/images/growing-pains/xie-2-cover.png 1500w,",
+                                    "/images/growing-pains/xie-2-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/xie-2-cover.jpg"
+                            "src": "/images/growing-pains/xie-2-cover.png"
                         }
                     },
 
@@ -753,7 +753,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/xie-2-1.jpg",
+                                "src": "/images/growing-pains/xie-2-1.png",
                                 "caption": "坪上镇伊娃所念学校外部景观"
                             }
                         }, {
@@ -792,12 +792,12 @@
                                 "landscape": false,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/xie-3-cover.jpg 1100w,",
-                                    "/images/growing-pains/xie-3-cover.jpg 1500w,",
-                                    "/images/growing-pains/xie-3-cover.jpg"
+                                    "/images/growing-pains/xie-3-cover.png 1100w,",
+                                    "/images/growing-pains/xie-3-cover.png 1500w,",
+                                    "/images/growing-pains/xie-3-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/xie-3-cover.jpg"
+                            "src": "/images/growing-pains/xie-3-cover.png"
                         }
                     },
 
@@ -830,7 +830,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/xie-3-1.jpg",
+                                "src": "/images/growing-pains/xie-3-1.png",
                                 "caption": "伊娃在这所乡下学校的教室里。"
                             }
                         }, {
@@ -867,12 +867,12 @@
                                 "landscape": false,
                                 "portrait": false,
                                 "srcset": [
-                                    "/images/growing-pains/xie-4-cover.jpg 1100w,",
-                                    "/images/growing-pains/xie-4-cover.jpg 1500w,",
-                                    "/images/growing-pains/xie-4-cover.jpg"
+                                    "/images/growing-pains/xie-4-cover.png 1100w,",
+                                    "/images/growing-pains/xie-4-cover.png 1500w,",
+                                    "/images/growing-pains/xie-4-cover.png"
                                 ]
                             }],
-                            "src": "/images/growing-pains/xie-4-cover.jpg"
+                            "src": "/images/growing-pains/xie-4-cover.png"
                         }
                     },
 
@@ -903,7 +903,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/xie-4-1.jpg",
+                                "src": "/images/growing-pains/xie-4-1.png",
                                 "caption": "坪上镇家中墙上挂着伊娃爷爷的遗像。"
                             }
                         }, {
@@ -917,7 +917,7 @@
                                 "ratio": "",
                                 "title": "",
                                 "link": false,
-                                "src": "/images/growing-pains/xie-4-2.jpg",
+                                "src": "/images/growing-pains/xie-4-2.png",
                                 "caption": "伊娃和婶婶在坪上镇家中做晚饭。"
                             }
                         }, {
@@ -968,7 +968,7 @@
                             "link": null,
                             "src": "/images/growing-pains/gates-foundation.png",
 
-                            "caption": "本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。"
+                            "caption": "<i>本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。</i>"
                         }
                     }],
                     "colSecondary": {}
