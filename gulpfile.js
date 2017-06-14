@@ -90,7 +90,9 @@ async function buildPage(template, data) {
       collapseInlineTagWhitespace: true,
       collapseWhitespace: true,
       conservativeCollapse: true,
-      removeComments: true
+      removeComments: true,
+      minifyCSS: true,
+      minifyJS: true
     });
   }
   await fs.writeAsync(dest, html);
@@ -205,7 +207,7 @@ gulp.task('images', function () {
       progressive: true,
       interlaced: true,
       svgoPlugins: [{cleanupIDs: false}],
-      verbose: true
+      verbose: true,
     }))
     .pipe(gulp.dest(dest));
 });
