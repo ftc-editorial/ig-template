@@ -12,12 +12,12 @@
     "enableScroll": true,
     "autoNav": true,
     "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
-    "ogTitle": "成长的烦恼-FT中文网",
+    "ogTitle": "成长的烦恼——FT中文网",
     "ogType": "article",
-    "ogImage": "/images/growing-pains/xie-cover.png",
-    "ogUrl": "",
-    "pageTitle": "成长的烦恼-FT中文网",
-    "wechatImage": "/images/growing-pains/xie-cover.png",
+    "ogImage": "http://i.ftimg.net/picture/2/000070722_piclink.jpg",
+    "ogUrl": "http://www.ftchinese.com/interactive/9484",
+    "pageTitle": "成长的烦恼",
+    "wechatImage": "http://i.ftimg.net/picture/3/000070723_piclink.jpg",
     "edition": {
         "text": "English",
         "href": "https://ig.ft.com/special-reports/growing-pains/"
@@ -30,8 +30,8 @@
                 "type": "text-over-media",
                 "media": {
                     "video": {
-                        "provider": "ft",
-                        "poster": "/images/myanmar/mpv-shot0001.jpg",
+                        "provider": "ftchinese",
+                        "poster": "/images/growing-pains/cover1.jpg",
                         "sources": {
                             "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
                         }
@@ -69,7 +69,7 @@
                     },
                     "byline": {
                         "publishTime": "2017年5月15日",
-                        "author": "英国《金融时报》报道"
+                        "author": "英国《金融时报》报道<br><br>（请向下滑动阅读）"
                     }
                 }
             }]
@@ -89,8 +89,7 @@
                             "provider": "ft",
                             "poster": "/images/myanmar/mpv-shot0001.jpg",
                             "sources": {
-                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4",
-                                "webm": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm"
+                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4"
                             }
                         },
 
@@ -114,7 +113,7 @@
                             "title": null,
                             "heading": "阿尔马尼",
                             "subtitle": null,
-                            "intro": "美国布鲁克林区"
+                            "intro": "美国，布鲁克林区"
                         }
                     }
                 },
@@ -150,7 +149,7 @@
                         }, {
                             "image": {
                                 "mobileOnly": false,
-                                "ratio": "",
+                                "ratio": "7/5",
                                 "title": "",
                                 "link": false,
                                 "src": "/images/growing-pains/armani-chart-1.png",
@@ -158,8 +157,8 @@
                             }
                         }, {
                             "text": [
-                                "按照许多社会经济指标衡量，非裔美国人群体依然像是一个发展中国家的国民：根据皮尤研究中心(Pew Research Center)的数据，近40%非裔美国孩子生活在贫困线以下，白人孩子的这一比例约为11%。比起同龄的白人女孩，像阿尔马尼这样的黑人女孩更有可能遭到停学、开除，或者最终落入青少年司法系统。",
-                                "非裔美国孩子遇到过父母被监禁的情况的几率最高。在全美范围内，截至18岁，有四分之一的非裔美国孩子遇到过母亲或父亲被监禁的情况，拉丁裔孩子的这个比例为十分之一，白人孩子的这个比例为25分之一。根据非营利性组织“儿童趋势”(Child Trends)在2015年发布的一份报告，父母被监禁的孩子，本人入狱的几率更高，同时，他们与存在精神疾病或物质滥用(substance abuse)问题的人一起生活的几率也更高。",
+                                "按照许多社会经济指标衡量，非裔美国人群体依然像是一个发展中国家的国民：根据<a href=\"http://www.pewresearch.org/fact-tank/2015/07/14/black-child-poverty-rate-holds-steady-even-as-other-groups-see-declines/\">皮尤研究中心(Pew Research Center)的数据</a>，近40%非裔美国孩子生活在贫困线以下，白人孩子的这一比例约为11%。比起同龄的白人女孩，像阿尔马尼这样的<a href=\"https://static1.squarespace.com/static/53f20d90e4b0b80451158d8c/t/54d2d37ce4b024b41443b0ba/1423102844010/BlackGirlsMatterReport.pdf\">停学、开除，或者最终落入青少年司法系统。</a>",
+                                "非裔美国孩子遇到过父母被监禁的情况的几率最高。在全美范围内，截至18岁，有四分之一的非裔美国孩子遇到过母亲或父亲被监禁的情况，拉丁裔孩子的这个比例为十分之一，白人孩子的这个比例为25分之一。根据非营利性组织“儿童趋势”(Child Trends)在<a href=\"https://www.childtrends.org/wp-content/uploads/2015/10/2015-42ParentsBehindBars.pdf\">2015年发布</a>的一份报告，父母被监禁的孩子，本人入狱的几率更高，同时，他们与存在精神疾病或物质滥用(substance abuse)问题的人一起生活的几率也更高。",
                                 "因此，阿尔马尼要克服的挑战高于平均水平——她也明白这一点。她的生活经历告诉了她，她的种族和性别将如何塑造她的人生：她看到白人搬进她的学校周围的区域，但这些白人的孩子似乎并不进入PS 256本杰明•班尼克学校(PS 256 Benjamin Banneker)就读。她知道自己离开校篮球队的一个原因是，她是队里唯一的女孩。"
 
                             ]
@@ -232,7 +231,7 @@
                         }, {
                             "image": {
                                 "mobileOnly": false,
-                                "ratio": "",
+                                "ratio": "7/5",
                                 "title": "",
                                 "link": false,
                                 "src": "/images/growing-pains/armani-2-1.jpg",
@@ -276,7 +275,7 @@
                         }, {
                             "text": [
                                 "阿琳认为阿尔马尼是特别的：“我希望，或许要是我像她这么大时，能像她现在这样就好了 。”但她最害怕的是阿尔马尼将陷入同样的恶性循环，像她一样陷入糟糕的感情、遭受家暴、过早怀孕。",
-                                "根据官方数据，2014年美国非裔少女的怀孕率接近35‰，是白人少女的两倍。",
+                                "根据<a href=\"https://www.cdc.gov/teenpregnancy/about/alt-text/birth-rates-chart-2000-2014-text.htm\">官方数据</a>，2014年美国非裔少女的怀孕率接近35‰，是白人少女的两倍。",
                                 "所以她尝试和女儿开诚布公地讨论这些风险：“阿尔马尼不需要去外面了解毒品，因为我会跟她说关于毒品的事；她不需要去外面了解性，因为我会告诉她。”"
                             ]
                         }
@@ -545,8 +544,7 @@
                             "provider": "ft",
                             "poster": "/images/myanmar/mpv-shot0001.jpg",
                             "sources": {
-                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4",
-                                "webm": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_7.webm"
+                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4"
                             }
                         },
                         "picture": {
@@ -653,7 +651,7 @@
                         }, {
                             "image": {
                                 "mobileOnly": false,
-                                "ratio": "",
+                                "ratio": "8/7",
                                 "title": "",
                                 "link": false,
                                 "src": "/images/growing-pains/xie-chart-1.png",
@@ -669,7 +667,7 @@
                         }, {
                             "image": {
                                 "mobileOnly": false,
-                                "ratio": "",
+                                "ratio": "7/5",
                                 "title": "",
                                 "link": false,
                                 "src": "/images/growing-pains/xie-chart-2.png",
@@ -678,7 +676,7 @@
                         }, {
                             "text": [
                                 "留守儿童，尤其是生活在贫困村庄的留守儿童，更易遭受性侵和绑架。留守少年辍学或最终进监狱的可能性也高得多。关于留守儿童自杀或杀害他人的耸动新闻，以及稚童被留下来照顾患病祖父母的故事，震惊了全中国。据估计有200万儿童在没有任何成年人照料的状态下生活，地方政府很快将必须为他们提供监护人。",
-                                "对于像伊娃家这样经济条件较好的家庭来说，伤害主要是心理上的。2014年联合国儿童基金会(Unicef)在一份中国儿童调查报告中指出：“大多数留守儿童与父母的接触不规律且少，他们感到孤独、孤立无援。”",
+                                "对于像伊娃家这样经济条件较好的家庭来说，伤害主要是心理上的。<a href=\"https://www.google.com/url?hl=en-GB&q=http://www.unicef.cn/en/uploadfile/2015/0114/20150114094309619.pdf&source=gmail&ust=1494417943137000&usg=AFQjCNEbkAIXHUytPBU_L_fGPnurwcJ1tw\">2014年联合国儿童基金会(Unicef)</a>在一份中国儿童调查报告中指出：“大多数留守儿童与父母的接触不规律且少，他们感到孤独、孤立无援。”",
                                 "伊娃九岁的弟弟一开始也被送回坪上镇，但他太调皮捣蛋，于是伊娃的父母把他带回了城市。 小的时候，在搬去城里之前，伊娃与奶奶一起生活，那时她曾嫉妒待在父母身边的弟弟。而现在姐弟俩又分开了，她倒是怀念过去逗弟弟的时候。"
                             ]
                         }
@@ -712,7 +710,7 @@
                             "headFor": "section",
                             "lead": false,
                             "title": false,
-                            "heading": "“我也舍不得我奶奶，我那时候就高高兴兴的答应了，想回去看看奶奶”",
+                            "heading": "“我也舍不得我奶奶，我那时候就高高兴兴地答应了，想回去看看奶奶”",
                             "subtitle": "",
                             "intro": "——伊娃解释她当初是怎么被说服离开在广东的父母的  "
                         }
@@ -755,7 +753,6 @@
                             "text": [
                                 "高考的无情逻辑意味着，就算父母拿得出更多钱让她在城里上私立学校，她也必须回坪上镇念初中，所以他们的财务问题只是将她回乡的时间提前了两年。",
                                 "坪上镇的孩子要是初中（就读年龄为12岁到15岁）成绩还不错，或许有机会进附近城市一所寄宿学校。更好的高中意味着有希望上更好的大学，这就能转化成一份带着城市户口的工作。像伊娃这样的孩子之所以被送回乡下，是为了有机会拥有更好的未来——事实上也是重走父母走过的旅程。",
-                                "致力于维护缅甸小农户土地权利的非政府组织Land Core Group负责人瑞登(Shwe Thein)表示：“土地不只是一个地图或地区的问题。土地权利是保证这个国家中民众生计和食品安全的基本条件。土地权利对他们的文化、传统习俗以及社会凝聚力非常重要。土地是他们的生命。”",
                                 "因为会英语，伊娃的父亲在广东担任质量控制检验员，为外国买家检验产品。伊娃的母亲初中学历，在超市工作。伊娃说：“如果有急事，我会给她打电话。但一般我不打……我不想打扰她。有时候她上晚班，我又不知道她的排班。”",
                                 "她说“他们太累了。我让他们难过，因为我不听话。”"
                             ]
@@ -923,28 +920,28 @@
                     "colPrimary": [{
                         "text": [
                             "制作团队",
-                            "<i>美国</i>",
+                            "<br><i>美国</i>",
                             "报道：尼尔•孟希",
                             "摄影兼摄像：加亚•斯夸尔奇",
-                            "<i>中国</i>",
+                            "<br><i>中国</i>",
                             "报道：韩碧如",
                             "摄影兼摄像：朱莉娅•马尔基",
                             "补充报道：张祺(Archie Zhang)",
-                            "<i>剪辑与制作</i>",
+                            "<br><i>剪辑与制作</i>",
                             "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
                             "编辑：",
                             "图片编辑：艾伦•诺克斯(Alan Knox)",
                             "图表:Cleve Jones",
                             "网页：乔治•基里亚科斯(George Kyriakos)",
-                            "<i>中文网：</i>",
+                            "<br><i>中文网：</i>",
                             "翻译：蓝田",
-                            "视频翻译：于江月",
+                            "视频翻译：实习生于江月",
                             "制作：史书华"
                         ]
                     }, {
                         "image": {
                             "mobileOnly": false,
-                            "ratio": null,
+                            "ratio": "1/2",
                             "title": null,
                             "link": null,
                             "src": "/images/growing-pains/gates-foundation.png",
