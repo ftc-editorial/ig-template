@@ -18,8 +18,13 @@
 	  {% if text.byline %}
 	  {% set byline = text.byline%}
 	  <div class="ig-byline">
-	    <time class="ig-byline__timestamp o-date">{{byline.publishTime}}</time>
-	    <p class="ig-byline__author">{{byline.author}}</p>
+			<ul class="ig-byline__authors">
+				{% for author in byline.authors %}
+					<li>{{author}}</li>
+				{% endfor %}
+			</ul>
+	    <time class="ig-byline__timestamp o-date">{{byline.publishedOn}}</time>
+	    <div class="ig-byline__publisher">{{byline.publishedBy}}</div>
 	  </div>
 	  {% endif %}
 

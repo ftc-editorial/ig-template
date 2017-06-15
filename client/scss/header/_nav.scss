@@ -2,11 +2,16 @@
 	display: none;	
 	@include oGridRespondTo(M) {
 		display: inline-block;
-		vertical-align: middle;
+		height: $o-header-height;
+		line-height: $o-header-height;
 	}
 }
 
 .o-header__nav-toggle {
+	display: none;
+	@include oGridRespondTo(M) {
+		display: none;
+	}
 	box-sizing: border-box;
 	position: relative;
 	border: 0;

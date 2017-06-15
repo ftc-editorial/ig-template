@@ -19,9 +19,5 @@ $o-header-height: 50px;
 
 @include oColorsSetUseCase(o-header-item--light, text, 'grey-tint5');
 
-$o-share-is-silent: false;
-
-@import "ftc-share/main";
-
 @import "header";
 @import "nav";

@@ -1,10 +1,11 @@
 const path = require('path');
 const del = require('del');
 const browserSync = require('browser-sync').create();
-const cssnext = require('postcss-cssnext');
+const buildPage = require('./lib/build-page.js');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const postcss = require('gulp-postcss')
+const postcss = require('gulp-postcss');
+const cssnext = require('postcss-cssnext');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 
@@ -59,6 +60,13 @@ gulp.task('styles', function styles() {
     }).on('error', (err) => {
       console.log(err);
     }))
+    .pipe(postcss([
+      cssnext({
+        features: {
+          colorRgba: false
+        }
+      })
+    ]))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());

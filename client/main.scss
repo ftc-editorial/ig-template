@@ -3,7 +3,14 @@
 @import "o-icons/main";
 @import "o-colors/main";
 
+$o-share-is-silent: false;
 @import "ftc-share/main";
+.o-share > ul {
+  vertical-align: middle;
+}
+.o-share__action a {
+  border-radius: 5px;
+}
 $o-footer-is-silent: false;
 @import "ftc-footer/main";
 @import "ftc-sticky/main";

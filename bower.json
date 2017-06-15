@@ -5,7 +5,7 @@
     "ftc-footer": "^0.2.1"
   },
   "dependencies": {
-    "ftc-share": "^2.1.0",
+    "ftc-share": "^3.4.4",
     "d3": "^4.1.1",
     "o-colors": "^3.3.2",
     "o-grid": "^4.2.3",

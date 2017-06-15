@@ -83,14 +83,39 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 1em;
+  bottom: 3%;
+  padding-bottom: 50px;
   text-align: center;
+  font-size: 15px;
+  line-height: 1.4;
 
+  &__authors {
+    margin-bottom: 5px;
+  }
   &__timestamp,
-  &__author {
+  &__publisher {
     margin: 0;
     padding: 0;
-    font-size: 16px;
-  }  
-}
+  }
 
+  &:before {
+    content: '向下滑动阅读';
+    font-size: 14px;
+    display: block;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 72px;
+    left: 50%;
+    margin-left: -36px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAASCAMAAAA+LTNpAAAAwFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8Do+ZMAAAAP3RSTlMA1Ur053H7kf0CBx4S8YYEguKVRNHCD0aArpo3bLunIm68XlrQOKyZwV82JFmpMRAGMIcB4zNUkhiM1iV0SPms/+YeAAAA/klEQVR4XqXQ15KCQBCF4SMgGXVBAXPOOeft93+r1ZqLKWvGVfS77epz8SO6hvhWeI1gkFm4nPG586VgkgGD7k6rroXkrO7qRDdsh9FKio0kbKWksVe2w6nFoYv3uMOiSjfiDmMO0mO8Mk4PTHpg4EiCVKb8PJZVzqRIcEQ22P+QQOtLY9lKXyPBzz7I4m4Zd0ig9lqPsdxWTyVBJ16Cg1Op6vzIY9XB1HkSTq9WHAjCSc2TxRpZI1kSrzYJ8UQ28CWxfiVJfJbkHzMhlphkhrc4jaZOcnqz4SCBeXsqxvKm7TkSW0T+hriNHy3wofU2l6e7fG67xncOu3h3wCt/QZNvI/thGKQAAAAASUVORK5CYII=") no-repeat center;
+  }
+}
