@@ -36,5 +36,6 @@ node_modules
 vendor
 .tmp
 dist
+public
 bower_components
 package-lock.json

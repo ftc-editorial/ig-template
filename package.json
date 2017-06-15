@@ -5,9 +5,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postversion": "git push && git push --tags",
     "build-html": "NODE_ENV=production node ./lib/build-page.js",
-    "build-sass": "node-sass --include-path=bower_components --output-style=compressed client/main.scss public/styles/main.css",
+    "build-sass": "node-sass --include-path=bower_components --output-style=compressed client/main.scss .tmp/styles/main.css",
     "build-js": "rollup -c",
-    "build": "npm run build-sass && npm run build-js && npm run build-html"
+    "clean": "rm -rf .tmp/*",
+    "build": "npm run build-sass && npm run build-js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "inline-source": "^5.2.2",
     "load-json-file": "^2.0.0",
     "minimist": "^1.2.0",
+    "node-sass": "^4.5.3",
     "nunjucks": "^2.5.2",
     "pify": "^3.0.0",
     "postcss-cssnext": "^2.11.0",

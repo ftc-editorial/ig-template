@@ -2,6 +2,7 @@ const path = require('path');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const buildPage = require('./lib/build-page.js');
+const svnUpdate = require('./lib/svn-update.js');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
@@ -29,11 +30,11 @@ const tmpDir = '.tmp';
 
 process.env.NODE_ENV = 'development';
 // change NODE_ENV between tasks.
-gulp.task('prod', function() {
+gulp.task('prod', () => {
   return Promise.resolve(process.env.NODE_ENV = 'production');
 });
 
-gulp.task('dev', function() {
+gulp.task('dev', () => {
   return Promise.resolve(process.env.NODE_ENV = 'development');
 });
 
@@ -60,13 +61,13 @@ gulp.task('styles', function styles() {
     }).on('error', (err) => {
       console.log(err);
     }))
-    .pipe(postcss([
-      cssnext({
-        features: {
-          colorRgba: false
-        }
-      })
-    ]))
+    // .pipe(postcss([
+    //   cssnext({
+    //     features: {
+    //       colorRgba: false
+    //     }
+    //   })
+    // ]))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());
@@ -123,7 +124,7 @@ gulp.task('serve', gulp.parallel('html', 'styles', 'scripts',
   })
 );
 
-gulp.task('clean', function() {
+gulp.task('clean', () => {
   return del(['.tmp']).then(()=>{
     console.log('.tmp and dist deleted');
   });
@@ -135,23 +136,35 @@ const deployDest = {
 	"html": "../special",
 	"assets": "../ft-interact"
 }
-gulp.task('images', function () {
+
+gulp.task('svn:update', () => {
+  return svnUpdate()
+    .catch(err => {
+      console.log(err)
+    });
+});
+
+gulp.task('imagemin', () => {
   const src = `./public/images/${projectName}/*.{svg,png,jpg,jpeg,gif}`;
   const dest = path.resolve(__dirname, `${deployDest.assets}/images/${projectName}`);
 
-  console.log(`Copying images ${src} to: ${dest}`);
+  console.log(`Image output: ${dest}`);
 
   return gulp.src(src)
-    .pipe(imagemin({
-      progressive: true,
-      interlaced: true,
-      svgoPlugins: [{cleanupIDs: false}],
-      verbose: true,
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({plugins: [{cleanupIDs: false}]})
+    ], {
+      verbose: true
     }))
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('deploy:html', function() {
+gulp.task('images', gulp.series('svn:update', 'imagemin'));
+
+gulp.task('deploy:html', () => {
   const dest = path.resolve(__dirname, deployDest.html)
 
   console.log(`Deploying built html file to: ${dest}`);
