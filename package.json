@@ -5,7 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postversion": "git push && git push --tags",
     "build-html": "NODE_ENV=production node ./lib/build-page.js",
-    "build-sass": "node-sass --include-path=bower_components --output-style=compressed client/main.scss .tmp/styles/main.css",
+    "build-css": "node-sass --include-path=bower_components --output-style=compressed client/main.scss .tmp/styles/main.css",
     "build-js": "rollup -c",
     "clean": "rm -rf .tmp/*",
     "build": "npm run build-sass && npm run build-js"

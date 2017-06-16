@@ -26,9 +26,7 @@
       "title": "成长的烦恼",
       "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
       "keywords": "",
-      "wx": {
-        "image": "http://i.ftimg.net/picture/3/000070723_piclink.jpg"
-      },
+      "wx":"http://i.ftimg.net/picture/3/000070723_piclink.jpg",
       "og": {
         "type": "article",
         "site_name": "FT中文网",
@@ -46,7 +44,7 @@
                 "type": "text-over-media",
                 "media": {
                     "video": {
-                        "provider": "ftchinese",
+                        "provider": "ft",
                         "poster": "/images/growing-pains/cover1.png",
                         "sources": {
                             "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
@@ -84,7 +82,7 @@
                         "intro": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
                     },
                     "byline": {
-                        "authors": [""],
+                        "authors": null,
                         "publishedOn": "2017年6月19日",
                         "publishedBy": "英国《金融时报》报道"
                     }
@@ -986,7 +984,7 @@
             "image": {
                 "ratio": "",
                 "link": "http://www.ftchinese.com/story/001065535",
-                "src": "/images/growing-pains/more-1.jpg",
+                "src": "/images/growing-pains/more-1.png",
                 "caption": "留守儿童：中国奇迹的遗留难题"
             },
             "summary": [
@@ -996,7 +994,7 @@
             "image": {
                 "ratio": "",
                 "link": "http://www.ftchinese.com/story/001072959",
-                "src": "/images/growing-pains/more-2.jpg",
+                "src": "/images/growing-pains/more-2.png",
                 "caption": "中国未来的人口红利在哪里？"
             },
             "summary": [
@@ -1006,7 +1004,7 @@
             "image": {
                 "ratio": "",
                 "link": "http://www.ftchinese.com/story/001072100",
-                "src": "/images/growing-pains/more-3.jpg",
+                "src": "/images/growing-pains/more-3.png",
                 "caption": "雄安新区突显中国城镇化雄心"
             },
             "summary": [
