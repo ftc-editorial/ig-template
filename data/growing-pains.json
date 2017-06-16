@@ -16,7 +16,7 @@
     
     "title": {
       "text": "成长的烦恼",
-      "html": ""
+      "html": "http://www.ftchinese.com/interactive/9484"
     },
     "edition": {
         "text": "English",
@@ -25,15 +25,15 @@
     "meta": {
       "title": "成长的烦恼",
       "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
-      "keywords": "",
-      "wx":"http://i.ftimg.net/picture/3/000070723_piclink.jpg",
+      "keywords": "留守儿童,中国社会,中国,FT中文网",
+      "wx": "http://i.ftimg.net/picture/3/000070723_piclink.jpg",
       "og": {
         "type": "article",
         "site_name": "FT中文网",
-        "title": "成长的烦恼——FT中文网",
+        "title": "成长的烦恼—FT中文网",
         "description":"阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
         "image": "http://i.ftimg.net/picture/2/000070722_piclink.jpg",
-        "url": ""
+        "url": "http://www.ftchinese.com/interactive/9484"
       }
     },
     "seriesTitle": "特别报道",
@@ -993,12 +993,18 @@
         }, {
             "image": {
                 "ratio": "",
+<<<<<<< HEAD
                 "link": "http://www.ftchinese.com/story/001072959",
                 "src": "/images/growing-pains/more-2.png",
                 "caption": "中国未来的人口红利在哪里？"
+=======
+                "link": "http://www.ftchinese.com/story/001073031",
+                "src": "/images/growing-pains/more-2.png",
+                "caption": "南五环边上学梦：北京首所打工子弟中学的奇迹与困境？"
+>>>>>>> 6fe19a9f500ab467ea2e9045a7b88a7e17be4463
             },
             "summary": [
-                "沈凌：中国经济是否已不再有人口红利？计算人口对经济增长作用力时，除了需要考虑人口数量红利，还需要考虑质量红利...<a href=\"http://www.ftchinese.com/story/001072100\">阅读更多"
+                "蒲公英中学建校12年，将12名几乎一无所有的学生送进美国名校。如今，奇迹却被挡在了无法竣工的新校舍门外...<a href=\"http://www.ftchinese.com/story/001073031\">阅读更多"
             ]
         }, {
             "image": {
