@@ -1,1033 +1,1037 @@
 {
-    "header": {
-        "theme": "theme-dark"
-    },
-    "share": {
-        "theme": "theme-dark"
-    },
-    "config": {
-      "highcharts": false,
-      "d3": false,
-      "customCss": true,
-      "customJs": false,
-      "enableScroll": true,
-      "navOnHeader": true
-    },
-    
-    "title": {
-      "text": "成长的烦恼",
-      "html": "http://www.ftchinese.com/interactive/9484"
-    },
-    "edition": {
-        "text": "English",
-        "href": "https://ig.ft.com/special-reports/growing-pains/"
-    },
-    "meta": {
-      "title": "成长的烦恼",
+  "header": {
+    "theme": "theme-dark"
+  },
+  "share": {
+    "theme": "theme-dark"
+  },
+  "config": {
+    "highcharts": false,
+    "d3": false,
+    "customCss": true,
+    "customJs": false,
+    "enableScroll": true,
+    "navOnHeader": true
+  },
+  "title": {
+    "text": "成长的烦恼",
+    "html": "http://www.ftchinese.com/interactive/9484"
+  },
+  "edition": {
+    "text": "English",
+    "href": "https://ig.ft.com/special-reports/growing-pains/"
+  },
+  "meta": {
+    "title": "成长的烦恼",
+    "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
+    "keywords": "留守儿童,中国社会,中国,FT中文网",
+    "wx": "http://i.ftimg.net/picture/3/000070723_piclink.jpg",
+    "og": {
+      "type": "article",
+      "site_name": "FT中文网",
+      "title": "成长的烦恼—FT中文网",
       "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
-      "keywords": "留守儿童,中国社会,中国,FT中文网",
-      "wx": "http://i.ftimg.net/picture/3/000070723_piclink.jpg",
-      "og": {
-        "type": "article",
-        "site_name": "FT中文网",
-        "title": "成长的烦恼—FT中文网",
-        "description":"阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
-        "image": "http://i.ftimg.net/picture/2/000070722_piclink.jpg",
-        "url": "http://www.ftchinese.com/interactive/9484"
-      }
-    },
-    "seriesTitle": "特别报道",
-    "sections": [{
-            "_note": "This section is the article's cover.",
-            "navText": null,
-            "segments": [{
-                "type": "text-over-media",
-                "media": {
-                    "video": {
-                        "provider": "ft",
-                        "poster": "/images/growing-pains/cover1.png",
-                        "sources": {
-                            "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
-                        }
-                    },
-
-                    "picture": {
-                        "sources": [{
-                            "landscape": true,
-                            "portrait": false,
-                            "srcset": [
-                                "/images/growing-pains/cover1.png 1100w,",
-                                "/images/growing-pains/cover1.png 1500w,",
-                                "/images/growing-pains/cover1.png"
-                            ]
-                        }, {
-                            "landscape": false,
-                            "portrait": true,
-                            "srcset": [
-                                "/images/growing-pains/cover1.png 1100w,",
-                                "/images/growing-pains/cover1.png 1500w,",
-                                "/images/growing-pains/cover1.png"
-                            ]
-                        }],
-                        "src": "growing-pains/cover1.png"
-                    }
-                },
-                "text": {
-                    "head": {
-                        "verticalCenter": true,
-                        "lead": null,
-                        "title": "成长的烦恼",
-                        "heading": null,
-                        "subtitle": null,
-                        "intro": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
-                    },
-                    "byline": {
-                        "authors": null,
-                        "publishedOn": "2017年6月19日",
-                        "publishedBy": "英国《金融时报》报道"
-                    }
-                }
-            }]
-        },
-
+      "image": "http://i.ftimg.net/picture/2/000070722_piclink.jpg",
+      "url": "http://www.ftchinese.com/interactive/9484"
+    }
+  },
+  "seriesTitle": "特别报道",
+  "sections": [
+    {
+      "_note": "This section is the article's cover.",
+      "navText": null,
+      "segments": [
         {
-            "_note": "Section 1",
-            "nav": {
-              "text": "美国布鲁克林 阿尔马尼",
-              "id": "armani-brooklyn-new-york"
+          "type": "text-over-media",
+          "media": {
+            "video": {
+              "provider": "ft",
+              "poster": "/images/growing-pains/cover1.png",
+              "sources": {
+                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
+              }
             },
-            "segments": [{
-                    "_note": "cover of 1st section.",
-                    "type": "text-over-media",
-                    "sticky": false,
-
-                    "media": {
-
-                        "video": {
-                            "provider": "ft",
-                            "poster": "/images/growing-pains/armani-cover.png",
-                            "sources": {
-                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4"
-                            }
-                        },
-
-                        "picture": {
-                            "sources": [{
-                                "landscape": true,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/armani-cover.png 1100w",
-                                    "/images/growing-pains/armani-cover.png 1500w",
-                                    "/images/growing-pains/armani-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/armani-cover.png"
-                        }
-                    },
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "title": null,
-                            "heading": "阿尔马尼",
-                            "subtitle": null,
-                            "intro": "美国，布鲁克林区"
-                        }
-                    }
-                },
-
-
+            "picture": {
+              "sources": [
                 {
-                    "_note": "text-segment 1 of section 1",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "阿尔马尼•亚当斯-史密斯(Armani Adams-Smith)居住在纽约布鲁克林区——她说，她是个地地道道的布鲁克林人。",
-                                "阿尔马尼10岁，又高又瘦，聪颖机智，人缘好。她喜欢看起来“时髦”，但她并不太在意“漂亮”。她有一个“死敌”，一个戴眼镜的胖男孩，名叫西奥多(Theodore)：“你把我惹毛了，西奥多；你真的把我惹毛了，伙计。”",
-                                "当被问到她为什么不担心即将到来的、决定她上哪所初中的标准化测试，或者她为什么能够在体育课上打败男孩子，或者她为什么冒然打电话给一个当地说唱歌手，问她是否能够在她的音乐视频上露脸，阿尔马尼有一个简单的答案：“（因为）我是阿尔马尼•亚当斯-史密斯。”"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-1-1.png",
-                                "caption": "阿尔马尼（中）和母亲阿琳、妹妹贾米娅在她们位于布鲁克林的家门口。"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "阿尔马尼4岁的时候，母亲阿琳(Arlene)经历了18个月的审判前羁押，阿尔马尼和妹妹贾米娅(Jameeyah)因而加入了至少500万美国儿童（约7%）的行列，成为了父母一方被关押的孩子。",
-                                "在任何地方，做一个青春期的女孩子都不容易。全球范围内，有2.5亿女孩生活贫困，社会发展工作者(development worker)认为，10岁到19岁的阶段是对女孩的人生十分关键的一个窗口期。这是做出抉择、确立行为举止的几年，可能帮助一个女孩走上成功的道路，也可能永远地限制她的视野。",
-                                "但尽管美国的发展资金常常流向发展中国家的项目，像阿尔马尼这样的美国女孩依然有被忽视的风险。"
-
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "7/5",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-chart-1.png",
-                                "caption": ""
-                            }
-                        }, {
-                            "text": [
-                                "按照许多社会经济指标衡量，非裔美国人群体依然像是一个发展中国家的国民：根据<a href=\"http://www.pewresearch.org/fact-tank/2015/07/14/black-child-poverty-rate-holds-steady-even-as-other-groups-see-declines/\">皮尤研究中心(Pew Research Center)的数据</a>，近40%非裔美国孩子生活在贫困线以下，白人孩子的这一比例约为11%。比起同龄的白人女孩，像阿尔马尼这样的<a href=\"https://static1.squarespace.com/static/53f20d90e4b0b80451158d8c/t/54d2d37ce4b024b41443b0ba/1423102844010/BlackGirlsMatterReport.pdf\">停学、开除，或者最终落入青少年司法系统。</a>",
-                                "非裔美国孩子遇到过父母被监禁的情况的几率最高。在全美范围内，截至18岁，有四分之一的非裔美国孩子遇到过母亲或父亲被监禁的情况，拉丁裔孩子的这个比例为十分之一，白人孩子的这个比例为25分之一。根据非营利性组织“儿童趋势”(Child Trends)在<a href=\"https://www.childtrends.org/wp-content/uploads/2015/10/2015-42ParentsBehindBars.pdf\">2015年发布</a>的一份报告，父母被监禁的孩子，本人入狱的几率更高，同时，他们与存在精神疾病或物质滥用(substance abuse)问题的人一起生活的几率也更高。",
-                                "因此，阿尔马尼要克服的挑战高于平均水平——她也明白这一点。她的生活经历告诉了她，她的种族和性别将如何塑造她的人生：她看到白人搬进她的学校周围的区域，但这些白人的孩子似乎并不进入PS 256本杰明•班尼克学校(PS 256 Benjamin Banneker)就读。她知道自己离开校篮球队的一个原因是，她是队里唯一的女孩。"
-
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-1-2.png",
-                                "caption": "阿琳和女儿们在位于贝德福德-施托伊弗桑特的学校外。"
-                            }
-                        }, {
-                            "text": [
-                                "阿尔马尼也感觉到，特朗普领导的新一届政府可能会威胁她的未来。“现在唐纳德•特朗普(Donald Trump)是总统，我们的各种东西将被夺走——经济方面的东西、药品、保险——黑人的一些东西会被夺走，”她说。",
-                                "不过，阿尔马尼并不灰心。她满不在乎地脱口说出自己的一大串职业目标——“篮球运动员、作家、制片人、导演和演员”——就像任何一个10岁的孩子，她能够在沉重和轻松的话题间切换自如。",
-                                "“我的挑战，就是比如我的肤色，和我的教育，因为全世界各种各样的人，他们不认为女孩子应该接受教育。哦……而且（做）一个打篮球的女孩——这是这些挑战中最大的一个。”"
-
-                            ]
-                        }
-
-                    ]
+                  "landscape": true,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/cover1.png 1100w,",
+                    "/images/growing-pains/cover1.png 1500w,",
+                    "/images/growing-pains/cover1.png"
+                  ]
                 },
-
                 {
-                    "_note": "Segment 2 for section 1.",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "fixed": true,
-                        "picture": {
-                            "source": [{
-                                "landscape": false,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/armani-2-cover.png 1100w,",
-                                    "/images/growing-pains/armani-2-cover.png 1500w,",
-                                    "/images/growing-pains/armani-2-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/armani-2-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "lead": false,
-                            "title": false,
-                            "heading": "“做一个打篮球的女孩——这是头号挑战” ",
-                            "subtitle": "",
-                            "intro": ""
-                        }
-                    }
-
-
-
-                }, {
-                    "_note": "text-Segment 2 for section 1.",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "亚当斯家的女孩们已经算幸运的了。每天放学后，有大巴把她们送去参加“希望之子”(CPNYC)项目，这是纽约市唯一专门面向父母遭到监禁的孩子的课后项目。",
-                                "对像阿尔马尼和贾米娅这样的孩子，地方、州一级和国家层面给予的资源很少。罗格斯大学(Rutgers University)被监禁人员孩童和家人国家资源中心(National Resource Center on Children and Families of the Incarcerated)列出了其经审查项目国家数据库中的大约100个团体。这个数目分摊到每个州相当于一个州只有几个——有一些州根本没有。",
-                                "阿琳一家已经在2015年搬到50分钟公交车车程外的迪特马斯公园(Ditmas Park)附近，但阿琳依然让女儿们在位于贝德福德-施托伊弗桑特(Bedford-Stuyvesant)区的学校上学，一个原因就是“希望之子”项目。这个项目是她们生活的核心。除了辅导、游戏和运动，这个项目还为每年参与这个项目的350个孩子提供有执照的临床医师的治疗——并且帮助那些正在努力恢复正常生活的父母。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "7/5",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-2-1.png",
-                                "caption": "昌塔尔•阿瑟斯自阿尔马尼7岁起一直担任她的顾问。"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "阿尔马尼说，她在“希望之子”项目里的朋友是她“真正的朋友”，因为他们能够理解她的生活：每月一次的监狱探访，被抛弃的创伤，以及害怕学校里的其他人发现的心情。",
-                                "“学校生活太难了，”她表示，“好像你什么都不能跟他们说——你不能真的告诉他们你什么感受。这里就像是安全区，你可以用任何方式表达你的感受。没错，这里就是安全区。”",
-                                "即便如此，还是有一些事是阿尔马尼不愿意让她在CPNYC的“姐妹们”了解的：妈妈阿琳入狱是因为杀了阿尔马尼的爸爸。2010年9月的一个晚上，她在他们的公寓内刺死了贾迈尔(Jamel)——人们叫他迈尔(Mel)。",
-                                "阿琳称这是个意外。迈尔喝醉了，提出性要求并打了她。她拿起刀自卫，当迈尔打得太狠时，她失手刺了迈尔一刀。她打了911，帮迈尔按住伤口。迈尔死在了前往医院的路上。阿琳被捕。"
-                            ]
-                        },
-
-                        {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-2-2.png",
-                                "caption": "阿尔马尼参加了为纽约市父母入狱的子女开设的课后项目“希望之子”。"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "阿琳的青春期和她希望女儿享受的青春期截然不同。她认识迈尔时还是个少女。他们长大的地方相隔一条街，阿琳14岁开始为当地一名毒贩兜售可卡因，后来他们开始交往。",
-                                "17岁时阿琳发现自己怀上了阿尔马尼，于是从高中辍学。小两口一起卖毒品，在一次警方突袭后，他们被赶出了阿琳妈妈的公寓。后来他们住在自己的公寓或流浪者收容所。",
-                                "家暴成为常态，无论是在他们的女儿出生前还是出生后。阿琳对家暴并不陌生。她11岁时，她妈妈离开了家暴的丈夫。"
-                            ]
-                        }, {
-                            "video": {
-                                "provider": "cc",
-                                "title": "",
-                                "src": "http://p.bokecc.com/player?vid=B96C7CAA3BD56DD69C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
-                                "caption": "阿尔马尼讲述妈妈教给自己的事情。"
-                            }
-                        }, {
-                            "text": [
-                                "阿琳认为阿尔马尼是特别的：“我希望，或许要是我像她这么大时，能像她现在这样就好了 。”但她最害怕的是阿尔马尼将陷入同样的恶性循环，像她一样陷入糟糕的感情、遭受家暴、过早怀孕。",
-                                "根据<a href=\"https://www.cdc.gov/teenpregnancy/about/alt-text/birth-rates-chart-2000-2014-text.htm\">官方数据</a>，2014年美国非裔少女的怀孕率接近35‰，是白人少女的两倍。",
-                                "所以她尝试和女儿开诚布公地讨论这些风险：“阿尔马尼不需要去外面了解毒品，因为我会跟她说关于毒品的事；她不需要去外面了解性，因为我会告诉她。”"
-                            ]
-                        }
-
-                    ]
-                }, {
-                    "_note": "Segment 3 for section 1.",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "fixed": true,
-                        "picture": {
-                            "source": [{
-                                "landscape": false,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/armani-3-cover.png 1100w,",
-                                    "/images/growing-pains/armani-3-cover.png 1500w,",
-                                    "/images/growing-pains/armani-3-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/armani-3-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "lead": false,
-                            "title": false,
-                            "heading": "“我希望，或许要是我像她这么大时，能像她现在这样就好了”",
-                            "subtitle": "",
-                            "intro": "——阿琳谈到女儿"
-                        }
-                    }
-
-                },
-
-                {
-                    "_note": "text-Segment 3 for section 1.",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "为庆祝贾米娅9岁的生日，阿琳在她位于阁楼内的狭小公寓里举办了妮琪•米娜(Nicki Minaj)主题派对。电视里放着这位饶舌歌手的歌，墙上贴着粉色的纸。参加派对的小客人们即兴跳起了甩头舞。",
-                                "女孩们的教母罗比(Robi)穿着粉色的芭蕾舞裙，扮演涂指甲油的仙女。孩子们喝着Western Beef牌的可乐、橙汁苏打水和姜汁汽水，吃着切好的热狗、意大利面和肉丸。烤箱里还烤着鸡肉。"
-
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-3-1.png",
-                                "caption": "阿尔马尼和朋友们在贾米娅的生日派对上，地点是她们位于迪特马斯公园的家中。"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "阿琳被关押在赖克斯岛(Rikers Island)等待庭审的18个月里，阿尔马尼和贾米娅与外祖母住在一起。阿琳对女儿们说自己去上大学了，她们的爸爸得病死了。",
-                                "她最终得到了认罪协议（承认过失杀人，被判缓刑5年）。但在阿琳2012年3月获释后，一家人仍未团聚。经过2009年那次警方突袭，阿琳的妈妈的房东不让阿琳住在那套公寓内，因此阿琳只能在女儿们醒着时跟她们呆在一起，在女儿们晚上睡觉后离开，到流浪者收容所、朋友家或是地铁里睡觉。",
-                                "阿尔马尼在CPNYC的导师帮阿琳筹到了钱，使她可以租下她们现在位于迪特马斯公园(Ditmas Park)的家。这家人的生活仍然很艰难，依靠阿琳在她就读的城市学院兼职做助理挣的每小时12美元的工资过活。刚刚与阿琳交往了5个月的男朋友凯(Kay)也在帮助她们，他在阿琳所在的学院做维修工作。不过，他们的生活还过得下去。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-3-2.png",
-                                "caption": "阿尔马尼和阿琳在表演New Edition的《Mr Telephone Man》，凯在旁边看着。"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "阿琳希望毕业后担任顾问，为和她一样的女性维权。她正尝试教会自己的孩子同情和理解，让她们了解心理健康——她称，黑人群体常常忽视这个问题。阿琳没有把迈尔说得很坏，公寓里挂着他的照片，其中一张挂在阿尔马尼的床头。",
-                                "“人们永远无法理解，但无论贾迈尔对我做了什么，他都是孩子们的父亲，发生在他身上的事情也从不是我的本意，”她称。"
-                            ]
-                        }
-
-
-
-                    ]
-                }, {
-                    "_note": "Segment 4 for section 1.",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "fixed": true,
-                        "picture": {
-                            "source": [{
-                                "landscape": false,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/armani-4-cover.png 1100w,",
-                                    "/images/growing-pains/armani-4-cover.png 1500w,",
-                                    "/images/growing-pains/armani-4-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/armani-4-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "lead": false,
-                            "title": false,
-                            "heading": "“我会寄钱，但你们不能都来德雷克家。”",
-                            "subtitle": "",
-                            "intro": "——阿尔马尼策划自己的终极梦想：跟饶舌歌手德雷克一起玩"
-                        }
-                    }
-
-                }, {
-                    "_note": "text-Segment 4 for section 1.",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "女孩们要搭乘两趟公交车才能到她们的小学。103路公交车一路驶向市区的途中，阿尔马尼策划了实现她终极梦想的步骤，这个梦想是：与说唱歌手德瑞克(Drake)一起玩。",
-                                "<b><i>第一步：</i></b> “如果朗戴•霍利斯-杰弗森(Rondae Hollis-Jefferson)在布鲁克林篮网队(Nets)比赛中看到了我？”",
-                                "<b><i>第二步：</i></b>“如果他记住了我，然后（在当地Target门店做活动的时候跟我合了影），并且邀请我去更衣室？”",
-                                "<b><i>第三步：</i></b>“如果他把我介绍给（对手球员）拉塞尔•韦斯特布鲁克(Russell Westbrook)？”",
-                                "<b><i>第四步：</i></b>“如果我跟拉塞尔•威斯布鲁克说话，然后他把自己的电话号码给我了？我敢打赌我能拿到。”",
-                                "“接下来我就到了德雷克(Drake)家里啦。”",
-                                "阿琳让她到时候别忘了她们这些小人物。阿尔马尼回答：“我不会忘记你们的。我会寄钱，但你们不能都来德雷克家。”"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-4-1.png",
-                                "caption": "阿尔马尼和贾米娅要乘坐两趟公交车，耗时近一个小时，才能到达学校"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "有时候很难说阿尔马尼是不是真的想见到德雷克。但对她这代人来说，名气看上去并非遥不可及，这跟他们父母那代人面对的情况完全不一样。像她这个年纪的许多孩子一样，阿尔马尼对社交媒体有很多想法：“Facebook是给老年人用的。”而占据她生活的主要是Snapchat和视频社交网络Musical.ly。",
-                                "大多数时候，阿尔马尼可以马上说出她在Muscial.ly上有多少粉丝（5月初时是1211人），以及收获了多少个“赞”（27345个）。该应用让用户可以创建自己跟着热门歌曲对嘴或跳舞的短视频。阿尔马尼的大部分视频是她拿着手机，像自拍那样拍下自己对口型说唱德雷克的歌曲。"
-                            ]
-                        }, {
-                            "video": {
-                                "provider": "cc",
-                                "title": "",
-                                "src": "http://p.bokecc.com/player?vid=0CC1399846E01C3E9C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
-                                "caption": "阿琳谈到阿尔马尼小时候。"
-                            }
-                        }, {
-                            "text": [
-                                "阿尔马尼不得不比许多孩子更快成熟。她时常在儿童的无聊游戏与青春期笨拙的自我意识之间不知所措。她这个年龄即将告别儿童时代，遇到男孩子，他们会过来聊天、撩拨、追求。但她还紧紧抓着过去不放手。",
-                                "虽然已经超龄，阿尔马尼还是问她在CPNYC的顾问，自己能不能与8—9岁年龄组的孩子一起再待一年。自阿尔马尼7岁起一直当她顾问的昌塔尔•阿瑟斯(Chantal Arthurs)答应了她的请求，因为“她不像其他十几岁孩子那样受到外界太多浸染，她不会出口成脏，她也不举止粗鲁。她对年纪小一点的女孩们有非常好的影响，（她向她们证明）女孩也可以擅长数学，喜爱阅读，或擅长运动。”",
-                                "不过在学校，令老师吃惊的是，阿尔马尼回答问题时声音很轻，就像在提问一样。她的老师说：“亲爱的，我一直跟你说，你很聪明。要对你的答案有信心。”"
-                            ]
-                        }
-                    ]
-                }, {
-                    "_note": "Segment 5 for section 1.",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "fixed": true,
-                        "picture": {
-                            "source": [{
-                                "landscape": false,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/armani-5-cover.png 1100w,",
-                                    "/images/growing-pains/armani-5-cover.png 1500w,",
-                                    "/images/growing-pains/armani-5-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/armani-5-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "lead": false,
-                            "title": false,
-                            "heading": "“她有那种自信，那就是遗传了迈尔”",
-                            "subtitle": "",
-                            "intro": "——阿琳谈到阿尔马尼从父亲那里遗传到的东西"
-                        }
-                    }
-
-                }, {
-                    "_note": "text-Segment 5 for section 1.",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "有天下午在CPNYC，阿尔马尼走过隔壁桌坐着的一个女孩，做着口型说（其实还是出声了），“我不喜欢那个孩子”。",
-                                "那个女孩是阿尔马尼家的朋友，去年向一大巴车的孩子透露了阿尔马尼父亲的真实情况，阿尔马尼认为她的行为不可原谅。那一车孩子里就有贾米娅，当时她尚不知全部真相。",
-                                "阿尔马尼说：“她把我的事跟我最好的朋友们说了，我觉得她背叛了我，我再也不想犯类似错误。”"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-5-1.png",
-                                "caption": "阿尔马尼和凯在看篮球比赛。"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "阿尔马尼想念她的父亲。阿琳说她遗传了他的样貌，他的鼻子，他的骨架，“他的一切。她身上有那种混不吝的感觉——那种自信，那就是遗传了迈尔。“",
-                                "阿琳去年开始约会凯，对于生命里这个新的父亲形象，阿尔马尼的态度变化莫测。他带她去看布鲁克林篮网队比赛时，她靠在他肩膀上，被他的笑话逗得咯咯笑，也试着去逗他开心。凯吃完了他那袋爆米花，阿尔马尼默默把自己那袋递给他。",
-                                "他们几乎每天都见面，但当他不在身旁时，她就会说“我不想要继父”之类的话。这让阿琳痛苦，让凯为难。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/armani-5-2.png",
-                                "caption": "迈尔生辰纪念日那天全家在一个室内充气城堡公园。"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "昌塔尔•阿瑟斯说许多像阿尔马尼这种情况的孩子都会陷入抑郁症或行为举止出现问题，但阿尔马尼“知道发生了什么，没有让自己的日常生活受影响。她没有怪罪这件事，或将其作为借口。”至少现在，阿尔马尼正大步向前。",
-                                "在CPNYC的体育房，阿尔马尼正在练习半场投篮，她的朋友们在篮筐前或在摇呼啦圈，或在跳舞。突然间阿尔马尼投进了一球，她吃惊地左右四顾，没人在看她。她忘形地做出庆祝胜利的舞蹈动作，做到一半时回过神来，露出微笑——先是骄傲地、然后转为羞赧，接着又再度转为骄傲。",
-                                "她又投出一球。"
-                            ]
-                        }
-
-
-
-                    ]
+                  "landscape": false,
+                  "portrait": true,
+                  "srcset": [
+                    "/images/growing-pains/cover1.png 1100w,",
+                    "/images/growing-pains/cover1.png 1500w,",
+                    "/images/growing-pains/cover1.png"
+                  ]
                 }
-
-            ]
-        },
-
-
-
-        {
-            "_note": "Section 2",
-            "nav":{
-              "text": "中国坪上镇 谢雅琦（伊娃）",
-              "id": "eva-pingshang-china"
+              ],
+              "src": "growing-pains/cover1.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "lead": null,
+              "title": "成长的烦恼",
+              "heading": null,
+              "subtitle": null,
+              "intro": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
             },
-            "segments": [{
-                    "_note": "Segement 1. Cover for section 2",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "video": {
-                            "provider": "ft",
-                            "poster": "/images/growing-pains/xie-cover.png",
-                            "sources": {
-                                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4"
-                            }
-                        },
-                        "picture": {
-                            "sources": [{
-                                "landscape": true,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/xie-cover.png 1100w",
-                                    "/images/growing-pains/xie-cover.png 1500w",
-                                    "/images/growing-pains/xie-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/xie-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "title": null,
-                            "heading": "谢雅琦（伊娃）",
-                            "subtitle": null,
-                            "intro": "中国，坪上镇"
-                        }
-                    }
-                },
-
-                {
-                    "_note": "Segment 1 of section 2",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "谢雅琦今年12岁。",
-                                "她的英文名字叫伊娃(Eva)，她把这个名字当作护身符，它让她想起还在那座大城市里时，她最喜欢的老师，以及她的父亲。她已经两个月没见过父母了。",
-                                "伊娃短短的人生已跨越了两个世界。七岁之前她在坪上镇由奶奶抚养，而她的父母则在中国的制造业增长引擎广东省不断地换工作。当伊娃的父亲终于找到一份还算不错的工作时，马上就把她接来与母亲和弟弟一起生活在城市里，还出钱让她上私立学校。",
-                                "但去年9月，伊娃的父亲被迫将女儿送回封闭落后的乡下，那个他以为他们已经逃离的地方。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/xie-1-1.png",
-                                "caption": "伊娃在湖南省坪上镇家中。"
-                            }
-                        }, {
-                            "text": [
-                                "据2010年最新全国人口普查，中国约有7000万名儿童不在父母身边生活，伊娃是其中之一。",
-                                "自大规模移民40年前开始以来，已经有超过2.81亿人迁往城市，这是历史上规模最大、速度最快的一场人口流动。有些留守儿童始终未离开过农村，有些虽然进了城，但当父母再次流动时，他们却不能跟随。还有些孩子，比如伊娃，被带到城市却又再次被送回。",
-                                "伊娃说：“我恳求妈妈让我留下来，当初她是答应了的。后来因为我爸爸现金不够……而且那边学费也很贵。我是被我妈骗回来了其实，她说暑假了，你回去看一下你奶奶，我也舍不得我奶奶。我那时候就高高兴兴地答应了，想回去看看奶奶，可是后来我才发现。”",
-                                "伊娃的妈妈在电话里跟女儿说出了实情。“她说，‘雅琦，你不能回广东上学了，因为你爸爸欠了很多债，钱实在是不够你们两个学习了’。我那时候很伤心，然后躲被窝里面哭啊哭。”"
-                            ]
-                        }
-
-
-                    ]
-                }, {
-                    "_note": "Segment 2 for section 2",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "fixed": true,
-                        "picture": {
-                            "source": [{
-                                "landscape": false,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/xie-1-cover.png 1100w,",
-                                    "/images/growing-pains/xie-1-cover.png 1500w,",
-                                    "/images/growing-pains/xie-1-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/xie-1-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "lead": false,
-                            "title": false,
-                            "heading": "“钱实在是不够你们两个学习了”",
-                            "subtitle": "",
-                            "intro": "——伊娃的妈妈解释为什么她的女儿必须回乡下"
-                        }
-                    }
-
-                }, {
-                    "_note": "text-Segment 2 for section 2",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "伊娃之所以必须住在坪上镇，一部分是因为中国的学校制度没有跟上中国这场声势浩大的人口流动。由于户口制度（上世纪50年代建立），人们仍然只能在自己的出生地接受教育和医疗保障。",
-                                "中国上世纪八九十年代离开乡村的流动人员之所以将孩子留在家乡，是因为员工宿舍的条件以及他们的12小时轮班制，令他们几乎不可能养育孩子。后来，受过更多教育的流动人员找到了更好的工作，自己租了房子，花钱把子女接到身边生活，让他们念非公办学校。现在的规定更为宽松，在一些中小城市，流动人员如果能买房子，就可以获得当地户口。",
-                                "至2014年，一半以上的流动人员子女至少跟着一名父母生活在城里，这个比例高于2010年的30%。"
-
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "8/7",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/xie-chart-1.png",
-                                "caption": ""
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "流动儿童的教育是这样的：学生只能在户口所在省份参加高考。高考需要考生掌握该省专用教科书，因此学生必须在该省上高中，通常还要在该省上初中。结果就是，流动儿童的高考之路要从父母的家乡开始，不管父母已经搬去外地多久了。",
-                                "是要一家人一起生活，还是要让学龄孩子继续上学，身为父母的流动人员必须做出选择。他们的选择对女孩造成的压力最大。在6岁到14岁年龄段，男孩更可能与父母一起生活在城里。由于重男轻女的文化传统，那些留守女孩在即将进入少女时期时，已然在中国竞争性教育体系中落了下风。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "7/5",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/xie-chart-2.png",
-                                "caption": "伊娃是6100万生活在农村的留守儿童之一。"
-                            }
-                        }, {
-                            "text": [
-                                "留守儿童，尤其是生活在贫困村庄的留守儿童，更易遭受性侵和绑架。留守少年辍学或最终进监狱的可能性也高得多。关于留守儿童自杀或杀害他人的耸动新闻，以及稚童被留下来照顾患病祖父母的故事，震惊了全中国。据估计有200万儿童在没有任何成年人照料的状态下生活，地方政府很快将必须为他们提供监护人。",
-                                "对于像伊娃家这样经济条件较好的家庭来说，伤害主要是心理上的。<a href=\"https://www.google.com/url?hl=en-GB&q=http://www.unicef.cn/en/uploadfile/2015/0114/20150114094309619.pdf&source=gmail&ust=1494417943137000&usg=AFQjCNEbkAIXHUytPBU_L_fGPnurwcJ1tw\">2014年联合国儿童基金会(Unicef)</a>在一份中国儿童调查报告中指出：“大多数留守儿童与父母的接触不规律且少，他们感到孤独、孤立无援。”",
-                                "伊娃九岁的弟弟一开始也被送回坪上镇，但他太调皮捣蛋，于是伊娃的父母把他带回了城市。 小的时候，在搬去城里之前，伊娃与奶奶一起生活，那时她曾嫉妒待在父母身边的弟弟。而现在姐弟俩又分开了，她倒是怀念过去逗弟弟的时候。"
-                            ]
-                        }
-
-                    ]
-                }, {
-                    "_note": "Segment 2 for section 2",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "fixed": true,
-                        "picture": {
-                            "source": [{
-                                "landscape": false,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/xie-2-cover.png 1100w,",
-                                    "/images/growing-pains/xie-2-cover.png 1500w,",
-                                    "/images/growing-pains/xie-2-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/xie-2-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "lead": false,
-                            "title": false,
-                            "heading": "“我也舍不得我奶奶，我那时候就高高兴兴地答应了，想回去看看奶奶”",
-                            "subtitle": "",
-                            "intro": "——伊娃解释她当初是怎么被说服离开在广东的父母的  "
-                        }
-                    }
-
-                }, {
-                    "_note": "text-Segment 2 for section 2",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "伊娃在坪上镇的家还未完工，因为她父亲建到一半没钱了。与漂亮的地砖形成鲜明对比的，是粗糙的混凝土墙壁和没装栏杆的楼梯。",
-                                "屋外，整夜都有蛙鸣，公鸡每天清晨打鸣。伊娃和奶奶、婶婶以及婶婶的两个年幼的儿子住在一起，他们的父亲也在外面打工。",
-                                "因为不喜欢戴眼镜，伊娃要眯着眼睛看东西，这表情让她看起来很焦虑，她也确实焦虑。在广东和父母一起生活时，她担心奶奶可能跌倒，担心没人照顾奶奶。现在她回到坪上镇，又担心以前可能跟弟弟争吵太多，让妈妈太操心。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/xie-2-1.png",
-                                "caption": "坪上镇伊娃所念学校外部景观"
-                            }
-                        }, {
-                            "text": [
-                                "伊娃的父亲谢再生也担心着自己的女儿。他觉得跟父母分开生活损害了她的自尊心。他说：“我不觉得这件事有什么羞于启齿的，这是我们整个社会的问题。这是压在我心头最大的石头。”",
-                                "伊娃的父亲走出坪上镇凭的是英语能力。伊娃说：“我爸爸对我英文很严格，他说想要出人头地，先学会英文。”",
-                                "伊娃刚开始是讨厌这门语言的：“爸爸让我背ABC，我就很生气，差点把那个表全部撕掉了。因为爸爸老是很严格的，（家里）就天天打冷战。后来爸爸就把我送到另一个学校，小牛津(Little Oxford)，那边每班都有两个英语老师，一个外国人，一个中国人。那时候我就突然爱上了英文。”"
-                            ]
-                        }, {
-                            "video": {
-                                "provider": "cc",
-                                "title": "",
-                                "src": "http://p.bokecc.com/player?vid=C760A2798F56CA899C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
-                                "caption": "伊娃谈起在广东小牛津学校学习英语"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "高考的无情逻辑意味着，就算父母拿得出更多钱让她在城里上私立学校，她也必须回坪上镇念初中，所以他们的财务问题只是将她回乡的时间提前了两年。",
-                                "坪上镇的孩子要是初中（就读年龄为12岁到15岁）成绩还不错，或许有机会进附近城市一所寄宿学校。更好的高中意味着有希望上更好的大学，这就能转化成一份带着城市户口的工作。像伊娃这样的孩子之所以被送回乡下，是为了有机会拥有更好的未来——事实上也是重走父母走过的旅程。",
-                                "因为会英语，伊娃的父亲在广东担任质量控制检验员，为外国买家检验产品。伊娃的母亲初中学历，在超市工作。伊娃说：“如果有急事，我会给她打电话。但一般我不打……我不想打扰她。有时候她上晚班，我又不知道她的排班。”",
-                                "她说“他们太累了。我让他们难过，因为我不听话。”"
-                            ]
-                        }
-                    ]
-                }, {
-                    "_note": "Segment 3 for section 2",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "fixed": true,
-                        "picture": {
-                            "source": [{
-                                "landscape": false,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/xie-3-cover.png 1100w,",
-                                    "/images/growing-pains/xie-3-cover.png 1500w,",
-                                    "/images/growing-pains/xie-3-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/xie-3-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "lead": false,
-                            "title": false,
-                            "heading": "“留守儿童在学校有点孤僻，有一点自闭的症状。”",
-                            "subtitle": "",
-                            "intro": "——伊娃学校的校长谢小林  "
-                        }
-                    }
-
-                }, {
-                    "_note": "text-Segment 3 for section 2",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "伊娃在坪上镇的数学老师刘珍珍说，伊娃离开这所学校时还很小，从城里再次回来上学那段时间，她过得很艰难。“她需要一些时间来调整。”",
-                                "以一所乡镇学校的规模来说，坪上镇学校情况不错。当地政府并不羞于向出去的那些人寻求捐款，以填补其预算赤字。几年前这里建好了一个舞蹈工作室，但至今大门紧闭，闲置无用。因为没有舞蹈教师想住在坪上镇。",
-                                "数学老师轮流教几个班，每班有50个孩子，两人一组坐在不配套的桌子后面。孩子们朗诵着课文，被老师点到名时大声说出答案。午餐时，有人从食堂提来一桶桶食物到教室吃。其他人打扫院子，用拖布拖楼梯。",
-                                "伊娃希望长大后成为一名老师。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/xie-3-1.png",
-                                "caption": "伊娃在这所乡下学校的教室里。"
-                            }
-                        }, {
-                            "text": [
-                                "坪上镇近一半的成年人都外出了，多数是去广东。那里制造业的工资是家乡务农平均收入的10倍左右。伊娃学校的校长谢小林说，他的1100名学生中有约三分之二的孩子至少有一个家长外出打工，约三分之一的孩子双亲都外出了。",
-                                "他担心孩子们在独自上学的路上发生交通事故，吃劣质的街头食物。根据他的经验，留守儿童的成绩通常在班级里排末尾。他说：“他们的成绩不是很好，他们性格的话，我觉得还是有缺陷。第一是由缺爱引起的，第二他们在学校有点孤僻，好像不愿意更多的主动去和别人交流，有一点自闭的症状。”有些孩子很调皮。",
-                                "他说：“这是一个我们无法解决的矛盾。父母们离开是为了孩子好。”"
-                            ]
-                        }, {
-                            "video": {
-                                "provider": "cc",
-                                "title": "",
-                                "src": "http://p.bokecc.com/player?vid=7FD4CD7C00CD93319C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
-                                "caption": "校长谢小林为学校里的留守儿童感到担忧。"
-                            }
-                        },
-
-                        {
-                            "text": [
-                                "伊娃的数学老师说：“女孩子要好管些。男孩子很淘气。如果他们的父母不在身边，他们往往会调皮捣蛋。有些女孩会跟祖父母或老师谈心，有些不跟任何人交心。”",
-                                "调皮捣蛋可能会为男孩子带来好处，伊娃的弟弟就是这样。由于儿子在中国传统家庭中的重要性，如果是男孩在学校里遇到问题，父母们更有可能作出应对。比如伊娃的婶婶，就在儿子开始逃学之后，放弃了在繁华都市杭州的办公室工作，回到了老家。"
-                            ]
-                        }
-                    ]
-                }, {
-                    "_note": "Segment 4 for section 2",
-                    "type": "text-over-media",
-
-
-                    "media": {
-                        "fixed": true,
-                        "picture": {
-                            "source": [{
-                                "landscape": false,
-                                "portrait": false,
-                                "srcset": [
-                                    "/images/growing-pains/xie-4-cover.png 1100w,",
-                                    "/images/growing-pains/xie-4-cover.png 1500w,",
-                                    "/images/growing-pains/xie-4-cover.png"
-                                ]
-                            }],
-                            "src": "/images/growing-pains/xie-4-cover.png"
-                        }
-                    },
-
-
-                    "text": {
-                        "head": {
-                            "verticalCenter": true,
-                            "headFor": "section",
-                            "lead": false,
-                            "title": false,
-                            "heading": "“我不是虎爸，我希望她快乐平安”",
-                            "subtitle": "",
-                            "intro": "——伊娃的父亲谢再生 "
-                        }
-                    }
-
-                }, {
-                    "_note": "text-Segment 4 for section 2",
-                    "type": "section-columns",
-                    "colPrimary": [{
-                            "text": [
-                                "伊娃离开小牛津已经8个月了，她在保持英语水平方面遇到一些困难。她的新学校没有英语课。她听说自己心爱的外籍老师埃米莉(Emily)已经回英国去了。她有了一个新爱好，王者荣耀(Honor of Kings)，这个奇幻角色扮演手游在中国非常火爆。",
-                                "这个游戏在家里也引起了一些火药味。伊娃的父亲认为自己很幸运，他逃离坪上镇时，正赶上中国加入世贸组织(WTO)，开启了一个充满机遇的时代。他在夜校上课，还埋头观看好莱坞电影，从而学会了英语。他想让伊娃好好学习，不要玩视频游戏。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/xie-4-1.png",
-                                "caption": "坪上镇家中墙上挂着伊娃爷爷的遗像。"
-                            }
-                        }, {
-                            "text": [
-                                "他说：“春节我们回老家时，我发现她的自信心下降了很多，比我在电话里意识到的还严重。所以我逼她多学习，可她说自己不如其他学生优秀。”结果是一场大吵，他现在很后悔。他说：“我不是‘虎爸’（指对孩子严格苛刻的那种父母），我希望她快乐平安。”",
-                                "现在他又找到了份体面的工作，正在考虑把伊娃带回城市。谢再生沉思道，也许等伊娃高中毕业时，中国的政策会发生变化，届时她就可以在广东考大学。如果没有，或许她可以出国留学，但这是场赌博，他不知道自己该不该赌一把。"
-                            ]
-                        }, {
-                            "image": {
-                                "mobileOnly": false,
-                                "ratio": "",
-                                "title": "",
-                                "link": false,
-                                "src": "/images/growing-pains/xie-4-2.png",
-                                "caption": "伊娃和婶婶在坪上镇家中做晚饭。"
-                            }
-                        }, {
-                            "text": [
-                                "晚餐前，伊娃在家里嘹亮地唱了一首埃米莉教她的英语儿歌。她婶婶隔着窗户听着，抹掉了一滴眼泪，然后继续做晚饭。",
-                                "我离开坪上镇后，伊娃找到了练习英语的另一个机会：微信。她输入道：“OK, sorry, I have a question,” she types. “Do you miss your children?（好的，抱歉，我有个问题。你想念你的孩子吗？）”"
-                            ]
-                        }
-
-
-
-                    ]
-                }, {
-                    "_note": "Segment 2, section 3",
-                    "type": "section-sticky",
-                    "media": {
-                        "picture": {
-                            "source": null,
-                            "src": "/images/growing-pains/credit.png"
-                        }
-                    },
-                    "colPrimary": [{
-                        "text": [
-                            "制作团队",
-                            "<br><i>美国</i>",
-                            "报道：尼尔•孟希",
-                            "摄影兼摄像：加亚•斯夸尔奇",
-                            "<br><i>中国</i>",
-                            "报道：韩碧如",
-                            "摄影兼摄像：朱莉娅•马尔基",
-                            "补充报道：张祺(Archie Zhang)",
-                            "<br><i>剪辑与制作</i>",
-                            "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
-                            "编辑：",
-                            "图片编辑：艾伦•诺克斯(Alan Knox)",
-                            "图表:Cleve Jones",
-                            "网页：乔治•基里亚科斯(George Kyriakos)",
-                            "<br><i>中文网：</i>",
-                            "翻译：蓝田",
-                            "视频翻译：实习生于江月",
-                            "制作：史书华"
-                        ]
-                    }, {
-                        "image": {
-                            "mobileOnly": false,
-                            "ratio": "1/2",
-                            "title": null,
-                            "link": null,
-                            "src": "/images/growing-pains/gates-foundation.png",
-
-                            "caption": "<i>本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。</i>"
-                        }
-                    }],
-                    "colSecondary": {}
-                }
-
-            ]
+            "byline": {
+              "authors": null,
+              "publishedOn": "2017年6月19日",
+              "publishedBy": "英国《金融时报》报道"
+            }
+          }
         }
-
-
-    ],
-    "suggestedReads": [{
-        "title": "相关阅读",
-        "columns": [{
-            "image": {
-                "ratio": "",
-                "link": "http://www.ftchinese.com/story/001065535",
-                "src": "/images/growing-pains/more-1.png",
-                "caption": "留守儿童：中国奇迹的遗留难题"
+      ]
+    },
+    {
+      "_note": "Section 1",
+      "nav": {
+        "text": "纽约布鲁克林 阿尔马尼",
+        "id": "armani-brooklyn-new-york"
+      },
+      "segments": [
+        {
+          "_note": "cover of 1st section.",
+          "type": "text-over-media",
+          "sticky": false,
+          "media": {
+            "video": {
+              "provider": "ft",
+              "poster": "/images/growing-pains/armani-cover.png",
+              "sources": {
+                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4"
+              }
             },
-            "summary": [
-                "经济学家称“留守儿童”是中国现代化进程的必然代价，并预计随着经济结构的转型，这一群体可能产生严峻的家庭和社会问题。但另一些研究却提供与普遍观点完全不同的结论...<a href=\"http://www.ftchinese.com/story/001065535\">阅读更多</a>"
-            ]
-        }, {
-            "image": {
-                "ratio": "",
-                "link": "http://www.ftchinese.com/story/001073031",
-                "src": "/images/growing-pains/more-2.png",
-                "caption": "南五环边上学梦：北京首所打工子弟中学的奇迹与困境？"
+            "picture": {
+              "sources": [
+                {
+                  "landscape": true,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/armani-cover.png 1100w",
+                    "/images/growing-pains/armani-cover.png 1500w",
+                    "/images/growing-pains/armani-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/armani-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "title": null,
+              "heading": "阿尔马尼",
+              "subtitle": null,
+              "intro": "纽约，布鲁克林区"
+            }
+          }
+        },
+        {
+          "_note": "text-segment 1 of section 1",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "阿尔马尼•亚当斯-史密斯(Armani Adams-Smith)居住在纽约布鲁克林区——她说，她是个地地道道的布鲁克林人。",
+                "阿尔马尼10岁，又高又瘦，聪颖机智，人缘好。她喜欢看起来“时髦”，但她并不太在意“漂亮”。她有一个“死敌”，一个戴眼镜的胖男孩，名叫西奥多(Theodore)：“你把我惹毛了，西奥多；你真的把我惹毛了，伙计。”",
+                "当被问到她为什么不担心即将到来的、决定她上哪所初中的标准化测试，或者她为什么能够在体育课上打败男孩子，或者她为什么冒然打电话给一个当地说唱歌手、问她是否能够在她的音乐视频上露脸，阿尔马尼有一个简单的答案：“（因为）我是阿尔马尼•亚当斯-史密斯。”"
+              ]
             },
-            "summary": [
-                "蒲公英中学建校12年，将12名几乎一无所有的学生送进美国名校。如今，奇迹却被挡在了无法竣工的新校舍门外...<a href=\"http://www.ftchinese.com/story/001073031\">阅读更多"
-            ]
-        }, {
-            "image": {
+            {
+              "image": {
+                "mobileOnly": false,
                 "ratio": "",
-                "link": "http://www.ftchinese.com/story/001072100",
-                "src": "/images/growing-pains/more-3.png",
-                "caption": "雄安新区突显中国城镇化雄心"
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-1-1.png",
+                "caption": "阿尔马尼（中）和母亲阿琳、妹妹贾米娅在她们位于布鲁克林的家门口。"
+              }
             },
-            "summary": [
-                "中国政府设立雄安新区的规划，让地处河北省的相关地区成为焦点，也让外界得以一瞥中国迅猛的城市开发进程...<a href=\"http://www.ftchinese.com/story/001072100\">阅读更多"
-            ]
-        }]
-    }, {
-        "title": null,
-        "columns": [{
-            "title": "更多FT中文网文章推荐",
-            "items": [{
-                "href": "https://www.ftchinese.com/story/001052321",
-                "text": "“贫二代”和城镇化"
-            }, {
-                "href": "https://www.ftchinese.com/story/001062582",
-                "text": "留守儿童悲剧呼唤中国基层社会重建"
-            }, {
-                "href": "http://www.ftchinese.com/story/001069905",
-                "text": "应对留守儿童问题需多管齐下"
-            }, {
-                "href": "http://www.ftchinese.com/channel/numbers-china.htm",
-                "text": "中国经济一图览"
-            }]
-        }]
-    }]
+            {
+              "text": [
+                "阿尔马尼4岁的时候，母亲阿琳(Arlene)经历了18个月的审判前羁押，阿尔马尼和妹妹贾米娅(Jameeyah)因而加入了至少500万美国儿童（约7%）的行列，成为了父母一方被关押的孩子。",
+                "在任何地方，做一个青春期的女孩子都不容易。全球范围内，有2.5亿女孩生活贫困，社会发展工作者(development worker)认为，10岁到19岁的阶段是对女孩的人生十分关键的一个窗口期。这是做出抉择、确立行为举止的几年，可能帮助一个女孩走上成功的道路，也可能永远地限制她的视野。",
+                "但在美国的发展资金常常流向发展中国家项目的同时，像阿尔马尼这样的美国女孩却依然有被忽视的风险。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "7/5",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-chart-1.png",
+                "caption": ""
+              }
+            },
+            {
+              "text": [
+                "按照许多社会经济指标衡量，非裔美国人群体依然像是一个发展中国家的国民：根据<a href=\"http://www.pewresearch.org/fact-tank/2015/07/14/black-child-poverty-rate-holds-steady-even-as-other-groups-see-declines/\">皮尤研究中心(Pew Research Center)的数据</a>，近40%非裔美国孩子生活在贫困线以下，白人孩子的这一比例约为11%。比起同龄的白人女孩，像阿尔马尼这样的黑人女孩更有可能被<a href=\"https://static1.squarespace.com/static/53f20d90e4b0b80451158d8c/t/54d2d37ce4b024b41443b0ba/1423102844010/BlackGirlsMatterReport.pdf\">停学、开除，或者最终落入青少年司法系统。</a>",
+                "非裔美国孩子遇到过父母被监禁的情况的几率最高。在全美范围内，截至18岁，有四分之一的非裔美国孩子遇到过母亲或父亲被监禁的情况，拉丁裔孩子的这个比例为十分之一，白人孩子的这个比例为25分之一。根据非营利性组织“儿童趋势”(Child Trends)在<a href=\"https://www.childtrends.org/wp-content/uploads/2015/10/2015-42ParentsBehindBars.pdf\">2015年发布</a>的一份报告，父母被监禁的孩子，本人入狱的几率更高，同时，他们与存在精神疾病或吸毒(substance abuse)问题的人一起生活的几率也更高。",
+                "因此，阿尔马尼要克服的挑战高于平均水平——她也明白这一点。她的生活经历告诉了她，她的种族和性别将如何塑造她的人生：她看到白人搬进她的学校周围的区域，但这些白人的孩子似乎并不进入PS 256本杰明•班尼克学校(PS 256 Benjamin Banneker)就读。她知道自己离开校篮球队的一个原因是，她是队里唯一的女孩。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-1-2.png",
+                "caption": "阿琳和女儿们在位于贝德福德-施托伊弗桑特的学校外。"
+              }
+            },
+            {
+              "text": [
+                "阿尔马尼也感觉到，特朗普领导的新一届政府可能会威胁她的未来。“现在唐纳德•特朗普(Donald Trump)是总统，我们的各种东西将被夺走——经济方面的东西、药品、保险——黑人的一些东西会被夺走，”她说。",
+                "不过，阿尔马尼并不灰心。她满不在乎地脱口说出自己的一大串职业目标——“篮球运动员、作家、制片人、导演和演员”——就像任何一个10岁的孩子，她能够在沉重和轻松的话题间切换自如。",
+                "“我的挑战，就是比如我的肤色，和我的教育，因为全世界各种各样的人，他们不认为女孩子应该接受教育。哦……而且（做）一个打篮球的女孩——这是这些挑战中最大的一个。”"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 2 for section 1.",
+          "type": "text-over-media",
+          "media": {
+            "fixed": true,
+            "picture": {
+              "source": [
+                {
+                  "landscape": false,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/armani-2-cover.png 1100w,",
+                    "/images/growing-pains/armani-2-cover.png 1500w,",
+                    "/images/growing-pains/armani-2-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/armani-2-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "lead": false,
+              "title": false,
+              "heading": "“做一个打篮球的女孩——这是头号挑战” ",
+              "subtitle": "",
+              "intro": ""
+            }
+          }
+        },
+        {
+          "_note": "text-Segment 2 for section 1.",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "亚当斯家的女孩们已经算幸运的了。每天放学后，有大巴把她们送去参加“希望之子”(CPNYC)项目，这是纽约市唯一专门面向父母遭到监禁的孩子的课后项目。",
+                "对像阿尔马尼和贾米娅这样的孩子，地方、州一级和国家层面给予的资源很少。罗格斯大学(Rutgers University)被监禁人员孩童和家人国家资源中心(National Resource Center on Children and Families of the Incarcerated)列出了其经审查项目国家数据库中的大约100个团体。这个数目分摊到每个州相当于一个州只有几个——有一些州根本没有。",
+                "阿琳一家已经在2015年搬到50分钟公交车车程外的迪特马斯公园(Ditmas Park)附近，但阿琳依然让女儿们在位于贝德福德-施托伊弗桑特(Bedford-Stuyvesant)区的学校上学，一个原因就是“希望之子”项目。这个项目是她们生活的核心。除了辅导、游戏和运动，这个项目还为每年参与这个项目的350个孩子提供有执照的临床医师的治疗——并且帮助那些正在努力恢复正常生活的父母。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "7/5",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-2-1.png",
+                "caption": "昌塔尔•阿瑟斯自阿尔马尼7岁起一直担任她的顾问。"
+              }
+            },
+            {
+              "text": [
+                "阿尔马尼说，她在“希望之子”项目里的朋友是她“真正的朋友”，因为他们能够理解她的生活：每月一次的监狱探访，被抛弃的创伤，以及害怕学校里的其他人发现的心情。",
+                "“学校生活太难了，”她表示，“好像你什么都不能跟他们说——你不能真的告诉他们你什么感受。这里就像是安全区，你可以用任何方式表达你的感受。没错，这里就是安全区。”",
+                "即便如此，还是有一些事是阿尔马尼不愿意让她在CPNYC的“姐妹们”了解的：妈妈阿琳入狱是因为杀了阿尔马尼的爸爸。2010年9月的一个晚上，她在他们的公寓内刺死了贾迈尔(Jamel)——人们叫他迈尔(Mel)。",
+                "阿琳称这是个意外。迈尔喝醉了，提出性要求并打了她。她拿起刀自卫，当迈尔打得太狠时，她失手刺了迈尔一刀。她打了911，帮迈尔按住伤口。迈尔死在了前往医院的路上。阿琳被捕。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-2-2.png",
+                "caption": "阿尔马尼参加了为纽约市父母入狱的子女开设的课后项目“希望之子”。"
+              }
+            },
+            {
+              "text": [
+                "阿琳的青春期和她希望女儿享受的青春期截然不同。她认识迈尔时还是个少女。他们长大的地方相隔一条街，阿琳14岁开始为当地一名毒贩兜售可卡因，后来他们开始交往。",
+                "17岁时阿琳发现自己怀上了阿尔马尼，于是从高中辍学。小两口一起卖毒品，在一次警方突袭后，他们被赶出了阿琳妈妈的公寓。后来他们住在自己的公寓或流浪者收容所。",
+                "家暴成为常态，无论是在他们的女儿出生前还是出生后。阿琳对家暴并不陌生。她11岁时，她妈妈离开了家暴的丈夫。"
+              ]
+            },
+            {
+              "video": {
+                "provider": "cc",
+                "title": "",
+                "src": "http://p.bokecc.com/player?vid=B96C7CAA3BD56DD69C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
+                "caption": "阿尔马尼讲述妈妈教给自己的事情。"
+              }
+            },
+            {
+              "text": [
+                "阿琳认为阿尔马尼是特别的：“我希望，或许要是我像她这么大时，能像她现在这样就好了 。”但她最害怕的是阿尔马尼将陷入同样的恶性循环，像她一样陷入糟糕的感情、遭受家暴、过早怀孕。",
+                "根据<a href=\"https://www.cdc.gov/teenpregnancy/about/alt-text/birth-rates-chart-2000-2014-text.htm\">官方数据</a>，2014年美国非裔少女的怀孕率接近35‰，是白人少女的两倍。",
+                "所以她尝试和女儿开诚布公地讨论这些风险：“阿尔马尼不需要去外面了解毒品，因为我会跟她说关于毒品的事；她不需要去外面了解性，因为我会告诉她。”"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 3 for section 1.",
+          "type": "text-over-media",
+          "media": {
+            "fixed": true,
+            "picture": {
+              "source": [
+                {
+                  "landscape": false,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/armani-3-cover.png 1100w,",
+                    "/images/growing-pains/armani-3-cover.png 1500w,",
+                    "/images/growing-pains/armani-3-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/armani-3-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "lead": false,
+              "title": false,
+              "heading": "“我希望，或许要是我像她这么大时，能像她现在这样就好了”",
+              "subtitle": "",
+              "intro": "——阿琳谈到女儿"
+            }
+          }
+        },
+        {
+          "_note": "text-Segment 3 for section 1.",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "为庆祝贾米娅9岁的生日，阿琳在她位于阁楼内的狭小公寓里举办了妮琪•米娜(Nicki Minaj)主题派对。电视里放着这位饶舌歌手的歌，墙上贴着粉色的纸。参加派对的小客人们即兴跳起了甩头舞。",
+                "女孩们的教母罗比(Robi)穿着粉色的芭蕾舞裙，扮演涂指甲油的仙女。孩子们喝着Western Beef牌的可乐、橙汁苏打水和姜汁汽水，吃着切好的热狗、意大利面和肉丸。烤箱里还烤着鸡肉。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-3-1.png",
+                "caption": "阿尔马尼和朋友们在贾米娅的生日派对上，地点是她们位于迪特马斯公园的家中。"
+              }
+            },
+            {
+              "text": [
+                "阿琳被关押在赖克斯岛(Rikers Island)等待庭审的18个月里，阿尔马尼和贾米娅与外祖母住在一起。阿琳对女儿们说自己去上大学了，她们的爸爸得病死了。",
+                "她最终得到了认罪协议（承认过失杀人，被判缓刑5年）。但在阿琳2012年3月获释后，一家人仍未团聚。经过2009年那次警方突袭，阿琳的妈妈的房东不让阿琳住在那套公寓内，因此阿琳只能在女儿们醒着时跟她们呆在一起，在女儿们晚上睡觉后离开，到流浪者收容所、朋友家或是地铁里睡觉。",
+                "阿尔马尼在CPNYC的导师帮阿琳筹到了钱，使她可以租下她们现在位于迪特马斯公园(Ditmas Park)的家。这家人的生活仍然很艰难，依靠阿琳在她就读的城市学院兼职做助理挣的每小时12美元的工资过活。刚刚与阿琳交往了5个月的男朋友凯(Kay)也在帮助她们，他在阿琳所在的学院做维修工作。不过，他们的生活还过得下去。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-3-2.png",
+                "caption": "阿尔马尼和阿琳在表演New Edition的《Mr Telephone Man》，凯在旁边看着。"
+              }
+            },
+            {
+              "text": [
+                "阿琳希望毕业后担任顾问，为和她一样的女性维权。她正尝试教会自己的孩子同情和理解，让她们了解心理健康——她称，黑人群体常常忽视这个问题。阿琳没有把迈尔说得很坏，公寓里挂着他的照片，其中一张挂在阿尔马尼的床头。",
+                "“人们永远无法理解，但无论贾迈尔对我做了什么，他都是孩子们的父亲，发生在他身上的事情也从不是我的本意，”她称。"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 4 for section 1.",
+          "type": "text-over-media",
+          "media": {
+            "fixed": true,
+            "picture": {
+              "source": [
+                {
+                  "landscape": false,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/armani-4-cover.png 1100w,",
+                    "/images/growing-pains/armani-4-cover.png 1500w,",
+                    "/images/growing-pains/armani-4-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/armani-4-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "lead": false,
+              "title": false,
+              "heading": "“我会寄钱，但你们不能都来德雷克家。”",
+              "subtitle": "",
+              "intro": "——阿尔马尼策划自己的终极梦想：跟饶舌歌手德雷克在一起"
+            }
+          }
+        },
+        {
+          "_note": "text-Segment 4 for section 1.",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "女孩们要搭乘两趟公交车才能到她们的小学。103路公交车一路驶向市区的途中，阿尔马尼策划了实现她终极梦想的步骤，这个梦想是：与说唱歌手德瑞克(Drake)在一起。",
+                "<b><i>第一步：</i></b> “如果朗戴•霍利斯-杰弗森(Rondae Hollis-Jefferson)在布鲁克林篮网队(Nets)比赛中看到了我？”",
+                "<b><i>第二步：</i></b>“如果他记住了我，然后（在当地Target门店做活动的时候跟我合了影），并且邀请我去更衣室？”",
+                "<b><i>第三步：</i></b>“如果他把我介绍给（对手球员）拉塞尔•韦斯特布鲁克(Russell Westbrook)？”",
+                "<b><i>第四步：</i></b>“如果我跟拉塞尔•威斯布鲁克说话，然后他把自己的电话号码给我了？我敢打赌我能拿到。”",
+                "“接下来我就到了德雷克(Drake)家里啦。”",
+                "阿琳让她到时候别忘了她们这些小人物。阿尔马尼回答：“我不会忘记你们的。我会寄钱，但你们不能都来德雷克家。”"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-4-1.png",
+                "caption": "阿尔马尼和贾米娅要乘坐两趟公交车，耗时近一个小时，才能到达学校"
+              }
+            },
+            {
+              "text": [
+                "有时候很难说阿尔马尼是不是真的想见到德雷克。但对她这代人来说，名气看上去并非遥不可及，这跟他们父母那代人面对的情况完全不一样。像她这个年纪的许多孩子一样，阿尔马尼对社交媒体有很多想法：“Facebook是给老年人用的。”而占据她生活的主要是Snapchat和视频社交网络Musical.ly。",
+                "大多数时候，阿尔马尼可以马上说出她在Muscial.ly上有多少粉丝（5月初时是1211人），以及收获了多少个“赞”（27345个）。该应用让用户可以创建自己跟着热门歌曲对嘴或跳舞的短视频。阿尔马尼的大部分视频是她拿着手机，像自拍那样拍下自己对口型说唱德雷克的歌曲。"
+              ]
+            },
+            {
+              "video": {
+                "provider": "cc",
+                "title": "",
+                "src": "http://p.bokecc.com/player?vid=0CC1399846E01C3E9C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
+                "caption": "阿琳谈到阿尔马尼小时候。"
+              }
+            },
+            {
+              "text": [
+                "阿尔马尼不得不比许多孩子更快成熟。她时常在儿童的无聊游戏与青春期笨拙的自我意识之间不知所措。她这个年龄即将告别儿童时代，遇到男孩子，他们会过来聊天、撩拨、追求。但她还紧紧抓着过去不放手。",
+                "虽然已经超龄，阿尔马尼还是问她在CPNYC的顾问，自己能不能与8—9岁年龄组的孩子一起再待一年。自阿尔马尼7岁起一直当她顾问的昌塔尔•阿瑟斯(Chantal Arthurs)答应了她的请求，因为“她不像其他十几岁孩子那样受到外界太多浸染，她不会出口成脏，她也不举止粗鲁。她对年纪小一点的女孩们有非常好的影响，（她向她们证明）女孩也可以擅长数学，喜爱阅读，或擅长运动。”",
+                "不过在学校，令老师吃惊的是，阿尔马尼回答问题时声音很轻，就像在提问一样。她的老师说：“亲爱的，我一直跟你说，你很聪明。要对你的答案有信心。”"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 5 for section 1.",
+          "type": "text-over-media",
+          "media": {
+            "fixed": true,
+            "picture": {
+              "source": [
+                {
+                  "landscape": false,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/armani-5-cover.png 1100w,",
+                    "/images/growing-pains/armani-5-cover.png 1500w,",
+                    "/images/growing-pains/armani-5-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/armani-5-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "lead": false,
+              "title": false,
+              "heading": "“她有那种自信，那就是遗传了迈尔”",
+              "subtitle": "",
+              "intro": "——阿琳谈到阿尔马尼从父亲那里遗传到的东西"
+            }
+          }
+        },
+        {
+          "_note": "text-Segment 5 for section 1.",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "有天下午在CPNYC，阿尔马尼走过隔壁桌坐着的一个女孩，做着口型说（其实还是出声了），“我不喜欢那个孩子”。",
+                "那个女孩是阿尔马尼家的朋友，去年向一大巴车的孩子透露了阿尔马尼父亲的真实情况，阿尔马尼认为她的行为不可原谅。那一车孩子里就有贾米娅，当时她尚不知全部真相。",
+                "阿尔马尼说：“她把我的事跟我最好的朋友们说了，我觉得她背叛了我，我再也不想犯类似错误。”"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-5-1.png",
+                "caption": "阿尔马尼和凯在看篮球比赛。"
+              }
+            },
+            {
+              "text": [
+                "阿尔马尼想念她的父亲。阿琳说她遗传了他的样貌，他的鼻子，他的骨架，“他的一切。她身上有那种混不吝的感觉——那种自信，那就是遗传了迈尔。”",
+                "阿琳去年开始约会凯，对于生命里这个新的父亲形象，阿尔马尼的态度变化莫测。他带她去看布鲁克林篮网队比赛时，她靠在他肩膀上，被他的笑话逗得咯咯笑，也试着去逗他开心。凯吃完了他那袋爆米花，阿尔马尼默默把自己那袋递给他。",
+                "他们几乎每天都见面，但当他不在身旁时，她就会说“我不想要继父”之类的话。这让阿琳痛苦，让凯为难。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/armani-5-2.png",
+                "caption": "迈尔生辰纪念日那天全家在一个室内充气城堡公园。"
+              }
+            },
+            {
+              "text": [
+                "昌塔尔•阿瑟斯说许多像阿尔马尼这种情况的孩子都会陷入抑郁症或行为举止出现问题，但阿尔马尼“知道发生了什么，没有让自己的日常生活受影响。她没有怪罪这件事，或将其作为借口。”至少现在，阿尔马尼正大步向前。",
+                "在CPNYC的体育房，阿尔马尼正在练习半场投篮，她的朋友们在篮筐前或在摇呼啦圈，或在跳舞。突然间阿尔马尼投进了一球，她吃惊地左右四顾，没人在看她。她忘形地做出庆祝胜利的舞蹈动作，做到一半时回过神来，露出微笑——先是骄傲地、然后转为羞赧，接着又再度转为骄傲。",
+                "她又投出一球。"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_note": "Section 2",
+      "nav": {
+        "text": "中国坪上镇 谢雅琦（伊娃）",
+        "id": "eva-pingshang-china"
+      },
+      "segments": [
+        {
+          "_note": "Segement 1. Cover for section 2",
+          "type": "text-over-media",
+          "media": {
+            "video": {
+              "provider": "ft",
+              "poster": "/images/growing-pains/xie-cover.png",
+              "sources": {
+                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4"
+              }
+            },
+            "picture": {
+              "sources": [
+                {
+                  "landscape": true,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/xie-cover.png 1100w",
+                    "/images/growing-pains/xie-cover.png 1500w",
+                    "/images/growing-pains/xie-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/xie-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "title": null,
+              "heading": "谢雅琦（伊娃）",
+              "subtitle": null,
+              "intro": "中国，坪上镇"
+            }
+          }
+        },
+        {
+          "_note": "Segment 1 of section 2",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "谢雅琦今年12岁。",
+                "她的英文名字叫伊娃(Eva)，她把这个名字当作护身符，它让她想起还在那座大城市里时，她最喜欢的老师，以及她的父亲。她已经两个月没见过父母了。",
+                "伊娃短短的人生已跨越了两个世界。7岁之前她在坪上镇由奶奶抚养，而她的父母则在中国的制造业增长引擎广东省不断地换工作。当伊娃的父亲终于找到一份还算不错的工作时，马上就把她接来与母亲和弟弟一起生活在城市里，还出钱让她上私立学校。",
+                "但去年9月，伊娃的父亲被迫将女儿送回封闭落后的乡下，那个他以为他们已经逃离的地方。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-1-1.png",
+                "caption": "伊娃在湖南省坪上镇家中。"
+              }
+            },
+            {
+              "text": [
+                "据2010年最新全国人口普查，中国约有7000万名儿童不在父母身边生活，伊娃是其中之一。",
+                "自大规模移民40年前开始以来，已经有超过2.81亿人迁往城市，这是历史上规模最大、速度最快的一场人口流动。有些留守儿童始终未离开过农村，有些虽然进了城，但当父母再次流动时，他们却不能跟随。还有些孩子，比如伊娃，被带到城市却又再次被送回。",
+                "伊娃说：“我恳求妈妈让我留下来，当初她是答应了的。后来因为我爸爸钱不够……而且那边学费也很贵。我是被我妈骗回来了其实，她说暑假了，你回去看一下你奶奶，我也舍不得我奶奶。我那时候就高高兴兴地答应了，想回去看看奶奶，可是后来我才发现。”",
+                "伊娃的妈妈在电话里跟女儿说出了实情。“她说，‘雅琦，你不能回广东上学了，因为你爸爸欠了很多债，钱实在是不够你们两个学习了’。我那时候很伤心，然后躲被窝里面哭啊哭。”"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 2 for section 2",
+          "type": "text-over-media",
+          "media": {
+            "fixed": true,
+            "picture": {
+              "source": [
+                {
+                  "landscape": false,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/xie-1-cover.png 1100w,",
+                    "/images/growing-pains/xie-1-cover.png 1500w,",
+                    "/images/growing-pains/xie-1-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/xie-1-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "lead": false,
+              "title": false,
+              "heading": "“钱实在是不够你们两个学习了”",
+              "subtitle": "",
+              "intro": "——伊娃的妈妈解释为什么她的女儿必须回乡下"
+            }
+          }
+        },
+        {
+          "_note": "text-Segment 2 for section 2",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "伊娃之所以必须住在坪上镇，一部分是因为中国的学校制度没有跟上中国这场声势浩大的人口流动。由于户口制度（上世纪50年代建立），人们仍然只能在自己的出生地接受教育和医疗保障。",
+                "中国上世纪八九十年代离开乡村的流动人员之所以将孩子留在家乡，是因为员工宿舍的条件以及他们的12小时轮班制，令他们几乎不可能养育孩子。后来，受过更多教育的流动人员找到了更好的工作，自己租了房子，花钱把子女接到身边生活，让他们念非公办学校。现在的规定更为宽松，在一些中小城市，流动人员如果能买房子，就可以获得当地户口。",
+                "至2014年，一半以上的流动人员子女至少跟着父母之一生活在城里，这个比例高于2010年的30%。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "8/7",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-chart-1.png",
+                "caption": ""
+              }
+            },
+            {
+              "text": [
+                "流动儿童的教育是这样的：学生只能在户口所在省份参加高考。高考需要考生掌握该省专用教科书，因此学生必须在该省上高中，通常还要在该省上初中。结果就是，流动儿童的高考之路要从父母的家乡开始，不管父母已经搬去外地多久了。",
+                "是要一家人一起生活，还是要让学龄孩子继续上学，身为父母的流动人员必须做出选择。他们的选择对女孩造成的压力最大。在6岁到14岁年龄段，男孩更可能与父母一起生活在城里。由于重男轻女的文化传统，那些留守女孩在即将进入少女时期时，已然在中国竞争性教育体系中落了下风。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "7/5",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-chart-2.png",
+                "caption": "伊娃是6100万生活在农村的留守儿童之一。"
+              }
+            },
+            {
+              "text": [
+                "留守儿童，尤其是生活在贫困村庄的留守儿童，更易遭受性侵和绑架。留守少年辍学或最终进监狱的可能性也高得多。关于留守儿童自杀或杀害他人的耸动新闻，以及稚童被留下来照顾患病祖父母的故事，震惊了全中国。据估计有200万儿童在没有任何成年人照料的状态下生活，地方政府很快将必须为他们提供监护人。",
+                "对于像伊娃家这样经济条件较好的家庭来说，伤害主要是心理上的。<a href=\"https://www.google.com/url?hl=en-GB&q=http://www.unicef.cn/en/uploadfile/2015/0114/20150114094309619.pdf&source=gmail&ust=1494417943137000&usg=AFQjCNEbkAIXHUytPBU_L_fGPnurwcJ1tw\">2014年联合国儿童基金会(Unicef)</a>在一份中国儿童调查报告中指出：“大多数留守儿童与父母的接触不规律且少，他们感到孤独、孤立无援。”",
+                "伊娃9岁的弟弟一开始也被送回坪上镇，但他太调皮捣蛋，于是伊娃的父母把他带回了城市。小的时候，在搬去城里之前，伊娃与奶奶一起生活，那时她曾嫉妒待在父母身边的弟弟。而现在姐弟俩又分开了，她倒是怀念过去逗弟弟的时候。"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 2 for section 2",
+          "type": "text-over-media",
+          "media": {
+            "fixed": true,
+            "picture": {
+              "source": [
+                {
+                  "landscape": false,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/xie-2-cover.png 1100w,",
+                    "/images/growing-pains/xie-2-cover.png 1500w,",
+                    "/images/growing-pains/xie-2-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/xie-2-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "lead": false,
+              "title": false,
+              "heading": "“我也舍不得我奶奶，我那时候就高高兴兴地答应了，想回去看看奶奶”",
+              "subtitle": "",
+              "intro": "——伊娃解释她当初是怎么被说服离开在广东的父母的  "
+            }
+          }
+        },
+        {
+          "_note": "text-Segment 2 for section 2",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "伊娃在坪上镇的家还未完工，因为她父亲建到一半没钱了。与漂亮的地砖形成鲜明对比的，是粗糙的混凝土墙壁和没装栏杆的楼梯。",
+                "屋外，整夜都有蛙鸣，公鸡每天清晨打鸣。伊娃和奶奶、婶婶以及婶婶的两个年幼的儿子住在一起，他们的父亲也在外面打工。",
+                "因为不喜欢戴眼镜，伊娃要眯着眼睛看东西，这表情让她看起来很焦虑，她也确实焦虑。在广东和父母一起生活时，她担心奶奶可能跌倒，担心没人照顾奶奶。现在她回到坪上镇，又担心以前可能跟弟弟争吵太多，让妈妈太操心。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-2-1.png",
+                "caption": "坪上镇伊娃所念学校外部景观"
+              }
+            },
+            {
+              "text": [
+                "伊娃的父亲谢再生也担心着自己的女儿。他觉得跟父母分开生活损害了她的自尊心。他说：“我不觉得这件事有什么羞于启齿的，这是我们整个社会的问题。这是压在我心头最大的石头。”",
+                "伊娃的父亲走出坪上镇凭的是英语能力。伊娃说：“我爸爸对我英文很严格，他说想要出人头地，先学会英文。”",
+                "伊娃刚开始是讨厌这门语言的：“爸爸让我背ABC，我就很生气，差点把那个表全部撕掉了。因为爸爸老是很严格的，（家里）就天天打冷战。后来爸爸就把我送到另一个学校，小牛津(Little Oxford)，那边每班都有两个英语老师，一个外国人，一个中国人。那时候我就突然爱上了英文。”"
+              ]
+            },
+            {
+              "video": {
+                "provider": "cc",
+                "title": "",
+                "src": "http://p.bokecc.com/player?vid=C760A2798F56CA899C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
+                "caption": "伊娃谈起在广东小牛津学校学习英语"
+              }
+            },
+            {
+              "text": [
+                "高考的无情逻辑意味着，就算父母拿得出更多钱让她在城里上私立学校，她也必须回坪上镇念初中，所以他们的财务问题只是将她回乡的时间提前了两年。",
+                "坪上镇的孩子要是初中（就读年龄为12岁到15岁）成绩还不错，或许有机会进附近城市一所寄宿学校。更好的高中意味着有希望上更好的大学，这就能转化成一份带着城市户口的工作。像伊娃这样的孩子之所以被送回乡下，是为了有机会拥有更好的未来——事实上也是重走父母走过的旅程。",
+                "因为会英语，伊娃的父亲在广东担任质量控制检验员，为外国买家检验产品。伊娃的母亲初中学历，在超市工作。伊娃说：“如果有急事，我会给她打电话。但一般我不打……我不想打扰她。有时候她上晚班，我又不知道她的排班。”",
+                "她说“他们太累了。我让他们难过，因为我不听话。”"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 3 for section 2",
+          "type": "text-over-media",
+          "media": {
+            "fixed": true,
+            "picture": {
+              "source": [
+                {
+                  "landscape": false,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/xie-3-cover.png 1100w,",
+                    "/images/growing-pains/xie-3-cover.png 1500w,",
+                    "/images/growing-pains/xie-3-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/xie-3-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "lead": false,
+              "title": false,
+              "heading": "“留守儿童在学校有点孤僻，有一点自闭的症状。”",
+              "subtitle": "",
+              "intro": "——伊娃学校的校长谢小林  "
+            }
+          }
+        },
+        {
+          "_note": "text-Segment 3 for section 2",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "伊娃在坪上镇的数学老师刘珍珍说，伊娃离开这所学校时还很小，从城里再次回来上学那段时间，她过得很艰难。“她需要一些时间来调整。”",
+                "以一所乡镇学校的规模来说，坪上镇学校情况不错。当地政府并不羞于向出去的那些人寻求捐款，以填补其预算赤字。几年前这里建好了一个舞蹈工作室，但至今大门紧闭，闲置无用。因为没有舞蹈教师想住在坪上镇。",
+                "数学老师轮流教几个班，每班有50个孩子，两人一组坐在不配套的桌子后面。孩子们朗诵着课文，被老师点到名时大声说出答案。午餐时，有人从食堂提来一桶桶食物到教室吃。其他人打扫院子，用拖布拖楼梯。",
+                "伊娃希望长大后成为一名老师。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-3-1.png",
+                "caption": "伊娃在这所乡下学校的教室里。"
+              }
+            },
+            {
+              "text": [
+                "坪上镇近一半的成年人都外出了，多数是去广东。那里制造业的工资是家乡务农平均收入的10倍左右。伊娃学校的校长谢小林说，他的1100名学生中有约三分之二的孩子至少有一个家长外出打工，约三分之一的孩子双亲都外出了。",
+                "他担心孩子们在独自上学的路上发生交通事故，吃劣质的街头食物。根据他的经验，留守儿童的成绩通常在班级里排末尾。他说：“他们的成绩不是很好，他们性格的话，我觉得还是有缺陷。第一是由缺爱引起的，第二他们在学校有点孤僻，好像不愿意更多的主动去和别人交流，有一点自闭的症状。”有些孩子很调皮。",
+                "他说：“这是一个我们无法解决的矛盾。父母们离开是为了孩子好。”"
+              ]
+            },
+            {
+              "video": {
+                "provider": "cc",
+                "title": "",
+                "src": "http://p.bokecc.com/player?vid=7FD4CD7C00CD93319C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
+                "caption": "校长谢小林为学校里的留守儿童感到担忧。"
+              }
+            },
+            {
+              "text": [
+                "伊娃的数学老师说：“女孩子要好管些。男孩子很淘气。如果他们的父母不在身边，他们往往会调皮捣蛋。有些女孩会跟祖父母或老师谈心，有些不跟任何人交心。”",
+                "调皮捣蛋可能会为男孩子带来好处，伊娃的弟弟就是这样。由于儿子在中国传统家庭中的重要性，如果是男孩在学校里遇到问题，父母们更有可能作出应对。比如伊娃的婶婶，就在儿子开始逃学之后，放弃了在繁华都市杭州的办公室工作，回到了老家。"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 4 for section 2",
+          "type": "text-over-media",
+          "media": {
+            "fixed": true,
+            "picture": {
+              "source": [
+                {
+                  "landscape": false,
+                  "portrait": false,
+                  "srcset": [
+                    "/images/growing-pains/xie-4-cover.png 1100w,",
+                    "/images/growing-pains/xie-4-cover.png 1500w,",
+                    "/images/growing-pains/xie-4-cover.png"
+                  ]
+                }
+              ],
+              "src": "/images/growing-pains/xie-4-cover.png"
+            }
+          },
+          "text": {
+            "head": {
+              "verticalCenter": true,
+              "headFor": "section",
+              "lead": false,
+              "title": false,
+              "heading": "“我不是虎爸，我希望她快乐平安”",
+              "subtitle": "",
+              "intro": "——伊娃的父亲谢再生 "
+            }
+          }
+        },
+        {
+          "_note": "text-Segment 4 for section 2",
+          "type": "section-columns",
+          "colPrimary": [
+            {
+              "text": [
+                "伊娃离开小牛津已经8个月了，她在保持英语水平方面遇到一些困难。她的新学校没有英语课。她听说自己心爱的外籍老师埃米莉(Emily)已经回英国去了。她有了一个新爱好，王者荣耀(Honor of Kings)，这个奇幻角色扮演手游在中国非常火爆。",
+                "这个游戏在家里也引起了一些火药味。伊娃的父亲认为自己很幸运，他逃离坪上镇时，正赶上中国加入世贸组织(WTO)，开启了一个充满机遇的时代。他在夜校上课，还埋头观看好莱坞电影，从而学会了英语。他想让伊娃好好学习，不要玩视频游戏。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-4-1.png",
+                "caption": "坪上镇家中墙上挂着伊娃爷爷的遗像。"
+              }
+            },
+            {
+              "text": [
+                "他说：“春节我们回老家时，我发现她的自信心下降了很多，比我在电话里意识到的还严重。所以我逼她多学习，可她说自己不如其他学生优秀。”结果是一场大吵，他现在很后悔。他说：“我不是‘虎爸’（指对孩子严格苛刻的那种父母），我希望她快乐平安。”",
+                "现在他又找到了份体面的工作，正在考虑把伊娃带回城市。谢再生沉思道，也许等伊娃高中毕业时，中国的政策会发生变化，届时她就可以在广东考大学。如果没有，或许她可以出国留学，但这是场赌博，他不知道自己该不该赌一把。"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-4-2.png",
+                "caption": "伊娃和婶婶在坪上镇家中做晚饭。"
+              }
+            },
+            {
+              "text": [
+                "晚餐前，伊娃在家里嘹亮地唱了一首埃米莉教她的英语儿歌。她婶婶隔着窗户听着，抹掉了一滴眼泪，然后继续做晚饭。",
+                "我离开坪上镇后，伊娃找到了练习英语的另一个机会：微信。她输入道：“OK, sorry, I have a question. Do you miss your children?（好的，抱歉，我有个问题。你想念你的孩子吗？）”"
+              ]
+            }
+          ]
+        },
+        {
+          "_note": "Segment 2, section 3",
+          "type": "section-sticky",
+          "media": {
+            "picture": {
+              "source": null,
+              "src": "/images/growing-pains/credit.png"
+            }
+          },
+          "colPrimary": [
+            {
+              "text": [
+                "制作团队",
+                "<br><i>美国</i>",
+                "报道：尼尔•孟希",
+                "摄影兼摄像：加亚•斯夸尔奇",
+                "<br><i>中国</i>",
+                "报道：韩碧如",
+                "摄影兼摄像：朱莉娅•马尔基",
+                "补充报道：张祺(Archie Zhang)",
+                "<br><i>剪辑与制作</i>",
+                "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
+                "编辑：",
+                "图片编辑：艾伦•诺克斯(Alan Knox)",
+                "图表:Cleve Jones",
+                "网页：乔治•基里亚科斯(George Kyriakos)",
+                "<br><i>中文网：</i>",
+                "翻译：蓝田、徐行、马柯斯",
+                "视频翻译：实习生于江月",
+                "制作：史书华"
+              ]
+            },
+            {
+              "image": {
+                "mobileOnly": false,
+                "ratio": "1/2",
+                "title": null,
+                "link": null,
+                "src": "/images/growing-pains/gates-foundation.png",
+                "caption": "<i>本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。</i>"
+              }
+            }
+          ],
+          "colSecondary": {}
+        }
+      ]
+    }
+  ],
+  "suggestedReads": [
+    {
+      "title": "相关阅读",
+      "columns": [
+        {
+          "image": {
+            "ratio": "",
+            "link": "http://www.ftchinese.com/story/001065535",
+            "src": "/images/growing-pains/more-1.png",
+            "caption": "留守儿童：中国奇迹的遗留难题"
+          },
+          "summary": [
+            "经济学家称“留守儿童”是中国现代化进程的必然代价，并预计随着经济结构的转型，这一群体可能产生严峻的家庭和社会问题。但另一些研究却提供与普遍观点完全不同的结论...<a href=\"http://www.ftchinese.com/story/001065535\">阅读更多</a>"
+          ]
+        },
+        {
+          "image": {
+            "ratio": "",
+            "link": "http://www.ftchinese.com/story/001073031",
+            "src": "/images/growing-pains/more-2.png",
+            "caption": "南五环边上学梦：北京首所打工子弟中学的奇迹与困境？"
+          },
+          "summary": [
+            "蒲公英中学建校12年，将12名几乎一无所有的学生送进美国名校。如今，奇迹却被挡在了无法竣工的新校舍门外...<a href=\"http://www.ftchinese.com/story/001073031\">阅读更多"
+          ]
+        },
+        {
+          "image": {
+            "ratio": "",
+            "link": "http://www.ftchinese.com/story/001072100",
+            "src": "/images/growing-pains/more-3.png",
+            "caption": "雄安新区突显中国城镇化雄心"
+          },
+          "summary": [
+            "中国政府设立雄安新区的规划，让地处河北省的相关地区成为焦点，也让外界得以一瞥中国迅猛的城市开发进程...<a href=\"http://www.ftchinese.com/story/001072100\">阅读更多"
+          ]
+        }
+      ]
+    },
+    {
+      "title": null,
+      "columns": [
+        {
+          "title": "更多FT中文网文章推荐",
+          "items": [
+            {
+              "href": "https://www.ftchinese.com/story/001052321",
+              "text": "“贫二代”和城镇化"
+            },
+            {
+              "href": "https://www.ftchinese.com/story/001062582",
+              "text": "留守儿童悲剧呼唤中国基层社会重建"
+            },
+            {
+              "href": "http://www.ftchinese.com/story/001069905",
+              "text": "应对留守儿童问题需多管齐下"
+            },
+            {
+              "href": "http://www.ftchinese.com/channel/numbers-china.htm",
+              "text": "中国经济一图览"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
