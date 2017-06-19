@@ -28,7 +28,6 @@ const projectName = argv.i;
 const htmlFile = `${projectName}.html`;
 const tmpDir = '.tmp';
 
-process.env.NODE_ENV = 'development';
 // change NODE_ENV between tasks.
 gulp.task('prod', () => {
   return Promise.resolve(process.env.NODE_ENV = 'production');
