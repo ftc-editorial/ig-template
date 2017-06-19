@@ -36,11 +36,42 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{env.static}}/favicons/apple-touch-icon-76x76.png">
   <link href="{{env.static}}/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 
-{% block css %}{% endblock %}
+  <link inline rel="stylesheet" type="text/css" href="styles/main.css">
+  {% if config.customCss %}
+    {% if env.isProduction %}
+      <style>
+        {% include "styles/" + env.projectName + ".css" %}
+      </style>
+    {% else %}
+      <link rel="stylesheet" type="text/css" href="styles/{{env.projectName}}.css">
+    {% endif %}
+  {% endif %}
+
+  {% if env.isProduction %}
+    {% include "partials/analytics.html" %}
+  {% endif %}
 </head>
 
 <body>
   <img src="{{meta.wx}}" style="display:block; width:0px; height:0px; overflow:hidden">
-  {% block body %}{% endblock %}
+	{% include "partials/header.html" %}
+
+	{% block content %}{% endblock %}
+
+	{% include "partials/o-footer.html" %}
+
+	{% if highcharts %}
+	<script src="/bower_components/highcharts/highcharts.js"></script>
+	{% endif %}
+
+	{% if d3 %}
+	<script src="/bower_components/d3/d3.min.js"></script>
+	{% endif %}
+
+	<script inline src="scripts/main.js"></script>
+  
+	{% if customJs %}
+	<script inline src="scripts/{{env.projectName}}.js"></script>
+	{% endif %}
 </body>
 </html>

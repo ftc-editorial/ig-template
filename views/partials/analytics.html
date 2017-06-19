@@ -1,5 +1,4 @@
 <script>
-<script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);a.onload=function(){if(typeof clearEvents==='function'){clearEvents()}}
@@ -14,16 +13,46 @@ ga('send', 'pageview');
 }
 }
 </script>
-</script>
+<!-- FTC Analytics -->
 <script>
-function(e, t, a, n, c, r, s) {
-    e.FtcAnalyticsObject = c, e[c] = e[c] || function() {
-        (e[c].q = e[c].q || []).push(arguments)
-    }, e[c].l = 1 * new Date, r = t.createElement(a), s = t.getElementsByTagName(a)[0], r.async = 1, r.src = n, s.parentNode.insertBefore(r, s)
-}(window, document, 'script', '/log/analytics.js', 'fa'), fa('create', 'UA-XXXX-Y', {
-    alwaysSendReferrer: !0
-}), void 0 === window.gAutoStart && fa('send', 'pageview');
+(function (i, s, o, g, r, a, m) {
+i['FtcAnalyticsObject'] = r;
+i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date();
+a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '/log/analytics.js', 'fa');
+fa('create', 'UA-XXXX-Y', { 'alwaysSendReferrer': true });   // Replace with your property ID.
+if (window.gAutoStart === undefined) {fa('send', 'pageview');}
 </script>
+<!-- End FTC Analytics -->
+<!-- Log Analytics -->
+<script>
+if (window.gAutoStart === undefined) {
+(function(d, s, u, j, x) {
+j = d.createElement(s),
+x = d.getElementsByTagName(s)[0];
+j.async = true;
+j.src = u;
+x.parentNode.insertBefore(j, x)
+})(document, 'script', 'http://static.ftchinese.com/js/log.js?v=7&20160318');
+}
+</script>
+<!-- End Log Analytics -->
+<!-- Baidu Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "https://hm.baidu.com/hm.js?6f808c64c1308274ef22324b340e40af";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- End Baidu Analytics -->
 <!--[if IE]>
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 <![endif]-->
