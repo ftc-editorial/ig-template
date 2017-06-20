@@ -1,91 +1,64 @@
-<div class="section-columns">
-	<div class="o-grid-container">
-		<div class="o-grid-row">
-			<div class="section-col__primary" data-o-grid-colspan="12 M6">
-				<div class="section-col__primary-inner">
-        {% for content in colPrimary %}
-          
-          {% for text in content.text %}
-            {{text | md}}
-          {% endfor%}
+<div class="o-grid-container">
+  <div class="o-grid-row">
+    <div class="section-col__primary" data-o-grid-colspan="12 M6">
+      <div class="section-col__primary-inner">
+      {% set colPrimary = section.colPrimary %}
+      {% for para in colPrimary %}
 
-          {% if content.image %}
-          {% set image = content.image %}
-          {% include "partials/ig-image.html" %}
-          {% endif %}
+        {% include "partials/" + para.type + ".html" %}
 
-          {% if content.video %}
-          {% set video = content.video %}
-          {% include "partials/ig-video.html" %}
-          {% endif %}
-
-          {% if content.quote %}
-          {% set quote = content.quote %}
-            <figure class="ig-blockquote">
-              <blockquote class="ig-blockquote__text">
-              {{quote.text}} 
-              </blockquote>
-              <figcaption class="ig-blockquote__caption">{{quote.caption}}</figcaption>
-            </figure>
-          {% endif %}
-        
-          {% if content.readMore %}
-            {% set column = content.readMore %}
-            {% include "partials/read-more.html" %}
-          {% endif %}
-
-        {% endfor %}					
-				</div>
-			</div>
-			
-			{% if colSecondary %}
-			<div class="section-col__secondary" data-o-grid-colspan="12 M6">
-        {% if colSecondary.slides %}
-        {% set slides = colSecondary.slides %}
-				<div class="section-col__secondary-inner o-sticky"
-        data-o-component="o-scrollmation"
-        data-o-sticky-target=".o-sticky__target"
-        data-o-scrollmation-image="img"
-        data-o-scrollmation-caption=".ig-figure__caption"
-        data-o-scrollmation-assets="{% raw %}{{% endraw %}
-        {% for slide in slides %}
-        '{{slide.src}}':'{{slide.text}}'
-        {% if not loop.last %}, {% endif %}
-        {% endfor %}
-        {% raw %}}{% endraw %}">
-          <div class="o-sticky__target">
-            <figure class="ig-figure">
-              <img class="ig-figure__image">
-              <figcaption class="ig-figure__caption"></figcaption>
-            </figure>
-          </div>
-        </div>
-        {% endif %}
-
-        {% if colSecondary.image %}
-        {% set image = colSecondary.image %}
-        <div class="section-col__secondary-inner{% if image.sticky %} o-sticky{% endif %}"{% if image.sticky %} data-o-component="o-sticky" data-o-sticky-target=".o-sticky__target"{% endif %}>
-          {% if image.sticky %}<div class="o-sticky__target">{% endif %}
-          
-            {% include "partials/ig-image.html" %}
-
-          {% if image.sticky %}</div>{% endif %}
-        </div>
-        {% endif %}
-
-			</div>
-			{% endif %}
-		</div>
-	</div>
-  {% if segment.ad %}
-    {{segement.ad | dump}}
-    <div class="section-ad">
-      <div class="section-ad__container o-grid-container">
-        <p class="section-ad__title">广告之后 精彩继续</p>
-        <div class="section-ad__content">
-          <iframe id="section-{{loop.index}}-ad" src="{{segement.ad}}"></iframe>
-        </div>
+      {% endfor %}					
       </div>
     </div>
-  {% endif %}
+    
+    {% if colSecondary %}
+    {% set colSecondary = section.colSecondary %}
+    <div class="section-col__secondary" data-o-grid-colspan="12 M6">
+      {% if colSecondary.slides %}
+      {% set slides = colSecondary.slides %}
+      <div class="section-col__secondary-inner o-sticky"
+      data-o-component="o-scrollmation"
+      data-o-sticky-target=".o-sticky__target"
+      data-o-scrollmation-image="img"
+      data-o-scrollmation-caption=".ig-figure__caption"
+      data-o-scrollmation-assets="{% raw %}{{% endraw %}
+      {% for slide in slides %}
+      '{{slide.src}}':'{{slide.text}}'
+      {% if not loop.last %}, {% endif %}
+      {% endfor %}
+      {% raw %}}{% endraw %}">
+        <div class="o-sticky__target">
+          <figure class="ig-figure">
+            <img class="ig-figure__image">
+            <figcaption class="ig-figure__caption"></figcaption>
+          </figure>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if colSecondary.image %}
+      {% set image = colSecondary.image %}
+      <div class="section-col__secondary-inner{% if image.sticky %} o-sticky{% endif %}"{% if image.sticky %} data-o-component="o-sticky" data-o-sticky-target=".o-sticky__target"{% endif %}>
+        {% if image.sticky %}<div class="o-sticky__target">{% endif %}
+        
+          {% include "partials/ig-image.html" %}
+
+        {% if image.sticky %}</div>{% endif %}
+      </div>
+      {% endif %}
+
+    </div>
+    {% endif %}
+  </div>
 </div>
+{% if section.ad %}
+  {{section.ad | dump}}
+  <div class="section-ad">
+    <div class="section-ad__container o-grid-container">
+      <p class="section-ad__title">广告之后 精彩继续</p>
+      <div class="section-ad__content">
+        <iframe src="{{section.ad}}"></iframe>
+      </div>
+    </div>
+  </div>
+{% endif %}

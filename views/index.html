@@ -1,24 +1,27 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<article class="article" role="main">
+<article class="chapter-list article" role="main">
 
-  {% for section in chapters %}
-  <section class="ig-chapter section"{% if section.nav.id %} id="{{section.nav.id}}"{% endif %}>
-    {% for segment in section.segments %}
+  {% for chapter in chapters %}
+  <div class="ig-chapter section"{% if chapter.nav.id %} id="{{chapter.nav.id}}"{% endif %}>
+    {% for section in chapter.sections %}
+      <section class="ig-section {{section.type}}">
+        {% include "text-over-media.html" %}
+      </section>
 
-      {% set media = segment.media %}
-      {% set text = segment.text %}
+      {#{% set media = section.media %}
+      {% set text = section.text %}
 
-      {% set colPrimary = segment.colPrimary %}
-      {% set colSecondary = segment.colSecondary %}
+      {% set colPrimary = section.colPrimary %}
+      {% set colSecondary = section.colSecondary %}
 
 
-      {% set credits = segment.credits %}
+      {% set credits = section.credits %}
 
-      {% include segment.type + ".html" %}
+      {% include section.type + ".html" %}#}
     {% endfor %}
-  </section>
+  </div>
   {% endfor %}
 
   {% for group in suggestedReads %}

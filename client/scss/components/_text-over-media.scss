@@ -3,8 +3,20 @@
 	position: relative;
   height: 100vh;
 
-	&__media {
-		box-sizing: border-box;
+	// &__text {
+	// 	box-sizing: border-box;
+	// 	// offset fixed header's height
+	//   padding-top: $o-header-height; 
+	//   position: relative;
+	//   height: 100%;
+	//   @include oColorsFor(ig-text-over-media, text);
+	//   // add a translucency background
+	//   @include igBackgroundMask;
+	// }
+}
+
+.ig-background {
+    box-sizing: border-box;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -13,65 +25,144 @@
 		width: 100%;
 		height: 100%;
 		@include oColorsFor(ig-media, background);
-
-    &.background-fixed {
-      clip: rect(0, auto, auto, 0);
-
-      .ig-background {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-    }
-	}
-
-	&__text {
-		box-sizing: border-box;
-		// offset fixed header's height
-	  padding-top: $o-header-height; 
-	  position: relative;
-	  height: 100%;
-	  @include oColorsFor(ig-text-over-media, text);
-	  // add a translucency background
-	  @include igBackgroundMask;
-	}
 }
 
-.ig-leadin {
-  min-width: 290px;
-  width: 40%;
-  max-width: 620px; 
-  padding: 5%;
-  margin: 0 auto;
-  text-align: center;
+.ig-background--fixed {
+  clip: rect(0, auto, auto, 0);
 
-  &__text {
-    margin: 0;
-    padding: 0;
-    @include oGridRespondTo(M) {
-      font-size: 30px;
-    }
-  }
-
-  &--positioned {
-    position: absolute;
-  }
-  &.left {
+  & .ig-background__picture,
+  & .ig-background__video {
+    position: fixed;
+    top: 0;
+    bottom: 0;
     left: 0;
-    text-align: left
+    right: 0;
   }
-  &.bottom {
-    bottom: 10%;
+}
+
+.ig-title {
+  color: #fff;
+  width: 60%;
+  min-width: 290px;
+  max-width: 1000px;
+  position: absolute;
+  margin: 0 auto;
+  padding: 5%;
+  top: $o-header-height;
+
+  &.center-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
-  &.right {
+
+  &.top-left {
+    left: 0;
+    text-align: left;
+  }
+
+  &.top-right {
     right: 0;
     text-align: right;
   }
-  &.center {
-    left: 50%;
-    transform: translate(-50%, 0);
+
+  &.bottom-left {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+  }
+
+  &.bottom-right {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+  }
+
+  &__h1 {
+    box-sizing: border-box;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    @include oGridRespondTo(M) {
+      font-size: 100px;
+      margin: 0 auto;
+    }
+  }
+
+  &__h2 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 1.1;
+    @include oGridRespondTo(M) {
+      font-size: 48px;
+    }
+    .viewport-height & {
+      margin: 1em 0;
+      padding: 5% 0 12px 0;
+    }
+  }
+
+  &__h3 {
+    font-size: 24px;
+    @include oGridRespondTo(M) {
+      font-size: 32px;
+    }  
+  }
+
+  &__lead {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    @include oGridRespondTo(M) {
+      font-size: 28px;
+    }
   }
 }
 
+.ig-meta {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3%;
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.4;
+  color: rgba(255,255,255,.55);
+
+  &__authors {
+    margin-bottom: 5px;
+  }
+  &__timestamp,
+  &__publisher {
+    margin: 0;
+    padding: 0;
+  }
+
+  &:before {
+    content: '向下滑动阅读';
+    font-size: 14px;
+    display: block;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 72px;
+    left: 50%;
+    margin-left: -36px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAASCAMAAAA+LTNpAAAAwFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8Do+ZMAAAAP3RSTlMA1Ur053H7kf0CBx4S8YYEguKVRNHCD0aArpo3bLunIm68XlrQOKyZwV82JFmpMRAGMIcB4zNUkhiM1iV0SPms/+YeAAAA/klEQVR4XqXQ15KCQBCF4SMgGXVBAXPOOeft93+r1ZqLKWvGVfS77epz8SO6hvhWeI1gkFm4nPG586VgkgGD7k6rroXkrO7qRDdsh9FKio0kbKWksVe2w6nFoYv3uMOiSjfiDmMO0mO8Mk4PTHpg4EiCVKb8PJZVzqRIcEQ22P+QQOtLY9lKXyPBzz7I4m4Zd0ig9lqPsdxWTyVBJ16Cg1Op6vzIY9XB1HkSTq9WHAjCSc2TxRpZI1kSrzYJ8UQ28CWxfiVJfJbkHzMhlphkhrc4jaZOcnqz4SCBeXsqxvKm7TkSW0T+hriNHy3wofU2l6e7fG67xncOu3h3wCt/QZNvI/thGKQAAAAASUVORK5CYII=") no-repeat center;
+  }
+}

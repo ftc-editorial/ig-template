@@ -1,24 +1,24 @@
-<header class="ig-head o-grid-container{% if head.verticalCenter %} vertical-center{% endif %}">
+<header class="ig-head o-grid-container{{head.position}}{#{% if head.verticalCenter %} vertical-center{% endif %}#}">
 
   <div class="ig-head__inner">
-    {% if head.lead %}
-    <p class="ig-head__lead">{{head.lead}}</p>
+    {% if head.superLead %}
+    <p class="ig-head__lead">{{head.superLead}}</p>
     {% endif %}
 <!-- this is used as article title -->
-    {% if head.title %}
-    <h1 class="ig-head__title">{{head.title}}</h1>
+    {% if head.h1 %}
+    <h1 class="ig-head__title">{{head.h1}}</h1>
     {% endif %}
 <!-- This is used as section title -->
-    {% if head.heading %}
-    <h2 class="ig-head__heading">{{head.heading}}</h2>
+    {% if head.h2 %}
+    <h2 class="ig-head__heading">{{head.h2}}</h2>
     {% endif %}
 <!-- this is used as subtitle for both article's title or section's title. -->
-    {% if head.subtitle %}
-    <h3 class="ig-head__subtitle">{{head.subtitle}}</h3>
+    {% if head.h3 %}
+    <h3 class="ig-head__subtitle">{{head.h3}}</h3>
     {% endif %}
 
-    {% if head.intro %}
-    <p class="ig-head__intro">{{head.intro}}</p>
+    {% if head.subLead %}
+    <p class="ig-head__intro">{{head.subLead}}</p>
     {% endif %}
   </div>
 </header>

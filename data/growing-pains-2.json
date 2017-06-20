@@ -1,0 +1,95 @@
+{
+  "header": {
+    "theme": "theme-dark"
+  },
+  "share": {
+    "theme": "theme-dark"
+  },
+  "config": {
+    "highcharts": false,
+    "d3": false,
+    "customCss": true,
+    "customJs": false,
+    "enableScroll": true,
+    "navOnHeader": true
+  },
+  "title": {
+    "text": "成长的烦恼",
+    "html": "http://www.ftchinese.com/interactive/9484"
+  },
+  "edition": {
+    "text": "English",
+    "href": "https://ig.ft.com/special-reports/growing-pains/"
+  },
+  "meta": {
+    "title": "成长的烦恼",
+    "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
+    "keywords": "留守儿童,中国社会,中国,FT中文网",
+    "wx": "http://i.ftimg.net/picture/3/000070723_piclink.jpg",
+    "og": {
+      "type": "article",
+      "site_name": "FT中文网",
+      "title": "成长的烦恼—FT中文网",
+      "description": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。",
+      "image": "http://i.ftimg.net/picture/2/000070722_piclink.jpg",
+      "url": "http://www.ftchinese.com/interactive/9484"
+    }
+  },
+  "seriesTitle": "特别报道",
+  "chapters": [
+    {
+      "_note": "This section is the article's cover.",
+      "navText": null,
+      "sections": [
+        {
+          "type": "text-over-media",
+          "video": {
+            "_note": "provider could only be `ft` or `cc`",
+            "provider": "ft",
+            "poster": "/images/growing-pains/cover1.png",
+            "sources": [
+              {
+                "format": "mp4",
+                "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
+              }
+            ]
+          },
+          "picture": {
+            "default": "growing-pains/cover1.png",
+            "landscape": [
+              "/images/growing-pains/cover1.png 1100w,",
+              "/images/growing-pains/cover1.png 1500w,",
+              "/images/growing-pains/cover1.png"
+            ],
+            "portrait": [
+              "/images/growing-pains/cover1.png 1100w,",
+              "/images/growing-pains/cover1.png 1500w,",
+              "/images/growing-pains/cover1.png"
+            ]
+          },
+          "title":{
+            "_note1": "`center`, `left-top`, `right-top`, `left-bottom`, `right-bottom`",
+            "position": "center-center",
+            "_note2": "introduction text above title",
+            "superLead": "",
+            "_note3": "h1 should only appear once on one page",
+            "h1": "成长的烦恼",
+            "h2": "",
+            "h3": "",
+            "_note4": "introudction text below title",
+            "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
+          },
+          "meta":{
+            "authors": null,
+            "publishedOn": "2017年6月19日",
+            "publishedBy": "英国《金融时报》报道"
+          },
+          "credits": null
+        }
+      ]
+    },
+    {
+      
+    }
+  ]
+}

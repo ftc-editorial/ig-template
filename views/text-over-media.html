@@ -1,44 +1,89 @@
-<div class="text-over-media">
-	{% if media %}
-  <div class="text-over-media__media{% if media.fixed %} background-fixed{% endif %}">
-		{% set picture = media.picture %}
-		{% set video = media.video %}
-    {% include "partials/ig-background.html" %}
-  </div>
-  {% endif %}
+<div class="ig-background{% if section.fixedBackground %} ig-background--fixed{% endif %}">
 
-  {% if text %}
-  <div class="text-over-media__text">
-
-	  {% if text.head %}
-	  {% set head = text.head %} 
-	  {% include "partials/ig-head.html" %}
+	{% if section.picture %}
+	{% set picture = section.picture %}
+	<picture class="ig-background__picture">
+		{% if picture.landscape %}
+			<source media="(min-aspect-ratio: 1/1)" srcset="{% for src in picture.landscape %}
+				{{env.urlPrefix}}{{src}}
+				{% if not loop.last %}, {% endif %}
+			{% endfor %}">
 		{% endif %}
 
-	  {% if text.byline %}
-	  {% set byline = text.byline%}
-	  <div class="ig-byline">
-			<ul class="ig-byline__authors">
-				{% for author in byline.authors %}
-					<li>{{author}}</li>
-				{% endfor %}
-			</ul>
-	    <time class="ig-byline__timestamp o-date">{{byline.publishedOn}}</time>
-	    <div class="ig-byline__publisher">{{byline.publishedBy}}</div>
-	  </div>
-	  {% endif %}
+		{% if picture.portrait %}
+			<source media="(max-aspect-ratio: 1/1)" srcset="{% for src in picture.portrait %}
+				{{env.urlPrefix}}{{src}}
+				{% if not loop.last %}, {% endif %}
+			{% endfor %}">
+		{% endif %}
 
-		{% if text.leadin %}
-		{% set leadin = text.leadin %}
-	  <div class="ig-leadin{% if leadin.position %} ig-leadin--positioned {{leadin.position}}{% endif %}">
-	    <p class="ig-leadin__text">{{leadin.text}}</p>
-	  </div>
-	  {% endif %}
-	  
-	  {% if text.credits %}
-	  {% set credits = text.credits%}	  
-	    {% include "partials/ig-credits.html" %}
-	  {% endif %}   	
-  </div>
- 	{% endif %}
+		<img class="ig-background__media" src="{{env.urlPrefix}}{{picture.default}}">
+	</picture>
+	{% endif %}
+
+	{% if section.video %}
+	{% set video = section.video %}
+	<div class="ig-background__video">
+		<video class="ig-background__media" preload="metadata" poster="{{env.urlPrefix}}{{video.poster}}" muted autoplay loop>
+			{% for source in video.sources %}
+				<source src="{{source.src}}" type="video/{{source.format}}">
+			{% endfor %}
+		</video>
+	</div>
+	{% endif %}
 </div>
+
+{% if section.title %}
+	{% set title = section.title %}
+	<div class="ig-title {{title.position}}">
+		{% if title.superLead %}
+			<p class="ig-title__lead">{{title.superLead}}</p>
+		{% endif %}
+
+		{% if title.h1 %}
+			<h1 class="ig-title__h1">{{title.h1}}</h1>
+		{% endif %}
+
+		{% if title.h2 %}
+			<h1 class="ig-title__h2">{{title.h2}}</h1>
+		{% endif %}
+
+		{% if title.h3 %}
+			<h1 class="ig-title__h3">{{title.h3}}</h1>
+		{% endif %}
+
+		{% if title.subLead %}
+    	<p class="ig-title__lead">{{title.subLead}}</p>
+		{% endif %}
+	</div>
+{% endif %}
+
+{% if section.meta %}
+	{% set meta = section.meta %}
+	<div class="ig-meta">
+
+		{% if meta.authors %}
+		<ul class="ig-meta__authors">
+			{% for author in meta.authors %}
+				<li>{{author}}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+
+		<time class="ig-meta__timestamp">{{meta.publishedOn}}</time>
+		<div class="ig-meta__publisher">{{meta.publishedBy}}</div>	
+	</div>
+{% endif %}
+
+{% if section.credits %}
+	{% set credits = section.credits %}
+
+	<div class="ig-credits">
+		<h3 class="ig-credits__title">{{credits.title}}</h3>
+		<ul class="ig-credits__items">
+		{% for item in credits.items %}
+			<li>{{item}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+{% endif %}
