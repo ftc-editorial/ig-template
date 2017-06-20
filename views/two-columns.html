@@ -1,0 +1,25 @@
+<div class="o-grid-container">
+  <div class="o-grid-row">
+    <div class="two-columns__primary" data-o-grid-colspan="12 M6">
+      <div class="two-columns__primary-inner">
+      {% set primaryColumn = section.primaryColumn %}
+      {% for paragraph in primaryColumn %}
+
+        {% include "partials/" + paragraph.type + ".html" %}
+
+      {% endfor %}					
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if section.ad %}
+  <div class="section-ad">
+    <div class="section-ad__container o-grid-container">
+      <p class="section-ad__title">广告之后 精彩继续</p>
+      <div class="section-ad__content">
+        <iframe src="{{section.ad}}"></iframe>
+      </div>
+    </div>
+  </div>
+{% endif %}

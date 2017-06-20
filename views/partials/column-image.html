@@ -1,2 +1,36 @@
-{% set image = para.content %}
-{% include "partials/ig-image.html" %}
+{% set image = paragraph.content %}
+
+<figure class="ig-figure ig-figure--image
+{% if image.mobileOnly %}ig-figure--mobile{% endif %}" data-media-ratio="{{image.ratio}}">
+
+	{% if image.title %}
+	  <h4 class="ig-figure__title">{{image.title}}</h4>
+	{% endif %}
+
+  {% if image.link %}
+    <a class="ig-figure__media-wrapper" href="{{image.link}}" data-media-ratio="{{image.ratio}}">
+  {% else %}
+    <div class="ig-figure__media-wrapper" data-media-ratio="{{image.ratio}}">
+  {% endif %}
+
+  <img{% if image.src %} src="{{env.urlPrefix}}{{image.src}}"{% endif %} class="ig-figure__media">
+  
+  {#{% if image.textOnImage %}
+    <figcaption class="ig-figure__image-text">{{image.textOnImage}}</figcaption>
+  {% endif %}#}
+
+  {% if image.link %}
+    </a>
+  {% else %}
+    </div>
+  {% endif %}         
+  
+  {% if image.caption %}
+    <figcaption class="ig-figure__caption">
+      {% if image.link %}<a href="{{image.link}}">{% endif %}
+        {{image.caption }}
+      {% if image.link %}</a>{% endif %}
+    </figcaption>
+  {% endif %}
+
+</figure>

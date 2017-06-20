@@ -2,17 +2,6 @@
 	box-sizing: border-box;
 	position: relative;
   height: 100vh;
-
-	// &__text {
-	// 	box-sizing: border-box;
-	// 	// offset fixed header's height
-	//   padding-top: $o-header-height; 
-	//   position: relative;
-	//   height: 100%;
-	//   @include oColorsFor(ig-text-over-media, text);
-	//   // add a translucency background
-	//   @include igBackgroundMask;
-	// }
 }
 
 .ig-background {
@@ -25,6 +14,7 @@
 		width: 100%;
 		height: 100%;
 		@include oColorsFor(ig-media, background);
+    // @include igBackgroundOverlay;
 }
 
 .ig-background--fixed {

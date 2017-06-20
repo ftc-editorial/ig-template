@@ -7,7 +7,7 @@
   <div class="ig-chapter section"{% if chapter.nav.id %} id="{{chapter.nav.id}}"{% endif %}>
     {% for section in chapter.sections %}
       <section class="ig-section {{section.type}}">
-        {% include "text-over-media.html" %}
+        {% include section.type + ".html" %}
       </section>
 
       {#{% set media = section.media %}
