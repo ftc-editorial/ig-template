@@ -11,7 +11,7 @@
   {% if column.summary %}
     <div class="read-more__summary">
       {% for para in column.summary %}
-      <p>{{para}}</p>
+        {{para | md}}
       {% endfor %}          
     </div>
   {% endif %}

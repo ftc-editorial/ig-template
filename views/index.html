@@ -3,49 +3,39 @@
 {% block content %}
 <article class="article" role="main">
 
-{% for section in sections %}
-<section class="section"{% if section.nav.id %} id="{{section.nav.id}}"{% endif %}>
-  {% for segment in section.segments %}
+  {% for section in chapters %}
+  <section class="ig-chapter section"{% if section.nav.id %} id="{{section.nav.id}}"{% endif %}>
+    {% for segment in section.segments %}
 
-    {% set media = segment.media %}
-    {% set text = segment.text %}
+      {% set media = segment.media %}
+      {% set text = segment.text %}
 
-    {% set colPrimary = segment.colPrimary %}
-    {% set colSecondary = segment.colSecondary %}
+      {% set colPrimary = segment.colPrimary %}
+      {% set colSecondary = segment.colSecondary %}
 
-    {% set credits = segment.credits %}
 
-    {% include segment.type + ".html" %}
+      {% set credits = segment.credits %}
+
+      {% include segment.type + ".html" %}
+    {% endfor %}
+  </section>
   {% endfor %}
 
-  {% if ad %}
-  <div class="section-ad">
-    <div class="section-ad__container o-grid-container">
-      <p class="section-ad__title">广告之后 精彩继续</p>
-      <div class="section-ad__content">
-        <iframe id="section-{{loop.index}}-ad" src="{{ad}}"></iframe>
-      </div>
+  {% for group in suggestedReads %}
+  <div class="suggested-reads o-grid-container">
+
+    {% if group.title %}
+    <h2 class="suggested-reads__title">{{group.title}}</h2>
+    {% endif %}  
+
+    <div class="o-grid-row">
+      {% for column in group.columns %}
+        {% include "partials/read-more.html" %}
+      {% endfor %}
     </div>
+    
   </div>
-  {% endif %}
-</section>
-{% endfor %}
-
-{% for group in suggestedReads %}
-<div class="suggested-reads o-grid-container">
-
-  {% if group.title %}
-  <h2 class="suggested-reads__title">{{group.title}}</h2>
-  {% endif %}  
-
-  <div class="o-grid-row">
-    {% for column in group.columns %}
-      {% include "partials/read-more.html" %}
-    {% endfor %}
-  </div>
-  
-</div>
-{% endfor %}
+  {% endfor %}
 
 </article>
 {% endblock %}

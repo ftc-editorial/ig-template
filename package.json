@@ -53,5 +53,8 @@
     "rollup-plugin-babili": "^3.1.0",
     "rollup-plugin-bower-resolve": "^0.4.0"
   },
-  "false": {}
+  "false": {},
+  "dependencies": {
+    "marked": "^0.3.6"
+  }
 }

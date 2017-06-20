@@ -5,6 +5,7 @@ const loadJsonFile = require('load-json-file');
 const inline = pify(require('inline-source'));
 const minify = require('html-minifier').minify;
 const footer = require('@ftchinese/ftc-footer')();
+const marked = require('marked');
 const nunjucks = require('nunjucks');
 nunjucks.configure(
   [
@@ -17,7 +18,10 @@ nunjucks.configure(
     watch: false,
     autoescape: false
   }
-);
+)
+.addFilter('md', function(str) {
+  return marked(str);
+});
 const render = pify(nunjucks.render);
 
 async function buildPage({template='index.html', input='myanmar', output='.tmp'}={}) {
