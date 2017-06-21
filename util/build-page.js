@@ -1,7 +1,7 @@
 const pify = require('pify');
 const fs = require('fs-jetpack');
 const path = require('path');
-const loadJsonFile = require('load-json-file');
+const loadJson = require('./load-json.js');
 const inline = pify(require('inline-source'));
 const minify = require('html-minifier').minify;
 const footer = require('@ftchinese/ftc-footer')();
@@ -39,7 +39,7 @@ async function buildPage({template='index.html', input='myanmar', output='.tmp'}
     isProduction
   };
 
-  const data = await loadJsonFile(jsonFile);
+  const data = await loadJson(jsonFile);
   const context = Object.assign({env}, data, {footer});
   console.log(`Building page for ${input}`);
 

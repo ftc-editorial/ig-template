@@ -42,19 +42,19 @@
     "gulp-sourcemaps": "^2.1.1",
     "html-minifier": "^3.5.2",
     "inline-source": "^5.2.2",
-    "load-json-file": "^2.0.0",
+    "marked": "^0.3.6",
     "minimist": "^1.2.0",
     "node-sass": "^4.5.3",
     "nunjucks": "^2.5.2",
+    "parse-json": "^2.2.0",
     "pify": "^3.0.0",
     "postcss-cssnext": "^2.11.0",
     "rollup": "^0.43.0",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-babili": "^3.1.0",
-    "rollup-plugin-bower-resolve": "^0.4.0"
+    "rollup-plugin-bower-resolve": "^0.4.0",
+    "strip-bom": "^3.0.0",
+    "strip-json-comments": "^2.0.1"
   },
-  "false": {},
-  "dependencies": {
-    "marked": "^0.3.6"
-  }
+  "false": {}
 }

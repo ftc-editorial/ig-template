@@ -1031,15 +1031,9 @@
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         }
       ]
-    },
-    {
-      // credits
-      "nav": null,
-      "sections":[
-        {
-          "type": "scrollmation"
-        }
-      ]
     }
-  ]
+  ],
+  "credits": {
+    "scrollmation": true
+  }
 }
