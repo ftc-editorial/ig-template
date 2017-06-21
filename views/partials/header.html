@@ -18,9 +18,10 @@
       <div class="o-header__center">
           {% if config.navOnHeader %}
             <span class="o-header__center-nav">
-              {% for section in sections %}
-                {% if section.nav %}
-                  <a class="o-header__nav-link" href="#{{section.nav.id}}">{{section.nav.text}}</a>
+              {% for chapter in chapters %}
+                {% if chapter.nav %}
+                  {% set nav = chapter.nav %}
+                  <a class="o-header__nav-link" href="#{{nav.id}}">{{nav.text}}</a>
                 {% endif %}
               {% endfor %}
             </span>

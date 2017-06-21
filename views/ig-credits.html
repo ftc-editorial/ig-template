@@ -1,0 +1,37 @@
+<div class="ig-credits{% if credits.scrollmation %} ig-credits__scrollmation{% endif %}">
+  {% if credits.scrollmation %}
+    {% include "partials/ig-scrollmation.html" %}
+  {% else %}
+    <div class="ig-background">
+      {% if picture %}
+        <picture class="ig-background__wrapper">
+          <img src="{{env.urlPrefix}}{{picture.src}}" alt="">
+        </picture>
+      {% endif %}
+
+      {% if credits.video %}
+        <div class="ig-background__wrapper">
+          <video src="{{video.src}}" preload="metadata" poster="{{env.urlPrefix}}{{video.poster}}" muted autoplay loop></video>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="o-grid-container">
+    <div class="ig-credits__content">
+
+      <h3 class="ig-credits__title">{{credits.title}}</h3>
+      {% for group in credits.groups %}
+        <div class="ig-credits__group">
+          <h4 class="ig-credits__group-title">{{group.title}}</h4>
+          <ul class="ig-credits__items">
+          {% for item in group.items %}
+            <li>{{item}}</li>
+          {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

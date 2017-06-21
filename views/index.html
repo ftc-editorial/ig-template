@@ -1,44 +1,35 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<article class="chapter-list article" role="main">
+  <article class="chapter-list article" role="main">
 
-  {% for chapter in chapters %}
-  <div class="ig-chapter section"{% if chapter.nav.id %} id="{{chapter.nav.id}}"{% endif %}>
-    {% for section in chapter.sections %}
-      <section class="ig-section {{section.type}}">
-        {% include section.type + ".html" %}
-      </section>
+    {% for chapter in chapters %}
+      <div class="ig-chapter"{% if chapter.nav.id %} id="{{chapter.nav.id}}"{% endif %}>
+        {% if chapter.cover %}
 
-      {#{% set media = section.media %}
-      {% set text = section.text %}
-
-      {% set colPrimary = section.colPrimary %}
-      {% set colSecondary = section.colSecondary %}
-
-
-      {% set credits = section.credits %}
-
-      {% include section.type + ".html" %}#}
+        {% else %}
+          {% for section in chapter.sections %}
+            <section class="ig-section {{section.type}}">
+              {% include section.type + ".html" %}
+            </section>
+          {% endfor %}
+        {% endif %}
+      </div>
     {% endfor %}
-  </div>
-  {% endfor %}
+  </article>
 
   {% for group in suggestedReads %}
-  <div class="suggested-reads o-grid-container">
+    <div class="suggested-reads o-grid-container">
 
-    {% if group.title %}
-    <h2 class="suggested-reads__title">{{group.title}}</h2>
-    {% endif %}  
+      {% if group.title %}
+      <h2 class="suggested-reads__title">{{group.title}}</h2>
+      {% endif %}  
 
-    <div class="o-grid-row">
-      {% for column in group.columns %}
-        {% include "partials/read-more.html" %}
-      {% endfor %}
+      <div class="o-grid-row">
+        {% for column in group.columns %}
+          {% include "partials/read-more.html" %}
+        {% endfor %}
+      </div>
     </div>
-    
-  </div>
   {% endfor %}
-
-</article>
 {% endblock %}

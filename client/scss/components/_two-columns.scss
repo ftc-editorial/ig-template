@@ -1,9 +1,19 @@
-.section-columns {
+.two-columns {
   box-sizing: border-box;
   position: relative;
+
+  .o-grid-row {
+    justify-content: center;
+  }
 }
 
-.section-col__primary {
+.two-columns__primary,
+.two-columns__secondary {
+  @include oGridColspan((default: 12, M: 6));
+}
+
+.two-columns__primary {
+  @include oGridColspan((default: 12, M: 6));
   p a {
     border-bottom: 1px solid transparent;
 
@@ -30,7 +40,10 @@
   }
 }
 
-.section-col__secondary {
+.two-columns__secondary {
+  @include oGridRespondTo($until: M) {
+    display: none;
+  }
   position: relative;
   padding-left: 10%;
   padding-right: 5%;

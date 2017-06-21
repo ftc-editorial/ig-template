@@ -11,28 +11,6 @@ body {
 
 .o-grid-row {
   @include oGridRow;
-// Center content 
-  .section-columns & {
-    justify-content: center;
-  }
-}
-
-.section-col__primary,
-.section-col__secondary {
-  @include oGridColspan((default: 12, M: 6));
-}
-
-.section-col__secondary {
-  @include oGridRespondTo($until: M) {
-    display: none;
-  }
-}
-
-.vertical-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .o-sticky {

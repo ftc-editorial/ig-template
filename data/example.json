@@ -1,0 +1,50 @@
+{
+  "chapters": [
+    {
+      // Cover. Has only one section
+      "navText": null,
+      "cover": {
+        "video": {
+          // provider could only be `ft` or `cc`
+          "poster": "/images/growing-pains/cover1.png",
+          "sources": [
+            {
+              "format": "mp4",
+              "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
+            }
+          ]
+        },
+        "image": {
+          "src": "growing-pains/cover1.png",
+          "landscape": [
+            "/images/growing-pains/cover1.png 1100w,",
+            "/images/growing-pains/cover1.png 1500w,",
+            "/images/growing-pains/cover1.png"
+          ],
+          "portrait": [
+            "/images/growing-pains/cover1.png 1100w,",
+            "/images/growing-pains/cover1.png 1500w,",
+            "/images/growing-pains/cover1.png"
+          ]
+        },
+        "text":{
+          //center-center, top-left, top-right, bottom-left, bottom-right
+          "position": "center-center",
+          // introduction text above title
+          "superLead": "",
+          // h1 should only appear once on one page
+          "h1": "成长的烦恼",
+          "h2": "",
+          "h3": "",
+          // introudction text below title
+          "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
+        },
+        "meta":{
+          "authors": null,
+          "publishedOn": "2017年6月19日",
+          "publishedBy": "英国《金融时报》报道"
+        }
+      }
+    } 
+  ]
+}

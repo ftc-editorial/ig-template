@@ -1,30 +1,34 @@
-{% if picture %}
-<picture class="ig-background ig-background--picture{% if video %} is-video-fallback{% endif %}">
-	{#{% for source in picture.sources%}
-	<source
-    {% if source.landscape %}media="(min-aspect-ratio: 1/1)"{% endif %}
-    {% if source.portrait %}media="(max-aspect-ratio: 1/1)"{% endif %}
-    srcset="{% for src in source.srcset %}{{env.urlPrefix}}{{src}}{% if not loop.last %}, {% endif %}{% endfor %}">
-  {% endfor %}#}
+<div class="ig-background{% if section.fixedBackground %} ig-background--fixed{% endif %}">
 
-  {% if picture.landscape %}
-    <source media="(min-aspect-ratio: 1/1)" srcset="{% for src picture.landscape %}{{env.urlPrefix}}{{src}}{% if not loop.last %}, {% endif %}{% endfor %}">
-  {% endif %}
+	{% if section.picture %}
+	  {% set picture = section.picture %}
+    <picture class="ig-background__media ig-background__media--picture">
+      {% if picture.landscape %}
+        <source media="(min-aspect-ratio: 1/1)" srcset="{% for src in picture.landscape %}
+          {{env.urlPrefix}}{{src}}
+          {% if not loop.last %}, {% endif %}
+        {% endfor %}">
+      {% endif %}
 
-  {% if picture.portrait %}
-    <source media="(max-aspect-ratio: 1/1)" srcset="{% for src in picture.portrait %}{{env.urlPrefix}}{{src}}{% if not loop.last %}, {% endif %}{% endfor %}">
-  {% endif %}
+      {% if picture.portrait %}
+        <source media="(max-aspect-ratio: 1/1)" srcset="{% for src in picture.portrait %}
+          {{env.urlPrefix}}{{src}}
+          {% if not loop.last %}, {% endif %}
+        {% endfor %}">
+      {% endif %}
 
-  <img class="ig-background__media" src="{{env.urlPrefix}}{{picture.default}}">
-</picture>
-{% endif %}
+      <img src="{{env.urlPrefix}}{{picture.default}}">
+    </picture>
+	{% endif %}
 
-{% if video %}
-<div class="ig-background ig-background--video">
-  <video class="ig-background__media" preload="metadata" poster="{{env.urlPrefix}}{{video.poster}}" muted autoplay loop>
-    {% for source in video.sources %}
-    <source src="{{source.src}}" type="video/{{source.type}}">
-    {% endfor %}
-  </video>          
+	{% if section.video %}
+	  {% set video = section.video %}
+    <div class="ig-background__media ig-background__media--video">
+      <video preload="metadata" poster="{{env.urlPrefix}}{{video.poster}}" muted autoplay loop>
+        {% for source in video.sources %}
+          <source src="{{source.src}}" type="video/{{source.format}}">
+        {% endfor %}
+      </video>
+    </div>
+	{% endif %}
 </div>
-{% endif %}

@@ -10,7 +10,9 @@
     "d3": false,
     "customCss": true,
     "customJs": false,
+    // If you actually did not use scrollmation, please set this to `false`. Disable scrollnamtion will greatly enhance reading experience.
     "enableScroll": true,
+    // show navigation in the center on header.
     "navOnHeader": true
   },
   "title": {
@@ -38,8 +40,51 @@
   "seriesTitle": "特别报道",
   "chapters": [
     {
-      "_note": "Cover. Has only one section",
+      // Cover. Has only one section
       "navText": null,
+      "cover": {
+        "video": {
+          // provider could only be `ft` or `cc`
+          "provider": "ft",
+          "poster": "/images/growing-pains/cover1.png",
+          "sources": [
+            {
+              "format": "mp4",
+              "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
+            }
+          ]
+        },
+        "picture": {
+          "default": "growing-pains/cover1.png",
+          "landscape": [
+            "/images/growing-pains/cover1.png 1100w,",
+            "/images/growing-pains/cover1.png 1500w,",
+            "/images/growing-pains/cover1.png"
+          ],
+          "portrait": [
+            "/images/growing-pains/cover1.png 1100w,",
+            "/images/growing-pains/cover1.png 1500w,",
+            "/images/growing-pains/cover1.png"
+          ]
+        },
+        "title":{
+          //`center-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`
+          "position": "center-center",
+          // introduction text above title
+          "superLead": "",
+          // h1 should only appear once on one page
+          "h1": "成长的烦恼",
+          "h2": "",
+          "h3": "",
+          // introudction text below title
+          "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
+        },
+        "meta":{
+          "authors": null,
+          "publishedOn": "2017年6月19日",
+          "publishedBy": "英国《金融时报》报道"
+        }
+      },
       "sections": [
         {
           "type": "text-over-media",
@@ -68,23 +113,22 @@
             ]
           },
           "title":{
-            "_note1": "`center-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`",
+            //`center-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`
             "position": "center-center",
-            "_note2": "introduction text above title",
+            // introduction text above title
             "superLead": "",
-            "_note3": "h1 should only appear once on one page",
+            // h1 should only appear once on one page
             "h1": "成长的烦恼",
             "h2": "",
             "h3": "",
-            "_note4": "introudction text below title",
+            // introudction text below title
             "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
           },
           "meta":{
             "authors": null,
             "publishedOn": "2017年6月19日",
             "publishedBy": "英国《金融时报》报道"
-          },
-          "credits": null
+          }
         }
       ]
     },
@@ -125,7 +169,7 @@
           }
         },
         {
-          "_note":"Section 2, Chapter 1",
+          // Section 2, Chapter 1
           "type": "two-columns",
           "primaryColumn": [
             {
@@ -602,7 +646,7 @@
       },
       "sections":[
         {
-          "_note": "Section 1, Chapter 2",
+          // Seciont 1, chapter 2. Cover
           "type": "text-over-media",
           "video": {
             "provider": "ft",
@@ -707,7 +751,7 @@
         },
         {
           // section 4, chapter 2
-          "type": "section-columns",
+          "type": "two-columns",
           "primaryColumn": [
             {
               "type":"column-text",
@@ -883,7 +927,7 @@
         },
         {
           // section 7, chapter 2
-          "type": "section-columns",
+          "type": "two-columns",
           "primaryColumn": [
             {
               "type":"column-text",
@@ -974,10 +1018,6 @@
           "primaryColumn": [
             {
               "type":"column-text",
-              "content": ""
-            },
-            {
-              "type":"column-text",
               "content": "伊娃离开小牛津已经8个月了，她在保持英语水平方面遇到一些困难。她的新学校没有英语课。她听说自己心爱的外籍老师埃米莉(Emily)已经回英国去了。她有了一个新爱好，王者荣耀(Honor of Kings)，这个奇幻角色扮演手游在中国非常火爆。"
             },
             {
@@ -1021,19 +1061,71 @@
             {
               "type":"column-text",
               "content": "我离开坪上镇后，伊娃找到了练习英语的另一个机会：微信。她输入道：“OK, sorry, I have a question. Do you miss your children?（好的，抱歉，我有个问题。你想念你的孩子吗？）”"
-            },
-            {
-              "type":"column-text",
-              "content": ""
             }
           ],
           "secondaryColumn": null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         }
       ]
+    },
+    {
+      // Chapter 3, credits
+      "nav": null,
+      "scrollmation": {
+        "image": "/images/growing-pains/credit.png",
+        "poster": null,
+        "video": null
+      },
+      "sections":[
+        {
+          "type": "two-columns",
+          
+          "credits": ""
+        }
+      ]
     }
-  ],
-  "credits": {
-    "scrollmation": true
-  }
+    // end of chapters
+  ]
+  // "credits": {
+  //   "scrollmation": true,
+  //   "picture":{
+  //     "src": 
+  //   },
+  //   "video": null,
+  //   "title": "制作团队",
+  //   "groups": [
+  //     {
+  //       "title": "美国",
+  //       "items": [
+  //         "报道：尼尔•孟希",
+  //         "摄影兼摄像：加亚•斯夸尔奇"
+  //       ]
+  //     },
+  //     {
+  //       "title": "中国",
+  //       "items":[
+  //         "报道：韩碧如",
+  //         "摄影兼摄像：朱莉娅•马尔基",
+  //         "补充报道：张祺(Archie Zhang)"
+  //       ]
+  //     },
+  //     {
+  //       "title": "剪辑与制作",
+  //       "items":[
+  //         "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
+  //         "图片编辑：艾伦•诺克斯(Alan Knox)",
+  //         "图表:Cleve Jones",
+  //         "网页：乔治•基里亚科斯(George Kyriakos)"
+  //       ]
+  //     },
+  //     {
+  //       "title": "中文网",
+  //       "items":[
+  //         "翻译：蓝田、徐行、马柯斯",
+  //         "视频翻译：实习生于江月",
+  //         "制作：史书华"
+  //       ]
+  //     }
+  //   ]
+  // }
 }
