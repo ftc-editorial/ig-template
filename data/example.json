@@ -91,7 +91,7 @@
         // section 2, chapter 1
         {
           "type": "scroll-over-media",
-          "picture":{
+          "image":{
             "src": "/images/myanmar/oil_buildings-mr_l0sccsl.jpg"
           },
           "mainColumn": [
@@ -100,6 +100,37 @@
               "content": "The text flows over fixed image. Set this section's type as `scroll-over-media`"
             }
           ]
+        },
+        {
+          "type": "columns",
+          "mainColumn":[
+            {
+              "type":"column-text",
+              "content": "Column text <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Column text"
+            }
+          ],
+          "asideColumn": {
+            // a sigle image without scrollmation. Mutual exclusive with `slides`
+            "image": null,
+            // each slide represent an image, with title, src, caption.
+            "slides": [
+              {
+                "title": null,
+                "src": "/images/myanmar/myanmarnumbers.png",
+                "caption": "Image 1"
+              },
+              {
+                "title":null,
+                "src": "/images/myanmar/myan_num_36c.png",
+                "caption":"Image 2"
+              },
+              {
+                "title":null,
+                "src": "/images/myanmar/myanmarnumbers2.png",
+                "caption":"Image 3"
+              }
+            ]
+          }
         },
         {
           "type": "text-over-media",

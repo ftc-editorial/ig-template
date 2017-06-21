@@ -1,5 +1,5 @@
 <figure class="ig-figure ig-figure--image
-{% if image.mobileOnly %}ig-figure--mobile{% endif %}" data-media-ratio="{{image.ratio}}">
+{% if image.mobileOnly %}ig-figure--mobile{% endif %}">
 
 	{% if image.title %}
 	  <h4 class="ig-figure__title">{{image.title}}</h4>
@@ -13,9 +13,9 @@
 
   <img{% if image.src %} src="{{env.urlPrefix}}{{image.src}}"{% endif %} class="ig-figure__media">
   
-  {#{% if image.textOnImage %}
-    <figcaption class="ig-figure__image-text">{{image.textOnImage}}</figcaption>
-  {% endif %}#}
+  {% if image.text %}
+    <figcaption class="ig-figure__image-text">{{image.text}}</figcaption>
+  {% endif %}
 
   {% if image.link %}
     </a>

@@ -1,7 +1,11 @@
 <div class="ig-scrollmation">
-  <div class="ig-scrollmation__slides" data-scrollmation-slides>
-    <aside class="ig-scrollmation__background-container">
-      <img src="{{picture.src}}" alt="">
-    </aside>
-  </div>
+  <aside class="ig-scrollmation__slides">
+    {% if image %}
+      {% include "partials/ig-image.html" %}
+    {% elif slides %}
+      {% for image in slides %}
+        {% include "partials/ig-image.html" %}
+      {% endfor %}
+    {% endif %}
+  </aside>
 </div>
