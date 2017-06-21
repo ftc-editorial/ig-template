@@ -5,17 +5,13 @@
 
     {% for chapter in chapters %}
       <div class="ig-chapter"{% if chapter.nav.id %} id="{{chapter.nav.id}}"{% endif %}>
-        {% if chapter.cover %}
-          {% set picture = chapter.cover.image %}
-          {% set video = chapter.cover.vedio %}
-          {% include "partials/ig-background.html" %}
-        {% else %}
-          {% for section in chapter.sections %}
-            <section class="ig-section {{section.type}}">
-              {% include section.type + ".html" %}
-            </section>
-          {% endfor %}
-        {% endif %}
+
+        {% for section in chapter.sections %}
+          <section class="ig-section {{section.type}}{%if section.text%} has-text{%endif%}">
+            {% include section.type + ".html" %}
+          </section>
+        {% endfor %}
+
       </div>
     {% endfor %}
   </article>

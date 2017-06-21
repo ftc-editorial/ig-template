@@ -1,50 +1,201 @@
 {
   "chapters": [
+    // chapter 0. Cover of the whole story
     {
-      // Cover. Has only one section
       "navText": null,
-      "cover": {
-        "video": {
-          // provider could only be `ft` or `cc`
-          "poster": "/images/growing-pains/cover1.png",
-          "sources": [
+      // Start of sections. // Cover has only one section
+      "sections": [
+        {
+          "type": "text-over-media",
+          "video": {
+            "poster": "/images/growing-pains/cover1.png",
+            "sources": [
+              {
+                "format": "mp4",
+                "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
+              }
+            ]
+          },
+          "picture": {
+            "src": "growing-pains/cover1.png",
+            "landscape": [
+              "/images/growing-pains/cover1.png 1100w,",
+              "/images/growing-pains/cover1.png 1500w,",
+              "/images/growing-pains/cover1.png"
+            ],
+            "portrait": [
+              "/images/growing-pains/cover1.png 1100w,",
+              "/images/growing-pains/cover1.png 1500w,",
+              "/images/growing-pains/cover1.png"
+            ]
+          },
+          "text":{
+            //`center-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`
+            "position": "center-center",
+            // introduction text above title
+            "superLead": "",
+            // h1 should only appear once on one page
+            "h1": "成长的烦恼",
+            "h2": "",
+            "h3": "",
+            // introudction text below title
+            "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
+          },
+          // only story cover has meta
+          "meta":{
+            "authors": null,
+            "publishedOn": "2017年6月19日",
+            "publishedBy": "英国《金融时报》报道"
+          }
+        }
+      ]
+      // end of sections
+    },
+    // end of chapter 0
+    {
+      // chapter 2
+      "nav": {
+        "text": "纽约布鲁克林 阿尔马尼",
+        "id": "armani-brooklyn-new-york"
+      },
+      "sections":[
+        {
+          // seciton 1, chapter 1
+          "type": "text-over-media",
+          "video": {
+            "poster": "/images/growing-pains/armani-cover.png",
+            "sources": [
+              {
+                "format": "mp4",
+                "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4"
+              }
+            ]
+          },
+          "picture": {
+            "src": "/images/growing-pains/armani-cover.png",
+            "landscape": [
+              "/images/growing-pains/armani-cover.png 1100w",
+              "/images/growing-pains/armani-cover.png 1500w",
+              "/images/growing-pains/armani-cover.png"
+            ]
+          },
+          "text": {
+            "position":"center-center",
+            "superLead": null,
+            "h1": null,
+            "h2": "阿尔马尼",
+            "h3": null,
+            "subLead": "纽约，布鲁克林区"
+          }
+        },
+        // section 2, chapter 1
+        {
+          "type": "scroll-over-media",
+          "picture":{
+            "src": "/images/myanmar/oil_buildings-mr_l0sccsl.jpg"
+          },
+          "mainColumn": [
             {
-              "format": "mp4",
-              "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
+              "type": "column-text",
+              "content": "The text flows over fixed image. Set this section's type as `scroll-over-media`"
             }
           ]
         },
-        "image": {
-          "src": "growing-pains/cover1.png",
-          "landscape": [
-            "/images/growing-pains/cover1.png 1100w,",
-            "/images/growing-pains/cover1.png 1500w,",
-            "/images/growing-pains/cover1.png"
-          ],
-          "portrait": [
-            "/images/growing-pains/cover1.png 1100w,",
-            "/images/growing-pains/cover1.png 1500w,",
-            "/images/growing-pains/cover1.png"
-          ]
+        {
+          "type": "text-over-media",
+          "picture":{
+            "src": "/images/myanmar/boat-blinkie-backup-mr.jpg",
+            "landscape":[
+              "/images/myanmar/boat-blinkie-backup-lr.jpg 1100w",
+              "/images/myanmar/boat-blinkie-backup-mr.jpg 1500w",
+              "/images/myanmar/boat-blinkie-backup-hr.jpg"
+            ]
+          },
+          "video": {
+            "poster": "/images/myanmar/boat-blinkie-backup-mr.jpg",
+            "sources": [
+              {
+                "src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.mp4",
+                "format": "mp4"
+              },
+              {
+                "src": "https://ig.ft.com/sites/land-rush-investment/myanmar/media/myanmar_blinkie_4.mp4.webmhd.webm",
+                "format": "webm"
+              }
+            ]
+          },
+          "credits": {
+            "title": "制作团队",
+            "groups": [
+              {
+                "title": null,
+                "items": [
+                  "项目经理：Christine Spolar",
+                  "文字報道：Michael Peel",
+                  "设计暨制作：Kari-Ruth Pedersen",
+                  "编辑：Christine Spolar, Sue Matthias, Orla Ryan and Chinny Li",
+                  "地图：Steve Bernard",
+                  "摄影图像：Steve Sapienza, Reuters, EPA",
+                  "视频：Steve Sapienza of the Pulitzer Center on Crisis Reporting",
+                  "翻译：何黎",
+                  "中文网制作：史书华、倪卫国"
+                ]
+              }
+            ]
+          }
         },
-        "text":{
-          //center-center, top-left, top-right, bottom-left, bottom-right
-          "position": "center-center",
-          // introduction text above title
-          "superLead": "",
-          // h1 should only appear once on one page
-          "h1": "成长的烦恼",
-          "h2": "",
-          "h3": "",
-          // introudction text below title
-          "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
-        },
-        "meta":{
-          "authors": null,
-          "publishedOn": "2017年6月19日",
-          "publishedBy": "英国《金融时报》报道"
+        {
+          "type": "scroll-over-media",
+          "picture":{
+            "src": "/images/growing-pains/credit.png"
+          },
+          "video": null,
+          "credits":{
+            "title": "制作团队",
+            "groups": [
+              {
+                "title": "美国",
+                "items": [
+                  "报道：尼尔•孟希",
+                  "摄影兼摄像：加亚•斯夸尔奇"
+                ]
+              },
+              {
+                "title": "中国",
+                "items":[
+                  "报道：韩碧如",
+                  "摄影兼摄像：朱莉娅•马尔基",
+                  "补充报道：张祺(Archie Zhang)"
+                ]
+              },
+              {
+                "title": "剪辑与制作",
+                "items":[
+                  "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
+                  "图片编辑：艾伦•诺克斯(Alan Knox)",
+                  "图表:Cleve Jones",
+                  "网页：乔治•基里亚科斯(George Kyriakos)"
+                ]
+              },
+              {
+                "title": "中文网",
+                "items":[
+                  "翻译：蓝田、徐行、马柯斯",
+                  "视频翻译：实习生于江月",
+                  "制作：史书华"
+                ]
+              },
+              {
+                "image": "/images/growing-pains/bmgf_logo_white_use-this.png"
+              }
+            ],
+            "copyright": "*本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。*"          
+          }
         }
-      }
-    } 
+      ]
+      // end of sections
+    }
+    // end of chapter
   ]
+  // end of chapters
 }

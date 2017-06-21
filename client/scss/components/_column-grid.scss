@@ -1,4 +1,4 @@
-.two-columns {
+.column-grid {
   box-sizing: border-box;
   position: relative;
 
@@ -7,12 +7,12 @@
   }
 }
 
-.two-columns__primary,
-.two-columns__secondary {
+.column-grid__main,
+.column-grid__aside {
   @include oGridColspan((default: 12, M: 6));
 }
 
-.two-columns__primary {
+.column-grid__main {
   @include oGridColspan((default: 12, M: 6));
   p a {
     border-bottom: 1px solid transparent;
@@ -40,7 +40,7 @@
   }
 }
 
-.two-columns__secondary {
+.column-grid__aside {
   @include oGridRespondTo($until: M) {
     display: none;
   }

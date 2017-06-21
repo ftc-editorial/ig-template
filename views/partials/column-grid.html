@@ -1,0 +1,52 @@
+<div class="o-grid-container">
+  <div class="o-grid-row">
+    <div class="column-grid__main">
+      <div class="column-grid__main-inner">
+        {% set mainColumn = section.mainColumn %}
+        {% for paragraph in mainColumn %}
+
+          {% if paragraph.type == "column-text" %}
+            {{paragraph.content | md}}
+          {% endif %}
+
+          {% if paragraph.type == "column-image" %}
+            {% set image = paragraph.content %}
+            {% include "partials/ig-image.html" %}
+          {% endif %}
+
+          {% if paragraph.type == "column-video" %}
+            {% set video = paragraph.content %}
+            {% include "partials/ig-video.html" %}
+          {% endif %}
+
+          {% if paragraph.type == "column-quote" %}
+            {% set quote = paragraph.content %}
+            <figure class="ig-blockquote">
+              <blockquote class="ig-blockquote__text">
+                {{quote.text}} 
+              </blockquote>
+              <figcaption class="ig-blockquote__caption">{{quote.caption}}</figcaption>
+            </figure>
+          {% endif %}
+
+          {% if paragraph.type == "column-read-more" %}
+            {% set readMore = paragraph.content %}
+            {% include "partials/read-more.html" %}
+          {% endif %}
+
+        {% endfor %}
+
+        {% if section.credits %}
+          {% set credits = section.credits %}
+          {% include "partials/ig-credits.html" %}
+        {% endif %}
+      </div>
+    </div>
+
+    {% if section.asideColumn %}
+      <div class="column-grid__aside">
+      
+      </div>
+    {% endif %}
+  </div>
+</div>

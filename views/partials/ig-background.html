@@ -1,7 +1,9 @@
+{% set picture = section.picture %}
+{% set video = section.video %}
+
 <div class="ig-background{% if section.fixedBackground %} ig-background--fixed{% endif %}">
 
-	{% if section.picture %}
-	  {% set picture = section.picture %}
+	{% if picture %}
     <picture class="ig-background__media ig-background__media--picture">
       {% if picture.landscape %}
         <source media="(min-aspect-ratio: 1/1)" srcset="{% for src in picture.landscape %}
@@ -17,12 +19,11 @@
         {% endfor %}">
       {% endif %}
 
-      <img src="{{env.urlPrefix}}{{picture.default}}">
+      <img src="{{env.urlPrefix}}{{picture.src}}">
     </picture>
 	{% endif %}
 
-	{% if section.video %}
-	  {% set video = section.video %}
+	{% if video %}
     <div class="ig-background__media ig-background__media--video">
       <video preload="metadata" poster="{{env.urlPrefix}}{{video.poster}}" muted autoplay loop>
         {% for source in video.sources %}

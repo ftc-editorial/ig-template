@@ -1,0 +1,27 @@
+<div class="ig-credits">
+    <h3 class="ig-credits__title">{{credits.title | md}}</h3>
+
+    {% for group in credits.groups %}
+      <div class="ig-credits__group">
+        {% if group.title %}
+          <h4 class="ig-credits__group-title">{{group.title}}</h4>
+        {% endif %}
+
+        {% if group.items%}
+          <ul class="ig-credits__items">
+          {% for item in group.items %}
+            <li>{{item}}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if group.image %}
+          <img src="{{group.image}}" alt="" width="100%">
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    {% if credits.copyright %}
+      {{ credits.copyright | md}}
+    {% endif %}
+</div>

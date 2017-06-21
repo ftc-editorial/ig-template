@@ -1,26 +1,26 @@
 {% include "partials/ig-background.html" %}
 
-{% if section.title %}
-	{% set title = section.title %}
-	<div class="ig-title {{title.position}}">
-		{% if title.superLead %}
-			<p class="ig-title__lead">{{title.superLead}}</p>
+{% if section.text %}
+	{% set text = section.text %}
+	<div class="ig-text {{text.position}}">
+		{% if text.superLead %}
+			<p class="ig-text__lead">{{text.superLead}}</p>
 		{% endif %}
 
-		{% if title.h1 %}
-			<h1 class="ig-title__h1">{{title.h1}}</h1>
+		{% if text.h1 %}
+			<h1 class="ig-text__h1">{{text.h1}}</h1>
 		{% endif %}
 
-		{% if title.h2 %}
-			<h1 class="ig-title__h2">{{title.h2}}</h1>
+		{% if text.h2 %}
+			<h1 class="ig-text__h2">{{text.h2}}</h1>
 		{% endif %}
 
-		{% if title.h3 %}
-			<h1 class="ig-title__h3">{{title.h3}}</h1>
+		{% if text.h3 %}
+			<h1 class="ig-text__h3">{{text.h3}}</h1>
 		{% endif %}
 
-		{% if title.subLead %}
-    	<p class="ig-title__lead">{{title.subLead}}</p>
+		{% if text.subLead %}
+    	<p class="ig-text__lead">{{text.subLead}}</p>
 		{% endif %}
 	</div>
 {% endif %}
@@ -44,13 +44,7 @@
 
 {% if section.credits %}
 	{% set credits = section.credits %}
-
-	<div class="ig-credits">
-		<h3 class="ig-credits__title">{{credits.title}}</h3>
-		<ul class="ig-credits__items">
-		{% for item in credits.items %}
-			<li>{{item}}</li>
-		{% endfor %}
-		</ul>
+	<div class="o-grid-container">
+		{% include "partials/ig-credits.html" %}
 	</div>
 {% endif %}
