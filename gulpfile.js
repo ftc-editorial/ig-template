@@ -99,6 +99,10 @@ gulp.task('scripts', () => {
       sourceMap: true
     });
   })
+  .then(() => {
+    browserSync.reload('*.html');
+    return Promise.resolve();
+  })
   .catch(err => {
     console.log(err);
   });

@@ -42,7 +42,15 @@
       <div class="ig-column__aside">
         {% set slides = section.asideColumn.slides %}
         {% set image = section.asideColumn.image %}
-        {% include "partials/ig-scrollmation.html" %}
+        
+        {% if image %}
+          {% include "partials/ig-image.html" %}
+        {% endif %}
+
+        {% if slides %}
+          {% include "partials/ig-scrollmation.html" %}
+        {% endif %}
+
       </div>
     {% endif %}
   </div>
