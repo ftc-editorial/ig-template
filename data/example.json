@@ -268,6 +268,7 @@
           "picture":{
             "src": "/images/growing-pains/credit.png"
           },
+          // this type does should not have video
           "video": null,
           "credits":{
             "title": "制作团队",

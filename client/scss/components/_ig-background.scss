@@ -9,7 +9,16 @@
 		height: 100%;
     overflow: hidden;
 		@include oColorsFor(ig-media, background);
-    @include igBackgroundOverlay;
+
+    .text-over-media &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
 
     img, video {
       box-sizing: border-box;

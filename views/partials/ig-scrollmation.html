@@ -1,11 +1,19 @@
 <div class="ig-scrollmation">
   <aside class="ig-scrollmation__slides">
-    {% if image %}
-      {% include "partials/ig-image.html" %}
-    {% elif slides %}
-      {% for image in slides %}
+{# If picture presents, it is used as part of `scroll-over-media`; #}
+    {% if picture %}
+      {% include "partials/ig-background.html" %}
+{# otherwise it is used as `asideColumn` #}
+{# In this case, `image` and `slides` are mutaully exclusive #}
+    {% else %}
+      {% if image %}
         {% include "partials/ig-image.html" %}
-      {% endfor %}
+      {% else %}
+        {% for image in slides %}
+          {% include "partials/ig-image.html" %}
+        {% endfor %}
+      {% endif %}
+
     {% endif %}
   </aside>
 </div>

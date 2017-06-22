@@ -1,12 +1,3 @@
-.ig-column {
-  box-sizing: border-box;
-  position: relative;
-
-  .o-grid-row {
-    justify-content: center;
-  }
-}
-
 .ig-column__main,
 .ig-column__aside {
   @include oGridColspan((default: 12, M: 6));

@@ -42,54 +42,10 @@
     {
       // Cover. Has only one section
       "navText": null,
-      "cover": {
-        "video": {
-          // provider could only be `ft` or `cc`
-          "provider": "ft",
-          "poster": "/images/growing-pains/cover1.png",
-          "sources": [
-            {
-              "format": "mp4",
-              "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
-            }
-          ]
-        },
-        "picture": {
-          "default": "growing-pains/cover1.png",
-          "landscape": [
-            "/images/growing-pains/cover1.png 1100w,",
-            "/images/growing-pains/cover1.png 1500w,",
-            "/images/growing-pains/cover1.png"
-          ],
-          "portrait": [
-            "/images/growing-pains/cover1.png 1100w,",
-            "/images/growing-pains/cover1.png 1500w,",
-            "/images/growing-pains/cover1.png"
-          ]
-        },
-        "title":{
-          //`center-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`
-          "position": "center-center",
-          // introduction text above title
-          "superLead": "",
-          // h1 should only appear once on one page
-          "h1": "成长的烦恼",
-          "h2": "",
-          "h3": "",
-          // introudction text below title
-          "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
-        },
-        "meta":{
-          "authors": null,
-          "publishedOn": "2017年6月19日",
-          "publishedBy": "英国《金融时报》报道"
-        }
-      },
       "sections": [
         {
           "type": "text-over-media",
           "video": {
-            "_note": "provider could only be `ft` or `cc`",
             "provider": "ft",
             "poster": "/images/growing-pains/cover1.png",
             "sources": [
@@ -100,7 +56,7 @@
             ]
           },
           "picture": {
-            "default": "growing-pains/cover1.png",
+            "src": "growing-pains/cover1.png",
             "landscape": [
               "/images/growing-pains/cover1.png 1100w,",
               "/images/growing-pains/cover1.png 1500w,",
@@ -112,7 +68,7 @@
               "/images/growing-pains/cover1.png"
             ]
           },
-          "title":{
+          "text":{
             //`center-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`
             "position": "center-center",
             // introduction text above title
@@ -140,7 +96,6 @@
       },
       "sections":[
         {
-          "_note": "Section 1, Chapter 1",
           "type": "text-over-media",
           "video": {
             "poster": "/images/growing-pains/armani-cover.png",
@@ -152,14 +107,14 @@
             ]
           },
           "picture": {
-            "default": "/images/growing-pains/armani-cover.png",
+            "src": "/images/growing-pains/armani-cover.png",
             "landscape": [
               "/images/growing-pains/armani-cover.png 1100w",
               "/images/growing-pains/armani-cover.png 1500w",
               "/images/growing-pains/armani-cover.png"
             ]
           },
-          "title": {
+          "text": {
             "position":"center-center",
             "superLead": null,
             "h1": null,
@@ -170,8 +125,8 @@
         },
         {
           // Section 2, Chapter 1
-          "type": "two-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn": [
             {
               "type": "column-text",
               "content": "阿尔马尼•亚当斯-史密斯(Armani Adams-Smith)居住在纽约布鲁克林区——她说，她是个地地道道的布鲁克林人。"
@@ -254,15 +209,14 @@
               "content": "“我的挑战，就是比如我的肤色，和我的教育，因为全世界各种各样的人，他们不认为女孩子应该接受教育。哦……而且（做）一个打篮球的女孩——这是这些挑战中最大的一个。”"
             }
           ],
-          "secondaryColumn": null,
+          "asideColumn": null,
           "ad": "/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
         {
-          "_note": "Section 3, Chapter 1",
           "type": "text-over-media",
-          "fixedBackground": true,
+          "fixed": true,
           "picture": {
-            "default": "/images/growing-pains/armani-2-cover.png",
+            "src": "/images/growing-pains/armani-2-cover.png",
             "landscape": [
               "/images/growing-pains/armani-2-cover.png 1100w,",
               "/images/growing-pains/armani-2-cover.png 1500w,",
@@ -270,7 +224,7 @@
             ],
             "portrait": []
           },
-          "title": {
+          "text": {
             "position": "center-center",
             "superLead": "",
             "h1": "",
@@ -280,9 +234,8 @@
           }
         },
         {
-          "_note": "Section 4, Chapter 1",
-          "type": "two-columns",
-          "primaryColumn":[
+          "type": "column-grid",
+          "mainColumn":[
             {
               "type":"column-text",
               "content": "亚当斯家的女孩们已经算幸运的了。每天放学后，有大巴把她们送去参加“希望之子”(CPNYC)项目，这是纽约市唯一专门面向父母遭到监禁的孩子的课后项目。"
@@ -367,15 +320,14 @@
               "content": "所以她尝试和女儿开诚布公地讨论这些风险：“阿尔马尼不需要去外面了解毒品，因为我会跟她说关于毒品的事；她不需要去外面了解性，因为我会告诉她。”"
             }
           ],
-          "secondaryColumn": null,
+          "asideColumn": null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
         {
-          "_note": "Section 5, Chapter 1",
           "type": "text-over-media",
-          "fixedBackground": true,
+          "fixed": true,
           "picture": {
-            "default": "/images/growing-pains/armani-3-cover.png",
+            "src": "/images/growing-pains/armani-3-cover.png",
             "landscape": [
               "/images/growing-pains/armani-3-cover.png 1100w,",
               "/images/growing-pains/armani-3-cover.png 1500w,",
@@ -383,7 +335,7 @@
             ],
             "portrait": []
           },
-          "title": {
+          "text": {
             "position": "center-center",
             "superLead": "",
             "h1": false,
@@ -394,8 +346,8 @@
         },
         {
           "_note": "Section 6, Chapter 1",
-          "type": "two-columns",
-          "primaryColumn":[
+          "type": "column-grid",
+          "mainColumn":[
             {
               "type":"column-text",
               "content": "为庆祝贾米娅9岁的生日，阿琳在她位于阁楼内的狭小公寓里举办了妮琪•米娜(Nicki Minaj)主题派对。电视里放着这位饶舌歌手的歌，墙上贴着粉色的纸。参加派对的小客人们即兴跳起了甩头舞。"
@@ -447,13 +399,13 @@
               "content": "“人们永远无法理解，但无论贾迈尔对我做了什么，他都是孩子们的父亲，发生在他身上的事情也从不是我的本意，”她称。"
             }
           ],
-          "secondaryColumn": null,
+          "asideColumn": null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
         {
           "_note": "Seciont 7, Chapter 1",
           "type": "text-over-media",
-          "fixedBackground": true,
+          "fixed": true,
           "picture": {
             "landscape": [
               "/images/growing-pains/armani-4-cover.png 1100w,",
@@ -463,7 +415,7 @@
             "portrait": false,
             "src": "/images/growing-pains/armani-4-cover.png"
           },
-          "title": {
+          "text": {
             "position": "center-center",
             "superLead": "",
             "h1": false,
@@ -473,9 +425,8 @@
           }
         },
         {
-          "_note": "Seciont 8, Chapter 1",
-          "type": "two-columns",
-          "primaryColumn":[
+          "type": "column-grid",
+          "mainColumn":[
             {
               "type":"column-text",
               "content": "女孩们要搭乘两趟公交车才能到她们的小学。103路公交车一路驶向市区的途中，阿尔马尼策划了实现她终极梦想的步骤，这个梦想是：与说唱歌手德瑞克(Drake)在一起。"
@@ -545,15 +496,15 @@
               "content": "不过在学校，令老师吃惊的是，阿尔马尼回答问题时声音很轻，就像在提问一样。她的老师说：“亲爱的，我一直跟你说，你很聪明。要对你的答案有信心。”"
             }
           ],
-          "secondaryColumn":null,
+          "asideColumn":null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
         {
           "_note": "Seciont 9, Chapter 1",
           "type": "text-over-media",
-          "fixedBackground":true,
+          "fixed":true,
           "picture":{
-            "default": "/images/growing-pains/armani-5-cover.png",
+            "src": "/images/growing-pains/armani-5-cover.png",
             "landscape": [
               "/images/growing-pains/armani-5-cover.png 1100w,",
               "/images/growing-pains/armani-5-cover.png 1500w,",
@@ -561,7 +512,7 @@
             ],
             "portrait": false
           },
-          "title":{
+          "text":{
             "position": "center-center",
             "superLead": "",
             "h1": false,
@@ -572,8 +523,8 @@
         },
         {
           "_note": "Seciont 10, Chapter 1",
-          "type": "two-columns",
-          "primaryColumn":[
+          "type": "column-grid",
+          "mainColumn":[
             {
               "type":"column-text",
               "content": "有天下午在CPNYC，阿尔马尼走过隔壁桌坐着的一个女孩，做着口型说（其实还是出声了），“我不喜欢那个孩子”。"
@@ -633,7 +584,7 @@
               "content": "她又投出一球。"
             }
           ],
-          "secondaryColumn":null,
+          "asideColumn":null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         }
       ]
@@ -659,7 +610,7 @@
             ]
           },
           "picture":{
-            "default": "/images/growing-pains/xie-cover.png",
+            "src": "/images/growing-pains/xie-cover.png",
             "landscape": [
               "/images/growing-pains/xie-cover.png 1100w",
               "/images/growing-pains/xie-cover.png 1500w",
@@ -667,7 +618,7 @@
             ],
             "portrait": []
           },
-          "title":{
+          "text":{
             "position": "center-center",
             "superLead": "",
             "h1": false,
@@ -678,8 +629,8 @@
         },
         {
           "_note":"Section 2, Chapter 2",
-          "type":"two-columns",
-          "primaryColumn": [
+          "type":"column-grid",
+          "mainColumn": [
             {
               "type":"column-text",
               "content": "谢雅琦今年12岁。"
@@ -724,14 +675,14 @@
               "content": "伊娃的妈妈在电话里跟女儿说出了实情。“她说，‘雅琦，你不能回广东上学了，因为你爸爸欠了很多债，钱实在是不够你们两个学习了’。我那时候很伤心，然后躲被窝里面哭啊哭。”"
             }
           ],
-          "secondaryColumn": null,
+          "asideColumn": null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
         {
           // Section 3, Chapter 2
           "type": "text-over-media",
           "picture": {
-            "default": "/images/growing-pains/xie-1-cover.png",
+            "src": "/images/growing-pains/xie-1-cover.png",
             "landscape": [
               "/images/growing-pains/xie-1-cover.png 1100w,",
               "/images/growing-pains/xie-1-cover.png 1500w,",
@@ -740,7 +691,7 @@
             "portrait":[
             ]
           },
-          "title": {
+          "text": {
             "position":"center-center",
             "superLead": null,
             "h1": null,
@@ -751,8 +702,8 @@
         },
         {
           // section 4, chapter 2
-          "type": "two-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn": [
             {
               "type":"column-text",
               "content": "伊娃之所以必须住在坪上镇，一部分是因为中国的学校制度没有跟上中国这场声势浩大的人口流动。由于户口制度（上世纪50年代建立），人们仍然只能在自己的出生地接受教育和医疗保障。"
@@ -808,7 +759,7 @@
               "content": "伊娃9岁的弟弟一开始也被送回坪上镇，但他太调皮捣蛋，于是伊娃的父母把他带回了城市。小的时候，在搬去城里之前，伊娃与奶奶一起生活，那时她曾嫉妒待在父母身边的弟弟。而现在姐弟俩又分开了，她倒是怀念过去逗弟弟的时候。"
             }
           ],
-          "secondaryColumn": null,
+          "asideColumn": null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
         {
@@ -816,7 +767,7 @@
           "type": "text-over-media",
           "video": null,
           "picture": {
-            "default": "/images/growing-pains/xie-2-cover.png",
+            "src": "/images/growing-pains/xie-2-cover.png",
             "landscape": [
               "/images/growing-pains/xie-2-cover.png 1100w,",
               "/images/growing-pains/xie-2-cover.png 1500w,",
@@ -825,7 +776,7 @@
             "portrait":[
             ]
           },
-          "title": {
+          "text": {
             "position":"center-center",
             "superLead": null,
             "h1": null,
@@ -836,8 +787,8 @@
         },
         {
           // section 5, chapter 2
-          "type": "two-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn": [
             {
               "type":"column-text",
               "content": "伊娃在坪上镇的家还未完工，因为她父亲建到一半没钱了。与漂亮的地砖形成鲜明对比的，是粗糙的混凝土墙壁和没装栏杆的楼梯。"
@@ -899,7 +850,7 @@
               "content": "她说“他们太累了。我让他们难过，因为我不听话。”"
             }
           ],
-          "secondaryColumn": null,
+          "asideColumn": null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
         {
@@ -907,7 +858,7 @@
           "type": "text-over-media",
           "video": null,
           "picture": {
-            "default": "/images/growing-pains/xie-3-cover.png",
+            "src": "/images/growing-pains/xie-3-cover.png",
             "landscape": [
               "/images/growing-pains/xie-3-cover.png 1100w,",
               "/images/growing-pains/xie-3-cover.png 1500w,",
@@ -916,7 +867,7 @@
             "portrait":[
             ]
           },
-          "title": {
+          "text": {
             "position":"center-center",
             "superLead": null,
             "h1": null,
@@ -927,8 +878,8 @@
         },
         {
           // section 7, chapter 2
-          "type": "two-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn": [
             {
               "type":"column-text",
               "content": "伊娃在坪上镇的数学老师刘珍珍说，伊娃离开这所学校时还很小，从城里再次回来上学那段时间，她过得很艰难。“她需要一些时间来调整。”"
@@ -986,7 +937,7 @@
               "content": "调皮捣蛋可能会为男孩子带来好处，伊娃的弟弟就是这样。由于儿子在中国传统家庭中的重要性，如果是男孩在学校里遇到问题，父母们更有可能作出应对。比如伊娃的婶婶，就在儿子开始逃学之后，放弃了在繁华都市杭州的办公室工作，回到了老家。"
             }
           ],
-          "secondaryColumn":null,
+          "asideColumn":null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
         {
@@ -994,7 +945,7 @@
           "type": "text-over-media",
           "video": null,
           "picture": {
-            "default": "/images/growing-pains/xie-4-cover.png",
+            "src": "/images/growing-pains/xie-4-cover.png",
             "landscape": [
               "/images/growing-pains/xie-4-cover.png 1100w,",
               "/images/growing-pains/xie-4-cover.png 1500w,",
@@ -1003,7 +954,7 @@
             "portrait":[
             ]
           },
-          "title": {
+          "text": {
             "position":"center-center",
             "superLead": null,
             "h1": null,
@@ -1014,8 +965,8 @@
         },
         {
           // section 9, chapter 2
-          "type": "two-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn": [
             {
               "type":"column-text",
               "content": "伊娃离开小牛津已经8个月了，她在保持英语水平方面遇到一些困难。她的新学校没有英语课。她听说自己心爱的外籍老师埃米莉(Emily)已经回英国去了。她有了一个新爱好，王者荣耀(Honor of Kings)，这个奇幻角色扮演手游在中国非常火爆。"
@@ -1063,7 +1014,7 @@
               "content": "我离开坪上镇后，伊娃找到了练习英语的另一个机会：微信。她输入道：“OK, sorry, I have a question. Do you miss your children?（好的，抱歉，我有个问题。你想念你的孩子吗？）”"
             }
           ],
-          "secondaryColumn": null,
+          "asideColumn": null,
           "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         }
       ]
@@ -1071,61 +1022,57 @@
     {
       // Chapter 3, credits
       "nav": null,
-      "scrollmation": {
-        "image": "/images/growing-pains/credit.png",
-        "poster": null,
-        "video": null
-      },
       "sections":[
         {
-          "type": "two-columns",
-          
-          "credits": ""
+          "type": "scroll-over-media",
+          "picture":{
+            "src": "/images/growing-pains/credit.png"
+          },
+          "video": null,
+          "credits":{
+            "title": "制作团队",
+            "groups": [
+              {
+                "title": "美国",
+                "items": [
+                  "报道：尼尔•孟希",
+                  "摄影兼摄像：加亚•斯夸尔奇"
+                ]
+              },
+              {
+                "title": "中国",
+                "items":[
+                  "报道：韩碧如",
+                  "摄影兼摄像：朱莉娅•马尔基",
+                  "补充报道：张祺(Archie Zhang)"
+                ]
+              },
+              {
+                "title": "剪辑与制作",
+                "items":[
+                  "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
+                  "图片编辑：艾伦•诺克斯(Alan Knox)",
+                  "图表:Cleve Jones",
+                  "网页：乔治•基里亚科斯(George Kyriakos)"
+                ]
+              },
+              {
+                "title": "中文网",
+                "items":[
+                  "翻译：蓝田、徐行、马柯斯",
+                  "视频翻译：实习生于江月",
+                  "制作：史书华"
+                ]
+              },
+              {
+                "image": "/images/growing-pains/bmgf_logo_white_use-this.png"
+              }
+            ],
+            "copyright": "*本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。*"          
+          }
         }
       ]
     }
     // end of chapters
   ]
-  // "credits": {
-  //   "scrollmation": true,
-  //   "picture":{
-  //     "src": 
-  //   },
-  //   "video": null,
-  //   "title": "制作团队",
-  //   "groups": [
-  //     {
-  //       "title": "美国",
-  //       "items": [
-  //         "报道：尼尔•孟希",
-  //         "摄影兼摄像：加亚•斯夸尔奇"
-  //       ]
-  //     },
-  //     {
-  //       "title": "中国",
-  //       "items":[
-  //         "报道：韩碧如",
-  //         "摄影兼摄像：朱莉娅•马尔基",
-  //         "补充报道：张祺(Archie Zhang)"
-  //       ]
-  //     },
-  //     {
-  //       "title": "剪辑与制作",
-  //       "items":[
-  //         "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
-  //         "图片编辑：艾伦•诺克斯(Alan Knox)",
-  //         "图表:Cleve Jones",
-  //         "网页：乔治•基里亚科斯(George Kyriakos)"
-  //       ]
-  //     },
-  //     {
-  //       "title": "中文网",
-  //       "items":[
-  //         "翻译：蓝田、徐行、马柯斯",
-  //         "视频翻译：实习生于江月",
-  //         "制作：史书华"
-  //       ]
-  //     }
-  //   ]
-  // }
 }
