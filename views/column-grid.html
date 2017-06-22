@@ -1,0 +1,10 @@
+{% include "partials/ig-column.html" %}
+
+{% if section.ad %}
+  <div class="ig-ad">
+    <div class="ig-ad__container o-grid-container">
+      <p class="ig-ad__title">广告之后 精彩继续</p>
+      <iframe class="ig-ad__content" src="{{section.ad}}"></iframe>
+    </div>
+  </div>
+{% endif %}

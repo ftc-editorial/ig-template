@@ -1,15 +1,17 @@
-@import "ig-background";
 @import "ig-figure";
 @import "ig-blockquote";
 @import "ig-credits";
+@import "ig-ad";
+@import "ig-background";
+@import "ig-column";
 
 @import "scroll-over-media";
 @import "text-over-media";
 // @import "two-columns";
-@import "column-grid";
-@import "section-media";
-@import "section-sticky";
-@import "section-ad";
+
+// @import "section-media";
+// @import "section-sticky";
+// @import "section-ad";
 
 @import "read-more";
 @import "suggested-reads";

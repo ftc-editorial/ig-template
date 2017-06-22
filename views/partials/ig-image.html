@@ -11,11 +11,11 @@
     <div class="ig-figure__media-wrapper" data-media-ratio="{{image.ratio}}">
   {% endif %}
 
-  <img{% if image.src %} src="{{env.urlPrefix}}{{image.src}}"{% endif %} class="ig-figure__media">
+    <img{% if image.src %} src="{{env.urlPrefix}}{{image.src}}"{% endif %} class="ig-figure__media">
   
-  {% if image.text %}
-    <figcaption class="ig-figure__image-text">{{image.text}}</figcaption>
-  {% endif %}
+    {% if image.text %}
+      <figcaption class="ig-figure__image-text">{{image.text}}</figcaption>
+    {% endif %}
 
   {% if image.link %}
     </a>

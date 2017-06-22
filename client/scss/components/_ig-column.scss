@@ -1,4 +1,4 @@
-.column-grid {
+.ig-column {
   box-sizing: border-box;
   position: relative;
 
@@ -7,12 +7,12 @@
   }
 }
 
-.column-grid__main,
-.column-grid__aside {
+.ig-column__main,
+.ig-column__aside {
   @include oGridColspan((default: 12, M: 6));
 }
 
-.column-grid__main {
+.ig-column__main {
   @include oGridColspan((default: 12, M: 6));
   p a {
     border-bottom: 1px solid transparent;
@@ -40,7 +40,7 @@
   }
 }
 
-.column-grid__aside {
+.ig-column__aside {
   @include oGridRespondTo($until: M) {
     display: none;
   }

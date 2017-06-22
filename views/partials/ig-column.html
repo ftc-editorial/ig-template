@@ -1,7 +1,7 @@
 <div class="o-grid-container">
   <div class="o-grid-row">
-    <div class="column-grid__main">
-      <div class="column-grid__main-inner">
+    <div class="ig-column__main">
+      <div class="ig-column__main-inner">
         {% set mainColumn = section.mainColumn %}
         {% for paragraph in mainColumn %}
 
@@ -44,7 +44,7 @@
     </div>
 
     {% if section.asideColumn %}
-      <div class="column-grid__aside">
+      <div class="ig-column__aside">
         {% set slides = section.asideColumn.slides %}
         {% set image = section.asideColumn.image %}
         {% include "partials/ig-scrollmation.html" %}
