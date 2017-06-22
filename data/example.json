@@ -7,6 +7,7 @@
       "sections": [
         {
           "type": "text-over-media",
+          "fixed": false,
           "video": {
             "poster": "/images/growing-pains/cover1.png",
             "sources": [
@@ -30,20 +31,19 @@
             ]
           },
           "text":{
-            //`center-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`
             "position": "center-center",
             // introduction text above title
             "superLead": "",
             // h1 should only appear once on one page
-            "h1": "成长的烦恼",
+            "h1": "Story Cover",
             "h2": "",
             "h3": "",
             // introudction text below title
-            "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
+            "subLead": "Leading Text. You place those text on `center-center`, `top-left`, `top-right`, `bottom-left`, `bottom-right`"
           },
           // only story cover has meta
           "meta":{
-            "authors": null,
+            "authors": ["author1", "author2", "author3"],
             "publishedOn": "2017年6月19日",
             "publishedBy": "英国《金融时报》报道"
           }
@@ -55,58 +55,119 @@
     {
       // chapter 2
       "nav": {
-        "text": "纽约布鲁克林 阿尔马尼",
+        "text": "Chapter 1",
         "id": "armani-brooklyn-new-york"
       },
       "sections":[
         {
-          // seciton 1, chapter 1
+          // section 1, chapter 1
           "type": "text-over-media",
+          // text-over-media could have a fixed background.
+          "fixed": false,
           "video": {
             "poster": "/images/growing-pains/armani-cover.png",
             "sources": [
               {
+                // format could be mp4 or webm
                 "format": "mp4",
                 "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_blinkie.mp4"
               }
             ]
           },
           "picture": {
+            // src is the default image
             "src": "/images/growing-pains/armani-cover.png",
+            // For different screen size on lanscape
             "landscape": [
               "/images/growing-pains/armani-cover.png 1100w",
               "/images/growing-pains/armani-cover.png 1500w",
               "/images/growing-pains/armani-cover.png"
+            ],
+            // for portrait
+            "portrait":[
+              
             ]
           },
           "text": {
             "position":"center-center",
             "superLead": null,
             "h1": null,
-            "h2": "阿尔马尼",
+            "h2": "Cover of Chapter 1",
             "h3": null,
-            "subLead": "纽约，布鲁克林区"
+            "subLead": "Leading Text"
           }
         },
         // section 2, chapter 1
         {
-          "type": "scroll-over-media",
-          "image":{
-            "src": "/images/myanmar/oil_buildings-mr_l0sccsl.jpg"
-          },
-          "mainColumn": [
-            {
-              "type": "column-text",
-              "content": "The text flows over fixed image. Set this section's type as `scroll-over-media`"
-            }
-          ]
-        },
-        {
-          "type": "columns",
+          "type": "column-grid",
           "mainColumn":[
+          // Each element represent one paragraph.
             {
               "type":"column-text",
-              "content": "Column text <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Column text"
+              "content": "Column grid contains two columns."
+            },
+            {
+              "type":"column-image",
+              "content": {
+                "mobileOnly": false,
+                // title is above image
+                "title": "Image Title",
+                "link": null,
+                "ratio": null,
+                "src": "/images/myanmar/3carlsberg-mr_voued4u.jpg",
+                // text is on image
+                "topText": "Text on image",
+                // caption is below image
+                "caption": "Image Caption"
+              }
+            },
+            {
+              "type":"column-video",
+              "content": {
+                "title": "Video Title",
+                // could only be cc or ft
+                "provider": "cc",
+                "src": "http://p.bokecc.com/player?vid=C66B68FC5F104EC39C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
+                "caption": "Vedio Caption"
+              }
+            },
+            {
+              "type": "column-quote",
+              "content":{
+                "text": "Column Quote Content",
+                "caption": "Quote Caption"
+              }
+            },
+            {
+              "type": "column-read-more",
+              "content":{
+                "image": {
+									"mobileOnly": false,
+									"title": null,
+									"link": "https://www.ft.com/land",
+                  "ratio": "1/2",
+									"src": "/images/myanmar/landrush_xref.png",
+                  "topText": null,
+									"caption": null
+								},
+                "title": "阅读更多",
+                // summray and items should be mutually exclusive.
+                "summary": null,
+                "items": [
+									{
+										"href": "https://ig.ft.com/sites/land-rush-investment/ethiopia",
+										"text": "Ethiopia: The billionaire’s farm"
+									},
+									{
+										"href": "https://ig.ft.com/sites/land-rush-investment/indonesia",
+										"text": "Indonesia: Saving the earth"
+									},
+									{
+										"href": "http://podcast.ft.com/2016/03/01/global-land-disputes/",
+										"text": "Listen to the podcast"
+									}
+								]
+              }
             }
           ],
           "asideColumn": {
@@ -133,6 +194,32 @@
           }
         },
         {
+          "type": "scroll-over-media",
+          "image":{
+            "src": "/images/myanmar/oil_buildings-mr_l0sccsl.jpg"
+          },
+          "mainColumn": [
+            {
+              "type": "column-text",
+              "content": "The text flows over fixed image. Set this section's type as `scroll-over-media`"
+            },
+            {
+              "type": "column-text",
+              "content": "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Here you should have very long content"
+            }
+          ],
+          "asideColumn": null
+        }
+      ]
+      // end of sections
+    },
+    // Chapter 2
+    // 2 Type of credtis
+    {
+      "nav": null,
+      "sections":[
+        {
+          // This is one of the 2 types of credits
           "type": "text-over-media",
           "picture":{
             "src": "/images/myanmar/boat-blinkie-backup-mr.jpg",
@@ -176,6 +263,7 @@
           }
         },
         {
+          // This is another type of credits
           "type": "scroll-over-media",
           "picture":{
             "src": "/images/growing-pains/credit.png"
@@ -222,9 +310,8 @@
             ],
             "copyright": "*本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。*"          
           }
-        }
+        }        
       ]
-      // end of sections
     }
     // end of chapter
   ]

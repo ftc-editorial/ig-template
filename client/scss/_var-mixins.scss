@@ -8,31 +8,22 @@ $ig-primary-col-width: 6;
 	}
 	padding-top: $ratio;
 }
-
-@mixin setLazyloadWrapperRatio($ratio) {
-	@if unit($ratio) != "%" {
-		$ratio: percentage($ratio);
-	}
-	padding-top: $ratio;
-}
-
-// $ratio: 71.42%
-@mixin lazyloadMedia($mediaclass, $ratio: 71.42%) {
+@mixin aspectRatio($ratio: 71.42%) {
 	@if unit($ratio) != "%" {
 		$ratio: percentage($ratio);
 	}
 	position: relative;
 	display: block;
 	height: 0;
+	padding: 0;
+	overflow: hidden;
 	padding-top: $ratio;
-
-	.#{$mediaclass} {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+}
+@mixin changeAspectRatio($ratio) {
+	@if unit($ratio) != "%" {
+		$ratio: percentage($ratio);
 	}
+	padding-top: $ratio;
 }
 
 @mixin igBackgroundOverlay {

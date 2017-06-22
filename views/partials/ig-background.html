@@ -1,7 +1,4 @@
-{% set picture = section.picture %}
-{% set video = section.video %}
-
-<div class="ig-background{% if section.fixedBackground %} ig-background--fixed{% endif %}">
+<div class="ig-background{% if fixed %} ig-background--fixed{% endif %}">
 
 	{% if picture %}
     <picture class="ig-background__media ig-background__media--picture">

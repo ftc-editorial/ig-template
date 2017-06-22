@@ -1,15 +1,17 @@
 .ig-figure {
   margin: 0;
   padding: 0;
-
-  img, video {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-  }
+	box-sizing: border-box;
 	
+	.ig-column__aside & {
+    padding: $o-header-height + 15px 0;
+  }
+
+	.ig-column__main & {
+		margin: 0 auto;
+    padding: 15px 0;
+	}
+
 	&--mobile {
 		display: block;
 	}
@@ -25,28 +27,39 @@
 	}
 
 	&__media-wrapper {
-		@include lazyloadMedia('ig-figure__media');
+		@include aspectRatio;
 		&[data-media-ratio="1/2"] {
-			@include setLazyloadWrapperRatio(1/2);
+			@include changeAspectRatio(1/2);
 		}
 		&[data-media-ratio="9/16"] {
-			@include setLazyloadWrapperRatio(9/16);
+			@include changeAspectRatio(9/16);
 		}
 		&[data-media-ratio="16/15"] {
-			@include setLazyloadWrapperRatio(16/15);
+			@include changeAspectRatio(16/15);
 		}
 		&[data-media-ratio="7/5"] {
-			@include setLazyloadWrapperRatio(7/5);
+			@include changeAspectRatio(7/5);
+		}
+
+		.ig-figure__media {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		img, video {
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 
 	&--video &__media {
 		@include oColorsFor(ig-video, background);
 	}
-
-	// &--image &__media {
-	// 	@include oColorsFor(ig-image, background);
-	// }
 
 	&__image-text {
 		box-sizing: border-box;

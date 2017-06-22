@@ -4,6 +4,13 @@
 	color: #fff;
 	padding-top: $o-header-height;
 
+	.text-over-media & {
+		min-width: 80%;
+		width: 80%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
 	&__title {
 		margin: 0 0 10px 0;
 		padding: 0;

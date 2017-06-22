@@ -21,12 +21,7 @@
 
           {% if paragraph.type == "column-quote" %}
             {% set quote = paragraph.content %}
-            <figure class="ig-blockquote">
-              <blockquote class="ig-blockquote__text">
-                {{quote.text}} 
-              </blockquote>
-              <figcaption class="ig-blockquote__caption">{{quote.caption}}</figcaption>
-            </figure>
+            {% include "partials/ig-blockquote.html" %}
           {% endif %}
 
           {% if paragraph.type == "column-read-more" %}

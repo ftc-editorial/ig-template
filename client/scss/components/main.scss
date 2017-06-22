@@ -1,17 +1,14 @@
-@import "ig-figure";
-@import "ig-blockquote";
-@import "ig-credits";
+@import "ig-figure"; // adjusted
+@import "ig-blockquote"; // adjusted
 @import "ig-ad";
-@import "ig-background";
-@import "ig-column";
+
+@import "ig-credits"; // adjusted
+@import "ig-background"; // adjusted
+@import "ig-column"; // ajusted
+@import "ig-scrollmation"; // needs js support
 
 @import "scroll-over-media";
 @import "text-over-media";
-// @import "two-columns";
 
-// @import "section-media";
-// @import "section-sticky";
-// @import "section-ad";
-
-@import "read-more";
+@import "read-more"; // adjusted
 @import "suggested-reads";

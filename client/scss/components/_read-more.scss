@@ -1,9 +1,10 @@
 .read-more {
-
-	&__column {
-		p {
-			margin-top: 0;
-		}	  	
+	margin-bottom: 1em;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	
+	p {
+		margin-top: 0;
 	}
 
 	&__title {
@@ -13,7 +14,7 @@
 	&__summary {
 		padding-bottom: 10px;
 	}
-	&__list {
+	&__items {
 		padding: 0.5em 0;
 		a {
 			line-height: 1.7;

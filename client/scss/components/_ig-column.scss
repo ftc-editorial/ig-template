@@ -21,22 +21,29 @@
       border-bottom: 1px solid;
     }
   }
-  
-  &-inner {
-    box-sizing: border-box;
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    @include oGridRespondTo(M) {
-      padding: 20px 30px;
-    }    
-  }
 
   .read-more__column {
     margin-bottom: 1em;
     border-top: 1px solid;
     border-bottom: 1px solid;
+  }
+}
+
+.ig-column__main-inner {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  @include oGridRespondTo(M) {
+    padding: 20px 30px;
+  }
+
+// If inside scroll-over-media, it should be very long
+  .scroll-over-media & {
+    background: transparent;
+    padding-top: 450px;
+    padding-bottom: 250px;
   }
 }
 
@@ -52,13 +59,5 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-  }
-  
-  .ig-figure {
-    padding: $o-header-height + 15px 0;
-
-    &__caption {
-      text-align: left;
-    }
   }
 }

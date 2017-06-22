@@ -42,8 +42,7 @@
 .ig-background--fixed {
   clip: rect(0, auto, auto, 0);
 
-  & .ig-background__picture,
-  & .ig-background__video {
+  & ig-background__media {
     position: fixed;
     top: 0;
     bottom: 0;

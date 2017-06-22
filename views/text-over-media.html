@@ -1,4 +1,9 @@
-{% include "partials/ig-background.html" %}
+{% if section.picture or section.video %}
+	{% set picture = section.picture %}
+	{% set video = section.video %}
+	{% set fixed = section.fixed%}
+	{% include "partials/ig-background.html" %}
+{% endif %}
 
 {% if section.text %}
 	{% set text = section.text %}
@@ -44,7 +49,5 @@
 
 {% if section.credits %}
 	{% set credits = section.credits %}
-	<div class="o-grid-container">
-		{% include "partials/ig-credits.html" %}
-	</div>
+	{% include "partials/ig-credits.html" %}
 {% endif %}

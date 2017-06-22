@@ -13,8 +13,8 @@
 
     <img{% if image.src %} src="{{env.urlPrefix}}{{image.src}}"{% endif %} class="ig-figure__media">
   
-    {% if image.text %}
-      <figcaption class="ig-figure__image-text">{{image.text}}</figcaption>
+    {% if image.topText %}
+      <figcaption class="ig-figure__image-text">{{image.topText}}</figcaption>
     {% endif %}
 
   {% if image.link %}
