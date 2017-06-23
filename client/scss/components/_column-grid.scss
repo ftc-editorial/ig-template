@@ -1,3 +1,11 @@
+.o-grid-container {
+  @include oGridContainer;
+}
+
+.o-grid-row {
+  @include oGridRow;
+}
+
 .column-grid {
   box-sizing: border-box;
   position: relative;

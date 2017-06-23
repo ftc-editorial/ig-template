@@ -17,6 +17,7 @@ class Scrollmation {
     this.rootEl = rootEl;
     this.targetEl = targetEl;
     this._currentState = -1;
+    this.setWidth();
     this.updateState();
 
     this.rootEl.setAttribute('data-scrollmation--js', 'true');
@@ -26,10 +27,10 @@ class Scrollmation {
     } else {
       Scrollmation._inst = [this];
     }
-
+// Insure only attach scroll and resize event once.
     if (!Scrollmation._eventsAttached) {
-      window.addEventListener('scroll', Scrollmation.handleScrollOrResize);
-      window.addEventListener('resize', Scrollmation.handleScrollOrResize);
+      window.addEventListener('scroll', Scrollmation.handleScroll);
+      window.addEventListener('resize', Scrollmation.handleResize);
 
       Scrollmation._eventsAttached = true;
     }
@@ -60,6 +61,10 @@ class Scrollmation {
     return this.rootEl.getBoundingClientRect();
   }
 
+  setWidth() {
+    this.targetEl.style.width = this.rootEl.offsetWidth + 'px';
+  }
+
   updateState() {
     // targetEl's top should align to the top of rootEl
     if (this.bounds.top > 0) {
@@ -76,13 +81,23 @@ class Scrollmation {
     return;
   }
 
-  static handleScrollOrResize() {
+  static handleScroll() {
     for (let inst of Scrollmation._inst) {
       if (!inst.rootEl.hasAttribute('data-scrollmation--js')) {
         continue;
       }
       inst.updateState();
     }
+  }
+
+  static handleResize() {
+    for (let inst of Scrollmation._inst) {
+      if (!inst.rootEl.hasAttribute('data-scrollmation--js')) {
+        continue;
+      }
+      inst.setWidth();
+      inst.updateState();
+    }    
   }
 
   static init(el) {

@@ -1,29 +1,39 @@
 .ig-scrollmation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  box-sizing: border-box;
   height: 100%;
   overflow: hidden;
 
-  .scroll-over-media &:after {
-    content: '';
-    display: block;
-    width: 65%;
-    max-width: 1500px;
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 25%, rgba(0, 0, 0, 0.65) 100%);
+  .scroll-over-media & {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-  } 
+    right: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 65%;
+      max-width: 1500px;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.65) 25%, rgba(0, 0, 0, 0.65) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
 }
 
-.scroll-over-media .ig-scrollmation__slides {
+.ig-scrollmation__slides {
   position: absolute;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  box-sizing: border-box;
+
+  .column-grid & {
+    padding: 1em;
+  }
 
   &[data-sticky="top"] {
     top: 0;
