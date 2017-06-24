@@ -8,9 +8,11 @@
   "config": {
     "highcharts": false,
     "d3": false,
-    "customCss": false,
+    "customCss": true,
     "customJs": false,
+    // If you actually did not use scrollmation, please set this to `false`. Disable scrollnamtion will greatly enhance reading experience.
     "enableScroll": true,
+    // show navigation in the center on header.
     "navOnHeader": true
   },
   "title": {
@@ -38,17 +40,14 @@
   "seriesTitle": "特别报道",
   "chapters": [
     {
-      "_note": "This section is the article's cover.",
+      // Chapter 0. Cover. Has only one section
       "navText": null,
       "sections": [
         {
           "type": "text-over-media",
           "video": {
-            "_note": "provider could only be `ft` or `cc`",
-            "provider": "ft",
             "poster": "/images/growing-pains/cover1.png",
-            "sources": 
-            [
+            "sources": [
               {
                 "format": "mp4",
                 "src": "https://ig.ft.com/special-reports/growing-pains/media/armani_eva_fixed_loop.mp4"
@@ -56,7 +55,7 @@
             ]
           },
           "picture": {
-            "default": "growing-pains/cover1.png",
+            "src": "growing-pains/cover1.png",
             "landscape": [
               "/images/growing-pains/cover1.png 1100w,",
               "/images/growing-pains/cover1.png 1500w,",
@@ -68,16 +67,12 @@
               "/images/growing-pains/cover1.png"
             ]
           },
-          "title":{
-            "_note1": "`center center`, `left top`, `right top`, `left bottom`, `right bottom`",
-            "position": "center center",
-            "_note2": "introduction text above title",
+          "text":{
+            "position": "center-center",
             "superLead": "",
-            "_note3": "h1 should only appear once on one page",
             "h1": "成长的烦恼",
             "h2": "",
             "h3": "",
-            "_note4": "introudction text below title",
             "subLead": "阿尔马尼和伊娃出生在相距千里、截然不同的两个世界之中。两个女孩都聪颖、敏感、坚定——两人都正步入青春期，这是一段关键时期，在这个时期做出的一些选择可能帮助她们成功，也可能永远限制她们的视野。"
           },
           "meta":{
@@ -89,17 +84,16 @@
       ]
     },
     {
-      "_note": "Section 1",
+      // Chapter 1
       "nav": {
         "text": "纽约布鲁克林 阿尔马尼",
         "id": "armani-brooklyn-new-york"
       },
-      "sections": [
+      "sections":[
+        // section 1, chapter 1
         {
-          "_note": "Section 1, Chapter 1. Cover",
           "type": "text-over-media",
           "video": {
-            "provider": "ft",
             "poster": "/images/growing-pains/armani-cover.png",
             "sources": [
               {
@@ -109,17 +103,15 @@
             ]
           },
           "picture": {
-            "default": "/images/growing-pains/armani-cover.png",
+            "src": "/images/growing-pains/armani-cover.png",
             "landscape": [
               "/images/growing-pains/armani-cover.png 1100w",
               "/images/growing-pains/armani-cover.png 1500w",
               "/images/growing-pains/armani-cover.png"
             ]
           },
-          "title": {
-            "verticalCenter": true,
-            "position":"center center",
-            "headFor": "section",
+          "text": {
+            "position":"center-center",
             "superLead": null,
             "h1": null,
             "h2": "阿尔马尼",
@@ -127,10 +119,11 @@
             "subLead": "纽约，布鲁克林区"
           }
         },
+        // section 2, chapter 1
         {
-          "_note": "Section 2, Chapter 1",
-          "type": "section-columns",
-          "primaryColumn": [
+          // Section 2, Chapter 1
+          "type": "column-grid",
+          "mainColumn": [
             {
               "type": "column-text",
               "content": "阿尔马尼•亚当斯-史密斯(Armani Adams-Smith)居住在纽约布鲁克林区——她说，她是个地地道道的布鲁克林人。"
@@ -144,7 +137,7 @@
               "content": "当被问到她为什么不担心即将到来的、决定她上哪所初中的标准化测试，或者她为什么能够在体育课上打败男孩子，或者她为什么冒然打电话给一个当地说唱歌手、问她是否能够在她的音乐视频上露脸，阿尔马尼有一个简单的答案：“（因为）我是阿尔马尼•亚当斯-史密斯。”"
             },
             {
-              "type": "image",
+              "type": "column-image",
               "content": {
                 "mobileOnly": false,
                 "ratio": "",
@@ -213,14 +206,15 @@
               "content": "“我的挑战，就是比如我的肤色，和我的教育，因为全世界各种各样的人，他们不认为女孩子应该接受教育。哦……而且（做）一个打篮球的女孩——这是这些挑战中最大的一个。”"
             }
           ],
+          "asideColumn": null,
           "ad": "/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
+        // section 3, chapter 1
         {
-          "_note": "Section 3, Chapter 1. Cover",
           "type": "text-over-media",
-          "fixedBackground": true,
+          "fixed": true,
           "picture": {
-            "default": "/images/growing-pains/armani-2-cover.png",
+            "src": "/images/growing-pains/armani-2-cover.png",
             "landscape": [
               "/images/growing-pains/armani-2-cover.png 1100w,",
               "/images/growing-pains/armani-2-cover.png 1500w,",
@@ -228,8 +222,8 @@
             ],
             "portrait": []
           },
-          "title": {
-            "position": "center center",
+          "text": {
+            "position": "center-center",
             "superLead": "",
             "h1": "",
             "h2": "",
@@ -237,10 +231,10 @@
             "subLead": "“做一个打篮球的女孩——这是头号挑战” "
           }
         },
+        // section 4, chapter 1
         {
-          "_note": "Section 4, Chapter 1.",
-          "type": "section-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn":[
             {
               "type":"column-text",
               "content": "亚当斯家的女孩们已经算幸运的了。每天放学后，有大巴把她们送去参加“希望之子”(CPNYC)项目，这是纽约市唯一专门面向父母遭到监禁的孩子的课后项目。"
@@ -324,23 +318,25 @@
               "type":"column-text",
               "content": "所以她尝试和女儿开诚布公地讨论这些风险：“阿尔马尼不需要去外面了解毒品，因为我会跟她说关于毒品的事；她不需要去外面了解性，因为我会告诉她。”"
             }
-          ]
+          ],
+          "asideColumn": null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
+        // section 5, chapter 1
         {
-          "_note": "Segment 3 for section 1.",
           "type": "text-over-media",
-          "fixedBackground": true,
+          "fixed": true,
           "picture": {
-            "default": "/images/growing-pains/armani-3-cover.png",
+            "src": "/images/growing-pains/armani-3-cover.png",
             "landscape": [
               "/images/growing-pains/armani-3-cover.png 1100w,",
               "/images/growing-pains/armani-3-cover.png 1500w,",
               "/images/growing-pains/armani-3-cover.png"
             ],
-            "portrait": false
+            "portrait": []
           },
-          "title": {
-            "position": "center center",
+          "text": {
+            "position": "center-center",
             "superLead": "",
             "h1": false,
             "h2": false,
@@ -348,10 +344,10 @@
             "subLead": ""
           }
         },
+        // section 6, chapter 1
         {
-          "_note": "text-Segment 3 for section 1.",
-          "type": "section-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn":[
             {
               "type":"column-text",
               "content": "为庆祝贾米娅9岁的生日，阿琳在她位于阁楼内的狭小公寓里举办了妮琪•米娜(Nicki Minaj)主题派对。电视里放着这位饶舌歌手的歌，墙上贴着粉色的纸。参加派对的小客人们即兴跳起了甩头舞。"
@@ -402,12 +398,14 @@
               "type":"column-text",
               "content": "“人们永远无法理解，但无论贾迈尔对我做了什么，他都是孩子们的父亲，发生在他身上的事情也从不是我的本意，”她称。"
             }
-          ]
+          ],
+          "asideColumn": null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
+        // section 7, chapter 1
         {
-          "_note": "Segment 4 for section 1.",
           "type": "text-over-media",
-          "fixedBackground": true,
+          "fixed": true,
           "picture": {
             "landscape": [
               "/images/growing-pains/armani-4-cover.png 1100w,",
@@ -417,8 +415,8 @@
             "portrait": false,
             "src": "/images/growing-pains/armani-4-cover.png"
           },
-          "title": {
-            "position": "center center",
+          "text": {
+            "position": "center-center",
             "superLead": "",
             "h1": false,
             "h2": false,
@@ -426,10 +424,10 @@
             "subLead": "——阿尔马尼策划自己的终极梦想：跟饶舌歌手德雷克在一起"
           }
         },
+        // section 8, chapter 1
         {
-          "_note": "text-Segment 4 for section 1.",
-          "type": "section-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn":[
             {
               "type":"column-text",
               "content": "女孩们要搭乘两趟公交车才能到她们的小学。103路公交车一路驶向市区的途中，阿尔马尼策划了实现她终极梦想的步骤，这个梦想是：与说唱歌手德瑞克(Drake)在一起。"
@@ -498,14 +496,16 @@
               "type":"column-text",
               "content": "不过在学校，令老师吃惊的是，阿尔马尼回答问题时声音很轻，就像在提问一样。她的老师说：“亲爱的，我一直跟你说，你很聪明。要对你的答案有信心。”"
             }
-          ]
+          ],
+          "asideColumn":null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
+        // section 9, chapter 1
         {
-          "_note": "Segment 5 for section 1.",
           "type": "text-over-media",
-          "fixed": true,
-          "picture": {
-            "default": "/images/growing-pains/armani-5-cover.png",
+          "fixed":true,
+          "picture":{
+            "src": "/images/growing-pains/armani-5-cover.png",
             "landscape": [
               "/images/growing-pains/armani-5-cover.png 1100w,",
               "/images/growing-pains/armani-5-cover.png 1500w,",
@@ -513,20 +513,19 @@
             ],
             "portrait": false
           },
-          "title": {
-            "verticalCenter": true,
-            "headFor": "section",
-            "lead": false,
-            "title": false,
-            "heading": "“她有那种自信，那就是遗传了迈尔”",
-            "subtitle": "",
-            "intro": "——阿琳谈到阿尔马尼从父亲那里遗传到的东西"
+          "text":{
+            "position": "center-center",
+            "superLead": "",
+            "h1": false,
+            "h2": false,
+            "h3": "“她有那种自信，那就是遗传了迈尔”",
+            "subLead": "——阿琳谈到阿尔马尼从父亲那里遗传到的东西"
           }
         },
+        // section 10, chapter 1
         {
-          "_note": "text-Segment 5 for section 1.",
-          "type": "section-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn":[
             {
               "type":"column-text",
               "content": "有天下午在CPNYC，阿尔马尼走过隔壁桌坐着的一个女孩，做着口型说（其实还是出声了），“我不喜欢那个孩子”。"
@@ -586,58 +585,53 @@
               "content": "她又投出一球。"
             }
           ],
-          "ad": "/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
+          "asideColumn":null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         }
       ]
     },
     {
-      "_note": "Section 2",
+      // Chapter 2,
       "nav": {
         "text": "中国坪上镇 谢雅琦（伊娃）",
         "id": "eva-pingshang-china"
       },
-      "sections": [
+      "sections":[
+        // section 1, chapter 2
         {
-          "_note": "Segement 1. Cover for section 2",
           "type": "text-over-media",
-          "media": {
-            "video": {
-              "provider": "ft",
-              "poster": "/images/growing-pains/xie-cover.png",
-              "sources": {
-                "mp4": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4"
+          "video": {
+            "provider": "ft",
+            "poster": "/images/growing-pains/xie-cover.png",
+            "sources": [
+              {
+                "format":"mp4",
+                "src": "https://ig.ft.com/special-reports/growing-pains/media/eva_xie_yaqi_blinkie_gmfriwi.mp4"
               }
-            },
-            "picture": {
-              "sources": [
-                {
-                  "landscape": true,
-                  "portrait": false,
-                  "srcset": [
-                    "/images/growing-pains/xie-cover.png 1100w",
-                    "/images/growing-pains/xie-cover.png 1500w",
-                    "/images/growing-pains/xie-cover.png"
-                  ]
-                }
-              ],
-              "src": "/images/growing-pains/xie-cover.png"
-            }
+            ]
           },
-          "text": {
-            "head": {
-              "verticalCenter": true,
-              "headFor": "section",
-              "title": null,
-              "heading": "谢雅琦（伊娃）",
-              "subtitle": null,
-              "intro": "中国，坪上镇"
-            }
+          "picture":{
+            "src": "/images/growing-pains/xie-cover.png",
+            "landscape": [
+              "/images/growing-pains/xie-cover.png 1100w",
+              "/images/growing-pains/xie-cover.png 1500w",
+              "/images/growing-pains/xie-cover.png"
+            ],
+            "portrait": []
+          },
+          "text":{
+            "position": "center-center",
+            "superLead": "",
+            "h1": false,
+            "h2": "谢雅琦（伊娃）",
+            "h3": "",
+            "subLead": "中国，坪上镇"
           }
         },
+        // section 2, chapter 2
         {
-          "_note": "Segment 1 of section 2",
-          "type": "section-columns",
-          "primaryColumn": [
+          "type":"column-grid",
+          "mainColumn": [
             {
               "type":"column-text",
               "content": "谢雅琦今年12岁。"
@@ -681,151 +675,302 @@
               "type":"column-text",
               "content": "伊娃的妈妈在电话里跟女儿说出了实情。“她说，‘雅琦，你不能回广东上学了，因为你爸爸欠了很多债，钱实在是不够你们两个学习了’。我那时候很伤心，然后躲被窝里面哭啊哭。”"
             }
-          ]
+          ],
+          "asideColumn": null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
         },
+        // section 3, chapter 2
         {
-          "_note": "Segment 2 for section 2",
+          // Section 3, Chapter 2
           "type": "text-over-media",
-          "media": {
-            "fixed": true,
-            "picture": {
-              "source": [
-                {
-                  "landscape": false,
-                  "portrait": false,
-                  "srcset": [
-                    
-                  ]
-                }
-              ],
-              "src": ""
-            }
+          "picture": {
+            "src": "/images/growing-pains/xie-1-cover.png",
+            "landscape": [
+              "/images/growing-pains/xie-1-cover.png 1100w,",
+              "/images/growing-pains/xie-1-cover.png 1500w,",
+              "/images/growing-pains/xie-1-cover.png"
+            ],
+            "portrait":[
+            ]
           },
           "text": {
-            "head": {
-              "verticalCenter": true,
-              "headFor": "section",
-              "lead": false,
-              "title": false,
-              "heading": "",
-              "subtitle": "",
-              "intro": ""
-            }
+            "position":"center-center",
+            "superLead": null,
+            "h1": null,
+            "h2": "",
+            "h3": "“钱实在是不够你们两个学习了”",
+            "subLead": "——伊娃的妈妈解释为什么她的女儿必须回乡下"
           }
         },
+        // section 4, chapter 2
         {
-          "_note": "text-Segment 2 for section 2",
-          "type": "section-columns",
           
-        },
-        {
-          "_note": "Segment 2 for section 2",
-          "type": "text-over-media",
-          "media": {
-            "fixed": true,
-            "picture": {
-              "source": [
-                {
-                  "landscape": false,
-                  "portrait": false,
-                  "srcset": [
-                    
-                  ]
-                }
-              ],
-              "src": ""
-            }
-          },
-          "text": {
-            "head": {
-              "verticalCenter": true,
-              "headFor": "section",
-              "lead": false,
-              "title": false,
-              "heading": "",
-              "subtitle": "",
-              "intro": "  "
-            }
-          }
-        },
-        {
-          "_note": "text-Segment 2 for section 2",
-          "type": "section-columns",
-          
-        },
-        {
-          "_note": "Segment 3 for section 2",
-          
-          "media": {
-            "fixed": true,
-            "picture": {
-              "source": [
-                {
-                  "landscape": false,
-                  "portrait": false,
-                  "srcset": [
-                    
-                  ]
-                }
-              ],
-              "src": ""
-            }
-          },
-          "text": {
-            "head": {
-              "verticalCenter": true,
-              "headFor": "section",
-              "lead": false,
-              "title": false,
-              "heading": "",
-              "subtitle": "",
-              "intro": "  "
-            }
-          }
-        },
-        {
-          "_note": "text-Segment 3 for section 2",
-          
-          
-        },
-        {
-          "_note": "Segment 4 for section 2",
-          
-          "media": {
-            "fixed": true,
-            "picture": {
-              "source": [
-                {
-                  "landscape": false,
-                  "portrait": false,
-                  "srcset": [
-                    
-                  ]
-                }
-              ],
-              "src": ""
-            }
-          },
-          "text": {
-            "head": {
-              "verticalCenter": true,
-              "headFor": "section",
-              "lead": false,
-              "title": false,
-              "heading": "",
-              "subtitle": "",
-              "intro": ""
-            }
-          }
-        },
-        {
-          "_note": "text-Segment 4 for section 2",
-          "type": "section-columns",
-          "primaryColumn": [
+          "type": "column-grid",
+          "mainColumn": [
             {
               "type":"column-text",
-              "content": ""
+              "content": "伊娃之所以必须住在坪上镇，一部分是因为中国的学校制度没有跟上中国这场声势浩大的人口流动。由于户口制度（上世纪50年代建立），人们仍然只能在自己的出生地接受教育和医疗保障。"
             },
+            {
+              "type":"column-text",
+              "content": "中国上世纪八九十年代离开乡村的流动人员之所以将孩子留在家乡，是因为员工宿舍的条件以及他们的12小时轮班制，令他们几乎不可能养育孩子。后来，受过更多教育的流动人员找到了更好的工作，自己租了房子，花钱把子女接到身边生活，让他们念非公办学校。现在的规定更为宽松，在一些中小城市，流动人员如果能买房子，就可以获得当地户口。"
+            },
+            {
+              "type":"column-text",
+              "content": "至2014年，一半以上的流动人员子女至少跟着父母之一生活在城里，这个比例高于2010年的30%。"
+            },
+            {
+              "type": "column-image",
+              "content": {
+                "mobileOnly": false,
+                "ratio": "8/7",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-chart-1.png",
+                "caption": ""
+              }
+            },
+            {
+              "type":"column-text",
+              "content": "流动儿童的教育是这样的：学生只能在户口所在省份参加高考。高考需要考生掌握该省专用教科书，因此学生必须在该省上高中，通常还要在该省上初中。结果就是，流动儿童的高考之路要从父母的家乡开始，不管父母已经搬去外地多久了。"
+            },
+            {
+              "type":"column-text",
+              "content": "是要一家人一起生活，还是要让学龄孩子继续上学，身为父母的流动人员必须做出选择。他们的选择对女孩造成的压力最大。在6岁到14岁年龄段，男孩更可能与父母一起生活在城里。由于重男轻女的文化传统，那些留守女孩在即将进入少女时期时，已然在中国竞争性教育体系中落了下风。"
+            },
+            {
+              "type": "column-image",
+              "content": {
+                "mobileOnly": false,
+                "ratio": "7/5",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-chart-2.png",
+                "caption": "伊娃是6100万生活在农村的留守儿童之一。"
+              }
+            },
+            {
+              "type":"column-text",
+              "content": "留守儿童，尤其是生活在贫困村庄的留守儿童，更易遭受性侵和绑架。留守少年辍学或最终进监狱的可能性也高得多。关于留守儿童自杀或杀害他人的耸动新闻，以及稚童被留下来照顾患病祖父母的故事，震惊了全中国。据估计有200万儿童在没有任何成年人照料的状态下生活，地方政府很快将必须为他们提供监护人。"
+            },
+            {
+              "type":"column-text",
+              "content": "对于像伊娃家这样经济条件较好的家庭来说，伤害主要是心理上的。[2014年联合国儿童基金会(Unicef)](http://www.unicef.cn/en/uploadfile/2015/0114/20150114094309619.pdf)在一份中国儿童调查报告中指出：“大多数留守儿童与父母的接触不规律且少，他们感到孤独、孤立无援。”"
+            },
+            {
+              "type":"column-text",
+              "content": "伊娃9岁的弟弟一开始也被送回坪上镇，但他太调皮捣蛋，于是伊娃的父母把他带回了城市。小的时候，在搬去城里之前，伊娃与奶奶一起生活，那时她曾嫉妒待在父母身边的弟弟。而现在姐弟俩又分开了，她倒是怀念过去逗弟弟的时候。"
+            }
+          ],
+          "asideColumn": null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
+        },
+        // section 5, chapter 2
+        {
+          "type": "text-over-media",
+          "video": null,
+          "picture": {
+            "src": "/images/growing-pains/xie-2-cover.png",
+            "landscape": [
+              "/images/growing-pains/xie-2-cover.png 1100w,",
+              "/images/growing-pains/xie-2-cover.png 1500w,",
+              "/images/growing-pains/xie-2-cover.png"
+            ],
+            "portrait":[
+            ]
+          },
+          "text": {
+            "position":"center-center",
+            "superLead": null,
+            "h1": null,
+            "h2": "",
+            "h3": "“我也舍不得我奶奶，我那时候就高高兴兴地答应了，想回去看看奶奶”",
+            "subLead": "——伊娃解释她当初是怎么被说服离开在广东的父母的"
+          }
+        },
+        // section 6, chapter 2
+        {
+          "type": "column-grid",
+          "mainColumn": [
+            {
+              "type":"column-text",
+              "content": "伊娃在坪上镇的家还未完工，因为她父亲建到一半没钱了。与漂亮的地砖形成鲜明对比的，是粗糙的混凝土墙壁和没装栏杆的楼梯。"
+            },
+            {
+              "type":"column-text",
+              "content": "屋外，整夜都有蛙鸣，公鸡每天清晨打鸣。伊娃和奶奶、婶婶以及婶婶的两个年幼的儿子住在一起，他们的父亲也在外面打工。"
+            },
+            {
+              "type":"column-text",
+              "content": "因为不喜欢戴眼镜，伊娃要眯着眼睛看东西，这表情让她看起来很焦虑，她也确实焦虑。在广东和父母一起生活时，她担心奶奶可能跌倒，担心没人照顾奶奶。现在她回到坪上镇，又担心以前可能跟弟弟争吵太多，让妈妈太操心。"
+            },            
+            {
+              "type": "column-image",
+              "content": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-2-1.png",
+                "caption": "坪上镇伊娃所念学校外部景观"
+              }
+            },
+            {
+              "type":"column-text",
+              "content": "伊娃的父亲谢再生也担心著自己的女儿。他觉得跟父母分开生活损害了她的自尊心。他说：“我不觉得这件事有什么羞于启齿的，这是我们整个社会的问题。这是压在我心头最大的石头。”"
+            },
+            {
+              "type":"column-text",
+              "content": "伊娃的父亲走出坪上镇凭的是英语能力。伊娃说：“我爸爸对我英文很严格，他说想要出人头地，先学会英文。”"
+            },
+            {
+              "type":"column-text",
+              "content": "伊娃刚开始是讨厌这门语言的：“爸爸让我背ABC，我就很生气，差点把那个表全部撕掉了。因为爸爸老是很严格的，（家里）就天天打冷战。后来爸爸就把我送到另一个学校，小牛津(Little Oxford)，那边每班都有两个英语老师，一个外国人，一个中国人。那时候我就突然爱上了英文。”"
+            },            
+            {
+              "type": "column-video",
+              "content": {
+                "provider": "cc",
+                "title": "",
+                "src": "http://p.bokecc.com/player?vid=C760A2798F56CA899C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
+                "caption": "伊娃谈起在广东小牛津学校学习英语"
+              }
+            },
+            {
+              "type":"column-text",
+              "content": "高考的无情逻辑意味着，就算父母拿得出更多钱让她在城里上私立学校，她也必须回坪上镇念初中，所以他们的财务问题只是将她回乡的时间提前了两年。"
+            },
+            {
+              "type":"column-text",
+              "content": "坪上镇的孩子要是初中（就读年龄为12岁到15岁）成绩还不错，或许有机会进附近城市一所寄宿学校。更好的高中意味着有希望上更好的大学，这就能转化成一份带着城市户口的工作。像伊娃这样的孩子之所以被送回乡下，是为了有机会拥有更好的未来——事实上也是重走父母走过的旅程。"
+            },
+            {
+              "type":"column-text",
+              "content": "因为会英语，伊娃的父亲在广东担任质量控制检验员，为外国买家检验产品。伊娃的母亲初中学历，在超市工作。伊娃说：“如果有急事，我会给她打电话。但一般我不打……我不想打扰她。有时候她上晚班，我又不知道她的排班。”"
+            },            
+            {
+              "type":"column-text",
+              "content": "她说“他们太累了。我让他们难过，因为我不听话。”"
+            }
+          ],
+          "asideColumn": null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
+        },
+        // section 7, chapter 2
+        {
+          "type": "text-over-media",
+          "video": null,
+          "picture": {
+            "src": "/images/growing-pains/xie-3-cover.png",
+            "landscape": [
+              "/images/growing-pains/xie-3-cover.png 1100w,",
+              "/images/growing-pains/xie-3-cover.png 1500w,",
+              "/images/growing-pains/xie-3-cover.png"
+            ],
+            "portrait":[
+            ]
+          },
+          "text": {
+            "position":"center-center",
+            "superLead": null,
+            "h1": null,
+            "h2": "",
+            "h3": "“留守儿童在学校有点孤僻，有一点自闭的症状。”",
+            "subLead": "——伊娃学校的校长谢小林"
+          }
+        },
+        // section 8, chapter 2
+        {
+          
+          "type": "column-grid",
+          "mainColumn": [
+            {
+              "type":"column-text",
+              "content": "伊娃在坪上镇的数学老师刘珍珍说，伊娃离开这所学校时还很小，从城里再次回来上学那段时间，她过得很艰难。“她需要一些时间来调整。”"
+            },
+            {
+              "type":"column-text",
+              "content": "以一所乡镇学校的规模来说，坪上镇学校情况不错。当地政府并不羞于向出去的那些人寻求捐款，以填补其预算赤字。几年前这里建好了一个舞蹈工作室，但至今大门紧闭，闲置无用。因为没有舞蹈教师想住在坪上镇。"
+            },
+            {
+              "type":"column-text",
+              "content": "数学老师轮流教几个班，每班有50个孩子，两人一组坐在不配套的桌子后面。孩子们朗诵着课文，被老师点到名时大声说出答案。午餐时，有人从食堂提来一桶桶食物到教室吃。其他人打扫院子，用拖布拖楼梯。"
+            },
+            {
+              "type":"column-text",
+              "content": "伊娃希望长大后成为一名老师。"
+            },
+            {
+              "type": "column-image",
+              "content": {
+                "mobileOnly": false,
+                "ratio": "",
+                "title": "",
+                "link": false,
+                "src": "/images/growing-pains/xie-3-1.png",
+                "caption": "伊娃在这所乡下学校的教室里。"
+              }
+            },
+            {
+              "type":"column-text",
+              "content": "坪上镇近一半的成年人都外出了，多数是去广东。那里制造业的工资是家乡务农平均收入的10倍左右。伊娃学校的校长谢小林说，他的1100名学生中有约三分之二的孩子至少有一个家长外出打工，约三分之一的孩子双亲都外出了。"
+            },
+            {
+              "type":"column-text",
+              "content": "他担心孩子们在独自上学的路上发生交通事故，吃劣质的街头食物。根据他的经验，留守儿童的成绩通常在班级里排末尾。他说：“他们的成绩不是很好，他们性格的话，我觉得还是有缺陷。第一是由缺爱引起的，第二他们在学校有点孤僻，好像不愿意更多的主动去和别人交流，有一点自闭的症状。”有些孩子很调皮。"
+            },
+            {
+              "type":"column-text",
+              "content": "他说：“这是一个我们无法解决的矛盾。父母们离开是为了孩子好。”"
+            },
+            {
+              "type": "column-video",
+              "content": {
+                "provider": "cc",
+                "title": "",
+                "src": "http://p.bokecc.com/player?vid=7FD4CD7C00CD93319C33DC5901307461&siteid=922662811F1A49E9&autoStart=false&width=100%&height=100%&playerid=3571A3BF2AEC8829&playertype=1",
+                "caption": "校长谢小林为学校里的留守儿童感到担忧。"
+              }
+            },
+            {
+              "type":"column-text",
+              "content": "伊娃的数学老师说：“女孩子要好管些。男孩子很淘气。如果他们的父母不在身边，他们往往会调皮捣蛋。有些女孩会跟祖父母或老师谈心，有些不跟任何人交心。”"
+            },
+            {
+              "type":"column-text",
+              "content": "调皮捣蛋可能会为男孩子带来好处，伊娃的弟弟就是这样。由于儿子在中国传统家庭中的重要性，如果是男孩在学校里遇到问题，父母们更有可能作出应对。比如伊娃的婶婶，就在儿子开始逃学之后，放弃了在繁华都市杭州的办公室工作，回到了老家。"
+            }
+          ],
+          "asideColumn":null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
+        },
+        // section 9, chapter 2
+        {
+          "type": "text-over-media",
+          "video": null,
+          "picture": {
+            "src": "/images/growing-pains/xie-4-cover.png",
+            "landscape": [
+              "/images/growing-pains/xie-4-cover.png 1100w,",
+              "/images/growing-pains/xie-4-cover.png 1500w,",
+              "/images/growing-pains/xie-4-cover.png"
+            ],
+            "portrait":[
+            ]
+          },
+          "text": {
+            "position":"center-center",
+            "superLead": null,
+            "h1": null,
+            "h2": "",
+            "h3": "“我不是虎爸，我希望她快乐平安”",
+            "subLead": "——伊娃的父亲谢再生"
+          }
+        },
+        // section 10, chapter 2
+        {
+          "type": "column-grid",
+          "mainColumn": [
             {
               "type":"column-text",
               "content": "伊娃离开小牛津已经8个月了，她在保持英语水平方面遇到一些困难。她的新学校没有英语课。她听说自己心爱的外籍老师埃米莉(Emily)已经回英国去了。她有了一个新爱好，王者荣耀(Honor of Kings)，这个奇幻角色扮演手游在中国非常火爆。"
@@ -871,60 +1016,68 @@
             {
               "type":"column-text",
               "content": "我离开坪上镇后，伊娃找到了练习英语的另一个机会：微信。她输入道：“OK, sorry, I have a question. Do you miss your children?（好的，抱歉，我有个问题。你想念你的孩子吗？）”"
-            },
-            {
-              "type":"column-text",
-              "content": ""
-            }
-          ]
-        },
-        {
-          "_note": "Segment 2, section 3",
-          "type": "section-sticky",
-          "media": {
-            "picture": {
-              "source": null,
-              "src": "/images/growing-pains/credit.png"
-            }
-          },
-          "primaryColumn": [
-            {
-              "text": [
-                "制作团队",
-                "<br><i>美国</i>",
-                "报道：尼尔•孟希",
-                "摄影兼摄像：加亚•斯夸尔奇",
-                "<br><i>中国</i>",
-                "报道：韩碧如",
-                "摄影兼摄像：朱莉娅•马尔基",
-                "补充报道：张祺(Archie Zhang)",
-                "<br><i>剪辑与制作</i>",
-                "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
-                "编辑：",
-                "图片编辑：艾伦•诺克斯(Alan Knox)",
-                "图表:Cleve Jones",
-                "网页：乔治•基里亚科斯(George Kyriakos)",
-                "<br><i>中文网：</i>",
-                "翻译：蓝田、徐行、马柯斯",
-                "视频翻译：实习生于江月",
-                "制作：史书华"
-              ]
-            },
-            {
-              "image": {
-                "mobileOnly": false,
-                "ratio": "1/2",
-                "title": null,
-                "link": null,
-                "src": "/images/growing-pains/gates-foundation.png",
-                "caption": "<i>本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。</i>"
-              }
             }
           ],
-          "colSecondary": {}
+          "asideColumn": null,
+          "ad":"/m/marketing/ad-mobile.html#adtype=banner-bottom-story&adid=storyview2"
+        }
+      ]
+    },
+    {
+      // Chapter 3, credits
+      "nav": null,
+      "sections":[
+        {
+          "type": "scroll-over-image",
+          "background":{
+            "src": "/images/growing-pains/credit.png"
+          },
+          "video": null,
+          "credits":{
+            "title": "制作团队",
+            "groups": [
+              {
+                "title": "美国",
+                "items": [
+                  "报道：尼尔•孟希",
+                  "摄影兼摄像：加亚•斯夸尔奇"
+                ]
+              },
+              {
+                "title": "中国",
+                "items":[
+                  "报道：韩碧如",
+                  "摄影兼摄像：朱莉娅•马尔基",
+                  "补充报道：张祺(Archie Zhang)"
+                ]
+              },
+              {
+                "title": "剪辑与制作",
+                "items":[
+                  "剪辑：科迪莉亚•詹金斯(Cordelia Jenkins)",
+                  "图片编辑：艾伦•诺克斯(Alan Knox)",
+                  "图表:Cleve Jones",
+                  "网页：乔治•基里亚科斯(George Kyriakos)"
+                ]
+              },
+              {
+                "title": "中文网",
+                "items":[
+                  "翻译：蓝田、徐行、马柯斯",
+                  "视频翻译：实习生于江月",
+                  "制作：史书华"
+                ]
+              },
+              {
+                "image": "/images/growing-pains/bmgf_logo_white_use-this.png"
+              }
+            ],
+            "copyright": "*本报道所有内容均由英国《金融时报》制作。比尔及梅琳达•盖茨基金会(Bill & Melinda Gates Foundation)为我们的报道提供了资金，但没有优先看到报道内容。*"          
+          }
         }
       ]
     }
+    // end of chapters
   ],
   "suggestedReads": [
     {
@@ -937,9 +1090,7 @@
             "src": "/images/growing-pains/more-1.png",
             "caption": "留守儿童：中国奇迹的遗留难题"
           },
-          "summary": [
-            "经济学家称“留守儿童”是中国现代化进程的必然代价，并预计随着经济结构的转型，这一群体可能产生严峻的家庭和社会问题。但另一些研究却提供与普遍观点完全不同的结论...[阅读更多](http://www.ftchinese.com/story/001065535)"
-          ]
+          "summary": "经济学家称“留守儿童”是中国现代化进程的必然代价，并预计随着经济结构的转型，这一群体可能产生严峻的家庭和社会问题。但另一些研究却提供与普遍观点完全不同的结论...[阅读更多](http://www.ftchinese.com/story/001065535)"
         },
         {
           "image": {
@@ -948,9 +1099,7 @@
             "src": "/images/growing-pains/more-2.png",
             "caption": "南五环边上学梦：北京首所打工子弟中学的奇迹与困境？"
           },
-          "summary": [
-            "蒲公英中学建校12年，将12名几乎一无所有的学生送进美国名校。如今，奇迹却被挡在了无法竣工的新校舍门外...[阅读更多](http://www.ftchinese.com/story/001073031)"
-          ]
+          "summary": "蒲公英中学建校12年，将12名几乎一无所有的学生送进美国名校。如今，奇迹却被挡在了无法竣工的新校舍门外...[阅读更多](http://www.ftchinese.com/story/001073031)"
         },
         {
           "image": {
@@ -959,9 +1108,7 @@
             "src": "/images/growing-pains/more-3.png",
             "caption": "雄安新区突显中国城镇化雄心"
           },
-          "summary": [
-            "中国政府设立雄安新区的规划，让地处河北省的相关地区成为焦点，也让外界得以一瞥中国迅猛的城市开发进程...[阅读更多](http://www.ftchinese.com/story/001072100)"
-          ]
+          "summary": "中国政府设立雄安新区的规划，让地处河北省的相关地区成为焦点，也让外界得以一瞥中国迅猛的城市开发进程...[阅读更多](http://www.ftchinese.com/story/001072100)"
         }
       ]
     },

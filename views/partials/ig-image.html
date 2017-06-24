@@ -6,9 +6,9 @@
 	{% endif %}
 
   {% if image.link %}
-    <a class="ig-figure__media-wrapper" href="{{image.link}}" data-media-ratio="{{image.ratio}}">
+    <a class="ig-figure__aspect-ratio" href="{{image.link}}" data-aspect-ratio="{{image.ratio}}">
   {% else %}
-    <div class="ig-figure__media-wrapper" data-media-ratio="{{image.ratio}}">
+    <div class="ig-figure__aspect-ratio" data-aspect-ratio="{{image.ratio}}">
   {% endif %}
 
     <img src="{{env.urlPrefix}}{{image.src}}" class="ig-figure__media">
