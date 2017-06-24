@@ -2,7 +2,7 @@
   "chapters": [
     // chapter 0. Cover of the whole story
     {
-      "navText": null,
+      "nav": null,
       // Start of sections. // Cover has only one section
       "sections": [
         {
@@ -194,14 +194,14 @@
           }
         },
         {
-          "type": "scroll-over-media",
-          "picture":{
+          "type": "scroll-over-image",
+          "background":{
             "src": "/images/myanmar/oil_buildings-mr_l0sccsl.jpg"
           },
           "mainColumn": [
             {
               "type": "column-text",
-              "content": "The text flows over fixed image. Set this section's type as `scroll-over-media`"
+              "content": "The text flows over fixed image. Set this section's type as `scroll-over-image`"
             },
             {
               "type": "column-text",
@@ -264,12 +264,10 @@
         },
         {
           // This is another type of credits
-          "type": "scroll-over-media",
-          "picture":{
+          "type": "scroll-over-image",
+          "background":{
             "src": "/images/growing-pains/credit.png"
           },
-          // this type does should not have video
-          "video": null,
           "credits":{
             "title": "制作团队",
             "groups": [

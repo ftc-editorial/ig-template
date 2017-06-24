@@ -1,7 +1,10 @@
 .read-more {
 	margin-bottom: 1em;
-	border-top: 1px solid;
-	border-bottom: 1px solid;
+	
+	.column-grid & {
+		border-top: 1px solid;
+		border-bottom: 1px solid;
+	}
 	
 	p {
 		margin-top: 0;

@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 	box-sizing: border-box;
+
+	.ig-scrollmation & {
+		position: absolute;
+		// top: 0;
+	}
 	
 	.ig-column__aside & {
     padding: $o-header-height + 15px 0;
@@ -26,18 +31,18 @@
 		margin: 1em 0 0.5em 0;
 	}
 
-	&__media-wrapper {
+	&__aspect-ratio {
 		@include aspectRatio;
-		&[data-media-ratio="1/2"] {
+		&[data-aspect-ratio="1/2"] {
 			@include changeAspectRatio(1/2);
 		}
-		&[data-media-ratio="9/16"] {
+		&[data-aspect-ratio="9/16"] {
 			@include changeAspectRatio(9/16);
 		}
-		&[data-media-ratio="16/15"] {
+		&[data-aspect-ratio="16/15"] {
 			@include changeAspectRatio(16/15);
 		}
-		&[data-media-ratio="7/5"] {
+		&[data-aspect-ratio="7/5"] {
 			@include changeAspectRatio(7/5);
 		}
 
@@ -57,6 +62,10 @@
 		}
 	}
 
+	.fullspan-video &__aspect-ratio video {
+		object-fit: contain;
+	}
+	
 	&--video &__media {
 		@include oColorsFor(ig-video, background);
 	}

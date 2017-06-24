@@ -12,7 +12,7 @@ class Scrollmation {
 			return;
 		}
 
-    const targetEl = rootEl.querySelector('.ig-scrollmation__slides');
+    const targetEl = rootEl.querySelector('.sticky-element');
 
     this.rootEl = rootEl;
     this.targetEl = targetEl;

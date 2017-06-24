@@ -1,10 +1,10 @@
-<figure class="ig-figure ig-figure--video" data-media-ratio="9/16">
+<figure class="ig-figure ig-figure--video">
 
   {% if video.title %}
   <h4 class="ig-figure__title">{{video.title}}</h4>
   {% endif %}
 
-  <div class="ig-figure__media-wrapper">
+  <div class="ig-figure__aspect-ratio" data-aspect-ratio="9/16">
     {% if video.provider == "cc" %}
     <div class="ig-figure__media">
       <script src="{{video.src}}" type="text/javascript"></script>
@@ -13,8 +13,8 @@
 
     {% if video.provider == "ft" %}
     <video class="ig-figure__media" preload="metadata" controls poster="{{env.urlPrefix}}{{video.poster}}">
-      {% for type, src in video.source %}
-      <source src="{{src}}" type="{{type}}">
+      {% for source in video.sources %}
+      <source src="{{source.src}}" type="{{source.type}}">
       {% endfor %}
     </video>
     {% endif %}

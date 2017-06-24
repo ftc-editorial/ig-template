@@ -1,3 +1,7 @@
+.ig-section {
+  position: relative;
+  box-sizing: border-box;
+}
 @import "ig-figure"; // adjusted
 @import "ig-blockquote"; // adjusted
 @import "ig-ad";
@@ -9,7 +13,8 @@
 
 @import "column-grid";
 @import "text-over-media";
-@import "scroll-over-media";
+@import "scroll-over-image";
+@import "fullspan-video";
 
 @import "read-more"; // adjusted
 @import "suggested-reads";

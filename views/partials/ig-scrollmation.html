@@ -1,15 +1,20 @@
 <div class="ig-scrollmation">
-  <aside class="ig-scrollmation__slides">
+  <div class="ig-scrollmation__wrapper sticky-element">
     
     {# `picture` is set in `scroll-over-media.html` #}
-    {% if picture %}
-      {% include "partials/ig-background.html" %}
+    {% if background %}
+      <picture class="ig-scrollmation__background">
+        <img src="{{env.urlPrefix}}{{background.src}}" alt="">
+      </picture>
     {% endif %}
     
     {# `slides` is set in `ig-column` #}
-    {% for image in slides %}
-      {% include "partials/ig-image.html" %}
+    {% for slide in slides %}
+      <figure class="ig-figure">
+        <img src="{{env.urlPrefix}}{{slide.src}}" alt="">
+        <figcaption class="ig-figure__caption">{{slide.caption}}</figcaption>
+      </figure>
     {% endfor %}
 
-  </aside>
+  </div>
 </div>

@@ -9,7 +9,7 @@
 		}		
 	}
 
-	.read-more__column {
+	.read-more {
 		@include oGridColspan((default: 12, M: 6, L: 4));		
 	}
 	.ig-figure {
