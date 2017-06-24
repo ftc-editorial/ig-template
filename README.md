@@ -94,12 +94,20 @@ You do not need to worry about this as it already set up in templates.
 
 ## Template Struture
 
-A chapter could consist of those types sections:
+A chapter could consist of those types of sections:
 
 * `text-over-media` Used for story cover, section cover, or credits
 * `column-grid` Usd to display main content in a two column layout. Left column displays paragraphs of text, image, video, quote, read more or credits. Right column dispalys static or scrollmation images.
 * `fullspan-video` A video span the width of the whole screen
-* `scroll-over-media` Text flowing over a fixed image background. It could be used to display credits or two-column contents.
+* `scroll-over-image` Text flowing over a fixed image background. It could be used to display credits or two-column contents.
+
+### Child types for `text-over-media`
+
+### Child types for `column-grid`
+
+### Child types for `fullspan-video`
+
+### Child types for `scroll-over-image`
 
 ## Data File
 
