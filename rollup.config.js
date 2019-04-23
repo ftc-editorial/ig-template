@@ -3,10 +3,9 @@ import minify from "rollup-plugin-babel-minify";
 import bowerResolve from "rollup-plugin-bower-resolve";
 
 export default {
-  input: 'client/main.js',
-  output: {
-    dest: '.tmp/scripts/main.js',
-      format: 'iife',
+  input: {
+    "main": 'client/main.js',
+    "main.min": "client/main.js"
   },
   plugins: [
     bowerResolve({
@@ -16,11 +15,10 @@ export default {
       exclude: 'node_modules/**'
     }),
     minify()
-  ] //,
-  // targets: [
-  //   {
-  //     dest: '.tmp/scripts/main.js',
-  //     format: 'iife',
-  //   }
-  // ]
+  ],
+  output: {
+    dir: "dist",
+    entryFileNames: '[name].js',
+    format: 'iife',
+  },
 };

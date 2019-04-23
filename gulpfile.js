@@ -10,7 +10,7 @@ const cssnext = require('postcss-cssnext');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 
-const rollup = require('rollup').rollup;
+const rollup = require('rollup');
 const babili = require('rollup-plugin-babili');
 const babel = require('rollup-plugin-babel');
 const bowerResolve = require('rollup-plugin-bower-resolve');
@@ -72,43 +72,38 @@ gulp.task('styles', function styles() {
     .pipe(browserSync.stream());
 });
 
-let cache;
-gulp.task('scripts', () => {
-  const config = {
-    entry: 'client/main.js',
-    plugins: [
-      bowerResolve({
-        module: true
-      }),
-      babel({
-        exclude: 'node_modules/**'
-      })
-    ],
-    cache: cache
-  }
+const inputOptions = {
+  input: 'client/main.js',
+  plugins: [
+    // bowerResolve({
+    //   module: true
+    // }),
+    // babel({
+    //   exclude: 'node_modules/**'
+    // })
+  ],
+};
 
-  if (process.env.NODE_ENV === 'production') {
-    config.plugins.push(babili());
-  }
-  
-  return rollup(config).then(function(bundle) {
-    cache = bundle;
-    return bundle.write({
-      dest: `${tmpDir}/scripts/main.js`,
-      format: 'iife',
-      sourceMap: true
-    });
-  })
-  .then(() => {
-    browserSync.reload('*.html');
-    return Promise.resolve();
-  })
-  .catch(err => {
-    console.log(err);
-  });
+const outputOptions = {
+  file: `${tmpDir}/scripts/main.js`,
+  format: 'iife',
+};
+
+async function build() {
+  const bundle = await rollup.rollup(inputOptions);
+
+  console.log(bundle.watchFiles);
+
+  const { output } = await bundle.generate(outputOptions);
+
+  await bundle.write(outputOptions);
+}
+
+gulp.task('scripts', () => {
+  return build();
 });
 
-gulp.task('serve', gulp.parallel('html', 'styles', 'scripts', 
+gulp.task('serve', gulp.parallel('html', 'styles', 'scripts',
   function serve() {
     browserSync.init({
       server: {
