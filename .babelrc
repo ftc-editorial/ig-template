@@ -1,12 +1,6 @@
 {
   "comments": false,
   "presets": [
-    [
-      "env",
-      {
-        "modules": false
-      }
-    ]
-  ],
-  "plugins": ["external-helpers"]
+    "@babel/preset-env"
+  ]
 }

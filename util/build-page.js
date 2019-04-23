@@ -1,18 +1,19 @@
-const pify = require('pify');
+const { promisify } = require("util");
 const fs = require('fs-jetpack');
 const path = require('path');
 const loadJson = require('./load-json.js');
-const inline = pify(require('inline-source'));
+const inlineSource = require("inline-source");
+const inline = promisify(inlineSource);
 const minify = require('html-minifier').minify;
 const footer = require('@ftchinese/ftc-footer')();
 const marked = require('marked');
 const nunjucks = require('nunjucks');
 nunjucks.configure(
   [
-    path.resolve(__dirname, '../views'), 
+    path.resolve(__dirname, '../views'),
     path.resolve(__dirname, '../node_modules/@ftchinese/ftc-footer'),
     path.resolve(__dirname, '../custom')
-  ], 
+  ],
   {
     noCache: true,
     watch: false,
@@ -22,7 +23,7 @@ nunjucks.configure(
 .addFilter('md', function(str) {
   return marked(str);
 });
-const render = pify(nunjucks.render);
+const render = promisify(nunjucks.render);
 
 async function buildPage({template='index.html', input='myanmar', output='.tmp'}={}) {
   const jsonFile = path.resolve(__dirname, `../data/${input}.json`);

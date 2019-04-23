@@ -38,4 +38,3 @@ vendor
 dist
 public
 bower_components
-package-lock.json
