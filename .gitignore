@@ -34,7 +34,7 @@ node_modules
 
 .DS_Store
 vendor
-.tmp
+build
 dist
 public
 bower_components
