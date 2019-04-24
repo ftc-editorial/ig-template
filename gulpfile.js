@@ -1,18 +1,19 @@
 const path = require('path');
 const del = require('del');
 const browserSync = require('browser-sync').create();
-const buildPage = require('./util/build-page.js');
-const svnUpdate = require('./util/svn-update.js');
+// const buildPage = require('./util/build-page.js');
+// const svnUpdate = require('./util/svn-update.js');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
-const cssnext = require('postcss-cssnext');
+// const cssnext = require('postcss-cssnext');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 
 const rollup = require('rollup');
-const babili = require('rollup-plugin-babili');
-const babel = require('rollup-plugin-babel');
+let cache;
+// const babili = require('rollup-plugin-babili');
+// const babel = require('rollup-plugin-babel');
 const bowerResolve = require('rollup-plugin-bower-resolve');
 
 const argv = require('minimist')(process.argv.slice(2), {
@@ -72,35 +73,27 @@ gulp.task('styles', function styles() {
     .pipe(browserSync.stream());
 });
 
-const inputOptions = {
-  input: 'client/main.js',
-  plugins: [
-    // bowerResolve({
-    //   module: true
-    // }),
-    // babel({
-    //   exclude: 'node_modules/**'
-    // })
-  ],
-};
-
-const outputOptions = {
-  file: `${tmpDir}/scripts/main.js`,
-  format: 'iife',
-};
-
-async function build() {
-  const bundle = await rollup.rollup(inputOptions);
+gulp.task('scripts', async () => {
+  const bundle = await rollup.rollup({
+    input: 'client/main.js',
+    cache,
+    plugins: [
+      // bowerResolve({
+      //   module: true
+      // }),
+      // babel({
+      //   exclude: 'node_modules/**'
+      // })
+    ],
+  });
 
   console.log(bundle.watchFiles);
 
-  const { output } = await bundle.generate(outputOptions);
-
-  await bundle.write(outputOptions);
-}
-
-gulp.task('scripts', () => {
-  return build();
+  await bundle.write({
+    file: `dist/scripts/bundle.js`,
+    format: 'iife',
+    sourcemap: true,
+  });
 });
 
 gulp.task('serve', gulp.parallel('html', 'styles', 'scripts',
